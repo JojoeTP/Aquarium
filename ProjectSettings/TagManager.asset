@@ -5,17 +5,16 @@ TagManager:
   serializedVersion: 2
   tags:
   - Item
-  - Wall
-  - Enemy
+  - HidingPlace
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Wall
+  - 
   - Water
   - UI
-  - Player
-  - Enemy
+  - 
+  - 
   - 
   - 
   - 
@@ -41,6 +40,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 4036757503
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
