@@ -20,7 +20,6 @@ public class PlayerMovement : MonoBehaviour
     public Slider staminaSlider;
 
     // bool isHide = false;
-    
 
     void Start()
     {
@@ -80,6 +79,9 @@ public class PlayerMovement : MonoBehaviour
     }
 
     void Move(){
+        if(GetComponent<PlayerHide>().hide == true){
+            return;
+        }
             
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");

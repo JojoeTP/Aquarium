@@ -8,25 +8,26 @@ public class PlayerHide : MonoBehaviour
     Transform hidePosition;
 
     SpriteRenderer rend;
-    // Start is called before the first frame update
     void Start()
     {
         rend = GetComponent<SpriteRenderer>();
         
     }
 
-    bool hideToggle = false;
+    public bool hide = false;
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) && canHide == true && hideToggle == false){
+        PlayerHideInput();
+    }
+
+    void PlayerHideInput(){
+        if (Input.GetKeyDown(KeyCode.E) && canHide == true && hide == false){
             rend.sortingOrder = -1;
-            // GetComponent<PlayerMovement>().enabled = false;
-            hideToggle = true;
+            hide = true;
         }else if (Input.GetKeyDown(KeyCode.E) && canHide == true){
             rend.sortingOrder = 1;
-            // GetComponent<PlayerMovement>().enabled = true;
-            hideToggle = false;
+            hide = false;
         }
     }
 
