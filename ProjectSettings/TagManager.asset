@@ -6,14 +6,16 @@ TagManager:
   tags:
   - Item
   - HidingPlace
+  - Enemy
+  - Wall
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Wall
   - Water
   - UI
-  - 
+  - Player
   - 
   - 
   - 
