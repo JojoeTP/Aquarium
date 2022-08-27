@@ -19,6 +19,8 @@ public class PlayerMovement : MonoBehaviour
 
     public Slider staminaSlider;
 
+    public bool hide = false;
+
     // bool isHide = false;
 
     void Start()
@@ -30,11 +32,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        // Move();
-        CheckStamina();
-        Sprint();
         ChangeStaminaBar();
-        StaminaRegeneration();
     }
 
     void CheckStamina(){
@@ -60,12 +58,14 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    void ChangeStaminaBar(){
+    void ChangeStaminaBar()
+    {
         float normalizedStaminaBar = Mathf.Clamp(playerStamina/basePlayerStamina, 0, 1);
         staminaSlider.value = normalizedStaminaBar;
     }
 
-    void StaminaRegeneration(){
+    void StaminaRegeneration()
+    {
         if(basePlayerStamina > playerStamina && IsSprint == false){
             playerStamina += staminaRegeneration;
         }
@@ -74,20 +74,32 @@ public class PlayerMovement : MonoBehaviour
         }
     }
     
-    private void FixedUpdate() {
+    private void FixedUpdate() 
+    {
+        CheckStamina();
+        Sprint();
+        StaminaRegeneration();
         Move();
     }
 
-    void Move(){
-        if(GetComponent<PlayerHide>().hide == true){
+    void Move()
+    {
+        if(hide)
+        {
+            rb.velocity = Vector2.zero;
             return;
         }
             
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
+        
+        Vector2 direction = new Vector2(horizontal,vertical);
 
-        rb.velocity = new Vector2(horizontal * playerSpeed , vertical * playerSpeed );
-        // rb.velocity = new Vector2(horizontal * playerSpeed * Time.deltaTime, vertical * playerSpeed * Time.deltaTime);
+        rb.velocity = direction * playerSpeed;
+    }
 
+    public void SetSortingOrder(int order)
+    {
+        GetComponent<SpriteRenderer>().sortingOrder = order;
     }
 }
