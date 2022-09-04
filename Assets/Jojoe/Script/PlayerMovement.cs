@@ -94,7 +94,7 @@ public class PlayerMovement : MonoBehaviour
         StaminaRegeneration();
     }
 
-    public void Move(PlayerControls playerControl, bool isHide)
+    public void Move(bool isHide)
     {
         if(isHide)
         {
@@ -102,7 +102,7 @@ public class PlayerMovement : MonoBehaviour
             return;
         }
 
-        Vector2 direction = playerControl.Player.Move.ReadValue<Vector2>();
+        Vector2 direction = PlayerManager.inst.playerControl.Player.Move.ReadValue<Vector2>();
         rb.velocity = direction * playerSpeed;
     }
 }

@@ -5,16 +5,19 @@ using UnityEngine.InputSystem;
 
 public class PlayerManager : MonoBehaviour
 {
-    PlayerManager inst;
+    public static PlayerManager inst;
 
     [Header("InputSystem")]
-    PlayerControls playerControl;
+    public PlayerControls playerControl;
 
     [Header("PlayerScript")]
     public PlayerMovement playerMovement;
-    public PlayerHide playerHide;
+    public PlayerInteract playerInteract;
     public PlayerLight playerLight;
     public PickUpItem pickUpItem;
+
+    [Header("PlayerAction")]
+    public bool isHide;
 
 
     private void Awake() 
@@ -35,7 +38,7 @@ public class PlayerManager : MonoBehaviour
 
     void Start()
     {
-        playerControl.Player.Interact.performed += context => playerHide.ToggleHiding();
+        playerControl.Player.Interact.performed += context => playerInteract.Interacting();
         playerControl.Player.Sprint.performed += context => playerMovement.OnSprint();
         playerControl.Player.Sprint.canceled += context => playerMovement.CancelSprint();
     }
@@ -47,6 +50,6 @@ public class PlayerManager : MonoBehaviour
 
     private void FixedUpdate() 
     {
-        playerMovement.Move(playerControl,playerHide.isHide);
+        playerMovement.Move(isHide);
     }
 }
