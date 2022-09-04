@@ -14,7 +14,6 @@ public class PlayerManager : MonoBehaviour
     public PlayerMovement playerMovement;
     public PlayerInteract playerInteract;
     public PlayerLight playerLight;
-    public PickUpItem pickUpItem;
 
     [Header("PlayerAction")]
     public bool isHide;
