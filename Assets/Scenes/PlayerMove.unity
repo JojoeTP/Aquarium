@@ -159,7 +159,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.56, y: 2.56}
+    oldSize: {x: 1, y: 1}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -5116,7 +5116,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7777778, y: 1}
+    m_SensorSize: {x: 1.777403, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -5673,11 +5673,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5956819951094530537, guid: c7e4573c9cd194047a8c7b165fc90b44, type: 3}
   m_PrefabInstance: {fileID: 1514915931}
   m_PrefabAsset: {fileID: 0}
---- !u!95 &635354336 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 2227017556854221746, guid: c7e4573c9cd194047a8c7b165fc90b44, type: 3}
-  m_PrefabInstance: {fileID: 1514915931}
-  m_PrefabAsset: {fileID: 0}
 --- !u!50 &635354338
 Rigidbody2D:
   serializedVersion: 4
@@ -5728,6 +5723,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerBaseSpeed: 3
+  playerSpeed: 0
   IsSprint: 0
   sprintSpeed: 5
   basePlayerStamina: 20
@@ -5735,8 +5731,48 @@ MonoBehaviour:
   staminaCost: 0.1
   staminaRegeneration: 0.005
   staminaSlider: {fileID: 1516747891}
-  hide: 0
-  playerAnimation: {fileID: 635354336}
+--- !u!114 &635354342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 635354334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16175da5b3408e142bb45bb28dd59d51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InteractRadius: 0
+--- !u!114 &635354343
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 635354334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9691b3e8f8a4e6743bb1a78765a54a13, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerLight: {fileID: 0}
+--- !u!114 &635354344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 635354334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5e23e75191fda141afe8facfd1c5e44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerMovement: {fileID: 635354340}
+  playerInteract: {fileID: 635354342}
+  playerLight: {fileID: 635354343}
+  isHide: 0
 --- !u!1 &722337573
 GameObject:
   m_ObjectHideFlags: 0
@@ -5773,7 +5809,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.56, y: 2.56}
+    oldSize: {x: 1, y: 1}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -6810,15 +6846,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4783660612858698122, guid: c7e4573c9cd194047a8c7b165fc90b44, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4783660612858698122, guid: c7e4573c9cd194047a8c7b165fc90b44, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4783660612858698122, guid: c7e4573c9cd194047a8c7b165fc90b44, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4783660612858698122, guid: c7e4573c9cd194047a8c7b165fc90b44, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

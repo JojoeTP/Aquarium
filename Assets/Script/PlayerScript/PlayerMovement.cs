@@ -7,6 +7,7 @@ using UnityEngine.InputSystem;
 public class PlayerMovement : MonoBehaviour
 {
     Rigidbody2D rb;
+    Animator animator;
 
     [Header("PlayerSpeed")]
     public float playerBaseSpeed;
@@ -24,6 +25,7 @@ public class PlayerMovement : MonoBehaviour
     private void Awake() 
     {
         rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
     }
 
     void Start()
@@ -99,10 +101,16 @@ public class PlayerMovement : MonoBehaviour
         if(isHide)
         {
             rb.velocity = Vector2.zero;
+            animator.SetBool("Walk",false);
             return;
         }
 
         Vector2 direction = PlayerManager.inst.playerControl.Player.Move.ReadValue<Vector2>();
         rb.velocity = direction * playerSpeed;
+        
+        if(rb.velocity != Vector2.zero)
+            animator.SetBool("Walk",true);
+        else
+            animator.SetBool("Walk",false);
     }
 }
