@@ -21,6 +21,9 @@ public class PlayerMovement : MonoBehaviour
 
     public bool hide = false;
 
+    public Animator playerAnimation;
+
+
     // bool isHide = false;
 
     void Start()
@@ -96,6 +99,12 @@ public class PlayerMovement : MonoBehaviour
         Vector2 direction = new Vector2(horizontal,vertical);
 
         rb.velocity = direction * playerSpeed;
+
+
+        if (horizontal != 0) { playerAnimation.SetBool("Walk",true); }
+        else { playerAnimation.SetBool("Walk", false); };
+
+
     }
 
     public void SetSortingOrder(int order)
