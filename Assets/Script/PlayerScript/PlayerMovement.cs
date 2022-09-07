@@ -7,7 +7,7 @@ using UnityEngine.InputSystem;
 public class PlayerMovement : MonoBehaviour
 {
     Rigidbody2D rb;
-    Animator animator;
+    [SerializeField] Animator animator;
 
     [Header("PlayerSpeed")]
     public float playerBaseSpeed;
@@ -25,7 +25,6 @@ public class PlayerMovement : MonoBehaviour
     private void Awake() 
     {
         rb = GetComponent<Rigidbody2D>();
-        animator = GetComponent<Animator>();
     }
 
     void Start()
@@ -107,6 +106,12 @@ public class PlayerMovement : MonoBehaviour
 
         Vector2 direction = PlayerManager.inst.playerControl.Player.Move.ReadValue<Vector2>();
         rb.velocity = direction * playerSpeed;
+
+        if(direction.x == 1)
+            transform.localScale = new Vector3(-1,transform.localScale.y,transform.localScale.z);
+        else if(direction.x == -1)
+            transform.localScale = new Vector3(1,transform.localScale.y,transform.localScale.z);
+        
         
         if(rb.velocity != Vector2.zero)
             animator.SetBool("Walk",true);
