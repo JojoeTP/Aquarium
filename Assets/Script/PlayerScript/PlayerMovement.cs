@@ -22,6 +22,8 @@ public class PlayerMovement : MonoBehaviour
     public float staminaRegeneration;
     public Slider staminaSlider;
 
+    Vector3 scale;
+
     private void Awake() 
     {
         rb = GetComponent<Rigidbody2D>();
@@ -29,8 +31,12 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
+        scale = transform.localScale;
+
         playerSpeed = playerBaseSpeed;
         playerStamina = basePlayerStamina;
+
+        StartCoroutine(Blink());
     }
 
     void Update()
@@ -108,14 +114,22 @@ public class PlayerMovement : MonoBehaviour
         rb.velocity = direction * playerSpeed;
 
         if(direction.x == 1)
-            transform.localScale = new Vector3(-1,transform.localScale.y,transform.localScale.z);
+            transform.localScale = new Vector3(-scale.x,transform.localScale.y,transform.localScale.z);
         else if(direction.x == -1)
-            transform.localScale = new Vector3(1,transform.localScale.y,transform.localScale.z);
+            transform.localScale = new Vector3(scale.x,transform.localScale.y,transform.localScale.z);
         
         
         if(rb.velocity != Vector2.zero)
             animator.SetBool("Walk",true);
         else
             animator.SetBool("Walk",false);
+    }
+
+    IEnumerator Blink()
+    {
+        animator.SetTrigger("Blink");
+        float blinkTime = Random.Range(10f,30f);
+        yield return new WaitForSeconds(blinkTime);
+        StartCoroutine(Blink());
     }
 }

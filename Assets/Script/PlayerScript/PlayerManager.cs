@@ -6,6 +6,7 @@ using UnityEngine.InputSystem;
 public class PlayerManager : MonoBehaviour
 {
     public static PlayerManager inst;
+    public GameObject playerSprite;
 
     [Header("InputSystem")]
     public PlayerControls playerControl;
@@ -14,6 +15,7 @@ public class PlayerManager : MonoBehaviour
     public PlayerMovement playerMovement;
     public PlayerInteract playerInteract;
     public PlayerLight playerLight;
+    public PlayerInventory playerInventory;
 
     [Header("PlayerAction")]
     public bool isHide;

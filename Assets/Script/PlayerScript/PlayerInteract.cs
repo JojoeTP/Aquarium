@@ -6,22 +6,19 @@ public class PlayerInteract : MonoBehaviour
 {
     [Header("Hiding Setting")]
     public float InteractRadius;
-
-    [Header("Door")]
-    Transform warpPos;
+    public Vector3 InteractOffset;
 
     public void Interacting()
     {
         if(CanHiding())
             ToggleHiding();
         
-        if(CanEnterDoor())
-        EnterDoor(warpPos);
+        CanEnterDoor();
     }
 
     bool CanHiding()
     {
-        foreach(var n in Physics2D.OverlapCircleAll(transform.position,InteractRadius))
+        foreach(var n in Physics2D.OverlapCircleAll(transform.position + InteractOffset,InteractRadius))
         {
             if(n.GetComponent<HidingSpot>() != null)
             {
@@ -40,7 +37,7 @@ public class PlayerInteract : MonoBehaviour
         {
             if(n.GetComponent<DoorSystem>() != null)
             {
-                warpPos = n.GetComponent<DoorSystem>().connectDoor;
+                n.GetComponent<DoorSystem>().EnterDoor(this.transform);
                 return true;
             }
         }
@@ -53,29 +50,22 @@ public class PlayerInteract : MonoBehaviour
         if(!PlayerManager.inst.isHide)
         {
             PlayerManager.inst.isHide = true;
-            GetComponent<SpriteRenderer>().enabled = false;
+            PlayerManager.inst.playerSprite.SetActive(false);
             GetComponent<Collider2D>().enabled = false;
         }
         else if(PlayerManager.inst.isHide)
         {
             PlayerManager.inst.isHide = false;
-            GetComponent<SpriteRenderer>().enabled = true;
+            PlayerManager.inst.playerSprite.SetActive(true);
             GetComponent<Collider2D>().enabled = true;
         } 
 
         return;
     }
 
-    void EnterDoor(Transform pos)
-    {
-        transform.position = new Vector2(pos.position.x,transform.position.y);
-        return;
-    }
-
-
     private void OnDrawGizmos() 
     {
         Gizmos.color = Color.magenta;
-        Gizmos.DrawWireSphere(transform.position,InteractRadius);    
+        Gizmos.DrawWireSphere(transform.position + InteractOffset,InteractRadius);    
     }
 }

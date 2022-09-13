@@ -9,9 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0cbdcd6b6abe69842a1b11dbd44a84e3, type: 3}
-  m_Name: Item1
+  m_Script: {fileID: 11500000, guid: 46ae0de02bf1e0945810f84cfdbfb621, type: 3}
+  m_Name: Item2
   m_EditorClassIdentifier: 
-  itemName: Cute
-  itemDescription: Sabbbbsab
-  pageNumber: 1
+  itemData:
+    Id: 1
+    ItemName: Item2
+    ItemDescription: ItemDescription
+  pageNumber: 0
