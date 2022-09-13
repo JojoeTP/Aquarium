@@ -96,6 +96,7 @@ GameObject:
   - component: {fileID: 4083173874649247576}
   - component: {fileID: 4083173874649247575}
   - component: {fileID: 4083173874649247574}
+  - component: {fileID: 8022199721257533385}
   m_Layer: 0
   m_Name: TestItem (Light)
   m_TagString: Item
@@ -111,7 +112,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4083173874649247573}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 82.017, y: -0.70000005, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -211,6 +212,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &8022199721257533385
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4083173874649247573}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abc473506efcf8b4cb7fd06517aa98ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 11400000, guid: 13b6018e5c7898a44ba470e1eeb9715f, type: 2}
 --- !u!1 &4083173874912698984
 GameObject:
   m_ObjectHideFlags: 0
