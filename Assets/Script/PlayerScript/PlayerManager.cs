@@ -42,6 +42,7 @@ public class PlayerManager : MonoBehaviour
         playerControl.Player.Interact.performed += context => playerInteract.Interacting();
         playerControl.Player.Sprint.performed += context => playerMovement.OnSprint();
         playerControl.Player.Sprint.canceled += context => playerMovement.CancelSprint();
+        playerControl.Player.Inventory.performed += context => playerInventory.OpenInventory();
     }
 
     void Update()
