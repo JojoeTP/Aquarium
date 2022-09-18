@@ -21,7 +21,7 @@ MonoBehaviour:
       m_Hash: -354373004
       m_Sprite: {fileID: -3122692059771162501, guid: 5518cdf5dc8afc8488a100a808e4ddf0, type: 3}
       m_FromMain: 0
-      m_SpriteOverride: {fileID: -3122692059771162501, guid: 5518cdf5dc8afc8488a100a808e4ddf0, type: 3}
+      m_SpriteOverride: {fileID: 0}
     m_FromMain: 0
     m_EntryOverrideCount: 1
   - m_Name: Arm
@@ -32,12 +32,12 @@ MonoBehaviour:
       m_Hash: -354373004
       m_Sprite: {fileID: 704653634900647407, guid: 5518cdf5dc8afc8488a100a808e4ddf0, type: 3}
       m_FromMain: 0
-      m_SpriteOverride: {fileID: 704653634900647407, guid: 5518cdf5dc8afc8488a100a808e4ddf0, type: 3}
+      m_SpriteOverride: {fileID: 0}
     - m_Name: Entry_0
       m_Hash: 874506106
       m_Sprite: {fileID: 3889839200896802581, guid: 5518cdf5dc8afc8488a100a808e4ddf0, type: 3}
       m_FromMain: 0
-      m_SpriteOverride: {fileID: 3889839200896802581, guid: 5518cdf5dc8afc8488a100a808e4ddf0, type: 3}
+      m_SpriteOverride: {fileID: 0}
     m_FromMain: 0
     m_EntryOverrideCount: 2
   m_PrimaryLibraryGUID: 
