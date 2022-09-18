@@ -9,6 +9,7 @@ public class ItemData
     public string ItemName;
     public string ItemDescription;
     public Sprite ItemSprite;
+    public Vector3 ItemPosition;
 }
 
 [CreateAssetMenu(fileName = "New Item" , menuName = "Item")]

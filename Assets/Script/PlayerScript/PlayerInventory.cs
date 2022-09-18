@@ -6,6 +6,8 @@ public class PlayerInventory : MonoBehaviour
 {
     public List<ItemScriptableObject> itemList;
 
+    [SerializeField] public InventoryPanel inventoryPanel;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,5 +23,13 @@ public class PlayerInventory : MonoBehaviour
     void AddItem(ItemData item)
     {
         
+    }
+
+    public void OpenInventory()
+    {
+        if(inventoryPanel.gameObject.activeInHierarchy)
+            inventoryPanel.gameObject.SetActive(false);
+        else
+            inventoryPanel.gameObject.SetActive(true);
     }
 }
