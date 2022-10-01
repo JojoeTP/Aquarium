@@ -5,7 +5,8 @@ using UnityEngine;
 [CreateAssetMenu (menuName = "PluggableAI/State")]
 public class State : ScriptableObject
 {
-    public List<Action> actions;
+    public List<Action> oneTimeActions;
+    public List<Action> updateActions;
     public List<Transition> transitions;
 
     public void UpdateState(StateController controller)
@@ -16,9 +17,17 @@ public class State : ScriptableObject
 
     void DoActions(StateController controller)
     {
-        for (int i = 0; i < actions.Count; i++)
+        for (int i = 0; i < updateActions.Count; i++)
         {
-            actions[i].Act(controller);
+            updateActions[i].Act(controller);
+        }
+    }
+
+    public void DoActionsOneTime(StateController controller)
+    {
+        for (int i = 0; i < oneTimeActions.Count; i++)
+        {
+            oneTimeActions[i].Act(controller);
         }
     }
 

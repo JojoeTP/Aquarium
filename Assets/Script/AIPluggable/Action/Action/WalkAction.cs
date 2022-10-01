@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu (menuName = "PluggableAI/Action/Patrol")]
-public class PatrolAction : Action
+
+[CreateAssetMenu (menuName = "PluggableAI/Action/WalkAction")]
+public class WalkAction : Action
 {
     public override void Act(StateController controller)
     {
@@ -12,6 +13,6 @@ public class PatrolAction : Action
 
     void Patrol(StateController controller)
     {
-        controller.transform.Translate(controller.moveDirection * controller.normalSpeed * Time.deltaTime); 
+        controller.transform.Translate(controller.moveDirection * controller.moveSpeed * Time.deltaTime); 
     }
 }

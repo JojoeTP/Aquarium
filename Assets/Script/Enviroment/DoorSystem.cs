@@ -7,7 +7,10 @@ public class DoorSystem : MonoBehaviour
     [Header("System")]
     public Transform connectDoor;
     public ItemScriptableObject conditionItem;
-    
+
+    public bool isPlayerUseItBefore;
+    public bool canEnemyEnter;
+
     public void EnterDoor(Transform entity)
     {
         if(CheckCondition())
@@ -24,6 +27,21 @@ public class DoorSystem : MonoBehaviour
             if(item.itemData.Id == conditionItem.itemData.Id)
                 return true;
         }
+        return false;
+    }
+
+    public bool RandomChanceToEnter()
+    {
+        var rand = Random.Range(0f,100f);
+        if(isPlayerUseItBefore && rand > 30f)
+        {
+            return true;
+        }
+        else if(!isPlayerUseItBefore && rand > 70f)
+        {
+            return true;
+        }
+
         return false;
     }
 }
