@@ -12,9 +12,22 @@ public class DoorSystem : MonoBehaviour
     public bool canEnemyEnter;
 
     public void EnterDoor(Transform entity)
-    {
-        if(CheckCondition())
-            entity.position = new Vector2(connectDoor.position.x,entity.position.y);
+    {   
+        // if(entity.GetComponent<PlayerManager>() != null)
+        // {
+            if(CheckCondition())
+                entity.position = new Vector3(connectDoor.position.x,entity.position.y,0);
+
+            print("connectDoor " + connectDoor.position);
+            print("entity " +  entity.position);
+        // }
+        // else
+        // {
+        //     Debug.Log("Before " + entity.position);
+        //     entity.position = new Vector2(connectDoor.position.x,entity.position.y);
+        //     Debug.Log("After " + entity.position);
+        // }
+
     }
 
     bool CheckCondition()

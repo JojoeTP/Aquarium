@@ -12,6 +12,18 @@ public class EnterDoorAction : Action
 
     void EnterDoor(StateController controller)
     {
+        //Enter Door
+        Debug.Log("Enter Door");
 
+        var overlapObj = Physics2D.OverlapCircleAll(controller.transform.position,controller.interactRange);
+
+        foreach(var n in overlapObj)
+        {
+            if(n.GetComponent<DoorSystem>() != null)
+            {
+                n.GetComponent<DoorSystem>().EnterDoor(controller.transform);
+                break;
+            }
+        }
     }
 }

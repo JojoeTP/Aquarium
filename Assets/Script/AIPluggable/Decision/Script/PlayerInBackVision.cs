@@ -14,7 +14,7 @@ public class PlayerInBackVision : Decision
 
     bool IsPlayerInBackVision(StateController controller)
     {
-        if(Physics2D.Raycast(controller.transform.position,controller.moveDirection,controller.backVisionRange,playerLayer))
+        if(Physics2D.Raycast(controller.transform.position,controller.moveDirection,-controller.backVisionRange,playerLayer))
             return true;
         else
             return false;

@@ -12,6 +12,7 @@ public class SearchingAction : Action
 
     void Searching(StateController controller)
     {
-
+        // หันซ้ายหันขวา
+        Debug.Log("Searching");
     }
 }

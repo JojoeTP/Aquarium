@@ -1,17 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEditor;
 
 public class StateController : MonoBehaviour
 {
-    [Header("Gizmos")]
+    [Header("Debugger")]
     
     public Vector3 InteractOffset;
     [SerializeField] Color InteractColor;
-    public Vector3 HitOffset;
-    [SerializeField] Color HitColor;
+    public Vector3 AttackOffset;
+    [SerializeField] Color AttackColor;
     public Vector3 VisonOffset;
     [SerializeField] Color VisionColor;
+    public Vector3 ChasingRangeOffset;
+    [SerializeField] Color ChaseColor;
+    public Vector3 StateLableOffset;
     
 
     [Header("STATUS")]
@@ -35,22 +39,25 @@ public class StateController : MonoBehaviour
     public Vector3 moveDirection = Vector3.right;
     public State currentState;
     public State remainState;
+    public float waitingTime;
 
    
     private void Update() 
     {
-        currentState.UpdateState(this);
+        
     }
 
     private void FixedUpdate() 
     {
-
+        // currentState.FixedUpdateState(this);
+        currentState.FixedUpdateState(this);
     }
 
     public void TransitionToState(State nextState)
     {
         if(nextState != remainState)
         {
+            waitingTime = nextState.waitingTime;
             currentState = nextState;
             nextState.DoActionsOneTime(this);
             OnExitState();
@@ -71,13 +78,19 @@ public class StateController : MonoBehaviour
 
     private void OnDrawGizmos() 
     {
-        // Gizmos.color = InteractColor;
-        // Gizmos.DrawWireSphere(transform.position + InteractOffset,InteractRadius); //INTERACT RANGE
+        Gizmos.color = InteractColor;
+        Gizmos.DrawWireSphere(transform.position + InteractOffset,interactRange); //INTERACT RANGE
         
-        // Gizmos.color = HitColor;
-        // Gizmos.DrawRay(transform.position + HitOffset,moveDirection * hitRange); //HIT RANGE
+        Gizmos.color = AttackColor;
+        Gizmos.DrawRay(transform.position + AttackOffset,moveDirection * attackRange); //HIT RANGE
 
-        // Gizmos.color = VisionColor;
-        // Gizmos.DrawRay(transform.position + VisonOffset,moveDirection * visionRange); //VISION RANGE
+        Gizmos.color = VisionColor;
+        Gizmos.DrawRay(transform.position + VisonOffset,moveDirection * frontVisionRange); //VISION RANGE
+        Gizmos.DrawRay(transform.position + VisonOffset,-moveDirection * backVisionRange); //VISION RANGE
+
+        Gizmos.color = ChaseColor;
+        Gizmos.DrawRay(transform.position + ChasingRangeOffset,moveDirection * chasingRange); //VISION RANGE
+
+        Handles.Label(transform.position + StateLableOffset,currentState.name);
     }
 }

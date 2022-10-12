@@ -8,10 +8,10 @@ public class WalkAction : Action
 {
     public override void Act(StateController controller)
     {
-        Patrol(controller);
+        Walk(controller);
     }
 
-    void Patrol(StateController controller)
+    void Walk(StateController controller)
     {
         controller.transform.Translate(controller.moveDirection * controller.moveSpeed * Time.deltaTime); 
     }

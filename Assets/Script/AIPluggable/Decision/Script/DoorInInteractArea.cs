@@ -16,6 +16,7 @@ public class DoorInInteractArea : Decision
 
     bool IsDoorInInteractArea(StateController controller)
     {
+        //add condition about chase later 
         var overlapObj = Physics2D.OverlapCircleAll(controller.transform.position,controller.interactRange);
 
         foreach(var n in overlapObj)
