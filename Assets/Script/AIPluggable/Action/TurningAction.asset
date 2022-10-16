@@ -9,10 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f0389c2260570c04f84b5b4f3fef7ea6, type: 3}
-  m_Name: _RemainInState
+  m_Script: {fileID: 11500000, guid: 15e7d0eb8492d3e4abea67f2ecfae961, type: 3}
+  m_Name: TurningAction
   m_EditorClassIdentifier: 
-  oneTimeActions: []
-  updateActions: []
-  transitions: []
-  waitingTime: 0

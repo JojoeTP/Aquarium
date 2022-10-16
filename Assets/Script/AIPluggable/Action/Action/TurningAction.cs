@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu (menuName = "PluggableAI/Action/Turning")]
+[CreateAssetMenu (menuName = "PluggableAI/Action/TurningAction")]
 public class TurningAction : Action
 {
     public override void Act(StateController controller)

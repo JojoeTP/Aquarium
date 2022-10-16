@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "PluggableAI/Action/Chase")]
+[CreateAssetMenu(menuName = "PluggableAI/Action/ChaseAction")]
 public class ChaseAction : Action
 {
     public override void Act(StateController controller)
@@ -12,6 +12,6 @@ public class ChaseAction : Action
 
     void Patrol(StateController controller)
     {
-        controller.transform.Translate(controller.moveDirection * controller.chaseSpeed * Time.deltaTime); 
+        controller.transform.Translate(controller.moveDirection * controller.chasingSpeed * Time.deltaTime); 
     }
 }

@@ -9,10 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f0389c2260570c04f84b5b4f3fef7ea6, type: 3}
-  m_Name: _RemainInState
+  m_Script: {fileID: 11500000, guid: 787cc456eb316a24a968c690a150c1ed, type: 3}
+  m_Name: PlayerInFrontVision
   m_EditorClassIdentifier: 
-  oneTimeActions: []
-  updateActions: []
-  transitions: []
-  waitingTime: 0
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 64
