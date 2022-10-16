@@ -10,33 +10,42 @@ public class DialogueManager : MonoBehaviour
 
     private Queue<string> sentences;
 
+    Sprite character1;
+    Sprite character2;
+    ReadCSV readCSVData;
+    int dialogueCount = 0;
+
+
     void Start()
     {
-        sentences = new Queue<string>();
+        readCSVData = GetComponent<ReadCSV>();
     }
 
-    public void StartDialogue (Dialogue dialogue){
+    public void StartDialogue (){
+        nameText.text = readCSVData.character[0];
+        dialogueText.text = readCSVData.dialogue[0];
 
-        nameText.text = dialogue.name;
-
-        sentences.Clear();
-
-        foreach (string sentence in dialogue.sentences)
-        {
-            sentences.Enqueue(sentence);
-        }
-
-        DisplayNextSentence();
+        character1 = Resources.Load<Sprite>("Dialogue/CharacterImage/" + readCSVData.character[0]);
+		GameObject imageCharacter1 = GameObject.Find ("Character1");
+		imageCharacter1.GetComponent<Image>().sprite = character1;
     }
 
     public void DisplayNextSentence(){
-        if(sentences.Count == 0){
+        if(dialogueCount == readCSVData.dialogue.Count - 1){
             EndDialogue();
             return;
         }
+        dialogueCount++;
 
-        string sentence = sentences.Dequeue();
-        dialogueText.text = sentence;
+        if(readCSVData.character[0] != readCSVData.character[dialogueCount]){
+            character2 = Resources.Load<Sprite>("Dialogue/CharacterImage/" + readCSVData.character[dialogueCount]);
+
+            GameObject imageCharacter2 = GameObject.Find ("Character2");
+            imageCharacter2.GetComponent<Image>().sprite = character2;
+        }
+
+        nameText.text = readCSVData.character[dialogueCount];
+        dialogueText.text = readCSVData.dialogue[dialogueCount];
     }
 
     void EndDialogue(){
