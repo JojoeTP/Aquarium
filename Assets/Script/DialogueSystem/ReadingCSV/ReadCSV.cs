@@ -2,12 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
-using UnityEngine.UI;
 
 public class ReadCSV : MonoBehaviour
 {
     int checkID = 0;
-    [SerializeField] int id;
+    [SerializeField] float id;
     string dataCheck;
     public List<string> character = new List<string>();
     public List<string> dialogue = new List<string>();

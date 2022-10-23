@@ -14,6 +14,23 @@ public class PlayerInteract : MonoBehaviour
             ToggleHiding();
         
         CanEnterDoor();
+        if(TalkWithNPC())
+            StartDialogue();
+    }
+    bool TalkWithNPC(){
+        foreach(var n in Physics2D.OverlapCircleAll(transform.position + InteractOffset,InteractRadius))
+        {
+            if(n.GetComponent<TalkWithNPC>() != null)
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+    void StartDialogue(){
+        DialogueManager.inst.Invoke("StartDialogue",0);
+        return;
+
     }
 
     bool CanHiding()
