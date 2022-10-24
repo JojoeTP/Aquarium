@@ -1,0 +1,442 @@
+fileFormatVersion: 2
+guid: 0aa41ae742e1b9b40bf647cb3db0aac2
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: b2a9591990af98743ba3ff7cf1000886, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 1
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    isReadable: 0
+    streamingMipmaps: 1
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMasterTextureLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 356
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  spriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 0, y: 0}
+  mosaicSpriteImportData: []
+  rigSpriteImportData:
+  - name: "\u0E1B\u0E23\u0E30\u0E15\u0E39"
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1510
+      y: 1898
+      width: 1062
+      height: 3246
+    spriteID: a9ff10dff06709743bb8517ac617bc19
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -21426, y: 1433}
+  - name: Fish
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 3549
+      y: 1898
+      width: 809
+      height: 3581
+    spriteID: 47eb43e4ce7bbdf4a841d789ae61d936
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -5145, y: 1279}
+  - name: Fish
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 1498
+      height: 3749
+    spriteID: 347954895844d8d4d857044d7c5c2230
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -7037, y: -447}
+  - name: Fish
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4366
+      y: 1898
+      width: 809
+      height: 3581
+    spriteID: 9b4e421547f9b444cb9c9e9095d4195a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -1028, y: 1279}
+  - name: Fish
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 3761
+      width: 1498
+      height: 3749
+    spriteID: ae741b53e1d95eb4fb1063c99ff8b182
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -3582, y: 3310}
+  - name: Fish Copy
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2580
+      y: 1898
+      width: 961
+      height: 3047
+    spriteID: 8bc525d038661504aa2677abe4a804a6
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 466, y: 762}
+  - name: Fish
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2580
+      y: 4953
+      width: 904
+      height: 3047
+    spriteID: b4eed060e2264f743af5b89f0f7a4bd3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -7443, y: 3800}
+  - name: FishObject
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1510
+      y: 4
+      width: 2850
+      height: 1886
+    spriteID: 56f721f5e40301b45848433f90aa559c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -11171, y: -608}
+  characterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+    boneReadOnly: 0
+  sharedRigSpriteImportData: []
+  sharedRigCharacterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+    boneReadOnly: 0
+  platformSettings:
+  - name: DefaultTexturePlatform
+    overridden: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Standalone
+    overridden: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Server
+    overridden: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  mosaicLayers: 1
+  characterMode: 1
+  documentPivot: {x: 0, y: 0}
+  documentAlignment: 7
+  importHiddenLayers: 0
+  layerMappingOption: 2
+  generatePhysicsShape: 0
+  paperDollMode: 0
+  keepDupilcateSpriteName: 1
+  skeletonAssetReferenceID: 
+  spriteCategoryList:
+    categories: []
+  spritePackingTag: 
+  resliceFromLayer: 0
+  mosaicPSDLayers: []
+  rigPSDLayers:
+  - name: Fishroom
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: 77634c2b4855bf147b6092aef44cd4ad
+    layerID: 0
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Objrect
+    spriteName: 
+    isGroup: 1
+    parentIndex: 0
+    spriteID: c38080cd7cdc2264783860240e98736b
+    layerID: -1692268705
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: "\u0E1B\u0E23\u0E30\u0E15\u0E39"
+    spriteName: "\u0E1B\u0E23\u0E30\u0E15\u0E39"
+    isGroup: 0
+    parentIndex: 1
+    spriteID: a9ff10dff06709743bb8517ac617bc19
+    layerID: 324830454
+    mosaicPosition: {x: 1510, y: 1898}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Fish
+    spriteName: 
+    isGroup: 1
+    parentIndex: 1
+    spriteID: eff33f0fb5d41a54c82de1eb0f454f10
+    layerID: -77932700
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Fish
+    spriteName: Fish
+    isGroup: 0
+    parentIndex: 3
+    spriteID: 47eb43e4ce7bbdf4a841d789ae61d936
+    layerID: -293234376
+    mosaicPosition: {x: 3549, y: 1898}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Fish
+    spriteName: Fish
+    isGroup: 0
+    parentIndex: 3
+    spriteID: 347954895844d8d4d857044d7c5c2230
+    layerID: 1272849565
+    mosaicPosition: {x: 4, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Fish
+    spriteName: Fish
+    isGroup: 0
+    parentIndex: 3
+    spriteID: 9b4e421547f9b444cb9c9e9095d4195a
+    layerID: -1456033790
+    mosaicPosition: {x: 4366, y: 1898}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Fish
+    spriteName: Fish
+    isGroup: 0
+    parentIndex: 3
+    spriteID: ae741b53e1d95eb4fb1063c99ff8b182
+    layerID: 466280511
+    mosaicPosition: {x: 4, y: 3761}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Fish Copy
+    spriteName: Fish Copy
+    isGroup: 0
+    parentIndex: 3
+    spriteID: 8bc525d038661504aa2677abe4a804a6
+    layerID: 729333593
+    mosaicPosition: {x: 2580, y: 1898}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Fish
+    spriteName: Fish
+    isGroup: 0
+    parentIndex: 3
+    spriteID: b4eed060e2264f743af5b89f0f7a4bd3
+    layerID: 2032364452
+    mosaicPosition: {x: 2580, y: 4953}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: FishObject
+    spriteName: FishObject
+    isGroup: 0
+    parentIndex: 1
+    spriteID: 56f721f5e40301b45848433f90aa559c
+    layerID: 2046897769
+    mosaicPosition: {x: 1510, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  sharedRigPSDLayers: []
+  pSDLayerImportSetting: []
+  generateGOHierarchy: 0
+  textureAssetName: 
+  prefabAssetName: 
+  spriteLibAssetName: 
+  skeletonAssetName: 
+  secondarySpriteTextures: []
