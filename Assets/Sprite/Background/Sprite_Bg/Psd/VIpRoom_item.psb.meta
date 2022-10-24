@@ -91,27 +91,6 @@ ScriptedImporter:
     uvTransform: {x: 0, y: 0}
   mosaicSpriteImportData: []
   rigSpriteImportData:
-  - name: Layer 98 Copy
-    originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 4
-      y: 4
-      width: 24069
-      height: 4200
-    spriteID: f86323d9fcb660c40af63b1bd26e7697
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    parentGroupIndex: -1
-    uvTransform: {x: -36, y: 4}
   - name: DoorVip
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -119,7 +98,7 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 24081
+      x: 24080
       y: 4
       width: 1061
       height: 3130
@@ -132,19 +111,19 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 23931, y: -461}
-  - name: coin
+    uvTransform: {x: 23930, y: -461}
+  - name: Layer 98 Copy 2 2
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 25150
+      x: 4
       y: 4
-      width: 539
-      height: 383
-    spriteID: 49abf1249943f0345abb9df0dedd1a80
+      width: 24068
+      height: 4200
+    spriteID: 9b17a0f65704c9f41ab0735ac558a0ba
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -153,8 +132,29 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 13343, y: -1828}
-  - name: All
+    uvTransform: {x: -36, y: 4}
+  - name: "\u0E40\u0E2B\u0E23\u0E35\u0E22\u0E0D"
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 25149
+      y: 4
+      width: 300
+      height: 380
+    spriteID: c273ed6189948d34a8266e8b9814f4d0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 13103, y: -1831}
+  - name: "\u0E40\u0E01\u0E49\u0E32\u0E2D\u0E35\u0E49 2 2"
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -165,7 +165,7 @@ ScriptedImporter:
       y: 4212
       width: 18940
       height: 3625
-    spriteID: f2e95ce5aac8dfa43a3ce67f899e2bee
+    spriteID: f8b33b5d45fcca54188916c2b7a30f89
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -248,52 +248,52 @@ ScriptedImporter:
     flatten: 0
     isImported: 0
     isVisible: 1
-  - name: Layer 98 Copy
-    spriteName: Layer 98 Copy
-    isGroup: 0
-    parentIndex: 0
-    spriteID: f86323d9fcb660c40af63b1bd26e7697
-    layerID: 1742999519
-    mosaicPosition: {x: 4, y: 4}
-    flatten: 0
-    isImported: 1
-    isVisible: 1
   - name: DoorVip
     spriteName: DoorVip
     isGroup: 0
     parentIndex: 0
     spriteID: f4be10ffb2772c942ab65f4cd8e2c735
     layerID: 198387389
-    mosaicPosition: {x: 24081, y: 4}
+    mosaicPosition: {x: 24080, y: 4}
     flatten: 0
     isImported: 1
     isVisible: 1
-  - name: Mid Copy
+  - name: Layer 98 Copy 2 2
+    spriteName: Layer 98 Copy 2 2
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 9b17a0f65704c9f41ab0735ac558a0ba
+    layerID: -1896223329
+    mosaicPosition: {x: 4, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Mid
     spriteName: 
     isGroup: 1
     parentIndex: 0
-    spriteID: 239755ba8e48fec4fbd436ba67178ace
-    layerID: 1128219937
+    spriteID: 00000000000000000000000000000000
+    layerID: 339800072
     mosaicPosition: {x: 0, y: 0}
     flatten: 0
     isImported: 0
     isVisible: 1
-  - name: coin
-    spriteName: coin
+  - name: "\u0E40\u0E2B\u0E23\u0E35\u0E22\u0E0D"
+    spriteName: "\u0E40\u0E2B\u0E23\u0E35\u0E22\u0E0D"
     isGroup: 0
     parentIndex: 3
-    spriteID: 49abf1249943f0345abb9df0dedd1a80
-    layerID: 1367190883
-    mosaicPosition: {x: 25150, y: 4}
+    spriteID: c273ed6189948d34a8266e8b9814f4d0
+    layerID: 1743591346
+    mosaicPosition: {x: 25149, y: 4}
     flatten: 0
     isImported: 1
     isVisible: 1
-  - name: All
-    spriteName: All
+  - name: "\u0E40\u0E01\u0E49\u0E32\u0E2D\u0E35\u0E49 2 2"
+    spriteName: "\u0E40\u0E01\u0E49\u0E32\u0E2D\u0E35\u0E49 2 2"
     isGroup: 0
     parentIndex: 3
-    spriteID: f2e95ce5aac8dfa43a3ce67f899e2bee
-    layerID: -63484587
+    spriteID: f8b33b5d45fcca54188916c2b7a30f89
+    layerID: 515451543
     mosaicPosition: {x: 4, y: 4212}
     flatten: 0
     isImported: 1
