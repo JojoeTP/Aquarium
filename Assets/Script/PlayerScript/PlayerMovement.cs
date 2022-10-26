@@ -22,6 +22,8 @@ public class PlayerMovement : MonoBehaviour
     public float staminaRegeneration;
     public Slider staminaSlider;
 
+    Vector2 direction;
+
     Vector3 scale;
 
     private void Awake() 
@@ -39,35 +41,23 @@ public class PlayerMovement : MonoBehaviour
         StartCoroutine(Blink());
     }
 
-    void Update()
+    public void OnSprint(InputValue value)
     {
-        ChangeStaminaBar();
-    }
-
-    void CheckStamina()
-    {
-        if(playerStamina < 0)
+        if(value.isPressed)
+        {
+            playerSpeed = playerBaseSpeed + sprintSpeed;
+            IsSprint = true;
+        }
+        else
         {
             playerSpeed = playerBaseSpeed;
             IsSprint = false;
         }
     }
 
-    public void OnSprint()
+    void CheckStamina()
     {
-        if(!IsSprint)
-        {
-            if(playerStamina > 0)
-            {
-                playerSpeed = playerBaseSpeed + sprintSpeed;
-                IsSprint = true;
-            }
-        }
-    }
-
-    public void CancelSprint()
-    {
-        if(IsSprint)
+        if(playerStamina < 0)
         {
             playerSpeed = playerBaseSpeed;
             IsSprint = false;
@@ -83,13 +73,16 @@ public class PlayerMovement : MonoBehaviour
     void StaminaRegeneration()
     {
         if(IsSprint)
+        {
             playerStamina -= staminaCost;
+            return;
+        }
             
-        if(basePlayerStamina > playerStamina && IsSprint == false)
+        if(basePlayerStamina > playerStamina)
         {
             playerStamina += staminaRegeneration;
         }
-        if(playerStamina > basePlayerStamina)
+        else
         {
             playerStamina = basePlayerStamina;
         }
@@ -101,16 +94,18 @@ public class PlayerMovement : MonoBehaviour
         StaminaRegeneration();
     }
 
-    public void Move(bool isHide)
+    bool isMove = false;
+    public void Move()
     {
-        if(isHide)
-        {
-            rb.velocity = Vector2.zero;
-            animator.SetBool("Walk",false);
-            return;
-        }
+        if(!isMove)
+            direction = Vector2.zero;
+        // if(isHide)
+        // {
+        //     rb.velocity = Vector2.zero;
+        //     animator.SetBool("Walk",false);
+        //     return;
+        // }
 
-        Vector2 direction = PlayerManager.inst.playerControl.Player.Move.ReadValue<Vector2>();
         rb.velocity = direction * playerSpeed;
 
         if(direction.x == 1)
@@ -123,6 +118,16 @@ public class PlayerMovement : MonoBehaviour
             animator.SetBool("Walk",true);
         else
             animator.SetBool("Walk",false);
+    }
+
+    public void OnMove(Vector2 value)
+    {
+        direction = value.normalized;
+    }
+
+    public void OnPressMove(bool value)
+    {
+        isMove = value;
     }
 
     IEnumerator Blink()
