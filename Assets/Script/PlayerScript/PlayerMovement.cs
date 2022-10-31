@@ -103,12 +103,10 @@ public class PlayerMovement : MonoBehaviour
             direction = Vector2.zero;
 
         
-        // if(isHide)
-        // {
-        //     rb.velocity = Vector2.zero;
-        //     animator.SetBool("Walk",false);
-        //     return;
-        // }
+        if(PlayerManager.inst.isHide)
+        {
+            direction = Vector2.zero;
+        }
 
         rb.velocity = direction * playerSpeed;
 

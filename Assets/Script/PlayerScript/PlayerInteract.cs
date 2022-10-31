@@ -41,7 +41,6 @@ public class PlayerInteract : MonoBehaviour
     void StartDialogue(){
         DialogueManager.inst.Invoke("StartDialogue",0);
         return;
-
     }
 
     bool CanHiding()
