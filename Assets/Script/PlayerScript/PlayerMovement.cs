@@ -53,6 +53,7 @@ public class PlayerMovement : MonoBehaviour
             playerSpeed = playerBaseSpeed;
             IsSprint = false;
         }
+
     }
 
     void CheckStamina()
@@ -91,6 +92,7 @@ public class PlayerMovement : MonoBehaviour
     private void FixedUpdate() 
     {
         CheckStamina();
+        ChangeStaminaBar();
         StaminaRegeneration();
     }
 
@@ -99,12 +101,12 @@ public class PlayerMovement : MonoBehaviour
     {
         if(!isMove)
             direction = Vector2.zero;
-        // if(isHide)
-        // {
-        //     rb.velocity = Vector2.zero;
-        //     animator.SetBool("Walk",false);
-        //     return;
-        // }
+
+        
+        if(PlayerManager.inst.isHide)
+        {
+            direction = Vector2.zero;
+        }
 
         rb.velocity = direction * playerSpeed;
 

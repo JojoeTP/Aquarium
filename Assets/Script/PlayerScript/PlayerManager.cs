@@ -5,6 +5,13 @@ using UnityEngine.InputSystem;
 
 public class PlayerManager : MonoBehaviour
 {
+    public enum PLAYERSTATE
+    {
+        CONVERSATION,
+        HIDING,
+        NONE,
+    }
+
     public static PlayerManager inst;
     public GameObject playerSprite;
 
@@ -16,6 +23,9 @@ public class PlayerManager : MonoBehaviour
 
     [Header("PlayerAction")]
     public bool isHide;
+
+    [Header("PlayerAction")]
+    public PLAYERSTATE playerState;
     
     private void Awake() 
     {
@@ -24,6 +34,8 @@ public class PlayerManager : MonoBehaviour
 
     void Start()
     {
+        playerState = PLAYERSTATE.NONE;
+        
         InputSystemManager.Inst.onMove += playerMovement.OnMove;
         InputSystemManager.Inst.onPressMove += playerMovement.OnPressMove;
         InputSystemManager.Inst.onSprint += playerMovement.OnSprint;
