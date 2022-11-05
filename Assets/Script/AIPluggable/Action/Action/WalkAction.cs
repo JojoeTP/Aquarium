@@ -2,17 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
-[CreateAssetMenu (menuName = "PluggableAI/Action/WalkAction")]
-public class WalkAction : Action
+namespace PluggableAI
 {
-    public override void Act(StateController controller)
+    [CreateAssetMenu (menuName = "PluggableAI/Action/WalkAction")]
+    public class WalkAction : Action
     {
-        Walk(controller);
-    }
+        public override void Act(StateController controller)
+        {
+            Walk(controller);
+        }
 
-    void Walk(StateController controller)
-    {
-        controller.transform.Translate(controller.moveDirection * controller.moveSpeed * Time.deltaTime); 
+        void Walk(StateController controller)
+        {
+            controller.transform.Translate(controller.moveDirection * controller.moveSpeed * Time.deltaTime); 
+        }
     }
 }

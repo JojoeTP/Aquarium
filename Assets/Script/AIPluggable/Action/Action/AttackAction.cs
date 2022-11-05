@@ -2,28 +2,31 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "PluggableAI/Action/AttackAction")]
-public class AttackAction : Action
+
+namespace PluggableAI
 {
-    public LayerMask playerLayer;
-    
-    public override void Act(StateController controller)
+    [CreateAssetMenu(menuName = "PluggableAI/Action/AttackAction")]
+    public class AttackAction : Action
     {
-        Attack(controller);
-    }
-
-    void Attack(StateController controller)
-    {
-
-        if(Physics2D.Raycast(controller.transform.position,controller.moveDirection,controller.attackRange,playerLayer))
+        public LayerMask playerLayer;
+        
+        public override void Act(StateController controller)
         {
-            Attack();
+            Attack(controller);
+        }
+
+        void Attack(StateController controller)
+        {
+
+            if(Physics2D.Raycast(controller.transform.position,controller.moveDirection,controller.attackRange,playerLayer))
+            {
+                Attack();
+            }
+        }
+
+        void Attack()
+        {
+            Debug.Log("Hit");
         }
     }
-
-    void Attack()
-    {
-        Debug.Log("Hit");
-    }
 }
-

@@ -2,26 +2,29 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "PluggableAI/Decesion/ContinueChase")]
-public class ContinueChase : Decision
+namespace PluggableAI
 {
-    public LayerMask playerLayer;
-
-    public override bool Decide(StateController controller)
+    [CreateAssetMenu(menuName = "PluggableAI/Decesion/ContinueChase")]
+    public class ContinueChase : Decision
     {
-        bool isContinueChase = IsContinueChase(controller);
-        return isContinueChase;
-        
-    }
+        public LayerMask playerLayer;
 
-    bool IsContinueChase(StateController controller)
-    {
-        if(controller.chasingTime > 0)
-            return true;
-        
-        if(Physics2D.Raycast(controller.transform.position,controller.moveDirection,controller.chasingRange,playerLayer))
-            return true;
+        public override bool Decide(StateController controller)
+        {
+            bool isContinueChase = IsContinueChase(controller);
+            return isContinueChase;
+            
+        }
 
-        return false;
+        bool IsContinueChase(StateController controller)
+        {
+            if(controller.chasingTime > 0)
+                return true;
+            
+            if(Physics2D.Raycast(controller.transform.position,controller.moveDirection,controller.chasingRange,playerLayer))
+                return true;
+
+            return false;
+        }
     }
 }

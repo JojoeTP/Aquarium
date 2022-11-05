@@ -2,16 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu (menuName = "PluggableAI/Action/TurningAction")]
-public class TurningAction : Action
+namespace PluggableAI
 {
-    public override void Act(StateController controller)
+    [CreateAssetMenu (menuName = "PluggableAI/Action/TurningAction")]
+    public class TurningAction : Action
     {
-        Turning(controller);
-    }
+        public override void Act(StateController controller)
+        {
+            Turning(controller);
+        }
 
-    void Turning(StateController controller)
-    {
-        controller.Turning();
+        void Turning(StateController controller)
+        {
+            controller.Turning();
+        }
     }
 }
