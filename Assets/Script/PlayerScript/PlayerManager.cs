@@ -5,11 +5,15 @@ using UnityEngine.InputSystem;
 
 public class PlayerManager : MonoBehaviour
 {
+    public enum PLAYERSTATE
+    {
+        CONVERSATION,
+        HIDING,
+        NONE,
+    }
+
     public static PlayerManager inst;
     public GameObject playerSprite;
-
-    [Header("InputSystem")]
-    public PlayerControls playerControl;
 
     [Header("PlayerScript")]
     public PlayerMovement playerMovement;
@@ -20,29 +24,23 @@ public class PlayerManager : MonoBehaviour
     [Header("PlayerAction")]
     public bool isHide;
 
-
+    [Header("PlayerAction")]
+    public PLAYERSTATE playerState;
+    
     private void Awake() 
     {
         inst = this;
-        playerControl = new PlayerControls();
-    }
-
-    private void OnEnable() 
-    {
-        playerControl.Enable();
-    }
-
-    private void OnDisable() 
-    {
-        playerControl.Disable();
     }
 
     void Start()
     {
-        playerControl.Player.Interact.performed += context => playerInteract.Interacting();
-        playerControl.Player.Sprint.performed += context => playerMovement.OnSprint();
-        playerControl.Player.Sprint.canceled += context => playerMovement.CancelSprint();
-        playerControl.Player.Inventory.performed += context => playerInventory.OpenInventory();
+        playerState = PLAYERSTATE.NONE;
+        
+        InputSystemManager.Inst.onMove += playerMovement.OnMove;
+        InputSystemManager.Inst.onPressMove += playerMovement.OnPressMove;
+        InputSystemManager.Inst.onSprint += playerMovement.OnSprint;
+        InputSystemManager.Inst.onInteract += playerInteract.OnInteract;
+        InputSystemManager.Inst.onOpenInventory += playerInventory.OnOpenInventory;
     }
 
     void Update()
@@ -52,6 +50,12 @@ public class PlayerManager : MonoBehaviour
 
     private void FixedUpdate() 
     {
-        playerMovement.Move(isHide);
+        playerMovement.Move();
+    }
+
+    void SetUpPlayer()
+    {
+        // InputSystemManager.Inst.SetUIControl(true);
+        // InputSystemManager.Inst.SetPlayerControl(true);
     }
 }

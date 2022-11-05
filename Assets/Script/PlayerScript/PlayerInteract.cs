@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerInteract : MonoBehaviour
 {
@@ -14,9 +15,19 @@ public class PlayerInteract : MonoBehaviour
             ToggleHiding();
         
         CanEnterDoor();
+
         if(TalkWithNPC())
             StartDialogue();
     }
+
+    public void OnInteract(InputValue value)
+    {
+        if(value.isPressed)
+        {
+            Interacting();
+        }
+    }
+
     bool TalkWithNPC(){
         foreach(var n in Physics2D.OverlapCircleAll(transform.position + InteractOffset,InteractRadius))
         {
@@ -30,7 +41,6 @@ public class PlayerInteract : MonoBehaviour
     void StartDialogue(){
         DialogueManager.inst.Invoke("StartDialogue",0);
         return;
-
     }
 
     bool CanHiding()

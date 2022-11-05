@@ -1,0 +1,679 @@
+fileFormatVersion: 2
+guid: db286ef8c66343a41b2ce4d90769756e
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: b2a9591990af98743ba3ff7cf1000886, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 1
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    isReadable: 0
+    streamingMipmaps: 1
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMasterTextureLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 356
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  spriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 0, y: 0}
+  mosaicSpriteImportData: []
+  rigSpriteImportData:
+  - name: Black
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 6100
+      height: 1918
+    spriteID: 20a552b6b0052ec4fbb36310033259b6
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -4517, y: -178}
+  - name: 'vent '
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2104
+      y: 4601
+      width: 3856
+      height: 248
+    spriteID: 145f907553d31004fa95d8dfeac0b18f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -3677, y: 2905}
+  - name: urinal
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2104
+      y: 5113
+      width: 1137
+      height: 683
+    spriteID: c57bb0711002ca34c8cbdedd6ade2f09
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -5324, y: 4750}
+  - name: basin
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 6112
+      y: 4
+      width: 1467
+      height: 820
+    spriteID: f4b727e3510830541b30d0015d635ec8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -2555, y: -690}
+  - name: toiletClose
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 3248
+      y: 1930
+      width: 2092
+      height: 1209
+    spriteID: 6aa1747c9824a8c47be4fedb38f52693
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -2674, y: 1608}
+  - name: toilet
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 5348
+      y: 1930
+      width: 2092
+      height: 1209
+    spriteID: d0a39ab6b84ae0c4c808c56648d8e024
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 45, y: 1608}
+  - name: Locker
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 6112
+      y: 832
+      width: 906
+      height: 1029
+    spriteID: 6d492675629b4fa498b32c04421fc380
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 929, y: 466}
+  - name: Black
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1930
+      width: 3236
+      height: 1446
+    spriteID: 432eded0346261247bbf962937484ce0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -15756, y: 1640}
+  - name: 'vent '
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2104
+      y: 4857
+      width: 3856
+      height: 248
+    spriteID: e6c8330d0492e1e4e897db317b9de551
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -12649, y: 3161}
+  - name: Basin
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 6304
+      y: 3384
+      width: 1467
+      height: 896
+    spriteID: a93f8bca7c040574091bb3dc751dc3c3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -7952, y: 2766}
+  - name: toiletClose
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 3384
+      width: 2092
+      height: 1209
+    spriteID: c25782478a9ff344691ba42a783224a3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -15107, y: 3062}
+  - name: toilet
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2104
+      y: 3384
+      width: 2092
+      height: 1209
+    spriteID: 07e1518eff69e8f49825aa58b50fe64e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -13626, y: 3062}
+  - name: toiletClose
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4204
+      y: 3384
+      width: 2092
+      height: 1209
+    spriteID: 1e2b3fae4f160284fbb96bf66d54ec1d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -12145, y: 3062}
+  - name: toilet
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4601
+      width: 2092
+      height: 1209
+    spriteID: 8a84975af4391fc479321fc1242818c9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -16964, y: 4279}
+  - name: Locker
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 7026
+      y: 832
+      width: 906
+      height: 1029
+    spriteID: cbb59fd260d60f94e8e82f2de83a7588
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -11248, y: 466}
+  characterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+    boneReadOnly: 0
+  sharedRigSpriteImportData: []
+  sharedRigCharacterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+    boneReadOnly: 0
+  platformSettings:
+  - name: DefaultTexturePlatform
+    overridden: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Standalone
+    overridden: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Server
+    overridden: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  mosaicLayers: 1
+  characterMode: 1
+  documentPivot: {x: 0, y: 0}
+  documentAlignment: 7
+  importHiddenLayers: 0
+  layerMappingOption: 2
+  generatePhysicsShape: 0
+  paperDollMode: 0
+  keepDupilcateSpriteName: 1
+  skeletonAssetReferenceID: 
+  spriteCategoryList:
+    categories: []
+  spritePackingTag: 
+  resliceFromLayer: 0
+  mosaicPSDLayers: []
+  rigPSDLayers:
+  - name: Bathroom
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: ff4d1824257b8694c901f2f19812b901
+    layerID: 0
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: boy
+    spriteName: 
+    isGroup: 1
+    parentIndex: 0
+    spriteID: 1be4f4497e75d16469d99f921c0dbecb
+    layerID: 1502598544
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Black
+    spriteName: Black
+    isGroup: 0
+    parentIndex: 1
+    spriteID: 20a552b6b0052ec4fbb36310033259b6
+    layerID: -549105281
+    mosaicPosition: {x: 4, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: other
+    spriteName: 
+    isGroup: 1
+    parentIndex: 1
+    spriteID: e7c6fbb0c86f9494e855b8836c3b97dd
+    layerID: -582632140
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: 'vent '
+    spriteName: 'vent '
+    isGroup: 0
+    parentIndex: 3
+    spriteID: 145f907553d31004fa95d8dfeac0b18f
+    layerID: -683638815
+    mosaicPosition: {x: 2104, y: 4601}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: urinal
+    spriteName: urinal
+    isGroup: 0
+    parentIndex: 3
+    spriteID: c57bb0711002ca34c8cbdedd6ade2f09
+    layerID: 1292066689
+    mosaicPosition: {x: 2104, y: 5113}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: basin
+    spriteName: basin
+    isGroup: 0
+    parentIndex: 3
+    spriteID: f4b727e3510830541b30d0015d635ec8
+    layerID: -166055941
+    mosaicPosition: {x: 6112, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: toiletClose
+    spriteName: toiletClose
+    isGroup: 0
+    parentIndex: 3
+    spriteID: 6aa1747c9824a8c47be4fedb38f52693
+    layerID: 1288878933
+    mosaicPosition: {x: 3248, y: 1930}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: toilet
+    spriteName: toilet
+    isGroup: 0
+    parentIndex: 3
+    spriteID: d0a39ab6b84ae0c4c808c56648d8e024
+    layerID: -1656793769
+    mosaicPosition: {x: 5348, y: 1930}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Locker
+    spriteName: Locker
+    isGroup: 0
+    parentIndex: 3
+    spriteID: 6d492675629b4fa498b32c04421fc380
+    layerID: -110880594
+    mosaicPosition: {x: 6112, y: 832}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: girl
+    spriteName: 
+    isGroup: 1
+    parentIndex: 0
+    spriteID: aec9bb75db824b54381bc53e5eab82dd
+    layerID: -2047302128
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Black
+    spriteName: Black
+    isGroup: 0
+    parentIndex: 10
+    spriteID: 432eded0346261247bbf962937484ce0
+    layerID: 1956291941
+    mosaicPosition: {x: 4, y: 1930}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: other
+    spriteName: 
+    isGroup: 1
+    parentIndex: 10
+    spriteID: 2b4b058c655bc104394b1b7063725f6d
+    layerID: -1811720584
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: 'vent '
+    spriteName: 'vent '
+    isGroup: 0
+    parentIndex: 12
+    spriteID: e6c8330d0492e1e4e897db317b9de551
+    layerID: -849973629
+    mosaicPosition: {x: 2104, y: 4857}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Basin
+    spriteName: Basin
+    isGroup: 0
+    parentIndex: 12
+    spriteID: a93f8bca7c040574091bb3dc751dc3c3
+    layerID: -166023141
+    mosaicPosition: {x: 6304, y: 3384}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: toiletClose
+    spriteName: toiletClose
+    isGroup: 0
+    parentIndex: 12
+    spriteID: c25782478a9ff344691ba42a783224a3
+    layerID: 1673659775
+    mosaicPosition: {x: 4, y: 3384}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: toilet
+    spriteName: toilet
+    isGroup: 0
+    parentIndex: 12
+    spriteID: 07e1518eff69e8f49825aa58b50fe64e
+    layerID: 2014003729
+    mosaicPosition: {x: 2104, y: 3384}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: toiletClose
+    spriteName: toiletClose
+    isGroup: 0
+    parentIndex: 12
+    spriteID: 1e2b3fae4f160284fbb96bf66d54ec1d
+    layerID: 1673659776
+    mosaicPosition: {x: 4204, y: 3384}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: toilet
+    spriteName: toilet
+    isGroup: 0
+    parentIndex: 12
+    spriteID: 8a84975af4391fc479321fc1242818c9
+    layerID: 1610719202
+    mosaicPosition: {x: 4, y: 4601}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Locker
+    spriteName: Locker
+    isGroup: 0
+    parentIndex: 12
+    spriteID: cbb59fd260d60f94e8e82f2de83a7588
+    layerID: -1642636902
+    mosaicPosition: {x: 7026, y: 832}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  sharedRigPSDLayers: []
+  pSDLayerImportSetting: []
+  generateGOHierarchy: 0
+  textureAssetName: 
+  prefabAssetName: 
+  spriteLibAssetName: 
+  skeletonAssetName: 
+  secondarySpriteTextures: []
