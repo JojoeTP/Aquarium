@@ -5,18 +5,20 @@ using System.IO;
 
 public class ReadCSV : MonoBehaviour
 {
-    int checkID = 0;
-    [SerializeField] float id;
+    public float checkID = 0;
+    public float id;
     string dataCheck;
     public List<string> character = new List<string>();
     public List<string> dialogue = new List<string>();
+    public List<string> decision1 = new List<string>();
+    public List<string> decision2 = new List<string>();
 
     [SerializeField] string path;
     void Awake()
     {
         Read();
     }
-    void Read()
+    public void Read()
     {
         StreamReader stringReader = new StreamReader("Assets/StreamingAssets/DialogueData/" + path + ".csv");
         bool endOfFile = false;
@@ -45,10 +47,12 @@ public class ReadCSV : MonoBehaviour
             }
 
             // Debug.Log(data_values[0]);
-            if(data_values[0] == id.ToString() ){
+            if(data_values[0] == id.ToString()){
                 Debug.Log(data_values[0].ToString() + " " + data_values[1].ToString() + " " + data_values[2].ToString());
                 character.Add(data_values[1].ToString());
                 dialogue.Add(data_values[2].ToString());
+                decision1.Add(data_values[3].ToString());
+                decision2.Add(data_values[4].ToString());
             }
         }
     }

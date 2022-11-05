@@ -16,10 +16,16 @@ public class DialogueManager : MonoBehaviour
     Sprite character1;
     Sprite character2;
     ReadCSV readCSVData;
-    int dialogueCount = 0;
+    [SerializeField] int dialogueCount = 0;
     GameObject imageCharacter1;
     GameObject imageCharacter2;
     [SerializeField] GameObject dialoguePanel;
+    [SerializeField] GameObject continueButton;
+    [SerializeField] GameObject decisionButton1;
+    [SerializeField] TextMeshProUGUI decisionButton1Text;
+    [SerializeField] GameObject decisionButton2;
+    [SerializeField] TextMeshProUGUI decisionButton2Text;
+
 
     private void Awake() {
         inst = this;
@@ -68,6 +74,19 @@ public class DialogueManager : MonoBehaviour
             imageCharacter1.GetComponent<Image>().color = new Color(0.5f,0.5f,0.5f,1);
             imageCharacter2.GetComponent<Image>().color = new Color(1,1,1,1);
         }
+
+        if(readCSVData.decision1[dialogueCount] != "1"){
+            continueButton.SetActive(false);
+            decisionButton1.SetActive(true);
+            decisionButton2.SetActive(true);
+            decisionButton1Text.text = readCSVData.decision1[dialogueCount];
+            decisionButton2Text.text = readCSVData.decision2[dialogueCount];
+        }
+        else{
+            continueButton.SetActive(true);
+            decisionButton1.SetActive(false);
+            decisionButton2.SetActive(false);
+        }
         nameText.text = readCSVData.character[dialogueCount];
         StopAllCoroutines();
         StartCoroutine(TypeSentence(readCSVData.dialogue[dialogueCount]));
@@ -88,5 +107,19 @@ public class DialogueManager : MonoBehaviour
         imageCharacter2.GetComponent<Image>().color = new Color(0,0,0,0);
         dialoguePanel.SetActive(false);
         Debug.Log("End Conversation");
+    }
+
+    public void Decision1Button(){
+        readCSVData.id += 0.1f;
+        readCSVData.checkID = 0;
+        readCSVData.Invoke("Read",0);
+        // dialogueCount--;
+        DisplayNextSentence();
+    }
+    public void Decision2Button(){
+        readCSVData.id += 0.2f;
+        readCSVData.checkID = 0;
+        readCSVData.Invoke("Read",0);
+        DisplayNextSentence();
     }
 }
