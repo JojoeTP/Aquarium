@@ -23,6 +23,7 @@ public class InputSystemManager : MonoBehaviour
     public UnityAction onOpenInventory;
     public UnityAction<InputValue> onNavigate;
     public UnityAction onClose;
+    public UnityAction onLight;
     
 
     //InputActionMap
@@ -124,6 +125,11 @@ public class InputSystemManager : MonoBehaviour
     void OnOpenInventory()
     {
         onOpenInventory?.Invoke();
+    }
+
+    void OnLight()
+    {
+        onLight?.Invoke();
     }
     
     

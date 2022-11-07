@@ -7,7 +7,6 @@ using UnityEngine.InputSystem;
 public class PlayerMovement : MonoBehaviour
 {
     Rigidbody2D rb;
-    [SerializeField] Animator animator;
 
     [Header("PlayerSpeed")]
     public float playerBaseSpeed;
@@ -117,9 +116,9 @@ public class PlayerMovement : MonoBehaviour
         
         
         if(rb.velocity != Vector2.zero)
-            animator.SetBool("Walk",true);
+            PlayerManager.inst.playerAnimator.SetBool("Walk",true);
         else
-            animator.SetBool("Walk",false);
+            PlayerManager.inst.playerAnimator.SetBool("Walk",false);
     }
 
     public void OnMove(Vector2 value)
@@ -134,7 +133,7 @@ public class PlayerMovement : MonoBehaviour
 
     IEnumerator Blink()
     {
-        animator.SetTrigger("Blink");
+        PlayerManager.inst.playerAnimator.SetTrigger("Blink");
         float blinkTime = Random.Range(10f,30f);
         yield return new WaitForSeconds(blinkTime);
         StartCoroutine(Blink());

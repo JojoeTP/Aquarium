@@ -602,6 +602,9 @@ MonoBehaviour:
   conditionItem: {fileID: 0}
   isPlayerUseItBefore: 0
   canEnemyEnter: 0
+  triggerEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!61 &356976905
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -692,6 +695,9 @@ MonoBehaviour:
   conditionItem: {fileID: 0}
   isPlayerUseItBefore: 0
   canEnemyEnter: 0
+  triggerEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!61 &373165560
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -910,7 +916,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7774193, y: 1}
+    m_SensorSize: {x: 1.7793595, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -1012,6 +1018,9 @@ MonoBehaviour:
   conditionItem: {fileID: 0}
   isPlayerUseItBefore: 0
   canEnemyEnter: 0
+  triggerEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &406672625
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1735,6 +1744,9 @@ MonoBehaviour:
   conditionItem: {fileID: 0}
   isPlayerUseItBefore: 0
   canEnemyEnter: 0
+  triggerEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!61 &573731143
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1825,6 +1837,9 @@ MonoBehaviour:
   conditionItem: {fileID: 0}
   isPlayerUseItBefore: 0
   canEnemyEnter: 0
+  triggerEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!61 &585858922
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1915,6 +1930,9 @@ MonoBehaviour:
   conditionItem: {fileID: 0}
   isPlayerUseItBefore: 0
   canEnemyEnter: 0
+  triggerEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!61 &589150415
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1990,6 +2008,10 @@ PrefabInstance:
     - target: {fileID: 908194463218704434, guid: 0e39e3d1328de4c468b663948483721b, type: 3}
       propertyPath: m_Name
       value: PlayerUIOverlay
+      objectReference: {fileID: 0}
+    - target: {fileID: 908194463218704434, guid: 0e39e3d1328de4c468b663948483721b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1647559988024180354, guid: 0e39e3d1328de4c468b663948483721b, type: 3}
       propertyPath: m_Camera
@@ -2605,6 +2627,9 @@ MonoBehaviour:
   conditionItem: {fileID: 0}
   isPlayerUseItBefore: 0
   canEnemyEnter: 0
+  triggerEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!61 &748000679
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2856,6 +2881,9 @@ MonoBehaviour:
   conditionItem: {fileID: 0}
   isPlayerUseItBefore: 0
   canEnemyEnter: 0
+  triggerEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!61 &819383247
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2977,6 +3005,9 @@ MonoBehaviour:
   conditionItem: {fileID: 0}
   isPlayerUseItBefore: 0
   canEnemyEnter: 0
+  triggerEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!61 &878667440
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3323,6 +3354,9 @@ MonoBehaviour:
   conditionItem: {fileID: 0}
   isPlayerUseItBefore: 0
   canEnemyEnter: 0
+  triggerEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!61 &926776524
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4255,6 +4289,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1829112645651699382, guid: fd10c98f2285a10469886c1df78c26e8, type: 3}
+      propertyPath: m_Intensity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1829112645651699383, guid: fd10c98f2285a10469886c1df78c26e8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1829112646365129873, guid: fd10c98f2285a10469886c1df78c26e8, type: 3}
+      propertyPath: playerAnimator
+      value: 
+      objectReference: {fileID: 1368535490}
     - target: {fileID: 1829112646365129881, guid: fd10c98f2285a10469886c1df78c26e8, type: 3}
       propertyPath: staminaSlider
       value: 
@@ -4706,6 +4752,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1368535490 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5158757309497146287, guid: fd10c98f2285a10469886c1df78c26e8, type: 3}
+  m_PrefabInstance: {fileID: 1303363222}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1394825623
 GameObject:
   m_ObjectHideFlags: 0
@@ -4770,6 +4821,9 @@ MonoBehaviour:
   conditionItem: {fileID: 0}
   isPlayerUseItBefore: 0
   canEnemyEnter: 0
+  triggerEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!61 &1394825627
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6231,6 +6285,9 @@ MonoBehaviour:
   conditionItem: {fileID: 0}
   isPlayerUseItBefore: 0
   canEnemyEnter: 0
+  triggerEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!61 &1900784742
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6350,6 +6407,9 @@ MonoBehaviour:
   conditionItem: {fileID: 0}
   isPlayerUseItBefore: 0
   canEnemyEnter: 0
+  triggerEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!61 &1968587177
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6593,6 +6653,9 @@ MonoBehaviour:
   conditionItem: {fileID: 0}
   isPlayerUseItBefore: 0
   canEnemyEnter: 0
+  triggerEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!61 &2084036404
 BoxCollider2D:
   m_ObjectHideFlags: 0

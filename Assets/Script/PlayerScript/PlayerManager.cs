@@ -14,6 +14,7 @@ public class PlayerManager : MonoBehaviour
 
     public static PlayerManager inst;
     public GameObject playerSprite;
+    public Animator playerAnimator;
 
     [Header("PlayerScript")]
     public PlayerMovement playerMovement;
@@ -41,6 +42,7 @@ public class PlayerManager : MonoBehaviour
         InputSystemManager.Inst.onSprint += playerMovement.OnSprint;
         InputSystemManager.Inst.onInteract += playerInteract.OnInteract;
         InputSystemManager.Inst.onOpenInventory += playerInventory.OnOpenInventory;
+        InputSystemManager.Inst.onLight += playerLight.OnLight;
     }
 
     void Update()
