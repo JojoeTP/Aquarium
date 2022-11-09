@@ -154,7 +154,7 @@ ScriptedImporter:
     tessellationDetail: 0
     parentGroupIndex: -1
     uvTransform: {x: -1744, y: 2786}
-  - name: Key1
+  - name: KeyIceroom Copy
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -163,9 +163,9 @@ ScriptedImporter:
       serializedVersion: 2
       x: 13875
       y: 2177
-      width: 49
-      height: 59
-    spriteID: beb9d806b97533a40bfab6a06a8e349f
+      width: 42
+      height: 84
+    spriteID: 7b212a2ca9c6f1a44a6277e8e89ce49f
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -174,28 +174,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 3487, y: -130}
-  - name: Key2
-    originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 13932
-      y: 2177
-      width: 44
-      height: 56
-    spriteID: 07c70209a0ec79543a4fb3f866833174
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    parentGroupIndex: -1
-    uvTransform: {x: 3380, y: -135}
+    uvTransform: {x: 3464, y: -103}
   - name: Key3
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -203,8 +182,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 13875
-      y: 2244
+      x: 13925
+      y: 2177
       width: 30
       height: 75
     spriteID: f6b9b77ed78e61e4baf4df590b72d951
@@ -216,7 +195,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 3142, y: -41}
+    uvTransform: {x: 3192, y: -108}
   - name: KeyLocker
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -372,23 +351,13 @@ ScriptedImporter:
     flatten: 0
     isImported: 0
     isVisible: 1
-  - name: Key1
-    spriteName: Key1
+  - name: KeyIceroom Copy
+    spriteName: KeyIceroom Copy
     isGroup: 0
     parentIndex: 4
-    spriteID: beb9d806b97533a40bfab6a06a8e349f
-    layerID: 170634988
+    spriteID: 7b212a2ca9c6f1a44a6277e8e89ce49f
+    layerID: -705297456
     mosaicPosition: {x: 13875, y: 2177}
-    flatten: 0
-    isImported: 1
-    isVisible: 1
-  - name: Key2
-    spriteName: Key2
-    isGroup: 0
-    parentIndex: 4
-    spriteID: 07c70209a0ec79543a4fb3f866833174
-    layerID: 1736718929
-    mosaicPosition: {x: 13932, y: 2177}
     flatten: 0
     isImported: 1
     isVisible: 1
@@ -398,7 +367,7 @@ ScriptedImporter:
     parentIndex: 4
     spriteID: f6b9b77ed78e61e4baf4df590b72d951
     layerID: -992164426
-    mosaicPosition: {x: 13875, y: 2244}
+    mosaicPosition: {x: 13925, y: 2177}
     flatten: 0
     isImported: 1
     isVisible: 1
@@ -425,7 +394,7 @@ ScriptedImporter:
   - name: Borad
     spriteName: Borad
     isGroup: 0
-    parentIndex: 9
+    parentIndex: 8
     spriteID: d138ec9b0ce862d48a48c5f08ce9adae
     layerID: -367536280
     mosaicPosition: {x: 4, y: 4}
