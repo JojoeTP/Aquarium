@@ -916,7 +916,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7793595, y: 1}
+    m_SensorSize: {x: 1.7770035, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -1997,38 +1997,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 454664575294272082, guid: 0e39e3d1328de4c468b663948483721b, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 454664575294272082, guid: 0e39e3d1328de4c468b663948483721b, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 908194463218704434, guid: 0e39e3d1328de4c468b663948483721b, type: 3}
       propertyPath: m_Name
       value: PlayerUIOverlay
       objectReference: {fileID: 0}
-    - target: {fileID: 908194463218704434, guid: 0e39e3d1328de4c468b663948483721b, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1647559988024180354, guid: 0e39e3d1328de4c468b663948483721b, type: 3}
-      propertyPath: m_Camera
-      value: 
-      objectReference: {fileID: 519420031}
     - target: {fileID: 1647559988024180354, guid: 0e39e3d1328de4c468b663948483721b, type: 3}
       propertyPath: m_RenderMode
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4760739390068100235, guid: 0e39e3d1328de4c468b663948483721b, type: 3}
-      propertyPath: m_Value
-      value: 1
+    - target: {fileID: 3993194594780375373, guid: 0e39e3d1328de4c468b663948483721b, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4760739390068100235, guid: 0e39e3d1328de4c468b663948483721b, type: 3}
-      propertyPath: m_TargetGraphic
-      value: 
-      objectReference: {fileID: 2049695358}
+    - target: {fileID: 3993194594780375373, guid: 0e39e3d1328de4c468b663948483721b, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7509132687606970729, guid: 0e39e3d1328de4c468b663948483721b, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -2063,18 +2047,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7509132687606970729, guid: 0e39e3d1328de4c468b663948483721b, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7509132687606970729, guid: 0e39e3d1328de4c468b663948483721b, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7509132687606970729, guid: 0e39e3d1328de4c468b663948483721b, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7509132687606970729, guid: 0e39e3d1328de4c468b663948483721b, type: 3}
-      propertyPath: m_LocalScale.z
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7509132687606970729, guid: 0e39e3d1328de4c468b663948483721b, type: 3}
@@ -6578,17 +6550,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.2734085, y: 5.599571}
   m_EdgeRadius: 0
---- !u!114 &2049695358 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2233414904876743610, guid: 0e39e3d1328de4c468b663948483721b, type: 3}
-  m_PrefabInstance: {fileID: 671645404}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2084036400
 GameObject:
   m_ObjectHideFlags: 0
