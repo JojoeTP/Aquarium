@@ -10,12 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 46ae0de02bf1e0945810f84cfdbfb621, type: 3}
-  m_Name: Item2
+  m_Name: KeyIceroom
   m_EditorClassIdentifier: 
   itemData:
     Id: 0
-    ItemName: Item1
-    ItemDescription: ItemDescription
-    ItemSprite: {fileID: 21300000, guid: 87e24fa0e9209e74ba0f28a7d5fdd710, type: 3}
-    ItemPosition: {x: 82.28, y: -1.9868062, z: -0.08410883}
+    ItemName: KeyIceroom
+    ItemDescription: KeyIceroom
+    ItemSprite: {fileID: 21300000, guid: eb08dc160c589bb48a52c821c32dffe2, type: 3}
+    ItemPosition: {x: 41.086, y: -19.394, z: 0}
+    ItemScale: {x: 0.008203888, y: 0.008203888, z: 0.008203888}
   pageNumber: 0

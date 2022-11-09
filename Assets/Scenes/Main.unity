@@ -1150,6 +1150,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 13b6018e5c7898a44ba470e1eeb9715f, type: 2}
   - {fileID: 11400000, guid: 542bc647a6c7ba94580a44987f8685e5, type: 2}
   - {fileID: 11400000, guid: 9f5ec376caaf5b84bbb64d8c6d29560f, type: 2}
+  - {fileID: 11400000, guid: c8a4359bec7cc0b43910b24d03e0ee3c, type: 2}
 --- !u!1 &457027321
 GameObject:
   m_ObjectHideFlags: 0
@@ -4862,7 +4863,7 @@ GameObject:
   - component: {fileID: 1384962505}
   - component: {fileID: 1384962504}
   m_Layer: 0
-  m_Name: Keyiceroom
+  m_Name: KeyIceroom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
