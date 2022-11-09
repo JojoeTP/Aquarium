@@ -2,21 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "PluggableAI/Decesion/PlayerInBackVision")]
-public class PlayerInBackVision : Decision
+namespace PluggableAI
 {
-    public LayerMask playerLayer;
-
-    public override bool Decide(StateController controller)
+    [CreateAssetMenu(menuName = "PluggableAI/Decesion/PlayerInBackVision")]
+    public class PlayerInBackVision : Decision
     {
-        return IsPlayerInBackVision(controller);
-    }
+        public LayerMask playerLayer;
 
-    bool IsPlayerInBackVision(StateController controller)
-    {
-        if(Physics2D.Raycast(controller.transform.position,controller.moveDirection,-controller.backVisionRange,playerLayer))
-            return true;
-        else
-            return false;
+        public override bool Decide(StateController controller)
+        {
+            return IsPlayerInBackVision(controller);
+        }
+
+        bool IsPlayerInBackVision(StateController controller)
+        {
+            if(Physics2D.Raycast(controller.transform.position,controller.moveDirection,-controller.backVisionRange,playerLayer))
+                return true;
+            else
+                return false;
+        }
     }
 }

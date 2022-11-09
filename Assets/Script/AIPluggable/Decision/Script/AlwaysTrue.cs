@@ -2,15 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "PluggableAI/Decesion/AlwaysTrue")]
-public class AlwaysTrue : Decision
+namespace PluggableAI
 {
-
-    public override bool Decide(StateController controller)
+    [CreateAssetMenu(menuName = "PluggableAI/Decesion/AlwaysTrue")]
+    public class AlwaysTrue : Decision
     {
-        return true;
-        
+        public override bool Decide(StateController controller)
+        {
+            return true;
+        }
     }
-
 }
 
