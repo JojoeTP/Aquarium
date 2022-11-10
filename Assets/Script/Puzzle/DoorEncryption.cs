@@ -82,6 +82,7 @@ public class DoorEncryption : MonoBehaviour
                 correctCount = 0;
                 failCount = 0;
                 encryptionCode = baseEncryptionCode;
+                invertHint.SetActive(false);
                 isAlreadyInvertCode = false;
                 break;
             case PuzzleState.FINSIH :
@@ -117,10 +118,6 @@ public class DoorEncryption : MonoBehaviour
         {
             correctCount++;
             currentCodeIndex++;
-
-            //random event here
-            if(!isAlreadyInvertCode)
-                RandomInvertCode();
         }
         else
             failCount++;
@@ -165,6 +162,10 @@ public class DoorEncryption : MonoBehaviour
 
         door.connectDoor = startPostion;
         invertHint.SetActive(false);
+
+        if(!isAlreadyInvertCode)
+            RandomInvertCode();
+            
     }
 
     void OnFinish(DoorSystem door)
