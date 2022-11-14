@@ -11,6 +11,7 @@ public class ItemData
     public Sprite ItemSprite;
     public Vector3 ItemPosition;
     public Vector3 ItemScale;
+    public ITEMTYPE ItemType;
 }
 
 [CreateAssetMenu(fileName = "New Item" , menuName = "Item")]

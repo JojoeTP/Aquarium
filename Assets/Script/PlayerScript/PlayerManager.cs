@@ -7,9 +7,9 @@ public class PlayerManager : MonoBehaviour
 {
     public enum PLAYERSTATE
     {
+        NONE,
         CONVERSATION,
         HIDING,
-        NONE,
     }
 
     public static PlayerManager inst;

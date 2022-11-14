@@ -51,7 +51,6 @@ namespace PluggableAI
                 
             for (int i = 0; i < transitions.Count; i++)
             {
-                Debug.Log(controller.currentState +" " +transitions[i].decision);
                 bool decisionSucceeded = transitions[i].decision.Decide(controller);
 
                 if(decisionSucceeded)
