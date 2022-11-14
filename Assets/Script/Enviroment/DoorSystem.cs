@@ -14,7 +14,7 @@ public class DoorSystem : MonoBehaviour
     public bool canEnemyEnter;
 
     //Call back
-    public UnityEvent triggerEvent;
+    [HideInInspector] public UnityEvent triggerEvent;
 
     public void EnterDoor(Transform entity)
     {   

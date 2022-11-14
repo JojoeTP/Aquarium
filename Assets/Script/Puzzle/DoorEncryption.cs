@@ -16,12 +16,12 @@ public class DoorEncryption : MonoBehaviour
     [SerializeField]  float countTime;
     float currentTime;
     [SerializeField] DoorSystem doorTrigger;
-    [SerializeField] Transform doorPostion;
     [SerializeField] Transform startPostion;
     [SerializeField] Transform finishPostion;
 
     [Header("Status")]
-    [SerializeField] string encryptionCode;
+    [SerializeField] string baseEncryptionCode;
+    string encryptionCode;
     int currentCodeIndex = 0;
     int correctCount = 0;
     int failCount = 0;
@@ -81,6 +81,8 @@ public class DoorEncryption : MonoBehaviour
                 currentCodeIndex = 0;
                 correctCount = 0;
                 failCount = 0;
+                encryptionCode = baseEncryptionCode;
+                invertHint.SetActive(false);
                 isAlreadyInvertCode = false;
                 break;
             case PuzzleState.FINSIH :
@@ -116,10 +118,6 @@ public class DoorEncryption : MonoBehaviour
         {
             correctCount++;
             currentCodeIndex++;
-
-            //random event here
-            if(!isAlreadyInvertCode)
-                RandomInvertCode();
         }
         else
             failCount++;
@@ -164,17 +162,22 @@ public class DoorEncryption : MonoBehaviour
 
         door.connectDoor = startPostion;
         invertHint.SetActive(false);
+
+        if(!isAlreadyInvertCode)
+            RandomInvertCode();
+            
     }
 
     void OnFinish(DoorSystem door)
     {
         door.connectDoor = finishPostion;
+        doorTrigger.connectDoor = finishPostion;
 
         door.triggerEvent.AddListener( () => {
             OnFinishEvent();
         }); 
 
-        RemoveAllListeners();
+        ChangeState(PuzzleState.FINSIH);
     }
 
     void OnFinishEvent()
@@ -187,7 +190,7 @@ public class DoorEncryption : MonoBehaviour
         RemoveAllListeners();
 
         //warp to start Pos
-        door.connectDoor = doorPostion;
+        door.connectDoor = doorTrigger.transform;
         door.EnterDoor(PlayerManager.inst.transform);
 
         ChangeState(PuzzleState.STOP);
@@ -198,7 +201,7 @@ public class DoorEncryption : MonoBehaviour
         RemoveAllListeners();
 
         //warp to start Pos
-        doorTrigger.connectDoor = doorPostion;
+        doorTrigger.connectDoor = doorTrigger.transform;
         doorTrigger.EnterDoor(PlayerManager.inst.transform);
 
         ChangeState(PuzzleState.STOP);

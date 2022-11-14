@@ -4,35 +4,116 @@ using UnityEngine;
 
 public class ItemManager : MonoBehaviour
 {
-    [SerializeField] List<Item> items = new List<Item>();
+    [SerializeField] bool isPermutation = false;
+    [SerializeField] int participateID;
+    ItemEffectInfo itemEffectData;
+
+    [Header("ItemEffect")]
+    [SerializeField] Item winkEffectPrefab;
+    [SerializeField] Item invertColorEffectPrefab;
+    [SerializeField] Item lightEffectPrefab;
+    [SerializeField] Item outlineEffectPrefab;
+    [SerializeField] Item buttonEffectPrefab;
 
     [SerializeField] List<ItemScriptableObject> itemData = new List<ItemScriptableObject>();
 
-    // Start is called before the first frame update
     void Start()
     {
-        SetUpItem();
+        if(isPermutation)
+            SetUpItemPermutation();
     }
 
-    // Update is called once per frame
     void Update()
     {
         
     }
 
-    void SetUpItem()
+    // void SetUpItem()
+    // {
+    //     foreach(var n in itemData)
+    //     {
+    //         Item item = Instantiate(items[RandomItemEffect()],n.itemData.ItemPosition,Quaternion.identity);
+    //         item.item = n;
+    //         item.SetSprite();
+    //     }
+    // }
+
+    void SetUpItemPermutation()
     {
-        foreach(var n in itemData)
+        Item item;
+        LoadItemDataJson();
+
+        foreach(var n in itemEffectData.ItemEffectSettingList)
         {
-            Item item = Instantiate(items[RandomItemEffect()],n.itemData.ItemPosition,Quaternion.identity);
-            item.item = n;
-            item.SetSprite();
+            switch(n.effectTYPE)
+            {
+                case EFFECTTYPE.WINK :
+                    foreach(var m in itemData)
+                    {
+                        if(n.iTEMTYPE.HasFlag(m.itemData.ItemType))
+                        {
+                            item = Instantiate(winkEffectPrefab);
+                            item.item = m;
+                            item.SetItem();
+                        }
+                    }
+                    break;
+                case EFFECTTYPE.INVERTCOLOR :
+                    foreach(var m in itemData)
+                    {
+                        if(n.iTEMTYPE.HasFlag(m.itemData.ItemType))
+                        {
+                            item = Instantiate(invertColorEffectPrefab);
+                            item.item = m;
+                            item.SetItem();
+                        }
+                    }
+                    break;
+                case EFFECTTYPE.LIGHT :
+                    foreach(var m in itemData)
+                    {
+                        if(n.iTEMTYPE.HasFlag(m.itemData.ItemType))
+                        {
+                            item = Instantiate(lightEffectPrefab);
+                            item.item = m;
+                            item.SetItem();
+                        }
+                    }
+                    break;
+                case EFFECTTYPE.OUTLINE :
+                    foreach(var m in itemData)
+                    {
+                        if(n.iTEMTYPE.HasFlag(m.itemData.ItemType))
+                        {
+                            item = Instantiate(outlineEffectPrefab);
+                            item.item = m;
+                            item.SetItem();
+                        }
+                    }
+                    break;
+                case EFFECTTYPE.BUTTON :
+                    foreach(var m in itemData)
+                    {
+                        if(n.iTEMTYPE.HasFlag(m.itemData.ItemType))
+                        {
+                            item = Instantiate(buttonEffectPrefab);
+                            item.item = m;
+                            item.SetItem();
+                        }
+                    }
+                    break;
+            }
         }
     }
 
-    int RandomItemEffect()
+    void LoadItemDataJson()
     {
-        var randNum = Random.RandomRange(0,items.Count);
-        return randNum;
-    }   
+        itemEffectData = ItemEffectInfo.LoadItemEffectJSON(participateID);
+    }
+
+    // int RandomItemEffect()
+    // {
+    //     var randNum = Random.RandomRange(0,items.Count);
+    //     return randNum;
+    // }   
 }
