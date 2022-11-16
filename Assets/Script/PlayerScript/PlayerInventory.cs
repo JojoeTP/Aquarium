@@ -5,8 +5,9 @@ using UnityEngine.InputSystem;
 
 public class PlayerInventory : MonoBehaviour
 {
-    public List<ItemScriptableObject> itemList;
+    public List<ItemScriptableObject> itemList {get {return ItemList;}}
 
+    List<ItemScriptableObject> ItemList = new List<ItemScriptableObject>();
     [SerializeField] public InventoryPanel inventoryPanel;
 
     // Start is called before the first frame update

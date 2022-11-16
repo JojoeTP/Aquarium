@@ -786,8 +786,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16175da5b3408e142bb45bb28dd59d51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InteractRadius: 0.6
-  InteractOffset: {x: 0, y: 2.5, z: 0}
+  InteractSize: {x: 1.24, y: 4}
+  InteractOffset: {x: 0, y: 2.7, z: 0}
 --- !u!114 &1829112646365129878
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -813,7 +813,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 357ae907a2e66fb4ea2b9304b2155a9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemList: []
   inventoryPanel: {fileID: 1072938383911500489}
 --- !u!1 &2059807458025293377
 GameObject:

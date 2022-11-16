@@ -1009,7 +1009,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7765957, y: 1}
+    m_SensorSize: {x: 1.7773851, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -1625,7 +1625,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &567505718
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3711,7 +3711,7 @@ MonoBehaviour:
   m_Intensity: 0.47
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
-  m_ApplyToSortingLayers: ff079cf0f532b81500000000
+  m_ApplyToSortingLayers: ff079cf0f532b815000000005729ad50
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -4353,18 +4353,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1829112645651699382, guid: fd10c98f2285a10469886c1df78c26e8, type: 3}
-      propertyPath: m_Intensity
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1829112645651699383, guid: fd10c98f2285a10469886c1df78c26e8, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1829112646365129873, guid: fd10c98f2285a10469886c1df78c26e8, type: 3}
-      propertyPath: playerAnimator
-      value: 
-      objectReference: {fileID: 1368535490}
     - target: {fileID: 1829112646365129881, guid: fd10c98f2285a10469886c1df78c26e8, type: 3}
       propertyPath: staminaSlider
       value: 
@@ -4416,26 +4404,6 @@ PrefabInstance:
     - target: {fileID: 1829112646365129886, guid: fd10c98f2285a10469886c1df78c26e8, type: 3}
       propertyPath: m_Name
       value: PF_Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 1829112646365129886, guid: fd10c98f2285a10469886c1df78c26e8, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3676912980467848394, guid: fd10c98f2285a10469886c1df78c26e8, type: 3}
-      propertyPath: m_Camera
-      value: 
-      objectReference: {fileID: 519420031}
-    - target: {fileID: 5763599572858851155, guid: fd10c98f2285a10469886c1df78c26e8, type: 3}
-      propertyPath: m_Camera
-      value: 
-      objectReference: {fileID: 519420031}
-    - target: {fileID: 6876556102672434051, guid: fd10c98f2285a10469886c1df78c26e8, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6876556102672434051, guid: fd10c98f2285a10469886c1df78c26e8, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fd10c98f2285a10469886c1df78c26e8, type: 3}
@@ -4816,11 +4784,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &1368535490 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 5158757309497146287, guid: fd10c98f2285a10469886c1df78c26e8, type: 3}
-  m_PrefabInstance: {fileID: 1303363222}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1384962503
 GameObject:
   m_ObjectHideFlags: 0
@@ -4837,7 +4800,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &1384962504
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5072,7 +5035,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &1397764007
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6164,6 +6127,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 572766039}
     m_Modifications:
+    - target: {fileID: 1024789035002663272, guid: 2b1cbc8904e6e2046a457b85f086fec9, type: 3}
+      propertyPath: participateID
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1024789035002663273, guid: 2b1cbc8904e6e2046a457b85f086fec9, type: 3}
       propertyPath: m_RootOrder
       value: 2
