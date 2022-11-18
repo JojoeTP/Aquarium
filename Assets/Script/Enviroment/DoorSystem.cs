@@ -46,7 +46,7 @@ public class DoorSystem : MonoBehaviour
             
         foreach (var item in PlayerManager.inst.playerInventory.itemList)
         {
-            if(item.itemData.Id == conditionItem.itemData.Id)
+            if(item.itemData == conditionItem.itemData)
                 return true;
         }
         return false;

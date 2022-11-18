@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4051356411316120506}
   - component: {fileID: 4051356411316120507}
   - component: {fileID: 735031449175667699}
+  - component: {fileID: 5237074370276367914}
   m_Layer: 0
   m_Name: TestItem (Outline)
   m_TagString: Item
@@ -98,4 +99,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: 13b6018e5c7898a44ba470e1eeb9715f, type: 2}
+  showInteractKey: {fileID: 0}
+  interactIconPrefab: {fileID: 0}
   effectPrefab: {fileID: 0}
+--- !u!61 &5237074370276367914
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4051356411316120452}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 40.96, y: 40.96}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 40.96, y: 40.96}
+  m_EdgeRadius: 0

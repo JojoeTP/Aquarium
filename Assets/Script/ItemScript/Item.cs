@@ -14,12 +14,6 @@ public class Item : MonoBehaviour
         GenerateInteractIcon();
         GenerateEffect();
     }
-
-    void Update()
-    {
-        
-    }
-
     public void SetItem()
     {
         this.gameObject.name = item.itemData.ItemName;
@@ -55,5 +49,10 @@ public class Item : MonoBehaviour
             effect = Instantiate(effectPrefab,transform.position,Quaternion.identity);
             effect.SetParent(this.transform);
         }
+    }
+
+    public float GetPickUpTime()
+    {
+        return Time.time - RecordTimeManager.Inst.getInRoomTime;
     }
 }

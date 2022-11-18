@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3200586245808519359}
   - component: {fileID: 3200586245808519352}
   - component: {fileID: 8654583361641874286}
+  - component: {fileID: 8796156688902292168}
   m_Layer: 0
   m_Name: TestItem (Wink)
   m_TagString: Item
@@ -101,3 +102,29 @@ MonoBehaviour:
   showInteractKey: {fileID: 0}
   interactIconPrefab: {fileID: 0}
   effectPrefab: {fileID: 5432750730866112315, guid: 749e777a63d03ee499044fdcb32baa94, type: 3}
+--- !u!61 &8796156688902292168
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3200586245808519353}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 40.96, y: 40.96}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 40.96, y: 40.96}
+  m_EdgeRadius: 0
