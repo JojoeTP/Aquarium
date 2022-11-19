@@ -20,7 +20,7 @@ public class RecordTimeManager : MonoBehaviour
     public void GetPickUpItemTimeData(string key,float time)
     {
         pickUpItemTime.gettingItemTime.Add(key,time.ToString("0.00"));
-        pickUpItemTime.SaveJSON(true);
+        pickUpItemTime.SaveJSON(false);
     }
 }
 
@@ -33,7 +33,7 @@ public class PickUpItemTime
         JSONHelper.SaveJSONObject("PickUpItemTimeData/PickUpItemTime.json",this,toStreamingAssets);
     }
 
-    static public PickUpItemTime LoadJson(int index)
+    static public PickUpItemTime LoadJson()
     {
         //load when continue play game
 

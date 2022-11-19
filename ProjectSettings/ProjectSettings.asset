@@ -602,6 +602,7 @@ PlayerSettings:
   ps4videoRecordingFeaturesUsed: 0
   ps4contentSearchFeaturesUsed: 0
   ps4CompatibilityPS5: 0
+  ps4AllowPS5Detection: 0
   ps4GPU800MHz: 1
   ps4attribEyeToEyeDistanceSettingVR: 0
   ps4IncludedModules: []
@@ -721,11 +722,11 @@ PlayerSettings:
     m_VersionName: 
   apiCompatibilityLevel: 6
   activeInputHandler: 2
-  cloudProjectId: a542c809-3d3e-4c89-af41-f5dfb2ed2b7d
+  cloudProjectId: 6825fe6a-582b-4f80-9646-b3f28c9a50ac
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
   projectName: Aquarium
-  organizationId: jojoeza10
+  organizationId: cuteza456
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   playerDataPath: 

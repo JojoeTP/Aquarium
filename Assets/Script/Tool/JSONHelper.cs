@@ -221,42 +221,10 @@ public class JSONHelper
 
     public static void CreateUserJSON(string fileName, string data) 
     {
-        if (Application.platform == RuntimePlatform.IPhonePlayer)
-        {
-            #if UNITY_IPHONE
-            StreamWriter writer;
-            FileInfo t = new FileInfo(Application.persistentDataPath + "/JsonData/" + fileName);
-            if (!t.Exists)
-            {
-                t.Directory.Create();
-            } else {
-                t.Delete();
-            }
-            writer = t.CreateText();
-            writer.Write(data);
-            writer.Close();
-            #endif
-        }
-        else if (Application.platform == RuntimePlatform.Android)
-        {
-            #if UNITY_ANDROID
-            StreamWriter writer;
-            var internalPath = GetInternalAndroidPath();
-            FileInfo t = new FileInfo(internalPath + "/" + fileName);
-            if (!t.Exists)
-            {
-                t.Directory.Create();
-            } else {
-                t.Delete();
-            }
-            writer = t.CreateText();
-            writer.Write(data);
-            writer.Close();
-            #endif
-        }else if (Application.platform == RuntimePlatform.WindowsPlayer || Application.platform == RuntimePlatform.WSAPlayerX86 || Application.platform == RuntimePlatform.OSXPlayer)
+        if (Application.platform == RuntimePlatform.WindowsPlayer || Application.platform == RuntimePlatform.WSAPlayerX86 || Application.platform == RuntimePlatform.OSXPlayer)
         {
             StreamWriter writer;
-            FileInfo t = new FileInfo(Application.persistentDataPath + "/JsonData/" + fileName);
+            FileInfo t = new FileInfo(Application.dataPath + "/StreamingAssets/" + fileName);
             if (!t.Exists)
             {
                 t.Directory.Create();
@@ -304,28 +272,9 @@ public class JSONHelper
 
     public static void DeleteUserJSON(string fileName) 
     {
-        if (Application.platform == RuntimePlatform.IPhonePlayer)
+        if (Application.platform == RuntimePlatform.WindowsPlayer || Application.platform == RuntimePlatform.WSAPlayerX86 || Application.platform == RuntimePlatform.OSXPlayer)
         {
-            #if UNITY_IPHONE
-            FileInfo t = new FileInfo(Application.persistentDataPath + "/JsonData/" + fileName);
-            if(t.Exists) {
-                t.Delete();
-            }
-            #endif
-        }
-        else if (Application.platform == RuntimePlatform.Android)
-        {
-            #if UNITY_ANDROID
-            var internalPath = GetInternalAndroidPath();
-            FileInfo t = new FileInfo(internalPath + "/" + fileName);
-            if(t.Exists) {
-                t.Delete();
-            }
-            #endif
-        }
-        else if (Application.platform == RuntimePlatform.WindowsPlayer || Application.platform == RuntimePlatform.WSAPlayerX86 || Application.platform == RuntimePlatform.OSXPlayer)
-        {
-            FileInfo t = new FileInfo(Application.persistentDataPath + "/JsonData/" + fileName);
+            FileInfo t = new FileInfo(Application.dataPath + "/StreamingAssets/" + fileName);
             if (t.Exists)
             {
                 t.Delete();

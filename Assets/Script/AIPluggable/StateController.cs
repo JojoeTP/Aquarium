@@ -91,7 +91,5 @@ public class StateController : MonoBehaviour
 
         Gizmos.color = ChaseColor;
         Gizmos.DrawRay(transform.position + ChasingRangeOffset,moveDirection * chasingRange); //VISION RANGE
-
-        Handles.Label(transform.position + StateLableOffset,currentState.name);
     }
 }
