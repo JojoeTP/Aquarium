@@ -56,7 +56,7 @@ public class PlayerInteract : MonoBehaviour
         return false;
     }
     void StartDialogue(){
-        DialogueManager.inst.Invoke("StartDialogue",0);
+        DialogueManager_2.inst.Invoke("StartDialogue",0);
         return;
     }
 
