@@ -26,6 +26,7 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] GameObject decisionButton2;
     [SerializeField] TextMeshProUGUI decisionButton2Text;
 
+    string loadSpriteName;
 
     private void Awake() {
         inst = this;
@@ -34,13 +35,24 @@ public class DialogueManager : MonoBehaviour
     {
         readCSVData = GetComponent<ReadCSV>();
     }
+    void CheckResourcesLoadSprite(string readCSVData_CharacterName){
+        if(readCSVData_CharacterName == "อเมเลีย"){
+            loadSpriteName = "Amelie";
+        }
+        else if(readCSVData_CharacterName == "ลูกสาวผู้อำนวยการ"){
+            loadSpriteName = "Director's_Daughter";
+        }
+
+    }
 
     public void StartDialogue (){
         dialoguePanel.SetActive(true);
         nameText.text = readCSVData.character[0];
         dialogueText.text = readCSVData.dialogue[0];
+        // character1 = Resources.Load<Sprite>("Dialogue/CharacterImage/" + readCSVData.character[0]);
+        CheckResourcesLoadSprite(readCSVData.character[0]);
+        character1 = Resources.Load<Sprite>("Dialogue/CharacterImage/" + loadSpriteName);
 
-        character1 = Resources.Load<Sprite>("Dialogue/CharacterImage/" + readCSVData.character[0]);
 		imageCharacter1 = GameObject.Find ("Character1");
 		imageCharacter1.GetComponent<Image>().sprite = character1;
 
@@ -59,7 +71,9 @@ public class DialogueManager : MonoBehaviour
         dialogueCount++;
 
         if(readCSVData.character[0] != readCSVData.character[dialogueCount]){
-            character2 = Resources.Load<Sprite>("Dialogue/CharacterImage/" + readCSVData.character[dialogueCount]);
+            CheckResourcesLoadSprite(readCSVData.character[dialogueCount]);
+            character2 = Resources.Load<Sprite>("Dialogue/CharacterImage/" + loadSpriteName);
+
             imageCharacter2.GetComponent<Image>().color = new Color(1,1,1,1);
             imageCharacter2.GetComponent<Image>().sprite = character2;
         }
