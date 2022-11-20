@@ -6,18 +6,12 @@ using UnityEngine.InputSystem;
 public class PlayerInteract : MonoBehaviour
 {
     [Header("Hiding Setting")]
-    public float InteractRadius;
+    public Vector2 InteractSize;
     public Vector3 InteractOffset;
 
     public void Interacting()
     {
-        if(CanHiding())
-            ToggleHiding();
-        
-        CanEnterDoor();
-
-        if(TalkWithNPC())
-            StartDialogue();
+        IsObjectOverlapPlayer();
     }
 
     public void OnInteract(InputValue value)
@@ -28,13 +22,36 @@ public class PlayerInteract : MonoBehaviour
         }
     }
 
-    bool TalkWithNPC(){
-        foreach(var n in Physics2D.OverlapCircleAll(transform.position + InteractOffset,InteractRadius))
+    void IsObjectOverlapPlayer()
+    {
+        foreach(var n in Physics2D.OverlapCapsuleAll(transform.position+InteractOffset,InteractSize,CapsuleDirection2D.Vertical,0))
         {
-            if(n.GetComponent<TalkWithNPC>() != null)
+            if(CanHiding(n.transform))
             {
-                return true;
+                ToggleHiding();
             }
+
+            if(CanEnterDoor(n.transform))
+            {
+                n.GetComponent<DoorSystem>().EnterDoor(this.transform);
+            }
+
+            if(TalkWithNPC(n.transform))
+            {
+                StartDialogue();
+            }
+                
+            if(CanGetItem(n.transform))
+            {
+                GetItem(n.GetComponent<Item>());
+            }                
+        }
+    }
+
+    bool TalkWithNPC(Transform overlap){
+        if(overlap.GetComponent<TalkWithNPC>() != null)
+        {
+            return true;
         }
         return false;
     }
@@ -43,30 +60,40 @@ public class PlayerInteract : MonoBehaviour
         return;
     }
 
-    bool CanHiding()
+    bool CanHiding(Transform overlap)
     {
-        foreach(var n in Physics2D.OverlapCircleAll(transform.position + InteractOffset,InteractRadius))
+        if(overlap.GetComponent<HidingSpot>() != null)
         {
-            if(n.GetComponent<HidingSpot>() != null)
-            {
-                transform.position = new Vector2(n.transform.position.x,transform.position.y);
-                return true;
-            }
+            transform.position = new Vector2(overlap.transform.position.x,transform.position.y);
+            return true;
         }
 
         return false;
     }
 
-    
-    bool CanEnterDoor()
+    bool CanGetItem(Transform overlap)
     {
-        foreach(var n in Physics2D.OverlapCircleAll(transform.position,InteractRadius))
+        if(overlap.GetComponent<Item>() != null)
         {
-            if(n.GetComponent<DoorSystem>() != null)
-            {
-                n.GetComponent<DoorSystem>().EnterDoor(this.transform);
-                return true;
-            }
+            return true;
+        }
+
+        return false;
+    }
+
+    void GetItem(Item item)
+    {
+        PlayerManager.inst.playerInventory.itemList.Add(item.item);
+        RecordTimeManager.Inst.GetPickUpItemTimeData(item.item.itemData.ItemName,item.GetPickUpTime());
+        item.gameObject.SetActive(false);
+    }
+
+    
+    bool CanEnterDoor(Transform overlap)
+    {
+        if(overlap.GetComponent<DoorSystem>() != null)
+        {
+            return true;
         }
 
         return false;
@@ -93,6 +120,8 @@ public class PlayerInteract : MonoBehaviour
     private void OnDrawGizmos() 
     {
         Gizmos.color = Color.magenta;
-        Gizmos.DrawWireSphere(transform.position + InteractOffset,InteractRadius);    
+        Gizmos.DrawWireSphere(transform.position + new Vector3(0,InteractSize.y/2,0) + InteractOffset,InteractSize.x/2);  
+        Gizmos.DrawWireSphere(transform.position - new Vector3(0,InteractSize.y/2,0) + InteractOffset,InteractSize.x/2);  
+        Gizmos.DrawWireCube(transform.position + InteractOffset,InteractSize);  
     }
 }

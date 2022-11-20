@@ -650,7 +650,7 @@
     "m_DefaultRefNameVersion": 1,
     "m_RefNameGeneratedByDisplayName": "MainText",
     "m_DefaultReferenceName": "_MainText",
-    "m_OverrideReferenceName": "",
+    "m_OverrideReferenceName": "_MainTex",
     "m_GeneratePropertyBlock": true,
     "m_UseCustomSlotLabel": false,
     "m_CustomSlotLabel": "",
@@ -1298,10 +1298,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -1350.0,
-            "y": -3.0000007152557375,
+            "x": -1347.0,
+            "y": -8.000001907348633,
             "width": 133.0,
-            "height": 33.99996566772461
+            "height": 34.0
         }
     },
     "m_Slots": [

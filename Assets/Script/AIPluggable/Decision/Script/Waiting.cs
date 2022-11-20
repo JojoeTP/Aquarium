@@ -2,26 +2,28 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "PluggableAI/Decesion/Waiting")]
-public class Waiting : Decision
+namespace PluggableAI
 {
-    public override bool Decide(StateController controller)
+    [CreateAssetMenu(menuName = "PluggableAI/Decesion/Waiting")]
+    public class Waiting : Decision
     {
-        return CanSwitchState(controller);
-    }
-
-    bool CanSwitchState(StateController controller)
-    {
-        
-        controller.waitingTime -= Time.deltaTime * 1f;
-        if(controller.waitingTime < 0)
+        public override bool Decide(StateController controller)
         {
-            return true;
+            return CanSwitchState(controller);
         }
-        else
+
+        bool CanSwitchState(StateController controller)
         {
-            return false;
+            
+            controller.waitingTime -= Time.deltaTime * 1f;
+            if(controller.waitingTime < 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 }
-

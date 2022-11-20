@@ -2,31 +2,35 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "PluggableAI/Decesion/DoorInInteractArea")]
-public class DoorInInteractArea : Decision
+
+namespace PluggableAI
 {
-    // public LayerMask playerLayer;
-
-    public override bool Decide(StateController controller)
+    [CreateAssetMenu(menuName = "PluggableAI/Decesion/DoorInInteractArea")]
+    public class DoorInInteractArea : Decision
     {
-        bool isDoorInInteractArea = IsDoorInInteractArea(controller);
-        return isDoorInInteractArea;
-        
-    }
+        // public LayerMask playerLayer;
 
-    bool IsDoorInInteractArea(StateController controller)
-    {
-        //add condition about chase later 
-        var overlapObj = Physics2D.OverlapCircleAll(controller.transform.position,controller.interactRange);
-
-        foreach(var n in overlapObj)
+        public override bool Decide(StateController controller)
         {
-            if(n.GetComponent<DoorSystem>() != null)
-            {
-                return true;
-            }
+            bool isDoorInInteractArea = IsDoorInInteractArea(controller);
+            return isDoorInInteractArea;
+            
         }
 
-        return false;
+        bool IsDoorInInteractArea(StateController controller)
+        {
+            //add condition about chase later 
+            var overlapObj = Physics2D.OverlapCircleAll(controller.transform.position,controller.interactRange);
+
+            foreach(var n in overlapObj)
+            {
+                if(n.GetComponent<DoorSystem>() != null)
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
     }
 }

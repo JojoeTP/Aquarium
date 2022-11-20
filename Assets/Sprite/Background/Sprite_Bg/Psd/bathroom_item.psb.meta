@@ -91,6 +91,27 @@ ScriptedImporter:
     uvTransform: {x: 0, y: 0}
   mosaicSpriteImportData: []
   rigSpriteImportData:
+  - name: door
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 7448
+      y: 1930
+      width: 589
+      height: 1079
+    spriteID: 1933b10b86e2eb049aeb0bd36f8124e7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -4422, y: 1598}
   - name: Black
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -479,6 +500,16 @@ ScriptedImporter:
     flatten: 0
     isImported: 0
     isVisible: 1
+  - name: door
+    spriteName: door
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 1933b10b86e2eb049aeb0bd36f8124e7
+    layerID: -1670869018
+    mosaicPosition: {x: 7448, y: 1930}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
   - name: boy
     spriteName: 
     isGroup: 1
@@ -492,7 +523,7 @@ ScriptedImporter:
   - name: Black
     spriteName: Black
     isGroup: 0
-    parentIndex: 1
+    parentIndex: 2
     spriteID: 20a552b6b0052ec4fbb36310033259b6
     layerID: -549105281
     mosaicPosition: {x: 4, y: 4}
@@ -502,7 +533,7 @@ ScriptedImporter:
   - name: other
     spriteName: 
     isGroup: 1
-    parentIndex: 1
+    parentIndex: 2
     spriteID: e7c6fbb0c86f9494e855b8836c3b97dd
     layerID: -582632140
     mosaicPosition: {x: 0, y: 0}
@@ -512,7 +543,7 @@ ScriptedImporter:
   - name: 'vent '
     spriteName: 'vent '
     isGroup: 0
-    parentIndex: 3
+    parentIndex: 4
     spriteID: 145f907553d31004fa95d8dfeac0b18f
     layerID: -683638815
     mosaicPosition: {x: 2104, y: 4601}
@@ -522,7 +553,7 @@ ScriptedImporter:
   - name: urinal
     spriteName: urinal
     isGroup: 0
-    parentIndex: 3
+    parentIndex: 4
     spriteID: c57bb0711002ca34c8cbdedd6ade2f09
     layerID: 1292066689
     mosaicPosition: {x: 2104, y: 5113}
@@ -532,7 +563,7 @@ ScriptedImporter:
   - name: basin
     spriteName: basin
     isGroup: 0
-    parentIndex: 3
+    parentIndex: 4
     spriteID: f4b727e3510830541b30d0015d635ec8
     layerID: -166055941
     mosaicPosition: {x: 6112, y: 4}
@@ -542,7 +573,7 @@ ScriptedImporter:
   - name: toiletClose
     spriteName: toiletClose
     isGroup: 0
-    parentIndex: 3
+    parentIndex: 4
     spriteID: 6aa1747c9824a8c47be4fedb38f52693
     layerID: 1288878933
     mosaicPosition: {x: 3248, y: 1930}
@@ -552,7 +583,7 @@ ScriptedImporter:
   - name: toilet
     spriteName: toilet
     isGroup: 0
-    parentIndex: 3
+    parentIndex: 4
     spriteID: d0a39ab6b84ae0c4c808c56648d8e024
     layerID: -1656793769
     mosaicPosition: {x: 5348, y: 1930}
@@ -562,7 +593,7 @@ ScriptedImporter:
   - name: Locker
     spriteName: Locker
     isGroup: 0
-    parentIndex: 3
+    parentIndex: 4
     spriteID: 6d492675629b4fa498b32c04421fc380
     layerID: -110880594
     mosaicPosition: {x: 6112, y: 832}
@@ -582,7 +613,7 @@ ScriptedImporter:
   - name: Black
     spriteName: Black
     isGroup: 0
-    parentIndex: 10
+    parentIndex: 11
     spriteID: 432eded0346261247bbf962937484ce0
     layerID: 1956291941
     mosaicPosition: {x: 4, y: 1930}
@@ -592,7 +623,7 @@ ScriptedImporter:
   - name: other
     spriteName: 
     isGroup: 1
-    parentIndex: 10
+    parentIndex: 11
     spriteID: 2b4b058c655bc104394b1b7063725f6d
     layerID: -1811720584
     mosaicPosition: {x: 0, y: 0}
@@ -602,7 +633,7 @@ ScriptedImporter:
   - name: 'vent '
     spriteName: 'vent '
     isGroup: 0
-    parentIndex: 12
+    parentIndex: 13
     spriteID: e6c8330d0492e1e4e897db317b9de551
     layerID: -849973629
     mosaicPosition: {x: 2104, y: 4857}
@@ -612,7 +643,7 @@ ScriptedImporter:
   - name: Basin
     spriteName: Basin
     isGroup: 0
-    parentIndex: 12
+    parentIndex: 13
     spriteID: a93f8bca7c040574091bb3dc751dc3c3
     layerID: -166023141
     mosaicPosition: {x: 6304, y: 3384}
@@ -622,7 +653,7 @@ ScriptedImporter:
   - name: toiletClose
     spriteName: toiletClose
     isGroup: 0
-    parentIndex: 12
+    parentIndex: 13
     spriteID: c25782478a9ff344691ba42a783224a3
     layerID: 1673659775
     mosaicPosition: {x: 4, y: 3384}
@@ -632,7 +663,7 @@ ScriptedImporter:
   - name: toilet
     spriteName: toilet
     isGroup: 0
-    parentIndex: 12
+    parentIndex: 13
     spriteID: 07e1518eff69e8f49825aa58b50fe64e
     layerID: 2014003729
     mosaicPosition: {x: 2104, y: 3384}
@@ -642,7 +673,7 @@ ScriptedImporter:
   - name: toiletClose
     spriteName: toiletClose
     isGroup: 0
-    parentIndex: 12
+    parentIndex: 13
     spriteID: 1e2b3fae4f160284fbb96bf66d54ec1d
     layerID: 1673659776
     mosaicPosition: {x: 4204, y: 3384}
@@ -652,7 +683,7 @@ ScriptedImporter:
   - name: toilet
     spriteName: toilet
     isGroup: 0
-    parentIndex: 12
+    parentIndex: 13
     spriteID: 8a84975af4391fc479321fc1242818c9
     layerID: 1610719202
     mosaicPosition: {x: 4, y: 4601}
@@ -662,7 +693,7 @@ ScriptedImporter:
   - name: Locker
     spriteName: Locker
     isGroup: 0
-    parentIndex: 12
+    parentIndex: 13
     spriteID: cbb59fd260d60f94e8e82f2de83a7588
     layerID: -1642636902
     mosaicPosition: {x: 7026, y: 832}

@@ -2,27 +2,27 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "PluggableAI/Action/EnterDoor")]
-public class EnterDoorAction : Action
+namespace PluggableAI
 {
-    public override void Act(StateController controller)
+    [CreateAssetMenu(menuName = "PluggableAI/Action/EnterDoor")]
+    public class EnterDoorAction : Action
     {
-        EnterDoor(controller);
-    }
-
-    void EnterDoor(StateController controller)
-    {
-        //Enter Door
-        Debug.Log("Enter Door");
-
-        var overlapObj = Physics2D.OverlapCircleAll(controller.transform.position,controller.interactRange);
-
-        foreach(var n in overlapObj)
+        public override void Act(StateController controller)
         {
-            if(n.GetComponent<DoorSystem>() != null)
+            EnterDoor(controller);
+        }
+
+        void EnterDoor(StateController controller)
+        {
+            var overlapObj = Physics2D.OverlapCircleAll(controller.transform.position,controller.interactRange);
+
+            foreach(var n in overlapObj)
             {
-                n.GetComponent<DoorSystem>().EnterDoor(controller.transform);
-                break;
+                if(n.GetComponent<DoorSystem>() != null)
+                {
+                    n.GetComponent<DoorSystem>().EnterDoor(controller.transform);
+                    break;
+                }
             }
         }
     }

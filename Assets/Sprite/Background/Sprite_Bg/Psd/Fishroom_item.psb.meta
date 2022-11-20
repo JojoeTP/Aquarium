@@ -99,7 +99,7 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 1510
-      y: 1898
+      y: 4
       width: 1062
       height: 3246
     spriteID: a9ff10dff06709743bb8517ac617bc19
@@ -111,7 +111,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: -21426, y: 1433}
+    uvTransform: {x: -21426, y: -461}
   - name: Fish
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -119,8 +119,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 3549
-      y: 1898
+      x: 2580
+      y: 4
       width: 809
       height: 3581
     spriteID: 47eb43e4ce7bbdf4a841d789ae61d936
@@ -132,7 +132,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: -5145, y: 1279}
+    uvTransform: {x: -6114, y: -615}
   - name: Fish
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -161,8 +161,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 4366
-      y: 1898
+      x: 2580
+      y: 3593
       width: 809
       height: 3581
     spriteID: 9b4e421547f9b444cb9c9e9095d4195a
@@ -174,7 +174,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: -1028, y: 1279}
+    uvTransform: {x: -2814, y: 2974}
   - name: Fish
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -203,8 +203,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 2580
-      y: 1898
+      x: 1510
+      y: 3258
       width: 961
       height: 3047
     spriteID: 8bc525d038661504aa2677abe4a804a6
@@ -216,7 +216,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 466, y: 762}
+    uvTransform: {x: -604, y: 2122}
   - name: Fish
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -224,8 +224,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 2580
-      y: 4953
+      x: 3397
+      y: 4
       width: 904
       height: 3047
     spriteID: b4eed060e2264f743af5b89f0f7a4bd3
@@ -237,28 +237,86 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: -7443, y: 3800}
+    uvTransform: {x: -6626, y: -1149}
   - name: FishObject
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
+    pivot: {x: 0.5, y: 0.4}
+    alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 1510
+      x: 4309
       y: 4
       width: 2850
-      height: 1886
+      height: 820
     spriteID: 56f721f5e40301b45848433f90aa559c
     spriteBone: []
-    spriteOutline: []
+    spriteOutline:
+    - outline:
+      - {x: 1046, y: -1}
+      - {x: 802, y: 73}
+      - {x: 536, y: 160}
+      - {x: 434, y: 174}
+      - {x: 224, y: 96}
+      - {x: 227, y: 74}
+      - {x: 247, y: 62}
+      - {x: 299, y: 58}
+      - {x: -1, y: 70}
+      - {x: -137, y: 366}
+      - {x: -173, y: 366}
+      - {x: -217, y: 334}
+      - {x: -142, y: 174}
+      - {x: -164, y: 138}
+      - {x: -139, y: 78}
+      - {x: -208, y: 94}
+      - {x: -566, y: -8}
+      - {x: -888, y: -185}
+      - {x: -1359, y: -192}
+      - {x: -1425, y: -211}
+      - {x: -1423, y: -260}
+      - {x: -1259, y: -259}
+      - {x: -1170, y: -274}
+      - {x: -1245, y: -298}
+      - {x: -1412, y: -304}
+      - {x: -1414, y: -342}
+      - {x: -1375, y: -365}
+      - {x: -1284, y: -398}
+      - {x: -1022, y: -402}
+      - {x: -842, y: -293}
+      - {x: -736, y: -318}
+      - {x: -365, y: -384}
+      - {x: -171, y: -399}
+      - {x: 75, y: -410}
+      - {x: 988, y: -410}
+      - {x: 1276, y: -325}
+      - {x: 1367, y: -265}
+      - {x: 1394, y: -230}
+      - {x: 1329, y: -153}
+    - outline:
+      - {x: 499, y: 66}
+      - {x: 495, y: 70}
+      - {x: 467, y: 70}
+      - {x: 463, y: 66}
+      - {x: 431, y: 66}
+      - {x: 463, y: 66}
+      - {x: 467, y: 70}
+      - {x: 507, y: 70}
+      - {x: 511, y: 74}
+      - {x: 599, y: 74}
+      - {x: 603, y: 70}
+      - {x: 627, y: 70}
+      - {x: 607, y: 70}
+      - {x: 603, y: 66}
+      - {x: 523, y: 66}
+      - {x: 515, y: 62}
+      - {x: 511, y: 66}
     vertices: []
     spritePhysicsOutline: []
     indices: 
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: -11171, y: -608}
+    uvTransform: {x: -8372, y: -1730}
   characterData:
     bones: []
     parts: []
@@ -348,7 +406,7 @@ ScriptedImporter:
     parentIndex: 1
     spriteID: a9ff10dff06709743bb8517ac617bc19
     layerID: 324830454
-    mosaicPosition: {x: 1510, y: 1898}
+    mosaicPosition: {x: 1510, y: 4}
     flatten: 0
     isImported: 1
     isVisible: 1
@@ -368,7 +426,7 @@ ScriptedImporter:
     parentIndex: 3
     spriteID: 47eb43e4ce7bbdf4a841d789ae61d936
     layerID: -293234376
-    mosaicPosition: {x: 3549, y: 1898}
+    mosaicPosition: {x: 2580, y: 4}
     flatten: 0
     isImported: 1
     isVisible: 1
@@ -388,7 +446,7 @@ ScriptedImporter:
     parentIndex: 3
     spriteID: 9b4e421547f9b444cb9c9e9095d4195a
     layerID: -1456033790
-    mosaicPosition: {x: 4366, y: 1898}
+    mosaicPosition: {x: 2580, y: 3593}
     flatten: 0
     isImported: 1
     isVisible: 1
@@ -408,7 +466,7 @@ ScriptedImporter:
     parentIndex: 3
     spriteID: 8bc525d038661504aa2677abe4a804a6
     layerID: 729333593
-    mosaicPosition: {x: 2580, y: 1898}
+    mosaicPosition: {x: 1510, y: 3258}
     flatten: 0
     isImported: 1
     isVisible: 1
@@ -418,7 +476,7 @@ ScriptedImporter:
     parentIndex: 3
     spriteID: b4eed060e2264f743af5b89f0f7a4bd3
     layerID: 2032364452
-    mosaicPosition: {x: 2580, y: 4953}
+    mosaicPosition: {x: 3397, y: 4}
     flatten: 0
     isImported: 1
     isVisible: 1
@@ -428,7 +486,7 @@ ScriptedImporter:
     parentIndex: 1
     spriteID: 56f721f5e40301b45848433f90aa559c
     layerID: 2046897769
-    mosaicPosition: {x: 1510, y: 4}
+    mosaicPosition: {x: 4309, y: 4}
     flatten: 0
     isImported: 1
     isVisible: 1

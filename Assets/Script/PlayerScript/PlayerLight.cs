@@ -7,20 +7,18 @@ public class PlayerLight : MonoBehaviour
     public GameObject playerLight;
     bool isLight = false;
 
-    void Update()
-    {
-        PlayerLightInput();
-    }
-
-    void PlayerLightInput(){
-        if (Input.GetKeyDown(KeyCode.F) && isLight == false){
-            playerLight.SetActive(false);
+    public void OnLight(){
+        if(!isLight)
+        {
+            playerLight.SetActive(true);
+            PlayerManager.inst.playerAnimator.SetBool("LampLight",true);
             isLight = true;
         }
-        else if(Input.GetKeyDown(KeyCode.F) && isLight == true){
-            playerLight.SetActive(true);
+        else
+        {
+            playerLight.SetActive(false);
+            PlayerManager.inst.playerAnimator.SetBool("LampLight",false);
             isLight = false;
-
         }
     }
 }

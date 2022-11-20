@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
+using PluggableAI;
 
 public class StateController : MonoBehaviour
 {
@@ -90,7 +91,5 @@ public class StateController : MonoBehaviour
 
         Gizmos.color = ChaseColor;
         Gizmos.DrawRay(transform.position + ChasingRangeOffset,moveDirection * chasingRange); //VISION RANGE
-
-        Handles.Label(transform.position + StateLableOffset,currentState.name);
     }
 }

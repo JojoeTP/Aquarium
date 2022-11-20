@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
+using System;
 
 public class DoorSystem : MonoBehaviour
 {
@@ -11,13 +13,29 @@ public class DoorSystem : MonoBehaviour
     public bool isPlayerUseItBefore;
     public bool canEnemyEnter;
 
+    //Call back
+    [HideInInspector] public UnityEvent triggerEvent;
+
     public void EnterDoor(Transform entity)
     {   
-        Vector3 nextPostion = new Vector3(connectDoor.position.x,(connectDoor.position.y - (transform.position.y - entity.position.y)),0);
-        
+        TriggerDoorEvent();
+
+        if(connectDoor != null)
+        {
+            Vector3 nextPostion = new Vector3(connectDoor.position.x,(connectDoor.position.y - (transform.position.y - entity.position.y)),0);
+            
+            if(CheckCondition())
+            {
+                entity.position = nextPostion;
+            }
+        }
+    }
+
+    public void TriggerDoorEvent()
+    {
         if(CheckCondition())
         {
-            entity.position = nextPostion;
+            triggerEvent?.Invoke();
         }
     }
 
@@ -28,7 +46,7 @@ public class DoorSystem : MonoBehaviour
             
         foreach (var item in PlayerManager.inst.playerInventory.itemList)
         {
-            if(item.itemData.Id == conditionItem.itemData.Id)
+            if(item.itemData == conditionItem.itemData)
                 return true;
         }
         return false;
@@ -36,7 +54,7 @@ public class DoorSystem : MonoBehaviour
 
     public bool RandomChanceToEnter()
     {
-        var rand = Random.Range(0f,100f);
+        var rand = UnityEngine.Random.Range(0f,100f);
         if(isPlayerUseItBefore && rand > 30f)
         {
             return true;
@@ -48,4 +66,6 @@ public class DoorSystem : MonoBehaviour
 
         return false;
     }
+
+    //Make Callback function
 }
