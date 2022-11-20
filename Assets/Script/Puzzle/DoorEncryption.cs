@@ -33,7 +33,7 @@ public class DoorEncryption : MonoBehaviour
     [Header("Option")]
     [SerializeField] DoorSystem leftDoor;
     [SerializeField] DoorSystem upDoor;
-    [SerializeField] DoorSystem downDoor;
+    //[SerializeField] DoorSystem downDoor;
     [SerializeField] DoorSystem rightDoor;
     
     void Start()
@@ -135,10 +135,10 @@ public class DoorEncryption : MonoBehaviour
             OnSelectDoor(upDoor);
         }); 
 
-        downDoor.triggerEvent.AddListener( () => {
-            EnterEncryptionDoor('D');
-            OnSelectDoor(downDoor);
-        }); 
+        //downDoor.triggerEvent.AddListener( () => {
+        //    EnterEncryptionDoor('D');
+        //    OnSelectDoor(downDoor);
+        //}); 
 
         rightDoor.triggerEvent.AddListener( () => {
             EnterEncryptionDoor('R');
@@ -213,7 +213,7 @@ public class DoorEncryption : MonoBehaviour
 
         leftDoor.triggerEvent.RemoveAllListeners();
         upDoor.triggerEvent.RemoveAllListeners();
-        downDoor.triggerEvent.RemoveAllListeners();
+        //downDoor.triggerEvent.RemoveAllListeners();
         rightDoor.triggerEvent.RemoveAllListeners();
     }
 
@@ -231,11 +231,11 @@ public class DoorEncryption : MonoBehaviour
                     invertChar = 'R';
                     break;
                 case 'U' :
-                    invertChar = 'D';
-                    break;
-                case 'D' :
                     invertChar = 'U';
                     break;
+                //case 'D' :
+                //    invertChar = 'U';
+                //    break;
                 case 'R' :
                     invertChar = 'L';
                     break;
