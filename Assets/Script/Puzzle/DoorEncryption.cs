@@ -13,8 +13,8 @@ public class DoorEncryption : MonoBehaviour
 {
     [SerializeField] PuzzleState currentstate = PuzzleState.STOP;
 
-    [SerializeField]  float countTime;
-    float currentTime;
+    // [SerializeField]  float countTime;
+    // float currentTime;
     [SerializeField] DoorSystem doorTrigger;
     [SerializeField] Transform startPostion;
     [SerializeField] Transform finishPostion;
@@ -23,11 +23,13 @@ public class DoorEncryption : MonoBehaviour
     [SerializeField] string baseEncryptionCode;
     string encryptionCode;
     int currentCodeIndex = 0;
+    int revertIndex = 0;
     int correctCount = 0;
     int failCount = 0;
     
     [Header("InvertCodeEvent")]
-    [SerializeField] GameObject invertHint;
+    [SerializeField] SpriteRenderer labyrinthBG;
+    [SerializeField] Sprite[] labyrinthSprite;
     bool isAlreadyInvertCode; 
 
     [Header("Option")]
@@ -43,7 +45,7 @@ public class DoorEncryption : MonoBehaviour
 
     void FixedUpdate()
     {
-        Timer();
+        // Timer();
     }
 
     void SettingStartPuzzle()
@@ -77,12 +79,12 @@ public class DoorEncryption : MonoBehaviour
                 SettingDoor();
                 break;
             case PuzzleState.PLAYING :
-                currentTime = countTime;
+                // currentTime = countTime;
                 currentCodeIndex = 0;
                 correctCount = 0;
                 failCount = 0;
                 encryptionCode = baseEncryptionCode;
-                invertHint.SetActive(false);
+                labyrinthBG.sprite = labyrinthSprite[0];
                 isAlreadyInvertCode = false;
                 break;
             case PuzzleState.FINSIH :
@@ -98,13 +100,13 @@ public class DoorEncryption : MonoBehaviour
             case PuzzleState.STOP :
                 break;
             case PuzzleState.PLAYING :
-                if(currentTime > 0)
-                    currentTime -= Time.deltaTime;
+                // if(currentTime > 0)
+                //     currentTime -= Time.deltaTime;
 
-                if(currentTime <= 0)
-                {
-                    OnTimeOut();
-                }
+                // if(currentTime <= 0)
+                // {
+                //     OnTimeOut();
+                // }
 
                 break;
             case PuzzleState.FINSIH :
@@ -120,7 +122,10 @@ public class DoorEncryption : MonoBehaviour
             currentCodeIndex++;
         }
         else
+        {
             failCount++;
+            labyrinthBG.sprite = labyrinthSprite[failCount];
+        }
     }
 
     void SettingDoor()
@@ -161,7 +166,9 @@ public class DoorEncryption : MonoBehaviour
         }
 
         door.connectDoor = startPostion;
-        invertHint.SetActive(false);
+
+        if(currentCodeIndex > revertIndex)
+            labyrinthBG.sprite = labyrinthSprite[failCount];
 
         if(!isAlreadyInvertCode)
             RandomInvertCode();
@@ -196,16 +203,16 @@ public class DoorEncryption : MonoBehaviour
         ChangeState(PuzzleState.STOP);
     }
 
-    void OnTimeOut()
-    {
-        RemoveAllListeners();
+    // void OnTimeOut()
+    // {
+    //     RemoveAllListeners();
 
-        //warp to start Pos
-        doorTrigger.connectDoor = doorTrigger.transform;
-        doorTrigger.EnterDoor(PlayerManager.inst.transform);
+    //     //warp to start Pos
+    //     doorTrigger.connectDoor = doorTrigger.transform;
+    //     doorTrigger.EnterDoor(PlayerManager.inst.transform);
 
-        ChangeState(PuzzleState.STOP);
-    }
+    //     ChangeState(PuzzleState.STOP);
+    // }
 
     void RemoveAllListeners()
     {
@@ -225,14 +232,19 @@ public class DoorEncryption : MonoBehaviour
 
             char? invertChar = null;
             string newCode = "";
-            switch(encryptionCode[currentCodeIndex])
+            revertIndex = currentCodeIndex;
+
+            if(encryptionCode[currentCodeIndex] == 'U')
+                revertIndex += 1;
+
+            switch(encryptionCode[revertIndex])
             {
                 case 'L' :
                     invertChar = 'R';
                     break;
-                case 'U' :
-                    invertChar = 'U';
-                    break;
+                // case 'U' :
+                //     invertChar = 'U';
+                    // break;
                 //case 'D' :
                 //    invertChar = 'U';
                 //    break;
@@ -243,7 +255,7 @@ public class DoorEncryption : MonoBehaviour
 
             for(int i = 0; i < encryptionCode.Length; i++)
             {
-                if(i == currentCodeIndex)
+                if(i == revertIndex)
                 {
                     newCode = newCode + invertChar;
                 }
@@ -253,7 +265,7 @@ public class DoorEncryption : MonoBehaviour
 
             encryptionCode = newCode;
             
-            invertHint.SetActive(true);
+            labyrinthBG.sprite = labyrinthSprite[3];
         }
     }
 }

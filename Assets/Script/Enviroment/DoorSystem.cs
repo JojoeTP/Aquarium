@@ -10,6 +10,8 @@ public class DoorSystem : MonoBehaviour
     public Transform connectDoor;
     public ItemScriptableObject conditionItem;
 
+    public bool isSpacialDoor;
+
     public bool isPlayerUseItBefore;
     public bool canEnemyEnter;
 
@@ -66,6 +68,18 @@ public class DoorSystem : MonoBehaviour
 
         return false;
     }
+
+    private void OnTriggerEnter2D(Collider2D other) 
+    {
+        if(isSpacialDoor)
+        {
+            if(other.GetComponent<PlayerManager>() != null)
+            {
+                EnterDoor(other.transform);
+            }
+        }
+    }
+
 
     //Make Callback function
 }
