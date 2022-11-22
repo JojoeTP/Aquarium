@@ -33,6 +33,7 @@ public class PlayerInteract : MonoBehaviour
 
             if(CanEnterDoor(n.transform))
             {
+                UITransition.inst.PlayOverlayTransition();
                 n.GetComponent<DoorSystem>().EnterDoor(this.transform);
             }
 
@@ -85,6 +86,7 @@ public class PlayerInteract : MonoBehaviour
     {
         PlayerManager.inst.playerInventory.itemList.Add(item.item);
         RecordTimeManager.Inst.GetPickUpItemTimeData(item.item.itemData.ItemName,item.GetPickUpTime());
+        item.RunPickUpEvent();
         item.gameObject.SetActive(false);
     }
 

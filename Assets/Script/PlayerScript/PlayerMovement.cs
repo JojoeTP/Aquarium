@@ -14,6 +14,7 @@ public class PlayerMovement : MonoBehaviour
 
     [Header("Sprint")]
     public bool IsSprint = false;
+    public bool IsExhausted = false;
     public float sprintSpeed;
     public float basePlayerStamina;
     public float playerStamina;
@@ -44,6 +45,9 @@ public class PlayerMovement : MonoBehaviour
     {
         if(value.isPressed)
         {
+            if(IsExhausted)
+                return;
+
             playerSpeed = playerBaseSpeed + sprintSpeed;
             IsSprint = true;
         }
@@ -61,6 +65,7 @@ public class PlayerMovement : MonoBehaviour
         {
             playerSpeed = playerBaseSpeed;
             IsSprint = false;
+            IsExhausted = true;
         }
     }
 
@@ -84,6 +89,7 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
+            IsExhausted = false;
             playerStamina = basePlayerStamina;
         }
     }

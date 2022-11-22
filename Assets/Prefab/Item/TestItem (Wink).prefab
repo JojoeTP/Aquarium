@@ -102,6 +102,21 @@ MonoBehaviour:
   showInteractKey: {fileID: 0}
   interactIconPrefab: {fileID: 0}
   effectPrefab: {fileID: 5432750730866112315, guid: 749e777a63d03ee499044fdcb32baa94, type: 3}
+  triggerEvents:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8654583361641874286}
+        m_TargetAssemblyTypeName: Item, Assembly-CSharp
+        m_MethodName: TestEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!61 &8796156688902292168
 BoxCollider2D:
   m_ObjectHideFlags: 0

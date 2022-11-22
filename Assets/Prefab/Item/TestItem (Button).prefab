@@ -142,3 +142,6 @@ MonoBehaviour:
   showInteractKey: {fileID: 7254703535094128109}
   interactIconPrefab: {fileID: 5136475053448877758, guid: 0b6f3708b39754c40b42c429e279f379, type: 3}
   effectPrefab: {fileID: 0}
+  triggerEvents:
+    m_PersistentCalls:
+      m_Calls: []

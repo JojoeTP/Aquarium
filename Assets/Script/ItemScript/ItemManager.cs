@@ -40,7 +40,7 @@ public class ItemManager : MonoBehaviour
 
     void SetUpItemPermutation()
     {
-        Item item;
+        Item item = null;
         LoadItemDataJson();
 
         foreach(var n in itemEffectData.ItemEffectSettingList)
@@ -103,7 +103,11 @@ public class ItemManager : MonoBehaviour
                     }
                     break;
             }
+
+            SetItemAction(item);
         }
+
+
     }
 
     void LoadItemDataJson()
@@ -111,9 +115,87 @@ public class ItemManager : MonoBehaviour
         itemEffectData = ItemEffectInfo.LoadItemEffectJSON(participateID);
     }
 
+    void SetItemAction(Item item)
+    {
+        switch (item.item.itemData.ItemType)
+        {
+            case ITEMTYPE.ITEM1:
+                item.triggerEvents.AddListener( () => 
+                    {
+
+                    }
+                );
+                break;
+            case ITEMTYPE.ITEM2:
+                item.triggerEvents.AddListener( () => 
+                    {
+
+                    }
+                );
+                break;
+            case ITEMTYPE.ITEM3:
+                item.triggerEvents.AddListener( () => 
+                    {
+
+                    }
+                );
+                break;
+            case ITEMTYPE.ITEM4:
+                item.triggerEvents.AddListener( () => 
+                    {
+
+                    }
+                );
+                break;
+            case ITEMTYPE.ITEM5:
+                item.triggerEvents.AddListener( () => 
+                    {
+
+                    }
+                );
+                break;
+            case ITEMTYPE.ITEM6:
+                item.triggerEvents.AddListener( () => 
+                    {
+
+                    }
+                );
+                break;
+            case ITEMTYPE.ITEM7:
+                item.triggerEvents.AddListener( () => 
+                    {
+
+                    }
+                );
+                break;
+            case ITEMTYPE.ITEM8:
+                item.triggerEvents.AddListener( () => 
+                    {
+
+                    }
+                );
+                break;
+            case ITEMTYPE.ITEM9:
+                item.triggerEvents.AddListener( () => 
+                    {
+
+                    }
+                );
+                break;
+            case ITEMTYPE.ITEM10:
+                item.triggerEvents.AddListener( () => 
+                    {
+
+                    }
+                );
+                break;
+        }
+    }
+
     // int RandomItemEffect()
     // {
     //     var randNum = Random.RandomRange(0,items.Count);
     //     return randNum;
     // }   
+
 }
