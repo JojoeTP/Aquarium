@@ -85,7 +85,7 @@ public class PlayerInteract : MonoBehaviour
     void GetItem(Item item)
     {
         PlayerManager.inst.playerInventory.itemList.Add(item.item);
-        RecordTimeManager.Inst.GetPickUpItemTimeData(item.item.itemData.ItemName,item.GetPickUpTime());
+        RecordTimeManager.Inst.SavePickUpItemTimeData(item.item.itemData.ItemName,item.GetPickUpTime());
         item.RunPickUpEvent();
         item.gameObject.SetActive(false);
     }
