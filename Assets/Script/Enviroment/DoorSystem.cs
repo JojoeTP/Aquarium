@@ -16,12 +16,10 @@ public class DoorSystem : MonoBehaviour
     public bool canEnemyEnter;
 
     //Call back
-    [HideInInspector] public UnityEvent triggerEvent;
+    [HideInInspector] public UnityEvent triggerEvent; //Create new event function in actionEventManager script
 
     public void EnterDoor(Transform entity)
     {   
-        TriggerDoorEvent();
-
         if(connectDoor != null)
         {
             Vector3 nextPostion = new Vector3(connectDoor.position.x,(connectDoor.position.y - (transform.position.y - entity.position.y)),0);
@@ -31,6 +29,17 @@ public class DoorSystem : MonoBehaviour
                 entity.position = nextPostion;
             }
         }
+    }
+
+    public void PlayerEnterDoor(Transform entity)
+    {
+        TriggerDoorEvent();
+        EnterDoor(entity);
+    }
+
+    public void EnemyEnterDoor(Transform entity)
+    {
+        EnterDoor(entity);
     }
 
     public void TriggerDoorEvent()

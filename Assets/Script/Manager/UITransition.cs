@@ -13,8 +13,13 @@ public class UITransition : MonoBehaviour
         inst = this;    
     }
 
-    public void PlayOverlayTransition()
+    public void PlayOverlayTransitionIn()
     {
-        overlayTransition.SetTrigger("FadeInOut");
+        overlayTransition.SetTrigger("TransitionIn");
+    }
+    
+    public void PlayOverlayTransitionOut()
+    {
+        overlayTransition.SetTrigger("TransitionOut");
     }
 }

@@ -108,7 +108,7 @@ public class PlayerMovement : MonoBehaviour
             direction = Vector2.zero;
 
         
-        if(PlayerManager.inst.isHide)
+        if(PlayerManager.inst.playerState != PlayerManager.PLAYERSTATE.NONE)
         {
             direction = Vector2.zero;
         }

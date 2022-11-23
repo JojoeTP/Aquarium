@@ -10,6 +10,7 @@ public class PlayerManager : MonoBehaviour
         NONE,
         CONVERSATION,
         HIDING,
+        ENTERDOOR,
     }
 
     public static PlayerManager inst;
@@ -21,9 +22,6 @@ public class PlayerManager : MonoBehaviour
     public PlayerInteract playerInteract;
     public PlayerLight playerLight;
     public PlayerInventory playerInventory;
-
-    [Header("PlayerAction")]
-    public bool isHide;
 
     [Header("PlayerAction")]
     public PLAYERSTATE playerState;
