@@ -20,7 +20,7 @@ namespace PluggableAI
             {
                 if(n.GetComponent<DoorSystem>() != null)
                 {
-                    n.GetComponent<DoorSystem>().EnterDoor(controller.transform);
+                    n.GetComponent<DoorSystem>().EnemyEnterDoor(controller.transform);
                     break;
                 }
             }

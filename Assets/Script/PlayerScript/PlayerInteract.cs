@@ -9,6 +9,8 @@ public class PlayerInteract : MonoBehaviour
     public Vector2 InteractSize;
     public Vector3 InteractOffset;
 
+    private DoorSystem enteringDoor;
+
     public void Interacting()
     {
         IsObjectOverlapPlayer();
@@ -33,7 +35,8 @@ public class PlayerInteract : MonoBehaviour
 
             if(CanEnterDoor(n.transform))
             {
-                n.GetComponent<DoorSystem>().EnterDoor(this.transform);
+                enteringDoor = n.GetComponent<DoorSystem>();
+                EnterDoor();
             }
 
             if(TalkWithNPC(n.transform))
@@ -84,7 +87,8 @@ public class PlayerInteract : MonoBehaviour
     void GetItem(Item item)
     {
         PlayerManager.inst.playerInventory.itemList.Add(item.item);
-        RecordTimeManager.Inst.GetPickUpItemTimeData(item.item.itemData.ItemName,item.GetPickUpTime());
+        RecordTimeManager.Inst.SavePickUpItemTimeData(item.item.itemData.ItemName,item.GetPickUpTime());
+        item.RunPickUpEvent();
         item.gameObject.SetActive(false);
     }
 
@@ -99,19 +103,33 @@ public class PlayerInteract : MonoBehaviour
         return false;
     }
 
+    void EnterDoor()
+    {
+        UITransition.inst.PlayOverlayTransitionIn();
+        PlayerManager.inst.playerState = PlayerManager.PLAYERSTATE.ENTERDOOR;
+        Invoke("ExitDoor",1f);
+    }
+
+    void ExitDoor()
+    {
+        UITransition.inst.PlayOverlayTransitionOut();
+        PlayerManager.inst.playerState = PlayerManager.PLAYERSTATE.NONE;
+        enteringDoor.PlayerEnterDoor(this.transform);
+    }
+
     void ToggleHiding()
     {
-        if(!PlayerManager.inst.isHide)
+        if(PlayerManager.inst.playerState == PlayerManager.PLAYERSTATE.NONE)
         {
-            PlayerManager.inst.isHide = true;
             PlayerManager.inst.playerSprite.SetActive(false);
             GetComponent<Collider2D>().enabled = false;
+            PlayerManager.inst.playerState = PlayerManager.PLAYERSTATE.HIDING;
         }
-        else if(PlayerManager.inst.isHide)
+        else if(PlayerManager.inst.playerState == PlayerManager.PLAYERSTATE.HIDING)
         {
-            PlayerManager.inst.isHide = false;
             PlayerManager.inst.playerSprite.SetActive(true);
             GetComponent<Collider2D>().enabled = true;
+            PlayerManager.inst.playerState = PlayerManager.PLAYERSTATE.NONE;
         } 
 
         return;

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Item : MonoBehaviour
 {
@@ -8,6 +9,8 @@ public class Item : MonoBehaviour
     public ShowInteractKey showInteractKey;
     public Transform interactIconPrefab;
     public Transform effectPrefab;
+
+    public UnityEvent triggerEvents;
 
     void Start()
     {
@@ -54,5 +57,10 @@ public class Item : MonoBehaviour
     public float GetPickUpTime()
     {
         return Time.time - RecordTimeManager.Inst.getInRoomTime;
+    }
+
+    public void RunPickUpEvent()
+    {
+        triggerEvents.Invoke();
     }
 }
