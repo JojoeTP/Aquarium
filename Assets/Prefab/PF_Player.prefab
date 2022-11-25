@@ -751,7 +751,6 @@ MonoBehaviour:
   playerInteract: {fileID: 1829112646365129875}
   playerLight: {fileID: 1829112646365129878}
   playerInventory: {fileID: 512804883587313077}
-  isHide: 0
   playerState: 0
 --- !u!114 &1829112646365129881
 MonoBehaviour:
@@ -765,15 +764,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d1b279dbba6c354fb293e150aabd516, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerBaseSpeed: 3
-  playerSpeed: 0
+  playerBaseSpeed: 2.5
   IsSprint: 0
-  sprintSpeed: 5
-  basePlayerStamina: 20
-  playerStamina: 0
+  IsExhausted: 0
+  sprintSpeed: 4
+  basePlayerStamina: 30
   staminaCost: 0.1
-  staminaRegeneration: 0.005
-  staminaSlider: {fileID: 0}
+  staminaRegeneration: 0.05
 --- !u!114 &1829112646365129875
 MonoBehaviour:
   m_ObjectHideFlags: 0

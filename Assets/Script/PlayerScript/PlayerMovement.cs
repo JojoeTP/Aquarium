@@ -9,21 +9,22 @@ public class PlayerMovement : MonoBehaviour
     Rigidbody2D rb;
 
     [Header("PlayerSpeed")]
-    public float playerBaseSpeed;
-    public float playerSpeed;
+    [SerializeField] float playerBaseSpeed;
+    float playerSpeed;
 
     [Header("Sprint")]
-    public bool IsSprint = false;
-    public bool IsExhausted = false;
-    public float sprintSpeed;
-    public float basePlayerStamina;
-    public float playerStamina;
-    public float staminaCost;
-    public float staminaRegeneration;
-    public Slider staminaSlider;
+    [SerializeField] bool IsSprint = false;
+    [SerializeField] bool IsExhausted = false;
+    [SerializeField] float sprintSpeed;
+    [SerializeField] float basePlayerStamina;
+    float playerStamina;
+    [SerializeField] float staminaCost;
+    [SerializeField] float staminaRegeneration;
+
+    public float PlayerStamina {get {return playerStamina;}}
+    public float BasePlayerStamina {get {return basePlayerStamina;}}
 
     Vector2 direction;
-
     Vector3 scale;
 
     private void Awake() 
@@ -48,7 +49,7 @@ public class PlayerMovement : MonoBehaviour
             if(IsExhausted)
                 return;
 
-            playerSpeed = playerBaseSpeed + sprintSpeed;
+            playerSpeed = sprintSpeed;
             IsSprint = true;
         }
         else
@@ -67,12 +68,6 @@ public class PlayerMovement : MonoBehaviour
             IsSprint = false;
             IsExhausted = true;
         }
-    }
-
-    void ChangeStaminaBar()
-    {
-        float normalizedStaminaBar = Mathf.Clamp(playerStamina/basePlayerStamina, 0, 1);
-        staminaSlider.value = normalizedStaminaBar;
     }
 
     void StaminaRegeneration()
@@ -97,7 +92,6 @@ public class PlayerMovement : MonoBehaviour
     private void FixedUpdate() 
     {
         CheckStamina();
-        ChangeStaminaBar();
         StaminaRegeneration();
     }
 
