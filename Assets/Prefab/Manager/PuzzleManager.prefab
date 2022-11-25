@@ -45,12 +45,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentstate: 0
-  countTime: 60
   doorTrigger: {fileID: 0}
   startPostion: {fileID: 0}
   finishPostion: {fileID: 0}
   baseEncryptionCode: LURLR
-  invertHint: {fileID: 0}
+  labyrinthBG: {fileID: 0}
+  labyrinthSprite:
+  - {fileID: 21300000, guid: 5c404f7467104ac44af79c1d2b253f2d, type: 3}
+  - {fileID: 21300000, guid: d212ad5561117904db6b14a8cddb97a9, type: 3}
+  - {fileID: 21300000, guid: 0810779db729ae14e8493577249ede20, type: 3}
+  - {fileID: 21300000, guid: 4d579ff390c02c744b3be610daeb8722, type: 3}
   leftDoor: {fileID: 0}
   upDoor: {fileID: 0}
   rightDoor: {fileID: 0}

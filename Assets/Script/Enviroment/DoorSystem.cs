@@ -84,7 +84,7 @@ public class DoorSystem : MonoBehaviour
         {
             if(other.GetComponent<PlayerManager>() != null)
             {
-                EnterDoor(other.transform);
+                PlayerEnterDoor(other.transform);
             }
         }
     }
