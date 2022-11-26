@@ -11,6 +11,7 @@ public class ItemData
     public Vector3 ItemPosition;
     public Vector3 ItemScale;
     public ITEMTYPE ItemType;
+    public string dialogueItemId;
 }
 
 [CreateAssetMenu(fileName = "New Item" , menuName = "Item")]

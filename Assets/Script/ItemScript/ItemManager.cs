@@ -40,11 +40,11 @@ public class ItemManager : MonoBehaviour
 
     void SetUpItemPermutation()
     {
-        Item item = null;
         LoadItemDataJson();
 
         foreach(var n in itemEffectData.ItemEffectSettingList)
         {
+            Item item = null;
             switch(n.effectTYPE)
             {
                 case EFFECTTYPE.WINK :
@@ -55,6 +55,10 @@ public class ItemManager : MonoBehaviour
                             item = Instantiate(winkEffectPrefab);
                             item.item = m;
                             item.SetItem();
+                            if (item != null)
+                            {
+                                SetItemAction(item);
+                            }
                         }
                     }
                     break;
@@ -66,6 +70,10 @@ public class ItemManager : MonoBehaviour
                             item = Instantiate(invertColorEffectPrefab);
                             item.item = m;
                             item.SetItem();
+                            if (item != null)
+                            {
+                                SetItemAction(item);
+                            }
                         }
                     }
                     break;
@@ -77,6 +85,10 @@ public class ItemManager : MonoBehaviour
                             item = Instantiate(lightEffectPrefab);
                             item.item = m;
                             item.SetItem();
+                            if (item != null)
+                            {
+                                SetItemAction(item);
+                            }
                         }
                     }
                     break;
@@ -88,6 +100,10 @@ public class ItemManager : MonoBehaviour
                             item = Instantiate(outlineEffectPrefab);
                             item.item = m;
                             item.SetItem();
+                            if (item != null)
+                            {
+                                SetItemAction(item);
+                            }
                         }
                     }
                     break;
@@ -99,15 +115,16 @@ public class ItemManager : MonoBehaviour
                             item = Instantiate(buttonEffectPrefab);
                             item.item = m;
                             item.SetItem();
+                            if (item != null)
+                            {
+                                SetItemAction(item);
+                            }
                         }
                     }
                     break;
             }
-
-            SetItemAction(item);
+            
         }
-
-
     }
 
     void LoadItemDataJson()
@@ -122,7 +139,7 @@ public class ItemManager : MonoBehaviour
             case ITEMTYPE.ITEM1:
                 item.triggerEvents.AddListener( () => 
                     {
-
+                        DialogueManager.inst.StartDialogue(item.item.itemData.dialogueItemId);
                     }
                 );
                 break;

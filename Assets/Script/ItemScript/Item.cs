@@ -59,7 +59,7 @@ public class Item : MonoBehaviour
         return Time.time - RecordTimeManager.Inst.getInRoomTime;
     }
 
-    public void RunPickUpEvent()
+    public void OnPickUpEvent()
     {
         triggerEvents.Invoke();
     }

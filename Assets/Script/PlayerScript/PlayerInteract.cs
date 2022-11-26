@@ -41,7 +41,7 @@ public class PlayerInteract : MonoBehaviour
 
             if(TalkWithNPC(n.transform))
             {
-                StartDialogue();
+                StartDialogue(n.GetComponent<TalkWithNPC>().startWithDialogueId);
             }
                 
             if(CanGetItem(n.transform))
@@ -58,8 +58,9 @@ public class PlayerInteract : MonoBehaviour
         }
         return false;
     }
-    void StartDialogue(){
-        DialogueManager.inst.Invoke("StartDialogue",0);
+    void StartDialogue(string startWithDialogueId)
+    {
+        DialogueManager.inst.StartDialogue(startWithDialogueId);
         return;
     }
 
@@ -88,7 +89,7 @@ public class PlayerInteract : MonoBehaviour
     {
         PlayerManager.inst.playerInventory.itemList.Add(item.item);
         RecordTimeManager.Inst.SavePickUpItemTimeData(item.item.itemData.ItemName,item.GetPickUpTime());
-        item.RunPickUpEvent();
+        item.OnPickUpEvent();
         item.gameObject.SetActive(false);
     }
 
