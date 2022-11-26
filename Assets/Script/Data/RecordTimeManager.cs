@@ -21,11 +21,6 @@ public class RecordTimeManager : MonoBehaviour
         Inst = this;   
     }
 
-    private void Start() 
-    {
-
-    }
-
     public void ClearPickUpItemTimeData()
     {
         PickUpItemTime _pickUpItemTime = new PickUpItemTime();

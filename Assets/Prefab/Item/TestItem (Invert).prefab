@@ -103,6 +103,9 @@ MonoBehaviour:
   showInteractKey: {fileID: 0}
   interactIconPrefab: {fileID: 0}
   effectPrefab: {fileID: 0}
+  triggerEvents:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!61 &2130336306779572927
 BoxCollider2D:
   m_ObjectHideFlags: 0
