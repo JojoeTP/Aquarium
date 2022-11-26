@@ -48,6 +48,8 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] GameObject choiceButton2;
     [SerializeField] TextMeshProUGUI choiceButton2Text;
 
+    [SerializeField] List<Sprite> characterSprites = new List<Sprite>();
+
     private void Awake()
     {
         inst = this;
@@ -57,7 +59,8 @@ public class DialogueManager : MonoBehaviour
     {
         if (openWith[dialogueId].character == "อเมเลีย")
         {
-            character1 = Resources.Load<Sprite>("Dialogue/CharacterImage/" + openWith[dialogueId].charaterImage);
+            //character1 = Resources.Load<Sprite>("Dialogue/CharacterImage/" + openWith[dialogueId].charaterImage);
+            character1 = characterSprites.Find(n => n.name == openWith[dialogueId].charaterImage);
             imageCharacter1.GetComponent<Image>().sprite = character1;
             imageCharacter1.GetComponent<Image>().color = new Color(1,1,1,1);
             if(character2 != null)
@@ -71,7 +74,8 @@ public class DialogueManager : MonoBehaviour
         }
         else
         {
-            character2 = Resources.Load<Sprite>("Dialogue/CharacterImage/" + openWith[dialogueId].charaterImage);
+            //character2 = Resources.Load<Sprite>("Dialogue/CharacterImage/" + openWith[dialogueId].charaterImage);
+            character2 = characterSprites.Find(n => n.name == openWith[dialogueId].charaterImage);
             if (character1 != null)
             {
                 imageCharacter1.GetComponent<Image>().color = new Color(0.5f, 0.5f, 0.5f, 1);
@@ -103,6 +107,10 @@ public class DialogueManager : MonoBehaviour
         if (isChoice == false)
         {
             currentId = openWith[startWithDialogueId].choice1;
+        }
+        else
+        {
+            currentId = startWithDialogueId;
         }
     }
     bool isChoice = false;

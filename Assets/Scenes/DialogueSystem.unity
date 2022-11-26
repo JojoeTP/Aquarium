@@ -267,6 +267,13 @@ MonoBehaviour:
   choiceButton1Text: {fileID: 1667202371}
   choiceButton2: {fileID: 753525408}
   choiceButton2Text: {fileID: 1300717796}
+  characterSprites:
+  - {fileID: 21300000, guid: ad5b13a3dce0ee3408be8179290619ac, type: 3}
+  - {fileID: 21300000, guid: 6a0395d933639744592126f0cb885b34, type: 3}
+  - {fileID: 21300000, guid: 49ed09c0a1dcea04d9aaa24b2786b25a, type: 3}
+  - {fileID: 21300000, guid: 4af56009f79d04042ac398be001b3d04, type: 3}
+  - {fileID: 21300000, guid: 6d4b9403c6e6012488c8a9aacbd6dd6c, type: 3}
+  - {fileID: 21300000, guid: c86fa6ee1abbbd142944366f4de908bf, type: 3}
   currentId: 
 --- !u!1001 &142292107
 PrefabInstance:
@@ -391,6 +398,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   connectDoor: {fileID: 2063250420}
   conditionItem: {fileID: 0}
+  isSpacialDoor: 0
   isPlayerUseItBefore: 0
   canEnemyEnter: 0
   triggerEvent:
@@ -1120,7 +1128,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.8327626, y: 1}
+    m_SensorSize: {x: 1.7750837, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -1413,6 +1421,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   connectDoor: {fileID: 707347794}
   conditionItem: {fileID: 0}
+  isSpacialDoor: 0
   isPlayerUseItBefore: 0
   canEnemyEnter: 0
   triggerEvent:
@@ -1506,6 +1515,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   connectDoor: {fileID: 701952495}
   conditionItem: {fileID: 0}
+  isSpacialDoor: 0
   isPlayerUseItBefore: 0
   canEnemyEnter: 0
   triggerEvent:
@@ -2058,7 +2068,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.015226245, y: 0}
+  m_Offset: {x: -0.08372831, y: 0.00000011920929}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -2069,7 +2079,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.8577154, y: 2.8577166}
+  m_Size: {x: 12.687375, y: 6.9479113}
   m_EdgeRadius: 0
 --- !u!114 &904488155
 MonoBehaviour:
@@ -2083,7 +2093,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96cd48e12b93e2644b317eb0a2a62a23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startWithDialogueId: Dialogue5_01
+  startWithDialogueId: Dialogue9_01
 --- !u!1 &973233332
 GameObject:
   m_ObjectHideFlags: 0
@@ -3491,8 +3501,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1479658139}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.24, y: 1.351, z: 0}
-  m_LocalScale: {x: 0.22014076, y: 0.22014076, z: 0.22014076}
+  m_LocalPosition: {x: 5.63, y: 3.91, z: 0}
+  m_LocalScale: {x: 1.0952002, y: 1.0952002, z: 1.0952002}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 904488151}
@@ -4424,12 +4434,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: fdd6e567ee10fc248bd04d03dcd7d871, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c86fa6ee1abbbd142944366f4de908bf, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 12.79, y: 7.19}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -4443,8 +4453,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2012061982}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -22.11, y: -1.03, z: 0}
-  m_LocalScale: {x: 1.4508, y: 1.4508, z: 1.4508}
+  m_LocalPosition: {x: -22.83, y: -1.44, z: 0}
+  m_LocalScale: {x: 0.4585, y: 0.4585, z: 0.4585}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 904488151}
@@ -4513,6 +4523,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   connectDoor: {fileID: 224373823}
   conditionItem: {fileID: 0}
+  isSpacialDoor: 0
   isPlayerUseItBefore: 0
   canEnemyEnter: 0
   triggerEvent:
