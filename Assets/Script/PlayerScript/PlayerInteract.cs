@@ -41,8 +41,7 @@ public class PlayerInteract : MonoBehaviour
 
             if(TalkWithNPC(n.transform))
             {
-                DialogueManager.inst.StartDialogue(n.GetComponent<TalkWithNPC>().startWithDialogueId);
-                //StartDialogue();
+                StartDialogue(n.GetComponent<TalkWithNPC>().startWithDialogueId);
             }
                 
             if(CanGetItem(n.transform))
@@ -55,16 +54,15 @@ public class PlayerInteract : MonoBehaviour
     bool TalkWithNPC(Transform overlap){
         if(overlap.GetComponent<TalkWithNPC>() != null)
         {
-            //DialogueManager.inst.StartDialogue(overlap.GetComponent<TalkWithNPC>().startWithDialogueId);
             return true;
         }
         return false;
     }
-    //void StartDialogue(){
-    //    //DialogueManager.inst.Invoke("StartDialogue",0);
-    //    //DialogueManager.inst.StartDialogue();
-    //    return;
-    //}
+    void StartDialogue(string startWithDialogueId)
+    {
+        DialogueManager.inst.StartDialogue(startWithDialogueId);
+        return;
+    }
 
     bool CanHiding(Transform overlap)
     {
@@ -91,7 +89,7 @@ public class PlayerInteract : MonoBehaviour
     {
         PlayerManager.inst.playerInventory.itemList.Add(item.item);
         RecordTimeManager.Inst.SavePickUpItemTimeData(item.item.itemData.ItemName,item.GetPickUpTime());
-        item.RunPickUpEvent();
+        item.OnPickUpEvent();
         item.gameObject.SetActive(false);
     }
 
