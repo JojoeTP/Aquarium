@@ -4,136 +4,188 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class DialogueManager : MonoBehaviour
-
+public class DialogueInfo
 {
+    public string ID;
+    public string character;
+    public string charaterImage;
+    public string dialogueText;
+    public string choice1;
+    public string choice2;
+    public string choice1Text;
+    public string choice2Text;
+
+    public DialogueInfo(string Id, string Character, string CharacterImage, string DialogueText, string Choice1, string Choice2, string Choice1Text, string Choice2Text)
+    {
+        ID = Id;
+        character = Character;
+        charaterImage = CharacterImage;
+        dialogueText = DialogueText;
+        choice1 = Choice1;
+        choice2 = Choice2;
+        choice1Text = Choice1Text;
+        choice2Text = Choice2Text;
+    }
+}
+
+public class DialogueManager : MonoBehaviour
+{
+    public Dictionary<string, DialogueInfo> openWith = new Dictionary<string, DialogueInfo>();
+
     public static DialogueManager inst;
     [SerializeField] TextMeshProUGUI nameText;
     [SerializeField] TextMeshProUGUI dialogueText;
 
-    private Queue<string> sentences;
-
     Sprite character1;
     Sprite character2;
-    ReadCSV readCSVData;
-    [SerializeField] int dialogueCount = 0;
-    GameObject imageCharacter1;
-    GameObject imageCharacter2;
+    [SerializeField] GameObject imageCharacter1;
+    [SerializeField]  GameObject imageCharacter2;
     [SerializeField] GameObject dialoguePanel;
     [SerializeField] GameObject continueButton;
-    [SerializeField] GameObject decisionButton1;
-    [SerializeField] TextMeshProUGUI decisionButton1Text;
-    [SerializeField] GameObject decisionButton2;
-    [SerializeField] TextMeshProUGUI decisionButton2Text;
 
-    string loadSpriteName;
+    [SerializeField] GameObject choiceButton1;
+    [SerializeField] TextMeshProUGUI choiceButton1Text;
+    [SerializeField] GameObject choiceButton2;
+    [SerializeField] TextMeshProUGUI choiceButton2Text;
 
-    private void Awake() {
+    private void Awake()
+    {
         inst = this;
     }
-    void Start()
+    [SerializeField] string currentId;
+    void CheckMainCharacterSpeak(string dialogueId)
     {
-        readCSVData = GetComponent<ReadCSV>();
-    }
-    void CheckResourcesLoadSprite(string readCSVData_CharacterName){
-        if(readCSVData_CharacterName == "อเมเลีย"){
-            loadSpriteName = "Amelie";
+        if (openWith[dialogueId].character == "�������")
+        {
+            character1 = Resources.Load<Sprite>("Dialogue/CharacterImage/" + openWith[dialogueId].charaterImage);
+            imageCharacter1.GetComponent<Image>().sprite = character1;
+            imageCharacter1.GetComponent<Image>().color = new Color(1,1,1,1);
+            if(character2 != null)
+            {
+                imageCharacter2.GetComponent<Image>().color = new Color(0.5f, 0.5f, 0.5f, 1);
+            }
+            else
+            {
+                imageCharacter2.GetComponent<Image>().color = new Color(0, 0, 0, 0);
+            }
         }
-        else if(readCSVData_CharacterName == "ลูกสาวผู้อำนวยการ"){
-            loadSpriteName = "Director's_Daughter";
+        else
+        {
+            character2 = Resources.Load<Sprite>("Dialogue/CharacterImage/" + openWith[dialogueId].charaterImage);
+            if (character1 != null)
+            {
+                imageCharacter1.GetComponent<Image>().color = new Color(0.5f, 0.5f, 0.5f, 1);
+            }
+            else
+            {
+                imageCharacter1.GetComponent<Image>().color = new Color(0, 0, 0, 0);
+            }
+            imageCharacter2.GetComponent<Image>().sprite = character2;
+            imageCharacter2.GetComponent<Image>().color = new Color(1, 1, 1, 1);
         }
 
+        if (openWith[dialogueId].charaterImage == "None")
+        {
+            imageCharacter1.GetComponent<Image>().color = new Color(0, 0, 0, 0);
+            imageCharacter2.GetComponent<Image>().color = new Color(0, 0, 0, 0);
+        }
     }
-
-    public void StartDialogue (){
+    public void StartDialogue(string startWithDialogueId)
+    {
         dialoguePanel.SetActive(true);
-        nameText.text = readCSVData.character[0];
-        dialogueText.text = readCSVData.dialogue[0];
-        // character1 = Resources.Load<Sprite>("Dialogue/CharacterImage/" + readCSVData.character[0]);
-        CheckResourcesLoadSprite(readCSVData.character[0]);
-        character1 = Resources.Load<Sprite>("Dialogue/CharacterImage/" + loadSpriteName);
+        CheckIfHaveChoice(startWithDialogueId);
 
-		imageCharacter1 = GameObject.Find ("Character1");
-		imageCharacter1.GetComponent<Image>().sprite = character1;
-
-        imageCharacter2 = GameObject.Find ("Character2");
-        imageCharacter2.GetComponent<Image>().color = new Color(0,0,0,0);
+        CheckMainCharacterSpeak(startWithDialogueId);
+        nameText.text = openWith[startWithDialogueId].character;
+        dialogueText.text = openWith[startWithDialogueId].dialogueText;
         StopAllCoroutines();
-        StartCoroutine(TypeSentence(readCSVData.dialogue[dialogueCount]));
-        dialogueCount++;
+        StartCoroutine(TypeSentence(openWith[startWithDialogueId].dialogueText));
+        if (isChoice == false)
+        {
+            currentId = openWith[startWithDialogueId].choice1;
+        }
+    }
+    bool isChoice = false;
+
+    void CheckIfHaveChoice(string checkChoiceId)
+    {
+        if (openWith[checkChoiceId].choice1 == "" && openWith[checkChoiceId].choice2 == "" || openWith[checkChoiceId].choice1 != "" && openWith[checkChoiceId].choice2 == "")
+        {
+            //end dialogue or continue
+            isChoice = false;
+            continueButton.SetActive(true);
+            choiceButton1.SetActive(false);
+            choiceButton2.SetActive(false);
+            //currentId = openWith[checkChoiceId].choice1;
+        }
+        else if (openWith[checkChoiceId].choice1 != "" && openWith[checkChoiceId].choice2 != "")
+        {
+            // choice
+            isChoice = true;
+            continueButton.SetActive(false);
+            choiceButton1.SetActive(true);
+            choiceButton2.SetActive(true);
+            choiceButton1Text.text = openWith[checkChoiceId].choice1Text;
+            choiceButton2Text.text = openWith[checkChoiceId].choice2Text;
+        }
     }
 
-    public void DisplayNextSentence(){
-        if(dialogueCount == readCSVData.dialogue.Count - 1){
+    public void DecisionButton1()
+    {
+        currentId = openWith[currentId].choice1;
+        DisplayNextSentence();
+    }
+
+    public void DecisionButton2()
+    {
+        currentId = openWith[currentId].choice2;
+        DisplayNextSentence();
+    }
+
+    public void DisplayNextSentence()
+    {
+        if (currentId == "")
+        {
             EndDialogue();
             return;
         }
-        dialogueCount++;
+        CheckIfHaveChoice(currentId);
 
-        if(readCSVData.character[0] != readCSVData.character[dialogueCount]){
-            CheckResourcesLoadSprite(readCSVData.character[dialogueCount]);
-            character2 = Resources.Load<Sprite>("Dialogue/CharacterImage/" + loadSpriteName);
-
-            imageCharacter2.GetComponent<Image>().color = new Color(1,1,1,1);
-            imageCharacter2.GetComponent<Image>().sprite = character2;
-        }
-
-        if(readCSVData.character[0] == readCSVData.character[dialogueCount]){
-            imageCharacter1.GetComponent<Image>().color = new Color(1,1,1,1);
-            if(imageCharacter2.GetComponent<Image>().sprite != null){
-                imageCharacter2.GetComponent<Image>().color = new Color(0.5f,0.5f,0.5f,1);
-            }
-        }
-        else if(readCSVData.character[1] == readCSVData.character[dialogueCount]){
-            imageCharacter1.GetComponent<Image>().color = new Color(0.5f,0.5f,0.5f,1);
-            imageCharacter2.GetComponent<Image>().color = new Color(1,1,1,1);
-        }
-
-        if(readCSVData.decision1[dialogueCount] != "1"){
-            continueButton.SetActive(false);
-            decisionButton1.SetActive(true);
-            decisionButton2.SetActive(true);
-            decisionButton1Text.text = readCSVData.decision1[dialogueCount];
-            decisionButton2Text.text = readCSVData.decision2[dialogueCount];
-        }
-        else{
-            continueButton.SetActive(true);
-            decisionButton1.SetActive(false);
-            decisionButton2.SetActive(false);
-        }
-        nameText.text = readCSVData.character[dialogueCount];
+        CheckMainCharacterSpeak(currentId);
+        
+        nameText.text = openWith[currentId].character;
         StopAllCoroutines();
-        StartCoroutine(TypeSentence(readCSVData.dialogue[dialogueCount]));
+        StartCoroutine(TypeSentence(openWith[currentId].dialogueText));
+        if(isChoice == false)
+        {
+            currentId = openWith[currentId].choice1;
+        }
     }
 
-    IEnumerator TypeSentence(string sentence){
+    IEnumerator TypeSentence(string sentence)
+    {
         dialogueText.text = "";
-        foreach(char letter in sentence.ToCharArray()){
+        foreach (char letter in sentence.ToCharArray())
+        {
             dialogueText.text += letter;
             yield return null;
         }
-
     }
 
-    void EndDialogue(){
-        dialogueCount = 0;
-        imageCharacter1.GetComponent<Image>().color = new Color(1,1,1,1);
-        imageCharacter2.GetComponent<Image>().color = new Color(0,0,0,0);
+    void EndDialogue()
+    {
+        isChoice = false;
         dialoguePanel.SetActive(false);
+        ResetCharacterSprite();
         Debug.Log("End Conversation");
     }
 
-    public void Decision1Button(){
-        readCSVData.id += 0.1f;
-        readCSVData.checkID = 0;
-        readCSVData.Invoke("Read",0);
-        // dialogueCount--;
-        DisplayNextSentence();
+    void ResetCharacterSprite()
+    {
+        character1 = null;
+        character2 = null;
+        imageCharacter1.GetComponent<Image>().color = new Color(1, 1, 1, 1);
+        imageCharacter2.GetComponent<Image>().color = new Color(1, 1, 1, 1);
     }
-    public void Decision2Button(){
-        readCSVData.id += 0.2f;
-        readCSVData.checkID = 0;
-        readCSVData.Invoke("Read",0);
-        DisplayNextSentence();
-    }
+
 }

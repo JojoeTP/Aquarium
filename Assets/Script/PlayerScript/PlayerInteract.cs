@@ -38,7 +38,8 @@ public class PlayerInteract : MonoBehaviour
 
             if(TalkWithNPC(n.transform))
             {
-                StartDialogue();
+                DialogueManager.inst.StartDialogue(n.GetComponent<TalkWithNPC>().startWithDialogueId);
+                //StartDialogue();
             }
                 
             if(CanGetItem(n.transform))
@@ -51,14 +52,16 @@ public class PlayerInteract : MonoBehaviour
     bool TalkWithNPC(Transform overlap){
         if(overlap.GetComponent<TalkWithNPC>() != null)
         {
+            //DialogueManager.inst.StartDialogue(overlap.GetComponent<TalkWithNPC>().startWithDialogueId);
             return true;
         }
         return false;
     }
-    void StartDialogue(){
-        DialogueManager_2.inst.Invoke("StartDialogue",0);
-        return;
-    }
+    //void StartDialogue(){
+    //    //DialogueManager.inst.Invoke("StartDialogue",0);
+    //    //DialogueManager.inst.StartDialogue();
+    //    return;
+    //}
 
     bool CanHiding(Transform overlap)
     {
