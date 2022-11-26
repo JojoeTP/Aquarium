@@ -9,20 +9,22 @@ public class PlayerMovement : MonoBehaviour
     Rigidbody2D rb;
 
     [Header("PlayerSpeed")]
-    public float playerBaseSpeed;
-    public float playerSpeed;
+    [SerializeField] float playerBaseSpeed;
+    float playerSpeed;
 
     [Header("Sprint")]
-    public bool IsSprint = false;
-    public float sprintSpeed;
-    public float basePlayerStamina;
-    public float playerStamina;
-    public float staminaCost;
-    public float staminaRegeneration;
-    public Slider staminaSlider;
+    [SerializeField] bool IsSprint = false;
+    [SerializeField] bool IsExhausted = false;
+    [SerializeField] float sprintSpeed;
+    [SerializeField] float basePlayerStamina;
+    float playerStamina;
+    [SerializeField] float staminaCost;
+    [SerializeField] float staminaRegeneration;
+
+    public float PlayerStamina {get {return playerStamina;}}
+    public float BasePlayerStamina {get {return basePlayerStamina;}}
 
     Vector2 direction;
-
     Vector3 scale;
 
     private void Awake() 
@@ -44,7 +46,10 @@ public class PlayerMovement : MonoBehaviour
     {
         if(value.isPressed)
         {
-            playerSpeed = playerBaseSpeed + sprintSpeed;
+            if(IsExhausted)
+                return;
+
+            playerSpeed = sprintSpeed;
             IsSprint = true;
         }
         else
@@ -61,13 +66,8 @@ public class PlayerMovement : MonoBehaviour
         {
             playerSpeed = playerBaseSpeed;
             IsSprint = false;
+            IsExhausted = true;
         }
-    }
-
-    void ChangeStaminaBar()
-    {
-        float normalizedStaminaBar = Mathf.Clamp(playerStamina/basePlayerStamina, 0, 1);
-        staminaSlider.value = normalizedStaminaBar;
     }
 
     void StaminaRegeneration()
@@ -84,6 +84,7 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
+            IsExhausted = false;
             playerStamina = basePlayerStamina;
         }
     }
@@ -91,7 +92,6 @@ public class PlayerMovement : MonoBehaviour
     private void FixedUpdate() 
     {
         CheckStamina();
-        ChangeStaminaBar();
         StaminaRegeneration();
     }
 
@@ -102,7 +102,7 @@ public class PlayerMovement : MonoBehaviour
             direction = Vector2.zero;
 
         
-        if(PlayerManager.inst.isHide)
+        if(PlayerManager.inst.playerState != PlayerManager.PLAYERSTATE.NONE)
         {
             direction = Vector2.zero;
         }

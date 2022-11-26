@@ -17,7 +17,7 @@ namespace PluggableAI
 
         bool IsWallInVision(StateController controller)
         {
-            if(Physics2D.Raycast(controller.transform.position,controller.moveDirection,controller.frontVisionRange,wallLayer))
+            if(Physics2D.Raycast(controller.transform.position,controller.moveDirection,controller.attackRange,wallLayer))
                 return true;
             else
                 return false;
