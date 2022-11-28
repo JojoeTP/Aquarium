@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ItemManager : MonoBehaviour
 {
+    public static ItemManager Inst;
     [SerializeField] bool isPermutation = false;
     [SerializeField] int participateID;
     ItemEffectInfo itemEffectData;
@@ -17,13 +18,15 @@ public class ItemManager : MonoBehaviour
 
     [SerializeField] List<ItemScriptableObject> itemData = new List<ItemScriptableObject>();
 
-    void Start()
+    public int ParticipateId {get{ return participateID;} set {participateID = value;}}
+
+    private void Awake() 
     {
-        if(isPermutation)
-            SetUpItemPermutation();
+        if(Inst == null)
+            Inst = this;    
     }
 
-    void Update()
+    void Start()
     {
         
     }
@@ -38,13 +41,14 @@ public class ItemManager : MonoBehaviour
     //     }
     // }
 
-    void SetUpItemPermutation()
+    //Run when load scene
+    public void SetUpItemPermutation()
     {
-        Item item = null;
-        LoadItemDataJson();
+        LoadItemDataJson(participateID);
 
         foreach(var n in itemEffectData.ItemEffectSettingList)
         {
+            Item item = null;
             switch(n.effectTYPE)
             {
                 case EFFECTTYPE.WINK :
@@ -55,6 +59,10 @@ public class ItemManager : MonoBehaviour
                             item = Instantiate(winkEffectPrefab);
                             item.item = m;
                             item.SetItem();
+                            if (item != null)
+                            {
+                                SetItemAction(item);
+                            }
                         }
                     }
                     break;
@@ -66,6 +74,10 @@ public class ItemManager : MonoBehaviour
                             item = Instantiate(invertColorEffectPrefab);
                             item.item = m;
                             item.SetItem();
+                            if (item != null)
+                            {
+                                SetItemAction(item);
+                            }
                         }
                     }
                     break;
@@ -77,6 +89,10 @@ public class ItemManager : MonoBehaviour
                             item = Instantiate(lightEffectPrefab);
                             item.item = m;
                             item.SetItem();
+                            if (item != null)
+                            {
+                                SetItemAction(item);
+                            }
                         }
                     }
                     break;
@@ -88,6 +104,10 @@ public class ItemManager : MonoBehaviour
                             item = Instantiate(outlineEffectPrefab);
                             item.item = m;
                             item.SetItem();
+                            if (item != null)
+                            {
+                                SetItemAction(item);
+                            }
                         }
                     }
                     break;
@@ -99,20 +119,21 @@ public class ItemManager : MonoBehaviour
                             item = Instantiate(buttonEffectPrefab);
                             item.item = m;
                             item.SetItem();
+                            if (item != null)
+                            {
+                                SetItemAction(item);
+                            }
                         }
                     }
                     break;
             }
-
-            SetItemAction(item);
+            
         }
-
-
     }
 
-    void LoadItemDataJson()
+    void LoadItemDataJson(int index)
     {
-        itemEffectData = ItemEffectInfo.LoadItemEffectJSON(participateID);
+        itemEffectData = ItemEffectInfo.LoadItemEffectJSON(index);
     }
 
     void SetItemAction(Item item)
@@ -122,7 +143,7 @@ public class ItemManager : MonoBehaviour
             case ITEMTYPE.ITEM1:
                 item.triggerEvents.AddListener( () => 
                     {
-
+                        DialogueManager.inst.StartDialogue(item.item.itemData.dialogueItemId);
                     }
                 );
                 break;
@@ -150,7 +171,7 @@ public class ItemManager : MonoBehaviour
             case ITEMTYPE.ITEM5:
                 item.triggerEvents.AddListener( () => 
                     {
-
+                        ActionEventManager.inst.OnPickUpLabyrinthCoin();
                     }
                 );
                 break;
