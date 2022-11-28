@@ -50,6 +50,7 @@ public class DoorEncryption : MonoBehaviour
 
     void SettingStartPuzzle()
     {
+        doorTrigger.triggerEvent.RemoveAllListeners();
         doorTrigger.triggerEvent.AddListener( () => {
             //setlocation before start puzzle
             doorTrigger.connectDoor = startPostion;
@@ -130,6 +131,10 @@ public class DoorEncryption : MonoBehaviour
 
     void SettingDoor()
     {
+        leftDoor.triggerEvent.RemoveAllListeners();
+        upDoor.triggerEvent.RemoveAllListeners();
+        rightDoor.triggerEvent.RemoveAllListeners();
+
         leftDoor.triggerEvent.AddListener( () => {
             EnterEncryptionDoor('L');
             OnSelectDoor(leftDoor);

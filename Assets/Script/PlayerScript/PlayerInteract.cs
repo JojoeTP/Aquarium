@@ -108,11 +108,13 @@ public class PlayerInteract : MonoBehaviour
     {
         UITransition.inst.PlayOverlayTransitionIn();
         PlayerManager.inst.playerState = PlayerManager.PLAYERSTATE.ENTERDOOR;
-        Invoke("ExitDoor",1f);
+        StartCoroutine(ExitDoor());
     }
 
-    void ExitDoor()
+    IEnumerator ExitDoor()
     {
+        yield return new WaitForSeconds(1.0f);
+
         UITransition.inst.PlayOverlayTransitionOut();
         PlayerManager.inst.playerState = PlayerManager.PLAYERSTATE.NONE;
         enteringDoor.PlayerEnterDoor(this.transform);
