@@ -104,7 +104,7 @@ public class DialogueManager : MonoBehaviour
     void CheckMainCharacterSpeak(string dialogueId)
     {
         // if (openWith[dialogueId].character == "อเมเลีย")
-        if (openWith[dialogueId].character == "�������")
+        if (openWith[dialogueId].charaterImage.Contains("Amelia"))
         {
             //character1 = Resources.Load<Sprite>("Dialogue/CharacterImage/" + openWith[dialogueId].charaterImage);
             character1 = characterSprites.Find(n => n.name == openWith[dialogueId].charaterImage);
