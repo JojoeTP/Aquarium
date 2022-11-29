@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System.IO;
 
 public class DialogueInfo
 {
@@ -30,34 +31,80 @@ public class DialogueInfo
 
 public class DialogueManager : MonoBehaviour
 {
+    [SerializeField] string dialoguePath;
     public Dictionary<string, DialogueInfo> openWith = new Dictionary<string, DialogueInfo>();
 
     public static DialogueManager inst;
+
+    [Header("DialogueText")]
     [SerializeField] TextMeshProUGUI nameText;
     [SerializeField] TextMeshProUGUI dialogueText;
 
+    [Header("CharacterImage")]
     Sprite character1;
     Sprite character2;
     [SerializeField] GameObject imageCharacter1;
     [SerializeField]  GameObject imageCharacter2;
     [SerializeField] GameObject dialoguePanel;
-    [SerializeField] GameObject continueButton;
 
-    [SerializeField] GameObject choiceButton1;
+    [Header("Button")]
+    [SerializeField] Button continueButton;
+    [SerializeField] Button choiceButton1;
+    [SerializeField] Button choiceButton2;
+
+    [Header("ChoiceText")]
     [SerializeField] TextMeshProUGUI choiceButton1Text;
-    [SerializeField] GameObject choiceButton2;
     [SerializeField] TextMeshProUGUI choiceButton2Text;
 
     [SerializeField] List<Sprite> characterSprites = new List<Sprite>();
+    [SerializeField] string currentId;
 
     private void Awake()
     {
         inst = this;
     }
-    [SerializeField] string currentId;
+
+    private void Start()
+    {
+        AddListenerToButton();
+        LoadDialogueData();
+    }
+
+    void LoadDialogueData()
+    {
+        StreamReader stringReader = new StreamReader("Assets/StreamingAssets/DialogueData/" + dialoguePath + ".csv");
+        bool endOfFile = false;
+        while (!endOfFile)
+        {
+            string data_string = stringReader.ReadLine();
+
+            if (data_string == null)
+            {
+                endOfFile = true;
+                break;
+            }
+
+            var data_values = data_string.Split(',');
+
+
+            if (data_values[0] == "Id" || data_values[0] == "")
+            {
+
+            }
+            else
+            {
+                //ID,character,charaterImage,dialogueText,choice1,choice2,choice1Text,choice2Text
+                DialogueInfo newDialogue = new DialogueInfo(data_values[0], data_values[1], data_values[2], data_values[3], data_values[4], data_values[5], data_values[6], data_values[7]);
+                //Debug.Log(newDialogue.character);
+                openWith.Add(data_values[0], newDialogue);
+            }
+        }
+    }
+
     void CheckMainCharacterSpeak(string dialogueId)
     {
-        if (openWith[dialogueId].character == "Õ‡¡‡≈’¬")
+        // if (openWith[dialogueId].character == "‡∏≠‡πÄ‡∏°‡πÄ‡∏•‡∏µ‡∏¢")
+        if (openWith[dialogueId].charaterImage.Contains("Amelia"))
         {
             //character1 = Resources.Load<Sprite>("Dialogue/CharacterImage/" + openWith[dialogueId].charaterImage);
             character1 = characterSprites.Find(n => n.name == openWith[dialogueId].charaterImage);
@@ -94,6 +141,7 @@ public class DialogueManager : MonoBehaviour
             imageCharacter2.GetComponent<Image>().color = new Color(0, 0, 0, 0);
         }
     }
+
     public void StartDialogue(string startWithDialogueId)
     {
         dialoguePanel.SetActive(true);
@@ -113,6 +161,7 @@ public class DialogueManager : MonoBehaviour
             currentId = startWithDialogueId;
         }
     }
+
     bool isChoice = false;
 
     void CheckIfHaveChoice(string checkChoiceId)
@@ -121,21 +170,25 @@ public class DialogueManager : MonoBehaviour
         {
             //end dialogue or continue
             isChoice = false;
-            continueButton.SetActive(true);
-            choiceButton1.SetActive(false);
-            choiceButton2.SetActive(false);
+            continueButton.gameObject.SetActive(true);
+            ToggleChoiceButton(false);
             //currentId = openWith[checkChoiceId].choice1;
         }
         else if (openWith[checkChoiceId].choice1 != "" && openWith[checkChoiceId].choice2 != "")
         {
             // choice
             isChoice = true;
-            continueButton.SetActive(false);
-            choiceButton1.SetActive(true);
-            choiceButton2.SetActive(true);
+            continueButton.gameObject.SetActive(false);
+            ToggleChoiceButton(true);
             choiceButton1Text.text = openWith[checkChoiceId].choice1Text;
             choiceButton2Text.text = openWith[checkChoiceId].choice2Text;
         }
+    }
+
+    void ToggleChoiceButton(bool enabled)
+    {
+        choiceButton1.gameObject.SetActive(enabled);
+        choiceButton2.gameObject.SetActive(enabled);
     }
 
     public void DecisionButton1()
@@ -168,6 +221,17 @@ public class DialogueManager : MonoBehaviour
         {
             currentId = openWith[currentId].choice1;
         }
+    }
+
+    void AddListenerToButton()
+    {
+        continueButton.onClick.RemoveAllListeners();
+        choiceButton1.onClick.RemoveAllListeners();
+        choiceButton2.onClick.RemoveAllListeners();
+
+        continueButton.onClick.AddListener(() => {DisplayNextSentence();});
+        choiceButton1.onClick.AddListener(() => {DecisionButton1();});
+        choiceButton2.onClick.AddListener(() => {DecisionButton2();});
     }
 
     IEnumerator TypeSentence(string sentence)

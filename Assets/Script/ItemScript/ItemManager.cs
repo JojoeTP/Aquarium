@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ItemManager : MonoBehaviour
 {
+    public static ItemManager Inst;
     [SerializeField] bool isPermutation = false;
     [SerializeField] int participateID;
     ItemEffectInfo itemEffectData;
@@ -17,13 +18,15 @@ public class ItemManager : MonoBehaviour
 
     [SerializeField] List<ItemScriptableObject> itemData = new List<ItemScriptableObject>();
 
-    void Start()
+    public int ParticipateId {get{ return participateID;} set {participateID = value;}}
+
+    private void Awake() 
     {
-        if(isPermutation)
-            SetUpItemPermutation();
+        if(Inst == null)
+            Inst = this;    
     }
 
-    void Update()
+    void Start()
     {
         
     }
@@ -38,9 +41,10 @@ public class ItemManager : MonoBehaviour
     //     }
     // }
 
-    void SetUpItemPermutation()
+    //Run when load scene
+    public void SetUpItemPermutation()
     {
-        LoadItemDataJson();
+        LoadItemDataJson(participateID);
 
         foreach(var n in itemEffectData.ItemEffectSettingList)
         {
@@ -127,9 +131,9 @@ public class ItemManager : MonoBehaviour
         }
     }
 
-    void LoadItemDataJson()
+    void LoadItemDataJson(int index)
     {
-        itemEffectData = ItemEffectInfo.LoadItemEffectJSON(participateID);
+        itemEffectData = ItemEffectInfo.LoadItemEffectJSON(index);
     }
 
     void SetItemAction(Item item)
@@ -167,7 +171,7 @@ public class ItemManager : MonoBehaviour
             case ITEMTYPE.ITEM5:
                 item.triggerEvents.AddListener( () => 
                     {
-
+                        ActionEventManager.inst.OnPickUpLabyrinthCoin();
                     }
                 );
                 break;
