@@ -40023,6 +40023,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: AI_Skeleton
       objectReference: {fileID: 0}
+    - target: {fileID: 4261554499911693211, guid: 1c78d18dba1098a46a6b561a0587f2a6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6669698822064037087, guid: 1c78d18dba1098a46a6b561a0587f2a6, type: 3}
       propertyPath: m_RootOrder
       value: 17
