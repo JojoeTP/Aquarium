@@ -72,7 +72,7 @@ public class DialogueManager : MonoBehaviour
 
     void LoadDialogueData()
     {
-        StreamReader stringReader = new StreamReader("Assets/StreamingAssets/DialogueData/" + dialoguePath + ".csv");
+        StreamReader stringReader = new StreamReader(Application.streamingAssetsPath + "/DialogueData/" + dialoguePath + ".csv");
         bool endOfFile = false;
         while (!endOfFile)
         {

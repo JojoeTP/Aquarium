@@ -41,6 +41,7 @@ public class StateController : MonoBehaviour
     public State currentState;
     public State remainState;
     public float waitingTime;
+    public Animator animator;
 
    
     private void Update() 
@@ -91,5 +92,18 @@ public class StateController : MonoBehaviour
 
         Gizmos.color = ChaseColor;
         Gizmos.DrawRay(transform.position + ChasingRangeOffset,moveDirection * chasingRange); //VISION RANGE
+    }
+
+    public void ToggleChasing(bool enabled)
+    {
+        animator.SetBool("M_Trigger",enabled);
+    }
+    public void ToggleAttack(bool enabled)
+    {
+        animator.SetBool("M_Attack",enabled);
+    }
+    public void ToggleTimeOut(bool enabled)
+    {
+        animator.SetBool("M_Timeout",enabled);
     }
 }
