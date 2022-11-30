@@ -17,9 +17,10 @@ namespace PluggableAI
 
         void Attack(StateController controller)
         {
-
             if(Physics2D.Raycast(controller.transform.position,controller.moveDirection,controller.attackRange,playerLayer))
             {
+                controller.ToggleAttack(true);
+                Debug.Log("Attack");
                 Attack();
             }
         }
