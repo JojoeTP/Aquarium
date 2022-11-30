@@ -19,11 +19,21 @@ namespace PluggableAI
         bool IsContinueChase(StateController controller)
         {
             if(controller.chasingTime > 0)
+            {
+                controller.ToggleChasing(true);
+                controller.ToggleAttack(false);
                 return true;
+            }
             
             if(Physics2D.Raycast(controller.transform.position,controller.moveDirection,controller.chasingRange,playerLayer))
+            {
+                controller.ToggleChasing(true);
+                controller.ToggleAttack(false);
                 return true;
+            }
 
+            controller.ToggleChasing(false);
+            controller.ToggleAttack(false);
             return false;
         }
     }

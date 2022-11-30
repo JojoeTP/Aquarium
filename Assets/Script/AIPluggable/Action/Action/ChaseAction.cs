@@ -14,6 +14,8 @@ namespace PluggableAI
 
         void Patrol(StateController controller)
         {
+            controller.ToggleChasing(true);
+            controller.ToggleAttack(false);
             controller.transform.Translate(controller.moveDirection * controller.chasingSpeed * Time.deltaTime); 
         }
     }
