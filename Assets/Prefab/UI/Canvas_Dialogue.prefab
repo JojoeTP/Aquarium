@@ -937,7 +937,6 @@ GameObject:
   - component: {fileID: 8809037802628901974}
   - component: {fileID: 8809037802628901977}
   - component: {fileID: 8809037802628901976}
-  - component: {fileID: 315423434}
   m_Layer: 5
   m_Name: Canvas_Dialogue
   m_TagString: Untagged
@@ -1027,37 +1026,6 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &315423434
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8809037802628901979}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2693dbca1e2393a45a00ed8993f9b747, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialoguePath: 
-  nameText: {fileID: 8809037803184056372}
-  dialogueText: {fileID: 8809037802928629081}
-  imageCharacter1: {fileID: 8809037802470383401}
-  imageCharacter2: {fileID: 8809037804011774492}
-  dialoguePanel: {fileID: 8809037803480184951}
-  continueButton: {fileID: 1921807418544019631}
-  choiceButton1: {fileID: 1874551173421004362}
-  choiceButton2: {fileID: 8065422855662655754}
-  choiceButton1Text: {fileID: 247421763828276868}
-  choiceButton2Text: {fileID: 1154839714139069103}
-  characterSprites:
-  - {fileID: 21300000, guid: ad5b13a3dce0ee3408be8179290619ac, type: 3}
-  - {fileID: 21300000, guid: 6a0395d933639744592126f0cb885b34, type: 3}
-  - {fileID: 21300000, guid: 49ed09c0a1dcea04d9aaa24b2786b25a, type: 3}
-  - {fileID: 21300000, guid: 4af56009f79d04042ac398be001b3d04, type: 3}
-  - {fileID: 21300000, guid: 6d4b9403c6e6012488c8a9aacbd6dd6c, type: 3}
-  - {fileID: 21300000, guid: c86fa6ee1abbbd142944366f4de908bf, type: 3}
-  currentId: 
 --- !u!1 &8809037802928629080
 GameObject:
   m_ObjectHideFlags: 0
