@@ -41,7 +41,7 @@ public class PlayerInteract : MonoBehaviour
 
             if(TalkWithNPC(n.transform))
             {
-                StartDialogue(n.GetComponent<TalkWithNPC>().startWithDialogueId);
+                StartDialogue(n.GetComponent<TalkWithNPC>());
             }
                 
             if(CanGetItem(n.transform))
@@ -58,9 +58,21 @@ public class PlayerInteract : MonoBehaviour
         }
         return false;
     }
-    void StartDialogue(string startWithDialogueId)
+    // void StartDialogue(string startWithDialogueId)
+    // {
+    //     DialogueManager.inst.StartDialogue(startWithDialogueId);
+    //     return;
+    // }
+
+    void StartDialogue(TalkWithNPC NPC)
     {
-        DialogueManager.inst.StartDialogue(startWithDialogueId);
+        if(DialogueManager.inst.currentNPC == null)
+        {
+            DialogueManager.inst.currentNPC = NPC;
+            DialogueManager.inst.currentDialogue = NPC.startWithDialogueId;
+        }
+        DialogueManager.inst.StartDialogue();
+        PlayerManager.inst.playerState = PlayerManager.PLAYERSTATE.CONVERSATION;
         return;
     }
 
@@ -106,6 +118,9 @@ public class PlayerInteract : MonoBehaviour
 
     void EnterDoor()
     {
+        if(PlayerManager.inst.playerState != PlayerManager.PLAYERSTATE.NONE)
+            return;
+
         UITransition.inst.PlayOverlayTransitionIn();
         PlayerManager.inst.playerState = PlayerManager.PLAYERSTATE.ENTERDOOR;
         StartCoroutine(ExitDoor());

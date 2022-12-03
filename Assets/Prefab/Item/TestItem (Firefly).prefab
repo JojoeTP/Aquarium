@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8654583361641874286}
   - component: {fileID: 8796156688902292168}
   m_Layer: 0
-  m_Name: TestItem (Wink)
+  m_Name: TestItem (Firefly)
   m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -101,7 +101,7 @@ MonoBehaviour:
   item: {fileID: 11400000, guid: 13b6018e5c7898a44ba470e1eeb9715f, type: 2}
   showInteractKey: {fileID: 0}
   interactIconPrefab: {fileID: 0}
-  effectPrefab: {fileID: 5432750730866112315, guid: 749e777a63d03ee499044fdcb32baa94, type: 3}
+  effectPrefab: {fileID: 5432750730866112315, guid: d08cbdec0e0c51f4e8e1eaa2a6bed6c8, type: 3}
   triggerEvents:
     m_PersistentCalls:
       m_Calls: []
