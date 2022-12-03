@@ -16714,8 +16714,6 @@ GameObject:
   m_Component:
   - component: {fileID: 912066831}
   - component: {fileID: 912066830}
-  - component: {fileID: 912066833}
-  - component: {fileID: 912066832}
   m_Layer: 0
   m_Name: Cafeteria_VIPRoom
   m_TagString: Untagged
@@ -16794,44 +16792,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &912066832
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 912066829}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cec6bad21c4d7b243b2f1fa75e8cc81a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!61 &912066833
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 912066829}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 67.87022, y: 11.797753}
-    newSize: {x: 67.87022, y: 11.797753}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 67.87022, y: 11.797753}
-  m_EdgeRadius: 0
 --- !u!1 &912243004
 GameObject:
   m_ObjectHideFlags: 0
@@ -20095,6 +20055,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -7552582706839291426, guid: db286ef8c66343a41b2ce4d90769756e, type: 3}
   m_PrefabInstance: {fileID: 1080645094}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1084837209
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1084837210}
+  m_Layer: 0
+  m_Name: ----------NPC--------------------------------------------------- (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1084837210
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1084837209}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 29
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1085328314
 GameObject:
   m_ObjectHideFlags: 0
@@ -21404,8 +21395,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1189125320}
   - component: {fileID: 1189125319}
-  - component: {fileID: 1189125322}
-  - component: {fileID: 1189125321}
   m_Layer: 0
   m_Name: Cafeteria_Kitchen2
   m_TagString: Untagged
@@ -21484,44 +21473,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &1189125321
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1189125318}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 67.87022, y: 11.797753}
-    newSize: {x: 67.87022, y: 11.797753}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 67.87022, y: 11.797753}
-  m_EdgeRadius: 0
---- !u!114 &1189125322
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1189125318}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cec6bad21c4d7b243b2f1fa75e8cc81a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1204675382
 GameObject:
   m_ObjectHideFlags: 0
@@ -24954,7 +24905,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 29
+  m_RootOrder: 30
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1385536934
 GameObject:
@@ -34375,8 +34326,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1840380894}
   - component: {fileID: 1840380893}
-  - component: {fileID: 1840380896}
-  - component: {fileID: 1840380895}
   m_Layer: 0
   m_Name: Cafeteria_Office
   m_TagString: Untagged
@@ -34456,44 +34405,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1840380895
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1840380892}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cec6bad21c4d7b243b2f1fa75e8cc81a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!61 &1840380896
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1840380892}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 39.0336, y: 11.797753}
-    newSize: {x: 67.87022, y: 11.797753}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 39.0336, y: 11.797753}
-  m_EdgeRadius: 0
 --- !u!1 &1841277790
 GameObject:
   m_ObjectHideFlags: 0
@@ -41542,8 +41453,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4695122923223474139}
   - component: {fileID: 4695122923223474138}
-  - component: {fileID: 4695122923223474141}
-  - component: {fileID: 4695122923223474140}
   m_Layer: 0
   m_Name: Labyrinth_END
   m_TagString: Untagged
@@ -41622,44 +41531,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4695122923223474140
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4695122923223474133}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cec6bad21c4d7b243b2f1fa75e8cc81a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!61 &4695122923223474141
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4695122923223474133}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.496704, y: 0.59886175}
-    newSize: {x: 67.87022, y: 11.797753}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 4.1266537, y: 0.59886175}
-  m_EdgeRadius: 0
 --- !u!1 &4695122923259641156
 GameObject:
   m_ObjectHideFlags: 0
@@ -41769,8 +41640,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4695122923489636728}
   - component: {fileID: 4695122923489636731}
-  - component: {fileID: 4695122923489636733}
-  - component: {fileID: 4695122923489636732}
   m_Layer: 0
   m_Name: Labyrinth_MAZE
   m_TagString: Untagged
@@ -41830,44 +41699,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &4695122923489636732
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4695122923489636730}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cec6bad21c4d7b243b2f1fa75e8cc81a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!61 &4695122923489636733
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4695122923489636730}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.496704, y: 0.59886175}
-    newSize: {x: 3.496704, y: 0.59886175}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 4.2768254, y: 0.59886175}
-  m_EdgeRadius: 0
 --- !u!1 &4695122923674531284
 GameObject:
   m_ObjectHideFlags: 0
