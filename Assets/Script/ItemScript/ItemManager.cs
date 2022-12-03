@@ -143,7 +143,8 @@ public class ItemManager : MonoBehaviour
             case ITEMTYPE.ITEM1:
                 item.triggerEvents.AddListener( () => 
                     {
-                        DialogueManager.inst.StartDialogue(item.item.itemData.dialogueItemId);
+                        DialogueManager.inst.currentDialogue = item.item.itemData.dialogueItemId;
+                        DialogueManager.inst.StartDialogue();
                     }
                 );
                 break;

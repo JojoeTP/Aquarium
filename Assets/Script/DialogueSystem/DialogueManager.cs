@@ -58,6 +58,8 @@ public class DialogueManager : MonoBehaviour
 
     [SerializeField] List<Sprite> characterSprites = new List<Sprite>();
     [SerializeField] string currentId;
+    public TalkWithNPC currentNPC;
+    public string currentDialogue;
 
     private void Awake()
     {
@@ -142,23 +144,23 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    public void StartDialogue(string startWithDialogueId)
+    public void StartDialogue()
     {
         dialoguePanel.SetActive(true);
-        CheckIfHaveChoice(startWithDialogueId);
+        CheckIfHaveChoice(currentDialogue);
 
-        CheckMainCharacterSpeak(startWithDialogueId);
-        nameText.text = openWith[startWithDialogueId].character;
-        dialogueText.text = openWith[startWithDialogueId].dialogueText;
+        CheckMainCharacterSpeak(currentDialogue);
+        nameText.text = openWith[currentDialogue].character;
+        dialogueText.text = openWith[currentDialogue].dialogueText;
         StopAllCoroutines();
-        StartCoroutine(TypeSentence(openWith[startWithDialogueId].dialogueText));
+        StartCoroutine(TypeSentence(openWith[currentDialogue].dialogueText));
         if (isChoice == false)
         {
-            currentId = openWith[startWithDialogueId].choice1;
+            currentId = openWith[currentDialogue].choice1;
         }
         else
         {
-            currentId = startWithDialogueId;
+            currentId = currentDialogue;
         }
     }
 
@@ -249,6 +251,11 @@ public class DialogueManager : MonoBehaviour
         isChoice = false;
         dialoguePanel.SetActive(false);
         ResetCharacterSprite();
+
+        currentNPC.triggerEvents.Invoke();
+        currentNPC = null;
+
+        PlayerManager.inst.playerState = PlayerManager.PLAYERSTATE.NONE;
         Debug.Log("End Conversation");
     }
 
