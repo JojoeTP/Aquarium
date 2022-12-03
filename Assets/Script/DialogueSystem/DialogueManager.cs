@@ -254,7 +254,8 @@ public class DialogueManager : MonoBehaviour
 
         currentNPC.triggerEvents.Invoke();
         currentNPC = null;
-        
+
+        PlayerManager.inst.playerState = PlayerManager.PLAYERSTATE.NONE;
         Debug.Log("End Conversation");
     }
 

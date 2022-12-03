@@ -72,6 +72,7 @@ public class PlayerInteract : MonoBehaviour
             DialogueManager.inst.currentDialogue = NPC.startWithDialogueId;
         }
         DialogueManager.inst.StartDialogue();
+        PlayerManager.inst.playerState = PlayerManager.PLAYERSTATE.CONVERSATION;
         return;
     }
 
@@ -117,6 +118,9 @@ public class PlayerInteract : MonoBehaviour
 
     void EnterDoor()
     {
+        if(PlayerManager.inst.playerState != PlayerManager.PLAYERSTATE.NONE)
+            return;
+
         UITransition.inst.PlayOverlayTransitionIn();
         PlayerManager.inst.playerState = PlayerManager.PLAYERSTATE.ENTERDOOR;
         StartCoroutine(ExitDoor());
