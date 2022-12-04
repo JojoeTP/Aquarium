@@ -101,7 +101,7 @@ public class PlayerInteract : MonoBehaviour
     {
         PlayerManager.inst.playerInventory.itemList.Add(item.item);
         ItemTimeData itemData = new ItemTimeData();
-        itemData.effectName = ItemManager.Inst.ItemEffectData.ItemEffectSettingList.Find(n => n.iTEMTYPE == item.item.itemData.ItemType).effectTYPE.ToString();
+        itemData.effectName = ItemManager.Inst.ItemEffectData.ItemEffectSettingList.Find(n => n.iTEMTYPE.HasFlag(item.item.itemData.ItemType)).effectTYPE.ToString();
         itemData.time = item.GetPickUpTime();
         RecordTimeManager.Inst.SavePickUpItemTimeData(item.item.itemData.ItemName,itemData);
         item.OnPickUpEvent();
