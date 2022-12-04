@@ -8,6 +8,7 @@ public class ItemManager : MonoBehaviour
     [SerializeField] bool isPermutation = false;
     [SerializeField] int participateID;
     ItemEffectInfo itemEffectData;
+    public ItemEffectInfo ItemEffectData {get {return itemEffectData;}}
 
     [Header("ItemEffect")]
     [SerializeField] Item winkEffectPrefab;
@@ -96,7 +97,7 @@ public class ItemManager : MonoBehaviour
                         }
                     }
                     break;
-                case EFFECTTYPE.OUTLINE :
+                case EFFECTTYPE.FIREFLY :
                     foreach(var m in itemData)
                     {
                         if(n.iTEMTYPE.HasFlag(m.itemData.ItemType))

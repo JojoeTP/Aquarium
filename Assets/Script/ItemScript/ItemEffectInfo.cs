@@ -34,7 +34,7 @@ public enum EFFECTTYPE
     INVERTCOLOR,
     BUTTON,
     LIGHT,
-    OUTLINE,
+    FIREFLY,
 }
 
 
