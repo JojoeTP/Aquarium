@@ -12574,6 +12574,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8370923413638022042, guid: 9f28763c23a64034d8eef2b450623ade, type: 3}
+      propertyPath: doorTransition
+      value: 
+      objectReference: {fileID: 1231206785}
+    - target: {fileID: 8370923413638022042, guid: 9f28763c23a64034d8eef2b450623ade, type: 3}
       propertyPath: overlayTransition
       value: 
       objectReference: {fileID: 1231206784}
@@ -22240,6 +22244,17 @@ Animator:
   m_CorrespondingSourceObject: {fileID: 2347664268754119566, guid: 2916f11d05ed43143896bd1038986891, type: 3}
   m_PrefabInstance: {fileID: 1231206783}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1231206785 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4519214535877325464, guid: 2916f11d05ed43143896bd1038986891, type: 3}
+  m_PrefabInstance: {fileID: 1231206783}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ca46c86faa047c40b8fd3fce98a4780, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1241982697
 GameObject:
   m_ObjectHideFlags: 0
@@ -25190,7 +25205,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96cd48e12b93e2644b317eb0a2a62a23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startWithDialogueId: 'Ch1_D01_01 '
+  startWithDialogueId: Ch1_D01_01
   triggerEvents:
     m_PersistentCalls:
       m_Calls:

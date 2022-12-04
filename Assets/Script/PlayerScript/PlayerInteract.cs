@@ -124,16 +124,12 @@ public class PlayerInteract : MonoBehaviour
         if(PlayerManager.inst.playerState != PlayerManager.PLAYERSTATE.NONE)
             return;
 
-        UITransition.inst.PlayOverlayTransitionIn();
+        UITransition.inst.DoorTransitionIn();
         PlayerManager.inst.playerState = PlayerManager.PLAYERSTATE.ENTERDOOR;
-        StartCoroutine(ExitDoor());
     }
 
-    IEnumerator ExitDoor()
+    public void ExitDoor()
     {
-        yield return new WaitForSeconds(1.0f);
-
-        UITransition.inst.PlayOverlayTransitionOut();
         PlayerManager.inst.playerState = PlayerManager.PLAYERSTATE.NONE;
         enteringDoor.PlayerEnterDoor(this.transform);
     }

@@ -16,6 +16,8 @@ public class ItemManager : MonoBehaviour
     [SerializeField] Item lightEffectPrefab;
     [SerializeField] Item outlineEffectPrefab;
     [SerializeField] Item buttonEffectPrefab;
+    
+    
 
     [SerializeField] List<ItemScriptableObject> itemData = new List<ItemScriptableObject>();
 
