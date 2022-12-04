@@ -19,6 +19,11 @@ public class DoorEncryption : MonoBehaviour
     [SerializeField] Transform startPostion;
     [SerializeField] Transform finishPostion;
 
+    [Header("Blood Line")]
+    [SerializeField] GameObject leftBlood;
+    [SerializeField] GameObject upperBlood;
+    [SerializeField] GameObject rightBlood;
+
     [Header("Status")]
     [SerializeField] string baseEncryptionCode;
     string encryptionCode;
@@ -35,7 +40,6 @@ public class DoorEncryption : MonoBehaviour
     [Header("Option")]
     [SerializeField] DoorSystem leftDoor;
     [SerializeField] DoorSystem upDoor;
-    //[SerializeField] DoorSystem downDoor;
     [SerializeField] DoorSystem rightDoor;
     
     void Start()
@@ -87,6 +91,7 @@ public class DoorEncryption : MonoBehaviour
                 encryptionCode = baseEncryptionCode;
                 labyrinthBG.sprite = labyrinthSprite[0];
                 isAlreadyInvertCode = false;
+                ToggleBloodLine();
                 break;
             case PuzzleState.FINSIH :
                 RemoveAllListeners();
@@ -121,6 +126,9 @@ public class DoorEncryption : MonoBehaviour
         {
             correctCount++;
             currentCodeIndex++;
+
+            if(currentCodeIndex < baseEncryptionCode.Length)
+                ToggleBloodLine();
         }
         else
         {
@@ -239,17 +247,17 @@ public class DoorEncryption : MonoBehaviour
             string newCode = "";
             revertIndex = currentCodeIndex;
 
-            if(encryptionCode[currentCodeIndex] == 'U')
-                revertIndex += 1;
+            // if(encryptionCode[currentCodeIndex] == 'U')
+            //     revertIndex += 1;
 
             switch(encryptionCode[revertIndex])
             {
                 case 'L' :
                     invertChar = 'R';
                     break;
-                // case 'U' :
-                //     invertChar = 'U';
-                    // break;
+                case 'U' :
+                    invertChar = 'U';
+                    break;
                 //case 'D' :
                 //    invertChar = 'U';
                 //    break;
@@ -271,6 +279,30 @@ public class DoorEncryption : MonoBehaviour
             encryptionCode = newCode;
             
             labyrinthBG.sprite = labyrinthSprite[3];
+        }
+    }
+
+    void ToggleBloodLine()
+    {
+        char cuurentCode = baseEncryptionCode[currentCodeIndex];
+        switch(cuurentCode)
+        {
+            case 'L':
+                leftBlood.SetActive(true);
+                upperBlood.SetActive(false);
+                rightBlood.SetActive(false);
+                break;
+            case 'U':
+                leftBlood.SetActive(false);
+                upperBlood.SetActive(true);
+                rightBlood.SetActive(false);
+                break;
+            case 'R':
+                leftBlood.SetActive(false);
+                upperBlood.SetActive(false);
+                rightBlood.SetActive(true);
+                break;
+            
         }
     }
 }

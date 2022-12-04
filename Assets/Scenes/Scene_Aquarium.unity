@@ -39702,9 +39702,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 4695122923259641163}
     - target: {fileID: 3402447144988968731, guid: 3d5b4812a40a2494d97f6e0c96153612, type: 3}
+      propertyPath: leftBlood
+      value: 
+      objectReference: {fileID: 4695122923736934338}
+    - target: {fileID: 3402447144988968731, guid: 3d5b4812a40a2494d97f6e0c96153612, type: 3}
       propertyPath: rightDoor
       value: 
       objectReference: {fileID: 4695122922497436147}
+    - target: {fileID: 3402447144988968731, guid: 3d5b4812a40a2494d97f6e0c96153612, type: 3}
+      propertyPath: rightBlood
+      value: 
+      objectReference: {fileID: 4695122922913171425}
+    - target: {fileID: 3402447144988968731, guid: 3d5b4812a40a2494d97f6e0c96153612, type: 3}
+      propertyPath: upperBlood
+      value: 
+      objectReference: {fileID: 4695122923818595302}
     - target: {fileID: 3402447144988968731, guid: 3d5b4812a40a2494d97f6e0c96153612, type: 3}
       propertyPath: doorTrigger
       value: 

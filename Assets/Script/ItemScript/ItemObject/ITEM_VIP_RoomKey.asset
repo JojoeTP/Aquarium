@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 46ae0de02bf1e0945810f84cfdbfb621, type: 3}
-  m_Name: IceroomKey
+  m_Name: ITEM_VIP_RoomKey
   m_EditorClassIdentifier: 
   itemData:
-    ItemName: Iceroom Key
-    ItemDescription: Key to enter Ice room
-    ItemSprite: {fileID: 21300000, guid: eb08dc160c589bb48a52c821c32dffe2, type: 3}
-    ItemPosition: {x: 41.058, y: -19.41, z: 0}
-    ItemScale: {x: 0.008451771, y: 0.008451771, z: 0.008451771}
-    ItemType: 1
-    dialogueItemId: Item1_01
+    ItemName: VIR Room Key
+    ItemDescription: Key to open VIP room in Cafeteria
+    ItemSprite: {fileID: 21300000, guid: 41a048ab13b9e5a4c919b3fcaea440e8, type: 3}
+    ItemPosition: {x: 0, y: 0, z: 0}
+    ItemScale: {x: 0, y: 0, z: 0}
+    ItemType: 0
+    dialogueItemId: 
   pageNumber: 0
