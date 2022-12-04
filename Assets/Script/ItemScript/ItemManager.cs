@@ -151,21 +151,24 @@ public class ItemManager : MonoBehaviour
             case ITEMTYPE.ITEM2:
                 item.triggerEvents.AddListener( () => 
                     {
-
+                        DialogueManager.inst.currentDialogue = item.item.itemData.dialogueItemId;
+                        DialogueManager.inst.StartDialogue();
                     }
                 );
                 break;
             case ITEMTYPE.ITEM3:
                 item.triggerEvents.AddListener( () => 
                     {
-
+                        DialogueManager.inst.currentDialogue = item.item.itemData.dialogueItemId;
+                        DialogueManager.inst.StartDialogue();
                     }
                 );
                 break;
             case ITEMTYPE.ITEM4:
                 item.triggerEvents.AddListener( () => 
                     {
-
+                        DialogueManager.inst.currentDialogue = item.item.itemData.dialogueItemId;
+                        DialogueManager.inst.StartDialogue();
                     }
                 );
                 break;
@@ -173,6 +176,8 @@ public class ItemManager : MonoBehaviour
                 item.triggerEvents.AddListener( () => 
                     {
                         ActionEventManager.inst.OnPickUpLabyrinthCoin();
+                        DialogueManager.inst.currentDialogue = item.item.itemData.dialogueItemId;
+                        DialogueManager.inst.StartDialogue();
                     }
                 );
                 break;
