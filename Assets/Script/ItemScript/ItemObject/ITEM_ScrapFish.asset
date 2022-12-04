@@ -10,13 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 46ae0de02bf1e0945810f84cfdbfb621, type: 3}
-  m_Name: Coin_Cafeteria
+  m_Name: ITEM_ScrapFish
   m_EditorClassIdentifier: 
   itemData:
-    ItemName: Mystery Coin_Cafeteria
-    ItemDescription: A coin of mystery
-    ItemSprite: {fileID: 21300000, guid: 3dd900bb057393f48b8b47fb476f35c0, type: 3}
-    ItemPosition: {x: 0.023, y: 40.246, z: 0}
-    ItemScale: {x: 0.022332892, y: 0.022332892, z: 0.022332892}
-    ItemType: 4
+    ItemName: ScrapFish
+    ItemDescription: Maybe can use to distract something
+    ItemSprite: {fileID: -2556452351648520075, guid: 0aa41ae742e1b9b40bf647cb3db0aac2, type: 3}
+    ItemPosition: {x: -263.62, y: -0.05, z: 0}
+    ItemScale: {x: 1, y: 1, z: 1}
+    ItemType: 2
+    dialogueItemId: 
   pageNumber: 0

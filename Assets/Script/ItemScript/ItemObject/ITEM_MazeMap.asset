@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 46ae0de02bf1e0945810f84cfdbfb621, type: 3}
-  m_Name: Coin_Labyrinth
+  m_Name: ITEM_MazeMap
   m_EditorClassIdentifier: 
   itemData:
-    ItemName: Mystery Coin_Labyrinth
-    ItemDescription: A coin of mystery
-    ItemSprite: {fileID: 21300000, guid: 9c69af991f7a59041a7ce2b88ea0a491, type: 3}
-    ItemPosition: {x: 18.74, y: -44.65, z: 0}
-    ItemScale: {x: 0.022332892, y: 0.022332892, z: 0.022332892}
-    ItemType: 16
+    ItemName: Map
+    ItemDescription: Map
+    ItemSprite: {fileID: 21300000, guid: 944d6e147004c2240a47611717658c54, type: 3}
+    ItemPosition: {x: -85.11, y: -46.56, z: 0}
+    ItemScale: {x: 0.04266, y: 0.04266, z: 0.04266}
+    ItemType: 8
   pageNumber: 0
