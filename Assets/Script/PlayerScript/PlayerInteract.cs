@@ -132,6 +132,7 @@ public class PlayerInteract : MonoBehaviour
     {
         PlayerManager.inst.playerState = PlayerManager.PLAYERSTATE.NONE;
         enteringDoor.PlayerEnterDoor(this.transform);
+        enteringDoor.OnDoorEvent();
     }
 
     void ToggleHiding(HidingSpot hidingSpot)

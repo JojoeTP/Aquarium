@@ -31,4 +31,9 @@ public class ActionEventManager : MonoBehaviour
     {
         print("CutSceneDoor");
     }
+
+    public void CutSceneHidingSpot()
+    {
+        print("CutSceneHidingSpot");
+    }
 }
