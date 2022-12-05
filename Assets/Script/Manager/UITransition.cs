@@ -6,20 +6,15 @@ public class UITransition : MonoBehaviour
 {
     public static UITransition inst;
     
-    [SerializeField] Animator overlayTransition;
+    [SerializeField] DoorTransitionScript doorTransition;
 
     private void Awake() 
     {
         inst = this;    
     }
 
-    public void PlayOverlayTransitionIn()
+    public void DoorTransitionIn()
     {
-        overlayTransition.SetTrigger("TransitionIn");
-    }
-    
-    public void PlayOverlayTransitionOut()
-    {
-        overlayTransition.SetTrigger("TransitionOut");
+        doorTransition.DoorTransitionIn();
     }
 }

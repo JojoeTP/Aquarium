@@ -34,6 +34,7 @@ public class RecordTimeManager : MonoBehaviour
 
     public void SavePickUpItemTimeData(string key,ItemTimeData itemData)
     {
+        pickUpItemTime.participateID = ItemManager.Inst.ParticipateId;
         pickUpItemTime.gettingItemTime.Add(key,itemData);
 
 #if UNITY_EDITOR
@@ -57,6 +58,7 @@ public class RecordTimeManager : MonoBehaviour
 
 public class PickUpItemTime
 {
+    public int participateID;
     public Dictionary<string,ItemTimeData> gettingItemTime = new Dictionary<string, ItemTimeData>();
 
     public void SaveJSON(string fileName,bool toStreamingAssets = false)

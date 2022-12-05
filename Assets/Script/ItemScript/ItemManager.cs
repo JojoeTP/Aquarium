@@ -5,6 +5,7 @@ using UnityEngine;
 public class ItemManager : MonoBehaviour
 {
     public static ItemManager Inst;
+    [SerializeField] bool testScene = false;
     [SerializeField] bool isPermutation = false;
     [SerializeField] int participateID;
     ItemEffectInfo itemEffectData;
@@ -16,6 +17,8 @@ public class ItemManager : MonoBehaviour
     [SerializeField] Item lightEffectPrefab;
     [SerializeField] Item outlineEffectPrefab;
     [SerializeField] Item buttonEffectPrefab;
+    
+    
 
     [SerializeField] List<ItemScriptableObject> itemData = new List<ItemScriptableObject>();
 
@@ -29,7 +32,8 @@ public class ItemManager : MonoBehaviour
 
     void Start()
     {
-        
+        if(testScene)
+            SetUpItemPermutation();
     }
 
     // void SetUpItem()

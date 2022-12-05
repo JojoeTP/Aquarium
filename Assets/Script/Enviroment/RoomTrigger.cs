@@ -5,11 +5,15 @@ using UnityEngine;
 [RequireComponent(typeof(Collider2D))]
 public class RoomTrigger : MonoBehaviour
 {
+    bool isPlayerEnter = false;
     private void OnTriggerEnter2D(Collider2D other) 
     {
-        print(1);
+        if(isPlayerEnter)
+            return;
+            
         if(other.CompareTag("Player"))
         {
+            isPlayerEnter = true;
             RecordTimeManager.Inst.getInRoomTime = Time.time;
         }
     }

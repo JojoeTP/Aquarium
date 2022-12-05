@@ -101,7 +101,7 @@ public class PlayerInteract : MonoBehaviour
     {
         PlayerManager.inst.playerInventory.itemList.Add(item.item);
         ItemTimeData itemData = new ItemTimeData();
-        itemData.effectName = ItemManager.Inst.ItemEffectData.ItemEffectSettingList.Find(n => n.iTEMTYPE == item.item.itemData.ItemType).effectTYPE.ToString();
+        itemData.effectName = ItemManager.Inst.ItemEffectData.ItemEffectSettingList.Find(n => n.iTEMTYPE.HasFlag(item.item.itemData.ItemType)).effectTYPE.ToString();
         itemData.time = item.GetPickUpTime();
         RecordTimeManager.Inst.SavePickUpItemTimeData(item.item.itemData.ItemName,itemData);
         item.OnPickUpEvent();
@@ -124,16 +124,12 @@ public class PlayerInteract : MonoBehaviour
         if(PlayerManager.inst.playerState != PlayerManager.PLAYERSTATE.NONE)
             return;
 
-        UITransition.inst.PlayOverlayTransitionIn();
+        UITransition.inst.DoorTransitionIn();
         PlayerManager.inst.playerState = PlayerManager.PLAYERSTATE.ENTERDOOR;
-        StartCoroutine(ExitDoor());
     }
 
-    IEnumerator ExitDoor()
+    public void ExitDoor()
     {
-        yield return new WaitForSeconds(1.0f);
-
-        UITransition.inst.PlayOverlayTransitionOut();
         PlayerManager.inst.playerState = PlayerManager.PLAYERSTATE.NONE;
         enteringDoor.PlayerEnterDoor(this.transform);
     }

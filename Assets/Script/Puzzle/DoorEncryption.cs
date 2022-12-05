@@ -35,7 +35,7 @@ public class DoorEncryption : MonoBehaviour
     [Header("InvertCodeEvent")]
     [SerializeField] SpriteRenderer labyrinthBG;
     [SerializeField] Sprite[] labyrinthSprite;
-    bool isAlreadyInvertCode; 
+    // bool isAlreadyInvertCode; 
 
     [Header("Option")]
     [SerializeField] DoorSystem leftDoor;
@@ -90,7 +90,7 @@ public class DoorEncryption : MonoBehaviour
                 failCount = 0;
                 encryptionCode = baseEncryptionCode;
                 labyrinthBG.sprite = labyrinthSprite[0];
-                isAlreadyInvertCode = false;
+                // isAlreadyInvertCode = false;
                 ToggleBloodLine();
                 break;
             case PuzzleState.FINSIH :
@@ -183,8 +183,8 @@ public class DoorEncryption : MonoBehaviour
         if(currentCodeIndex > revertIndex)
             labyrinthBG.sprite = labyrinthSprite[failCount];
 
-        if(!isAlreadyInvertCode)
-            RandomInvertCode();
+        // if(!isAlreadyInvertCode)
+        RandomInvertCode();
             
     }
 
@@ -239,9 +239,9 @@ public class DoorEncryption : MonoBehaviour
 
     void RandomInvertCode()
     {
-        if(Random.Range(0,100) >= 50)
+        if(Random.Range(0,100) > 50)
         {
-            isAlreadyInvertCode = true;
+            // isAlreadyInvertCode = true;
 
             char? invertChar = null;
             string newCode = "";

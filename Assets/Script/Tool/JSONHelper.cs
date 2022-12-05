@@ -67,37 +67,8 @@ public class JSONHelper
 	private static string LoadTextAppBundle(string fileName) 
 	{
 		string filePath;
-		if (Application.platform == RuntimePlatform.IPhonePlayer) 
-		{
-			filePath = Application.dataPath + "/Raw/" + fileName;
-			if (File.Exists(filePath)) 
-			{
-				StreamReader r = File.OpenText(filePath);
-				if (r != null) 
-				{
-					string data = r.ReadToEnd();
-					r.Close();
-					return data;
-				}
-			}
-		}
-		else  if(Application.platform == RuntimePlatform.Android)
-		{
-			filePath = "jar:file://" + Application.dataPath + "!/assets/" + fileName;
-			WWW loadFile = new WWW(filePath);
-
-			while(!loadFile.isDone) 
-			{
-				//count ++;
-				////Logger.LogWarning("XML:LoadAppBundleXML() filePath:"+filePath+ " While(!IsDone)");
-			}
-			//yield return new WaitForSeconds (0.5f);
-			//Logger.LogWarning("XML:LoadAppBundleXML() filePath:"+filePath+ " DONE! Data:"+loadFile.text);
-			var resultData = loadFile.text;
-			GC.Collect();
-			return resultData;
-		}
-        else if (Application.platform == RuntimePlatform.WindowsPlayer || Application.platform == RuntimePlatform.WSAPlayerX86 || Application.platform == RuntimePlatform.OSXPlayer)
+		
+        if (Application.platform == RuntimePlatform.WindowsPlayer || Application.platform == RuntimePlatform.WSAPlayerX86 || Application.platform == RuntimePlatform.OSXPlayer)
         {
             filePath = Application.streamingAssetsPath + "/" + fileName;
             if (File.Exists(filePath))
