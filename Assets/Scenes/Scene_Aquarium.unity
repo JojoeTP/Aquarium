@@ -25190,7 +25190,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96cd48e12b93e2644b317eb0a2a62a23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startWithDialogueId: 'Ch1_D01_01 '
+  startWithDialogueId: Ch1_D01_01
   triggerEvents:
     m_PersistentCalls:
       m_Calls:

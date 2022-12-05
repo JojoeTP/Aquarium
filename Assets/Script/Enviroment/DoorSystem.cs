@@ -14,6 +14,7 @@ public class DoorSystem : MonoBehaviour
 
     public bool isPlayerUseItBefore;
     public bool canEnemyEnter;
+    public UnityEvent triggerEvents;
 
     //Call back
     [HideInInspector] public UnityEvent triggerEvent; //Create new event function in actionEventManager script
