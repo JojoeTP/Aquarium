@@ -25,6 +25,8 @@ public class MainMenuController : AbstractGameModeController
     [Header("Participate ID")]
     [SerializeField] TMP_InputField inputParticipateID;
 
+    Animator animator;
+
     public override string ControllerName 
     {
         get
@@ -35,6 +37,7 @@ public class MainMenuController : AbstractGameModeController
 
     private void Start() 
     {
+        animator = GetComponent<Animator>();
         ChangeState(MenuState.MainMenu);    
     }
 
@@ -45,19 +48,10 @@ public class MainMenuController : AbstractGameModeController
         switch(currentState)
         {
             case MenuState.MainMenu :
-                MainMenuPanel.enabled = true;
-                StartGamePanel.enabled = false;
-                SettingPanel.enabled = false;
                 break;
             case MenuState.StartGame :
-                MainMenuPanel.enabled = false;
-                StartGamePanel.enabled = true;
-                SettingPanel.enabled = false;
                 break;
             case MenuState.Setting :
-                MainMenuPanel.enabled = false;
-                StartGamePanel.enabled = false;
-                SettingPanel.enabled = true;
                 break;
         }
     }
@@ -70,6 +64,7 @@ public class MainMenuController : AbstractGameModeController
 
     public void OnClickNewGame()
     {
+        animator.SetTrigger("OpenStartGame");
         ChangeState(MenuState.StartGame);
     }
 
@@ -81,6 +76,7 @@ public class MainMenuController : AbstractGameModeController
 
     public void OnClickSetting()
     {
+        animator.SetTrigger("OpenSetting");
         ChangeState(MenuState.Setting);
     }
 
@@ -95,6 +91,7 @@ public class MainMenuController : AbstractGameModeController
 
     public void OnBack()
     {
+        animator.SetTrigger("Close");
         ChangeState(MenuState.MainMenu);
     }
 

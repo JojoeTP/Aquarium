@@ -68,6 +68,7 @@ public class DialogueManager : MonoBehaviour
 
     private void Start()
     {
+        dialoguePanel.SetActive(false);
         AddListenerToButton();
         LoadDialogueData();
     }
