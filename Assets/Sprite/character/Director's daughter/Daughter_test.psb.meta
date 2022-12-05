@@ -91,7 +91,7 @@ ScriptedImporter:
     uvTransform: {x: 0, y: 0}
   mosaicSpriteImportData: []
   rigSpriteImportData:
-  - name: HAIIR
+  - name: HAIR
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -101,8 +101,8 @@ ScriptedImporter:
       x: 6084
       y: 4
       width: 1576
-      height: 1712
-    spriteID: 605e1cd5b9ef93c4eb1d92abf963879a
+      height: 2046
+    spriteID: b80606997decac74d905119752a3f147
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -111,7 +111,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 4280, y: -5268}
+    uvTransform: {x: 4280, y: -4864}
   - name: EYE
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -141,7 +141,7 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 2752
-      y: 3228
+      y: 3184
       width: 1252
       height: 1524
     spriteID: 9bbd893ef2a107c47aa38ad978d05359
@@ -153,7 +153,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 776, y: -2132}
+    uvTransform: {x: 776, y: -2176}
   - name: SHIRT
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -195,7 +195,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: -420, y: -388}
+    uvTransform: {x: -420, y: -432}
   - name: HAIRBACK
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -204,7 +204,7 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 4
-      y: 3228
+      y: 3184
       width: 2740
       height: 3712
     spriteID: fa05687752c5c3e41878ec4203a9bbe4
@@ -216,7 +216,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: -1208, y: 448}
+    uvTransform: {x: -1208, y: 404}
   characterData:
     bones: []
     parts: []
@@ -280,11 +280,11 @@ ScriptedImporter:
   resliceFromLayer: 0
   mosaicPSDLayers: []
   rigPSDLayers:
-  - name: HAIIR
-    spriteName: HAIIR
+  - name: HAIR
+    spriteName: HAIR
     isGroup: 0
     parentIndex: -1
-    spriteID: 605e1cd5b9ef93c4eb1d92abf963879a
+    spriteID: b80606997decac74d905119752a3f147
     layerID: 0
     mosaicPosition: {x: 6084, y: 4}
     flatten: 0
@@ -306,7 +306,7 @@ ScriptedImporter:
     parentIndex: -1
     spriteID: 9bbd893ef2a107c47aa38ad978d05359
     layerID: 0
-    mosaicPosition: {x: 2752, y: 3228}
+    mosaicPosition: {x: 2752, y: 3184}
     flatten: 0
     isImported: 1
     isVisible: 1
@@ -336,7 +336,7 @@ ScriptedImporter:
     parentIndex: -1
     spriteID: fa05687752c5c3e41878ec4203a9bbe4
     layerID: 0
-    mosaicPosition: {x: 4, y: 3228}
+    mosaicPosition: {x: 4, y: 3184}
     flatten: 0
     isImported: 1
     isVisible: 1
