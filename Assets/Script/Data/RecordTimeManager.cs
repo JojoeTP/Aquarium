@@ -32,9 +32,10 @@ public class RecordTimeManager : MonoBehaviour
 #endif
     }
 
-    public void SavePickUpItemTimeData(string key,float time)
+    public void SavePickUpItemTimeData(string key,ItemTimeData itemData)
     {
-        pickUpItemTime.gettingItemTime.Add(key,time.ToString("0.00"));
+        pickUpItemTime.participateID = ItemManager.Inst.ParticipateId;
+        pickUpItemTime.gettingItemTime.Add(key,itemData);
 
 #if UNITY_EDITOR
         pickUpItemTime.SaveJSON("PickUpItemTimeData/PickUpItemTime.json",false);
@@ -57,7 +58,8 @@ public class RecordTimeManager : MonoBehaviour
 
 public class PickUpItemTime
 {
-    public Dictionary<string,string> gettingItemTime = new Dictionary<string, string>();
+    public int participateID;
+    public Dictionary<string,ItemTimeData> gettingItemTime = new Dictionary<string, ItemTimeData>();
 
     public void SaveJSON(string fileName,bool toStreamingAssets = false)
     {
@@ -75,4 +77,11 @@ public class PickUpItemTime
         }
         return pickUpItemTimeData;
     }
+}
+
+public struct ItemTimeData
+{
+    public string effectName;
+    public float time;
+
 }

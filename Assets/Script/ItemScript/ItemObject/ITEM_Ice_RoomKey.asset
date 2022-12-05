@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46ae0de02bf1e0945810f84cfdbfb621, type: 3}
+  m_Name: ITEM_Ice_RoomKey
+  m_EditorClassIdentifier: 
+  itemData:
+    ItemName: Iceroom Key
+    ItemDescription: Key to enter Ice room
+    ItemSprite: {fileID: 21300000, guid: eb08dc160c589bb48a52c821c32dffe2, type: 3}
+    ItemPosition: {x: 41.058, y: -19.41, z: 0}
+    ItemScale: {x: 0.008451771, y: 0.008451771, z: 0.008451771}
+    ItemType: 1
+    dialogueItemId: Item1_01
+  pageNumber: 0

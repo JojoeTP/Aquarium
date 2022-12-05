@@ -5,9 +5,11 @@ using UnityEngine;
 public class ItemManager : MonoBehaviour
 {
     public static ItemManager Inst;
+    [SerializeField] bool testScene = false;
     [SerializeField] bool isPermutation = false;
     [SerializeField] int participateID;
     ItemEffectInfo itemEffectData;
+    public ItemEffectInfo ItemEffectData {get {return itemEffectData;}}
 
     [Header("ItemEffect")]
     [SerializeField] Item winkEffectPrefab;
@@ -15,6 +17,8 @@ public class ItemManager : MonoBehaviour
     [SerializeField] Item lightEffectPrefab;
     [SerializeField] Item outlineEffectPrefab;
     [SerializeField] Item buttonEffectPrefab;
+    
+    
 
     [SerializeField] List<ItemScriptableObject> itemData = new List<ItemScriptableObject>();
 
@@ -28,7 +32,8 @@ public class ItemManager : MonoBehaviour
 
     void Start()
     {
-        
+        if(testScene)
+            SetUpItemPermutation();
     }
 
     // void SetUpItem()
@@ -96,7 +101,7 @@ public class ItemManager : MonoBehaviour
                         }
                     }
                     break;
-                case EFFECTTYPE.OUTLINE :
+                case EFFECTTYPE.FIREFLY :
                     foreach(var m in itemData)
                     {
                         if(n.iTEMTYPE.HasFlag(m.itemData.ItemType))
@@ -151,21 +156,24 @@ public class ItemManager : MonoBehaviour
             case ITEMTYPE.ITEM2:
                 item.triggerEvents.AddListener( () => 
                     {
-
+                        DialogueManager.inst.currentDialogue = item.item.itemData.dialogueItemId;
+                        DialogueManager.inst.StartDialogue();
                     }
                 );
                 break;
             case ITEMTYPE.ITEM3:
                 item.triggerEvents.AddListener( () => 
                     {
-
+                        DialogueManager.inst.currentDialogue = item.item.itemData.dialogueItemId;
+                        DialogueManager.inst.StartDialogue();
                     }
                 );
                 break;
             case ITEMTYPE.ITEM4:
                 item.triggerEvents.AddListener( () => 
                     {
-
+                        DialogueManager.inst.currentDialogue = item.item.itemData.dialogueItemId;
+                        DialogueManager.inst.StartDialogue();
                     }
                 );
                 break;
@@ -173,6 +181,8 @@ public class ItemManager : MonoBehaviour
                 item.triggerEvents.AddListener( () => 
                     {
                         ActionEventManager.inst.OnPickUpLabyrinthCoin();
+                        DialogueManager.inst.currentDialogue = item.item.itemData.dialogueItemId;
+                        DialogueManager.inst.StartDialogue();
                     }
                 );
                 break;

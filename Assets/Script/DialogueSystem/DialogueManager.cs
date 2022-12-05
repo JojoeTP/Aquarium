@@ -31,7 +31,7 @@ public class DialogueInfo
 
 public class DialogueManager : MonoBehaviour
 {
-    [SerializeField] string dialoguePath;
+    [SerializeField] string[] dialoguePaths;
     public Dictionary<string, DialogueInfo> openWith = new Dictionary<string, DialogueInfo>();
 
     public static DialogueManager inst;
@@ -71,34 +71,37 @@ public class DialogueManager : MonoBehaviour
         AddListenerToButton();
         LoadDialogueData();
     }
-
     void LoadDialogueData()
     {
-        StreamReader stringReader = new StreamReader(Application.streamingAssetsPath + "/DialogueData/" + dialoguePath + ".csv");
-        bool endOfFile = false;
-        while (!endOfFile)
+        for (int i = 0; i < dialoguePaths.Length; i++)
         {
-            string data_string = stringReader.ReadLine();
+            StreamReader stringReader = new StreamReader(Application.streamingAssetsPath + "/DialogueData/" + dialoguePaths[i] + ".csv");
 
-            if (data_string == null)
+            bool endOfFile = false;
+            while (!endOfFile)
             {
-                endOfFile = true;
-                break;
-            }
+                string data_string = stringReader.ReadLine();
 
-            var data_values = data_string.Split(',');
+                if (data_string == null)
+                {
+                    endOfFile = true;
+                    break;
+                }
+
+                var data_values = data_string.Split(',');
 
 
-            if (data_values[0] == "Id" || data_values[0] == "")
-            {
+                if (data_values[0] == "Id" || data_values[0] == "")
+                {
 
-            }
-            else
-            {
-                //ID,character,charaterImage,dialogueText,choice1,choice2,choice1Text,choice2Text
-                DialogueInfo newDialogue = new DialogueInfo(data_values[0], data_values[1], data_values[2], data_values[3], data_values[4], data_values[5], data_values[6], data_values[7]);
-                //Debug.Log(newDialogue.character);
-                openWith.Add(data_values[0], newDialogue);
+                }
+                else
+                {
+                    //ID,character,charaterImage,dialogueText,choice1,choice2,choice1Text,choice2Text
+                    DialogueInfo newDialogue = new DialogueInfo(data_values[0], data_values[1], data_values[2], data_values[3], data_values[4], data_values[5], data_values[6], data_values[7]);
+                    //Debug.Log(newDialogue.character);
+                    openWith.Add(data_values[0], newDialogue);
+                }
             }
         }
     }
@@ -139,13 +142,32 @@ public class DialogueManager : MonoBehaviour
 
         if (openWith[dialogueId].charaterImage == "None")
         {
-            imageCharacter1.GetComponent<Image>().color = new Color(0, 0, 0, 0);
-            imageCharacter2.GetComponent<Image>().color = new Color(0, 0, 0, 0);
+            if(imageCharacter1.GetComponent<Image>().sprite != null)
+            {
+                imageCharacter1.GetComponent<Image>().color = new Color(0.5f, 0.5f, 0.5f, 1);
+            }
+            else
+            {
+                imageCharacter1.GetComponent<Image>().color = new Color(0, 0, 0, 0);
+            }
+
+            if (imageCharacter2.GetComponent<Image>().sprite != null)
+            {
+                imageCharacter2.GetComponent<Image>().color = new Color(0.5f, 0.5f, 0.5f, 1);
+            }
+            else
+            {
+                imageCharacter2.GetComponent<Image>().color = new Color(0, 0, 0, 0);
+            }
         }
     }
 
     public void StartDialogue()
     {
+        if (currentDialogue == null)
+        {
+            return;
+        }
         dialoguePanel.SetActive(true);
         CheckIfHaveChoice(currentDialogue);
 
@@ -252,9 +274,12 @@ public class DialogueManager : MonoBehaviour
         dialoguePanel.SetActive(false);
         ResetCharacterSprite();
 
-        currentNPC.triggerEvents.Invoke();
-        currentNPC = null;
-
+        if(currentNPC != null)
+        {
+            currentNPC.triggerEvents.Invoke();
+            currentNPC = null;
+        }
+        currentDialogue = null;
         PlayerManager.inst.playerState = PlayerManager.PLAYERSTATE.NONE;
         Debug.Log("End Conversation");
     }
@@ -263,6 +288,8 @@ public class DialogueManager : MonoBehaviour
     {
         character1 = null;
         character2 = null;
+        imageCharacter1.GetComponent<Image>().sprite = null;
+        imageCharacter1.GetComponent<Image>().sprite = null;
         imageCharacter1.GetComponent<Image>().color = new Color(1, 1, 1, 1);
         imageCharacter2.GetComponent<Image>().color = new Color(1, 1, 1, 1);
     }

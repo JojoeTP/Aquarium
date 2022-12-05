@@ -10,13 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 46ae0de02bf1e0945810f84cfdbfb621, type: 3}
-  m_Name: ScrapFish
+  m_Name: ITEM_MazeMap
   m_EditorClassIdentifier: 
   itemData:
-    ItemName: ScrapFish
-    ItemDescription: Maybe can use to distract something
-    ItemSprite: {fileID: -2556452351648520075, guid: 0aa41ae742e1b9b40bf647cb3db0aac2, type: 3}
-    ItemPosition: {x: -263.62, y: -0.05, z: 0}
-    ItemScale: {x: 1, y: 1, z: 1}
-    ItemType: 2
+    ItemName: Map
+    ItemDescription: Map
+    ItemSprite: {fileID: 21300000, guid: 944d6e147004c2240a47611717658c54, type: 3}
+    ItemPosition: {x: -85.11, y: -46.56, z: 0}
+    ItemScale: {x: 0.04266, y: 0.04266, z: 0.04266}
+    ItemType: 8
+    dialogueItemId: Item4_01
   pageNumber: 0
