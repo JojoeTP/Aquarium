@@ -4,7 +4,8 @@ using UnityEngine;
 using UnityEngine.Events;
 
 [System.Serializable]
-public struct NPCDialogueCondition{
+public class NPCDialogueCondition{
+    public bool isTalk = false;
     public ItemScriptableObject conditionItem;
     public string correctDialogueID;
     public UnityEvent triggerEvents;
@@ -12,9 +13,7 @@ public struct NPCDialogueCondition{
 public class TalkWithNPC : MonoBehaviour
 {
     public string startWithDialogueId;
-
     public UnityEvent triggerEvents;
-
     public List<NPCDialogueCondition> NPCList = new List<NPCDialogueCondition>();
     public void SetDialogueID()
     {
@@ -28,9 +27,17 @@ public class TalkWithNPC : MonoBehaviour
 
             if (CheckCondition(n))
             {
-                startWithDialogueId = n.correctDialogueID;
+                if (n.isTalk == false)
+                {
+                    ChangeDialogueId(n.correctDialogueID);
+                }
                 triggerEvents = n.triggerEvents;
+                n.isTalk = true;
                 return;
+            }
+            else
+            {
+                print("incorrect item");
             }
         }
     }
@@ -44,5 +51,8 @@ public class TalkWithNPC : MonoBehaviour
         return false;
     }
 
-
+    public void ChangeDialogueId(string changeDialogueId)
+    {
+        startWithDialogueId = changeDialogueId;
+    }
 }
