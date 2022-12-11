@@ -216,7 +216,7 @@ AnimationClip:
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 0.5
-        value: {x: 0, y: 0, z: 173.677}
+        value: {x: 0, y: 0, z: 180.546}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -1452,7 +1452,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.5
-        value: 173.677
+        value: 180.546
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -1652,7 +1652,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: Bone/Body1/Armback
+    path: Bone/Body1/Armfront/bone_9/bone_10/Lamp_1/bone_29
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -1662,7 +1662,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: Bone/Body1/Armback
+    path: Bone/Body1/Armfront/bone_9/bone_10/Lamp_1/bone_29
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -1672,7 +1672,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: Bone/Body1/Armback
+    path: Bone/Body1/Armfront/bone_9/bone_10/Lamp_1/bone_29
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -1772,7 +1772,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: Bone/Body1/Armfront/bone_9/bone_10/Lamp_1/bone_29
+    path: Bone/Body1/Armback
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -1782,7 +1782,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: Bone/Body1/Armfront/bone_9/bone_10/Lamp_1/bone_29
+    path: Bone/Body1/Armback
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -1792,7 +1792,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: Bone/Body1/Armfront/bone_9/bone_10/Lamp_1/bone_29
+    path: Bone/Body1/Armback
     classID: 4
     script: {fileID: 0}
   m_HasGenericRootTransform: 0

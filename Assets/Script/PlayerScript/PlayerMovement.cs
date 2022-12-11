@@ -51,11 +51,14 @@ public class PlayerMovement : MonoBehaviour
 
             playerSpeed = sprintSpeed;
             IsSprint = true;
+            PlayerManager.inst.playerAnimator.SetBool("Run", true);
+
         }
         else
         {
             playerSpeed = playerBaseSpeed;
             IsSprint = false;
+            PlayerManager.inst.playerAnimator.SetBool("Run", false);
         }
 
     }
