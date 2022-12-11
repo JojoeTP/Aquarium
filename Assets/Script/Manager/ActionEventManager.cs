@@ -26,4 +26,14 @@ public class ActionEventManager : MonoBehaviour
     {
         print("Test Dialogue Event");
     }
+
+    public void CutSceneDoor()
+    {
+        print("CutSceneDoor");
+    }
+
+    public void CutSceneHidingSpot()
+    {
+        print("CutSceneHidingSpot");
+    }
 }

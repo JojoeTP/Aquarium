@@ -30,7 +30,7 @@ public class PlayerInteract : MonoBehaviour
         {
             if(CanHiding(n.transform))
             {
-                ToggleHiding();
+                ToggleHiding(n.GetComponent<HidingSpot>());
             }
 
             if(CanEnterDoor(n.transform))
@@ -41,6 +41,7 @@ public class PlayerInteract : MonoBehaviour
 
             if(TalkWithNPC(n.transform))
             {
+                n.GetComponent<TalkWithNPC>().SetDialogueID();
                 StartDialogue(n.GetComponent<TalkWithNPC>());
             }
                 
@@ -132,15 +133,17 @@ public class PlayerInteract : MonoBehaviour
     {
         PlayerManager.inst.playerState = PlayerManager.PLAYERSTATE.NONE;
         enteringDoor.PlayerEnterDoor(this.transform);
+        enteringDoor.OnDoorEvent();
     }
 
-    void ToggleHiding()
+    void ToggleHiding(HidingSpot hidingSpot)
     {
         if(PlayerManager.inst.playerState == PlayerManager.PLAYERSTATE.NONE)
         {
             PlayerManager.inst.playerSprite.SetActive(false);
             GetComponent<Collider2D>().enabled = false;
             PlayerManager.inst.playerState = PlayerManager.PLAYERSTATE.HIDING;
+            hidingSpot.OnHidingEvent();
         }
         else if(PlayerManager.inst.playerState == PlayerManager.PLAYERSTATE.HIDING)
         {
