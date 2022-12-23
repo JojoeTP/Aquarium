@@ -7,6 +7,11 @@ public class PlayerLight : MonoBehaviour
     public GameObject playerLight;
     bool isLight = false;
 
+    void Start()
+    {
+        InputSystemManager.Inst.onLight += OnLight;
+    }
+
     public void OnLight(){
         if(!isLight)
         {

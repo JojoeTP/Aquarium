@@ -11,6 +11,11 @@ public class PlayerInteract : MonoBehaviour
 
     private DoorSystem enteringDoor;
 
+    void Start()
+    {
+        InputSystemManager.Inst.onInteract += OnInteract;    
+    }
+
     public void Interacting()
     {
         IsObjectOverlapPlayer();
@@ -100,11 +105,12 @@ public class PlayerInteract : MonoBehaviour
 
     void GetItem(Item item)
     {
-        PlayerManager.inst.playerInventory.itemList.Add(item.item);
+        // PlayerManager.inst.playerInventory.itemList.Add(item.item);
+        PlayerManager.inst.PlayerInventory.AddItem(item.itemObject);
         ItemTimeData itemData = new ItemTimeData();
-        itemData.effectName = ItemManager.Inst.ItemEffectData.ItemEffectSettingList.Find(n => n.iTEMTYPE.HasFlag(item.item.itemData.ItemType)).effectTYPE.ToString();
+        itemData.effectName = ItemManager.Inst.ItemEffectData.ItemEffectSettingList.Find(n => n.iTEMTYPE.HasFlag(item.itemObject.itemData.ItemType)).effectTYPE.ToString();
         itemData.time = item.GetPickUpTime();
-        RecordTimeManager.Inst.SavePickUpItemTimeData(item.item.itemData.ItemName,itemData);
+        RecordTimeManager.Inst.SavePickUpItemTimeData(item.itemObject.itemData.ItemName,itemData);
         item.OnPickUpEvent();
         item.gameObject.SetActive(false);
     }

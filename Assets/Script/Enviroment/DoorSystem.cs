@@ -56,10 +56,14 @@ public class DoorSystem : MonoBehaviour
         if(conditionItem == null)
             return true;
             
-        foreach (var item in PlayerManager.inst.playerInventory.itemList)
+        // foreach (var item in PlayerManager.inst.playerInventory.itemList)
+        // {
+        //     if(item.itemData == conditionItem.itemData)
+        //         return true;
+        // }
+        if(PlayerManager.inst.PlayerInventory.PlayerItemDictionary.ContainsValue(conditionItem.itemData))
         {
-            if(item.itemData == conditionItem.itemData)
-                return true;
+            return true;
         }
         return false;
     }

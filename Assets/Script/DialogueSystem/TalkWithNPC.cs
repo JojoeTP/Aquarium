@@ -43,11 +43,17 @@ public class TalkWithNPC : MonoBehaviour
     }
     bool CheckCondition(NPCDialogueCondition NPCData)
     {
-        foreach (var item in PlayerManager.inst.playerInventory.itemList)
+        // foreach (var item in PlayerManager.inst.playerInventory.itemList)
+        // {
+        //     if (item.itemData == NPCData.conditionItem.itemData)
+        //         return true;
+        // }
+
+        if(PlayerManager.inst.PlayerInventory.PlayerItemDictionary.ContainsValue(NPCData.conditionItem.itemData))
         {
-            if (item.itemData == NPCData.conditionItem.itemData)
-                return true;
+            return true;
         }
+
         return false;
     }
 

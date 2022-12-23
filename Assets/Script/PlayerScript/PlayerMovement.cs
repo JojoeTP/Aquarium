@@ -34,6 +34,10 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
+        InputSystemManager.Inst.onMove += OnMove;
+        InputSystemManager.Inst.onPressMove += OnPressMove;
+        InputSystemManager.Inst.onSprint += OnSprint;
+
         scale = transform.localScale;
 
         playerSpeed = playerBaseSpeed;
@@ -94,6 +98,7 @@ public class PlayerMovement : MonoBehaviour
     
     private void FixedUpdate() 
     {
+        Move();
         CheckStamina();
         StaminaRegeneration();
     }
@@ -104,7 +109,6 @@ public class PlayerMovement : MonoBehaviour
         if(!isMove)
             direction = Vector2.zero;
 
-        
         if(PlayerManager.inst.playerState != PlayerManager.PLAYERSTATE.NONE)
         {
             direction = Vector2.zero;
