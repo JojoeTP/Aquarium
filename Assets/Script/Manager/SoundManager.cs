@@ -79,4 +79,15 @@ public class SoundManager : MonoBehaviour
     {
 
     }
+
+    public List<ScoundData> scoundDatas = new List<ScoundData>();
+
+    Dictionary<string,AudioClip> soundDic = new Dictionary<string, AudioClip>();
+}
+
+[System.Serializable]
+public class ScoundData
+{
+    public string name;
+    public AudioClip audioClip;
 }

@@ -3425,6 +3425,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BGMSources: []
   SFXSources: []
+  scoundDatas:
+  - name: 
+    audioClip: {fileID: 0}
+  - name: 
+    audioClip: {fileID: 0}
+  - name: 
+    audioClip: {fileID: 0}
 --- !u!1 &161720219
 GameObject:
   m_ObjectHideFlags: 0
@@ -7656,7 +7663,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7774725, y: 1}
+    m_SensorSize: {x: 1.7773585, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
