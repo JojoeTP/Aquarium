@@ -5,38 +5,11 @@ using UnityEngine.InputSystem;
 
 public class PlayerInventory : MonoBehaviour
 {
-    public List<ItemScriptableObject> itemList {get {return ItemList;}}
-
-    List<ItemScriptableObject> ItemList = new List<ItemScriptableObject>();
-    [SerializeField] public InventoryPanel inventoryPanel;
-
-    // Start is called before the first frame update
-    void Start()
+    public Dictionary<string,ItemData> PlayerItemDictionary {get {return playerItemDictionary;}}
+    Dictionary<string,ItemData> playerItemDictionary = new Dictionary<string, ItemData>();
+    
+    public void AddItem(ItemScriptableObject item)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    void AddItem(ItemData item)
-    {
-        
-    }
-
-    public void OpenInventory()
-    {
-        if(inventoryPanel.gameObject.activeInHierarchy)
-            inventoryPanel.gameObject.SetActive(false);
-        else
-            inventoryPanel.gameObject.SetActive(true);
-    }
-
-    public void OnOpenInventory()
-    {
-        OpenInventory();
+        playerItemDictionary.Add(item.name,item.itemData);
     }
 }

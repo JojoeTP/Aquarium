@@ -54,8 +54,8 @@ public class DoorEncryption : MonoBehaviour
 
     void SettingStartPuzzle()
     {
-        doorTrigger.triggerEvent.RemoveAllListeners();
-        doorTrigger.triggerEvent.AddListener( () => {
+        doorTrigger.triggerConditionEvent.RemoveAllListeners();
+        doorTrigger.triggerConditionEvent.AddListener( () => {
             //setlocation before start puzzle
             doorTrigger.connectDoor = startPostion;
 
@@ -139,26 +139,26 @@ public class DoorEncryption : MonoBehaviour
 
     void SettingDoor()
     {
-        leftDoor.triggerEvent.RemoveAllListeners();
-        upDoor.triggerEvent.RemoveAllListeners();
-        rightDoor.triggerEvent.RemoveAllListeners();
+        leftDoor.triggerConditionEvent.RemoveAllListeners();
+        upDoor.triggerConditionEvent.RemoveAllListeners();
+        rightDoor.triggerConditionEvent.RemoveAllListeners();
 
-        leftDoor.triggerEvent.AddListener( () => {
+        leftDoor.triggerConditionEvent.AddListener( () => {
             EnterEncryptionDoor('L');
             OnSelectDoor(leftDoor);
         }); 
 
-        upDoor.triggerEvent.AddListener( () => {
+        upDoor.triggerConditionEvent.AddListener( () => {
             EnterEncryptionDoor('U');
             OnSelectDoor(upDoor);
         }); 
 
-        //downDoor.triggerEvent.AddListener( () => {
+        //downDoor.triggerConditionEvent.AddListener( () => {
         //    EnterEncryptionDoor('D');
         //    OnSelectDoor(downDoor);
         //}); 
 
-        rightDoor.triggerEvent.AddListener( () => {
+        rightDoor.triggerConditionEvent.AddListener( () => {
             EnterEncryptionDoor('R');
             OnSelectDoor(rightDoor);
         }); 
@@ -193,7 +193,7 @@ public class DoorEncryption : MonoBehaviour
         door.connectDoor = finishPostion;
         doorTrigger.connectDoor = finishPostion;
 
-        door.triggerEvent.AddListener( () => {
+        door.triggerConditionEvent.AddListener( () => {
             OnFinishEvent();
         }); 
 
@@ -229,12 +229,12 @@ public class DoorEncryption : MonoBehaviour
 
     void RemoveAllListeners()
     {
-        doorTrigger.triggerEvent.RemoveAllListeners();
+        doorTrigger.triggerConditionEvent.RemoveAllListeners();
 
-        leftDoor.triggerEvent.RemoveAllListeners();
-        upDoor.triggerEvent.RemoveAllListeners();
-        //downDoor.triggerEvent.RemoveAllListeners();
-        rightDoor.triggerEvent.RemoveAllListeners();
+        leftDoor.triggerConditionEvent.RemoveAllListeners();
+        upDoor.triggerConditionEvent.RemoveAllListeners();
+        //downDoor.triggerConditionEvent.RemoveAllListeners();
+        rightDoor.triggerConditionEvent.RemoveAllListeners();
     }
 
     void RandomInvertCode()

@@ -11,6 +11,11 @@ public class PlayerInteract : MonoBehaviour
 
     private DoorSystem enteringDoor;
 
+    void Start()
+    {
+        InputSystemManager.Inst.onInteract += OnInteract;    
+    }
+
     public void Interacting()
     {
         IsObjectOverlapPlayer();
@@ -30,7 +35,7 @@ public class PlayerInteract : MonoBehaviour
         {
             if(CanHiding(n.transform))
             {
-                ToggleHiding();
+                ToggleHiding(n.GetComponent<HidingSpot>());
             }
 
             if(CanEnterDoor(n.transform))
@@ -41,6 +46,7 @@ public class PlayerInteract : MonoBehaviour
 
             if(TalkWithNPC(n.transform))
             {
+                n.GetComponent<TalkWithNPC>().SetDialogueID();
                 StartDialogue(n.GetComponent<TalkWithNPC>());
             }
                 
@@ -99,11 +105,12 @@ public class PlayerInteract : MonoBehaviour
 
     void GetItem(Item item)
     {
-        PlayerManager.inst.playerInventory.itemList.Add(item.item);
+        // PlayerManager.inst.playerInventory.itemList.Add(item.item);
+        PlayerManager.inst.PlayerInventory.AddItem(item.itemObject);
         ItemTimeData itemData = new ItemTimeData();
-        itemData.effectName = ItemManager.Inst.ItemEffectData.ItemEffectSettingList.Find(n => n.iTEMTYPE.HasFlag(item.item.itemData.ItemType)).effectTYPE.ToString();
+        itemData.effectName = ItemManager.Inst.ItemEffectData.ItemEffectSettingList.Find(n => n.iTEMTYPE.HasFlag(item.itemObject.itemData.ItemType)).effectTYPE.ToString();
         itemData.time = item.GetPickUpTime();
-        RecordTimeManager.Inst.SavePickUpItemTimeData(item.item.itemData.ItemName,itemData);
+        RecordTimeManager.Inst.SavePickUpItemTimeData(item.itemObject.itemData.ItemName,itemData);
         item.OnPickUpEvent();
         item.gameObject.SetActive(false);
     }
@@ -132,15 +139,17 @@ public class PlayerInteract : MonoBehaviour
     {
         PlayerManager.inst.playerState = PlayerManager.PLAYERSTATE.NONE;
         enteringDoor.PlayerEnterDoor(this.transform);
+        enteringDoor.OnDoorEvent();
     }
 
-    void ToggleHiding()
+    void ToggleHiding(HidingSpot hidingSpot)
     {
         if(PlayerManager.inst.playerState == PlayerManager.PLAYERSTATE.NONE)
         {
             PlayerManager.inst.playerSprite.SetActive(false);
             GetComponent<Collider2D>().enabled = false;
             PlayerManager.inst.playerState = PlayerManager.PLAYERSTATE.HIDING;
+            hidingSpot.OnHidingEvent();
         }
         else if(PlayerManager.inst.playerState == PlayerManager.PLAYERSTATE.HIDING)
         {

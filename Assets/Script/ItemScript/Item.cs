@@ -6,7 +6,7 @@ using UnityEngine.Events;
 
 public class Item : MonoBehaviour
 {
-    public ItemScriptableObject item;
+    public ItemScriptableObject itemObject;
     public ShowInteractKey showInteractKey;
     public Transform interactIconPrefab;
     public Transform effectPrefab;
@@ -20,15 +20,15 @@ public class Item : MonoBehaviour
     }
     public void SetItem()
     {
-        this.gameObject.name = item.itemData.ItemName;
-        this.transform.position = item.itemData.ItemPosition;
-        this.transform.localScale = item.itemData.ItemScale;
+        this.gameObject.name = itemObject.itemData.ItemName;
+        this.transform.position = itemObject.itemData.ItemPosition;
+        this.transform.localScale = itemObject.itemData.ItemScale;
         SetSprite();
     }
 
     public void SetSprite()
     {
-        GetComponent<SpriteRenderer>().sprite = item.itemData.ItemSprite; 
+        GetComponent<SpriteRenderer>().sprite = itemObject.itemData.ItemSprite; 
     }
 
     void GenerateInteractIcon()

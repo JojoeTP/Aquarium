@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 46ae0de02bf1e0945810f84cfdbfb621, type: 3}
-  m_Name: ScrapFish
+  m_Name: ITEM_ScrapFish
   m_EditorClassIdentifier: 
   itemData:
     ItemName: ScrapFish
@@ -20,4 +20,3 @@ MonoBehaviour:
     ItemScale: {x: 1, y: 1, z: 1}
     ItemType: 2
     dialogueItemId: Item2_01
-  pageNumber: 0

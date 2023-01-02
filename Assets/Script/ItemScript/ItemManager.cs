@@ -62,7 +62,7 @@ public class ItemManager : MonoBehaviour
                         if(n.iTEMTYPE.HasFlag(m.itemData.ItemType))
                         {
                             item = Instantiate(winkEffectPrefab);
-                            item.item = m;
+                            item.itemObject = m;
                             item.SetItem();
                             if (item != null)
                             {
@@ -77,7 +77,7 @@ public class ItemManager : MonoBehaviour
                         if(n.iTEMTYPE.HasFlag(m.itemData.ItemType))
                         {
                             item = Instantiate(invertColorEffectPrefab);
-                            item.item = m;
+                            item.itemObject = m;
                             item.SetItem();
                             if (item != null)
                             {
@@ -92,7 +92,7 @@ public class ItemManager : MonoBehaviour
                         if(n.iTEMTYPE.HasFlag(m.itemData.ItemType))
                         {
                             item = Instantiate(lightEffectPrefab);
-                            item.item = m;
+                            item.itemObject = m;
                             item.SetItem();
                             if (item != null)
                             {
@@ -107,7 +107,7 @@ public class ItemManager : MonoBehaviour
                         if(n.iTEMTYPE.HasFlag(m.itemData.ItemType))
                         {
                             item = Instantiate(outlineEffectPrefab);
-                            item.item = m;
+                            item.itemObject = m;
                             item.SetItem();
                             if (item != null)
                             {
@@ -122,7 +122,7 @@ public class ItemManager : MonoBehaviour
                         if(n.iTEMTYPE.HasFlag(m.itemData.ItemType))
                         {
                             item = Instantiate(buttonEffectPrefab);
-                            item.item = m;
+                            item.itemObject = m;
                             item.SetItem();
                             if (item != null)
                             {
@@ -143,12 +143,12 @@ public class ItemManager : MonoBehaviour
 
     void SetItemAction(Item item)
     {
-        switch (item.item.itemData.ItemType)
+        switch (item.itemObject.itemData.ItemType)
         {
             case ITEMTYPE.ITEM1:
                 item.triggerEvents.AddListener( () => 
                     {
-                        DialogueManager.inst.currentDialogue = item.item.itemData.dialogueItemId;
+                        DialogueManager.inst.currentDialogue = item.itemObject.itemData.dialogueItemId;
                         DialogueManager.inst.StartDialogue();
                     }
                 );
@@ -156,7 +156,7 @@ public class ItemManager : MonoBehaviour
             case ITEMTYPE.ITEM2:
                 item.triggerEvents.AddListener( () => 
                     {
-                        DialogueManager.inst.currentDialogue = item.item.itemData.dialogueItemId;
+                        DialogueManager.inst.currentDialogue = item.itemObject.itemData.dialogueItemId;
                         DialogueManager.inst.StartDialogue();
                     }
                 );
@@ -164,7 +164,7 @@ public class ItemManager : MonoBehaviour
             case ITEMTYPE.ITEM3:
                 item.triggerEvents.AddListener( () => 
                     {
-                        DialogueManager.inst.currentDialogue = item.item.itemData.dialogueItemId;
+                        DialogueManager.inst.currentDialogue = item.itemObject.itemData.dialogueItemId;
                         DialogueManager.inst.StartDialogue();
                     }
                 );
@@ -172,7 +172,7 @@ public class ItemManager : MonoBehaviour
             case ITEMTYPE.ITEM4:
                 item.triggerEvents.AddListener( () => 
                     {
-                        DialogueManager.inst.currentDialogue = item.item.itemData.dialogueItemId;
+                        DialogueManager.inst.currentDialogue = item.itemObject.itemData.dialogueItemId;
                         DialogueManager.inst.StartDialogue();
                     }
                 );
@@ -181,7 +181,7 @@ public class ItemManager : MonoBehaviour
                 item.triggerEvents.AddListener( () => 
                     {
                         ActionEventManager.inst.OnPickUpLabyrinthCoin();
-                        DialogueManager.inst.currentDialogue = item.item.itemData.dialogueItemId;
+                        DialogueManager.inst.currentDialogue = item.itemObject.itemData.dialogueItemId;
                         DialogueManager.inst.StartDialogue();
                     }
                 );
