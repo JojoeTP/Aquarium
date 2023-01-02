@@ -31,6 +31,7 @@ public class DialogueInfo
 
 public class DialogueManager : MonoBehaviour
 {
+    [SerializeField] Canvas dialogueCanvas;
     [SerializeField] string[] dialoguePaths;
     public Dictionary<string, DialogueInfo> openWith = new Dictionary<string, DialogueInfo>();
 
@@ -45,7 +46,6 @@ public class DialogueManager : MonoBehaviour
     Sprite character2;
     [SerializeField] GameObject imageCharacter1;
     [SerializeField]  GameObject imageCharacter2;
-    [SerializeField] GameObject dialoguePanel;
 
     [Header("Button")]
     [SerializeField] Button continueButton;
@@ -68,9 +68,14 @@ public class DialogueManager : MonoBehaviour
 
     private void Start()
     {
-        dialoguePanel.SetActive(false);
+        Initialize();
         AddListenerToButton();
         LoadDialogueData();
+    }
+
+    void Initialize()
+    {
+        dialogueCanvas.enabled = false;
     }
     void LoadDialogueData()
     {
@@ -169,7 +174,7 @@ public class DialogueManager : MonoBehaviour
         {
             return;
         }
-        dialoguePanel.SetActive(true);
+        dialogueCanvas.enabled = true;
         CheckIfHaveChoice(currentDialogue);
 
         CheckMainCharacterSpeak(currentDialogue);
@@ -272,7 +277,7 @@ public class DialogueManager : MonoBehaviour
     void EndDialogue()
     {
         isChoice = false;
-        dialoguePanel.SetActive(false);
+        dialogueCanvas.enabled = false;
         ResetCharacterSprite();
 
         if(currentNPC != null)

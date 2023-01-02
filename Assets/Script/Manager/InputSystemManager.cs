@@ -20,7 +20,8 @@ public class InputSystemManager : MonoBehaviour
     public UnityAction<bool> onPressMove;
     public UnityAction<InputValue> onInteract;
     public UnityAction<InputValue> onSprint;
-    public UnityAction onOpenInventory;
+    public UnityAction onToggleInventory;
+    public UnityAction onToggleSetting;
     public UnityAction<InputValue> onNavigate;
     public UnityAction onClose;
     public UnityAction onLight;
@@ -122,9 +123,14 @@ public class InputSystemManager : MonoBehaviour
         onSprint?.Invoke(value);
     }
 
-    void OnOpenInventory()
+    void OnToggleInventory()
     {
-        onOpenInventory?.Invoke();
+        onToggleInventory?.Invoke();
+    }
+
+    void OnToggleSetting()
+    {
+            onToggleSetting?.Invoke();
     }
 
     void OnLight()

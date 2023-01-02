@@ -4,16 +4,17 @@ using UnityEngine;
 
 public class SettingPanel : MonoBehaviour
 {
-    public static SettingPanel Inst;
+    public Canvas Canvas {get {return canvas;}}
+    Canvas canvas;
 
-    void Awake() 
+    void Awake()
     {
-        Inst = this;    
+        canvas = GetComponent<Canvas>();        
     }
-
+    
     void Start()
     {
-        
+
     }
 
     void Update()
