@@ -8,18 +8,26 @@ public class PlayerMovement : MonoBehaviour
 {
     Rigidbody2D rb;
 
-    [Header("PlayerSpeed")]
+    [Header("Player")]
     [SerializeField] float playerBaseSpeed;
-    float playerSpeed;
-
-    [Header("Sprint")]
-    [SerializeField] bool IsSprint = false;
-    [SerializeField] bool IsExhausted = false;
     [SerializeField] float sprintSpeed;
     [SerializeField] float basePlayerStamina;
-    float playerStamina;
     [SerializeField] float staminaCost;
     [SerializeField] float staminaRegeneration;
+
+    float playerSpeed;
+    float playerStamina;
+
+
+    [Header("Walk")]
+    bool isMove = false;
+    bool isRunIntoWall = false;
+
+    [Header("Sprint")]
+    bool IsSprint = false;
+    bool IsExhausted = false;
+    
+    
 
     public float PlayerStamina {get {return playerStamina;}}
     public float BasePlayerStamina {get {return basePlayerStamina;}}
@@ -46,6 +54,14 @@ public class PlayerMovement : MonoBehaviour
         StartCoroutine(Blink());
     }
 
+    private void FixedUpdate() 
+    {
+        Move();
+        CheckStamina();
+        StaminaRegeneration();
+        PlayAnimation();
+    }
+
     public void OnSprint(InputValue value)
     {
         if(value.isPressed)
@@ -55,16 +71,12 @@ public class PlayerMovement : MonoBehaviour
 
             playerSpeed = sprintSpeed;
             IsSprint = true;
-            PlayerManager.inst.playerAnimator.SetBool("Run", true);
-
         }
         else
         {
             playerSpeed = playerBaseSpeed;
             IsSprint = false;
-            PlayerManager.inst.playerAnimator.SetBool("Run", false);
         }
-
     }
 
     void CheckStamina()
@@ -95,15 +107,7 @@ public class PlayerMovement : MonoBehaviour
             playerStamina = basePlayerStamina;
         }
     }
-    
-    private void FixedUpdate() 
-    {
-        Move();
-        CheckStamina();
-        StaminaRegeneration();
-    }
 
-    bool isMove = false;
     public void Move()
     {
         if(!isMove)
@@ -120,12 +124,6 @@ public class PlayerMovement : MonoBehaviour
             transform.localScale = new Vector3(-scale.x,transform.localScale.y,transform.localScale.z);
         else if(direction.x == -1)
             transform.localScale = new Vector3(scale.x,transform.localScale.y,transform.localScale.z);
-        
-        
-        if(rb.velocity != Vector2.zero)
-            PlayerManager.inst.playerAnimator.SetBool("Walk",true);
-        else
-            PlayerManager.inst.playerAnimator.SetBool("Walk",false);
     }
 
     public void OnMove(Vector2 value)
@@ -144,5 +142,46 @@ public class PlayerMovement : MonoBehaviour
         float blinkTime = Random.Range(10f,30f);
         yield return new WaitForSeconds(blinkTime);
         StartCoroutine(Blink());
+    }
+
+    void PlayAnimation()
+    {
+        PlayWalkAnimation();
+        PlaySprintAnimation();
+    }
+
+    void PlayWalkAnimation()
+    {
+        if(rb.velocity != Vector2.zero && !isRunIntoWall)
+            PlayerManager.inst.playerAnimator.SetBool("Walk",true);
+        else
+            PlayerManager.inst.playerAnimator.SetBool("Walk",false);
+
+    }
+
+    void PlaySprintAnimation()
+    {
+        if(IsSprint)
+            PlayerManager.inst.playerAnimator.SetBool("Run", true);
+        else
+            PlayerManager.inst.playerAnimator.SetBool("Run", false);
+    }
+
+    void OnCollisionEnter2D(Collision2D other) 
+    {
+        print("other " + other.gameObject.name);
+    
+        if(other.gameObject.CompareTag("Wall"))
+        {
+            isRunIntoWall = true;
+        }
+    }
+
+    void OnCollisionExit2D(Collision2D other) 
+    {
+        if(other.gameObject.CompareTag("Wall"))
+        {
+            isRunIntoWall = false;
+        }
     }
 }
