@@ -44,12 +44,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2693dbca1e2393a45a00ed8993f9b747, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialoguePath: DialogueDataChapter1
+  dialogueCanvas: {fileID: 0}
+  dialoguePaths:
+  - DialogueItem
+  - DialogueDataChapter1
+  type: 0
   nameText: {fileID: 0}
   dialogueText: {fileID: 0}
   imageCharacter1: {fileID: 0}
   imageCharacter2: {fileID: 0}
-  dialoguePanel: {fileID: 0}
+  imageCutScene: {fileID: 0}
   continueButton: {fileID: 0}
   choiceButton1: {fileID: 0}
   choiceButton2: {fileID: 0}
@@ -62,4 +66,9 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 4af56009f79d04042ac398be001b3d04, type: 3}
   - {fileID: 21300000, guid: 6d4b9403c6e6012488c8a9aacbd6dd6c, type: 3}
   - {fileID: 21300000, guid: c86fa6ee1abbbd142944366f4de908bf, type: 3}
+  - {fileID: 21300000, guid: 26f77a40fb5cd4e48a35c9f7c885445e, type: 3}
+  - {fileID: 21300000, guid: b7f81f6006185eb4580329ce10282e3c, type: 3}
+  - {fileID: 21300000, guid: c69079ffa033a704e8cade624980f126, type: 3}
   currentId: 
+  currentNPC: {fileID: 0}
+  currentDialogue: 

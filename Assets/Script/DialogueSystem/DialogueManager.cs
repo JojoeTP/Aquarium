@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using System.IO;
+using System;
 
 public class DialogueInfo
 {
@@ -15,8 +16,9 @@ public class DialogueInfo
     public string choice2;
     public string choice1Text;
     public string choice2Text;
+    public string type;
 
-    public DialogueInfo(string Id, string Character, string CharacterImage, string DialogueText, string Choice1, string Choice2, string Choice1Text, string Choice2Text)
+    public DialogueInfo(string Id, string Character, string CharacterImage, string DialogueText, string Choice1, string Choice2, string Choice1Text, string Choice2Text, string Type)
     {
         ID = Id;
         character = Character;
@@ -26,6 +28,7 @@ public class DialogueInfo
         choice2 = Choice2;
         choice1Text = Choice1Text;
         choice2Text = Choice2Text;
+        type = Type;
     }
 }
 
@@ -36,6 +39,13 @@ public class DialogueManager : MonoBehaviour
     public Dictionary<string, DialogueInfo> openWith = new Dictionary<string, DialogueInfo>();
 
     public static DialogueManager inst;
+    public enum Type
+    {
+        Dialogue,
+        CutScene
+    }
+    [Header("DialogueType")]
+    public Type type;
 
     [Header("DialogueText")]
     [SerializeField] TextMeshProUGUI nameText;
@@ -46,6 +56,7 @@ public class DialogueManager : MonoBehaviour
     Sprite character2;
     [SerializeField] GameObject imageCharacter1;
     [SerializeField]  GameObject imageCharacter2;
+    [SerializeField]  GameObject imageCutScene;
 
     [Header("Button")]
     [SerializeField] Button continueButton;
@@ -55,6 +66,7 @@ public class DialogueManager : MonoBehaviour
     [Header("ChoiceText")]
     [SerializeField] TextMeshProUGUI choiceButton1Text;
     [SerializeField] TextMeshProUGUI choiceButton2Text;
+    bool isChoice = false;
 
     [SerializeField] List<Sprite> characterSprites = new List<Sprite>();
     [SerializeField] string currentId;
@@ -68,6 +80,7 @@ public class DialogueManager : MonoBehaviour
 
     private void Start()
     {
+        ResetCharacterSprite();
         Initialize();
         AddListenerToButton();
         LoadDialogueData();
@@ -103,8 +116,8 @@ public class DialogueManager : MonoBehaviour
                 }
                 else
                 {
-                    //ID,character,charaterImage,dialogueText,choice1,choice2,choice1Text,choice2Text
-                    DialogueInfo newDialogue = new DialogueInfo(data_values[0], data_values[1], data_values[2], data_values[3], data_values[4], data_values[5], data_values[6], data_values[7]);
+                    //ID,character,charaterImage,dialogueText,choice1,choice2,choice1Text,choice2Text,type
+                    DialogueInfo newDialogue = new DialogueInfo(data_values[0], data_values[1], data_values[2], data_values[3], data_values[4], data_values[5], data_values[6], data_values[7], data_values[8]);
                     //Debug.Log(newDialogue.character);
                     openWith.Add(data_values[0], newDialogue);
                 }
@@ -174,10 +187,11 @@ public class DialogueManager : MonoBehaviour
         {
             return;
         }
+        type = (Type)Enum.Parse(typeof(Type), openWith[currentDialogue].type);
         dialogueCanvas.enabled = true;
         CheckIfHaveChoice(currentDialogue);
+        CheckDialogueType(currentDialogue);
 
-        CheckMainCharacterSpeak(currentDialogue);
         nameText.text = openWith[currentDialogue].character;
         dialogueText.text = openWith[currentDialogue].dialogueText;
         StopAllCoroutines();
@@ -191,8 +205,21 @@ public class DialogueManager : MonoBehaviour
             currentId = currentDialogue;
         }
     }
-
-    bool isChoice = false;
+    void CheckDialogueType(string checkChoiceId)
+    {
+        if (type == Type.CutScene)
+        {
+            character1 = characterSprites.Find(n => n.name == openWith[checkChoiceId].charaterImage);
+            Debug.Log(character1);
+            Debug.Log(currentId);
+            imageCutScene.GetComponent<Image>().sprite = character1;
+            imageCutScene.GetComponent<Image>().color = new Color(1, 1, 1, 1);
+        }
+        else if (type == Type.Dialogue)
+        {
+            CheckMainCharacterSpeak(checkChoiceId);
+        }
+    }
 
     void CheckIfHaveChoice(string checkChoiceId)
     {
@@ -241,8 +268,8 @@ public class DialogueManager : MonoBehaviour
             return;
         }
         CheckIfHaveChoice(currentId);
-
-        CheckMainCharacterSpeak(currentId);
+        CheckDialogueType(currentId);
+        //CheckMainCharacterSpeak(currentId);
         
         nameText.text = openWith[currentId].character;
         StopAllCoroutines();
@@ -298,6 +325,8 @@ public class DialogueManager : MonoBehaviour
         imageCharacter1.GetComponent<Image>().sprite = null;
         imageCharacter1.GetComponent<Image>().color = new Color(1, 1, 1, 1);
         imageCharacter2.GetComponent<Image>().color = new Color(1, 1, 1, 1);
+        imageCutScene.GetComponent<Image>().sprite = null;
+        imageCutScene.GetComponent<Image>().color = new Color(1, 1, 1, 0);
     }
 
 }

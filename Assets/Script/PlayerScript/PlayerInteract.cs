@@ -10,6 +10,11 @@ public class PlayerInteract : MonoBehaviour
     public Vector3 InteractOffset;
 
     private DoorSystem enteringDoor;
+    public static PlayerInteract inst;
+    private void Awake()
+    {
+        inst = this;
+    }
 
     void Start()
     {
@@ -64,11 +69,6 @@ public class PlayerInteract : MonoBehaviour
         }
         return false;
     }
-    // void StartDialogue(string startWithDialogueId)
-    // {
-    //     DialogueManager.inst.StartDialogue(startWithDialogueId);
-    //     return;
-    // }
 
     void StartDialogue(TalkWithNPC NPC)
     {
@@ -106,6 +106,7 @@ public class PlayerInteract : MonoBehaviour
     void GetItem(Item item)
     {
         // PlayerManager.inst.playerInventory.itemList.Add(item.item);
+        PlayerManager.inst.playerState = PlayerManager.PLAYERSTATE.CONVERSATION;
         PlayerManager.inst.PlayerInventory.AddItem(item.itemObject);
         ItemTimeData itemData = new ItemTimeData();
         itemData.effectName = ItemManager.Inst.ItemEffectData.ItemEffectSettingList.Find(n => n.iTEMTYPE.HasFlag(item.itemObject.itemData.ItemType)).effectTYPE.ToString();
@@ -114,7 +115,6 @@ public class PlayerInteract : MonoBehaviour
         item.OnPickUpEvent();
         item.gameObject.SetActive(false);
     }
-
     
     bool CanEnterDoor(Transform overlap)
     {

@@ -2795,7 +2795,10 @@ MonoBehaviour:
   isSpacialDoor: 0
   isPlayerUseItBefore: 0
   canEnemyEnter: 0
-  triggerEvent:
+  triggerDoorEvents:
+    m_PersistentCalls:
+      m_Calls: []
+  triggerConditionEvent:
     m_PersistentCalls:
       m_Calls: []
 --- !u!61 &123502705
@@ -3876,7 +3879,10 @@ MonoBehaviour:
   isSpacialDoor: 0
   isPlayerUseItBefore: 0
   canEnemyEnter: 0
-  triggerEvent:
+  triggerDoorEvents:
+    m_PersistentCalls:
+      m_Calls: []
+  triggerConditionEvent:
     m_PersistentCalls:
       m_Calls: []
 --- !u!61 &209489069
@@ -6320,7 +6326,10 @@ MonoBehaviour:
   isSpacialDoor: 0
   isPlayerUseItBefore: 0
   canEnemyEnter: 0
-  triggerEvent:
+  triggerDoorEvents:
+    m_PersistentCalls:
+      m_Calls: []
+  triggerConditionEvent:
     m_PersistentCalls:
       m_Calls: []
 --- !u!61 &356976905
@@ -6824,7 +6833,10 @@ MonoBehaviour:
   isSpacialDoor: 0
   isPlayerUseItBefore: 0
   canEnemyEnter: 0
-  triggerEvent:
+  triggerDoorEvents:
+    m_PersistentCalls:
+      m_Calls: []
+  triggerConditionEvent:
     m_PersistentCalls:
       m_Calls: []
 --- !u!61 &373165560
@@ -7002,7 +7014,10 @@ MonoBehaviour:
   isSpacialDoor: 0
   isPlayerUseItBefore: 0
   canEnemyEnter: 0
-  triggerEvent:
+  triggerDoorEvents:
+    m_PersistentCalls:
+      m_Calls: []
+  triggerConditionEvent:
     m_PersistentCalls:
       m_Calls: []
 --- !u!61 &373741223
@@ -7768,7 +7783,10 @@ MonoBehaviour:
   isSpacialDoor: 0
   isPlayerUseItBefore: 0
   canEnemyEnter: 0
-  triggerEvent:
+  triggerDoorEvents:
+    m_PersistentCalls:
+      m_Calls: []
+  triggerConditionEvent:
     m_PersistentCalls:
       m_Calls: []
 --- !u!114 &406672625
@@ -10354,7 +10372,10 @@ MonoBehaviour:
   isSpacialDoor: 0
   isPlayerUseItBefore: 0
   canEnemyEnter: 0
-  triggerEvent:
+  triggerDoorEvents:
+    m_PersistentCalls:
+      m_Calls: []
+  triggerConditionEvent:
     m_PersistentCalls:
       m_Calls: []
 --- !u!61 &573731143
@@ -10482,7 +10503,10 @@ MonoBehaviour:
   isSpacialDoor: 0
   isPlayerUseItBefore: 0
   canEnemyEnter: 0
-  triggerEvent:
+  triggerDoorEvents:
+    m_PersistentCalls:
+      m_Calls: []
+  triggerConditionEvent:
     m_PersistentCalls:
       m_Calls: []
 --- !u!61 &585858922
@@ -10576,7 +10600,10 @@ MonoBehaviour:
   isSpacialDoor: 0
   isPlayerUseItBefore: 0
   canEnemyEnter: 0
-  triggerEvent:
+  triggerDoorEvents:
+    m_PersistentCalls:
+      m_Calls: []
+  triggerConditionEvent:
     m_PersistentCalls:
       m_Calls: []
 --- !u!61 &589150415
@@ -12326,7 +12353,10 @@ MonoBehaviour:
   isSpacialDoor: 0
   isPlayerUseItBefore: 0
   canEnemyEnter: 0
-  triggerEvent:
+  triggerDoorEvents:
+    m_PersistentCalls:
+      m_Calls: []
+  triggerConditionEvent:
     m_PersistentCalls:
       m_Calls: []
 --- !u!61 &703762093
@@ -13194,7 +13224,10 @@ MonoBehaviour:
   isSpacialDoor: 0
   isPlayerUseItBefore: 0
   canEnemyEnter: 0
-  triggerEvent:
+  triggerDoorEvents:
+    m_PersistentCalls:
+      m_Calls: []
+  triggerConditionEvent:
     m_PersistentCalls:
       m_Calls: []
 --- !u!61 &731888529
@@ -13717,7 +13750,10 @@ MonoBehaviour:
   isSpacialDoor: 0
   isPlayerUseItBefore: 0
   canEnemyEnter: 0
-  triggerEvent:
+  triggerDoorEvents:
+    m_PersistentCalls:
+      m_Calls: []
+  triggerConditionEvent:
     m_PersistentCalls:
       m_Calls: []
 --- !u!61 &748000679
@@ -13997,7 +14033,10 @@ MonoBehaviour:
   isSpacialDoor: 0
   isPlayerUseItBefore: 0
   canEnemyEnter: 0
-  triggerEvent:
+  triggerDoorEvents:
+    m_PersistentCalls:
+      m_Calls: []
+  triggerConditionEvent:
     m_PersistentCalls:
       m_Calls: []
 --- !u!61 &766520387
@@ -14427,7 +14466,10 @@ MonoBehaviour:
   isSpacialDoor: 0
   isPlayerUseItBefore: 0
   canEnemyEnter: 0
-  triggerEvent:
+  triggerDoorEvents:
+    m_PersistentCalls:
+      m_Calls: []
+  triggerConditionEvent:
     m_PersistentCalls:
       m_Calls: []
 --- !u!61 &819383247
@@ -15489,6 +15531,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &860926454 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6049391685786761189, guid: bd0f4c6f21470214f9e7c4050dacecb4, type: 3}
+  m_PrefabInstance: {fileID: 358539300}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &864046624
 GameObject:
   m_ObjectHideFlags: 0
@@ -16044,7 +16091,10 @@ MonoBehaviour:
   isSpacialDoor: 0
   isPlayerUseItBefore: 0
   canEnemyEnter: 0
-  triggerEvent:
+  triggerDoorEvents:
+    m_PersistentCalls:
+      m_Calls: []
+  triggerConditionEvent:
     m_PersistentCalls:
       m_Calls: []
 --- !u!61 &878667440
@@ -17190,7 +17240,10 @@ MonoBehaviour:
   isSpacialDoor: 0
   isPlayerUseItBefore: 0
   canEnemyEnter: 0
-  triggerEvent:
+  triggerDoorEvents:
+    m_PersistentCalls:
+      m_Calls: []
+  triggerConditionEvent:
     m_PersistentCalls:
       m_Calls: []
 --- !u!61 &926776524
@@ -17712,6 +17765,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21c594a57847f9a4a8b71d9cd567156e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  triggerEvents:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &976091473
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25327,6 +25383,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  NPCList: []
 --- !u!61 &1386832137
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -25448,7 +25505,10 @@ MonoBehaviour:
   isSpacialDoor: 0
   isPlayerUseItBefore: 0
   canEnemyEnter: 0
-  triggerEvent:
+  triggerDoorEvents:
+    m_PersistentCalls:
+      m_Calls: []
+  triggerConditionEvent:
     m_PersistentCalls:
       m_Calls: []
 --- !u!61 &1394825627
@@ -28396,7 +28456,10 @@ MonoBehaviour:
   isSpacialDoor: 0
   isPlayerUseItBefore: 0
   canEnemyEnter: 0
-  triggerEvent:
+  triggerDoorEvents:
+    m_PersistentCalls:
+      m_Calls: []
+  triggerConditionEvent:
     m_PersistentCalls:
       m_Calls: []
 --- !u!61 &1545796410
@@ -29551,6 +29614,11 @@ Transform:
   m_Father: {fileID: 270321010}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!223 &1597720557 stripped
+Canvas:
+  m_CorrespondingSourceObject: {fileID: 8809037802628901974, guid: bd0f4c6f21470214f9e7c4050dacecb4, type: 3}
+  m_PrefabInstance: {fileID: 358539300}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1598016797
 GameObject:
   m_ObjectHideFlags: 0
@@ -34322,7 +34390,10 @@ MonoBehaviour:
   isSpacialDoor: 0
   isPlayerUseItBefore: 0
   canEnemyEnter: 0
-  triggerEvent:
+  triggerDoorEvents:
+    m_PersistentCalls:
+      m_Calls: []
+  triggerConditionEvent:
     m_PersistentCalls:
       m_Calls: []
 --- !u!61 &1826412850
@@ -36153,7 +36224,10 @@ MonoBehaviour:
   isSpacialDoor: 0
   isPlayerUseItBefore: 0
   canEnemyEnter: 0
-  triggerEvent:
+  triggerDoorEvents:
+    m_PersistentCalls:
+      m_Calls: []
+  triggerConditionEvent:
     m_PersistentCalls:
       m_Calls: []
 --- !u!61 &1900784742
@@ -37258,7 +37332,10 @@ MonoBehaviour:
   isSpacialDoor: 0
   isPlayerUseItBefore: 0
   canEnemyEnter: 0
-  triggerEvent:
+  triggerDoorEvents:
+    m_PersistentCalls:
+      m_Calls: []
+  triggerConditionEvent:
     m_PersistentCalls:
       m_Calls: []
 --- !u!61 &1968587177
@@ -39484,7 +39561,10 @@ MonoBehaviour:
   isSpacialDoor: 0
   isPlayerUseItBefore: 0
   canEnemyEnter: 0
-  triggerEvent:
+  triggerDoorEvents:
+    m_PersistentCalls:
+      m_Calls: []
+  triggerConditionEvent:
     m_PersistentCalls:
       m_Calls: []
 --- !u!61 &2084036404
@@ -40711,9 +40791,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 358539307}
     - target: {fileID: 2504612249614600641, guid: e1fb8775c647e6c4facdd190c6b4d472, type: 3}
+      propertyPath: imageCutScene
+      value: 
+      objectReference: {fileID: 860926454}
+    - target: {fileID: 2504612249614600641, guid: e1fb8775c647e6c4facdd190c6b4d472, type: 3}
       propertyPath: continueButton
       value: 
       objectReference: {fileID: 358539306}
+    - target: {fileID: 2504612249614600641, guid: e1fb8775c647e6c4facdd190c6b4d472, type: 3}
+      propertyPath: dialogueCanvas
+      value: 
+      objectReference: {fileID: 1597720557}
     - target: {fileID: 2504612249614600641, guid: e1fb8775c647e6c4facdd190c6b4d472, type: 3}
       propertyPath: imageCharacter1
       value: 
@@ -41020,7 +41108,10 @@ MonoBehaviour:
   isSpacialDoor: 0
   isPlayerUseItBefore: 0
   canEnemyEnter: 0
-  triggerEvent:
+  triggerDoorEvents:
+    m_PersistentCalls:
+      m_Calls: []
+  triggerConditionEvent:
     m_PersistentCalls:
       m_Calls: []
 --- !u!114 &4695122922277508755
@@ -41314,7 +41405,10 @@ MonoBehaviour:
   isSpacialDoor: 1
   isPlayerUseItBefore: 0
   canEnemyEnter: 0
-  triggerEvent:
+  triggerDoorEvents:
+    m_PersistentCalls:
+      m_Calls: []
+  triggerConditionEvent:
     m_PersistentCalls:
       m_Calls: []
 --- !u!1 &4695122922540867444
@@ -41881,7 +41975,10 @@ MonoBehaviour:
   isSpacialDoor: 0
   isPlayerUseItBefore: 0
   canEnemyEnter: 0
-  triggerEvent:
+  triggerDoorEvents:
+    m_PersistentCalls:
+      m_Calls: []
+  triggerConditionEvent:
     m_PersistentCalls:
       m_Calls: []
 --- !u!114 &4695122923096823980
@@ -41914,7 +42011,10 @@ MonoBehaviour:
   isSpacialDoor: 0
   isPlayerUseItBefore: 0
   canEnemyEnter: 0
-  triggerEvent:
+  triggerDoorEvents:
+    m_PersistentCalls:
+      m_Calls: []
+  triggerConditionEvent:
     m_PersistentCalls:
       m_Calls: []
 --- !u!1 &4695122923096823982
@@ -42182,7 +42282,10 @@ MonoBehaviour:
   isSpacialDoor: 1
   isPlayerUseItBefore: 0
   canEnemyEnter: 0
-  triggerEvent:
+  triggerDoorEvents:
+    m_PersistentCalls:
+      m_Calls: []
+  triggerConditionEvent:
     m_PersistentCalls:
       m_Calls: []
 --- !u!4 &4695122923489636728
