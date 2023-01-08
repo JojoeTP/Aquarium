@@ -16074,6 +16074,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &860926454 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6049391685786761189, guid: bd0f4c6f21470214f9e7c4050dacecb4, type: 3}
+  m_PrefabInstance: {fileID: 358539300}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &864046624
 GameObject:
   m_ObjectHideFlags: 0
@@ -30268,6 +30273,11 @@ Transform:
   m_Father: {fileID: 270321010}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!223 &1597720557 stripped
+Canvas:
+  m_CorrespondingSourceObject: {fileID: 8809037802628901974, guid: bd0f4c6f21470214f9e7c4050dacecb4, type: 3}
+  m_PrefabInstance: {fileID: 358539300}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1598016797
 GameObject:
   m_ObjectHideFlags: 0
@@ -41640,9 +41650,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 358539307}
     - target: {fileID: 2504612249614600641, guid: e1fb8775c647e6c4facdd190c6b4d472, type: 3}
+      propertyPath: imageCutScene
+      value: 
+      objectReference: {fileID: 860926454}
+    - target: {fileID: 2504612249614600641, guid: e1fb8775c647e6c4facdd190c6b4d472, type: 3}
       propertyPath: continueButton
       value: 
       objectReference: {fileID: 358539306}
+    - target: {fileID: 2504612249614600641, guid: e1fb8775c647e6c4facdd190c6b4d472, type: 3}
+      propertyPath: dialogueCanvas
+      value: 
+      objectReference: {fileID: 1597720557}
     - target: {fileID: 2504612249614600641, guid: e1fb8775c647e6c4facdd190c6b4d472, type: 3}
       propertyPath: imageCharacter1
       value: 

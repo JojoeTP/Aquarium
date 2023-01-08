@@ -67,11 +67,6 @@ public class PlayerInteract : MonoBehaviour
         }
         return false;
     }
-    // void StartDialogue(string startWithDialogueId)
-    // {
-    //     DialogueManager.inst.StartDialogue(startWithDialogueId);
-    //     return;
-    // }
 
     void StartDialogue(TalkWithNPC NPC)
     {
@@ -109,6 +104,7 @@ public class PlayerInteract : MonoBehaviour
     void GetItem(Item item)
     {
         // PlayerManager.inst.playerInventory.itemList.Add(item.item);
+        PlayerManager.inst.playerState = PlayerManager.PLAYERSTATE.CONVERSATION;
         PlayerManager.inst.PlayerInventory.AddItem(item.itemObject);
         OnOpenItemPopUpUI(item);
 
@@ -122,7 +118,6 @@ public class PlayerInteract : MonoBehaviour
         itemData.time = item.GetPickUpTime();
         RecordTimeManager.Inst.SavePickUpItemTimeData(item.itemObject.itemData.ItemName,itemData);
     }
-
     
     bool CanEnterDoor(Transform overlap)
     {
