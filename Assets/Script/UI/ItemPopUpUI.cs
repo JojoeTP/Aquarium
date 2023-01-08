@@ -31,11 +31,22 @@ public class ItemPopUpUI : MonoBehaviour
     {
         canvas.enabled = false;
 
+        AddEventAction();
+        
         closeButton.GetComponent<Button>().onClick.AddListener(() => 
         {
             OnCloseItemPopUpUI();
         });
+    }
 
+    void AddEventAction()
+    {
+        PlayerManager.inst.PlayerInteract.OnOpenItemPopUpUI += OnOpenItemPopUpUI;
+    }
+
+    void RemoveEventAction()
+    {
+        PlayerManager.inst.PlayerInteract.OnOpenItemPopUpUI -= OnOpenItemPopUpUI;
     }
 
     public void OnOpenItemPopUpUI(Item item)
@@ -43,8 +54,6 @@ public class ItemPopUpUI : MonoBehaviour
         pickUpItem = item;
         SetItemDetail(item.itemObject.itemData);
         canvas.enabled = true;
-
-        
     }
     
     void OnCloseItemPopUpUI()
@@ -59,5 +68,10 @@ public class ItemPopUpUI : MonoBehaviour
     {
         itemImage.sprite = item.ItemSprite;
         itemName.text = item.ItemName;
+    }
+
+    void OnDestroy() 
+    {
+        RemoveEventAction();
     }
 }

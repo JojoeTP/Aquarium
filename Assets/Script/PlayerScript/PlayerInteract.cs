@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using System;
 
 public class PlayerInteract : MonoBehaviour
 {
@@ -9,7 +10,9 @@ public class PlayerInteract : MonoBehaviour
     public Vector2 InteractSize;
     public Vector3 InteractOffset;
 
-    private DoorSystem enteringDoor;
+    DoorSystem enteringDoor;
+
+    public event Action<Item> OnOpenItemPopUpUI = delegate {};
 
     void Start()
     {
@@ -107,7 +110,7 @@ public class PlayerInteract : MonoBehaviour
     {
         // PlayerManager.inst.playerInventory.itemList.Add(item.item);
         PlayerManager.inst.PlayerInventory.AddItem(item.itemObject);
-        ItemPopUpUI.inst.OnOpenItemPopUpUI(item);
+        OnOpenItemPopUpUI(item);
 
         SavePickUpItemTime(item);
     }

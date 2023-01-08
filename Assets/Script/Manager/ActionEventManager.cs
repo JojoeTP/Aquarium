@@ -22,11 +22,6 @@ public class ActionEventManager : MonoBehaviour
     }
 #endregion
 
-    public void Test()
-    {
-        print("Test Dialogue Event");
-    }
-
     public void CutSceneDoor()
     {
         print("CutSceneDoor");

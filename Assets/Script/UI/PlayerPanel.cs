@@ -27,11 +27,6 @@ public class PlayerPanel : MonoBehaviour
         Initialize();
     }
 
-    void Update()
-    {
-        
-    }
-
     void Initialize()
     {
         SetupInputAction();

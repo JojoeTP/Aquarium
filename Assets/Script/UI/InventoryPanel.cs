@@ -26,16 +26,6 @@ public class InventoryPanel : MonoBehaviour
         canvas = GetComponent<Canvas>();        
     }
 
-    void Start()
-    {
-
-    }
-
-    void Update()
-    {
-        
-    }
-
     void GenerateItemSlot()
     {
         ClearChildren(itemSlotParent);
@@ -67,7 +57,6 @@ public class InventoryPanel : MonoBehaviour
             var itemImage = clone.Find("Image").GetComponent<Image>();
             itemImage.sprite = itemData.ItemSprite;
         }
-        
     }
 
     public void OnOpenInventory()
