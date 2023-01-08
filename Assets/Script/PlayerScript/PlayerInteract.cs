@@ -107,12 +107,17 @@ public class PlayerInteract : MonoBehaviour
     {
         // PlayerManager.inst.playerInventory.itemList.Add(item.item);
         PlayerManager.inst.PlayerInventory.AddItem(item.itemObject);
+        ItemPopUpUI.inst.OnOpenItemPopUpUI(item);
+
+        SavePickUpItemTime(item);
+    }
+
+    void SavePickUpItemTime(Item item)
+    {
         ItemTimeData itemData = new ItemTimeData();
         itemData.effectName = ItemManager.Inst.ItemEffectData.ItemEffectSettingList.Find(n => n.iTEMTYPE.HasFlag(item.itemObject.itemData.ItemType)).effectTYPE.ToString();
         itemData.time = item.GetPickUpTime();
         RecordTimeManager.Inst.SavePickUpItemTimeData(item.itemObject.itemData.ItemName,itemData);
-        item.OnPickUpEvent();
-        item.gameObject.SetActive(false);
     }
 
     
