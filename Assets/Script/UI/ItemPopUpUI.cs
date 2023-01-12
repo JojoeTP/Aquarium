@@ -54,6 +54,7 @@ public class ItemPopUpUI : MonoBehaviour
         pickUpItem = item;
         SetItemDetail(item.itemObject.itemData);
         canvas.enabled = true;
+        PlayerManager.inst.playerState = PlayerManager.PLAYERSTATE.GETTINGITEM;
     }
     
     void OnCloseItemPopUpUI()
@@ -62,6 +63,7 @@ public class ItemPopUpUI : MonoBehaviour
 
         pickUpItem.OnPickUpEvent();
         pickUpItem.gameObject.SetActive(false);
+        PlayerManager.inst.playerState = PlayerManager.PLAYERSTATE.NONE;
     }
 
     void SetItemDetail(ItemData item)

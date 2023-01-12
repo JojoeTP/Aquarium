@@ -12,6 +12,7 @@ public class PlayerManager : MonoBehaviour
         HIDING,
         ENTERDOOR,
         OPENPANEL,
+        GETTINGITEM,
     }
 
     public static PlayerManager inst;

@@ -87,17 +87,20 @@ public class PlayerPanel : MonoBehaviour
                 canvas.enabled = false;
                 inventoryPanel.Canvas.enabled = false;
                 settingPanel.Canvas.enabled = false;
+                PlayerManager.inst.playerState = PlayerManager.PLAYERSTATE.NONE;
                 break;
             case PANELSTATE.INVENTORY :
                 canvas.enabled = true;
                 inventoryPanel.Canvas.enabled = true;
                 settingPanel.Canvas.enabled = false;
                 inventoryPanel.OnOpenInventory();
+                PlayerManager.inst.playerState = PlayerManager.PLAYERSTATE.OPENPANEL;
                 break;
             case PANELSTATE.SETTING :
                 canvas.enabled = true;
                 inventoryPanel.Canvas.enabled = false;
                 settingPanel.Canvas.enabled = true;
+                PlayerManager.inst.playerState = PlayerManager.PLAYERSTATE.OPENPANEL;
                 break;
         }
     }
