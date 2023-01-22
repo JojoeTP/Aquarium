@@ -7,6 +7,7 @@ namespace PluggableAI
     [CreateAssetMenu(menuName = "PluggableAI/Action/EnterDoor")]
     public class EnterDoorAction : Action
     {
+        
         public override void Act(StateController controller)
         {
             EnterDoor(controller);
@@ -18,9 +19,15 @@ namespace PluggableAI
 
             foreach(var n in overlapObj)
             {
-                if(n.GetComponent<DoorSystem>() != null)
+                if(n.TryGetComponent<DoorSystem>(out DoorSystem door))
                 {
-                    n.GetComponent<DoorSystem>().EnemyEnterDoor(controller.transform);
+                    if(door == controller.enteredDoor)
+                        break;
+                
+                    controller.ResetEnteredDoor();
+                    controller.enteredDoor = door.connectDoor.GetComponent<DoorSystem>();
+
+                    door.EnemyEnterDoor(controller.transform);
                     break;
                 }
             }

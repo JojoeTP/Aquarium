@@ -12,8 +12,8 @@ public class DoorSystem : MonoBehaviour
 
     public bool isSpacialDoor;
 
-    public bool isPlayerUseItBefore;
-    public bool canEnemyEnter;
+    // public bool isPlayerUseItBefore;
+    public bool notForEnemy;
     public UnityEvent triggerDoorEvents;
 
     //Call back
@@ -40,7 +40,12 @@ public class DoorSystem : MonoBehaviour
 
     public void EnemyEnterDoor(Transform entity)
     {
-        EnterDoor(entity);
+        if(connectDoor != null)
+        {
+            Vector3 nextPostion = new Vector3(connectDoor.position.x,(connectDoor.position.y - (transform.position.y - entity.position.y)),0);
+            
+            entity.position = nextPostion;
+        }
     }
 
     public void TriggerDoorEvent()
@@ -68,20 +73,20 @@ public class DoorSystem : MonoBehaviour
         return false;
     }
 
-    public bool RandomChanceToEnter()
-    {
-        var rand = UnityEngine.Random.Range(0f,100f);
-        if(isPlayerUseItBefore && rand > 30f)
-        {
-            return true;
-        }
-        else if(!isPlayerUseItBefore && rand > 70f)
-        {
-            return true;
-        }
+    // public bool RandomChanceToEnter()
+    // {
+    //     var rand = UnityEngine.Random.Range(0f,100f);
+    //     if(isPlayerUseItBefore && rand > 30f)
+    //     {
+    //         return true;
+    //     }
+    //     else if(!isPlayerUseItBefore && rand > 70f)
+    //     {
+    //         return true;
+    //     }
 
-        return false;
-    }
+    //     return false;
+    // }
 
     private void OnTriggerEnter2D(Collider2D other) 
     {

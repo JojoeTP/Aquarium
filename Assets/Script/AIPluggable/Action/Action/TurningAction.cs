@@ -14,7 +14,8 @@ namespace PluggableAI
 
         void Turning(StateController controller)
         {
-            controller.Turning();
+            controller.moveDirection *= -1f;
+            controller.transform.localScale = new Vector3(controller.transform.localScale.x * -1f,controller.transform.localScale.y,controller.transform.localScale.z);
         }
     }
 }
