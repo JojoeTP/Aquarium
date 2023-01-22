@@ -17,17 +17,11 @@ namespace PluggableAI
 
         void Attack(StateController controller)
         {
-            if(Physics2D.Raycast(controller.transform.position,controller.moveDirection,controller.attackRange,playerLayer))
+            if(Vector3.Distance(controller.transform.position,PlayerManager.inst.transform.position) <= controller.attackRange)
             {
                 controller.ToggleAttack(true);
                 Debug.Log("Attack");
-                Attack();
             }
-        }
-
-        void Attack()
-        {
-            Debug.Log("Hit");
         }
     }
 }

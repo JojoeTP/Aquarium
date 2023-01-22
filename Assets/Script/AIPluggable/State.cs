@@ -9,23 +9,31 @@ namespace PluggableAI
     public class State : ScriptableObject
     {
         public List<Action> oneTimeActions;
-        public List<Action> updateActions;
+        public List<Action> LoopActions;
         public List<Transition> transitions;
-        public float waitingTime;
+        public float timeBeforeSwitchState;
 
         bool isActionDone = false;
 
+        public void InitState()
+        {
+            isActionDone = false;
+        }
+
         public void FixedUpdateState(StateController controller)
         {
-            DoActions(controller);
+            if(!isActionDone)
+                DoActionsOneTime(controller);
+            
+            RunActions(controller);
             CheckTransition(controller);
         }
 
-        void DoActions(StateController controller)
+        void RunActions(StateController controller)
         {
-            for (int i = 0; i < updateActions.Count; i++)
+            for (int i = 0; i < LoopActions.Count; i++)
             {
-                updateActions[i].Act(controller);
+                LoopActions[i].Act(controller);
             }
 
             if(oneTimeActions.Count == 0)
@@ -46,9 +54,34 @@ namespace PluggableAI
 
         void CheckTransition(StateController controller)
         {
-            if(!isActionDone)
-                return;
+            // if(!isActionDone)
+            //     return;
                 
+            // for (int i = 0; i < transitions.Count; i++)
+            // {
+            //     bool decisionSucceeded = transitions[i].decision.Decide(controller);
+
+            //     if(decisionSucceeded)
+            //     {
+            //         controller.TransitionToState(transitions[i].trueState);
+            //     }
+            //     else
+            //     {
+            //         controller.TransitionToState(transitions[i].falseState);
+            //     }
+            // }
+
+            if(controller.TimeBeforeSwitchState > 0)
+                return;
+
+            if(oneTimeActions != null && !isActionDone)
+                return;
+
+            SwitchState(controller);
+        }
+
+        void SwitchState(StateController controller)
+        {
             for (int i = 0; i < transitions.Count; i++)
             {
                 bool decisionSucceeded = transitions[i].decision.Decide(controller);

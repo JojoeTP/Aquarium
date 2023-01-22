@@ -134,7 +134,9 @@ public class PlayerInteract : MonoBehaviour
         if(PlayerManager.inst.playerState != PlayerManager.PLAYERSTATE.NONE)
             return;
 
+        //Don't play if player can't enter door
         UITransition.inst.DoorTransitionIn();
+        
         PlayerManager.inst.playerState = PlayerManager.PLAYERSTATE.ENTERDOOR;
     }
 

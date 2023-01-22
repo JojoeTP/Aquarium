@@ -2867,8 +2867,7 @@ MonoBehaviour:
   connectDoor: {fileID: 209489066}
   conditionItem: {fileID: 0}
   isSpacialDoor: 0
-  isPlayerUseItBefore: 0
-  canEnemyEnter: 0
+  notForEnemy: 0
   triggerDoorEvents:
     m_PersistentCalls:
       m_Calls: []
@@ -3951,8 +3950,7 @@ MonoBehaviour:
   connectDoor: {fileID: 123502702}
   conditionItem: {fileID: 0}
   isSpacialDoor: 0
-  isPlayerUseItBefore: 0
-  canEnemyEnter: 0
+  notForEnemy: 0
   triggerDoorEvents:
     m_PersistentCalls:
       m_Calls: []
@@ -6534,8 +6532,7 @@ MonoBehaviour:
   connectDoor: {fileID: 819383244}
   conditionItem: {fileID: 0}
   isSpacialDoor: 0
-  isPlayerUseItBefore: 0
-  canEnemyEnter: 0
+  notForEnemy: 0
   triggerDoorEvents:
     m_PersistentCalls:
       m_Calls: []
@@ -6577,15 +6574,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8809037802628901974, guid: bd0f4c6f21470214f9e7c4050dacecb4, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8809037802628901975, guid: bd0f4c6f21470214f9e7c4050dacecb4, type: 3}
       propertyPath: m_Pivot.x
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8809037802628901975, guid: bd0f4c6f21470214f9e7c4050dacecb4, type: 3}
       propertyPath: m_Pivot.y
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8809037802628901975, guid: bd0f4c6f21470214f9e7c4050dacecb4, type: 3}
       propertyPath: m_RootOrder
@@ -6609,23 +6606,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8809037802628901975, guid: bd0f4c6f21470214f9e7c4050dacecb4, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 1919.9999
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8809037802628901975, guid: bd0f4c6f21470214f9e7c4050dacecb4, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 1080.1854
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8809037802628901975, guid: bd0f4c6f21470214f9e7c4050dacecb4, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8809037802628901975, guid: bd0f4c6f21470214f9e7c4050dacecb4, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8809037802628901975, guid: bd0f4c6f21470214f9e7c4050dacecb4, type: 3}
       propertyPath: m_LocalScale.z
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8809037802628901975, guid: bd0f4c6f21470214f9e7c4050dacecb4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6645,23 +6642,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8809037802628901975, guid: bd0f4c6f21470214f9e7c4050dacecb4, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8809037802628901975, guid: bd0f4c6f21470214f9e7c4050dacecb4, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8809037802628901975, guid: bd0f4c6f21470214f9e7c4050dacecb4, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8809037802628901975, guid: bd0f4c6f21470214f9e7c4050dacecb4, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 960
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8809037802628901975, guid: bd0f4c6f21470214f9e7c4050dacecb4, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 540
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8809037802628901975, guid: bd0f4c6f21470214f9e7c4050dacecb4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -7013,8 +7010,7 @@ MonoBehaviour:
   connectDoor: {fileID: 1968587174}
   conditionItem: {fileID: 0}
   isSpacialDoor: 0
-  isPlayerUseItBefore: 0
-  canEnemyEnter: 0
+  notForEnemy: 0
   triggerDoorEvents:
     m_PersistentCalls:
       m_Calls: []
@@ -7194,8 +7190,7 @@ MonoBehaviour:
   connectDoor: {fileID: 731888526}
   conditionItem: {fileID: 0}
   isSpacialDoor: 0
-  isPlayerUseItBefore: 0
-  canEnemyEnter: 0
+  notForEnemy: 1
   triggerDoorEvents:
     m_PersistentCalls:
       m_Calls: []
@@ -7627,7 +7622,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 396942255}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 75.21, y: -70.94, z: -10}
+  m_LocalPosition: {x: -8.6, y: -70.94, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -7963,8 +7958,7 @@ MonoBehaviour:
   connectDoor: {fileID: 748000676}
   conditionItem: {fileID: 0}
   isSpacialDoor: 0
-  isPlayerUseItBefore: 0
-  canEnemyEnter: 0
+  notForEnemy: 0
   triggerDoorEvents:
     m_PersistentCalls:
       m_Calls: []
@@ -10556,8 +10550,7 @@ MonoBehaviour:
   connectDoor: {fileID: 589150412}
   conditionItem: {fileID: 0}
   isSpacialDoor: 0
-  isPlayerUseItBefore: 0
-  canEnemyEnter: 0
+  notForEnemy: 0
   triggerDoorEvents:
     m_PersistentCalls:
       m_Calls: []
@@ -10687,8 +10680,7 @@ MonoBehaviour:
   connectDoor: {fileID: 1900784743}
   conditionItem: {fileID: 0}
   isSpacialDoor: 0
-  isPlayerUseItBefore: 0
-  canEnemyEnter: 0
+  notForEnemy: 0
   triggerDoorEvents:
     m_PersistentCalls:
       m_Calls: []
@@ -10784,8 +10776,7 @@ MonoBehaviour:
   connectDoor: {fileID: 573731140}
   conditionItem: {fileID: 0}
   isSpacialDoor: 0
-  isPlayerUseItBefore: 0
-  canEnemyEnter: 0
+  notForEnemy: 1
   triggerDoorEvents:
     m_PersistentCalls:
       m_Calls: []
@@ -12542,8 +12533,7 @@ MonoBehaviour:
   connectDoor: {fileID: 1545796407}
   conditionItem: {fileID: 0}
   isSpacialDoor: 0
-  isPlayerUseItBefore: 0
-  canEnemyEnter: 0
+  notForEnemy: 0
   triggerDoorEvents:
     m_PersistentCalls:
       m_Calls: []
@@ -13413,8 +13403,7 @@ MonoBehaviour:
   connectDoor: {fileID: 373741220}
   conditionItem: {fileID: 0}
   isSpacialDoor: 0
-  isPlayerUseItBefore: 0
-  canEnemyEnter: 0
+  notForEnemy: 0
   triggerDoorEvents:
     m_PersistentCalls:
       m_Calls: []
@@ -13939,8 +13928,7 @@ MonoBehaviour:
   connectDoor: {fileID: 406672623}
   conditionItem: {fileID: 0}
   isSpacialDoor: 0
-  isPlayerUseItBefore: 0
-  canEnemyEnter: 0
+  notForEnemy: 0
   triggerDoorEvents:
     m_PersistentCalls:
       m_Calls: []
@@ -14222,8 +14210,7 @@ MonoBehaviour:
   connectDoor: {fileID: 1826412847}
   conditionItem: {fileID: 0}
   isSpacialDoor: 0
-  isPlayerUseItBefore: 0
-  canEnemyEnter: 0
+  notForEnemy: 0
   triggerDoorEvents:
     m_PersistentCalls:
       m_Calls: []
@@ -14660,8 +14647,7 @@ MonoBehaviour:
   connectDoor: {fileID: 356976902}
   conditionItem: {fileID: 0}
   isSpacialDoor: 0
-  isPlayerUseItBefore: 0
-  canEnemyEnter: 0
+  notForEnemy: 0
   triggerDoorEvents:
     m_PersistentCalls:
       m_Calls: []
@@ -16280,8 +16266,7 @@ MonoBehaviour:
   connectDoor: {fileID: 2084036401}
   conditionItem: {fileID: 11400000, guid: 542bc647a6c7ba94580a44987f8685e5, type: 2}
   isSpacialDoor: 0
-  isPlayerUseItBefore: 0
-  canEnemyEnter: 0
+  notForEnemy: 0
   triggerDoorEvents:
     m_PersistentCalls:
       m_Calls: []
@@ -17429,8 +17414,7 @@ MonoBehaviour:
   connectDoor: {fileID: 1394825624}
   conditionItem: {fileID: 0}
   isSpacialDoor: 0
-  isPlayerUseItBefore: 0
-  canEnemyEnter: 0
+  notForEnemy: 0
   triggerDoorEvents:
     m_PersistentCalls:
       m_Calls: []
@@ -23743,7 +23727,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1829112646365129883, guid: fd10c98f2285a10469886c1df78c26e8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 75.21
+      value: -8.6
       objectReference: {fileID: 0}
     - target: {fileID: 1829112646365129883, guid: fd10c98f2285a10469886c1df78c26e8, type: 3}
       propertyPath: m_LocalPosition.y
@@ -24258,7 +24242,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1324366055}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 75.21, y: -70.94, z: -10}
+  m_LocalPosition: {x: -8.6, y: -70.94, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -25805,8 +25789,7 @@ MonoBehaviour:
   connectDoor: {fileID: 926776521}
   conditionItem: {fileID: 0}
   isSpacialDoor: 0
-  isPlayerUseItBefore: 0
-  canEnemyEnter: 0
+  notForEnemy: 0
   triggerDoorEvents:
     m_PersistentCalls:
       m_Calls: []
@@ -28690,8 +28673,7 @@ MonoBehaviour:
   connectDoor: {fileID: 703762090}
   conditionItem: {fileID: 0}
   isSpacialDoor: 0
-  isPlayerUseItBefore: 0
-  canEnemyEnter: 0
+  notForEnemy: 0
   triggerDoorEvents:
     m_PersistentCalls:
       m_Calls: []
@@ -34702,8 +34684,7 @@ MonoBehaviour:
   connectDoor: {fileID: 766520384}
   conditionItem: {fileID: 0}
   isSpacialDoor: 0
-  isPlayerUseItBefore: 0
-  canEnemyEnter: 0
+  notForEnemy: 0
   triggerDoorEvents:
     m_PersistentCalls:
       m_Calls: []
@@ -36535,8 +36516,7 @@ MonoBehaviour:
   connectDoor: {fileID: 585858919}
   conditionItem: {fileID: 0}
   isSpacialDoor: 0
-  isPlayerUseItBefore: 0
-  canEnemyEnter: 0
+  notForEnemy: 0
   triggerDoorEvents:
     m_PersistentCalls:
       m_Calls: []
@@ -37506,7 +37486,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: -111.92323}
@@ -37753,8 +37733,7 @@ MonoBehaviour:
   connectDoor: {fileID: 373165557}
   conditionItem: {fileID: 0}
   isSpacialDoor: 0
-  isPlayerUseItBefore: 0
-  canEnemyEnter: 0
+  notForEnemy: 0
   triggerDoorEvents:
     m_PersistentCalls:
       m_Calls: []
@@ -39982,8 +39961,7 @@ MonoBehaviour:
   connectDoor: {fileID: 878667437}
   conditionItem: {fileID: 11400000, guid: 542bc647a6c7ba94580a44987f8685e5, type: 2}
   isSpacialDoor: 0
-  isPlayerUseItBefore: 0
-  canEnemyEnter: 0
+  notForEnemy: 0
   triggerDoorEvents:
     m_PersistentCalls:
       m_Calls: []
@@ -41275,13 +41253,73 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1795378550217695885, guid: 1c78d18dba1098a46a6b561a0587f2a6, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4261554499911693211, guid: 1c78d18dba1098a46a6b561a0587f2a6, type: 3}
       propertyPath: m_Name
       value: AI_Skeleton
       objectReference: {fileID: 0}
     - target: {fileID: 4261554499911693211, guid: 1c78d18dba1098a46a6b561a0587f2a6, type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6610514484267475796, guid: 1c78d18dba1098a46a6b561a0587f2a6, type: 3}
+      propertyPath: attackRange
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6610514484267475796, guid: 1c78d18dba1098a46a6b561a0587f2a6, type: 3}
+      propertyPath: chasingTime
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6610514484267475796, guid: 1c78d18dba1098a46a6b561a0587f2a6, type: 3}
+      propertyPath: visionRange
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 6610514484267475796, guid: 1c78d18dba1098a46a6b561a0587f2a6, type: 3}
+      propertyPath: chasingRange
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 6610514484267475796, guid: 1c78d18dba1098a46a6b561a0587f2a6, type: 3}
+      propertyPath: interactRange
+      value: 0.95
+      objectReference: {fileID: 0}
+    - target: {fileID: 6610514484267475796, guid: 1c78d18dba1098a46a6b561a0587f2a6, type: 3}
+      propertyPath: visionColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6610514484267475796, guid: 1c78d18dba1098a46a6b561a0587f2a6, type: 3}
+      propertyPath: visionColor.b
+      value: 0.93424654
+      objectReference: {fileID: 0}
+    - target: {fileID: 6610514484267475796, guid: 1c78d18dba1098a46a6b561a0587f2a6, type: 3}
+      propertyPath: visionColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6610514484267475796, guid: 1c78d18dba1098a46a6b561a0587f2a6, type: 3}
+      propertyPath: visionColor.r
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6610514484267475796, guid: 1c78d18dba1098a46a6b561a0587f2a6, type: 3}
+      propertyPath: AttackOffset.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6610514484267475796, guid: 1c78d18dba1098a46a6b561a0587f2a6, type: 3}
+      propertyPath: interactOffset.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6610514484267475796, guid: 1c78d18dba1098a46a6b561a0587f2a6, type: 3}
+      propertyPath: wallLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6610514484267475796, guid: 1c78d18dba1098a46a6b561a0587f2a6, type: 3}
+      propertyPath: playerLayer.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 6610514484267475796, guid: 1c78d18dba1098a46a6b561a0587f2a6, type: 3}
+      propertyPath: timeBeforEnterSameDoorAgain
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6669698822064037087, guid: 1c78d18dba1098a46a6b561a0587f2a6, type: 3}
       propertyPath: m_RootOrder
@@ -41489,8 +41527,7 @@ MonoBehaviour:
   connectDoor: {fileID: 0}
   conditionItem: {fileID: 0}
   isSpacialDoor: 0
-  isPlayerUseItBefore: 0
-  canEnemyEnter: 0
+  notForEnemy: 0
   triggerDoorEvents:
     m_PersistentCalls:
       m_Calls: []
@@ -41786,8 +41823,7 @@ MonoBehaviour:
   connectDoor: {fileID: 0}
   conditionItem: {fileID: 0}
   isSpacialDoor: 1
-  isPlayerUseItBefore: 0
-  canEnemyEnter: 0
+  notForEnemy: 0
   triggerDoorEvents:
     m_PersistentCalls:
       m_Calls: []
@@ -42356,8 +42392,7 @@ MonoBehaviour:
   connectDoor: {fileID: 4695122923096823983}
   conditionItem: {fileID: 0}
   isSpacialDoor: 0
-  isPlayerUseItBefore: 0
-  canEnemyEnter: 0
+  notForEnemy: 0
   triggerDoorEvents:
     m_PersistentCalls:
       m_Calls: []
@@ -42392,8 +42427,7 @@ MonoBehaviour:
   connectDoor: {fileID: 0}
   conditionItem: {fileID: 0}
   isSpacialDoor: 0
-  isPlayerUseItBefore: 0
-  canEnemyEnter: 0
+  notForEnemy: 0
   triggerDoorEvents:
     m_PersistentCalls:
       m_Calls: []
@@ -42663,8 +42697,7 @@ MonoBehaviour:
   connectDoor: {fileID: 0}
   conditionItem: {fileID: 0}
   isSpacialDoor: 1
-  isPlayerUseItBefore: 0
-  canEnemyEnter: 0
+  notForEnemy: 0
   triggerDoorEvents:
     m_PersistentCalls:
       m_Calls: []

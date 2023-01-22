@@ -16,7 +16,7 @@ namespace PluggableAI
 
         bool IsPlayerInFrontVision(StateController controller)
         {
-            if(Physics2D.Raycast(controller.transform.position,controller.moveDirection,controller.frontVisionRange,playerLayer))
+            if(controller.IsPlayerInRange(controller.visionRange))
                 return true;
             else
                 return false;

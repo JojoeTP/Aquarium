@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   oneTimeActions:
   - {fileID: 11400000, guid: 5494363155d20a941a497627a1cab019, type: 2}
-  updateActions: []
+  LoopActions: []
   transitions:
-  - decision: {fileID: 11400000, guid: ff43d33c6a7474441b424775ad8e255d, type: 2}
+  - decision: {fileID: 11400000, guid: c8480c166d2bf2e43ad1d8099a2bb1a5, type: 2}
     trueState: {fileID: 11400000, guid: 890dae282cfbc8946be8c32b7503ea3a, type: 2}
-    falseState: {fileID: 11400000, guid: 6fbdd43bad4717c4eb7e5b5ad816ffec, type: 2}
-  waitingTime: 5
+    falseState: {fileID: 11400000, guid: f20b3b1b184cf7e4389f2449124c1051, type: 2}
+  timeBeforeSwitchState: 2
