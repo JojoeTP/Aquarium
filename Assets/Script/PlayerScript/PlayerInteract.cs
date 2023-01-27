@@ -12,6 +12,8 @@ public class PlayerInteract : MonoBehaviour
 
     DoorSystem enteringDoor;
 
+    public DoorSystem EnteringDoor {set {enteringDoor = value;}}
+
     public event Action<Item> OnOpenItemPopUpUI = delegate {};
 
     void Start()
@@ -129,7 +131,7 @@ public class PlayerInteract : MonoBehaviour
         return false;
     }
 
-    void EnterDoor()
+    public void EnterDoor()
     {
         if(PlayerManager.inst.playerState != PlayerManager.PLAYERSTATE.NONE)
             return;
