@@ -43,13 +43,13 @@ Material:
     m_Ints: []
     m_Floats:
     - _OffSet: 5.02
-    - _Power: 3.57
+    - _Power: 3.56
     - _QueueControl: 0
     - _QueueOffset: 0
     - _Scale: 3.99
     - _Speed: 1
     m_Colors:
-    - _Color: {r: 0, g: 0.3328632, b: 1.5216606, a: 1}
+    - _Color: {r: 0.020539545, g: 0.03288054, b: 0.07666169, a: 1}
     - _Strength: {r: 2.54, g: 5.01, b: 0, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &8684884187024296126
