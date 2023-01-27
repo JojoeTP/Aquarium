@@ -86,7 +86,7 @@ MonoBehaviour:
   moveDirection: {x: -1, y: 0, z: 0}
   currentState: {fileID: 11400000, guid: 2c323345aef175d49bb16c3bd30b6651, type: 2}
   remainState: {fileID: 11400000, guid: 6fbdd43bad4717c4eb7e5b5ad816ffec, type: 2}
-  animator: {fileID: 0}
+  animator: {fileID: 3234071485706861581}
   playerLayer:
     serializedVersion: 2
     m_Bits: 64
@@ -331,5 +331,10 @@ PrefabInstance:
 --- !u!4 &586152481963096814 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8655566020016918482, guid: 2f4eae2dc92390e4dbdbbd4593da74d2, type: 3}
+  m_PrefabInstance: {fileID: 8087569911222859068}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &3234071485706861581 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 6691622396414495025, guid: 2f4eae2dc92390e4dbdbbd4593da74d2, type: 3}
   m_PrefabInstance: {fileID: 8087569911222859068}
   m_PrefabAsset: {fileID: 0}
