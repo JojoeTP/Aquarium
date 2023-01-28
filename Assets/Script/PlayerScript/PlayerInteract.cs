@@ -123,9 +123,10 @@ public class PlayerInteract : MonoBehaviour
     
     bool CanEnterDoor(Transform overlap)
     {
-        if(overlap.GetComponent<DoorSystem>() != null)
+        if(overlap.TryGetComponent<DoorSystem>(out var door))
         {
-            return true;
+            if(door.CheckCondition())
+                return true;
         }
 
         return false;
@@ -136,7 +137,6 @@ public class PlayerInteract : MonoBehaviour
         if(PlayerManager.inst.playerState != PlayerManager.PLAYERSTATE.NONE)
             return;
 
-        //Don't play if player can't enter door
         UITransition.inst.DoorTransitionIn();
         
         PlayerManager.inst.playerState = PlayerManager.PLAYERSTATE.ENTERDOOR;
