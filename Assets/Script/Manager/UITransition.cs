@@ -7,6 +7,7 @@ public class UITransition : MonoBehaviour
     public static UITransition inst;
     
     [SerializeField] DoorTransitionScript doorTransition;
+    [SerializeField] CutSceneTransitionScript cutSceneTransition;
 
     private void Awake() 
     {
@@ -16,5 +17,10 @@ public class UITransition : MonoBehaviour
     public void DoorTransitionIn()
     {
         doorTransition.DoorTransitionIn();
+    }
+
+    public void CutSceneTransitionIn()
+    {
+        cutSceneTransition.CutSceneTransitionIn();
     }
 }
