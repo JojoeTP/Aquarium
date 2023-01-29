@@ -56,7 +56,7 @@ public class DoorSystem : MonoBehaviour
         }
     }
 
-    bool CheckCondition()
+    public bool CheckCondition()
     {
         if(conditionItem == null)
             return true;
