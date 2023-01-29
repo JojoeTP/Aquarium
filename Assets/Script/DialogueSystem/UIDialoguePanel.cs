@@ -106,4 +106,10 @@ public class UIDialoguePanel : MonoBehaviour
         character2Sprite = character;
         imageCharacter2.GetComponent<Image>().sprite = character2Sprite;
     }
+
+    public void SetCutSceneSprite(Sprite image)
+    {
+        imageCutScene = image;
+        imageCharacter1.GetComponent<Image>().sprite = imageCutScene;
+    }
 }
