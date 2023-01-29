@@ -44,21 +44,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2693dbca1e2393a45a00ed8993f9b747, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueCanvas: {fileID: 0}
+  UIDialoguePanel: {fileID: 7192231345981163021, guid: 62cf64fd323b70241ba30b867fbd520f, type: 3}
   dialoguePaths:
   - DialogueItem
   - DialogueDataChapter1
   type: 0
-  nameText: {fileID: 0}
-  dialogueText: {fileID: 0}
-  imageCharacter1: {fileID: 0}
-  imageCharacter2: {fileID: 0}
-  imageCutScene: {fileID: 0}
-  continueButton: {fileID: 0}
-  choiceButton1: {fileID: 0}
-  choiceButton2: {fileID: 0}
-  choiceButton1Text: {fileID: 0}
-  choiceButton2Text: {fileID: 0}
   characterSprites:
   - {fileID: 21300000, guid: ad5b13a3dce0ee3408be8179290619ac, type: 3}
   - {fileID: 21300000, guid: 6a0395d933639744592126f0cb885b34, type: 3}

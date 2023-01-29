@@ -34,7 +34,6 @@ public class DialogueManager : MonoBehaviour
     Canvas dialogueCanvas;
     UIDialoguePanel dialoguePanel;
 
-    void Awake()
     void LoadCharacterSprites()
     {
         //loadSprite = (Sprite[])Resources.LoadAll("CutScene");
@@ -47,11 +46,8 @@ public class DialogueManager : MonoBehaviour
 
     void Start()
     {
-        LoadCharacterSprites();
-        ResetCharacterSprite();
-        Initialize();
-        AddListenerToButton();
         LoadDialogueData();
+        LoadCharacterSprites();
     }
 
     void Initialize()
@@ -191,10 +187,8 @@ public class DialogueManager : MonoBehaviour
     {
         if (type == Type.CutScene)
         {
-            var character1 = characterSprites.Find(n => n.name == openWith[checkChoiceId].charaterImage);
-            Debug.Log(character1);
-            Debug.Log(currentId);
-            dialoguePanel.SetCharacter1Sprite(character1);
+            var cutSceneImage = characterSprites.Find(n => n.name == openWith[checkChoiceId].charaterImage);
+            dialoguePanel.SetCutSceneSprite(cutSceneImage);
             dialoguePanel.ImageCutScene.GetComponent<Image>().color = new Color(1, 1, 1, 1);
         }
         else if (type == Type.Dialogue)
