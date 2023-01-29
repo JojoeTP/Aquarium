@@ -12,6 +12,8 @@ public class PlayerInteract : MonoBehaviour
 
     DoorSystem enteringDoor;
 
+    public DoorSystem EnteringDoor {set {enteringDoor = value;}}
+
     public event Action<Item> OnOpenItemPopUpUI = delegate {};
 
     void Start()
@@ -70,11 +72,16 @@ public class PlayerInteract : MonoBehaviour
 
     void StartDialogue(TalkWithNPC NPC)
     {
-        if(DialogueManager.inst.currentNPC == null)
+        if (PlayerManager.inst.playerState == PlayerManager.PLAYERSTATE.CONVERSATION)
+        {
+            return;
+        }
+        if (DialogueManager.inst.currentNPC == null)
         {
             DialogueManager.inst.currentNPC = NPC;
             DialogueManager.inst.currentDialogue = NPC.startWithDialogueId;
         }
+
         DialogueManager.inst.StartDialogue();
         PlayerManager.inst.playerState = PlayerManager.PLAYERSTATE.CONVERSATION;
         return;
@@ -121,20 +128,20 @@ public class PlayerInteract : MonoBehaviour
     
     bool CanEnterDoor(Transform overlap)
     {
-        if(overlap.GetComponent<DoorSystem>() != null)
+        if(overlap.TryGetComponent<DoorSystem>(out var door))
         {
-            return true;
+            if(door.CheckCondition())
+                return true;
         }
 
         return false;
     }
 
-    void EnterDoor()
+    public void EnterDoor()
     {
         if(PlayerManager.inst.playerState != PlayerManager.PLAYERSTATE.NONE)
             return;
 
-        //Don't play if player can't enter door
         UITransition.inst.DoorTransitionIn();
         
         PlayerManager.inst.playerState = PlayerManager.PLAYERSTATE.ENTERDOOR;
