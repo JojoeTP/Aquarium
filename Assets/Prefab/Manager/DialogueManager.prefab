@@ -46,19 +46,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UIDialoguePanel: {fileID: 7192231345981163021, guid: 62cf64fd323b70241ba30b867fbd520f, type: 3}
   dialoguePaths:
-  - DialogueItem
   - DialogueDataChapter1
+  - DialogueItem
+  - DialogueData
   type: 0
-  characterSprites:
-  - {fileID: 21300000, guid: ad5b13a3dce0ee3408be8179290619ac, type: 3}
-  - {fileID: 21300000, guid: 6a0395d933639744592126f0cb885b34, type: 3}
-  - {fileID: 21300000, guid: 49ed09c0a1dcea04d9aaa24b2786b25a, type: 3}
-  - {fileID: 21300000, guid: 4af56009f79d04042ac398be001b3d04, type: 3}
-  - {fileID: 21300000, guid: 6d4b9403c6e6012488c8a9aacbd6dd6c, type: 3}
-  - {fileID: 21300000, guid: c86fa6ee1abbbd142944366f4de908bf, type: 3}
-  - {fileID: 21300000, guid: 26f77a40fb5cd4e48a35c9f7c885445e, type: 3}
-  - {fileID: 21300000, guid: b7f81f6006185eb4580329ce10282e3c, type: 3}
-  - {fileID: 21300000, guid: c69079ffa033a704e8cade624980f126, type: 3}
+  characterSprites: []
   currentId: 
   currentNPC: {fileID: 0}
   currentDialogue: 

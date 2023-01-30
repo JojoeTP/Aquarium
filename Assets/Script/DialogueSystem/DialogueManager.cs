@@ -240,13 +240,16 @@ public class DialogueManager : MonoBehaviour
     {
         if (currentId == "")
         {
+            if (type == Type.CutScene)
+            {
+                UITransition.inst.CutSceneTransitionIn();
+            }
             EndDialogue();
             return;
         }
         CheckIfHaveChoice(currentId);
         CheckDialogueType(currentId);
-        //CheckMainCharacterSpeak(currentId);
-        
+
         dialoguePanel.NameText.text = openWith[currentId].character;
         StopAllCoroutines();
         StartCoroutine(TypeSentence(openWith[currentId].dialogueText));

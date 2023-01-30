@@ -7487,7 +7487,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7794906, y: 1}
+    m_SensorSize: {x: 1.7771003, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -22563,10 +22563,6 @@ PrefabInstance:
     - target: {fileID: 2347664267870117880, guid: 2916f11d05ed43143896bd1038986891, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2347664267870117883, guid: 2916f11d05ed43143896bd1038986891, type: 3}
-      propertyPath: m_SortingOrder
-      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2916f11d05ed43143896bd1038986891, type: 3}
@@ -41214,77 +41210,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 572766039}
     m_Modifications:
-    - target: {fileID: 2504612249614600641, guid: e1fb8775c647e6c4facdd190c6b4d472, type: 3}
-      propertyPath: nameText
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2504612249614600641, guid: e1fb8775c647e6c4facdd190c6b4d472, type: 3}
-      propertyPath: dialogueText
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2504612249614600641, guid: e1fb8775c647e6c4facdd190c6b4d472, type: 3}
-      propertyPath: choiceButton1
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2504612249614600641, guid: e1fb8775c647e6c4facdd190c6b4d472, type: 3}
-      propertyPath: choiceButton2
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2504612249614600641, guid: e1fb8775c647e6c4facdd190c6b4d472, type: 3}
-      propertyPath: imageCutScene
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2504612249614600641, guid: e1fb8775c647e6c4facdd190c6b4d472, type: 3}
-      propertyPath: continueButton
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2504612249614600641, guid: e1fb8775c647e6c4facdd190c6b4d472, type: 3}
-      propertyPath: dialogueCanvas
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2504612249614600641, guid: e1fb8775c647e6c4facdd190c6b4d472, type: 3}
-      propertyPath: imageCharacter1
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2504612249614600641, guid: e1fb8775c647e6c4facdd190c6b4d472, type: 3}
-      propertyPath: imageCharacter2
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2504612249614600641, guid: e1fb8775c647e6c4facdd190c6b4d472, type: 3}
-      propertyPath: choiceButton1Text
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2504612249614600641, guid: e1fb8775c647e6c4facdd190c6b4d472, type: 3}
-      propertyPath: choiceButton2Text
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2504612249614600641, guid: e1fb8775c647e6c4facdd190c6b4d472, type: 3}
-      propertyPath: dialoguePaths.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2504612249614600641, guid: e1fb8775c647e6c4facdd190c6b4d472, type: 3}
-      propertyPath: characterSprites.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2504612249614600641, guid: e1fb8775c647e6c4facdd190c6b4d472, type: 3}
-      propertyPath: dialoguePaths.Array.data[0]
-      value: DialogueDataChapter1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2504612249614600641, guid: e1fb8775c647e6c4facdd190c6b4d472, type: 3}
-      propertyPath: dialoguePaths.Array.data[1]
-      value: DialogueItem
-      objectReference: {fileID: 0}
-    - target: {fileID: 2504612249614600641, guid: e1fb8775c647e6c4facdd190c6b4d472, type: 3}
-      propertyPath: dialoguePaths.Array.data[2]
-      value: DialogueData
-      objectReference: {fileID: 0}
     - target: {fileID: 3638635127206547181, guid: e1fb8775c647e6c4facdd190c6b4d472, type: 3}
       propertyPath: m_Name
       value: DialogueManager
-      objectReference: {fileID: 0}
-    - target: {fileID: 3638635127206547181, guid: e1fb8775c647e6c4facdd190c6b4d472, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6048841169734829090, guid: e1fb8775c647e6c4facdd190c6b4d472, type: 3}
       propertyPath: m_RootOrder
@@ -42633,7 +42561,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.496704, y: 0.59886175}
+    oldSize: {x: 2.0568848, y: 0.35227165}
     newSize: {x: 67.87022, y: 11.797753}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
