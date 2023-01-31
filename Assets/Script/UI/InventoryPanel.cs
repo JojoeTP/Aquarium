@@ -44,7 +44,7 @@ public class InventoryPanel : MonoBehaviour
             var _itemIndex = itemIndex;
 
 
-            var itemData = playerItemDictionary.ElementAt(_itemIndex).Value;
+            var itemData = ItemManager.Inst.GetItemByID(playerItemDictionary.ElementAt(_itemIndex).Value);
 
             clone.GetComponent<Toggle>().onValueChanged.AddListener((b) => 
             {

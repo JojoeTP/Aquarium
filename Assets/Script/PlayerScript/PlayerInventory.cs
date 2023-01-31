@@ -5,11 +5,11 @@ using UnityEngine.InputSystem;
 
 public class PlayerInventory : MonoBehaviour
 {
-    public Dictionary<string,ItemData> PlayerItemDictionary {get {return playerItemDictionary;}}
-    Dictionary<string,ItemData> playerItemDictionary = new Dictionary<string, ItemData>();
+    public Dictionary<string,string> PlayerItemDictionary {get {return playerItemDictionary;}}
+    Dictionary<string,string> playerItemDictionary = new Dictionary<string, string>();
     
     public void AddItem(ItemScriptableObject item)
     {
-        playerItemDictionary.Add(item.name,item.itemData);
+        playerItemDictionary.Add(item.name,item.itemData.ItemID);
     }
 }

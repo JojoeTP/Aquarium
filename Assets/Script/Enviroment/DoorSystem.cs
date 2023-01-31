@@ -66,7 +66,7 @@ public class DoorSystem : MonoBehaviour
         //     if(item.itemData == conditionItem.itemData)
         //         return true;
         // }
-        if(PlayerManager.inst.PlayerInventory.PlayerItemDictionary.ContainsValue(conditionItem.itemData))
+        if(PlayerManager.inst.PlayerInventory.PlayerItemDictionary.ContainsValue(conditionItem.itemData.ItemID))
         {
             return true;
         }

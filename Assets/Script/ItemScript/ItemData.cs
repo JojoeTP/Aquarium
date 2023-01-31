@@ -5,6 +5,7 @@ using UnityEngine;
 [System.Serializable]
 public class ItemData
 {
+    public string ItemID;
     public string ItemName;
     public string ItemDescription;
     public Sprite ItemSprite;
