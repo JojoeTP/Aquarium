@@ -38,4 +38,19 @@ public class SaveGameData
         return newPos;
     }
 
+    public float GetPlayerParticipateID()
+    {
+        return participateID;
+    }
+
+    public float GetPlayerStamina()
+    {
+        return playerStamina;
+    }
+
+    public Dictionary<string,string> GetPlayerItem()
+    {
+        return playerItem;
+    }
+
 }
