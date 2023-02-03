@@ -47,18 +47,12 @@ public class DoorEncryption : MonoBehaviour
         ChangeState(PuzzleState.STOP);
     }
 
-    void FixedUpdate()
-    {
-        // Timer();
-    }
-
     void SettingStartPuzzle()
     {
         doorTrigger.triggerConditionEvent.RemoveAllListeners();
-        doorTrigger.triggerConditionEvent.AddListener( () => {
-            //setlocation before start puzzle
+        doorTrigger.triggerConditionEvent.AddListener( () => 
+        {
             doorTrigger.connectDoor = startPostion;
-
             StartPuzzle();
         }); 
     }
@@ -99,6 +93,7 @@ public class DoorEncryption : MonoBehaviour
         }
     }
 
+    //Use it in update when want to count time in puzzle
     void Timer()
     {   
         switch(currentstate)
@@ -113,7 +108,6 @@ public class DoorEncryption : MonoBehaviour
                 // {
                 //     OnTimeOut();
                 // }
-
                 break;
             case PuzzleState.FINSIH :
                 break;
@@ -153,11 +147,6 @@ public class DoorEncryption : MonoBehaviour
             OnSelectDoor(upDoor);
         }); 
 
-        //downDoor.triggerConditionEvent.AddListener( () => {
-        //    EnterEncryptionDoor('D');
-        //    OnSelectDoor(downDoor);
-        //}); 
-
         rightDoor.triggerConditionEvent.AddListener( () => {
             EnterEncryptionDoor('R');
             OnSelectDoor(rightDoor);
@@ -183,9 +172,7 @@ public class DoorEncryption : MonoBehaviour
         if(currentCodeIndex > revertIndex)
             labyrinthBG.sprite = labyrinthSprite[failCount];
 
-        // if(!isAlreadyInvertCode)
         RandomInvertCode();
-            
     }
 
     void OnFinish(DoorSystem door)
@@ -233,7 +220,6 @@ public class DoorEncryption : MonoBehaviour
 
         leftDoor.triggerConditionEvent.RemoveAllListeners();
         upDoor.triggerConditionEvent.RemoveAllListeners();
-        //downDoor.triggerConditionEvent.RemoveAllListeners();
         rightDoor.triggerConditionEvent.RemoveAllListeners();
     }
 
@@ -241,14 +227,9 @@ public class DoorEncryption : MonoBehaviour
     {
         if(Random.Range(0,100) > 50)
         {
-            // isAlreadyInvertCode = true;
-
             char? invertChar = null;
             string newCode = "";
             revertIndex = currentCodeIndex;
-
-            // if(encryptionCode[currentCodeIndex] == 'U')
-            //     revertIndex += 1;
 
             switch(encryptionCode[revertIndex])
             {
@@ -258,9 +239,6 @@ public class DoorEncryption : MonoBehaviour
                 case 'U' :
                     invertChar = 'U';
                     break;
-                //case 'D' :
-                //    invertChar = 'U';
-                //    break;
                 case 'R' :
                     invertChar = 'L';
                     break;

@@ -10,7 +10,7 @@ public class PlayerStaminaUI : MonoBehaviour
 
     void Start()
     {
-        playerMovement = PlayerManager.inst.playerMovement;        
+        playerMovement = PlayerManager.inst.PlayerMovement;        
     }
 
     void FixedUpdate()

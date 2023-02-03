@@ -42,9 +42,18 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "OpenInventory",
+                    "name": "ToggleInventory",
                     "type": "Button",
                     "id": "8be79d19-ef0d-4e11-9903-cddd0d0cb43f",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Press",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "ToggleSetting",
+                    "type": "Button",
+                    "id": "b4526071-c85c-410f-b57b-0c09319a897b",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "Press",
@@ -123,18 +132,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "OpenInventory",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "7eb91639-b997-4752-b70a-f13291a20d32",
-                    "path": "<Keyboard>/escape",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "OpenInventory",
+                    "action": "ToggleInventory",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -168,6 +166,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "Light",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "68a65a02-ab41-49ae-8019-e0776ddd1cf8",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ToggleSetting",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

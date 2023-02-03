@@ -7,8 +7,6 @@ namespace PluggableAI
     [CreateAssetMenu(menuName = "PluggableAI/Decesion/ContinueChase")]
     public class ContinueChase : Decision
     {
-        public LayerMask playerLayer;
-
         public override bool Decide(StateController controller)
         {
             bool isContinueChase = IsContinueChase(controller);
@@ -18,23 +16,28 @@ namespace PluggableAI
 
         bool IsContinueChase(StateController controller)
         {
-            if(controller.chasingTime > 0)
+            controller.ToggleAttack(false);
+
+            if(controller.ElapsedchasingTime > 0)
             {
-                controller.ToggleChasing(true);
-                controller.ToggleAttack(false);
+                ContinueChasing(controller);
                 return true;
             }
-            
-            if(Physics2D.Raycast(controller.transform.position,controller.moveDirection,controller.chasingRange,playerLayer))
+
+            if(controller.IsPlayerInRange(controller.chasingRange))
             {
-                controller.ToggleChasing(true);
-                controller.ToggleAttack(false);
+                ContinueChasing(controller);
+                controller.ResetChasingTime();
                 return true;
             }
 
             controller.ToggleChasing(false);
-            controller.ToggleAttack(false);
             return false;
+        }
+
+        void ContinueChasing(StateController controller)
+        {
+            controller.ToggleChasing(true);
         }
     }
 }

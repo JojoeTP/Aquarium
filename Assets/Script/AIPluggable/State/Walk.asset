@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Walk
   m_EditorClassIdentifier: 
   oneTimeActions: []
-  updateActions:
+  LoopActions:
   - {fileID: 11400000, guid: 798650dd1b5ecd14c9b1469b53eeaeb5, type: 2}
   transitions:
   - decision: {fileID: 11400000, guid: 809d6d0b0424ba04ea6a6637e4d49b5b, type: 2}
@@ -22,10 +22,10 @@ MonoBehaviour:
   - decision: {fileID: 11400000, guid: 15cefec3a388de64a9aee889e87677c3, type: 2}
     trueState: {fileID: 11400000, guid: 890dae282cfbc8946be8c32b7503ea3a, type: 2}
     falseState: {fileID: 11400000, guid: 6fbdd43bad4717c4eb7e5b5ad816ffec, type: 2}
-  - decision: {fileID: 11400000, guid: 33339e472625fea4dbf06f7ce62c51f5, type: 2}
-    trueState: {fileID: 11400000, guid: 4709f13980308934c861888cd63b1189, type: 2}
-    falseState: {fileID: 11400000, guid: 6fbdd43bad4717c4eb7e5b5ad816ffec, type: 2}
   - decision: {fileID: 11400000, guid: 5889e4e68eb0c4d44b5f8121cdbb5782, type: 2}
     trueState: {fileID: 11400000, guid: 94eac04406a7c4142addc0b604aaf072, type: 2}
     falseState: {fileID: 11400000, guid: 6fbdd43bad4717c4eb7e5b5ad816ffec, type: 2}
-  waitingTime: 0
+  - decision: {fileID: 11400000, guid: 33339e472625fea4dbf06f7ce62c51f5, type: 2}
+    trueState: {fileID: 11400000, guid: 4709f13980308934c861888cd63b1189, type: 2}
+    falseState: {fileID: 11400000, guid: 6fbdd43bad4717c4eb7e5b5ad816ffec, type: 2}
+  timeBeforeSwitchState: 0

@@ -7,25 +7,19 @@ public class ActionEventManager : MonoBehaviour
     public static ActionEventManager inst;
 
     [Header("Labyrinth")]
-    public SpriteRenderer labyrinthMap;
-    public Sprite labyrinthMapSprite;
+    public Material labyrinthMapMaterial;
 
     private void Awake() 
     {
         inst = this;
     }
-    
+
 #region ItemActionEvent
     public void OnPickUpLabyrinthCoin()
     {
-        labyrinthMap.sprite = labyrinthMapSprite;
+        labyrinthMapMaterial.SetInt("_HideMainTex",1);
     }
 #endregion
-
-    public void Test()
-    {
-        print("Test Dialogue Event");
-    }
 
     public void CutSceneDoor()
     {
@@ -35,5 +29,10 @@ public class ActionEventManager : MonoBehaviour
     public void CutSceneHidingSpot()
     {
         print("CutSceneHidingSpot");
+    }
+
+    public void TestSaveGame()
+    {
+        SaveGameSystemManager.inst.SaveGame();
     }
 }

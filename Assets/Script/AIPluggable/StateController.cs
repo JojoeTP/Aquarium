@@ -8,16 +8,15 @@ public class StateController : MonoBehaviour
 {
     [Header("Debugger")]
     
-    public Vector3 InteractOffset;
+    [SerializeField] Vector3 interactOffset;
     [SerializeField] Color InteractColor;
-    public Vector3 AttackOffset;
+    [SerializeField] Vector3 AttackOffset;
     [SerializeField] Color AttackColor;
-    public Vector3 VisonOffset;
-    [SerializeField] Color VisionColor;
-    public Vector3 ChasingRangeOffset;
+    [SerializeField] Vector3 visonOffset;
+    [SerializeField] Color visionColor;
+    [SerializeField] Vector3 chasingRangeOffset;
     [SerializeField] Color ChaseColor;
-    public Vector3 StateLableOffset;
-    
+    public Vector3 stateLableOffset;
 
     [Header("STATUS")]
     //Speed
@@ -25,8 +24,7 @@ public class StateController : MonoBehaviour
     public float chasingSpeed = 6f;
     [Header("-------")]
     //Sensation
-    public float frontVisionRange = 10f;
-    public float backVisionRange = 2f;
+    public float visionRange = 10f;
     public float interactRange = 1f;
     [Header("-------")]
     //Attack
@@ -35,15 +33,25 @@ public class StateController : MonoBehaviour
     //Chase
     public float chasingRange = 0f;
     public float chasingTime = 0f;
+    float elapsedChasingTime;
     
     [Header("Variable")]
     public Vector3 moveDirection = Vector3.right;
     public State currentState;
     public State remainState;
-    public float waitingTime;
+    float timeBeforeSwitchState;
     public Animator animator;
+    [SerializeField] LayerMask playerLayer;
+    [SerializeField] LayerMask wallLayer;
 
-   
+    [Header("Door")]
+    public float timeBeforEnterSameDoorAgain;
+    float elapsedTimeEnterDoor;
+    public DoorSystem enteredDoor;
+
+    public float ElapsedchasingTime {get {return elapsedChasingTime;}}
+    public float TimeBeforeSwitchState {get {return timeBeforeSwitchState;}}
+
     private void Update() 
     {
         
@@ -51,47 +59,71 @@ public class StateController : MonoBehaviour
 
     private void FixedUpdate() 
     {
-        // currentState.FixedUpdateState(this);
+        timeBeforeSwitchState -= Time.deltaTime;
+        elapsedTimeEnterDoor -= Time.deltaTime;
+        elapsedChasingTime -= Time.deltaTime;
+
+        if(elapsedTimeEnterDoor <= 0)
+            ResetEnteredDoor();
+
         currentState.FixedUpdateState(this);
+    }
+
+    public void ResetEnteredDoor()
+    {
+        elapsedTimeEnterDoor = timeBeforEnterSameDoorAgain;
+        enteredDoor = null;
+    }
+
+    public void ResetChasingTime()
+    {
+        elapsedChasingTime = chasingTime;
     }
 
     public void TransitionToState(State nextState)
     {
         if(nextState != remainState)
         {
-            waitingTime = nextState.waitingTime;
+            timeBeforeSwitchState = nextState.timeBeforeSwitchState;
             currentState = nextState;
-            nextState.DoActionsOneTime(this);
-            OnExitState();
+            OnEnterState(nextState);
         }
     }
 
-
-    void OnExitState()
+    void OnEnterState(State nextState)
     {
-        
+        nextState.InitState();
     }
 
-    public void Turning()
+    public bool IsPlayerInRange(float range)
     {
-        moveDirection *= -1f;
-        transform.localScale = new Vector3(transform.localScale.x * -1f,transform.localScale.y,transform.localScale.z);
+        if(Physics2D.Raycast(transform.position,moveDirection,range,playerLayer))
+            return true;
+
+        return false;
+    }
+
+    public bool IsWallInRange(float range)
+    {
+        if(Physics2D.Raycast(transform.position,moveDirection,range,wallLayer))
+            return true;
+
+        return false;
     }
 
     private void OnDrawGizmos() 
     {
         Gizmos.color = InteractColor;
-        Gizmos.DrawWireSphere(transform.position + InteractOffset,interactRange); //INTERACT RANGE
+        Gizmos.DrawWireSphere(transform.position + interactOffset,interactRange); //INTERACT RANGE
         
         Gizmos.color = AttackColor;
-        Gizmos.DrawRay(transform.position + AttackOffset,moveDirection * attackRange); //HIT RANGE
+        Gizmos.DrawWireSphere(transform.position + AttackOffset,attackRange); //HIT RANGE
 
-        Gizmos.color = VisionColor;
-        Gizmos.DrawRay(transform.position + VisonOffset,moveDirection * frontVisionRange); //VISION RANGE
-        Gizmos.DrawRay(transform.position + VisonOffset,-moveDirection * backVisionRange); //VISION RANGE
+        Gizmos.color = visionColor;
+        Gizmos.DrawWireSphere(transform.position + visonOffset,visionRange); //VISION RANGE
 
         Gizmos.color = ChaseColor;
-        Gizmos.DrawRay(transform.position + ChasingRangeOffset,moveDirection * chasingRange); //VISION RANGE
+        Gizmos.DrawWireSphere(transform.position + chasingRangeOffset,chasingRange); //VISION RANGE
     }
 
     public void ToggleChasing(bool enabled)

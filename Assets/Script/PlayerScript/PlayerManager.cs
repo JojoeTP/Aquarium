@@ -11,6 +11,8 @@ public class PlayerManager : MonoBehaviour
         CONVERSATION,
         HIDING,
         ENTERDOOR,
+        OPENPANEL,
+        GETTINGITEM,
     }
 
     public static PlayerManager inst;
@@ -18,10 +20,15 @@ public class PlayerManager : MonoBehaviour
     public Animator playerAnimator;
 
     [Header("PlayerScript")]
-    public PlayerMovement playerMovement;
-    public PlayerInteract playerInteract;
-    public PlayerLight playerLight;
-    public PlayerInventory playerInventory;
+    PlayerMovement playerMovement;
+    PlayerInteract playerInteract;
+    PlayerLight playerLight;
+    PlayerInventory playerInventory;
+
+    public PlayerMovement PlayerMovement {get {return playerMovement;}}
+    public PlayerInteract PlayerInteract {get {return playerInteract;}}
+    public PlayerLight PlayerLight {get {return playerLight;}}
+    public PlayerInventory PlayerInventory {get {return playerInventory;}}
 
     [Header("PlayerAction")]
     public PLAYERSTATE playerState;
@@ -29,18 +36,17 @@ public class PlayerManager : MonoBehaviour
     private void Awake() 
     {
         inst = this;
+
+        TryGetComponent<PlayerMovement>(out playerMovement);
+        TryGetComponent<PlayerInteract>(out playerInteract);
+        TryGetComponent<PlayerLight>(out playerLight);
+        TryGetComponent<PlayerInventory>(out playerInventory);
     }
 
     void Start()
     {
+        Init();
         playerState = PLAYERSTATE.NONE;
-        
-        InputSystemManager.Inst.onMove += playerMovement.OnMove;
-        InputSystemManager.Inst.onPressMove += playerMovement.OnPressMove;
-        InputSystemManager.Inst.onSprint += playerMovement.OnSprint;
-        InputSystemManager.Inst.onInteract += playerInteract.OnInteract;
-        InputSystemManager.Inst.onOpenInventory += playerInventory.OnOpenInventory;
-        InputSystemManager.Inst.onLight += playerLight.OnLight;
     }
 
     void Update()
@@ -50,7 +56,15 @@ public class PlayerManager : MonoBehaviour
 
     private void FixedUpdate() 
     {
-        playerMovement.Move();
+
+    }
+
+    void Init()
+    {
+        playerState = PLAYERSTATE.NONE;
+        //Set position
+        //Set Item in inventory
+
     }
 
     void SetUpPlayer()

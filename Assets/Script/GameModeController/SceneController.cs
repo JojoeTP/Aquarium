@@ -1,132 +1,66 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System;
 
 public class SceneController : MonoBehaviour
 {
+    public static SceneController inst;
     public string SCENE_GAMEPLAY { get {return "Scene_Aquarium";} }
     public string SCENE_MAINMENU { get {return "Scene_MainMenu";} }
-    public static SceneController Inst;
+    public string SCENE_LOADING { get {return "Scene_Loading";} }
 
-    readonly Dictionary<string,AbstractGameModeController> gameModeControllers = new Dictionary<string, AbstractGameModeController>();
-    private AbstractGameModeController currentActiveController;
-    public bool IsLoadingScene { get; private set; }
-    
-    private void Awake()
+    Scene loadedSceneBefore;
+
+    void Awake() 
     {
-        if (Inst == null)
-            Inst = this;
+        if(inst == null)
+            inst = this;
     }
 
     void Start()
     {
-        //load mainmenu
-        LoadSceneOverlay(SCENE_MAINMENU);
+        Initilize();
     }
 
-#region  GameModeController
-    public void AddGameController(string sceneName,AbstractGameModeController controller )
+    void Initilize()
     {
-        if(!gameModeControllers.ContainsKey(sceneName))
+        OnLoadSceneAsync(SCENE_MAINMENU);
+    }
+
+    public void OnLoadSceneAsync(string sceneName, Action beforeSwitchScene = null, Action afterSwitchScene = null)
+    {
+        StartCoroutine(LoadSceneAsync(sceneName,beforeSwitchScene,afterSwitchScene));
+    }
+
+    IEnumerator LoadSceneAsync(string sceneName, Action beforeSwitchScene = null, Action afterSwitchScene = null)
+    {
+        beforeSwitchScene?.Invoke();
+
+        yield return null;
+
+        var asyncOparation = SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Additive);
+
+        while(!asyncOparation.isDone)
         {
-            gameModeControllers.Add(sceneName,controller);
+            print("Scene progress : " + asyncOparation.progress);
+            yield return null;
         }
-    }
-
-    public void RemoveGameController(string sceneName)
-    {
-        if(gameModeControllers.ContainsKey(sceneName))
-            gameModeControllers.Remove(sceneName);
-    }
-
-    public AbstractGameModeController GetGameController(string sceneName)
-    {
-        return gameModeControllers.ContainsKey(sceneName) ? gameModeControllers[sceneName] : null;
-    }
-
-    public T GetGameController<T>()
-    {
-        foreach(var controller in gameModeControllers)
-        {
-            object value = controller.Value;
-            if(value.GetType() == typeof(T))
-                return (T)Convert.ChangeType(value, typeof(T));
-        }
-        return default;
-    }
-
-    public AbstractGameModeController GetCurrentActiveController()
-    {
-        return currentActiveController;
-    }
-
-#endregion
-
-#region loadScene
-    public void LoadSceneOverlay(string sceneName)
-    {
-        StartCoroutine(DoLoadSceneOverlay(sceneName));
-    }
-
-    public void LoadStreamingScene (string sceneName)
-    {
-        StartCoroutine (LoadSceneAsync (sceneName));
-    }
-
-    public void UnLoadStreamingScene (string sceneName)
-    {
-        StartCoroutine (UnLoadSceneAsync (sceneName));
-    }
-
-    public void SetSceneActive(string sceneName)
-    {
-        Scene newlyLoadedScene = SceneManager.GetSceneByName(sceneName);
-        if(newlyLoadedScene.isLoaded)
-            SceneManager.SetActiveScene(newlyLoadedScene);
         
-        AbstractGameModeController controller = gameModeControllers[SceneManager.GetActiveScene().name];
-        currentActiveController = controller;
-    }
-
-    public bool IsSceneLoaded(string sceneName)
-    {
-        Scene newlyLoadedScene = SceneManager.GetSceneByName(sceneName);
-        if(newlyLoadedScene.buildIndex == -1)
+        asyncOparation.allowSceneActivation = true;
+        var loadedScene = SceneManager.GetSceneByName(sceneName);
+        
+        if(loadedScene.isLoaded)
         {
-            return false;
+            SceneManager.SetActiveScene(loadedScene);
         }
 
-        return true;
+        afterSwitchScene?.Invoke();
+
+        if(loadedSceneBefore.IsValid())
+            SceneManager.UnloadSceneAsync(loadedSceneBefore);
+
+        loadedSceneBefore = loadedScene;
     }
-
-    private IEnumerator DoLoadSceneOverlay (string sceneName)
-    {
-        // prevScene = SceneManager.GetActiveScene();
-
-        IsLoadingScene = true;
-        
-        yield return SceneManager.LoadSceneAsync (sceneName, LoadSceneMode.Additive);
-
-        Scene newlyLoadedScene = SceneManager.GetSceneAt (SceneManager.sceneCount - 1);
-
-        IsLoadingScene = false;
-        SceneManager.SetActiveScene (newlyLoadedScene);
-    }
-
-    private IEnumerator LoadSceneAsync(string sceneName)
-    {
-        IsLoadingScene = true;
-        yield return SceneManager.LoadSceneAsync (sceneName, LoadSceneMode.Additive);
-        IsLoadingScene = false;
-    }
-
-    private IEnumerator UnLoadSceneAsync(string sceneName)
-    {
-        yield return SceneManager.UnloadSceneAsync (sceneName);
-    }
-#endregion
-
-    
 }

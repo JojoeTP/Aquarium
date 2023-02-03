@@ -17,7 +17,7 @@ namespace PluggableAI
 
         bool IsPlayerInVision(StateController controller)
         {
-            if(Physics2D.Raycast(controller.transform.position,controller.moveDirection,controller.attackRange,playerLayer))
+            if(controller.IsPlayerInRange(controller.attackRange))
                 return true;
             else
                 return false;

@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using TMPro;
 
-public class MainMenuController : AbstractGameModeController
+public class MainMenuController : MonoBehaviour
 {
     enum MenuState
     {
@@ -27,14 +27,6 @@ public class MainMenuController : AbstractGameModeController
 
     Animator animator;
 
-    public override string ControllerName 
-    {
-        get
-        {
-            return "Scene_MainMenu";
-        }
-    }
-
     private void Start() 
     {
         animator = GetComponent<Animator>();
@@ -55,7 +47,6 @@ public class MainMenuController : AbstractGameModeController
                 break;
         }
     }
-
 
     public void OnClickContinue()
     {
@@ -97,36 +88,21 @@ public class MainMenuController : AbstractGameModeController
 
     IEnumerator TransitionToGamePlay()
     {
-        // ItemManager.Inst.SetUpItemPermutation();
-        yield return new WaitForSeconds(1f);
+        yield return null;
+        // maybe switch to loading scene before switch to scene game
 
-        SceneController.Inst.LoadStreamingScene(SceneController.Inst.SCENE_GAMEPLAY);
-        while(true)
-        {
-            var gameplayController = SceneController.Inst.GetGameController(SceneController.Inst.SCENE_GAMEPLAY) as GameplayController;
-            if(gameplayController == null)
-            {
-                yield return null;
-            }
-            else
-            {
-                break;
-            }
-        }
+        SceneController.inst.OnLoadSceneAsync(SceneController.inst.SCENE_GAMEPLAY,ActionBeforSwitchScene,ActionAfterSwitchScene);
 
-        yield return new WaitUntil(() => ((GameplayController)SceneController.Inst.GetGameController(SceneController.Inst.SCENE_GAMEPLAY)).IsInitialized);
+    }
 
-        SceneController.Inst.SetSceneActive(SceneController.Inst.SCENE_GAMEPLAY);
-        
+    void ActionBeforSwitchScene()
+    {
+        print("Before");
+    }
+
+    void ActionAfterSwitchScene()
+    {
+        print("After");
         ItemManager.Inst.SetUpItemPermutation();
-        
-
-        //When all Setting run finish then unload mainmenu scene
-        SceneController.Inst.UnLoadStreamingScene(SceneController.Inst.SCENE_MAINMENU);
-        
-        //run function must do when start aquarium scene
-
-
-
     }
 }

@@ -12,6 +12,7 @@ public class NPCDialogueCondition{
 }
 public class TalkWithNPC : MonoBehaviour
 {
+    public bool isCutScene;
     public string startWithDialogueId;
     public UnityEvent triggerEvents;
     public List<NPCDialogueCondition> NPCList = new List<NPCDialogueCondition>();
@@ -43,10 +44,9 @@ public class TalkWithNPC : MonoBehaviour
     }
     bool CheckCondition(NPCDialogueCondition NPCData)
     {
-        foreach (var item in PlayerManager.inst.playerInventory.itemList)
+        if(PlayerManager.inst.PlayerInventory.PlayerItemDictionary.ContainsValue(NPCData.conditionItem.itemData.ItemID))
         {
-            if (item.itemData == NPCData.conditionItem.itemData)
-                return true;
+            return true;
         }
         return false;
     }
@@ -54,5 +54,24 @@ public class TalkWithNPC : MonoBehaviour
     public void ChangeDialogueId(string changeDialogueId)
     {
         startWithDialogueId = changeDialogueId;
+    }
+
+    public void SetActiveFalse()
+    {
+        this.gameObject.SetActive(false);
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (isCutScene)
+        {
+           if (other.GetComponent<PlayerManager>() != null)
+           {
+                //PlayerEnterDoor(other.transform);
+                // Need Fade Black Animation
+                UITransition.inst.CutSceneTransitionIn();
+                //PlayerManager.inst.PlayerInteract.Interacting();
+            }
+        }
     }
 }

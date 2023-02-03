@@ -17,7 +17,9 @@ public class DoorTransitionScript : MonoBehaviour
 
     public void DoorTransitionOut()
     {
-        PlayerManager.inst.playerInteract.ExitDoor();
+        PlayerManager.inst.PlayerInteract.ExitDoor();
+
         animator.SetTrigger("TransitionOut");
     }
+
 }

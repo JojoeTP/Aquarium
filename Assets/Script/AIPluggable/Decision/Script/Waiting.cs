@@ -15,8 +15,8 @@ namespace PluggableAI
         bool CanSwitchState(StateController controller)
         {
             
-            controller.waitingTime -= Time.deltaTime * 1f;
-            if(controller.waitingTime < 0)
+            // controller.TimeBeforeSwitchState -= Time.deltaTime * 1f;
+            if(controller.TimeBeforeSwitchState < 0)
             {
                 return true;
             }

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using System;
 
 public class PlayerInteract : MonoBehaviour
 {
@@ -9,7 +10,16 @@ public class PlayerInteract : MonoBehaviour
     public Vector2 InteractSize;
     public Vector3 InteractOffset;
 
-    private DoorSystem enteringDoor;
+    DoorSystem enteringDoor;
+
+    public DoorSystem EnteringDoor {set {enteringDoor = value;}}
+
+    public event Action<Item> OnOpenItemPopUpUI = delegate {};
+
+    void Start()
+    {
+        InputSystemManager.Inst.onInteract += OnInteract;    
+    }
 
     public void Interacting()
     {
@@ -59,19 +69,19 @@ public class PlayerInteract : MonoBehaviour
         }
         return false;
     }
-    // void StartDialogue(string startWithDialogueId)
-    // {
-    //     DialogueManager.inst.StartDialogue(startWithDialogueId);
-    //     return;
-    // }
 
     void StartDialogue(TalkWithNPC NPC)
     {
-        if(DialogueManager.inst.currentNPC == null)
+        if (PlayerManager.inst.playerState == PlayerManager.PLAYERSTATE.CONVERSATION)
+        {
+            return;
+        }
+        if (DialogueManager.inst.currentNPC == null)
         {
             DialogueManager.inst.currentNPC = NPC;
             DialogueManager.inst.currentDialogue = NPC.startWithDialogueId;
         }
+
         DialogueManager.inst.StartDialogue();
         PlayerManager.inst.playerState = PlayerManager.PLAYERSTATE.CONVERSATION;
         return;
@@ -100,32 +110,40 @@ public class PlayerInteract : MonoBehaviour
 
     void GetItem(Item item)
     {
-        PlayerManager.inst.playerInventory.itemList.Add(item.item);
-        ItemTimeData itemData = new ItemTimeData();
-        itemData.effectName = ItemManager.Inst.ItemEffectData.ItemEffectSettingList.Find(n => n.iTEMTYPE.HasFlag(item.item.itemData.ItemType)).effectTYPE.ToString();
-        itemData.time = item.GetPickUpTime();
-        RecordTimeManager.Inst.SavePickUpItemTimeData(item.item.itemData.ItemName,itemData);
-        item.OnPickUpEvent();
-        item.gameObject.SetActive(false);
+        // PlayerManager.inst.playerInventory.itemList.Add(item.item);
+        PlayerManager.inst.playerState = PlayerManager.PLAYERSTATE.CONVERSATION;
+        PlayerManager.inst.PlayerInventory.AddItem(item.itemObject);
+        OnOpenItemPopUpUI(item);
+
+        SavePickUpItemTime(item);
     }
 
+    void SavePickUpItemTime(Item item)
+    {
+        ItemTimeData itemData = new ItemTimeData();
+        itemData.effectName = ItemManager.Inst.ItemEffectData.ItemEffectSettingList.Find(n => n.iTEMTYPE.HasFlag(item.itemObject.itemData.ItemType)).effectTYPE.ToString();
+        itemData.time = item.GetPickUpTime();
+        RecordTimeManager.Inst.SavePickUpItemTimeData(item.itemObject.itemData.ItemName,itemData);
+    }
     
     bool CanEnterDoor(Transform overlap)
     {
-        if(overlap.GetComponent<DoorSystem>() != null)
+        if(overlap.TryGetComponent<DoorSystem>(out var door))
         {
-            return true;
+            if(door.CheckCondition())
+                return true;
         }
 
         return false;
     }
 
-    void EnterDoor()
+    public void EnterDoor()
     {
         if(PlayerManager.inst.playerState != PlayerManager.PLAYERSTATE.NONE)
             return;
 
         UITransition.inst.DoorTransitionIn();
+        
         PlayerManager.inst.playerState = PlayerManager.PLAYERSTATE.ENTERDOOR;
     }
 

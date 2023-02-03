@@ -9,10 +9,10 @@ namespace PluggableAI
     {
         public override void Act(StateController controller)
         {
-            Patrol(controller);
+            Chase(controller);
         }
 
-        void Patrol(StateController controller)
+        void Chase(StateController controller)
         {
             controller.ToggleChasing(true);
             controller.ToggleAttack(false);

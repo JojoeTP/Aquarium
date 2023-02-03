@@ -7,8 +7,6 @@ namespace PluggableAI
     [CreateAssetMenu(menuName = "PluggableAI/Decesion/WallInVision")]
     public class WallInVision : Decision
     {
-        public LayerMask wallLayer;
-
         public override bool Decide(StateController controller)
         {
             bool isWallInVision = IsWallInVision(controller);
@@ -17,7 +15,7 @@ namespace PluggableAI
 
         bool IsWallInVision(StateController controller)
         {
-            if(Physics2D.Raycast(controller.transform.position,controller.moveDirection,controller.attackRange,wallLayer))
+            if(controller.IsWallInRange(controller.attackRange))
                 return true;
             else
                 return false;

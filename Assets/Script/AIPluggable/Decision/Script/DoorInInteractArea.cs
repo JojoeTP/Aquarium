@@ -8,8 +8,6 @@ namespace PluggableAI
     [CreateAssetMenu(menuName = "PluggableAI/Decesion/DoorInInteractArea")]
     public class DoorInInteractArea : Decision
     {
-        // public LayerMask playerLayer;
-
         public override bool Decide(StateController controller)
         {
             bool isDoorInInteractArea = IsDoorInInteractArea(controller);
@@ -24,8 +22,17 @@ namespace PluggableAI
 
             foreach(var n in overlapObj)
             {
-                if(n.GetComponent<DoorSystem>() != null)
+                if(n.TryGetComponent<DoorSystem>(out DoorSystem door))
                 {
+                    if(door == controller.enteredDoor)
+                        return false;
+                        
+                    if(door.notForEnemy)
+                        return false;
+
+                    if(controller.IsPlayerInRange(controller.chasingRange))
+                        return false;
+
                     return true;
                 }
             }

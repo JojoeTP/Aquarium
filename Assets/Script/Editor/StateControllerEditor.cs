@@ -10,7 +10,7 @@ public class StateControllerEditor : Editor
     {
         var t = target as StateController;
         var tr = t.transform.position;
-        var offset = t.StateLableOffset;
+        var offset = t.stateLableOffset;
         var stateName = t.currentState.name;
         Handles.Label(tr + offset,stateName);
     }
