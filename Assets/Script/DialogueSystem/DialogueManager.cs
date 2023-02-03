@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using TMPro;
 using System.IO;
 using System;
+using System.Linq;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -24,6 +25,7 @@ public class DialogueManager : MonoBehaviour
     
     bool isChoice = false;
 
+    //[SerializeField] Sprite[] loadSprite;
     [SerializeField] List<Sprite> characterSprites = new List<Sprite>();
     [SerializeField] string currentId;
     public TalkWithNPC currentNPC;
@@ -32,7 +34,12 @@ public class DialogueManager : MonoBehaviour
     Canvas dialogueCanvas;
     UIDialoguePanel dialoguePanel;
 
-    void Awake()
+    void LoadCharacterSprites()
+    {
+        //loadSprite = (Sprite[])Resources.LoadAll("CutScene");
+        characterSprites = Resources.LoadAll<Sprite>("DialogueSprite").ToList();
+    }
+    private void Awake()
     {
         inst = this;
     }
@@ -40,6 +47,7 @@ public class DialogueManager : MonoBehaviour
     void Start()
     {
         LoadDialogueData();
+        LoadCharacterSprites();
     }
 
     void Initialize()
@@ -87,7 +95,6 @@ public class DialogueManager : MonoBehaviour
                 {
                     //ID,character,charaterImage,dialogueText,choice1,choice2,choice1Text,choice2Text,type
                     DialogueInfo newDialogue = new DialogueInfo(data_values[0], data_values[1], data_values[2], data_values[3], data_values[4], data_values[5], data_values[6], data_values[7], data_values[8]);
-                    //Debug.Log(newDialogue.character);
                     openWith.Add(data_values[0], newDialogue);
                 }
             }
@@ -96,7 +103,6 @@ public class DialogueManager : MonoBehaviour
 
     void CheckMainCharacterSpeak(string dialogueId)
     {
-        // if (openWith[dialogueId].character == "อเมเลีย")
         if (openWith[dialogueId].charaterImage.Contains("Amelia"))
         {
             //character1 = Resources.Load<Sprite>("Dialogue/CharacterImage/" + openWith[dialogueId].charaterImage);
@@ -181,10 +187,8 @@ public class DialogueManager : MonoBehaviour
     {
         if (type == Type.CutScene)
         {
-            var character1 = characterSprites.Find(n => n.name == openWith[checkChoiceId].charaterImage);
-            Debug.Log(character1);
-            Debug.Log(currentId);
-            dialoguePanel.SetCharacter1Sprite(character1);
+            var cutSceneImage = characterSprites.Find(n => n.name == openWith[checkChoiceId].charaterImage);
+            dialoguePanel.SetCutSceneSprite(cutSceneImage);
             dialoguePanel.ImageCutScene.GetComponent<Image>().color = new Color(1, 1, 1, 1);
         }
         else if (type == Type.Dialogue)
@@ -236,13 +240,16 @@ public class DialogueManager : MonoBehaviour
     {
         if (currentId == "")
         {
+            if (type == Type.CutScene)
+            {
+                UITransition.inst.CutSceneTransitionIn();
+            }
             EndDialogue();
             return;
         }
         CheckIfHaveChoice(currentId);
         CheckDialogueType(currentId);
-        //CheckMainCharacterSpeak(currentId);
-        
+
         dialoguePanel.NameText.text = openWith[currentId].character;
         StopAllCoroutines();
         StartCoroutine(TypeSentence(openWith[currentId].dialogueText));

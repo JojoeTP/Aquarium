@@ -12,6 +12,7 @@ public class UIDialoguePanel : MonoBehaviour
     [Header("CharacterImage")]
     Sprite character1Sprite;
     Sprite character2Sprite;
+    Sprite cutSceneSprite;
     
     [Header("DialogueText")]
     [SerializeField] TextMeshProUGUI nameText;
@@ -105,5 +106,11 @@ public class UIDialoguePanel : MonoBehaviour
     {
         character2Sprite = character;
         imageCharacter2.GetComponent<Image>().sprite = character2Sprite;
+    }
+
+    public void SetCutSceneSprite(Sprite image)
+    {
+        cutSceneSprite = image;
+        imageCutScene.GetComponent<Image>().sprite = cutSceneSprite;
     }
 }

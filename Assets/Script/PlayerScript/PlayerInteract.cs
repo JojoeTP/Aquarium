@@ -72,11 +72,16 @@ public class PlayerInteract : MonoBehaviour
 
     void StartDialogue(TalkWithNPC NPC)
     {
-        if(DialogueManager.inst.currentNPC == null)
+        if (PlayerManager.inst.playerState == PlayerManager.PLAYERSTATE.CONVERSATION)
+        {
+            return;
+        }
+        if (DialogueManager.inst.currentNPC == null)
         {
             DialogueManager.inst.currentNPC = NPC;
             DialogueManager.inst.currentDialogue = NPC.startWithDialogueId;
         }
+
         DialogueManager.inst.StartDialogue();
         PlayerManager.inst.playerState = PlayerManager.PLAYERSTATE.CONVERSATION;
         return;

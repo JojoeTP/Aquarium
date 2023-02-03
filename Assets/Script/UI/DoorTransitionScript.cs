@@ -18,6 +18,8 @@ public class DoorTransitionScript : MonoBehaviour
     public void DoorTransitionOut()
     {
         PlayerManager.inst.PlayerInteract.ExitDoor();
+
         animator.SetTrigger("TransitionOut");
     }
+
 }
