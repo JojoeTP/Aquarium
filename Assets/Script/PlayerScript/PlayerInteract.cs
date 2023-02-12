@@ -58,10 +58,37 @@ public class PlayerInteract : MonoBehaviour
             if(CanGetItem(n.transform))
             {
                 GetItem(n.GetComponent<Item>());
-            }                
+            }
+
+            if (CanEnterLift(n.transform))
+            {
+                ShowSelectionFloor(n.GetComponent<Lift>());
+            }
         }
     }
 
+    void ShowSelectionFloor(Lift lift)
+    {
+        LiftManager.inst.UpdatePlayerPosition(this.transform);
+        LiftManager.inst.ShowSelectionFloor(lift);
+    }
+    public void EnterLift()
+    {
+        if (PlayerManager.inst.playerState != PlayerManager.PLAYERSTATE.NONE)
+            return;
+
+        PlayerManager.inst.playerState = PlayerManager.PLAYERSTATE.ENTERDOOR;
+    }
+
+    bool CanEnterLift(Transform overlap)
+    {
+        if (overlap.GetComponent<Lift>() != null)
+        {
+            return true;
+        }
+
+        return false;
+    }
     bool TalkWithNPC(Transform overlap){
         if(overlap.GetComponent<TalkWithNPC>() != null)
         {
@@ -108,10 +135,16 @@ public class PlayerInteract : MonoBehaviour
         return false;
     }
 
+
     void GetItem(Item item)
     {
         // PlayerManager.inst.playerInventory.itemList.Add(item.item);
         PlayerManager.inst.playerState = PlayerManager.PLAYERSTATE.CONVERSATION;
+        if (item.itemObject.itemData.dialogueItemId == "")
+        {
+            item.gameObject.SetActive(false);
+            PlayerManager.inst.playerState = PlayerManager.PLAYERSTATE.NONE;
+        }
         PlayerManager.inst.PlayerInventory.AddItem(item.itemObject);
         OnOpenItemPopUpUI(item);
 
@@ -150,8 +183,12 @@ public class PlayerInteract : MonoBehaviour
     public void ExitDoor()
     {
         PlayerManager.inst.playerState = PlayerManager.PLAYERSTATE.NONE;
-        enteringDoor.PlayerEnterDoor(this.transform);
-        enteringDoor.OnDoorEvent();
+
+        if (enteringDoor != null)
+        {
+            enteringDoor.PlayerEnterDoor(this.transform);
+            enteringDoor.OnDoorEvent();
+        }
     }
 
     void ToggleHiding(HidingSpot hidingSpot)
@@ -180,4 +217,5 @@ public class PlayerInteract : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position - new Vector3(0,InteractSize.y/2,0) + InteractOffset,InteractSize.x/2);  
         Gizmos.DrawWireCube(transform.position + InteractOffset,InteractSize);  
     }
+
 }
