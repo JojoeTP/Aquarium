@@ -45,6 +45,7 @@ public class PlayerManager : MonoBehaviour
 
     void Start()
     {
+        Init();
         playerState = PLAYERSTATE.NONE;
     }
 
@@ -55,6 +56,14 @@ public class PlayerManager : MonoBehaviour
 
     private void FixedUpdate() 
     {
+
+    }
+
+    void Init()
+    {
+        playerState = PLAYERSTATE.NONE;
+        //Set position
+        //Set Item in inventory
 
     }
 

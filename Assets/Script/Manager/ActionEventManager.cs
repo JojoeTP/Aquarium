@@ -30,4 +30,9 @@ public class ActionEventManager : MonoBehaviour
     {
         print("CutSceneHidingSpot");
     }
+
+    public void TestSaveGame()
+    {
+        SaveGameSystemManager.inst.SaveGame();
+    }
 }

@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46ae0de02bf1e0945810f84cfdbfb621, type: 3}
+  m_Name: ITEM_VIP_RoomKey 1
+  m_EditorClassIdentifier: 
+  itemData:
+    ItemID: Item_Key_VIPRoom
+    ItemName: VIR Room Key
+    ItemDescription: Key to open VIP room in Cafeteria
+    ItemSprite: {fileID: 21300000, guid: 41a048ab13b9e5a4c919b3fcaea440e8, type: 3}
+    ItemPosition: {x: 0, y: 0, z: 0}
+    ItemScale: {x: 0, y: 0, z: 0}
+    ItemType: 0
+    dialogueItemId: 

@@ -17,8 +17,6 @@ public class ItemManager : MonoBehaviour
     [SerializeField] Item lightEffectPrefab;
     [SerializeField] Item outlineEffectPrefab;
     [SerializeField] Item buttonEffectPrefab;
-    
-    
 
     [SerializeField] List<ItemScriptableObject> itemData = new List<ItemScriptableObject>();
 
@@ -131,6 +129,21 @@ public class ItemManager : MonoBehaviour
                         }
                     }
                     break;
+                case EFFECTTYPE.NONE :
+                    foreach(var m in itemData)
+                    {
+                        if(n.iTEMTYPE.HasFlag(m.itemData.ItemType))
+                        {
+                            item = Instantiate(buttonEffectPrefab);
+                            item.itemObject = m;
+                            item.SetItem();
+                            if (item != null)
+                            {
+                                SetItemAction(item);
+                            }
+                        }
+                    }
+                    break;
             }
             
         }
@@ -223,6 +236,11 @@ public class ItemManager : MonoBehaviour
                 break;
         }
     }
+
+    public ItemData GetItemByID(string id)
+    {
+        return itemData.Find(n => n.itemData.ItemID == id).itemData;
+    } 
 
     // int RandomItemEffect()
     // {
