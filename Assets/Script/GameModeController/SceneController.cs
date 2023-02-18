@@ -44,7 +44,7 @@ public class SceneController : MonoBehaviour
 
         while(!asyncOparation.isDone)
         {
-            print("Scene progress : " + asyncOparation.progress);
+            // print("Scene progress : " + asyncOparation.progress);
             yield return null;
         }
         

@@ -1,93 +1,130 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using FMODUnity;
+using FMOD.Studio;
 
 public class SoundManager : MonoBehaviour
 {
     public static SoundManager Inst;
 
-    [SerializeField] List<AudioSource> BGMSources = new List<AudioSource>();
-    [SerializeField] List<AudioSource> SFXSources = new List<AudioSource>();
+    [Header("Volume")]
+    [Range(0,1)]
+    public float masterVolume = 1;
+    [Range(0,1)]
+    public float BGMVolume = 1;
+    [Range(0,1)]
+    public float SFXVolume = 1;
 
-    bool isCoroutineRunning = false;
-    int i = 0;
+    List<EventInstance> eventInstances;
+    List<StudioEventEmitter> eventEmitters;
 
-    private void Awake() 
+    EventInstance ambienceEventInstance;
+    EventInstance BGMEventInstance;
+
+    FMODEvent FMODEvent;
+
+    void Awake() 
     {
-        Inst = this;        
+        Inst = this; 
+
+        Initilize();      
     }
 
+    void Initilize()
+    {
+        eventInstances = new List<EventInstance>();
+        eventEmitters = new List<StudioEventEmitter>();
+    }
+
+    /// <summary>
+    /// Start is called on the frame when a script is enabled just before
+    /// any of the Update methods is called the first time.
+    /// </summary>
     void Start()
-    {
-        // if(!isCoroutineRunning)
-        // {
-        //     i++;
-        //     StartCoroutine(TestCoroutine());
-        // }
-
-        StartCoroutine(TestCoroutine());
-    }
-
-    float time;
-
-    void Update()
-    {
-        time = Time.time;
-    }
-
-    IEnumerator TestCoroutine()
-    {
-        // while(true)
-        // {
-        //     float time = Time.time;
-
-        //     print($"Test {i} : {time} ");
-        //     isCoroutineRunning = true;
-        //     yield return null;
-            
-        // }
-
-
-        while(!isCoroutineRunning && i < 5)
-        {
-            i++;
-            print($"Test {i} : {time} ");
-            isCoroutineRunning = true;
-            yield return new WaitForSeconds(2f);
-            isCoroutineRunning = false;
-            print("Turn to false");
-        }
-
-
-        print($"after Finish {i} : {time} ");
-        yield return new WaitForSeconds(3f);
-        print($"Befor Finish {i} : {time} ");
-
-    }
-
-    void OnChangeMasterVolume(float volume)
     {
 
     }
     
-    void OnChangeBGMVolume(float volume)
+    //Use 2d action event
+    public void PlayOneShot(EventReference sound,Vector3 position)
     {
-
+        RuntimeManager.PlayOneShot(sound,position);
     }
 
-    void OnChangeSFXVolume(float volume)
+    //Use Timeline
+    public EventInstance CreateInstance(EventReference eventReference)
     {
-
+        EventInstance eventInstance = RuntimeManager.CreateInstance(eventReference);
+        return eventInstance;
     }
 
-    public List<ScoundData> scoundDatas = new List<ScoundData>();
+    public StudioEventEmitter InitializeEventEmitter(EventReference eventReference,GameObject emitterObejct)
+    {
+        StudioEventEmitter emitter = emitterObejct.GetComponent<StudioEventEmitter>();
+        emitter.EventReference = eventReference;
+        eventEmitters.Add(emitter);
+        return emitter;
+    }
 
-    Dictionary<string,AudioClip> soundDic = new Dictionary<string, AudioClip>();
-}
+    /// <summary>
+    /// Use to play ambience, It will auto stop a ambience before
+    /// </summary>
+    public void InitializeAmbience(EventReference eventReference)
+    {
+        StopAmbience();
 
-[System.Serializable]
-public class ScoundData
-{
-    public string name;
-    public AudioClip audioClip;
+        ambienceEventInstance = CreateInstance(eventReference);
+        ambienceEventInstance.start();
+    }
+
+    public void StopAmbience()
+    {
+        if(ambienceEventInstance.isValid())
+            ambienceEventInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+    }
+
+    /// <summary>
+    /// Use to play BGM, It will auto stop a BGM before
+    /// </summary>
+    public void InitializeBGM(EventReference eventReference)
+    {
+        StopBGM();
+
+        BGMEventInstance = CreateInstance(eventReference);
+        BGMEventInstance.start();
+    }
+
+    public void StopBGM()
+    {
+        if(BGMEventInstance.isValid())
+            BGMEventInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+    }
+
+    public void SetAmbienceParameter(string parameterName,float parameterValue)
+    {
+        ambienceEventInstance.setParameterByName(parameterName,parameterValue);
+    }
+
+    void CleanUp()
+    {
+        foreach(var n in eventInstances)
+        {
+            n.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+            n.release();
+        }
+
+        foreach(var n in eventEmitters)
+        {
+            n.Stop();
+        }
+    }
+
+    void OnDestroy() 
+    {
+        CleanUp();    
+    }
+
+
+    
 }

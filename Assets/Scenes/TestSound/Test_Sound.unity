@@ -2867,8 +2867,7 @@ MonoBehaviour:
   connectDoor: {fileID: 209489066}
   conditionItem: {fileID: 0}
   isSpacialDoor: 0
-  isPlayerUseItBefore: 0
-  canEnemyEnter: 0
+  notForEnemy: 0
   triggerDoorEvents:
     m_PersistentCalls:
       m_Calls: []
@@ -3423,15 +3422,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4572e01d9d819b4cb7bbc2c75a9ea4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BGMSources: []
-  SFXSources: []
-  scoundDatas:
-  - name: 
-    audioClip: {fileID: 0}
-  - name: 
-    audioClip: {fileID: 0}
-  - name: 
-    audioClip: {fileID: 0}
 --- !u!1 &161720219
 GameObject:
   m_ObjectHideFlags: 0
@@ -4004,8 +3994,7 @@ MonoBehaviour:
   connectDoor: {fileID: 123502702}
   conditionItem: {fileID: 0}
   isSpacialDoor: 0
-  isPlayerUseItBefore: 0
-  canEnemyEnter: 0
+  notForEnemy: 0
   triggerDoorEvents:
     m_PersistentCalls:
       m_Calls: []
@@ -6587,8 +6576,7 @@ MonoBehaviour:
   connectDoor: {fileID: 819383244}
   conditionItem: {fileID: 0}
   isSpacialDoor: 0
-  isPlayerUseItBefore: 0
-  canEnemyEnter: 0
+  notForEnemy: 0
   triggerDoorEvents:
     m_PersistentCalls:
       m_Calls: []
@@ -6621,220 +6609,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 5.779109, y: 5.6403522}
   m_EdgeRadius: 0
---- !u!1001 &358539300
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 599663261}
-    m_Modifications:
-    - target: {fileID: 315423434, guid: bd0f4c6f21470214f9e7c4050dacecb4, type: 3}
-      propertyPath: dialoguePath
-      value: DialogueDataChapter1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8809037802628901975, guid: bd0f4c6f21470214f9e7c4050dacecb4, type: 3}
-      propertyPath: m_Pivot.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8809037802628901975, guid: bd0f4c6f21470214f9e7c4050dacecb4, type: 3}
-      propertyPath: m_Pivot.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8809037802628901975, guid: bd0f4c6f21470214f9e7c4050dacecb4, type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8809037802628901975, guid: bd0f4c6f21470214f9e7c4050dacecb4, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8809037802628901975, guid: bd0f4c6f21470214f9e7c4050dacecb4, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8809037802628901975, guid: bd0f4c6f21470214f9e7c4050dacecb4, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8809037802628901975, guid: bd0f4c6f21470214f9e7c4050dacecb4, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8809037802628901975, guid: bd0f4c6f21470214f9e7c4050dacecb4, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 1920
-      objectReference: {fileID: 0}
-    - target: {fileID: 8809037802628901975, guid: bd0f4c6f21470214f9e7c4050dacecb4, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 1080
-      objectReference: {fileID: 0}
-    - target: {fileID: 8809037802628901975, guid: bd0f4c6f21470214f9e7c4050dacecb4, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8809037802628901975, guid: bd0f4c6f21470214f9e7c4050dacecb4, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8809037802628901975, guid: bd0f4c6f21470214f9e7c4050dacecb4, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8809037802628901975, guid: bd0f4c6f21470214f9e7c4050dacecb4, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8809037802628901975, guid: bd0f4c6f21470214f9e7c4050dacecb4, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8809037802628901975, guid: bd0f4c6f21470214f9e7c4050dacecb4, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8809037802628901975, guid: bd0f4c6f21470214f9e7c4050dacecb4, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8809037802628901975, guid: bd0f4c6f21470214f9e7c4050dacecb4, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8809037802628901975, guid: bd0f4c6f21470214f9e7c4050dacecb4, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8809037802628901975, guid: bd0f4c6f21470214f9e7c4050dacecb4, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8809037802628901975, guid: bd0f4c6f21470214f9e7c4050dacecb4, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 960
-      objectReference: {fileID: 0}
-    - target: {fileID: 8809037802628901975, guid: bd0f4c6f21470214f9e7c4050dacecb4, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 540
-      objectReference: {fileID: 0}
-    - target: {fileID: 8809037802628901975, guid: bd0f4c6f21470214f9e7c4050dacecb4, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8809037802628901975, guid: bd0f4c6f21470214f9e7c4050dacecb4, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8809037802628901975, guid: bd0f4c6f21470214f9e7c4050dacecb4, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8809037802628901979, guid: bd0f4c6f21470214f9e7c4050dacecb4, type: 3}
-      propertyPath: m_Name
-      value: Canvas_Dialogue
-      objectReference: {fileID: 0}
-    - target: {fileID: 8809037803480184951, guid: bd0f4c6f21470214f9e7c4050dacecb4, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: bd0f4c6f21470214f9e7c4050dacecb4, type: 3}
---- !u!224 &358539301 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 8809037802628901975, guid: bd0f4c6f21470214f9e7c4050dacecb4, type: 3}
-  m_PrefabInstance: {fileID: 358539300}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &358539302 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1154839714139069103, guid: bd0f4c6f21470214f9e7c4050dacecb4, type: 3}
-  m_PrefabInstance: {fileID: 358539300}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &358539303 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 247421763828276868, guid: bd0f4c6f21470214f9e7c4050dacecb4, type: 3}
-  m_PrefabInstance: {fileID: 358539300}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &358539304 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8065422855662655754, guid: bd0f4c6f21470214f9e7c4050dacecb4, type: 3}
-  m_PrefabInstance: {fileID: 358539300}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &358539305 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1874551173421004362, guid: bd0f4c6f21470214f9e7c4050dacecb4, type: 3}
-  m_PrefabInstance: {fileID: 358539300}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &358539306 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1921807418544019631, guid: bd0f4c6f21470214f9e7c4050dacecb4, type: 3}
-  m_PrefabInstance: {fileID: 358539300}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!1 &358539307 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8809037803480184951, guid: bd0f4c6f21470214f9e7c4050dacecb4, type: 3}
-  m_PrefabInstance: {fileID: 358539300}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &358539308 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8809037804011774492, guid: bd0f4c6f21470214f9e7c4050dacecb4, type: 3}
-  m_PrefabInstance: {fileID: 358539300}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &358539309 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8809037802470383401, guid: bd0f4c6f21470214f9e7c4050dacecb4, type: 3}
-  m_PrefabInstance: {fileID: 358539300}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &358539310 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8809037802928629081, guid: bd0f4c6f21470214f9e7c4050dacecb4, type: 3}
-  m_PrefabInstance: {fileID: 358539300}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &358539311 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8809037803184056372, guid: bd0f4c6f21470214f9e7c4050dacecb4, type: 3}
-  m_PrefabInstance: {fileID: 358539300}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &360543486
 GameObject:
   m_ObjectHideFlags: 0
@@ -7066,8 +6840,7 @@ MonoBehaviour:
   connectDoor: {fileID: 1968587174}
   conditionItem: {fileID: 0}
   isSpacialDoor: 0
-  isPlayerUseItBefore: 0
-  canEnemyEnter: 0
+  notForEnemy: 0
   triggerDoorEvents:
     m_PersistentCalls:
       m_Calls: []
@@ -7247,8 +7020,7 @@ MonoBehaviour:
   connectDoor: {fileID: 731888526}
   conditionItem: {fileID: 0}
   isSpacialDoor: 0
-  isPlayerUseItBefore: 0
-  canEnemyEnter: 0
+  notForEnemy: 0
   triggerDoorEvents:
     m_PersistentCalls:
       m_Calls: []
@@ -7663,7 +7435,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7773585, y: 1}
+    m_SensorSize: {x: 1.7768116, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -8016,8 +7788,7 @@ MonoBehaviour:
   connectDoor: {fileID: 748000676}
   conditionItem: {fileID: 0}
   isSpacialDoor: 0
-  isPlayerUseItBefore: 0
-  canEnemyEnter: 0
+  notForEnemy: 0
   triggerDoorEvents:
     m_PersistentCalls:
       m_Calls: []
@@ -10604,8 +10375,7 @@ MonoBehaviour:
   connectDoor: {fileID: 589150412}
   conditionItem: {fileID: 0}
   isSpacialDoor: 0
-  isPlayerUseItBefore: 0
-  canEnemyEnter: 0
+  notForEnemy: 0
   triggerDoorEvents:
     m_PersistentCalls:
       m_Calls: []
@@ -10735,8 +10505,7 @@ MonoBehaviour:
   connectDoor: {fileID: 1900784743}
   conditionItem: {fileID: 0}
   isSpacialDoor: 0
-  isPlayerUseItBefore: 0
-  canEnemyEnter: 0
+  notForEnemy: 0
   triggerDoorEvents:
     m_PersistentCalls:
       m_Calls: []
@@ -10832,8 +10601,7 @@ MonoBehaviour:
   connectDoor: {fileID: 573731140}
   conditionItem: {fileID: 0}
   isSpacialDoor: 0
-  isPlayerUseItBefore: 0
-  canEnemyEnter: 0
+  notForEnemy: 0
   triggerDoorEvents:
     m_PersistentCalls:
       m_Calls: []
@@ -11147,7 +10915,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 355171402}
-  - {fileID: 358539301}
   m_Father: {fileID: 1156811140}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -12585,8 +12352,7 @@ MonoBehaviour:
   connectDoor: {fileID: 1545796407}
   conditionItem: {fileID: 0}
   isSpacialDoor: 0
-  isPlayerUseItBefore: 0
-  canEnemyEnter: 0
+  notForEnemy: 0
   triggerDoorEvents:
     m_PersistentCalls:
       m_Calls: []
@@ -13456,8 +13222,7 @@ MonoBehaviour:
   connectDoor: {fileID: 373741220}
   conditionItem: {fileID: 0}
   isSpacialDoor: 0
-  isPlayerUseItBefore: 0
-  canEnemyEnter: 0
+  notForEnemy: 0
   triggerDoorEvents:
     m_PersistentCalls:
       m_Calls: []
@@ -13982,8 +13747,7 @@ MonoBehaviour:
   connectDoor: {fileID: 406672623}
   conditionItem: {fileID: 0}
   isSpacialDoor: 0
-  isPlayerUseItBefore: 0
-  canEnemyEnter: 0
+  notForEnemy: 0
   triggerDoorEvents:
     m_PersistentCalls:
       m_Calls: []
@@ -14265,8 +14029,7 @@ MonoBehaviour:
   connectDoor: {fileID: 1826412847}
   conditionItem: {fileID: 0}
   isSpacialDoor: 0
-  isPlayerUseItBefore: 0
-  canEnemyEnter: 0
+  notForEnemy: 0
   triggerDoorEvents:
     m_PersistentCalls:
       m_Calls: []
@@ -14703,8 +14466,7 @@ MonoBehaviour:
   connectDoor: {fileID: 356976902}
   conditionItem: {fileID: 0}
   isSpacialDoor: 0
-  isPlayerUseItBefore: 0
-  canEnemyEnter: 0
+  notForEnemy: 0
   triggerDoorEvents:
     m_PersistentCalls:
       m_Calls: []
@@ -16323,8 +16085,7 @@ MonoBehaviour:
   connectDoor: {fileID: 2084036401}
   conditionItem: {fileID: 11400000, guid: 542bc647a6c7ba94580a44987f8685e5, type: 2}
   isSpacialDoor: 0
-  isPlayerUseItBefore: 0
-  canEnemyEnter: 0
+  notForEnemy: 0
   triggerDoorEvents:
     m_PersistentCalls:
       m_Calls: []
@@ -17472,8 +17233,7 @@ MonoBehaviour:
   connectDoor: {fileID: 1394825624}
   conditionItem: {fileID: 0}
   isSpacialDoor: 0
-  isPlayerUseItBefore: 0
-  canEnemyEnter: 0
+  notForEnemy: 0
   triggerDoorEvents:
     m_PersistentCalls:
       m_Calls: []
@@ -25681,6 +25441,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96cd48e12b93e2644b317eb0a2a62a23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isCutScene: 0
   startWithDialogueId: Ch1_D01_01
   triggerEvents:
     m_PersistentCalls:
@@ -25847,8 +25608,7 @@ MonoBehaviour:
   connectDoor: {fileID: 926776521}
   conditionItem: {fileID: 0}
   isSpacialDoor: 0
-  isPlayerUseItBefore: 0
-  canEnemyEnter: 0
+  notForEnemy: 0
   triggerDoorEvents:
     m_PersistentCalls:
       m_Calls: []
@@ -27884,7 +27644,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1508510659
@@ -28732,8 +28492,7 @@ MonoBehaviour:
   connectDoor: {fileID: 703762090}
   conditionItem: {fileID: 0}
   isSpacialDoor: 0
-  isPlayerUseItBefore: 0
-  canEnemyEnter: 0
+  notForEnemy: 0
   triggerDoorEvents:
     m_PersistentCalls:
       m_Calls: []
@@ -34744,8 +34503,7 @@ MonoBehaviour:
   connectDoor: {fileID: 766520384}
   conditionItem: {fileID: 0}
   isSpacialDoor: 0
-  isPlayerUseItBefore: 0
-  canEnemyEnter: 0
+  notForEnemy: 0
   triggerDoorEvents:
     m_PersistentCalls:
       m_Calls: []
@@ -36577,8 +36335,7 @@ MonoBehaviour:
   connectDoor: {fileID: 585858919}
   conditionItem: {fileID: 0}
   isSpacialDoor: 0
-  isPlayerUseItBefore: 0
-  canEnemyEnter: 0
+  notForEnemy: 0
   triggerDoorEvents:
     m_PersistentCalls:
       m_Calls: []
@@ -37521,7 +37278,7 @@ SpriteRenderer:
   m_Size: {x: 40.96, y: 40.96}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1956118357
@@ -37796,8 +37553,7 @@ MonoBehaviour:
   connectDoor: {fileID: 373165557}
   conditionItem: {fileID: 0}
   isSpacialDoor: 0
-  isPlayerUseItBefore: 0
-  canEnemyEnter: 0
+  notForEnemy: 0
   triggerDoorEvents:
     m_PersistentCalls:
       m_Calls: []
@@ -40025,8 +39781,7 @@ MonoBehaviour:
   connectDoor: {fileID: 878667437}
   conditionItem: {fileID: 11400000, guid: 542bc647a6c7ba94580a44987f8685e5, type: 2}
   isSpacialDoor: 0
-  isPlayerUseItBefore: 0
-  canEnemyEnter: 0
+  notForEnemy: 0
   triggerDoorEvents:
     m_PersistentCalls:
       m_Calls: []
@@ -41199,43 +40954,43 @@ PrefabInstance:
     - target: {fileID: 2504612249614600641, guid: e1fb8775c647e6c4facdd190c6b4d472, type: 3}
       propertyPath: nameText
       value: 
-      objectReference: {fileID: 358539311}
+      objectReference: {fileID: 0}
     - target: {fileID: 2504612249614600641, guid: e1fb8775c647e6c4facdd190c6b4d472, type: 3}
       propertyPath: dialogueText
       value: 
-      objectReference: {fileID: 358539310}
+      objectReference: {fileID: 0}
     - target: {fileID: 2504612249614600641, guid: e1fb8775c647e6c4facdd190c6b4d472, type: 3}
       propertyPath: choiceButton1
       value: 
-      objectReference: {fileID: 358539305}
+      objectReference: {fileID: 0}
     - target: {fileID: 2504612249614600641, guid: e1fb8775c647e6c4facdd190c6b4d472, type: 3}
       propertyPath: choiceButton2
       value: 
-      objectReference: {fileID: 358539304}
+      objectReference: {fileID: 0}
     - target: {fileID: 2504612249614600641, guid: e1fb8775c647e6c4facdd190c6b4d472, type: 3}
       propertyPath: dialoguePanel
       value: 
-      objectReference: {fileID: 358539307}
+      objectReference: {fileID: 0}
     - target: {fileID: 2504612249614600641, guid: e1fb8775c647e6c4facdd190c6b4d472, type: 3}
       propertyPath: continueButton
       value: 
-      objectReference: {fileID: 358539306}
+      objectReference: {fileID: 0}
     - target: {fileID: 2504612249614600641, guid: e1fb8775c647e6c4facdd190c6b4d472, type: 3}
       propertyPath: imageCharacter1
       value: 
-      objectReference: {fileID: 358539309}
+      objectReference: {fileID: 0}
     - target: {fileID: 2504612249614600641, guid: e1fb8775c647e6c4facdd190c6b4d472, type: 3}
       propertyPath: imageCharacter2
       value: 
-      objectReference: {fileID: 358539308}
+      objectReference: {fileID: 0}
     - target: {fileID: 2504612249614600641, guid: e1fb8775c647e6c4facdd190c6b4d472, type: 3}
       propertyPath: choiceButton1Text
       value: 
-      objectReference: {fileID: 358539303}
+      objectReference: {fileID: 0}
     - target: {fileID: 2504612249614600641, guid: e1fb8775c647e6c4facdd190c6b4d472, type: 3}
       propertyPath: choiceButton2Text
       value: 
-      objectReference: {fileID: 358539302}
+      objectReference: {fileID: 0}
     - target: {fileID: 2504612249614600641, guid: e1fb8775c647e6c4facdd190c6b4d472, type: 3}
       propertyPath: dialoguePaths.Array.size
       value: 2
@@ -41524,8 +41279,7 @@ MonoBehaviour:
   connectDoor: {fileID: 0}
   conditionItem: {fileID: 0}
   isSpacialDoor: 0
-  isPlayerUseItBefore: 0
-  canEnemyEnter: 0
+  notForEnemy: 0
   triggerDoorEvents:
     m_PersistentCalls:
       m_Calls: []
@@ -41821,8 +41575,7 @@ MonoBehaviour:
   connectDoor: {fileID: 0}
   conditionItem: {fileID: 0}
   isSpacialDoor: 1
-  isPlayerUseItBefore: 0
-  canEnemyEnter: 0
+  notForEnemy: 0
   triggerDoorEvents:
     m_PersistentCalls:
       m_Calls: []
@@ -42391,8 +42144,7 @@ MonoBehaviour:
   connectDoor: {fileID: 4695122923096823983}
   conditionItem: {fileID: 0}
   isSpacialDoor: 0
-  isPlayerUseItBefore: 0
-  canEnemyEnter: 0
+  notForEnemy: 0
   triggerDoorEvents:
     m_PersistentCalls:
       m_Calls: []
@@ -42427,8 +42179,7 @@ MonoBehaviour:
   connectDoor: {fileID: 0}
   conditionItem: {fileID: 0}
   isSpacialDoor: 0
-  isPlayerUseItBefore: 0
-  canEnemyEnter: 0
+  notForEnemy: 0
   triggerDoorEvents:
     m_PersistentCalls:
       m_Calls: []
@@ -42603,7 +42354,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.496704, y: 0.59886175}
+    oldSize: {x: 2.0568848, y: 0.35227165}
     newSize: {x: 67.87022, y: 11.797753}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -42698,8 +42449,7 @@ MonoBehaviour:
   connectDoor: {fileID: 0}
   conditionItem: {fileID: 0}
   isSpacialDoor: 1
-  isPlayerUseItBefore: 0
-  canEnemyEnter: 0
+  notForEnemy: 0
   triggerDoorEvents:
     m_PersistentCalls:
       m_Calls: []

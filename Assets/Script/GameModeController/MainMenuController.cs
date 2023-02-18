@@ -30,7 +30,9 @@ public class MainMenuController : MonoBehaviour
     private void Start() 
     {
         animator = GetComponent<Animator>();
-        ChangeState(MenuState.MainMenu);    
+        ChangeState(MenuState.MainMenu);   
+
+        SoundManager.Inst.InitializeBGM(FMODEvent.inst.MainMenuMusic); 
     }
 
     void ChangeState(MenuState state)
@@ -104,5 +106,8 @@ public class MainMenuController : MonoBehaviour
     {
         print("After");
         ItemManager.Inst.SetUpItemPermutation();
+
+        //SoundManager.Inst.InitializeBGM(FMODEvent.inst.InGameMusic); 
+        SoundManager.Inst.StopBGM();
     }
 }

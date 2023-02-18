@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.InputSystem;
+using FMOD.Studio;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -26,8 +27,10 @@ public class PlayerMovement : MonoBehaviour
     [Header("Sprint")]
     bool IsSprint = false;
     bool IsExhausted = false;
-    
-    
+
+#region  Audio
+    EventInstance playerMovement;
+#endregion
 
     public float PlayerStamina {get {return playerStamina;}}
     public float BasePlayerStamina {get {return basePlayerStamina;}}
@@ -52,9 +55,16 @@ public class PlayerMovement : MonoBehaviour
         playerStamina = basePlayerStamina;
 
         StartCoroutine(Blink());
+
+        CreateAudioInstance();
     }
 
-    private void FixedUpdate() 
+    void Update()
+    {
+        UpdateSound();
+    }
+
+    void FixedUpdate() 
     {
         Move();
         CheckStamina();
@@ -71,11 +81,13 @@ public class PlayerMovement : MonoBehaviour
 
             playerSpeed = sprintSpeed;
             IsSprint = true;
+            playerMovement.setParameterByName("PlayerMovement",1);
         }
         else
         {
             playerSpeed = playerBaseSpeed;
             IsSprint = false;
+            playerMovement.setParameterByName("PlayerMovement",0);
         }
     }
 
@@ -183,5 +195,28 @@ public class PlayerMovement : MonoBehaviour
         {
             isRunIntoWall = false;
         }
+    }
+
+    void CreateAudioInstance()
+    {
+        playerMovement = SoundManager.Inst.CreateInstance(FMODEvent.inst.playerMovementSFX);
+    }
+
+    void UpdateSound()
+    {
+        UpdateMoveSound();
+    }
+
+    void UpdateMoveSound()
+    {
+        if(direction != Vector2.zero)
+        {
+            PLAYBACK_STATE playBackState;
+            playerMovement.getPlaybackState(out playBackState);
+            if(playBackState.Equals(PLAYBACK_STATE.STOPPED))
+                playerMovement.start();
+        }
+        else
+            playerMovement.stop(STOP_MODE.ALLOWFADEOUT);
     }
 }
