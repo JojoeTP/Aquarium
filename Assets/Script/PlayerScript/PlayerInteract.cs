@@ -69,7 +69,13 @@ public class PlayerInteract : MonoBehaviour
 
     void ShowSelectionFloor(Lift lift)
     {
+        if (PlayerManager.inst.playerState != PlayerManager.PLAYERSTATE.NONE)
+            return;
+
+        PlayerManager.inst.playerState = PlayerManager.PLAYERSTATE.ENTERDOOR;
+
         LiftManager.inst.UpdatePlayerPosition(this.transform);
+        LiftManager.inst.PlayerInteractAtSide(lift.leftSide);
         LiftManager.inst.ShowSelectionFloor(lift);
     }
     public void EnterLift()

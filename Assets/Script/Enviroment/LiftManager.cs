@@ -7,8 +7,10 @@ public class LiftManager : MonoBehaviour
 {
     public static LiftManager inst;
     Transform playerPosition;
+    bool playerInteractAtSide;
     [Header("System")]
-    public Transform[] connectFloors;
+    public Transform[] connectFloorsLeftSide;
+    public Transform[] connectFloorsRightSide;
     public ItemScriptableObject conditionItem;
 
     [Header("UI")]
@@ -21,7 +23,7 @@ public class LiftManager : MonoBehaviour
         if (conditionItem == null)
             return true;
 
-        if (PlayerManager.inst.PlayerInventory.PlayerItemDictionary.ContainsValue(conditionItem.itemData))
+        if (PlayerManager.inst.PlayerInventory.PlayerItemDictionary.ContainsValue(conditionItem.itemData.ItemID))
         {
             return true;
         }
@@ -36,24 +38,7 @@ public class LiftManager : MonoBehaviour
     public void ShowSelectionFloor(Lift lift)
     {
         Canvas_Lift.SetActive(true);
-
-        for(var i = 0; i < floor_Buttons.Length; i++)
-        {
-            floor_Buttons[i].GetComponent<Button>().interactable = true;
-            if (lift.currentFloor == Lift.CurrentFloor.Floor1)
-            {
-                floor_Buttons[0].GetComponent<Button>().interactable = false;
-            }
-            else if (lift.currentFloor == Lift.CurrentFloor.Floor2)
-            {
-                floor_Buttons[1].GetComponent<Button>().interactable = false;
-            }
-            else if (lift.currentFloor == Lift.CurrentFloor.Floor3)
-            {
-                floor_Buttons[2].GetComponent<Button>().interactable = false;
-            }
-        }
-
+        ShowLiftButton(lift);
         if (CheckCondition())
         {
             floor5_Button.SetActive(true);
@@ -62,39 +47,84 @@ public class LiftManager : MonoBehaviour
         {
             floor5_Button.SetActive(false);
         }
-
+    }
+    void ShowLiftButton(Lift lift)
+    {
+        foreach (GameObject n in floor_Buttons)
+        {
+            n.GetComponent<Button>().interactable = true;
+        }
+        if (lift.currentFloor == Lift.CurrentFloor.Floor1)
+        {
+            floor_Buttons[0].GetComponent<Button>().interactable = false;
+        }
+        else if (lift.currentFloor == Lift.CurrentFloor.Floor2)
+        {
+            floor_Buttons[1].GetComponent<Button>().interactable = false;
+        }
+        else if (lift.currentFloor == Lift.CurrentFloor.Floor3)
+        {
+            floor_Buttons[2].GetComponent<Button>().interactable = false;
+        }
     }
 
-    public void EnterDoor(Transform entity , Transform connectFloor)
+    public void EnterDoor(Transform entity , Transform connectFloorLeftSide , Transform connectFloorRightSide , bool isLeftSide)
     {
-        if (connectFloor != null)
+        Vector3 nextPosition;
+        if (isLeftSide == true)
         {
-            Vector3 nextPosition = new Vector3(connectFloor.position.x, connectFloor.position.y , 0);
-
-            entity.position = nextPosition;
+            nextPosition = new Vector3(connectFloorLeftSide.position.x, connectFloorLeftSide.position.y , 0);
         }
+        else
+        {
+            nextPosition = new Vector3(connectFloorRightSide.position.x, connectFloorRightSide.position.y, 0);
+        }
+
+        entity.position = nextPosition;
     }
 
     public void UpdatePlayerPosition(Transform newPosition)
     {
         playerPosition = newPosition;
     }
+    public void PlayerInteractAtSide(bool newSide)
+    {
+        playerInteractAtSide = newSide;
+    }
     public void GoToFloor1()
     {
-        EnterDoor(playerPosition, connectFloors[0]);
-        Canvas_Lift.SetActive(false);
-        UITransition.inst.DoorTransitionIn();
+        EnterDoor(playerPosition, connectFloorsLeftSide[0] , connectFloorsRightSide[0] , playerInteractAtSide);
+        CloseCanvas_TransitionBlack_PlayerState();
     }
     public void GoToFloor2()
     {
-        EnterDoor(playerPosition, connectFloors[1]);
-        Canvas_Lift.SetActive(false);
-        UITransition.inst.DoorTransitionIn();
+        EnterDoor(playerPosition, connectFloorsLeftSide[1], connectFloorsRightSide[1], playerInteractAtSide);
+        CloseCanvas_TransitionBlack_PlayerState();
     }
     public void GoToFloor3()
     {
-        EnterDoor(playerPosition, connectFloors[2]);
+        EnterDoor(playerPosition, connectFloorsLeftSide[2], connectFloorsRightSide[2], playerInteractAtSide);
+        CloseCanvas_TransitionBlack_PlayerState();
+    }
+
+    void CloseCanvas_TransitionBlack_PlayerState()
+    {
         Canvas_Lift.SetActive(false);
         UITransition.inst.DoorTransitionIn();
+        SetPlayerToNoneState();
+    }
+
+    public void CloseLiftPannel()
+    {
+        Canvas_Lift.SetActive(false);
+        SetPlayerToNoneState();
+    }
+
+    void SetPlayerToNoneState()
+    {
+        if (PlayerManager.inst.playerState != PlayerManager.PLAYERSTATE.ENTERDOOR)
+            return;
+
+        PlayerManager.inst.playerState = PlayerManager.PLAYERSTATE.NONE;
     }
 }
