@@ -21,12 +21,7 @@ public class SceneController : MonoBehaviour
 
     void Start()
     {
-        Initilize();
-    }
 
-    void Initilize()
-    {
-        OnLoadSceneAsync(SCENE_MAINMENU);
     }
 
     public void OnLoadSceneAsync(string sceneName, Action beforeSwitchScene = null, Action afterSwitchScene = null)
