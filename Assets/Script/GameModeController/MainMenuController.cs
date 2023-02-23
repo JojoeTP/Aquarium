@@ -4,6 +4,9 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using TMPro;
+using System.Diagnostics;
+using System;
+using System.IO;
 
 public class MainMenuController : MonoBehaviour
 {
@@ -20,7 +23,6 @@ public class MainMenuController : MonoBehaviour
     [SerializeField] Canvas MainMenuPanel;
     [SerializeField] Canvas StartGamePanel;
     [SerializeField] Canvas SettingPanel;
-    
 
     [Header("Participate ID")]
     [SerializeField] TMP_InputField inputParticipateID;
@@ -30,7 +32,7 @@ public class MainMenuController : MonoBehaviour
     private void Start() 
     {
         animator = GetComponent<Animator>();
-        ChangeState(MenuState.MainMenu);   
+        ChangeState(MenuState.MainMenu); 
 
         SoundManager.Inst.InitializeBGM(FMODEvent.inst.MainMenuMusic); 
     }
@@ -71,6 +73,15 @@ public class MainMenuController : MonoBehaviour
     {
         animator.SetTrigger("OpenSetting");
         ChangeState(MenuState.Setting);
+    }
+
+    public void OnClikeJsonFile()
+    {
+        string appDataPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+        appDataPath = appDataPath.Replace(@"\Roaming","");
+        string subFolderPath = @"\LocalLow\DefaultCompany\Aquarium\PickUpItemTimeData\";
+        string folderPath = appDataPath + subFolderPath;
+        Process.Start(folderPath);
     }
 
     public void OnClickExit()
