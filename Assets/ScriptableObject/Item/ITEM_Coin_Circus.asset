@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46ae0de02bf1e0945810f84cfdbfb621, type: 3}
+  m_Name: ITEM_Coin_Circus
+  m_EditorClassIdentifier: 
+  itemData:
+    ItemID: Item_Coin_Circus
+    ItemName: Mystery Coin_Labyrinth
+    ItemDescription: A coin of mystery
+    ItemSprite: {fileID: 21300000, guid: d25fef4e556316c4ab4d2c803395549f, type: 3}
+    ItemPosition: {x: 310.7, y: -173.07, z: 0}
+    ItemScale: {x: 0.06711879, y: 0.06711879, z: 0.06711879}
+    ItemType: 128
+    dialogueItemId: Item5_01

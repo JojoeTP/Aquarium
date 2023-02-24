@@ -21,12 +21,7 @@ public class SceneController : MonoBehaviour
 
     void Start()
     {
-        Initilize();
-    }
 
-    void Initilize()
-    {
-        OnLoadSceneAsync(SCENE_MAINMENU);
     }
 
     public void OnLoadSceneAsync(string sceneName, Action beforeSwitchScene = null, Action afterSwitchScene = null)
@@ -44,7 +39,7 @@ public class SceneController : MonoBehaviour
 
         while(!asyncOparation.isDone)
         {
-            print("Scene progress : " + asyncOparation.progress);
+            // print("Scene progress : " + asyncOparation.progress);
             yield return null;
         }
         

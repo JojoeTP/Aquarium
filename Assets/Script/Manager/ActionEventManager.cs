@@ -17,7 +17,8 @@ public class ActionEventManager : MonoBehaviour
 #region ItemActionEvent
     public void OnPickUpLabyrinthCoin()
     {
-        labyrinthMapMaterial.SetInt("_HideMainTex",1);
+        labyrinthMapMaterial.SetInt("_HideMainTex",1); //เปลี่ยน texture
+        //ปิดกำแพงด้วย
     }
 #endregion
 
