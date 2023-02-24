@@ -53,8 +53,12 @@ public class Spawner : MonoBehaviour
     {
         if (collision.TryGetComponent<ObjectMove>(out var objectMove))
         {
-            objectMove.anim.SetTrigger("TransitionOut");
-            objectMove.spawner.currentFish--;
+            if(objectMove.spawner != this)
+            {
+                //objectMove.anim.SetTrigger("TransitionOut");
+                objectMove.FishDestroy();
+                objectMove.spawner.currentFish--;
+            }
         }
     }
 }
