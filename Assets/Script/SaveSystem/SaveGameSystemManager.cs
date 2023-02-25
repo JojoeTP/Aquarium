@@ -8,12 +8,12 @@ public class SaveGameSystemManager : MonoBehaviour
 
     public SaveGameData gameData;
 
+    public bool isLoad {get; private set;}
+
     void Awake() 
     {
         if(inst != null)
-        {
             return;
-        }
 
         inst = this;
     }
@@ -23,8 +23,9 @@ public class SaveGameSystemManager : MonoBehaviour
         
     }
 
-    void StartNewGame()
+    public void StartNewGame()
     {
+        isLoad = false;
         gameData = new SaveGameData();
     }
 
@@ -40,8 +41,10 @@ public class SaveGameSystemManager : MonoBehaviour
         newSaveGameData.SaveJSON();
     }
     
-    void LoadGame()
+    public void LoadGame()
     {
+        isLoad = true;
+
         gameData = SaveGameData.LoadSaveGameDataJSON();
 
         //โหลดมาเเล้วก็ นำ gamedata ที่ได้ ไปใช้ทำอะไรต่อก็ได้ แบบ set ค่าให้ player อะไรพวกนั้น

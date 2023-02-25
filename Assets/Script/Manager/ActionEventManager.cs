@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEditor;
 
 public class ActionEventManager : MonoBehaviour
 {
@@ -37,3 +38,22 @@ public class ActionEventManager : MonoBehaviour
         SaveGameSystemManager.inst.SaveGame();
     }
 }
+
+#if UNITY_EDITOR
+    [CustomEditor(typeof(ActionEventManager))]
+    public class ActionEventTester : Editor
+    {
+        public override void OnInspectorGUI()
+        {
+            base.OnInspectorGUI();
+
+            ActionEventManager actionActive = (ActionEventManager)target;
+
+            if (GUILayout.Button("Test Save Game"))
+            {
+                Debug.Log("SAVE COMPLETE");
+                actionActive.TestSaveGame();
+            }
+        }
+    }
+#endif

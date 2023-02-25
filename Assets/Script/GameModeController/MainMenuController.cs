@@ -54,7 +54,9 @@ public class MainMenuController : MonoBehaviour
 
     public void OnClickContinue()
     {
-
+        SaveGameSystemManager.inst.LoadGame();
+        ItemManager.Inst.ParticipateId = SaveGameSystemManager.inst.gameData.participateID;
+        StartCoroutine(TransitionToGamePlay());    
     }
 
     public void OnClickNewGame()
@@ -65,6 +67,7 @@ public class MainMenuController : MonoBehaviour
 
     public void OnApplyParticipateID()
     {
+        SaveGameSystemManager.inst.StartNewGame();
         ItemManager.Inst.ParticipateId = int.Parse(inputParticipateID.text);
         StartCoroutine(TransitionToGamePlay());    
     }

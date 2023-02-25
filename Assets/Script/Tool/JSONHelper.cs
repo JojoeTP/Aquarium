@@ -10,7 +10,6 @@ public class JSONHelper
     #region LoadJSON
     public static T LoadJSONAsObject<T>(string fileName)
     {
-        
         var jsonData = LoadTextAppBundle (fileName);
         if (jsonData != string.Empty) 
         {
@@ -67,8 +66,22 @@ public class JSONHelper
 	private static string LoadTextAppBundle(string fileName) 
 	{
 		string filePath;
-		
-        if (Application.platform == RuntimePlatform.WindowsPlayer || Application.platform == RuntimePlatform.WSAPlayerX86 || Application.platform == RuntimePlatform.OSXPlayer)
+        if (Application.isEditor){
+            filePath = Application.dataPath + "/../../Documents/Aquarium/" + fileName;
+             if (File.Exists(filePath))
+            {
+
+                StreamReader r = File.OpenText(filePath);
+
+                if (r != null)
+                {
+                    string data = r.ReadToEnd();
+                    r.Close();
+                    return data;
+                }
+            }
+        }
+        else if (Application.platform == RuntimePlatform.WindowsPlayer || Application.platform == RuntimePlatform.WSAPlayerX86 || Application.platform == RuntimePlatform.OSXPlayer)
         {
             filePath = Application.streamingAssetsPath + "/" + fileName;
             if (File.Exists(filePath))
