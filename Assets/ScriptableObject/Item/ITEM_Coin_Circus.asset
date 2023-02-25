@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: ITEM_Coin_Circus
   m_EditorClassIdentifier: 
   itemData:
-    ItemID: Item_Coin_Circus
-    ItemName: Mystery Coin_Labyrinth
+    ItemID: ITEM_Coin Circus
+    ItemName: Mystery Coin Labyrinth
     ItemDescription: A coin of mystery
     ItemSprite: {fileID: 21300000, guid: d25fef4e556316c4ab4d2c803395549f, type: 3}
     ItemPosition: {x: 310.7, y: -173.07, z: 0}

@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: ITEM_Diary
   m_EditorClassIdentifier: 
   itemData:
+    ItemID: ITEM_Diary
     ItemName: Diary
     ItemDescription: Diary_1
     ItemSprite: {fileID: 21300000, guid: aab4739ccd6e21e46b5de64d7d9186d1, type: 3}

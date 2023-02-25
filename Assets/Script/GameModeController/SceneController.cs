@@ -39,7 +39,7 @@ public class SceneController : MonoBehaviour
 
         while(!asyncOparation.isDone)
         {
-            // print("Scene progress : " + asyncOparation.progress);
+            print("Scene progress : " + asyncOparation.progress);
             yield return null;
         }
         
@@ -51,11 +51,13 @@ public class SceneController : MonoBehaviour
             SceneManager.SetActiveScene(loadedScene);
         }
 
-        afterSwitchScene?.Invoke();
 
         if(loadedSceneBefore.IsValid())
             SceneManager.UnloadSceneAsync(loadedSceneBefore);
 
         loadedSceneBefore = loadedScene;
+
+        yield return null;
+        afterSwitchScene?.Invoke();
     }
 }

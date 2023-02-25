@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: ITEM_Bear_Doll
   m_EditorClassIdentifier: 
   itemData:
-    ItemID: Item_Key_VIPRoom
-    ItemName: VIR Room Key
+    ItemID: ITEM_Bear_Doll
+    ItemName: Bear Doll
     ItemDescription: Key to open VIP room in Cafeteria
     ItemSprite: {fileID: 21300000, guid: 0688ee57614aae24cb676cdb398e4047, type: 3}
     ItemPosition: {x: 309.65, y: -121.78, z: 0}
