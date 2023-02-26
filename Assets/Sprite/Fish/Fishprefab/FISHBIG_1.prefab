@@ -213,7 +213,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7500329903045720418}
   - component: {fileID: 1681760561}
-  - component: {fileID: 957486999669278417}
   - component: {fileID: 5572777444786260701}
   - component: {fileID: 4639855090923493816}
   m_Layer: 0
@@ -253,28 +252,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  anim: {fileID: 0}
   spawner: {fileID: 0}
---- !u!95 &957486999669278417
-Animator:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8709574213789081857}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 29d120546c6cbc34cb37d329b395c4c1, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  spriteRenderer: {fileID: 0}
 --- !u!61 &5572777444786260701
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -285,7 +264,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -16.305552, y: -0.3000002}

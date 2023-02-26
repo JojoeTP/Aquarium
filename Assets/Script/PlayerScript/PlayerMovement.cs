@@ -32,7 +32,7 @@ public class PlayerMovement : MonoBehaviour
     EventInstance playerMovement;
 #endregion
 
-    public float PlayerStamina {get {return playerStamina;}}
+    public float PlayerStamina {get {return playerStamina;} set {playerStamina = value;}}
     public float BasePlayerStamina {get {return basePlayerStamina;}}
 
     Vector2 direction;

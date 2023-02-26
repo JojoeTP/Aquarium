@@ -10,7 +10,6 @@ public class JSONHelper
     #region LoadJSON
     public static T LoadJSONAsObject<T>(string fileName)
     {
-        
         var jsonData = LoadTextAppBundle (fileName);
         if (jsonData != string.Empty) 
         {
@@ -67,7 +66,22 @@ public class JSONHelper
 	private static string LoadTextAppBundle(string fileName) 
 	{
 		string filePath;
-		
+        // if (Application.isEditor){
+        //     filePath = Application.dataPath + "/../../Documents/Aquarium/" + fileName;
+        //      if (File.Exists(filePath))
+        //     {
+
+        //         StreamReader r = File.OpenText(filePath);
+
+        //         if (r != null)
+        //         {
+        //             string data = r.ReadToEnd();
+        //             r.Close();
+        //             return data;
+        //         }
+        //     }
+        // }
+        // else 
         if (Application.platform == RuntimePlatform.WindowsPlayer || Application.platform == RuntimePlatform.WSAPlayerX86 || Application.platform == RuntimePlatform.OSXPlayer)
         {
             filePath = Application.streamingAssetsPath + "/" + fileName;
@@ -108,42 +122,9 @@ public class JSONHelper
     private static string LoadTextUserData(string fileName) 
     {
         string filePath;
-        if (Application.platform == RuntimePlatform.IPhonePlayer) 
+        if (Application.platform == RuntimePlatform.WindowsPlayer || Application.platform == RuntimePlatform.WSAPlayerX86 || Application.platform == RuntimePlatform.OSXPlayer)
         {
-            filePath = Application.persistentDataPath + "/JsonData/" + fileName;
-            if (File.Exists(filePath)) 
-            {
-                StreamReader r = File.OpenText(filePath);
-                if (r != null) 
-                {
-                    string data = r.ReadToEnd();
-                    r.Close();
-                    return data;
-                }
-            }
-        }
-        else  if(Application.platform == RuntimePlatform.Android)
-        {
-            #if UNITY_ANDROID
-            var internalPath = GetInternalAndroidPath();
-            filePath = internalPath + "/" + fileName;
-            WWW loadFile = new WWW(filePath);
-
-            while(!loadFile.isDone) 
-            {
-                //count ++;
-                ////Logger.LogWarning("XML:LoadAppBundleXML() filePath:"+filePath+ " While(!IsDone)");
-            }
-            //yield return new WaitForSeconds (0.5f);
-            //Logger.LogWarning("XML:LoadAppBundleXML() filePath:"+filePath+ " DONE! Data:"+loadFile.text);
-            var resultData = loadFile.text;
-            GC.Collect();
-            return resultData;
-            #endif
-        }
-        else if (Application.platform == RuntimePlatform.WindowsPlayer || Application.platform == RuntimePlatform.WSAPlayerX86 || Application.platform == RuntimePlatform.OSXPlayer)
-        {
-            filePath = Application.persistentDataPath + "/JsonData/" + fileName;
+            filePath = Application.persistentDataPath + "/Aquarium/" + fileName;
             if (File.Exists(filePath))
             {
 
@@ -159,7 +140,7 @@ public class JSONHelper
         }
         else if (Application.platform == RuntimePlatform.OSXEditor || Application.platform == RuntimePlatform.WindowsEditor)
         {
-            filePath = Application.dataPath + "/../../Documents/JsonData/" + fileName;
+            filePath = Application.dataPath + "/../../Documents/Aquarium/" + fileName;
             if (File.Exists(filePath)) 
             {
 

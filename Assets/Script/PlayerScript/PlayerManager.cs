@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+[RequireComponent(typeof(PlayerMovement))]
 public class PlayerManager : MonoBehaviour
 {
     public enum PLAYERSTATE
@@ -62,9 +63,21 @@ public class PlayerManager : MonoBehaviour
     void Init()
     {
         playerState = PLAYERSTATE.NONE;
+
+        LoadPlayerData();
         //Set position
         //Set Item in inventory
+    }
 
+    void LoadPlayerData()
+    {
+        if(!SaveGameSystemManager.inst.isLoad)
+            return;
+        
+        this.transform.position = SaveGameSystemManager.inst.gameData.GetPlayerPosition();
+        playerMovement.PlayerStamina = SaveGameSystemManager.inst.gameData.GetPlayerStamina();
+        playerInventory.PlayerItemDictionary = SaveGameSystemManager.inst.gameData.GetPlayerItem();
+        
     }
 
     void SetUpPlayer()

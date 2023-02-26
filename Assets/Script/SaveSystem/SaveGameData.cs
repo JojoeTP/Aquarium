@@ -24,7 +24,7 @@ public class SaveGameData
 
     static public SaveGameData LoadSaveGameDataJSON()
     {
-        var saveGameData = JSONHelper.LoadJSONAsObject<SaveGameData>("GameData/SaveGameData.json");
+        var saveGameData = JSONHelper.LoadUserJSONAsObject<SaveGameData>("GameData/SaveGameData.json");
         if (saveGameData == null)
         {
             saveGameData = new SaveGameData();

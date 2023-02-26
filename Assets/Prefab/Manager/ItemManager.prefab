@@ -44,12 +44,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e64893270fba892439a13c05cab99772, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  testScene: 0
   isPermutation: 1
   participateID: 1
   winkEffectPrefab: {fileID: 8654583361641874286, guid: fb38231fbd15da14284810f004cbfaa6, type: 3}
   invertColorEffectPrefab: {fileID: 8728724956386461369, guid: bfdfa8adcdfeef347a03c9a46c37f487, type: 3}
   lightEffectPrefab: {fileID: 8022199721257533385, guid: 8c30b74b7a340064aa6f44b844f38319, type: 3}
-  outlineEffectPrefab: {fileID: 735031449175667699, guid: 79ffe3fd608b67a439ac6a6fdc5bfdce, type: 3}
+  outlineEffectPrefab: {fileID: 8654583361641874286, guid: 29600d4754cee0e44ab07c39fcc53391, type: 3}
   buttonEffectPrefab: {fileID: 5954707159681491052, guid: 55cd1aed4ddd94746878e7232c0817c2, type: 3}
   itemData:
   - {fileID: 11400000, guid: 542bc647a6c7ba94580a44987f8685e5, type: 2}
@@ -57,3 +58,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 13b6018e5c7898a44ba470e1eeb9715f, type: 2}
   - {fileID: 11400000, guid: 6864af4c429bc1a4baf33ce5b9af7b12, type: 2}
   - {fileID: 11400000, guid: 9ccc0705f275d0240bf9de4bbefc11a4, type: 2}
+  - {fileID: 11400000, guid: ce13ddd22919e3d45b54be6e5c279bad, type: 2}
+  - {fileID: 11400000, guid: c0943e0476c9f844ea6e2568c1aeb821, type: 2}
+  - {fileID: 11400000, guid: 091f4b46645986d49a794eda5a8a3642, type: 2}
+  - {fileID: 11400000, guid: 973469cd68afc2c4185c32a9d6d71ed5, type: 2}
+  - {fileID: 11400000, guid: 21e34a9c6b411de4ba351ee409c08d82, type: 2}

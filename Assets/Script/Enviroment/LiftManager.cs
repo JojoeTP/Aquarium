@@ -66,6 +66,13 @@ public class LiftManager : MonoBehaviour
         {
             floor_Buttons[2].GetComponent<Button>().interactable = false;
         }
+        else if (lift.currentFloor == Lift.CurrentFloor.Floor4)
+        {
+            floor_Buttons[3].GetComponent<Button>().interactable = false;
+        }else if (lift.currentFloor == Lift.CurrentFloor.Floor5)
+        {
+            floor5_Button.GetComponent<Button>().interactable = false;
+        }
     }
 
     public void EnterDoor(Transform entity , Transform connectFloorLeftSide , Transform connectFloorRightSide , bool isLeftSide)
@@ -73,7 +80,7 @@ public class LiftManager : MonoBehaviour
         Vector3 nextPosition;
         if (isLeftSide == true)
         {
-            nextPosition = new Vector3(connectFloorLeftSide.position.x, connectFloorLeftSide.position.y , 0);
+            nextPosition = new Vector3(connectFloorLeftSide.position.x, connectFloorLeftSide.position.y, 0);
         }
         else
         {
@@ -86,6 +93,7 @@ public class LiftManager : MonoBehaviour
     public void UpdatePlayerPosition(Transform newPosition)
     {
         playerPosition = newPosition;
+        print(playerPosition);
     }
     public void PlayerInteractAtSide(bool newSide)
     {
@@ -106,11 +114,21 @@ public class LiftManager : MonoBehaviour
         EnterDoor(playerPosition, connectFloorsLeftSide[2], connectFloorsRightSide[2], playerInteractAtSide);
         CloseCanvas_TransitionBlack_PlayerState();
     }
+    public void GoToFloor4()
+    {
+        EnterDoor(playerPosition, connectFloorsLeftSide[3], connectFloorsRightSide[3], playerInteractAtSide);
+        CloseCanvas_TransitionBlack_PlayerState();
+    }
+    public void GoToFloor5()
+    {
+        EnterDoor(playerPosition, connectFloorsLeftSide[4], null, playerInteractAtSide);
+        CloseCanvas_TransitionBlack_PlayerState();
+    }
 
     void CloseCanvas_TransitionBlack_PlayerState()
     {
         Canvas_Lift.SetActive(false);
-        UITransition.inst.DoorTransitionIn();
+        UITransition.inst.LiftTransitionIn();
         SetPlayerToNoneState();
     }
 

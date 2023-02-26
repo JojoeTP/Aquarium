@@ -438,6 +438,10 @@ namespace FMODUnity
             // Explicitly initialize Settings so that both it and EditorSettings will work.
             Settings.Initialize();
 
+#if UNITY_EDITOR
+            Settings.EditorSettings.CheckActiveBuildTarget();
+#endif
+
             CheckBaseFolderGUID();
             CheckMacLibraries();
 

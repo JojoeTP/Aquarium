@@ -8,12 +8,12 @@ public class SaveGameSystemManager : MonoBehaviour
 
     public SaveGameData gameData;
 
+    public bool isLoad {get; private set;}
+
     void Awake() 
     {
         if(inst != null)
-        {
             return;
-        }
 
         inst = this;
     }
@@ -23,8 +23,9 @@ public class SaveGameSystemManager : MonoBehaviour
         
     }
 
-    void StartNewGame()
+    public void StartNewGame()
     {
+        isLoad = false;
         gameData = new SaveGameData();
     }
 
@@ -40,9 +41,12 @@ public class SaveGameSystemManager : MonoBehaviour
         newSaveGameData.SaveJSON();
     }
     
-    void LoadGame()
+    public void LoadGame()
     {
+        isLoad = true;
+
         gameData = SaveGameData.LoadSaveGameDataJSON();
+        RecordTimeManager.Inst.LoadPickUpItemTimeData();
 
         //โหลดมาเเล้วก็ นำ gamedata ที่ได้ ไปใช้ทำอะไรต่อก็ได้ แบบ set ค่าให้ player อะไรพวกนั้น
         //หลักๆตอนนี้คง เปลี่ยนตำแหน่งผู้เล่น
@@ -51,8 +55,8 @@ public class SaveGameSystemManager : MonoBehaviour
         //add เสร็จเเล้วก็กดปิดไอเทมนั้น
 
         // ดึงค่าได้จาก
-        // gameData.GetPlayerItem();
         // gameData.GetPlayerParticipateID();
+        // gameData.GetPlayerItem();
         // gameData.GetPlayerPosition();
         // gameData.GetPlayerStamina();
         

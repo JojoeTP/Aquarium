@@ -1,15 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEditor;
 
 public class ActionEventManager : MonoBehaviour
 {
     public static ActionEventManager inst;
 
-    [Header("Labyrinth")]
-    public Material labyrinthMapMaterial;
-
-    private void Awake() 
+    void Awake() 
     {
         inst = this;
     }
@@ -17,8 +15,8 @@ public class ActionEventManager : MonoBehaviour
 #region ItemActionEvent
     public void OnPickUpLabyrinthCoin()
     {
-        labyrinthMapMaterial.SetInt("_HideMainTex",1); //เปลี่ยน texture
-        //ปิดกำแพงด้วย
+        ShaderManager.inst.SetMazeMaterial(1);
+        //ปิดเสียงด้วย
     }
 #endregion
 
@@ -37,3 +35,22 @@ public class ActionEventManager : MonoBehaviour
         SaveGameSystemManager.inst.SaveGame();
     }
 }
+
+#if UNITY_EDITOR
+    [CustomEditor(typeof(ActionEventManager))]
+    public class ActionEventTester : Editor
+    {
+        public override void OnInspectorGUI()
+        {
+            base.OnInspectorGUI();
+
+            ActionEventManager actionActive = (ActionEventManager)target;
+
+            if (GUILayout.Button("Test Save Game"))
+            {
+                Debug.Log("SAVE COMPLETE");
+                actionActive.TestSaveGame();
+            }
+        }
+    }
+#endif

@@ -167,34 +167,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 397002086}
     m_Modifications:
-    - target: {fileID: 1024789035002663272, guid: 2b1cbc8904e6e2046a457b85f086fec9, type: 3}
-      propertyPath: itemData.Array.size
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 1024789035002663272, guid: 2b1cbc8904e6e2046a457b85f086fec9, type: 3}
-      propertyPath: outlineEffectPrefab
-      value: 
-      objectReference: {fileID: 8654583361641874286, guid: 29600d4754cee0e44ab07c39fcc53391, type: 3}
-    - target: {fileID: 1024789035002663272, guid: 2b1cbc8904e6e2046a457b85f086fec9, type: 3}
-      propertyPath: itemData.Array.data[5]
-      value: 
-      objectReference: {fileID: 11400000, guid: ce13ddd22919e3d45b54be6e5c279bad, type: 2}
-    - target: {fileID: 1024789035002663272, guid: 2b1cbc8904e6e2046a457b85f086fec9, type: 3}
-      propertyPath: itemData.Array.data[6]
-      value: 
-      objectReference: {fileID: 11400000, guid: c0943e0476c9f844ea6e2568c1aeb821, type: 2}
-    - target: {fileID: 1024789035002663272, guid: 2b1cbc8904e6e2046a457b85f086fec9, type: 3}
-      propertyPath: itemData.Array.data[7]
-      value: 
-      objectReference: {fileID: 11400000, guid: 091f4b46645986d49a794eda5a8a3642, type: 2}
-    - target: {fileID: 1024789035002663272, guid: 2b1cbc8904e6e2046a457b85f086fec9, type: 3}
-      propertyPath: itemData.Array.data[8]
-      value: 
-      objectReference: {fileID: 11400000, guid: 973469cd68afc2c4185c32a9d6d71ed5, type: 2}
-    - target: {fileID: 1024789035002663272, guid: 2b1cbc8904e6e2046a457b85f086fec9, type: 3}
-      propertyPath: itemData.Array.data[9]
-      value: 
-      objectReference: {fileID: 11400000, guid: 21e34a9c6b411de4ba351ee409c08d82, type: 2}
     - target: {fileID: 1024789035002663273, guid: 2b1cbc8904e6e2046a457b85f086fec9, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -561,6 +533,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8650031460334926132, guid: c340f6ce12ed6e14d91cc8895ea604fa, type: 3}
+      propertyPath: masterVolume
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c340f6ce12ed6e14d91cc8895ea604fa, type: 3}
 --- !u!4 &6364881888974947742 stripped
@@ -568,34 +544,3 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7018307969707337321, guid: c340f6ce12ed6e14d91cc8895ea604fa, type: 3}
   m_PrefabInstance: {fileID: 6364881888974947741}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &6364881888974947743 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2198484671090603603, guid: c340f6ce12ed6e14d91cc8895ea604fa, type: 3}
-  m_PrefabInstance: {fileID: 6364881888974947741}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &6364881888974947744
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6364881888974947743}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 90ca0b68cb4bba849ac4dcf2653f0a68, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  <playerMovementSFX>k__BackingField:
-    Guid:
-      Data1: -132877150
-      Data2: 1239890899
-      Data3: -1455111234
-      Data4: 1234189057
-    Path: event:/PlayerMove/SFX_PlayerMove
-  <MainMenuMusic>k__BackingField:
-    Guid:
-      Data1: -1786025440
-      Data2: 1249586670
-      Data3: -640150876
-      Data4: 846998473
-    Path: event:/Music/MainMenuMusic

@@ -25,24 +25,29 @@ public class RecordTimeManager : MonoBehaviour
     {
         PickUpItemTime _pickUpItemTime = new PickUpItemTime();
 
-#if UNITY_EDITOR
         _pickUpItemTime.SaveJSON("PickUpItemTimeData/PickUpItemTime.json",false);
-#else
-        _pickUpItemTime.SaveJSON("PickUpItemTimeData/PickUpItemTime.json",false);
-#endif
     }
 
     public void SavePickUpItemTimeData(string key,ItemTimeData itemData)
     {
         pickUpItemTime.participateID = ItemManager.Inst.ParticipateId;
-        pickUpItemTime.gettingItemTime.Add(key,itemData);
+        if(!pickUpItemTime.gettingItemTime.TryAdd(key,itemData))
+        {
+            pickUpItemTime.gettingItemTime.Remove(key);
+            pickUpItemTime.gettingItemTime.Add(key,itemData);
+        }
 
-#if UNITY_EDITOR
         pickUpItemTime.SaveJSON("PickUpItemTimeData/PickUpItemTime.json",false);
-#else
-        pickUpItemTime.SaveJSON("PickUpItemTimeData/PickUpItemTime.json",false);
-#endif
+    }
 
+    public void LoadPickUpItemTimeData()
+    {
+        pickUpItemTime = PickUpItemTime.LoadJson();
+        Debug.Log(pickUpItemTime.participateID);
+        foreach(var n in pickUpItemTime.gettingItemTime)
+        {
+            Debug.Log(n.Key + ":" + n.Value);
+        }
     }
 
     public void OpenDataFolder()
@@ -68,9 +73,8 @@ public class PickUpItemTime
 
     static public PickUpItemTime LoadJson()
     {
-        //load when continue play game
-
-        var pickUpItemTimeData = JSONHelper.LoadJSONAsObject<PickUpItemTime>("PickUpItemTimeData/PickUpItemTime.json");
+        //TODO: Maybe gonna use LoadJSONAsObject() if it doesn't works.
+        var pickUpItemTimeData = JSONHelper.LoadUserJSONAsObject<PickUpItemTime>("PickUpItemTimeData/PickUpItemTime.json"); 
         if (pickUpItemTimeData == null)
         {
             pickUpItemTimeData = new PickUpItemTime();
