@@ -23,4 +23,9 @@ public class UITransition : MonoBehaviour
     {
         cutSceneTransition.CutSceneTransitionIn();
     }
+
+    public void LiftTransitionIn()
+    {
+        doorTransition.LiftTransitionIn();
+    }
 }

@@ -22,4 +22,14 @@ public class DoorTransitionScript : MonoBehaviour
         animator.SetTrigger("TransitionOut");
     }
 
+    public void LiftTransitionIn()
+    {
+        animator.SetTrigger("LiftTransitionIn");
+    }
+
+    public void LiftTransitionOut()
+    {
+        animator.SetTrigger("LiftTransitionOut");
+    }
+
 }
