@@ -66,6 +66,10 @@ public class LiftManager : MonoBehaviour
         {
             floor_Buttons[2].GetComponent<Button>().interactable = false;
         }
+        else if (lift.currentFloor == Lift.CurrentFloor.Floor4)
+        {
+            floor_Buttons[3].GetComponent<Button>().interactable = false;
+        }
     }
 
     public void EnterDoor(Transform entity , Transform connectFloorLeftSide , Transform connectFloorRightSide , bool isLeftSide)
@@ -104,6 +108,11 @@ public class LiftManager : MonoBehaviour
     public void GoToFloor3()
     {
         EnterDoor(playerPosition, connectFloorsLeftSide[2], connectFloorsRightSide[2], playerInteractAtSide);
+        CloseCanvas_TransitionBlack_PlayerState();
+    }
+    public void GoToFloor4()
+    {
+        EnterDoor(playerPosition, connectFloorsLeftSide[3], null, playerInteractAtSide);
         CloseCanvas_TransitionBlack_PlayerState();
     }
 
