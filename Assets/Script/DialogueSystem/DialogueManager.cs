@@ -275,7 +275,13 @@ public class DialogueManager : MonoBehaviour
         dialogueCanvas.enabled = false;
         dialoguePanel.ResetCharacterSprite();
 
-        if(currentNPC != null)
+        if (currentNPC != null && currentNPC.isSave == true)
+        {
+            print("save");
+            SaveGameSystemManager.inst.SaveGame();
+        }
+        
+        if (currentNPC != null)
         {
             currentNPC.triggerEvents.Invoke();
             currentNPC = null;

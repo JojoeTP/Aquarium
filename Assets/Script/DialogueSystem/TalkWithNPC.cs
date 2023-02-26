@@ -12,6 +12,7 @@ public class NPCDialogueCondition{
 }
 public class TalkWithNPC : MonoBehaviour
 {
+    public bool isSave;
     public bool isCutScene;
     public string startWithDialogueId;
     public UnityEvent triggerEvents;
@@ -67,11 +68,8 @@ public class TalkWithNPC : MonoBehaviour
         {
            if (other.GetComponent<PlayerManager>() != null)
            {
-                //PlayerEnterDoor(other.transform);
-                // Need Fade Black Animation
                 UITransition.inst.CutSceneTransitionIn();
-                //PlayerManager.inst.PlayerInteract.Interacting();
-            }
+           }
         }
     }
 }
