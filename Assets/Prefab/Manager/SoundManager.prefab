@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7018307969707337321}
   - component: {fileID: 8650031460334926132}
+  - component: {fileID: 6364881888974947744}
   m_Layer: 0
   m_Name: SoundManager
   m_TagString: Untagged
@@ -44,6 +45,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4572e01d9d819b4cb7bbc2c75a9ea4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BGMSources: []
-  SFXSources: []
-  scoundDatas: []
+  masterVolume: 1
+  BGMVolume: 1
+  SFXVolume: 1
+--- !u!114 &6364881888974947744
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2198484671090603603}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90ca0b68cb4bba849ac4dcf2653f0a68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <playerMovementSFX>k__BackingField:
+    Guid:
+      Data1: -132877150
+      Data2: 1239890899
+      Data3: -1455111234
+      Data4: 1234189057
+    Path: event:/PlayerMove/SFX_PlayerMove
+  <MainMenuMusic>k__BackingField:
+    Guid:
+      Data1: -1786025440
+      Data2: 1249586670
+      Data3: -640150876
+      Data4: 846998473
+    Path: event:/Music/MainMenuMusic

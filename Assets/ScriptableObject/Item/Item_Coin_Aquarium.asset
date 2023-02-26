@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 46ae0de02bf1e0945810f84cfdbfb621, type: 3}
-  m_Name: Item_Coin_Aquarium
+  m_Name: ITEM_Coin_Aquarium
   m_EditorClassIdentifier: 
   itemData:
-    ItemID: Item_Coin_Aquarium
+    ItemID: ITEM_Coin_Aquarium
     ItemName: Coin Aquarium
     ItemDescription: Map
     ItemSprite: {fileID: 21300000, guid: efa0551ec0051364080d8ab8fc89c5c2, type: 3}
