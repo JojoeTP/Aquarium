@@ -51,8 +51,8 @@ public class SaveGameSystemManager : MonoBehaviour
         //add เสร็จเเล้วก็กดปิดไอเทมนั้น
 
         // ดึงค่าได้จาก
-        // gameData.GetPlayerItem();
         // gameData.GetPlayerParticipateID();
+        // gameData.GetPlayerItem();
         // gameData.GetPlayerPosition();
         // gameData.GetPlayerStamina();
         

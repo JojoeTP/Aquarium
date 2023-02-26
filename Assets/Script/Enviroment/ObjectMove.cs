@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ObjectMove : MonoBehaviour
 {
-    [SerializeField] float speed;
+    float speed = 10f;
     public Spawner spawner;
     [SerializeField] SpriteRenderer spriteRenderer;
     int alpha;
@@ -14,6 +14,7 @@ public class ObjectMove : MonoBehaviour
         alpha = 0;
         spriteRenderer.color = new Color(255, 255, 255, alpha);
         StartCoroutine(FishTransition("In"));
+        speed = Random.Range(7,speed);
     }
     void Update()
     {
@@ -24,28 +25,25 @@ public class ObjectMove : MonoBehaviour
         yield return new WaitForSeconds(0.05f);
         if (alpha < 255 && state == "In")
         {
-            spriteRenderer.color += new Color(255, 255, 255, Time.deltaTime);
             alpha++;
+            spriteRenderer.color += new Color(255, 255, 255, Time.deltaTime);
             StartCoroutine(FishTransition("In"));
         }
         else if (alpha > 0 && state == "Out")
         {
             StopAllCoroutines();
-            spriteRenderer.color -= new Color(255, 255, 255, Time.deltaTime);
-            alpha--;
-            if (alpha > 0 && alpha <= 255)
-            {
-                StartCoroutine(FishTransition("Out"));
-            }
-            else
-            {
-                Destroy(this.gameObject);
-            }
+            StartCoroutine(DestroyGameObject());
         }
     }
 
     public void FishDestroy()
     {
         StartCoroutine(FishTransition("Out"));
+    }
+
+    IEnumerator DestroyGameObject()
+    {
+        yield return new WaitForSeconds(2f);
+        Destroy(this.gameObject);
     }
 }
