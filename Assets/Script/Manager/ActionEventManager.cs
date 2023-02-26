@@ -7,10 +7,7 @@ public class ActionEventManager : MonoBehaviour
 {
     public static ActionEventManager inst;
 
-    [Header("Labyrinth")]
-    public Material labyrinthMapMaterial;
-
-    private void Awake() 
+    void Awake() 
     {
         inst = this;
     }
@@ -18,8 +15,8 @@ public class ActionEventManager : MonoBehaviour
 #region ItemActionEvent
     public void OnPickUpLabyrinthCoin()
     {
-        labyrinthMapMaterial.SetInt("_HideMainTex",1); //เปลี่ยน texture
-        //ปิดกำแพงด้วย
+        ShaderManager.inst.SetMazeMaterial(1);
+        //ปิดเสียงด้วย
     }
 #endregion
 

@@ -46,6 +46,7 @@ public class SaveGameSystemManager : MonoBehaviour
         isLoad = true;
 
         gameData = SaveGameData.LoadSaveGameDataJSON();
+        RecordTimeManager.Inst.LoadPickUpItemTimeData();
 
         //โหลดมาเเล้วก็ นำ gamedata ที่ได้ ไปใช้ทำอะไรต่อก็ได้ แบบ set ค่าให้ player อะไรพวกนั้น
         //หลักๆตอนนี้คง เปลี่ยนตำแหน่งผู้เล่น

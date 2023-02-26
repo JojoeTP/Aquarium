@@ -19,6 +19,7 @@ public class LoadSceneController : MonoBehaviour
 
     void Start()
     {
+        
     }
 
     void LoadCoreScene()
