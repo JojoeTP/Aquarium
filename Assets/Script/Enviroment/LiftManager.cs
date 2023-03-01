@@ -18,6 +18,11 @@ public class LiftManager : MonoBehaviour
     [SerializeField] GameObject[] floor_Buttons;
     [SerializeField] GameObject floor5_Button;
 
+    void Awake()
+    {
+        inst = this;
+    }
+
     public bool CheckCondition()
     {
         if (conditionItem == null)
@@ -28,11 +33,6 @@ public class LiftManager : MonoBehaviour
             return true;
         }
         return false;
-    }
-
-    private void Awake()
-    {
-        inst = this;
     }
 
     public void ShowSelectionFloor(Lift lift)

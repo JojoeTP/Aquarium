@@ -11,17 +11,16 @@ public class SceneController : MonoBehaviour
     public string SCENE_MAINMENU { get {return "Scene_MainMenu";} }
     public string SCENE_LOADING { get {return "Scene_Loading";} }
 
+    public float loadingProgress {get; private set;}
     Scene loadedSceneBefore;
+
+    bool gameplaySceneLoaded = false;
+    public bool GameplaySceneLoaded {set {gameplaySceneLoaded = value;} get {return gameplaySceneLoaded;}}
 
     void Awake() 
     {
         if(inst == null)
             inst = this;
-    }
-
-    void Start()
-    {
-
     }
 
     public void OnLoadSceneAsync(string sceneName, Action beforeSwitchScene = null, Action afterSwitchScene = null)
@@ -37,13 +36,24 @@ public class SceneController : MonoBehaviour
 
         var asyncOparation = SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Additive);
 
+        asyncOparation.allowSceneActivation = false;
+
         while(!asyncOparation.isDone)
         {
-            print("Scene progress : " + asyncOparation.progress);
+
+            loadingProgress = Mathf.Clamp01(asyncOparation.progress / 0.9f);
+            print("Scene progress : " + loadingProgress);
+
+            if (loadingProgress >= 0.9f)
+            {
+                asyncOparation.allowSceneActivation = true;
+            }
+
             yield return null;
         }
         
-        asyncOparation.allowSceneActivation = true;
+        yield return null;
+
         var loadedScene = SceneManager.GetSceneByName(sceneName);
         
         if(loadedScene.isLoaded)
@@ -53,7 +63,7 @@ public class SceneController : MonoBehaviour
 
 
         if(loadedSceneBefore.IsValid())
-            SceneManager.UnloadSceneAsync(loadedSceneBefore);
+           SceneManager.UnloadSceneAsync(loadedSceneBefore);
 
         loadedSceneBefore = loadedScene;
 

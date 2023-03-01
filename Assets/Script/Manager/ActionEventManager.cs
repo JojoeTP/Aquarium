@@ -7,6 +7,13 @@ public class ActionEventManager : MonoBehaviour
 {
     public static ActionEventManager inst;
 
+    [Header("Puzzle")]
+    [SerializeField] SpriteRenderer labyrinthENDSpriteRenderer;
+    [SerializeField] Sprite dark_LabyrinthSprite;
+    [HideInInspector]
+    public bool isPuzzleDone = false;
+    
+
     void Awake() 
     {
         inst = this;
@@ -15,7 +22,8 @@ public class ActionEventManager : MonoBehaviour
 #region ItemActionEvent
     public void OnPickUpLabyrinthCoin()
     {
-        ShaderManager.inst.SetMazeMaterial(1);
+        isPuzzleDone = true;
+        labyrinthENDSpriteRenderer.sprite = dark_LabyrinthSprite;
         //ปิดเสียงด้วย
     }
 #endregion

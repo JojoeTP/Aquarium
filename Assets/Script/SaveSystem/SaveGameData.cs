@@ -15,6 +15,10 @@ public class SaveGameData
     public Dictionary<string,string> playerItem = new Dictionary<string, string>();
 
 
+
+    public bool isEncryptionPuzzleDone;
+
+
     //Item in inventory
 
     public void SaveJSON(bool toStreamingAssets = false)
@@ -51,6 +55,11 @@ public class SaveGameData
     public Dictionary<string,string> GetPlayerItem()
     {
         return playerItem;
+    }
+
+    public bool GetEncryptionPuzzle()
+    {
+        return isEncryptionPuzzleDone;
     }
 
 }
