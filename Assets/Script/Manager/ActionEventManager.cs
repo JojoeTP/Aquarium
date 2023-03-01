@@ -59,6 +59,12 @@ public class ActionEventManager : MonoBehaviour
                 Debug.Log("SAVE COMPLETE");
                 actionActive.TestSaveGame();
             }
+
+
+            if (GUILayout.Button("Test Labyrinth END"))
+            {
+                actionActive.OnPickUpLabyrinthCoin();
+            }
         }
     }
 #endif
