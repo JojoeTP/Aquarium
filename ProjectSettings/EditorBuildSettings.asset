@@ -17,4 +17,5 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Scene_Aquarium.unity
     guid: 39f6ef5196af7b14983ed89183170998
-  m_configObjects: {}
+  m_configObjects:
+    com.unity.addressableassets: {fileID: 11400000, guid: d9d9c4760f28cf94cb1ece2d370c9c63, type: 2}

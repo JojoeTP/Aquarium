@@ -37,31 +37,25 @@ public class PlayerManager : MonoBehaviour
     private void Awake() 
     {
         inst = this;
-
-        TryGetComponent<PlayerMovement>(out playerMovement);
-        TryGetComponent<PlayerInteract>(out playerInteract);
-        TryGetComponent<PlayerLight>(out playerLight);
-        TryGetComponent<PlayerInventory>(out playerInventory);
     }
 
     void Start()
     {
         Init();
-        playerState = PLAYERSTATE.NONE;
     }
 
-    void Update()
+    void GetPlayerComponent()
     {
-        
-    }
-
-    private void FixedUpdate() 
-    {
-
+        playerMovement = GetComponent<PlayerMovement>();
+        playerInteract = GetComponent<PlayerInteract>();
+        playerLight = GetComponent<PlayerLight>();
+        playerInventory = GetComponent<PlayerInventory>();
     }
 
     void Init()
     {
+        GetPlayerComponent();
+
         playerState = PLAYERSTATE.NONE;
 
         LoadPlayerData();

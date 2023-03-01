@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using TMPro;
 using System.IO;
 using System;
+using System.Threading.Tasks;
 using System.Linq;
 
 public class DialogueManager : MonoBehaviour
@@ -46,8 +47,8 @@ public class DialogueManager : MonoBehaviour
 
     void Start()
     {
-        LoadDialogueData();
-        LoadCharacterSprites();
+        LoadAllDialogueData();
+        // LoadCharacterSprites();
     }
 
     void Initialize()
@@ -67,38 +68,45 @@ public class DialogueManager : MonoBehaviour
         dialogueCanvas = dialoguePanel.GetComponent<Canvas>();
     }
 
-    void LoadDialogueData()
+    async void LoadAllDialogueData()
     {
         for (int i = 0; i < dialoguePaths.Length; i++)
         {
-            StreamReader stringReader = new StreamReader(Application.streamingAssetsPath + "/DialogueData/" + dialoguePaths[i] + ".csv");
+            await LoadDialogueData(i);
+        }
+    }
 
-            bool endOfFile = false;
-            while (!endOfFile)
+    public async Task LoadDialogueData(int index)
+    {
+        StreamReader stringReader = new StreamReader(Application.streamingAssetsPath + "/DialogueData/" + dialoguePaths[index] + ".csv");
+
+        bool endOfFile = false;
+        while (!endOfFile)
+        {
+            string data_string = stringReader.ReadLine();
+
+            if (data_string == null)
             {
-                string data_string = stringReader.ReadLine();
+                endOfFile = true;
+                break;
+            }
 
-                if (data_string == null)
-                {
-                    endOfFile = true;
-                    break;
-                }
-
-                var data_values = data_string.Split(',');
+            var data_values = data_string.Split(',');
 
 
-                if (data_values[0] == "Id" || data_values[0] == "")
-                {
+            if (data_values[0] == "Id" || data_values[0] == "")
+            {
 
-                }
-                else
-                {
-                    //ID,character,charaterImage,dialogueText,choice1,choice2,choice1Text,choice2Text,type
-                    DialogueInfo newDialogue = new DialogueInfo(data_values[0], data_values[1], data_values[2], data_values[3], data_values[4], data_values[5], data_values[6], data_values[7], data_values[8]);
-                    openWith.Add(data_values[0], newDialogue);
-                }
+            }
+            else
+            {
+                //ID,character,charaterImage,dialogueText,choice1,choice2,choice1Text,choice2Text,type
+                DialogueInfo newDialogue = new DialogueInfo(data_values[0], data_values[1], data_values[2], data_values[3], data_values[4], data_values[5], data_values[6], data_values[7], data_values[8]);
+                openWith.Add(data_values[0], newDialogue);
+                await Task.Yield();
             }
         }
+        
     }
 
     void CheckMainCharacterSpeak(string dialogueId)

@@ -18,6 +18,7 @@ public class MainMenuController : MonoBehaviour
     }
 
     MenuState currentState;
+    [SerializeField] LoadingUI loadingUI;
 
     [Header("Panel")]
     [SerializeField] Canvas MainMenuPanel;
@@ -44,6 +45,7 @@ public class MainMenuController : MonoBehaviour
         switch(currentState)
         {
             case MenuState.MainMenu :
+                loadingUI.EnableCavnas(false);
                 break;
             case MenuState.StartGame :
                 break;
@@ -56,6 +58,9 @@ public class MainMenuController : MonoBehaviour
     {
         SaveGameSystemManager.inst.LoadGame();
         ItemManager.Inst.ParticipateId = SaveGameSystemManager.inst.gameData.participateID;
+
+        loadingUI.EnableCavnas(true);
+
         StartCoroutine(TransitionToGamePlay());    
     }
 
@@ -69,6 +74,9 @@ public class MainMenuController : MonoBehaviour
     {
         SaveGameSystemManager.inst.StartNewGame();
         ItemManager.Inst.ParticipateId = int.Parse(inputParticipateID.text);
+
+        loadingUI.EnableCavnas(true);
+
         StartCoroutine(TransitionToGamePlay());    
     }
 
@@ -106,7 +114,8 @@ public class MainMenuController : MonoBehaviour
     {
         yield return null;
         // maybe switch to loading scene before switch to scene game
-
+        
+        SceneController.inst.GameplaySceneLoaded = false;
         SceneController.inst.OnLoadSceneAsync(SceneController.inst.SCENE_GAMEPLAY,ActionBeforSwitchScene,ActionAfterSwitchScene);
 
     }
@@ -118,10 +127,11 @@ public class MainMenuController : MonoBehaviour
 
     void ActionAfterSwitchScene()
     {
-        print("After");
         ItemManager.Inst.SetUpItemPermutation();
 
         //SoundManager.Inst.InitializeBGM(FMODEvent.inst.InGameMusic); 
         SoundManager.Inst.StopBGM();
+
+        SceneController.inst.GameplaySceneLoaded = true;
     }
 }

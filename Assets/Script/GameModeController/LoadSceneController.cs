@@ -17,11 +17,6 @@ public class LoadSceneController : MonoBehaviour
     }
 #endif
 
-    void Start()
-    {
-        
-    }
-
     void LoadCoreScene()
     {
         SceneManager.LoadScene(SCENE_CORE,LoadSceneMode.Additive);

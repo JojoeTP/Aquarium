@@ -18453,7 +18453,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7785532, y: 1}
+    m_SensorSize: {x: 1.7782427, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -75983,6 +75983,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4966732993388418438, guid: 1b3dcc0b488f4414c991160dad5fe269, type: 3}
       propertyPath: labyrinthMap
+      value: 
+      objectReference: {fileID: 4695122923223474138}
+    - target: {fileID: 4966732993388418438, guid: 1b3dcc0b488f4414c991160dad5fe269, type: 3}
+      propertyPath: dark_LabyrinthSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 30bb2e87bee3e6149b43ef11e2f45a74, type: 3}
+    - target: {fileID: 4966732993388418438, guid: 1b3dcc0b488f4414c991160dad5fe269, type: 3}
+      propertyPath: labyrinthENDSpriteRenderer
       value: 
       objectReference: {fileID: 4695122923223474138}
     - target: {fileID: 4966732993388418439, guid: 1b3dcc0b488f4414c991160dad5fe269, type: 3}
