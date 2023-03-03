@@ -30,6 +30,8 @@ public class MainMenuController : MonoBehaviour
 
     Animator animator;
 
+    public bool gameStarted = false;
+
     private void Start() 
     {
         animator = GetComponent<Animator>();
@@ -56,6 +58,9 @@ public class MainMenuController : MonoBehaviour
 
     public void OnClickContinue()
     {
+        if(gameStarted) return;
+
+        gameStarted = true;
         SaveGameSystemManager.inst.LoadGame();
         ItemManager.Inst.ParticipateId = SaveGameSystemManager.inst.gameData.participateID;
 
@@ -72,6 +77,9 @@ public class MainMenuController : MonoBehaviour
 
     public void OnApplyParticipateID()
     {
+        if(gameStarted) return;
+
+        gameStarted = true;
         SaveGameSystemManager.inst.StartNewGame();
         ItemManager.Inst.ParticipateId = int.Parse(inputParticipateID.text);
 

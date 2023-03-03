@@ -11,7 +11,7 @@ public class AddressablesManager : MonoBehaviour
 {
     public static AddressablesManager inst;
 
-    string MAP_SPRITEATLAS = "Assets/SpriteAtlas/New Sprite Atlas.spriteatlas";
+    string MAP_SPRITEATLAS = "MapSpriteAtlas";
     
     AsyncOperationHandle<SpriteAtlas> handle;
     bool isHandleHasValue;
@@ -53,7 +53,7 @@ public class AddressablesManager : MonoBehaviour
     {
         handle = Addressables.LoadAssetAsync<SpriteAtlas>(MAP_SPRITEATLAS);
         
-        // handle.PercentComplete();
+        Debug.Log($"SpriteAtlas Loading : {handle.PercentComplete}");
         
         isHandleHasValue = true;
 
