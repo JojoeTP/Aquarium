@@ -116,6 +116,7 @@ public class MainMenuController : MonoBehaviour
         // maybe switch to loading scene before switch to scene game
         
         SceneController.inst.GameplaySceneLoaded = false;
+        AddressablesManager.inst.LoadSpriteAtlas();
         SceneController.inst.OnLoadSceneAsync(SceneController.inst.SCENE_GAMEPLAY,ActionBeforSwitchScene,ActionAfterSwitchScene);
 
     }
@@ -128,7 +129,7 @@ public class MainMenuController : MonoBehaviour
     void ActionAfterSwitchScene()
     {
         ItemManager.Inst.SetUpItemPermutation();
-
+        
         //SoundManager.Inst.InitializeBGM(FMODEvent.inst.InGameMusic); 
         SoundManager.Inst.StopBGM();
 
