@@ -15,7 +15,7 @@ public class LoadingUI : MonoBehaviour
 
     void UpdateLoadingBar()
     {
-        loadingBar.value = SceneController.inst.loadingProgress;
+        loadingBar.value = SceneController.inst.loadingProgress; //TODO: อาจะปลี่ยนเป็นวงหมุนๆแทน
     }
 
     public void EnableCavnas(bool enable)
