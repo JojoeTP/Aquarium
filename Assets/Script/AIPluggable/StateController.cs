@@ -103,9 +103,35 @@ public class StateController : MonoBehaviour
         return false;
     }
 
+    public bool IsPlayerInRangeIncludeBehide(float range)
+    {
+        if(Physics2D.OverlapCircle(transform.position,range,playerLayer))
+            return true;
+
+        return false;
+    }
+
     public bool IsWallInRange(float range)
     {
         if(Physics2D.Raycast(transform.position,moveDirection,range,wallLayer))
+            return true;
+
+        return false;
+    }
+
+    public Vector3 GetPlayerDirection()
+    {
+        Vector3 direction = PlayerManager.inst.transform.position - transform.position;
+        direction += new Vector3(0,3f,0);
+        return direction.normalized;
+    }
+
+    public bool IsPlayerBehide()
+    {
+        if (transform.position.x > PlayerManager.inst.transform.position.x && transform.localScale.x > 0)
+            return true;
+        
+        if (transform.position.x < PlayerManager.inst.transform.position.x && transform.localScale.x < 0)
             return true;
 
         return false;

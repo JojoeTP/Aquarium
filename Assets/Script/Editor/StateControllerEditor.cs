@@ -11,7 +11,12 @@ public class StateControllerEditor : Editor
         var t = target as StateController;
         var tr = t.transform.position;
         var offset = t.stateLableOffset;
-        var stateName = t.currentState.name;
+        string stateName;
+        if(t.currentState == null)
+            stateName = "null";
+        else
+            stateName = t.currentState.name;
+        
         Handles.Label(tr + offset,stateName);
     }
 }
