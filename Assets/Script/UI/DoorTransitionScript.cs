@@ -29,6 +29,14 @@ public class DoorTransitionScript : MonoBehaviour
 
     public void LiftTransitionOut()
     {
+        if (LiftManager.inst.selectedFloor == 5)
+        {
+            LiftManager.inst.GoToFloor5();
+        }
+        else
+        {
+            LiftManager.inst.GoToFloor(LiftManager.inst.selectedFloor); 
+        }
         animator.SetTrigger("LiftTransitionOut");
     }
 

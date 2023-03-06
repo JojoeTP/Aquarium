@@ -78,14 +78,6 @@ public class PlayerInteract : MonoBehaviour
         LiftManager.inst.PlayerInteractAtSide(lift.leftSide);
         LiftManager.inst.ShowSelectionFloor(lift);
     }
-    public void EnterLift()
-    {
-        if (PlayerManager.inst.playerState != PlayerManager.PLAYERSTATE.NONE)
-            return;
-
-        PlayerManager.inst.playerState = PlayerManager.PLAYERSTATE.ENTERDOOR;
-    }
-
     bool CanEnterLift(Transform overlap)
     {
         if (overlap.GetComponent<Lift>() != null)
