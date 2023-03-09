@@ -31,7 +31,6 @@ public class SaveGameSystemManager : MonoBehaviour
 
     public void SaveGame()
     {
-        //GetAll data to game data;
         SaveGameData newSaveGameData = new SaveGameData();
         newSaveGameData.participateID = ItemManager.Inst.ParticipateId;
         newSaveGameData.position = GetPlayerPositionTypeListOfFloat();
@@ -47,20 +46,6 @@ public class SaveGameSystemManager : MonoBehaviour
 
         gameData = SaveGameData.LoadSaveGameDataJSON();
         RecordTimeManager.Inst.LoadPickUpItemTimeData();
-
-        //โหลดมาเเล้วก็ นำ gamedata ที่ได้ ไปใช้ทำอะไรต่อก็ได้ แบบ set ค่าให้ player อะไรพวกนั้น
-        //หลักๆตอนนี้คง เปลี่ยนตำแหน่งผู้เล่น
-        //เปลี่ยน stamina คนเล่น
-        //add item เข้าใน dictonary ของผู้เล่น
-        //add เสร็จเเล้วก็กดปิดไอเทมนั้น
-
-        // ดึงค่าได้จาก
-        // gameData.GetPlayerParticipateID();
-        // gameData.GetPlayerItem();
-        // gameData.GetPlayerPosition();
-        // gameData.GetPlayerStamina();
-        
-        //พวก dic หรือ ค่า เปลี่ยนได้เลยนะถ้าจะแก้ แก้ได้เลย เผื่อถ้าเปลี่ยน dic เป็น list เเล้วใช้ได้ดีกว่า
     }
 
     
