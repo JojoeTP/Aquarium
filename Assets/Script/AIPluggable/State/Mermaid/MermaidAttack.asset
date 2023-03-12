@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0389c2260570c04f84b5b4f3fef7ea6, type: 3}
+  m_Name: MermaidAttack
+  m_EditorClassIdentifier: 
+  oneTimeActions:
+  - {fileID: 11400000, guid: f89188c9b5ad1ed4cbe379d927b2961c, type: 2}
+  LoopActions: []
+  transitions:
+  - decision: {fileID: 11400000, guid: 1ad55e07c08a8b64a99e2979d1a281f6, type: 2}
+    trueState: {fileID: 11400000, guid: 9218ba1c00e148c4eb21924437692547, type: 2}
+    falseState: {fileID: 11400000, guid: 6fbdd43bad4717c4eb7e5b5ad816ffec, type: 2}
+  timeBeforeSwitchState: 2
