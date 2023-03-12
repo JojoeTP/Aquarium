@@ -4798,6 +4798,7 @@ MonoBehaviour:
   - {fileID: 878778088}
   - {fileID: 781452641}
   conditionItem: {fileID: 11400000, guid: 973469cd68afc2c4185c32a9d6d71ed5, type: 2}
+  selectedFloor: 0
   Canvas_Lift: {fileID: 739866089}
   floor_Buttons:
   - {fileID: 1240410847}
@@ -4805,6 +4806,7 @@ MonoBehaviour:
   - {fileID: 63596534}
   - {fileID: 1600964546}
   floor5_Button: {fileID: 323241184}
+  closeButton: {fileID: 0}
 --- !u!1 &231391028
 GameObject:
   m_ObjectHideFlags: 0
@@ -5491,6 +5493,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isSave: 0
   isCutScene: 0
+  isRunDialogueWhenOverlap: 0
   startWithDialogueId: Ch0_C03_01
   triggerEvents:
     m_PersistentCalls:
@@ -6134,13 +6137,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isSave: 0
   isCutScene: 0
+  isRunDialogueWhenOverlap: 1
   startWithDialogueId: Ch0_C06_01
   triggerEvents:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1619314585}
-        m_TargetAssemblyTypeName: ActionEventManager, Assembly-CSharp
-        m_MethodName: Test
+      - m_Target: {fileID: 307893184}
+        m_TargetAssemblyTypeName: TalkWithNPC, Assembly-CSharp
+        m_MethodName: SetActiveFalse
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7629,7 +7633,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.779311, y: 1}
+    m_SensorSize: {x: 1.7771587, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -7701,6 +7705,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isSave: 0
   isCutScene: 0
+  isRunDialogueWhenOverlap: 0
   startWithDialogueId: Ch1_D01_01
   triggerEvents:
     m_PersistentCalls:
@@ -15862,6 +15867,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isSave: 0
   isCutScene: 0
+  isRunDialogueWhenOverlap: 0
   startWithDialogueId: Ch1_D03_01
   triggerEvents:
     m_PersistentCalls:
@@ -18530,6 +18536,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isSave: 0
   isCutScene: 0
+  isRunDialogueWhenOverlap: 0
   startWithDialogueId: Ch1_D01_2_01
   triggerEvents:
     m_PersistentCalls:
@@ -26123,6 +26130,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isSave: 0
   isCutScene: 0
+  isRunDialogueWhenOverlap: 0
   startWithDialogueId: Ch1_D11_01
   triggerEvents:
     m_PersistentCalls:
@@ -29219,6 +29227,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isSave: 0
   isCutScene: 0
+  isRunDialogueWhenOverlap: 0
   startWithDialogueId: Ch1_D01_01
   triggerEvents:
     m_PersistentCalls:
@@ -30236,13 +30245,14 @@ GameObject:
   - component: {fileID: 1413032865}
   - component: {fileID: 1413032867}
   - component: {fileID: 1413032866}
+  - component: {fileID: 1413032868}
   m_Layer: 0
   m_Name: Ch0_C10_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1413032865
 Transform:
   m_ObjectHideFlags: 0
@@ -30272,6 +30282,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isSave: 0
   isCutScene: 0
+  isRunDialogueWhenOverlap: 0
   startWithDialogueId: Ch0_C10_01
   triggerEvents:
     m_PersistentCalls:
@@ -30315,6 +30326,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 6.6314697, y: 6.9238358}
   m_EdgeRadius: 0
+--- !u!114 &1413032868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1413032864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69facd572376b2741bc7dde45848d83c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  keyImage: {fileID: 0}
 --- !u!1 &1413092649
 GameObject:
   m_ObjectHideFlags: 0
@@ -33101,6 +33125,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isSave: 0
   isCutScene: 0
+  isRunDialogueWhenOverlap: 0
   startWithDialogueId: Ch0_C09_01
   triggerEvents:
     m_PersistentCalls:
@@ -42735,6 +42760,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isSave: 0
   isCutScene: 0
+  isRunDialogueWhenOverlap: 0
   startWithDialogueId: Ch0_C07_01
   triggerEvents:
     m_PersistentCalls:
@@ -47699,6 +47725,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1668235634, guid: d2fc8e7d6cd8b4c4694f7fe474ab5dc4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1078445036169580749, guid: d2fc8e7d6cd8b4c4694f7fe474ab5dc4, type: 3}
       propertyPath: m_RootOrder
       value: 30
@@ -47746,30 +47776,6 @@ PrefabInstance:
     - target: {fileID: 2179585948304574638, guid: d2fc8e7d6cd8b4c4694f7fe474ab5dc4, type: 3}
       propertyPath: m_Name
       value: Daughter
-      objectReference: {fileID: 0}
-    - target: {fileID: 2450013505268344939, guid: d2fc8e7d6cd8b4c4694f7fe474ab5dc4, type: 3}
-      propertyPath: startWithDialogueId
-      value: Ch0_C10_01
-      objectReference: {fileID: 0}
-    - target: {fileID: 2450013505268344939, guid: d2fc8e7d6cd8b4c4694f7fe474ab5dc4, type: 3}
-      propertyPath: triggerEvents.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1619314585}
-    - target: {fileID: 5666236041773886992, guid: d2fc8e7d6cd8b4c4694f7fe474ab5dc4, type: 3}
-      propertyPath: m_Size.x
-      value: 13.739397
-      objectReference: {fileID: 0}
-    - target: {fileID: 5666236041773886992, guid: d2fc8e7d6cd8b4c4694f7fe474ab5dc4, type: 3}
-      propertyPath: m_Size.y
-      value: 50.346375
-      objectReference: {fileID: 0}
-    - target: {fileID: 5666236041773886992, guid: d2fc8e7d6cd8b4c4694f7fe474ab5dc4, type: 3}
-      propertyPath: m_Offset.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5666236041773886992, guid: d2fc8e7d6cd8b4c4694f7fe474ab5dc4, type: 3}
-      propertyPath: m_Offset.y
-      value: 39.55121
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d2fc8e7d6cd8b4c4694f7fe474ab5dc4, type: 3}
