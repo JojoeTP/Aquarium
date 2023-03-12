@@ -24,6 +24,11 @@ public class ActionEventManager : MonoBehaviour
     [SerializeField] Transform spawnSisterPosition;
     [SerializeField] GameObject sisterPrefab;
     [SerializeField] GameObject alertCanvas;
+
+    [HideInInspector]
+    public StateController skeleton; //ภาโรง
+    [HideInInspector]
+    public StateController sister;
     
 
     void Awake() 
@@ -43,9 +48,9 @@ public class ActionEventManager : MonoBehaviour
     {
         spawnPosition = newSpawnPosition;
     }
-    public void SpawnEnemy(GameObject enemy)
+    public StateController SpawnEnemy(GameObject enemy)
     {
-        Instantiate(enemy,spawnPosition.transform.position,spawnPosition.transform.rotation);
+        return Instantiate(enemy,spawnPosition.transform.position,spawnPosition.transform.rotation).GetComponent<StateController>();
     }
 
     public void SpawnSister(bool isSpawn , float delayBeforeSpawn)
@@ -59,7 +64,7 @@ public class ActionEventManager : MonoBehaviour
     IEnumerator DelaySpawnSister(float time)
     {
         yield return new WaitForSeconds(time);
-        SpawnEnemy(sisterPrefab);
+        sister = SpawnEnemy(sisterPrefab);
     }
 
     public void AlertText(float time)
