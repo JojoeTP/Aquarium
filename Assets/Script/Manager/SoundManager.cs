@@ -16,6 +16,10 @@ public class SoundManager : MonoBehaviour
     [Range(0,1)]
     public float SFXVolume = 1;
 
+    Bus masterBus;
+    Bus BGMBus;
+    Bus SFXBus;
+
     List<EventInstance> eventInstances;
     List<StudioEventEmitter> eventEmitters;
 
@@ -35,15 +39,22 @@ public class SoundManager : MonoBehaviour
     {
         eventInstances = new List<EventInstance>();
         eventEmitters = new List<StudioEventEmitter>();
+
+        masterBus = RuntimeManager.GetBus("bus:/");
+        BGMBus = RuntimeManager.GetBus("bus:/BGM");
+        SFXBus = RuntimeManager.GetBus("bus:/SFX");
     }
 
-    /// <summary>
-    /// Start is called on the frame when a script is enabled just before
-    /// any of the Update methods is called the first time.
-    /// </summary>
     void Start()
     {
 
+    }
+
+    void Update()
+    {
+        masterBus.setVolume(masterVolume);
+        BGMBus.setVolume(BGMVolume);
+        SFXBus.setVolume(SFXVolume);
     }
     
     //Use 2d action event
