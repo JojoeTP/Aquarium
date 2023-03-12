@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Events;
+using System;
 
 public class LiftManager : MonoBehaviour
 {
@@ -12,15 +14,43 @@ public class LiftManager : MonoBehaviour
     public Transform[] connectFloorsLeftSide;
     public Transform[] connectFloorsRightSide;
     public ItemScriptableObject conditionItem;
+    public int selectedFloor;
 
     [Header("UI")]
     public GameObject Canvas_Lift;
     [SerializeField] GameObject[] floor_Buttons;
     [SerializeField] GameObject floor5_Button;
+    [SerializeField] GameObject closeButton;
 
     void Awake()
     {
         inst = this;
+    }
+
+    private void Start()
+    {
+        AddListenerToButton(GoToFloor5 , CloseLiftPannel);
+    }
+    public void AddListenerToButton(UnityAction goToFloor5 , UnityAction closeLiftPannel)
+    {
+        for (int i = 0; i <= 3; i++)
+        {
+            int index = i;
+            floor_Buttons[index].GetComponent<Button>().onClick.RemoveAllListeners();
+            floor_Buttons[index].GetComponent<Button>().onClick.AddListener(() => { OnSelectFloor(index);});
+        }
+
+        floor5_Button.GetComponent<Button>().onClick.RemoveAllListeners();
+        floor5_Button.GetComponent<Button>().onClick.AddListener(() => { OnSelectFloor(5); });
+
+        closeButton.GetComponent<Button>().onClick.RemoveAllListeners();
+        closeButton.GetComponent<Button>().onClick.AddListener(closeLiftPannel);
+    }
+
+    void OnSelectFloor(int index)
+    {
+        selectedFloor = index; 
+        CloseCanvas_TransitionBlack_PlayerState();
     }
 
     public bool CheckCondition()
@@ -54,28 +84,27 @@ public class LiftManager : MonoBehaviour
         {
             n.GetComponent<Button>().interactable = true;
         }
-        if (lift.currentFloor == Lift.CurrentFloor.Floor1)
+        switch (lift.currentFloor)
         {
-            floor_Buttons[0].GetComponent<Button>().interactable = false;
-        }
-        else if (lift.currentFloor == Lift.CurrentFloor.Floor2)
-        {
-            floor_Buttons[1].GetComponent<Button>().interactable = false;
-        }
-        else if (lift.currentFloor == Lift.CurrentFloor.Floor3)
-        {
-            floor_Buttons[2].GetComponent<Button>().interactable = false;
-        }
-        else if (lift.currentFloor == Lift.CurrentFloor.Floor4)
-        {
-            floor_Buttons[3].GetComponent<Button>().interactable = false;
-        }else if (lift.currentFloor == Lift.CurrentFloor.Floor5)
-        {
-            floor5_Button.GetComponent<Button>().interactable = false;
+            case Lift.CurrentFloor.Floor1:
+                floor_Buttons[0].GetComponent<Button>().interactable = false;
+                break;
+            case Lift.CurrentFloor.Floor2:
+                floor_Buttons[1].GetComponent<Button>().interactable = false;
+                break;
+            case Lift.CurrentFloor.Floor3:
+                floor_Buttons[2].GetComponent<Button>().interactable = false;
+                break;
+            case Lift.CurrentFloor.Floor4:
+                floor_Buttons[3].GetComponent<Button>().interactable = false;
+                break;
+            case Lift.CurrentFloor.Floor5:
+                floor5_Button.GetComponent<Button>().interactable = false;
+                break;
         }
     }
 
-    public void EnterDoor(Transform entity , Transform connectFloorLeftSide , Transform connectFloorRightSide , bool isLeftSide)
+    public void EnterLift(Transform entity , Transform connectFloorLeftSide , Transform connectFloorRightSide , bool isLeftSide)
     {
         Vector3 nextPosition;
         if (isLeftSide == true)
@@ -93,36 +122,20 @@ public class LiftManager : MonoBehaviour
     public void UpdatePlayerPosition(Transform newPosition)
     {
         playerPosition = newPosition;
-        print(playerPosition);
     }
     public void PlayerInteractAtSide(bool newSide)
     {
         playerInteractAtSide = newSide;
     }
-    public void GoToFloor1()
+
+    public void GoToFloor(int index)
     {
-        EnterDoor(playerPosition, connectFloorsLeftSide[0] , connectFloorsRightSide[0] , playerInteractAtSide);
-        CloseCanvas_TransitionBlack_PlayerState();
+        EnterLift(playerPosition, connectFloorsLeftSide[index], connectFloorsRightSide[index], playerInteractAtSide);
     }
-    public void GoToFloor2()
-    {
-        EnterDoor(playerPosition, connectFloorsLeftSide[1], connectFloorsRightSide[1], playerInteractAtSide);
-        CloseCanvas_TransitionBlack_PlayerState();
-    }
-    public void GoToFloor3()
-    {
-        EnterDoor(playerPosition, connectFloorsLeftSide[2], connectFloorsRightSide[2], playerInteractAtSide);
-        CloseCanvas_TransitionBlack_PlayerState();
-    }
-    public void GoToFloor4()
-    {
-        EnterDoor(playerPosition, connectFloorsLeftSide[3], connectFloorsRightSide[3], playerInteractAtSide);
-        CloseCanvas_TransitionBlack_PlayerState();
-    }
+    
     public void GoToFloor5()
     {
-        EnterDoor(playerPosition, connectFloorsLeftSide[4], null, playerInteractAtSide);
-        CloseCanvas_TransitionBlack_PlayerState();
+        EnterLift(playerPosition, connectFloorsLeftSide[4], null, playerInteractAtSide);
     }
 
     void CloseCanvas_TransitionBlack_PlayerState()

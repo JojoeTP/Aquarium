@@ -43,11 +43,6 @@ public class RecordTimeManager : MonoBehaviour
     public void LoadPickUpItemTimeData()
     {
         pickUpItemTime = PickUpItemTime.LoadJson();
-        Debug.Log(pickUpItemTime.participateID);
-        foreach(var n in pickUpItemTime.gettingItemTime)
-        {
-            Debug.Log(n.Key + ":" + n.Value);
-        }
     }
 
     public void OpenDataFolder()

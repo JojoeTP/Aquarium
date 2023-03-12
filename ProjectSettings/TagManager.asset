@@ -43,6 +43,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Water
+    uniqueID: 3267706637
+    locked: 0
   - name: BG_Back
     uniqueID: 4036757503
     locked: 0

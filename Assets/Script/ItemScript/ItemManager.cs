@@ -30,8 +30,7 @@ public class ItemManager : MonoBehaviour
 
     void Start()
     {
-        if(testScene)
-            SetUpItemPermutation();
+    
     }
 
     // void SetUpItem()
@@ -51,101 +50,50 @@ public class ItemManager : MonoBehaviour
 
         foreach(var n in itemEffectData.ItemEffectSettingList)
         {
-            Item item = null;
             switch(n.effectTYPE)
             {
                 case EFFECTTYPE.WINK :
-                    foreach(var m in itemData)
-                    {
-                        if(n.iTEMTYPE.HasFlag(m.itemData.ItemType))
-                        {
-                            item = Instantiate(winkEffectPrefab);
-                            item.itemObject = m;
-                            item.SetItem();
-                            if (item != null)
-                            {
-                                SetItemAction(item);
-                            }
-                        }
-                    }
+                    CreateItem(n,winkEffectPrefab);
                     break;
                 case EFFECTTYPE.INVERTCOLOR :
-                    foreach(var m in itemData)
-                    {
-                        if(n.iTEMTYPE.HasFlag(m.itemData.ItemType))
-                        {
-                            item = Instantiate(invertColorEffectPrefab);
-                            item.itemObject = m;
-                            item.SetItem();
-                            if (item != null)
-                            {
-                                SetItemAction(item);
-                            }
-                        }
-                    }
+                    CreateItem(n,invertColorEffectPrefab);
                     break;
                 case EFFECTTYPE.LIGHT :
-                    foreach(var m in itemData)
-                    {
-                        if(n.iTEMTYPE.HasFlag(m.itemData.ItemType))
-                        {
-                            item = Instantiate(lightEffectPrefab);
-                            item.itemObject = m;
-                            item.SetItem();
-                            if (item != null)
-                            {
-                                SetItemAction(item);
-                            }
-                        }
-                    }
+                    CreateItem(n,lightEffectPrefab);
                     break;
                 case EFFECTTYPE.FIREFLY :
-                    foreach(var m in itemData)
-                    {
-                        if(n.iTEMTYPE.HasFlag(m.itemData.ItemType))
-                        {
-                            item = Instantiate(outlineEffectPrefab);
-                            item.itemObject = m;
-                            item.SetItem();
-                            if (item != null)
-                            {
-                                SetItemAction(item);
-                            }
-                        }
-                    }
+                    CreateItem(n,outlineEffectPrefab);
                     break;
                 case EFFECTTYPE.BUTTON :
-                    foreach(var m in itemData)
-                    {
-                        if(n.iTEMTYPE.HasFlag(m.itemData.ItemType))
-                        {
-                            item = Instantiate(buttonEffectPrefab);
-                            item.itemObject = m;
-                            item.SetItem();
-                            if (item != null)
-                            {
-                                SetItemAction(item);
-                            }
-                        }
-                    }
+                    CreateItem(n,buttonEffectPrefab);
                     break;
                 case EFFECTTYPE.NONE :
-                    foreach(var m in itemData)
-                    {
-                        if(n.iTEMTYPE.HasFlag(m.itemData.ItemType))
-                        {
-                            item = Instantiate(buttonEffectPrefab);
-                            item.itemObject = m;
-                            item.SetItem();
-                            if (item != null)
-                            {
-                                SetItemAction(item);
-                            }
-                        }
-                    }
+                    CreateItem(n,buttonEffectPrefab);
                     break;
             }
             
+        }
+    }
+
+    void CreateItem(ItemEffectSetting itemEffectSetting ,Item itemPrefab)
+    {
+        Item item = null;
+
+        foreach(var m in itemData)
+        {
+            if(itemEffectSetting.iTEMTYPE.HasFlag(m.itemData.ItemType))
+            {
+                if(!PlayerManager.inst.PlayerInventory.PlayerItemDictionary.ContainsValue(m.itemData.ItemID))
+                {
+                    item = Instantiate(itemPrefab);
+                    item.itemObject = m;
+                    item.SetItem();
+                    if (item != null)
+                    {
+                        SetItemAction(item);
+                    }
+                }
+            }
         }
     }
 
