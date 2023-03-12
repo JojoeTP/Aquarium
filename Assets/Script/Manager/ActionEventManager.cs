@@ -12,6 +12,18 @@ public class ActionEventManager : MonoBehaviour
     [SerializeField] Sprite dark_LabyrinthSprite;
     [HideInInspector]
     public bool isPuzzleDone = false;
+
+    [Header("Enemy")]
+    [SerializeField] Transform spawnPosition;
+    [SerializeField] GameObject janitorPrefab;
+    [SerializeField] GameObject mermaidPrefab;
+    [SerializeField] GameObject directorPrefab;
+
+    [Header("Brother Sister")]
+    [SerializeField] GameObject brotherPrefab;
+    [SerializeField] Transform spawnSisterPosition;
+    [SerializeField] GameObject sisterPrefab;
+    [SerializeField] GameObject alertCanvas;
     
 
     void Awake() 
@@ -27,7 +39,40 @@ public class ActionEventManager : MonoBehaviour
         //ปิดเสียงด้วย
     }
 #endregion
+    void UpdateSpawnPosition(Transform newSpawnPosition)
+    {
+        spawnPosition = newSpawnPosition;
+    }
+    public void SpawnEnemy(GameObject enemy)
+    {
+        Instantiate(enemy,spawnPosition.transform.position,spawnPosition.transform.rotation);
+    }
 
+    public void SpawnSister(bool isSpawn , float delayBeforeSpawn)
+    {
+        if (isSpawn == false)
+        {
+            UpdateSpawnPosition(spawnSisterPosition);
+            StartCoroutine(DelaySpawnSister(delayBeforeSpawn));
+        }
+    }
+    IEnumerator DelaySpawnSister(float time)
+    {
+        yield return new WaitForSeconds(time);
+        SpawnEnemy(sisterPrefab);
+    }
+
+    public void AlertText(float time)
+    {
+        alertCanvas.SetActive(true);
+        StartCoroutine(DelayCloseAlertText(time));
+    }
+
+    IEnumerator DelayCloseAlertText(float time)
+    {
+        yield return new WaitForSeconds(time);
+        alertCanvas.SetActive(false);
+    }
     public void CutSceneDoor()
     {
         print("CutSceneDoor");

@@ -202,7 +202,8 @@ public class ItemManager : MonoBehaviour
             case ITEMTYPE.ITEM6:
                 item.triggerEvents.AddListener( () => 
                     {
-
+                        ActionEventManager.inst.AlertText(10.0f);
+                        ActionEventManager.inst.SpawnSister(false, 10.0f);
                     }
                 );
                 break;
