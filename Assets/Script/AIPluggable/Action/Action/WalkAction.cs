@@ -14,6 +14,7 @@ namespace PluggableAI
 
         void Walk(StateController controller)
         {
+            controller.ToggleTimeOut(true);
             controller.transform.Translate(controller.moveDirection * controller.moveSpeed * Time.deltaTime); 
         }
     }

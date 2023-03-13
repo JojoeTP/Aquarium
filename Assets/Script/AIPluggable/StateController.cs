@@ -158,7 +158,8 @@ public class StateController : MonoBehaviour
     }
     public void ToggleAttack(bool enabled)
     {
-        animator.SetBool("M_Attack",enabled);
+        // animator.SetBool("M_Attack",enabled);
+        animator.SetTrigger("M_Attack_Trigger");
     }
     public void ToggleTimeOut(bool enabled)
     {
