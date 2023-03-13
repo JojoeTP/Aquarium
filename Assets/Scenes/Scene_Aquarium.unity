@@ -4839,6 +4839,8 @@ MonoBehaviour:
   triggerEvents:
     m_PersistentCalls:
       m_Calls: []
+  HidingSpotObject: {fileID: 0}
+  HidingSprite: {fileID: 0}
 --- !u!61 &235114677
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7556,7 +7558,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7777779, y: 1}
+    m_SensorSize: {x: 1.7786561, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -8699,6 +8701,8 @@ MonoBehaviour:
   triggerEvents:
     m_PersistentCalls:
       m_Calls: []
+  HidingSpotObject: {fileID: 0}
+  HidingSprite: {fileID: 0}
 --- !u!61 &481143640
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9269,6 +9273,8 @@ MonoBehaviour:
   triggerEvents:
     m_PersistentCalls:
       m_Calls: []
+  HidingSpotObject: {fileID: 0}
+  HidingSprite: {fileID: 0}
 --- !u!61 &498884487
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9993,6 +9999,8 @@ MonoBehaviour:
   triggerEvents:
     m_PersistentCalls:
       m_Calls: []
+  HidingSpotObject: {fileID: 0}
+  HidingSprite: {fileID: 0}
 --- !u!61 &520928194
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10655,6 +10663,8 @@ MonoBehaviour:
   triggerEvents:
     m_PersistentCalls:
       m_Calls: []
+  HidingSpotObject: {fileID: 0}
+  HidingSprite: {fileID: 0}
 --- !u!61 &550001987
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15905,6 +15915,8 @@ MonoBehaviour:
   triggerEvents:
     m_PersistentCalls:
       m_Calls: []
+  HidingSpotObject: {fileID: 0}
+  HidingSprite: {fileID: 0}
 --- !u!61 &782536333
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -16896,6 +16908,8 @@ MonoBehaviour:
   triggerEvents:
     m_PersistentCalls:
       m_Calls: []
+  HidingSpotObject: {fileID: 0}
+  HidingSprite: {fileID: 0}
 --- !u!61 &827393826
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -17547,6 +17561,8 @@ MonoBehaviour:
   triggerEvents:
     m_PersistentCalls:
       m_Calls: []
+  HidingSpotObject: {fileID: 0}
+  HidingSprite: {fileID: 0}
 --- !u!61 &851991307
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -19593,6 +19609,8 @@ MonoBehaviour:
   triggerEvents:
     m_PersistentCalls:
       m_Calls: []
+  HidingSpotObject: {fileID: 0}
+  HidingSprite: {fileID: 0}
 --- !u!61 &921508877
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -20342,6 +20360,8 @@ MonoBehaviour:
   triggerEvents:
     m_PersistentCalls:
       m_Calls: []
+  HidingSpotObject: {fileID: 0}
+  HidingSprite: {fileID: 0}
 --- !u!114 &976091473
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22928,6 +22948,10 @@ PrefabInstance:
       propertyPath: m_SortingLayerID
       value: -258209793
       objectReference: {fileID: 0}
+    - target: {fileID: -5499764107576739775, guid: db286ef8c66343a41b2ce4d90769756e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: -5316414975217621593, guid: db286ef8c66343a41b2ce4d90769756e, type: 3}
       propertyPath: m_SortingLayer
       value: -5
@@ -22989,12 +23013,20 @@ PrefabInstance:
       value: -258209793
       objectReference: {fileID: 0}
     - target: {fileID: 1655643474199109720, guid: db286ef8c66343a41b2ce4d90769756e, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1655643474199109720, guid: db286ef8c66343a41b2ce4d90769756e, type: 3}
       propertyPath: m_SortingLayer
       value: -5
       objectReference: {fileID: 0}
     - target: {fileID: 1655643474199109720, guid: db286ef8c66343a41b2ce4d90769756e, type: 3}
       propertyPath: m_SortingLayerID
       value: -258209793
+      objectReference: {fileID: 0}
+    - target: {fileID: 2233326515129003378, guid: db286ef8c66343a41b2ce4d90769756e, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2233326515129003378, guid: db286ef8c66343a41b2ce4d90769756e, type: 3}
       propertyPath: m_SortingLayer
@@ -23045,12 +23077,20 @@ PrefabInstance:
       value: -258209793
       objectReference: {fileID: 0}
     - target: {fileID: 4470755927477068876, guid: db286ef8c66343a41b2ce4d90769756e, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4470755927477068876, guid: db286ef8c66343a41b2ce4d90769756e, type: 3}
       propertyPath: m_SortingLayer
       value: -5
       objectReference: {fileID: 0}
     - target: {fileID: 4470755927477068876, guid: db286ef8c66343a41b2ce4d90769756e, type: 3}
       propertyPath: m_SortingLayerID
       value: -258209793
+      objectReference: {fileID: 0}
+    - target: {fileID: 6570425778952581482, guid: db286ef8c66343a41b2ce4d90769756e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7408039528389145304, guid: db286ef8c66343a41b2ce4d90769756e, type: 3}
       propertyPath: m_LocalPosition.y
@@ -23077,6 +23117,16 @@ PrefabInstance:
 --- !u!4 &1080645095 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -7552582706839291426, guid: db286ef8c66343a41b2ce4d90769756e, type: 3}
+  m_PrefabInstance: {fileID: 1080645094}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &1080645096 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: -103345823981937920, guid: db286ef8c66343a41b2ce4d90769756e, type: 3}
+  m_PrefabInstance: {fileID: 1080645094}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &1080645097 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: -4662299638133386894, guid: db286ef8c66343a41b2ce4d90769756e, type: 3}
   m_PrefabInstance: {fileID: 1080645094}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1083718714
@@ -24448,6 +24498,8 @@ MonoBehaviour:
   triggerEvents:
     m_PersistentCalls:
       m_Calls: []
+  HidingSpotObject: {fileID: 0}
+  HidingSprite: {fileID: 0}
 --- !u!61 &1160278803
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -27799,6 +27851,8 @@ MonoBehaviour:
   triggerEvents:
     m_PersistentCalls:
       m_Calls: []
+  HidingSpotObject: {fileID: 1080645097}
+  HidingSprite: {fileID: 1519200510503995397, guid: db286ef8c66343a41b2ce4d90769756e, type: 3}
 --- !u!61 &1352953016
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -28601,6 +28655,8 @@ MonoBehaviour:
   triggerEvents:
     m_PersistentCalls:
       m_Calls: []
+  HidingSpotObject: {fileID: 0}
+  HidingSprite: {fileID: 0}
 --- !u!61 &1388501000
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -31563,6 +31619,8 @@ MonoBehaviour:
   triggerEvents:
     m_PersistentCalls:
       m_Calls: []
+  HidingSpotObject: {fileID: 0}
+  HidingSprite: {fileID: 0}
 --- !u!61 &1549066867
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -32365,6 +32423,8 @@ MonoBehaviour:
   triggerEvents:
     m_PersistentCalls:
       m_Calls: []
+  HidingSpotObject: {fileID: 0}
+  HidingSprite: {fileID: 0}
 --- !u!61 &1592451299
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -33489,6 +33549,8 @@ MonoBehaviour:
   triggerEvents:
     m_PersistentCalls:
       m_Calls: []
+  HidingSpotObject: {fileID: 0}
+  HidingSprite: {fileID: 0}
 --- !u!61 &1670765978
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -38161,6 +38223,8 @@ MonoBehaviour:
   triggerEvents:
     m_PersistentCalls:
       m_Calls: []
+  HidingSpotObject: {fileID: 0}
+  HidingSprite: {fileID: 0}
 --- !u!61 &1874773809
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -40171,6 +40235,8 @@ MonoBehaviour:
   triggerEvents:
     m_PersistentCalls:
       m_Calls: []
+  HidingSpotObject: {fileID: 1080645096}
+  HidingSprite: {fileID: -6357604105471813572, guid: db286ef8c66343a41b2ce4d90769756e, type: 3}
 --- !u!61 &1996160438
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -40840,6 +40906,8 @@ MonoBehaviour:
   triggerEvents:
     m_PersistentCalls:
       m_Calls: []
+  HidingSpotObject: {fileID: 0}
+  HidingSprite: {fileID: 0}
 --- !u!61 &2072483778
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -41308,6 +41376,8 @@ MonoBehaviour:
   triggerEvents:
     m_PersistentCalls:
       m_Calls: []
+  HidingSpotObject: {fileID: 0}
+  HidingSprite: {fileID: 0}
 --- !u!61 &2090182360
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -41325,8 +41395,8 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
+    oldSize: {x: 67.78371, y: 11.799263}
+    newSize: {x: 40.96, y: 40.96}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -41839,6 +41909,8 @@ MonoBehaviour:
   triggerEvents:
     m_PersistentCalls:
       m_Calls: []
+  HidingSpotObject: {fileID: 0}
+  HidingSprite: {fileID: 0}
 --- !u!61 &2108415197
 BoxCollider2D:
   m_ObjectHideFlags: 0

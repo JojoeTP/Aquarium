@@ -41,6 +41,7 @@ public class PlayerInteract : MonoBehaviour
             if(CanHiding(n.transform))
             {
                 ToggleHiding(n.GetComponent<HidingSpot>());
+                n.GetComponent<HidingSpot>().ChangeSprite();
             }
 
             if(CanEnterDoor(n.transform))
