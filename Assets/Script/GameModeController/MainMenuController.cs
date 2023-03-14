@@ -144,7 +144,7 @@ public class MainMenuController : MonoBehaviour
 
     void ActionBeforSwitchScene()
     {
-        print("Before");
+        SoundManager.Inst.CleanUp();
     }
 
     void ActionAfterSwitchScene()

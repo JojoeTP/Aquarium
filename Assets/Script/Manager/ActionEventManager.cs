@@ -41,7 +41,8 @@ public class ActionEventManager : MonoBehaviour
     {
         isPuzzleDone = true;
         labyrinthENDSpriteRenderer.sprite = dark_LabyrinthSprite;
-        //ปิดเสียงด้วย
+        SoundManager.Inst.MuteBGM(); //ปิด BGM
+        //จะปิดไรเพิ่มก็ เพิ่มcodeตรงนี้
     }
 #endregion
     void UpdateSpawnPosition(Transform newSpawnPosition)
@@ -97,6 +98,11 @@ public class ActionEventManager : MonoBehaviour
     {
         PlayerPrefs.DeleteKey("IsSaved");
     }
+
+    public void ContinuePlayBGM()
+    {
+        SoundManager.Inst.ContinuePlayBGM();
+    }
 }
 
 #if UNITY_EDITOR
@@ -126,7 +132,10 @@ public class ActionEventManager : MonoBehaviour
                 actionActive.OnPickUpLabyrinthCoin();
             }
 
-            
+            if (GUILayout.Button("Continue Play BGM"))
+            {
+                actionActive.ContinuePlayBGM();
+            }
         }
     }
 #endif
