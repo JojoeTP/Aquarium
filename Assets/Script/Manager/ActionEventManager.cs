@@ -102,6 +102,7 @@ public class ActionEventManager : MonoBehaviour
     public void ContinuePlayBGM()
     {
         SoundManager.Inst.ContinuePlayBGM();
+        //เพิ่มตรงนี้ให้เล่นต่อ
     }
 }
 
