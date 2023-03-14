@@ -16,6 +16,7 @@ public class DoorSystem : MonoBehaviour
     public bool notForEnemy;
     public UnityEvent triggerDoorEvents;
 
+    public bool isLockedDoor;
     //Call back
     [HideInInspector] public UnityEvent triggerConditionEvent; //Create new event function in actionEventManager script
 
@@ -58,6 +59,9 @@ public class DoorSystem : MonoBehaviour
 
     public bool CheckCondition()
     {
+        if(isLockedDoor)
+            return false;
+
         if(conditionItem == null)
             return true;
             
