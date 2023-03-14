@@ -40602,6 +40602,9 @@ MonoBehaviour:
   - {fileID: 1831093493}
   - {fileID: 539659039}
   - {fileID: 2091100816}
+  waterMaterial: {fileID: 2100000, guid: 095a0e22289bba645bf8068ebbe67fdc, type: 2}
+  defaultWaterColor: {r: 0.03529412, g: 0.03529412, b: 0.06666667, a: 1}
+  redWaterColor: {r: 0.2784314, g: 0.06621573, b: 0.06621573, a: 1}
   spawnAI: 1
 --- !u!61 &2017880087
 BoxCollider2D:

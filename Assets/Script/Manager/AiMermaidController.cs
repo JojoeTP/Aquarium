@@ -11,6 +11,13 @@ public class AiMermaidController : MonoBehaviour
     [SerializeField] List<Transform> spawnPositionList;
     StateController mermaidController;
 
+    [SerializeField] Material waterMaterial;
+
+    [ColorUsage(true,true)]
+    [SerializeField] Color defaultWaterColor;
+    [ColorUsage(true,true)]
+    [SerializeField] Color redWaterColor;
+
     public bool spawnAI = true; //Turn to false when talk with director
 
     void Awake() 
@@ -33,6 +40,8 @@ public class AiMermaidController : MonoBehaviour
         {
             var aiPrefab = Instantiate(mermaidPrefab,spawnPositionList[Random.Range(0,spawnPositionList.Count)].position,Quaternion.identity);
             mermaidController = aiPrefab.GetComponent<StateController>();
+
+            waterMaterial.SetColor("_Color",redWaterColor);
         }
     }
     
@@ -42,6 +51,7 @@ public class AiMermaidController : MonoBehaviour
         {
             Destroy(mermaidController.gameObject);
             mermaidController = null;
+            waterMaterial.SetColor("_Color",defaultWaterColor);
         }
     }
 
