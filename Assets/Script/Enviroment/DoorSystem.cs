@@ -41,6 +41,9 @@ public class DoorSystem : MonoBehaviour
 
     public void EnemyEnterDoor(Transform entity)
     {
+        if(isLockedDoor)
+            return;
+
         if(connectDoor != null)
         {
             Vector3 nextPostion = new Vector3(connectDoor.position.x,(connectDoor.position.y - (transform.position.y - entity.position.y)),0);
