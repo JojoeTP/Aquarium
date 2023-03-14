@@ -37,6 +37,7 @@ public class SaveGameSystemManager : MonoBehaviour
         newSaveGameData.playerStamina = PlayerManager.inst.PlayerMovement.PlayerStamina;
         newSaveGameData.playerItem = GetPlayerItemInInventoryTypeOfDic();
 
+        PlayerPrefs.SetInt("IsSaved",1);
         newSaveGameData.SaveJSON();
     }
     

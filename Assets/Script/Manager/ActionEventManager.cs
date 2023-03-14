@@ -92,6 +92,11 @@ public class ActionEventManager : MonoBehaviour
     {
         SaveGameSystemManager.inst.SaveGame();
     }
+
+    public void DeleteSavePlayerPrefs()
+    {
+        PlayerPrefs.DeleteKey("IsSaved");
+    }
 }
 
 #if UNITY_EDITOR
@@ -109,12 +114,19 @@ public class ActionEventManager : MonoBehaviour
                 Debug.Log("SAVE COMPLETE");
                 actionActive.TestSaveGame();
             }
-
+            
+            if (GUILayout.Button("Test Delete Save"))
+            {
+                Debug.Log("Delete COMPLETE");
+                actionActive.DeleteSavePlayerPrefs();
+            }
 
             if (GUILayout.Button("Test Labyrinth END"))
             {
                 actionActive.OnPickUpLabyrinthCoin();
             }
+
+            
         }
     }
 #endif

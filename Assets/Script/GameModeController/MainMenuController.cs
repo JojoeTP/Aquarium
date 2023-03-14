@@ -28,6 +28,9 @@ public class MainMenuController : MonoBehaviour
     [Header("Participate ID")]
     [SerializeField] TMP_InputField inputParticipateID;
 
+    [Header("Button")]
+    [SerializeField] Button continueButton;
+
     Animator animator;
 
     public bool gameStarted = false;
@@ -48,12 +51,22 @@ public class MainMenuController : MonoBehaviour
         {
             case MenuState.MainMenu :
                 loadingUI.EnableCavnas(false);
+                EnableContinueButton();
                 break;
             case MenuState.StartGame :
                 break;
             case MenuState.Setting :
                 break;
         }
+    }
+
+    void EnableContinueButton()
+    {
+        var isSaved = PlayerPrefs.GetInt("IsSaved",0);
+        if(isSaved == 0)
+            continueButton.interactable = false;
+        else if(isSaved == 1)
+            continueButton.interactable = true;
     }
 
     public void OnClickContinue()
