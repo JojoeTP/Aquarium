@@ -5,12 +5,18 @@ using UnityEngine;
 
 public class AiMermaidController : MonoBehaviour
 {
+    public static AiMermaidController inst;
     [SerializeField] GameObject mermaidPrefab;
     [SerializeField] Transform firstSpawnPosition;
     [SerializeField] List<Transform> spawnPositionList;
     StateController mermaidController;
 
     public bool spawnAI = true; //Turn to false when talk with director
+
+    void Awake() 
+    {
+        inst = this;
+    }
 
     public void CreateMermaidAI()
     {
@@ -37,6 +43,12 @@ public class AiMermaidController : MonoBehaviour
             Destroy(mermaidController.gameObject);
             mermaidController = null;
         }
+    }
+
+    public void DestroyWhenEnterLift()
+    {
+        DestroyMermaidAI();
+        StartCoroutine(CreateMermaidAI(5f));
     }
 
     void OnTriggerEnter2D(Collider2D other) 
