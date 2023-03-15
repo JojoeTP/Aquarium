@@ -943,10 +943,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 078822327b85cd040a72d17056491ebe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  loadingUI: {fileID: 0}
   MainMenuPanel: {fileID: 6419139240177981294}
   StartGamePanel: {fileID: 6419139239223513552}
   SettingPanel: {fileID: 6419139238868896509}
   inputParticipateID: {fileID: 6419139238466922720}
+  continueButton: {fileID: 6419139239712904506}
+  gameStarted: 0
 --- !u!95 &8880672218735923283
 Animator:
   serializedVersion: 4

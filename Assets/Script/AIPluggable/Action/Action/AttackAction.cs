@@ -17,7 +17,7 @@ namespace PluggableAI
 
         void Attack(StateController controller)
         {
-            if(Vector3.Distance(controller.transform.position,PlayerManager.inst.transform.position) <= controller.attackRange)
+            if(controller.IsPlayerInRange(controller.attackRange))
             {
                 controller.ToggleAttack(true);
                 Debug.Log("Attack");

@@ -26,8 +26,6 @@ public class SoundManager : MonoBehaviour
     EventInstance ambienceEventInstance;
     EventInstance BGMEventInstance;
 
-    FMODEvent FMODEvent;
-
     void Awake() 
     {
         Inst = this; 
@@ -55,6 +53,16 @@ public class SoundManager : MonoBehaviour
         masterBus.setVolume(masterVolume);
         BGMBus.setVolume(BGMVolume);
         SFXBus.setVolume(SFXVolume);
+    }
+
+    public void MuteBGM()
+    {
+        BGMBus.setMute(true);
+    }
+
+    public void ContinuePlayBGM()
+    {
+        BGMBus.setMute(false);
     }
     
     //Use 2d action event
@@ -117,7 +125,7 @@ public class SoundManager : MonoBehaviour
         ambienceEventInstance.setParameterByName(parameterName,parameterValue);
     }
 
-    void CleanUp()
+    public void CleanUp()
     {
         foreach(var n in eventInstances)
         {
@@ -129,13 +137,17 @@ public class SoundManager : MonoBehaviour
         {
             n.Stop();
         }
+
+        ambienceEventInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+        ambienceEventInstance.release();
+
+        BGMEventInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+        BGMEventInstance.release();
     }
 
     void OnDestroy() 
     {
         CleanUp();    
     }
-
-
     
 }

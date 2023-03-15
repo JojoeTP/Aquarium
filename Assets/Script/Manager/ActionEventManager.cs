@@ -12,6 +12,23 @@ public class ActionEventManager : MonoBehaviour
     [SerializeField] Sprite dark_LabyrinthSprite;
     [HideInInspector]
     public bool isPuzzleDone = false;
+
+    [Header("Enemy")]
+    [SerializeField] Transform spawnPosition;
+    [SerializeField] GameObject janitorPrefab;
+    [SerializeField] GameObject mermaidPrefab;
+    [SerializeField] GameObject directorPrefab;
+
+    [Header("Brother Sister")]
+    [SerializeField] GameObject brotherPrefab;
+    [SerializeField] Transform spawnSisterPosition;
+    [SerializeField] GameObject sisterPrefab;
+    [SerializeField] GameObject alertCanvas;
+
+    [HideInInspector]
+    public StateController skeleton; //ภาโรง
+    [HideInInspector]
+    public StateController sister;
     
 
     void Awake() 
@@ -24,10 +41,44 @@ public class ActionEventManager : MonoBehaviour
     {
         isPuzzleDone = true;
         labyrinthENDSpriteRenderer.sprite = dark_LabyrinthSprite;
-        //ปิดเสียงด้วย
+        SoundManager.Inst.MuteBGM(); //ปิด BGM
+        //จะปิดไรเพิ่มก็ เพิ่มcodeตรงนี้
     }
 #endregion
+    void UpdateSpawnPosition(Transform newSpawnPosition)
+    {
+        spawnPosition = newSpawnPosition;
+    }
+    public StateController SpawnEnemy(GameObject enemy)
+    {
+        return Instantiate(enemy,spawnPosition.transform.position,spawnPosition.transform.rotation).GetComponent<StateController>();
+    }
 
+    public void SpawnSister(bool isSpawn , float delayBeforeSpawn)
+    {
+        if (isSpawn == false)
+        {
+            UpdateSpawnPosition(spawnSisterPosition);
+            StartCoroutine(DelaySpawnSister(delayBeforeSpawn));
+        }
+    }
+    IEnumerator DelaySpawnSister(float time)
+    {
+        yield return new WaitForSeconds(time);
+        sister = SpawnEnemy(sisterPrefab);
+    }
+
+    public void AlertText(float time)
+    {
+        alertCanvas.SetActive(true);
+        StartCoroutine(DelayCloseAlertText(time));
+    }
+
+    IEnumerator DelayCloseAlertText(float time)
+    {
+        yield return new WaitForSeconds(time);
+        alertCanvas.SetActive(false);
+    }
     public void CutSceneDoor()
     {
         print("CutSceneDoor");
@@ -41,6 +92,17 @@ public class ActionEventManager : MonoBehaviour
     public void TestSaveGame()
     {
         SaveGameSystemManager.inst.SaveGame();
+    }
+
+    public void DeleteSavePlayerPrefs()
+    {
+        PlayerPrefs.DeleteKey("IsSaved");
+    }
+
+    public void ContinuePlayBGM()
+    {
+        SoundManager.Inst.ContinuePlayBGM();
+        //เพิ่มตรงนี้ให้เล่นต่อ
     }
 }
 
@@ -59,11 +121,21 @@ public class ActionEventManager : MonoBehaviour
                 Debug.Log("SAVE COMPLETE");
                 actionActive.TestSaveGame();
             }
-
+            
+            if (GUILayout.Button("Test Delete Save"))
+            {
+                Debug.Log("Delete COMPLETE");
+                actionActive.DeleteSavePlayerPrefs();
+            }
 
             if (GUILayout.Button("Test Labyrinth END"))
             {
                 actionActive.OnPickUpLabyrinthCoin();
+            }
+
+            if (GUILayout.Button("Continue Play BGM"))
+            {
+                actionActive.ContinuePlayBGM();
             }
         }
     }

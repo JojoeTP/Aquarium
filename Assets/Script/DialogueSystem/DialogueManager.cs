@@ -48,7 +48,7 @@ public class DialogueManager : MonoBehaviour
     void Start()
     {
         LoadAllDialogueData();
-        // LoadCharacterSprites();
+        LoadCharacterSprites();
     }
 
     void Initialize()
@@ -91,7 +91,7 @@ public class DialogueManager : MonoBehaviour
                 break;
             }
 
-            var data_values = data_string.Split(',');
+            var data_values = data_string.Split(';');
 
 
             if (data_values[0] == "Id" || data_values[0] == "")

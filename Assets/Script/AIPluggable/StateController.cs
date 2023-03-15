@@ -103,6 +103,14 @@ public class StateController : MonoBehaviour
         return false;
     }
 
+    public bool IsPlayerInRangeCircle(float range)
+    {
+        if(Physics2D.OverlapCircle(transform.position,range,playerLayer))
+            return true;
+
+        return false;
+    }
+
     public bool IsPlayerInRangeIncludeBehide(float range)
     {
         if(Physics2D.OverlapCircle(transform.position,range,playerLayer))
@@ -119,10 +127,10 @@ public class StateController : MonoBehaviour
         return false;
     }
 
-    public Vector3 GetPlayerDirection()
+    public Vector2 GetPlayerDirection()
     {
-        Vector3 direction = PlayerManager.inst.transform.position - transform.position;
-        direction += new Vector3(0,3f,0);
+        Vector2 direction = PlayerManager.inst.transform.position - transform.position;
+        direction += new Vector2(0,4.5f);
         return direction.normalized;
     }
 
@@ -154,14 +162,24 @@ public class StateController : MonoBehaviour
 
     public void ToggleChasing(bool enabled)
     {
+        if(animator == null)
+            return;
+
         animator.SetBool("M_Trigger",enabled);
     }
     public void ToggleAttack(bool enabled)
     {
-        animator.SetBool("M_Attack",enabled);
+        if(animator == null)
+            return;
+
+        // animator.SetBool("M_Attack",enabled);
+        animator.SetTrigger("M_Attack_Trigger");
     }
     public void ToggleTimeOut(bool enabled)
     {
+        if(animator == null)
+            return;
+
         animator.SetBool("M_Timeout",enabled);
     }
 }

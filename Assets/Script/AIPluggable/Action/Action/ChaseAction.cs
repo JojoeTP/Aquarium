@@ -15,7 +15,8 @@ namespace PluggableAI
         void Chase(StateController controller)
         {
             controller.ToggleChasing(true);
-            controller.ToggleAttack(false);
+            controller.ToggleTimeOut(false);
+            // controller.ToggleAttack(false);
             controller.transform.Translate(controller.moveDirection * controller.chasingSpeed * Time.deltaTime); 
         }
     }

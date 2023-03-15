@@ -16,7 +16,7 @@ namespace PluggableAI
 
         bool IsContinueChase(StateController controller)
         {
-            controller.ToggleAttack(false);
+            // controller.ToggleAttack(false);
 
             if(controller.ElapsedchasingTime > 0)
             {

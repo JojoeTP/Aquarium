@@ -131,11 +131,15 @@ public class LiftManager : MonoBehaviour
     public void GoToFloor(int index)
     {
         EnterLift(playerPosition, connectFloorsLeftSide[index], connectFloorsRightSide[index], playerInteractAtSide);
+        if(index != 0)
+            AiMermaidController.inst.DestroyWhenEnterLift();
     }
     
     public void GoToFloor5()
     {
         EnterLift(playerPosition, connectFloorsLeftSide[4], null, playerInteractAtSide);
+        AiMermaidController.inst.DestroyMermaidAI();
+        AiMermaidController.inst.spawnAI = false;
     }
 
     void CloseCanvas_TransitionBlack_PlayerState()
