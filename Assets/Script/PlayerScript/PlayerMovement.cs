@@ -199,7 +199,7 @@ public class PlayerMovement : MonoBehaviour
 
     void CreateAudioInstance()
     {
-        playerMovement = SoundManager.Inst.CreateInstance(FMODEvent.inst.playerMovementSFX);
+        playerMovement = SoundManager.Inst.CreateInstance(FMODEvent.inst.playerMovementSFX.sound);
     }
 
     void UpdateSound()

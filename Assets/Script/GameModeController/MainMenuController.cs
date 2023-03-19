@@ -40,7 +40,7 @@ public class MainMenuController : MonoBehaviour
         animator = GetComponent<Animator>();
         ChangeState(MenuState.MainMenu); 
 
-        SoundManager.Inst.InitializeBGM(FMODEvent.inst.MainMenuMusic); 
+        SoundManager.Inst.InitializeBGM(FMODEvent.inst.MainMenuMusic.sound); 
     }
 
     void ChangeState(MenuState state)
