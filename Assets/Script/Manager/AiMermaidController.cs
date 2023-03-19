@@ -9,6 +9,7 @@ public class AiMermaidController : MonoBehaviour
 {
     public static AiMermaidController inst;
     [SerializeField] GameObject mermaidPrefab;
+    [SerializeField] Transform respawnPosition;
     [SerializeField] Transform firstSpawnPosition;
     [SerializeField] List<Transform> spawnPositionList;
     StateController mermaidController;
@@ -31,7 +32,6 @@ public class AiMermaidController : MonoBehaviour
            {
                 colorAdj.active = true;
            }
-
     }
 
     IEnumerator CreateMermaidAI(float time)
@@ -84,6 +84,20 @@ public class AiMermaidController : MonoBehaviour
         {
             StartCoroutine(CreateMermaidAI(5f));
         }
+    }
+
+    public void OnAttackPlayer()
+    {
+        UITransition.inst.DieTransitionIn();
+    }
+
+    public void RespawnPlayer()
+    {
+        if(mermaidController == null)
+            return;
+            
+        DestroyMermaidAI();
+        PlayerManager.inst.transform.position = respawnPosition.position;
     }
 }
 

@@ -54,6 +54,7 @@ public class DoorSystem : MonoBehaviour
         if(CheckCondition())
         {
             triggerConditionEvent?.Invoke();
+            AiDirectorController.inst.DestroyWhenEnterDoor();
         }
     }
 

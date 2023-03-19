@@ -206,7 +206,6 @@ public class PlayerMovement : MonoBehaviour
     {
         UpdateMoveSound();
     }
-
     void UpdateMoveSound()
     {
         if(direction != Vector2.zero)
@@ -218,5 +217,10 @@ public class PlayerMovement : MonoBehaviour
         }
         else
             playerMovement.stop(STOP_MODE.ALLOWFADEOUT);
+    }
+
+    public bool IsMove()
+    {
+        return isMove;
     }
 }

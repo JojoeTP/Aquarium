@@ -5,8 +5,8 @@ using UnityEngine;
 
 namespace PluggableAI
 {
-    [CreateAssetMenu(menuName = "PluggableAI/Action/AttackTwoSideAction")]
-    public class AttackTwoSideAction : Action
+    [CreateAssetMenu(menuName = "PluggableAI/Action/DirectorAttackAction")]
+    public class DirectorAttackAction : Action
     {
         public LayerMask playerLayer;
         
@@ -17,10 +17,10 @@ namespace PluggableAI
 
         void Attack(StateController controller)
         {
-            if(controller.IsPlayerInRangeCircle(controller.attackRange))
+            if(controller.IsPlayerInRange(controller.attackRange))
             {
                 controller.ToggleAttack(true);
-                AiMermaidController.inst.OnAttackPlayer();
+                AiDirectorController.inst.OnAttackPlayer();
                 Debug.Log("Attack");
             }
         }

@@ -115,6 +115,7 @@ GameObject:
   - component: {fileID: 2347664268754119566}
   - component: {fileID: 4519214535877325464}
   - component: {fileID: 7707990979316523223}
+  - component: {fileID: 1231206787}
   m_Layer: 0
   m_Name: OverlayTransition
   m_TagString: Untagged
@@ -222,5 +223,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c728793024055ee4fab86f1c1c05374e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1231206787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2347664268754119562}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0699a13f1604f543af43f3e6d61fa72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
