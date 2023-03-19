@@ -15,6 +15,7 @@ public class TalkWithNPC : MonoBehaviour
     public bool isSave;
     public bool isCutScene;
     public bool isRunDialogueWhenOverlap;
+    public bool haveDialogueBg;
     public string startWithDialogueId;
     public UnityEvent triggerEvents;
     public List<NPCDialogueCondition> NPCList = new List<NPCDialogueCondition>();
@@ -76,9 +77,10 @@ public class TalkWithNPC : MonoBehaviour
         if(isRunDialogueWhenOverlap)
         {
             if (other.GetComponent<PlayerManager>() != null)
-           {
+            {
                 SetDialogueID();
-           }
+                PlayerManager.inst.PlayerInteract.StartDialogue(this);
+            }
         }
     }
 }

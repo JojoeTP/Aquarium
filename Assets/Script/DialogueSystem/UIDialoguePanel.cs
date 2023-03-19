@@ -19,6 +19,7 @@ public class UIDialoguePanel : MonoBehaviour
     [SerializeField] TextMeshProUGUI dialogueText;
 
     [Header("CharacterImage")]
+    [SerializeField] GameObject dialogueBg;
     [SerializeField] GameObject imageCharacter1;
     [SerializeField]  GameObject imageCharacter2;
     [SerializeField]  GameObject imageCutScene;
@@ -31,6 +32,7 @@ public class UIDialoguePanel : MonoBehaviour
 
     public TextMeshProUGUI NameText {get {return nameText;}}
     public TextMeshProUGUI DialogueText {get {return dialogueText;}}
+    public GameObject DialogueBg { get {return dialogueBg; }}
     public GameObject ImageCharacter1 {get {return imageCharacter1;}}
     public GameObject ImageCharacter2 {get {return imageCharacter2;}}
     public GameObject ImageCutScene {get {return imageCutScene;}}
@@ -74,6 +76,7 @@ public class UIDialoguePanel : MonoBehaviour
         imageCharacter2.GetComponent<Image>().color = new Color(1, 1, 1, 1);
         imageCutScene.GetComponent<Image>().sprite = null;
         imageCutScene.GetComponent<Image>().color = new Color(1, 1, 1, 0);
+        dialogueBg.SetActive(false);
     }
 
     public Button GetChoiceButton1()

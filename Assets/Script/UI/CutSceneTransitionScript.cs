@@ -21,4 +21,14 @@ public class CutSceneTransitionScript : MonoBehaviour
         //animator.SetTrigger("CutSceneTransitionOut");
         PlayerManager.inst.PlayerInteract.Interacting();
     }
+
+    public void CloseContinueButtonInteract()
+    {
+        DialogueManager.inst.dialoguePanel.ContinueButton.interactable = false;
+    }
+
+    public void OpenContinueButtonInteract()
+    {
+        DialogueManager.inst.dialoguePanel.ContinueButton.interactable = true;
+    }
 }
