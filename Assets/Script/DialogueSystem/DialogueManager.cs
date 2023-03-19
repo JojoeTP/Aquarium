@@ -22,6 +22,7 @@ public class DialogueManager : MonoBehaviour
     }
     [Header("DialogueType")]
     public Type type;
+    Type beforeCurrentType;
 
     
     bool isChoice = false;
@@ -33,7 +34,7 @@ public class DialogueManager : MonoBehaviour
     public string currentDialogue;
 
     Canvas dialogueCanvas;
-    UIDialoguePanel dialoguePanel;
+    public UIDialoguePanel dialoguePanel;
 
     void LoadCharacterSprites()
     {
@@ -176,7 +177,8 @@ public class DialogueManager : MonoBehaviour
         type = (Type)Enum.Parse(typeof(Type), openWith[currentDialogue].type);
         dialogueCanvas.enabled = true;
         CheckIfHaveChoice(currentDialogue);
-        CheckDialogueType(currentDialogue);
+        CheckIfHaveDialogueBg(currentNPC);
+        CheckDialogueType(currentDialogue , false);
 
         dialoguePanel.NameText.text = openWith[currentDialogue].character;
         dialoguePanel.DialogueText.text = openWith[currentDialogue].dialogueText;
@@ -191,8 +193,32 @@ public class DialogueManager : MonoBehaviour
             currentId = currentDialogue;
         }
     }
-    void CheckDialogueType(string checkChoiceId)
+
+    void CheckIfHaveDialogueBg(TalkWithNPC currentNPC)
     {
+        if (currentNPC.haveDialogueBg == true)
+        {
+            dialoguePanel.DialogueBg.SetActive(true);
+        }
+    }
+    IEnumerator ContinueButtonInteractableDelay(float time)
+    {
+        dialoguePanel.ContinueButton.interactable = false;
+        yield return new WaitForSeconds(time);
+        dialoguePanel.ContinueButton.interactable = true;
+        print("OK");
+    }
+    void CheckDialogueType(string checkChoiceId , bool checkTransition)
+    {
+        if (type != beforeCurrentType && checkTransition)
+        {
+            UITransition.inst.CutSceneTransitionIn();
+            //StartCoroutine(ContinueButtonInteractableDelay(1f));
+            if (type == Type.Dialogue)
+            {
+                dialoguePanel.ResetCharacterSprite();
+            }
+        }
         if (type == Type.CutScene)
         {
             var cutSceneImage = characterSprites.Find(n => n.name == openWith[checkChoiceId].charaterImage);
@@ -203,7 +229,9 @@ public class DialogueManager : MonoBehaviour
         {
             CheckMainCharacterSpeak(checkChoiceId);
         }
+        beforeCurrentType = type;
     }
+    
 
     void CheckIfHaveChoice(string checkChoiceId)
     {
@@ -255,13 +283,14 @@ public class DialogueManager : MonoBehaviour
             EndDialogue();
             return;
         }
+        type = (Type)Enum.Parse(typeof(Type), openWith[currentId].type);
         CheckIfHaveChoice(currentId);
-        CheckDialogueType(currentId);
+        CheckDialogueType(currentId , true);
 
         dialoguePanel.NameText.text = openWith[currentId].character;
         StopAllCoroutines();
         StartCoroutine(TypeSentence(openWith[currentId].dialogueText));
-        if(isChoice == false)
+        if (isChoice == false)
         {
             currentId = openWith[currentId].choice1;
         }

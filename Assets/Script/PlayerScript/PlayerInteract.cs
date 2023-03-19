@@ -96,7 +96,7 @@ public class PlayerInteract : MonoBehaviour
         return false;
     }
 
-    void StartDialogue(TalkWithNPC NPC)
+    public void StartDialogue(TalkWithNPC NPC)
     {
         if (PlayerManager.inst.playerState == PlayerManager.PLAYERSTATE.CONVERSATION)
         {

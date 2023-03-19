@@ -14,8 +14,8 @@ public class ActionEventManager : MonoBehaviour
     public bool isPuzzleDone = false;
 
     [Header("Enemy")]
-    [SerializeField] Transform spawnPosition;
-    [SerializeField] GameObject janitorPrefab;
+    Transform spawnPosition;
+    [SerializeField] GameObject skeletonPrefab;
     [SerializeField] GameObject mermaidPrefab;
     [SerializeField] GameObject directorPrefab;
 
@@ -45,13 +45,18 @@ public class ActionEventManager : MonoBehaviour
         //จะปิดไรเพิ่มก็ เพิ่มcodeตรงนี้
     }
 #endregion
-    void UpdateSpawnPosition(Transform newSpawnPosition)
+    public void UpdateSpawnPosition(Transform newSpawnPosition)
     {
         spawnPosition = newSpawnPosition;
     }
     public StateController SpawnEnemy(GameObject enemy)
     {
         return Instantiate(enemy,spawnPosition.transform.position,spawnPosition.transform.rotation).GetComponent<StateController>();
+    }
+
+    public void SpawnSkeleton()
+    {
+        skeleton = SpawnEnemy(skeletonPrefab);
     }
 
     public void SpawnSister(bool isSpawn , float delayBeforeSpawn)

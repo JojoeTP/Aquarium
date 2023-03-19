@@ -47,6 +47,8 @@ MonoBehaviour:
   UIDialoguePanel: {fileID: 7192231345981163021, guid: 62cf64fd323b70241ba30b867fbd520f, type: 3}
   dialoguePaths:
   - DialogueItem
+  - DialogueDataChapter0
+  - DialogueDataChapter1
   type: 0
   characterSprites: []
   currentId: 
