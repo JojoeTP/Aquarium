@@ -20,6 +20,7 @@ namespace PluggableAI
             if(controller.IsPlayerInRangeCircle(controller.attackRange))
             {
                 controller.ToggleAttack(true);
+                AiMermaidController.inst.OnAttackPlayer();
                 Debug.Log("Attack");
             }
         }

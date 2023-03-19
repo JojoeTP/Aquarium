@@ -76,6 +76,7 @@ GameObject:
   - component: {fileID: -5725535720615768355}
   - component: {fileID: -7301619578979567031}
   - component: {fileID: -5944756808223551720}
+  - component: {fileID: 1488060416791905833}
   m_Layer: 0
   m_Name: FISHSMALL_5
   m_TagString: Untagged
@@ -161,6 +162,26 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 23.342966, y: 14.461362}
   m_EdgeRadius: 0
+--- !u!95 &1488060416791905833
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6358347190585191054}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e504ce7b4584ab243bdd09e073c36889, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &6424185001786442883
 GameObject:
   m_ObjectHideFlags: 0

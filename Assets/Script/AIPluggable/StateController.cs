@@ -34,6 +34,7 @@ public class StateController : MonoBehaviour
     public float chasingRange = 0f;
     public float chasingTime = 0f;
     float elapsedChasingTime;
+    float elapsedTimeBeforeDie = 0;
     
     [Header("Variable")]
     public Vector3 moveDirection = Vector3.right;
@@ -50,6 +51,7 @@ public class StateController : MonoBehaviour
     public DoorSystem enteredDoor;
 
     public float ElapsedchasingTime {get {return elapsedChasingTime;}}
+    public float ElapsedTimeBeforeDie {get {return elapsedTimeBeforeDie;} set {elapsedTimeBeforeDie = value;}}
     public float TimeBeforeSwitchState {get {return timeBeforeSwitchState;}}
 
     private void Update() 

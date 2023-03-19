@@ -109,6 +109,11 @@ public class ActionEventManager : MonoBehaviour
         SoundManager.Inst.ContinuePlayBGM();
         //เพิ่มตรงนี้ให้เล่นต่อ
     }
+
+    public void WarpToPosition(Transform transform)
+    {
+        PlayerManager.inst.transform.position = transform.position;
+    }
 }
 
 #if UNITY_EDITOR
