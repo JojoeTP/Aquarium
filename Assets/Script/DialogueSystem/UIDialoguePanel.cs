@@ -40,17 +40,21 @@ public class UIDialoguePanel : MonoBehaviour
     public Sprite Character1Sprite {get {return character1Sprite;}}
     public Sprite Character2Sprite {get {return character2Sprite;}}
 
-    Button ChoiceButton1;
-    Button ChoiceButton2;
-    TextMeshProUGUI ChoiceButton1Text;
-    TextMeshProUGUI ChoiceButton2Text;
+    [HideInInspector]
+    public Button ChoiceButton1;
+    [HideInInspector]
+    public Button ChoiceButton2;
+    [HideInInspector]
+    public TMP_Text ChoiceButton1Text;
+    [HideInInspector]
+    public TMP_Text ChoiceButton2Text;
 
     void GetAllComponent()
     {
         ChoiceButton1 = choiceButton1.GetComponent<Button>();
         ChoiceButton2 = choiceButton2.GetComponent<Button>();
-        ChoiceButton1Text = choiceButton1.GetComponent<TextMeshProUGUI>();
-        ChoiceButton2Text = choiceButton2.GetComponent<TextMeshProUGUI>();
+        ChoiceButton1Text = choiceButton1.GetComponentInChildren<TMP_Text>();
+        ChoiceButton2Text = choiceButton2.GetComponentInChildren<TMP_Text>();
     }
 
     public void AddListenerToButton(UnityAction displayNextSentence,UnityAction decisionButton1,UnityAction decisionButton2)
@@ -77,26 +81,6 @@ public class UIDialoguePanel : MonoBehaviour
         imageCutScene.GetComponent<Image>().sprite = null;
         imageCutScene.GetComponent<Image>().color = new Color(1, 1, 1, 0);
         dialogueBg.SetActive(false);
-    }
-
-    public Button GetChoiceButton1()
-    {
-        return ChoiceButton1;
-    }
-
-    public Button GetChoiceButton2()
-    {
-        return ChoiceButton2;
-    }
-
-    public TextMeshProUGUI  GetChoiceButton1Text()
-    {
-        return ChoiceButton1Text;
-    }
-
-    public TextMeshProUGUI GetChoiceButton2Text()
-    {
-        return ChoiceButton2Text;
     }
 
     public void SetCharacter1Sprite(Sprite character)

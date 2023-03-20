@@ -1500,6 +1500,7 @@ MonoBehaviour:
   isSave: 0
   isCutScene: 0
   isRunDialogueWhenOverlap: 0
+  haveDialogueBg: 0
   startWithDialogueId: Ch_Nowalk_01
   triggerEvents:
     m_PersistentCalls:
@@ -5183,6 +5184,7 @@ MonoBehaviour:
   isSave: 1
   isCutScene: 0
   isRunDialogueWhenOverlap: 0
+  haveDialogueBg: 0
   startWithDialogueId: Ch2_D02_01
   triggerEvents:
     m_PersistentCalls:
@@ -6096,6 +6098,7 @@ MonoBehaviour:
   isSave: 0
   isCutScene: 0
   isRunDialogueWhenOverlap: 0
+  haveDialogueBg: 0
   startWithDialogueId: Ch0_C03_01
   triggerEvents:
     m_PersistentCalls:
@@ -6878,6 +6881,7 @@ MonoBehaviour:
   isSave: 1
   isCutScene: 0
   isRunDialogueWhenOverlap: 0
+  haveDialogueBg: 0
   startWithDialogueId: Ch2_D02_01
   triggerEvents:
     m_PersistentCalls:
@@ -6969,6 +6973,7 @@ MonoBehaviour:
   isSave: 0
   isCutScene: 0
   isRunDialogueWhenOverlap: 1
+  haveDialogueBg: 0
   startWithDialogueId: Ch0_C06_01
   triggerEvents:
     m_PersistentCalls:
@@ -8288,6 +8293,7 @@ MonoBehaviour:
   isSave: 1
   isCutScene: 0
   isRunDialogueWhenOverlap: 1
+  haveDialogueBg: 0
   startWithDialogueId: Ch1_door1_01
   triggerEvents:
     m_PersistentCalls:
@@ -8379,6 +8385,7 @@ MonoBehaviour:
   isSave: 0
   isCutScene: 0
   isRunDialogueWhenOverlap: 0
+  haveDialogueBg: 0
   startWithDialogueId: Ch1_D01_01
   triggerEvents:
     m_PersistentCalls:
@@ -8625,6 +8632,7 @@ MonoBehaviour:
   isSave: 0
   isCutScene: 0
   isRunDialogueWhenOverlap: 1
+  haveDialogueBg: 0
   startWithDialogueId: Ch1_D01_01
   triggerEvents:
     m_PersistentCalls:
@@ -9586,6 +9594,7 @@ MonoBehaviour:
   isSave: 1
   isCutScene: 0
   isRunDialogueWhenOverlap: 1
+  haveDialogueBg: 0
   startWithDialogueId: Ch1_D01_01
   triggerEvents:
     m_PersistentCalls:
@@ -11941,6 +11950,7 @@ MonoBehaviour:
   isSave: 1
   isCutScene: 0
   isRunDialogueWhenOverlap: 1
+  haveDialogueBg: 0
   startWithDialogueId: Ch1_door1_01
   triggerEvents:
     m_PersistentCalls:
@@ -17205,6 +17215,7 @@ MonoBehaviour:
   isSave: 0
   isCutScene: 0
   isRunDialogueWhenOverlap: 1
+  haveDialogueBg: 0
   startWithDialogueId: Ch1_D03_01
   triggerEvents:
     m_PersistentCalls:
@@ -17921,6 +17932,7 @@ MonoBehaviour:
   isSave: 0
   isCutScene: 0
   isRunDialogueWhenOverlap: 1
+  haveDialogueBg: 0
   startWithDialogueId: Ch3_D01_01
   triggerEvents:
     m_PersistentCalls:
@@ -19899,6 +19911,7 @@ MonoBehaviour:
   isSave: 0
   isCutScene: 1
   isRunDialogueWhenOverlap: 1
+  haveDialogueBg: 0
   startWithDialogueId: Ch1_D01_2_01
   triggerEvents:
     m_PersistentCalls:
@@ -20872,6 +20885,7 @@ MonoBehaviour:
   isSave: 0
   isCutScene: 0
   isRunDialogueWhenOverlap: 1
+  haveDialogueBg: 0
   startWithDialogueId: Ch3_D01_01
   triggerEvents:
     m_PersistentCalls:
@@ -26596,6 +26610,7 @@ MonoBehaviour:
   isSave: 0
   isCutScene: 0
   isRunDialogueWhenOverlap: 0
+  haveDialogueBg: 0
   startWithDialogueId: Ch1_D01_01
   triggerEvents:
     m_PersistentCalls:
@@ -27763,6 +27778,7 @@ MonoBehaviour:
   isSave: 1
   isCutScene: 0
   isRunDialogueWhenOverlap: 1
+  haveDialogueBg: 0
   startWithDialogueId: Ch1_door1_01
   triggerEvents:
     m_PersistentCalls:
@@ -27854,6 +27870,7 @@ MonoBehaviour:
   isSave: 0
   isCutScene: 0
   isRunDialogueWhenOverlap: 1
+  haveDialogueBg: 0
   startWithDialogueId: Ch1_D11_01
   triggerEvents:
     m_PersistentCalls:
@@ -28739,6 +28756,7 @@ MonoBehaviour:
   isSave: 1
   isCutScene: 0
   isRunDialogueWhenOverlap: 1
+  haveDialogueBg: 0
   startWithDialogueId: Ch3_D01_01
   triggerEvents:
     m_PersistentCalls:
@@ -28983,6 +29001,7 @@ MonoBehaviour:
   isSave: 0
   isCutScene: 1
   isRunDialogueWhenOverlap: 1
+  haveDialogueBg: 0
   startWithDialogueId: Ch2_D02_01
   triggerEvents:
     m_PersistentCalls:
@@ -29670,6 +29689,7 @@ MonoBehaviour:
   isSave: 1
   isCutScene: 0
   isRunDialogueWhenOverlap: 1
+  haveDialogueBg: 0
   startWithDialogueId: Ch1_door1_01
   triggerEvents:
     m_PersistentCalls:
@@ -30299,6 +30319,7 @@ MonoBehaviour:
   isSave: 1
   isCutScene: 1
   isRunDialogueWhenOverlap: 1
+  haveDialogueBg: 0
   startWithDialogueId: Ch4_D07_01
   triggerEvents:
     m_PersistentCalls:
@@ -30996,6 +31017,7 @@ MonoBehaviour:
   isSave: 0
   isCutScene: 1
   isRunDialogueWhenOverlap: 1
+  haveDialogueBg: 0
   startWithDialogueId: Ch4_D02_01
   triggerEvents:
     m_PersistentCalls:
@@ -31396,6 +31418,7 @@ MonoBehaviour:
   isSave: 0
   isCutScene: 0
   isRunDialogueWhenOverlap: 0
+  haveDialogueBg: 0
   startWithDialogueId: Ch1_D01_01
   triggerEvents:
     m_PersistentCalls:
@@ -31926,6 +31949,7 @@ MonoBehaviour:
   isSave: 1
   isCutScene: 0
   isRunDialogueWhenOverlap: 1
+  haveDialogueBg: 0
   startWithDialogueId: Ch3_D01_01
   triggerEvents:
     m_PersistentCalls:
@@ -32548,6 +32572,7 @@ MonoBehaviour:
   isSave: 1
   isCutScene: 0
   isRunDialogueWhenOverlap: 1
+  haveDialogueBg: 0
   startWithDialogueId: Ch0_C10_01
   triggerEvents:
     m_PersistentCalls:
@@ -33001,6 +33026,7 @@ MonoBehaviour:
   isSave: 1
   isCutScene: 0
   isRunDialogueWhenOverlap: 1
+  haveDialogueBg: 0
   startWithDialogueId: Ch1_D01_01
   triggerEvents:
     m_PersistentCalls:
@@ -34003,6 +34029,7 @@ MonoBehaviour:
   isSave: 0
   isCutScene: 0
   isRunDialogueWhenOverlap: 1
+  haveDialogueBg: 0
   startWithDialogueId: Ch3_D01_01
   triggerEvents:
     m_PersistentCalls:
@@ -34368,6 +34395,7 @@ MonoBehaviour:
   isSave: 1
   isCutScene: 0
   isRunDialogueWhenOverlap: 1
+  haveDialogueBg: 0
   startWithDialogueId: Ch3_D01_01
   triggerEvents:
     m_PersistentCalls:
@@ -35693,6 +35721,7 @@ MonoBehaviour:
   isSave: 0
   isCutScene: 0
   isRunDialogueWhenOverlap: 1
+  haveDialogueBg: 0
   startWithDialogueId: Ch0_C09_01
   triggerEvents:
     m_PersistentCalls:
@@ -36447,6 +36476,7 @@ MonoBehaviour:
   isSave: 0
   isCutScene: 1
   isRunDialogueWhenOverlap: 1
+  haveDialogueBg: 0
   startWithDialogueId: Ch4_D02_01
   triggerEvents:
     m_PersistentCalls:
@@ -38016,6 +38046,7 @@ MonoBehaviour:
   isSave: 1
   isCutScene: 0
   isRunDialogueWhenOverlap: 0
+  haveDialogueBg: 0
   startWithDialogueId: Ch3_D02_01
   triggerEvents:
     m_PersistentCalls:
@@ -40433,6 +40464,7 @@ MonoBehaviour:
   isSave: 0
   isCutScene: 0
   isRunDialogueWhenOverlap: 0
+  haveDialogueBg: 0
   startWithDialogueId: Ch3_D04_01
   triggerEvents:
     m_PersistentCalls:
@@ -44286,6 +44318,7 @@ MonoBehaviour:
   isSave: 0
   isCutScene: 0
   isRunDialogueWhenOverlap: 0
+  haveDialogueBg: 0
   startWithDialogueId: Ch1_D01_01
   triggerEvents:
     m_PersistentCalls:
@@ -45109,6 +45142,7 @@ MonoBehaviour:
   isSave: 0
   isCutScene: 0
   isRunDialogueWhenOverlap: 1
+  haveDialogueBg: 0
   startWithDialogueId: Ch0_C07_01
   triggerEvents:
     m_PersistentCalls:
@@ -47304,6 +47338,7 @@ MonoBehaviour:
   isSave: 1
   isCutScene: 0
   isRunDialogueWhenOverlap: 0
+  haveDialogueBg: 0
   startWithDialogueId: Ch3_D02_01
   triggerEvents:
     m_PersistentCalls:
@@ -48060,70 +48095,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 572766039}
     m_Modifications:
-    - target: {fileID: 2504612249614600641, guid: e1fb8775c647e6c4facdd190c6b4d472, type: 3}
-      propertyPath: nameText
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2504612249614600641, guid: e1fb8775c647e6c4facdd190c6b4d472, type: 3}
-      propertyPath: dialogueText
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2504612249614600641, guid: e1fb8775c647e6c4facdd190c6b4d472, type: 3}
-      propertyPath: choiceButton1
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2504612249614600641, guid: e1fb8775c647e6c4facdd190c6b4d472, type: 3}
-      propertyPath: choiceButton2
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2504612249614600641, guid: e1fb8775c647e6c4facdd190c6b4d472, type: 3}
-      propertyPath: dialoguePanel
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2504612249614600641, guid: e1fb8775c647e6c4facdd190c6b4d472, type: 3}
-      propertyPath: imageCutScene
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2504612249614600641, guid: e1fb8775c647e6c4facdd190c6b4d472, type: 3}
-      propertyPath: continueButton
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2504612249614600641, guid: e1fb8775c647e6c4facdd190c6b4d472, type: 3}
-      propertyPath: dialogueCanvas
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2504612249614600641, guid: e1fb8775c647e6c4facdd190c6b4d472, type: 3}
-      propertyPath: UIDialoguePanel
-      value: 
-      objectReference: {fileID: 7192231345981163021, guid: 62cf64fd323b70241ba30b867fbd520f, type: 3}
-    - target: {fileID: 2504612249614600641, guid: e1fb8775c647e6c4facdd190c6b4d472, type: 3}
-      propertyPath: imageCharacter1
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2504612249614600641, guid: e1fb8775c647e6c4facdd190c6b4d472, type: 3}
-      propertyPath: imageCharacter2
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2504612249614600641, guid: e1fb8775c647e6c4facdd190c6b4d472, type: 3}
-      propertyPath: choiceButton1Text
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2504612249614600641, guid: e1fb8775c647e6c4facdd190c6b4d472, type: 3}
-      propertyPath: choiceButton2Text
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2504612249614600641, guid: e1fb8775c647e6c4facdd190c6b4d472, type: 3}
-      propertyPath: dialoguePaths.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2504612249614600641, guid: e1fb8775c647e6c4facdd190c6b4d472, type: 3}
-      propertyPath: dialoguePaths.Array.data[0]
-      value: DialogueItem
-      objectReference: {fileID: 0}
-    - target: {fileID: 2504612249614600641, guid: e1fb8775c647e6c4facdd190c6b4d472, type: 3}
-      propertyPath: dialoguePaths.Array.data[1]
-      value: DialogueDataChapter1
-      objectReference: {fileID: 0}
     - target: {fileID: 3638635127206547181, guid: e1fb8775c647e6c4facdd190c6b4d472, type: 3}
       propertyPath: m_Name
       value: DialogueManager

@@ -102,6 +102,7 @@ public class DialogueManager : MonoBehaviour
             else
             {
                 //ID,character,charaterImage,dialogueText,choice1,choice2,choice1Text,choice2Text,type
+                Debug.Log("Loading Dialogue " + data_values[0]);
                 DialogueInfo newDialogue = new DialogueInfo(data_values[0], data_values[1], data_values[2], data_values[3], data_values[4], data_values[5], data_values[6], data_values[7], data_values[8]);
                 openWith.Add(data_values[0], newDialogue);
                 await Task.Yield();
@@ -242,15 +243,15 @@ public class DialogueManager : MonoBehaviour
             isChoice = true;
             dialoguePanel.ContinueButton.gameObject.SetActive(false);
             ToggleChoiceButton(true);
-            dialoguePanel.GetChoiceButton1Text().text = openWith[checkChoiceId].choice1Text;
-            dialoguePanel.GetChoiceButton2Text().text = openWith[checkChoiceId].choice2Text;
+            dialoguePanel.ChoiceButton1Text.text = openWith[checkChoiceId].choice1Text;
+            dialoguePanel.ChoiceButton2Text.text = openWith[checkChoiceId].choice2Text;
         }
     }
 
     void ToggleChoiceButton(bool enabled)
     {
-        dialoguePanel.GetChoiceButton1().gameObject.SetActive(enabled);
-        dialoguePanel.GetChoiceButton2().gameObject.SetActive(enabled);
+        dialoguePanel.ChoiceButton1.gameObject.SetActive(enabled);
+        dialoguePanel.ChoiceButton2.gameObject.SetActive(enabled);
     }
 
     public void DecisionButton1()
