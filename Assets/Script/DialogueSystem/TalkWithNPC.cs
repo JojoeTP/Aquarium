@@ -71,6 +71,7 @@ public class TalkWithNPC : MonoBehaviour
            if (other.GetComponent<PlayerManager>() != null)
            {
                 UITransition.inst.CutSceneTransitionIn();
+                SetActiveFalse();
            }
         }
         
@@ -80,6 +81,7 @@ public class TalkWithNPC : MonoBehaviour
             {
                 SetDialogueID();
                 PlayerManager.inst.PlayerInteract.StartDialogue(this);
+                SetActiveFalse();
             }
         }
     }
