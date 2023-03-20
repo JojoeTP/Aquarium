@@ -5547,6 +5547,7 @@ MonoBehaviour:
   isSave: 0
   isCutScene: 0
   isRunDialogueWhenOverlap: 0
+  haveDialogueBg: 0
   startWithDialogueId: Ch0_C03_01
   triggerEvents:
     m_PersistentCalls:
@@ -6275,6 +6276,7 @@ MonoBehaviour:
   isSave: 0
   isCutScene: 0
   isRunDialogueWhenOverlap: 1
+  haveDialogueBg: 0
   startWithDialogueId: Ch0_C06_01
   triggerEvents:
     m_PersistentCalls:
@@ -7751,6 +7753,7 @@ MonoBehaviour:
   isSave: 0
   isCutScene: 0
   isRunDialogueWhenOverlap: 0
+  haveDialogueBg: 0
   startWithDialogueId: Ch1_D01_01
   triggerEvents:
     m_PersistentCalls:
@@ -8411,7 +8414,7 @@ Transform:
   - {fileID: 546429830}
   - {fileID: 95966023}
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &440594463
 GameObject:
@@ -11083,7 +11086,7 @@ Transform:
   - {fileID: 2017880085}
   - {fileID: 1965217965}
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &573731139
 GameObject:
@@ -15378,7 +15381,7 @@ Transform:
   - {fileID: 388043738}
   - {fileID: 333462995}
   m_Father: {fileID: 0}
-  m_RootOrder: 26
+  m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &755869611
 PrefabInstance:
@@ -16074,6 +16077,7 @@ MonoBehaviour:
   isSave: 0
   isCutScene: 0
   isRunDialogueWhenOverlap: 0
+  haveDialogueBg: 0
   startWithDialogueId: Ch1_D03_01
   triggerEvents:
     m_PersistentCalls:
@@ -18189,7 +18193,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 21
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &873776505
 GameObject:
@@ -18439,6 +18443,7 @@ MonoBehaviour:
   isSave: 0
   isCutScene: 0
   isRunDialogueWhenOverlap: 0
+  haveDialogueBg: 0
   startWithDialogueId: Ch1_D01_2_01
   triggerEvents:
     m_PersistentCalls:
@@ -23683,7 +23688,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 27
+  m_RootOrder: 26
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1094559474
 GameObject:
@@ -24653,7 +24658,7 @@ RectTransform:
   m_Children:
   - {fileID: 599663261}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -26038,6 +26043,7 @@ MonoBehaviour:
   isSave: 0
   isCutScene: 0
   isRunDialogueWhenOverlap: 0
+  haveDialogueBg: 0
   startWithDialogueId: Ch1_D11_01
   triggerEvents:
     m_PersistentCalls:
@@ -26334,7 +26340,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2347664267870117880, guid: 2916f11d05ed43143896bd1038986891, type: 3}
       propertyPath: m_RootOrder
-      value: 14
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 2347664267870117880, guid: 2916f11d05ed43143896bd1038986891, type: 3}
       propertyPath: m_AnchorMax.x
@@ -28928,7 +28934,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 32
+  m_RootOrder: 31
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1380911162
 GameObject:
@@ -29004,6 +29010,7 @@ MonoBehaviour:
   isSave: 0
   isCutScene: 0
   isRunDialogueWhenOverlap: 0
+  haveDialogueBg: 0
   startWithDialogueId: Ch1_D01_01
   triggerEvents:
     m_PersistentCalls:
@@ -29062,7 +29069,7 @@ Transform:
   - {fileID: 1507199186}
   - {fileID: 88965668}
   m_Father: {fileID: 0}
-  m_RootOrder: 29
+  m_RootOrder: 28
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1386832139
 MonoBehaviour:
@@ -30063,6 +30070,7 @@ MonoBehaviour:
   isSave: 0
   isCutScene: 0
   isRunDialogueWhenOverlap: 0
+  haveDialogueBg: 0
   startWithDialogueId: Ch0_C10_01
   triggerEvents:
     m_PersistentCalls:
@@ -30889,7 +30897,7 @@ Transform:
   m_Children:
   - {fileID: 976091471}
   m_Father: {fileID: 0}
-  m_RootOrder: 25
+  m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1474153145
 GameObject:
@@ -32807,6 +32815,7 @@ MonoBehaviour:
   isSave: 0
   isCutScene: 0
   isRunDialogueWhenOverlap: 0
+  haveDialogueBg: 0
   startWithDialogueId: Ch0_C09_01
   triggerEvents:
     m_PersistentCalls:
@@ -33975,7 +33984,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1670765974
 GameObject:
@@ -34497,7 +34506,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1712265709
 PrefabInstance:
@@ -36584,7 +36593,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1796494296
 GameObject:
@@ -37552,7 +37561,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1829112646365129883, guid: fd10c98f2285a10469886c1df78c26e8, type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1829112646365129883, guid: fd10c98f2285a10469886c1df78c26e8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -38208,7 +38217,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &1855359338
 BoxCollider:
@@ -39746,7 +39755,7 @@ Transform:
   - {fileID: 240460556}
   - {fileID: 1126533219}
   m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1920884306
 PrefabInstance:
@@ -40414,7 +40423,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 24
+  m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1956118358
 BoxCollider2D:
@@ -42070,6 +42079,7 @@ MonoBehaviour:
   isSave: 0
   isCutScene: 0
   isRunDialogueWhenOverlap: 0
+  haveDialogueBg: 0
   startWithDialogueId: Ch0_C07_01
   triggerEvents:
     m_PersistentCalls:
@@ -43621,7 +43631,7 @@ Transform:
   - {fileID: 1845424197}
   - {fileID: 1356672276}
   m_Father: {fileID: 0}
-  m_RootOrder: 23
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2128095754
 GameObject:
@@ -44571,7 +44581,7 @@ Transform:
   - {fileID: 782536329}
   - {fileID: 1216950125}
   m_Father: {fileID: 0}
-  m_RootOrder: 22
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2147075143
 GameObject:
@@ -44823,7 +44833,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 183651816898977588, guid: 0a1032ddd958b544fa64fb55a2f616f4, type: 3}
       propertyPath: m_RootOrder
-      value: 31
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 183651816898977588, guid: 0a1032ddd958b544fa64fb55a2f616f4, type: 3}
       propertyPath: m_LocalScale.x
@@ -45164,67 +45174,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d4f8c402ddb9d64e9d2d2dd67936501, type: 3}
---- !u!1001 &4352066859430316430
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4261554499911693211, guid: 1c78d18dba1098a46a6b561a0587f2a6, type: 3}
-      propertyPath: m_Name
-      value: AI_Skeleton
-      objectReference: {fileID: 0}
-    - target: {fileID: 4261554499911693211, guid: 1c78d18dba1098a46a6b561a0587f2a6, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6669698822064037087, guid: 1c78d18dba1098a46a6b561a0587f2a6, type: 3}
-      propertyPath: m_RootOrder
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 6669698822064037087, guid: 1c78d18dba1098a46a6b561a0587f2a6, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 9.08
-      objectReference: {fileID: 0}
-    - target: {fileID: 6669698822064037087, guid: 1c78d18dba1098a46a6b561a0587f2a6, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -4.19
-      objectReference: {fileID: 0}
-    - target: {fileID: 6669698822064037087, guid: 1c78d18dba1098a46a6b561a0587f2a6, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6669698822064037087, guid: 1c78d18dba1098a46a6b561a0587f2a6, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6669698822064037087, guid: 1c78d18dba1098a46a6b561a0587f2a6, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6669698822064037087, guid: 1c78d18dba1098a46a6b561a0587f2a6, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6669698822064037087, guid: 1c78d18dba1098a46a6b561a0587f2a6, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6669698822064037087, guid: 1c78d18dba1098a46a6b561a0587f2a6, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6669698822064037087, guid: 1c78d18dba1098a46a6b561a0587f2a6, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6669698822064037087, guid: 1c78d18dba1098a46a6b561a0587f2a6, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 1c78d18dba1098a46a6b561a0587f2a6, type: 3}
 --- !u!212 &4695122922252820852
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -47312,7 +47261,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1078445036169580749, guid: d2fc8e7d6cd8b4c4694f7fe474ab5dc4, type: 3}
       propertyPath: m_RootOrder
-      value: 30
+      value: 29
       objectReference: {fileID: 0}
     - target: {fileID: 1078445036169580749, guid: d2fc8e7d6cd8b4c4694f7fe474ab5dc4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -47443,7 +47392,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9143542779762011173, guid: e069ec9dde3d1ea4895303c6357a7c36, type: 3}
       propertyPath: m_RootOrder
-      value: 28
+      value: 27
       objectReference: {fileID: 0}
     - target: {fileID: 9143542779762011173, guid: e069ec9dde3d1ea4895303c6357a7c36, type: 3}
       propertyPath: m_LocalScale.x
