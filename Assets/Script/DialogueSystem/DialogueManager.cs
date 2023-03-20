@@ -105,6 +105,7 @@ public class DialogueManager : MonoBehaviour
                 DialogueInfo newDialogue = new DialogueInfo(data_values[0], data_values[1], data_values[2], data_values[3], data_values[4], data_values[5], data_values[6], data_values[7], data_values[8]);
                 openWith.Add(data_values[0], newDialogue);
                 await Task.Yield();
+                //print(data_values[0]);
             }
         }
         
@@ -201,19 +202,11 @@ public class DialogueManager : MonoBehaviour
             dialoguePanel.DialogueBg.SetActive(true);
         }
     }
-    IEnumerator ContinueButtonInteractableDelay(float time)
-    {
-        dialoguePanel.ContinueButton.interactable = false;
-        yield return new WaitForSeconds(time);
-        dialoguePanel.ContinueButton.interactable = true;
-        print("OK");
-    }
     void CheckDialogueType(string checkChoiceId , bool checkTransition)
     {
         if (type != beforeCurrentType && checkTransition)
         {
             UITransition.inst.CutSceneTransitionIn();
-            //StartCoroutine(ContinueButtonInteractableDelay(1f));
             if (type == Type.Dialogue)
             {
                 dialoguePanel.ResetCharacterSprite();
