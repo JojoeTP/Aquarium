@@ -27,7 +27,7 @@ public class ActionEventManager : MonoBehaviour
     [SerializeField] GameObject alertCanvas;
 
     [Header("LockDoor")]
-    [SerializeField] LockDoorConfig lockDoorConfigTest;
+    [SerializeField] LockDoorConfig Ch0_C03_01_Config;
 
     [HideInInspector]
     public StateController skeleton; //ภาโรง
@@ -114,14 +114,15 @@ public class ActionEventManager : MonoBehaviour
         //เพิ่มตรงนี้ให้เล่นต่อ
     }
 
-    public void UnLockDoorTest()
+    public void UnLockDoor_Ch0_C03_01()
     {
-        foreach(var n in lockDoorConfigTest.lockDoorDialogue)
+        foreach(var n in Ch0_C03_01_Config.lockDoorDialogue)
         {
             Destroy(n.gameObject);
         }
+        Ch0_C03_01_Config.lockDoorDialogue.Clear();
 
-        foreach(var n in lockDoorConfigTest.lockDoor)
+        foreach(var n in Ch0_C03_01_Config.lockDoor)
         {
             n.isLockedDoor = false;
         }

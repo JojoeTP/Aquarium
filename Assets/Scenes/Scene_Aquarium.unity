@@ -6103,9 +6103,21 @@ MonoBehaviour:
   triggerEvents:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 253976192}
+        m_TargetAssemblyTypeName: TalkWithNPC, Assembly-CSharp
+        m_MethodName: ChangeDialogueId
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Ch0_C05_07
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1619314585}
         m_TargetAssemblyTypeName: ActionEventManager, Assembly-CSharp
-        m_MethodName: Test
+        m_MethodName: UnLockDoor_Ch0_C03_01
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -15662,6 +15674,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1231206785}
     - target: {fileID: 8370923413638022042, guid: 9f28763c23a64034d8eef2b450623ade, type: 3}
+      propertyPath: transitionScript
+      value: 
+      objectReference: {fileID: 972643828}
+    - target: {fileID: 8370923413638022042, guid: 9f28763c23a64034d8eef2b450623ade, type: 3}
       propertyPath: overlayTransition
       value: 
       objectReference: {fileID: 1231206784}
@@ -22214,6 +22230,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &972643828 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2347664268754119562, guid: 2916f11d05ed43143896bd1038986891, type: 3}
+  m_PrefabInstance: {fileID: 1231206783}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &976091467
 GameObject:
   m_ObjectHideFlags: 0
@@ -28286,7 +28307,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4519214535877325464, guid: 2916f11d05ed43143896bd1038986891, type: 3}
   m_PrefabInstance: {fileID: 1231206783}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 972643828}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5ca46c86faa047c40b8fd3fce98a4780, type: 3}
@@ -36366,6 +36387,22 @@ PrefabInstance:
       propertyPath: labyrinthENDSpriteRenderer
       value: 
       objectReference: {fileID: 4695122923223474138}
+    - target: {fileID: 4966732993388418438, guid: 1b3dcc0b488f4414c991160dad5fe269, type: 3}
+      propertyPath: Ch0_C03_01_Config.lockDoor.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4966732993388418438, guid: 1b3dcc0b488f4414c991160dad5fe269, type: 3}
+      propertyPath: Ch0_C03_01_Config.lockDoor.Array.data[0]
+      value: 
+      objectReference: {fileID: 1939489497}
+    - target: {fileID: 4966732993388418438, guid: 1b3dcc0b488f4414c991160dad5fe269, type: 3}
+      propertyPath: Ch0_C03_01_Config.lockDoorDialogue.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4966732993388418438, guid: 1b3dcc0b488f4414c991160dad5fe269, type: 3}
+      propertyPath: Ch0_C03_01_Config.lockDoorDialogue.Array.data[0]
+      value: 
+      objectReference: {fileID: 49739296}
     - target: {fileID: 4966732993388418439, guid: 1b3dcc0b488f4414c991160dad5fe269, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -43176,7 +43213,7 @@ MonoBehaviour:
   triggerDoorEvents:
     m_PersistentCalls:
       m_Calls: []
-  isLockedDoor: 0
+  isLockedDoor: 1
   triggerConditionEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -44509,7 +44546,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1231206787, guid: 2916f11d05ed43143896bd1038986891, type: 3}
   m_PrefabInstance: {fileID: 1231206783}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 972643828}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f0699a13f1604f543af43f3e6d61fa72, type: 3}
@@ -44520,7 +44557,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7707990979316523223, guid: 2916f11d05ed43143896bd1038986891, type: 3}
   m_PrefabInstance: {fileID: 1231206783}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 972643828}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c728793024055ee4fab86f1c1c05374e, type: 3}

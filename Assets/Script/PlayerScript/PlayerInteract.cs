@@ -47,7 +47,8 @@ public class PlayerInteract : MonoBehaviour
             if(CanEnterDoor(n.transform))
             {
                 enteringDoor = n.GetComponent<DoorSystem>();
-                EnterDoor();
+                if(!enteringDoor.isLockedDoor)
+                    EnterDoor();
             }
 
             if(TalkWithNPC(n.transform))
