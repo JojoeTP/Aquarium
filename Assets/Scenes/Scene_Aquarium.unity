@@ -4120,7 +4120,7 @@ Transform:
   - {fileID: 250431453}
   - {fileID: 1701350789}
   m_Father: {fileID: 572766039}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &178806790
 MonoBehaviour:
@@ -6897,19 +6897,7 @@ MonoBehaviour:
   startWithDialogueId: Ch2_D02_01
   triggerEvents:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1619314585}
-        m_TargetAssemblyTypeName: ActionEventManager, Assembly-CSharp
-        m_MethodName: Test
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   NPCList: []
 --- !u!61 &298884940
 BoxCollider2D:
@@ -8649,9 +8637,9 @@ MonoBehaviour:
   triggerEvents:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1619314585}
-        m_TargetAssemblyTypeName: ActionEventManager, Assembly-CSharp
-        m_MethodName: Test
+      - m_Target: {fileID: 404632291}
+        m_TargetAssemblyTypeName: TalkWithNPC, Assembly-CSharp
+        m_MethodName: SetActiveFalse
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -11830,6 +11818,11 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.8186649, y: 6.086808}
   m_EdgeRadius: 0
+--- !u!1 &551151315 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7972374739529186262, guid: b6056be4643cb6c4cb48e0bfbe54b913, type: 3}
+  m_PrefabInstance: {fileID: 5148407883494347136}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &561693524
 GameObject:
   m_ObjectHideFlags: 0
@@ -12122,8 +12115,8 @@ Transform:
   - {fileID: 715501410}
   - {fileID: 1619314584}
   - {fileID: 2773879600212454493}
-  - {fileID: 586840491}
   - {fileID: 178806789}
+  - {fileID: 586840491}
   - {fileID: 823411052}
   m_Father: {fileID: 0}
   m_RootOrder: 18
@@ -15219,7 +15212,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   connectDoor: {fileID: 1545796407}
-  conditionItem: {fileID: 0}
+  conditionItem: {fileID: 11400000, guid: 9ccc0705f275d0240bf9de4bbefc11a4, type: 2}
   isSpacialDoor: 0
   notForEnemy: 0
   triggerDoorEvents:
@@ -17235,9 +17228,9 @@ MonoBehaviour:
   triggerEvents:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1619314585}
-        m_TargetAssemblyTypeName: ActionEventManager, Assembly-CSharp
-        m_MethodName: Test
+      - m_Target: {fileID: 782536330}
+        m_TargetAssemblyTypeName: TalkWithNPC, Assembly-CSharp
+        m_MethodName: SetActiveFalse
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -17951,19 +17944,7 @@ MonoBehaviour:
   startWithDialogueId: Ch3_D01_01
   triggerEvents:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1619314585}
-        m_TargetAssemblyTypeName: ActionEventManager, Assembly-CSharp
-        m_MethodName: Test
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   NPCList: []
 --- !u!61 &811230436
 BoxCollider2D:
@@ -19933,7 +19914,19 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1619314585}
         m_TargetAssemblyTypeName: ActionEventManager, Assembly-CSharp
-        m_MethodName: Test
+        m_MethodName: UnLockDoor_Ch1_D01_2_01
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 876754890}
+        m_TargetAssemblyTypeName: TalkWithNPC, Assembly-CSharp
+        m_MethodName: SetActiveFalse
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -27171,6 +27164,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1178796766 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7972374739529186262, guid: b6056be4643cb6c4cb48e0bfbe54b913, type: 3}
+  m_PrefabInstance: {fileID: 584577038}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1184263630
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27257,6 +27255,10 @@ PrefabInstance:
     - target: {fileID: 5299014386308253458, guid: b7260303ed58712428593c5c759fb8a2, type: 3}
       propertyPath: m_Name
       value: bench_blood (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5299014386308253458, guid: b7260303ed58712428593c5c759fb8a2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b7260303ed58712428593c5c759fb8a2, type: 3}
@@ -27958,9 +27960,9 @@ MonoBehaviour:
   triggerEvents:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1619314585}
-        m_TargetAssemblyTypeName: ActionEventManager, Assembly-CSharp
-        m_MethodName: Test
+      - m_Target: {fileID: 1216950126}
+        m_TargetAssemblyTypeName: TalkWithNPC, Assembly-CSharp
+        m_MethodName: SetActiveFalse
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -29089,9 +29091,9 @@ MonoBehaviour:
   triggerEvents:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1619314585}
-        m_TargetAssemblyTypeName: ActionEventManager, Assembly-CSharp
-        m_MethodName: Test
+      - m_Target: {fileID: 1267919116}
+        m_TargetAssemblyTypeName: TalkWithNPC, Assembly-CSharp
+        m_MethodName: SetActiveFalse
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -32615,7 +32617,6 @@ GameObject:
   - component: {fileID: 1413032865}
   - component: {fileID: 1413032867}
   - component: {fileID: 1413032866}
-  - component: {fileID: 1413032868}
   - component: {fileID: 1413032869}
   m_Layer: 0
   m_Name: Ch0_C10_01
@@ -32659,19 +32660,7 @@ MonoBehaviour:
   startWithDialogueId: Ch0_C10_01
   triggerEvents:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1619314585}
-        m_TargetAssemblyTypeName: ActionEventManager, Assembly-CSharp
-        m_MethodName: Test
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   NPCList: []
 --- !u!61 &1413032867
 BoxCollider2D:
@@ -32699,19 +32688,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 6.6314697, y: 6.9238358}
   m_EdgeRadius: 0
---- !u!114 &1413032868
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1413032864}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 69facd572376b2741bc7dde45848d83c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  keyImage: {fileID: 0}
 --- !u!114 &1413032869
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33114,9 +33090,9 @@ MonoBehaviour:
   triggerEvents:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1619314585}
-        m_TargetAssemblyTypeName: ActionEventManager, Assembly-CSharp
-        m_MethodName: Test
+      - m_Target: {fileID: 1433535035}
+        m_TargetAssemblyTypeName: TalkWithNPC, Assembly-CSharp
+        m_MethodName: SetActiveFalse
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -34116,19 +34092,7 @@ MonoBehaviour:
   startWithDialogueId: Ch3_D01_01
   triggerEvents:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1619314585}
-        m_TargetAssemblyTypeName: ActionEventManager, Assembly-CSharp
-        m_MethodName: Test
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   NPCList: []
 --- !u!61 &1506671318
 BoxCollider2D:
@@ -34482,19 +34446,7 @@ MonoBehaviour:
   startWithDialogueId: Ch3_D01_01
   triggerEvents:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1619314585}
-        m_TargetAssemblyTypeName: ActionEventManager, Assembly-CSharp
-        m_MethodName: Test
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   NPCList: []
 --- !u!61 &1524209054
 BoxCollider2D:
@@ -35808,19 +35760,7 @@ MonoBehaviour:
   startWithDialogueId: Ch0_C09_01
   triggerEvents:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1619314585}
-        m_TargetAssemblyTypeName: ActionEventManager, Assembly-CSharp
-        m_MethodName: Test
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   NPCList: []
 --- !u!61 &1583558500
 BoxCollider2D:
@@ -36438,17 +36378,85 @@ PrefabInstance:
       value: ActionEventManager
       objectReference: {fileID: 0}
     - target: {fileID: 4966732993388418438, guid: 1b3dcc0b488f4414c991160dad5fe269, type: 3}
+      propertyPath: Ch1_D11_01
+      value: 
+      objectReference: {fileID: 1216950126}
+    - target: {fileID: 4966732993388418438, guid: 1b3dcc0b488f4414c991160dad5fe269, type: 3}
+      propertyPath: Wall_Aquarium
+      value: 
+      objectReference: {fileID: 2110251189}
+    - target: {fileID: 4966732993388418438, guid: 1b3dcc0b488f4414c991160dad5fe269, type: 3}
+      propertyPath: Wall_Cafeteria
+      value: 
+      objectReference: {fileID: 551151315}
+    - target: {fileID: 4966732993388418438, guid: 1b3dcc0b488f4414c991160dad5fe269, type: 3}
+      propertyPath: Wall_Labyrinth
+      value: 
+      objectReference: {fileID: 1178796766}
+    - target: {fileID: 4966732993388418438, guid: 1b3dcc0b488f4414c991160dad5fe269, type: 3}
       propertyPath: labyrinthENDSpriteRenderer
       value: 
       objectReference: {fileID: 4695122923223474138}
+    - target: {fileID: 4966732993388418438, guid: 1b3dcc0b488f4414c991160dad5fe269, type: 3}
+      propertyPath: labyrinthENDHideDialogue.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4966732993388418438, guid: 1b3dcc0b488f4414c991160dad5fe269, type: 3}
+      propertyPath: labyrinthENDShowDialogue.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4966732993388418438, guid: 1b3dcc0b488f4414c991160dad5fe269, type: 3}
+      propertyPath: labyrinthENDHideDialogue.Array.data[0]
+      value: 
+      objectReference: {fileID: 298884939}
+    - target: {fileID: 4966732993388418438, guid: 1b3dcc0b488f4414c991160dad5fe269, type: 3}
+      propertyPath: labyrinthENDShowDialogue.Array.data[0]
+      value: 
+      objectReference: {fileID: 464255396}
+    - target: {fileID: 4966732993388418438, guid: 1b3dcc0b488f4414c991160dad5fe269, type: 3}
+      propertyPath: labyrinthENDShowDialogue.Array.data[1]
+      value: 
+      objectReference: {fileID: 222871776}
+    - target: {fileID: 4966732993388418438, guid: 1b3dcc0b488f4414c991160dad5fe269, type: 3}
+      propertyPath: Ch1_D01_2_01_Config.lockDoor.Array.size
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4966732993388418438, guid: 1b3dcc0b488f4414c991160dad5fe269, type: 3}
       propertyPath: Ch0_C03_01_Config.lockDoor.Array.data[0]
       value: 
       objectReference: {fileID: 1939489497}
     - target: {fileID: 4966732993388418438, guid: 1b3dcc0b488f4414c991160dad5fe269, type: 3}
+      propertyPath: Ch1_D01_2_01_Config.lockDoor.Array.data[0]
+      value: 
+      objectReference: {fileID: 819383246}
+    - target: {fileID: 4966732993388418438, guid: 1b3dcc0b488f4414c991160dad5fe269, type: 3}
+      propertyPath: Ch1_D01_2_01_Config.lockDoor.Array.data[1]
+      value: 
+      objectReference: {fileID: 406672624}
+    - target: {fileID: 4966732993388418438, guid: 1b3dcc0b488f4414c991160dad5fe269, type: 3}
+      propertyPath: Ch1_D01_2_01_Config.lockDoor.Array.data[2]
+      value: 
+      objectReference: {fileID: 1900784741}
+    - target: {fileID: 4966732993388418438, guid: 1b3dcc0b488f4414c991160dad5fe269, type: 3}
+      propertyPath: Ch1_D01_2_01_Config.lockDoorDialogue.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4966732993388418438, guid: 1b3dcc0b488f4414c991160dad5fe269, type: 3}
       propertyPath: Ch0_C03_01_Config.lockDoorDialogue.Array.data[0]
       value: 
       objectReference: {fileID: 49739296}
+    - target: {fileID: 4966732993388418438, guid: 1b3dcc0b488f4414c991160dad5fe269, type: 3}
+      propertyPath: Ch1_D01_2_01_Config.lockDoorDialogue.Array.data[0]
+      value: 
+      objectReference: {fileID: 392970616}
+    - target: {fileID: 4966732993388418438, guid: 1b3dcc0b488f4414c991160dad5fe269, type: 3}
+      propertyPath: Ch1_D01_2_01_Config.lockDoorDialogue.Array.data[1]
+      value: 
+      objectReference: {fileID: 2006100958}
+    - target: {fileID: 4966732993388418438, guid: 1b3dcc0b488f4414c991160dad5fe269, type: 3}
+      propertyPath: Ch1_D01_2_01_Config.lockDoorDialogue.Array.data[2]
+      value: 
+      objectReference: {fileID: 1162392904}
     - target: {fileID: 4966732993388418439, guid: 1b3dcc0b488f4414c991160dad5fe269, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -38133,19 +38141,7 @@ MonoBehaviour:
   startWithDialogueId: Ch3_D02_01
   triggerEvents:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1619314585}
-        m_TargetAssemblyTypeName: ActionEventManager, Assembly-CSharp
-        m_MethodName: Test
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   NPCList: []
 --- !u!61 &1735966506
 BoxCollider2D:
@@ -40551,19 +40547,7 @@ MonoBehaviour:
   startWithDialogueId: Ch3_D04_01
   triggerEvents:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1619314585}
-        m_TargetAssemblyTypeName: ActionEventManager, Assembly-CSharp
-        m_MethodName: Test
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   NPCList: []
 --- !u!61 &1825368144
 BoxCollider2D:
@@ -46314,6 +46298,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &2110251189 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7972374739529186262, guid: b6056be4643cb6c4cb48e0bfbe54b913, type: 3}
+  m_PrefabInstance: {fileID: 1341026166}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2118471160
 PrefabInstance:
   m_ObjectHideFlags: 0

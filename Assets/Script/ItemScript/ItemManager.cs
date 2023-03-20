@@ -125,6 +125,8 @@ public class ItemManager : MonoBehaviour
             case ITEMTYPE.ITEM3:
                 item.triggerEvents.AddListener( () => 
                     {
+                        ActionEventManager.inst.SetActiveDialogueCh1_D11_01();
+                        ActionEventManager.inst.SetActiveFalse_Wall_Cafeteria();
                         DialogueManager.inst.currentDialogue = item.itemObject.itemData.dialogueItemId;
                         DialogueManager.inst.StartDialogue();
                     }
