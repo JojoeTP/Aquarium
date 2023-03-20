@@ -49,8 +49,12 @@ MonoBehaviour:
   - DialogueItem
   - DialogueDataChapter0
   - DialogueDataChapter1
+  - DialogueDataChapter2
+  - DialogueDataChapter3
+  - DialogueDataChapter4
   type: 0
   characterSprites: []
   currentId: 
   currentNPC: {fileID: 0}
   currentDialogue: 
+  dialoguePanel: {fileID: 0}
