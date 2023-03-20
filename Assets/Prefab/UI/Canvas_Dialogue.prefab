@@ -389,8 +389,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: DecisionButton1
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: dbbccbcddacfcff458e403c0185c3eb2, type: 2}
+  m_sharedMaterial: {fileID: -6627494537337664084, guid: dbbccbcddacfcff458e403c0185c3eb2, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -414,11 +414,11 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
+  m_fontSize: 24.35
   m_fontSizeBase: 24
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 0
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
@@ -526,8 +526,8 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: dbbccbcddacfcff458e403c0185c3eb2, type: 2}
+  m_sharedMaterial: {fileID: -6627494537337664084, guid: dbbccbcddacfcff458e403c0185c3eb2, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -551,11 +551,11 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
+  m_fontSize: 24.35
   m_fontSizeBase: 24
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 0
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
@@ -935,8 +935,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Continue
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: dbbccbcddacfcff458e403c0185c3eb2, type: 2}
+  m_sharedMaterial: {fileID: -6627494537337664084, guid: dbbccbcddacfcff458e403c0185c3eb2, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1163,6 +1163,10 @@ MonoBehaviour:
   continueButton: {fileID: 241977023542276857}
   choiceButton1: {fileID: 739260593502999584}
   choiceButton2: {fileID: 791820166394127487}
+  ChoiceButton1: {fileID: 0}
+  ChoiceButton2: {fileID: 0}
+  ChoiceButton1Text: {fileID: 0}
+  ChoiceButton2Text: {fileID: 0}
 --- !u!1 &7192231346057639295
 GameObject:
   m_ObjectHideFlags: 0
