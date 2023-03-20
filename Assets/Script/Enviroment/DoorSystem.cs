@@ -63,9 +63,6 @@ public class DoorSystem : MonoBehaviour
 
     public bool CheckCondition()
     {
-        if(isLockedDoor)
-            return false;
-
         if(conditionItem == null)
             return true;
             
@@ -103,7 +100,9 @@ public class DoorSystem : MonoBehaviour
             if(other.GetComponent<PlayerManager>() != null)
             {
                 PlayerManager.inst.PlayerInteract.EnteringDoor = this;
-                PlayerManager.inst.PlayerInteract.EnterDoor();
+                
+                if(!isLockedDoor)
+                    PlayerManager.inst.PlayerInteract.EnterDoor();
             }
         }
     }

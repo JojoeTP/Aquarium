@@ -11,14 +11,17 @@ public class ActionEventManager : MonoBehaviour
     [Header("Puzzle")]
     [SerializeField] SpriteRenderer labyrinthENDSpriteRenderer;
     [SerializeField] Sprite dark_LabyrinthSprite;
+    [SerializeField] List<TalkWithNPC> labyrinthENDShowDialogue;
+    [SerializeField] List<TalkWithNPC> labyrinthENDHideDialogue;
+    
     [HideInInspector]
     public bool isPuzzleDone = false;
 
     [Header("Enemy")]
-    Transform spawnPosition;
     [SerializeField] GameObject skeletonPrefab;
     [SerializeField] GameObject mermaidPrefab;
     [SerializeField] GameObject directorPrefab;
+    Transform spawnPosition;
 
     [Header("Brother Sister")]
     [SerializeField] GameObject brotherPrefab;
@@ -26,8 +29,17 @@ public class ActionEventManager : MonoBehaviour
     [SerializeField] GameObject sisterPrefab;
     [SerializeField] GameObject alertCanvas;
 
+    [Header("Wall")]
+    [SerializeField] GameObject Wall_Cafeteria;
+    [SerializeField] GameObject Wall_Labyrinth;
+    [SerializeField] GameObject Wall_Aquarium;
+
+    [Header("Dialogue & Cutescene")]
+    [SerializeField] TalkWithNPC Ch1_D11_01; 
+
     [Header("LockDoor")]
-    [SerializeField] LockDoorConfig lockDoorConfigTest;
+    [SerializeField] LockDoorConfig Ch0_C03_01_Config;
+    [SerializeField] LockDoorConfig Ch1_D01_2_01_Config;
 
     [HideInInspector]
     public StateController skeleton; //ภาโรง
@@ -44,6 +56,18 @@ public class ActionEventManager : MonoBehaviour
     public void OnPickUpLabyrinthCoin()
     {
         isPuzzleDone = true;
+
+        foreach(var n in labyrinthENDShowDialogue)
+        {
+            n.gameObject.SetActive(true);
+        }
+
+        foreach(var n in labyrinthENDHideDialogue)
+        {
+            n.SetActiveFalse();
+        }
+        SetActiveFalse_Wall_Labyrinth();
+
         labyrinthENDSpriteRenderer.sprite = dark_LabyrinthSprite;
         SoundManager.Inst.MuteBGM(); //ปิด BGM
         //จะปิดไรเพิ่มก็ เพิ่มcodeตรงนี้
@@ -115,22 +139,58 @@ public class ActionEventManager : MonoBehaviour
         //เพิ่มตรงนี้ให้เล่นต่อ
     }
 
-    public void UnLockDoorTest()
+    void UnlockDoor(LockDoorConfig lockDoorConfig)
     {
-        foreach(var n in lockDoorConfigTest.lockDoorDialogue)
+        foreach(var n in lockDoorConfig.lockDoorDialogue)
         {
             Destroy(n.gameObject);
         }
+        lockDoorConfig.lockDoorDialogue.Clear();
 
-        foreach(var n in lockDoorConfigTest.lockDoor)
+        foreach(var n in lockDoorConfig.lockDoor)
         {
             n.isLockedDoor = false;
         }
     }
 
+    public void UnLockDoor_Ch0_C03_01()
+    {
+        UnlockDoor(Ch0_C03_01_Config);
+    }
+
+    public void UnLockDoor_Ch1_D01_2_01()
+    {
+        UnlockDoor(Ch1_D01_2_01_Config);
+    }
+
     public void WarpToPosition(Transform transform)
     {
         PlayerManager.inst.transform.position = transform.position;
+    }
+
+    void SetActiveDialogue(TalkWithNPC talkWithNPC)
+    {
+        talkWithNPC.gameObject.SetActive(true);
+    }
+
+    public void SetActiveDialogueCh1_D11_01()
+    {
+        SetActiveDialogue(Ch1_D11_01);
+    }
+
+    public void SetActiveFalse_Wall_Cafeteria()
+    {
+        Wall_Cafeteria.SetActive(false);
+    }
+
+    public void SetActiveFalse_Wall_Labyrinth()
+    {
+        Wall_Labyrinth.SetActive(false);
+    }
+
+    public void SetActiveFalse_Wall_Aquarium()
+    {
+        Wall_Aquarium.SetActive(false);
     }
 }
 

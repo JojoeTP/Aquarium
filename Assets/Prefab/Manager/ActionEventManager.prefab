@@ -44,5 +44,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 589d5b78e0c90e74988a93bb8fdeb838, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  labyrinthMap: {fileID: 0}
-  labyrinthMapSprite: {fileID: 21300000, guid: 30bb2e87bee3e6149b43ef11e2f45a74, type: 3}
+  labyrinthENDSpriteRenderer: {fileID: 0}
+  dark_LabyrinthSprite: {fileID: 21300000, guid: 30bb2e87bee3e6149b43ef11e2f45a74, type: 3}
+  isPuzzleDone: 0
+  skeletonPrefab: {fileID: 0}
+  mermaidPrefab: {fileID: 0}
+  directorPrefab: {fileID: 0}
+  brotherPrefab: {fileID: 0}
+  spawnSisterPosition: {fileID: 0}
+  sisterPrefab: {fileID: 0}
+  alertCanvas: {fileID: 0}
+  Ch0_C03_01_Config:
+    lockDoorDialogue:
+    - {fileID: 0}
+    lockDoor:
+    - {fileID: 0}
+  skeleton: {fileID: 0}
+  sister: {fileID: 0}
