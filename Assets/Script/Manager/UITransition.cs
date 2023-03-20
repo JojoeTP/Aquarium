@@ -6,13 +6,25 @@ public class UITransition : MonoBehaviour
 {
     public static UITransition inst;
     
-    [SerializeField] DoorTransitionScript doorTransition;
-    [SerializeField] CutSceneTransitionScript cutSceneTransition;
-    [SerializeField] DieTransitionScript dieTransitionScript;
+    [SerializeField] GameObject transitionScript;
+    DoorTransitionScript doorTransition;
+    CutSceneTransitionScript cutSceneTransition;
+    DieTransitionScript dieTransitionScript;
+    AIMermaidTransitionScript mermaidTransitionScript;
+    AIDirectorTransitionScript directorTransitionScript;
 
     private void Awake() 
     {
         inst = this;    
+    }
+
+    void Start() 
+    {
+        doorTransition = transitionScript.GetComponent<DoorTransitionScript>(); 
+        cutSceneTransition = transitionScript.GetComponent<CutSceneTransitionScript>(); 
+        dieTransitionScript = transitionScript.GetComponent<DieTransitionScript>(); 
+        mermaidTransitionScript = transitionScript.GetComponent<AIMermaidTransitionScript>(); 
+        directorTransitionScript = transitionScript.GetComponent<AIDirectorTransitionScript>(); 
     }
 
     public void DoorTransitionIn()
@@ -33,5 +45,15 @@ public class UITransition : MonoBehaviour
     public void DieTransitionIn()
     {
         dieTransitionScript.DieTransitionIn();
+    }
+
+    public void MermaidTransitionIn()
+    {
+        mermaidTransitionScript.AIMermaidTransitionIn();
+    }
+
+    public void DirectorTransitionIn()
+    {
+        directorTransitionScript.AIDirectorTransitionIn();
     }
 }

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
+using System;
 
 public class ActionEventManager : MonoBehaviour
 {
@@ -24,6 +25,9 @@ public class ActionEventManager : MonoBehaviour
     [SerializeField] Transform spawnSisterPosition;
     [SerializeField] GameObject sisterPrefab;
     [SerializeField] GameObject alertCanvas;
+
+    [Header("LockDoor")]
+    [SerializeField] LockDoorConfig lockDoorConfigTest;
 
     [HideInInspector]
     public StateController skeleton; //ภาโรง
@@ -110,10 +114,30 @@ public class ActionEventManager : MonoBehaviour
         //เพิ่มตรงนี้ให้เล่นต่อ
     }
 
+    public void UnLockDoorTest()
+    {
+        foreach(var n in lockDoorConfigTest.lockDoorDialogue)
+        {
+            Destroy(n.gameObject);
+        }
+
+        foreach(var n in lockDoorConfigTest.lockDoor)
+        {
+            n.isLockedDoor = false;
+        }
+    }
+
     public void WarpToPosition(Transform transform)
     {
         PlayerManager.inst.transform.position = transform.position;
     }
+}
+
+[Serializable]
+public class LockDoorConfig
+{
+    public List<TalkWithNPC> lockDoorDialogue = new List<TalkWithNPC>();
+    public List<DoorSystem> lockDoor = new List<DoorSystem>();
 }
 
 #if UNITY_EDITOR

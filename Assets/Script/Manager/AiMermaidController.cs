@@ -23,15 +23,32 @@ public class AiMermaidController : MonoBehaviour
         inst = this;
     }
 
-    public void CreateMermaidAI()
+    void CreateMermaidAIAtFirstPosition()
     {
         var aiPrefab = Instantiate(mermaidPrefab,firstSpawnPosition.position,Quaternion.identity);
         mermaidController = aiPrefab.GetComponent<StateController>();
 
         if(nightGlobalVolume.profile.TryGet<ColorAdjustments>(out var colorAdj))
-           {
-                colorAdj.active = true;
-           }
+        {
+            colorAdj.active = true;
+        }
+    }
+
+    void CreateMermaidAI()
+    {
+        var aiPrefab = Instantiate(mermaidPrefab,spawnPositionList[Random.Range(0,spawnPositionList.Count)].position,Quaternion.identity);
+        mermaidController = aiPrefab.GetComponent<StateController>();
+
+        if(nightGlobalVolume.profile.TryGet<ColorAdjustments>(out var colorAdj))
+        {
+            colorAdj.active = true;
+        }
+    }
+    
+
+    public void SpawnAI()
+    {
+        UITransition.inst.MermaidTransitionIn();
     }
 
     IEnumerator CreateMermaidAI(float time)
@@ -40,13 +57,7 @@ public class AiMermaidController : MonoBehaviour
 
         if(mermaidController == null && spawnAI)
         {
-            var aiPrefab = Instantiate(mermaidPrefab,spawnPositionList[Random.Range(0,spawnPositionList.Count)].position,Quaternion.identity);
-            mermaidController = aiPrefab.GetComponent<StateController>();
-
-           if(nightGlobalVolume.profile.TryGet<ColorAdjustments>(out var colorAdj))
-           {
-                colorAdj.active = true;
-           }
+            UITransition.inst.MermaidTransitionIn();
         }
     }
     
@@ -64,6 +75,14 @@ public class AiMermaidController : MonoBehaviour
         }
     }
 
+    public void MermaidTransition()
+    {
+        if (mermaidController == null)
+            CreateMermaidAI();
+        else
+            DestroyMermaidAI();
+    }
+
     public void DestroyWhenEnterLift()
     {
         DestroyMermaidAI();
@@ -74,7 +93,7 @@ public class AiMermaidController : MonoBehaviour
     {
         if(other.GetComponent<PlayerManager>() != null)
         {
-            DestroyMermaidAI();
+            UITransition.inst.MermaidTransitionIn();
         }
     }
 
@@ -113,7 +132,7 @@ public class AiMermaidController : MonoBehaviour
 
             if (GUILayout.Button("Spawn Mermaid"))
             {
-                actionActive.CreateMermaidAI();
+                actionActive.SpawnAI();
             }
         }
     }
