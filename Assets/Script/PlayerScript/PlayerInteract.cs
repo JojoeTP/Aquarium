@@ -103,6 +103,7 @@ public class PlayerInteract : MonoBehaviour
         {
             return;
         }
+
         if (DialogueManager.inst.currentNPC == null)
         {
             DialogueManager.inst.currentNPC = NPC;
