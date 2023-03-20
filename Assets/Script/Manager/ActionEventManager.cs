@@ -58,8 +58,9 @@ public class ActionEventManager : MonoBehaviour
         return Instantiate(enemy,spawnPosition.transform.position,spawnPosition.transform.rotation).GetComponent<StateController>();
     }
 
-    public void SpawnSkeleton()
+    public void SpawnSkeleton(Transform newSpawnPosition)
     {
+        UpdateSpawnPosition(newSpawnPosition);
         skeleton = SpawnEnemy(skeletonPrefab);
     }
 

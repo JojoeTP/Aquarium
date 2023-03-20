@@ -3756,7 +3756,7 @@ Transform:
   - {fileID: 464255395}
   - {fileID: 222871774}
   m_Father: {fileID: 2146067283}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &162748267
 PrefabInstance:
@@ -6732,7 +6732,7 @@ Transform:
   - {fileID: 1340679215}
   - {fileID: 1454243564}
   m_Father: {fileID: 2146067283}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &298549205
 GameObject:
@@ -7051,7 +7051,7 @@ Transform:
   - {fileID: 1825368142}
   - {fileID: 811230434}
   m_Father: {fileID: 2146067283}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &312485289
 PrefabInstance:
@@ -8559,7 +8559,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7768948, y: 1}
+    m_SensorSize: {x: 1.7797294, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -19915,7 +19915,31 @@ MonoBehaviour:
   startWithDialogueId: Ch1_D01_2_01
   triggerEvents:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1619314585}
+        m_TargetAssemblyTypeName: ActionEventManager, Assembly-CSharp
+        m_MethodName: SpawnSkeleton
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1654569712}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1619314586}
+        m_TargetAssemblyTypeName: ActionEventManager, Assembly-CSharp
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   NPCList: []
 --- !u!61 &876754891
 BoxCollider2D:
@@ -36410,12 +36434,17 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4966732993388418438, guid: 1b3dcc0b488f4414c991160dad5fe269, type: 3}
   m_PrefabInstance: {fileID: 1619314583}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1619314586}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 589d5b78e0c90e74988a93bb8fdeb838, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1619314586 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4966732993388418432, guid: 1b3dcc0b488f4414c991160dad5fe269, type: 3}
+  m_PrefabInstance: {fileID: 1619314583}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1627760039
 GameObject:
   m_ObjectHideFlags: 0
@@ -36941,6 +36970,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1654569711
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1654569712}
+  m_Layer: 0
+  m_Name: SkeletonSpawnPosition
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1654569712
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1654569711}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -68.68, y: -4.24, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2146067283}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1662970675
 GameObject:
   m_ObjectHideFlags: 0
@@ -47736,6 +47796,7 @@ Transform:
   m_Children:
   - {fileID: 744111349}
   - {fileID: 2093179448}
+  - {fileID: 1654569712}
   - {fileID: 158624549}
   - {fileID: 309875256}
   - {fileID: 297376245}

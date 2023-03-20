@@ -311,9 +311,10 @@ public class DialogueManager : MonoBehaviour
             print("save");
             SaveGameSystemManager.inst.SaveGame();
         }
-        
+        print(currentNPC);
         if (currentNPC != null)
         {
+            print(currentNPC.triggerEvents);
             currentNPC.triggerEvents.Invoke();
             currentNPC = null;
         }
