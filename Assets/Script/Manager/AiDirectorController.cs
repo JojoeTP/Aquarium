@@ -27,10 +27,11 @@ public class AiDirectorController : MonoBehaviour
 
     private void Start() {
         InputSystemManager.Inst.onPressMove += (b) => isPlayerMove = b;
-        createDirector = StartCoroutine(CreateDirectorAI());
+        
+        StartCoroutine(CreateDirectorAI());
     }
 
-    IEnumerator CreateDirectorAI()
+    public IEnumerator CreateDirectorAI()
     {
         yield return new WaitUntil(() => isPlayerMove);
 
@@ -39,13 +40,7 @@ public class AiDirectorController : MonoBehaviour
             var rand = Random.Range(0,100);
             if(rand >= 70)
             {
-                var aiPrefab = Instantiate(directorPrefab,spawnPosition.position,Quaternion.identity);
-                directorController = aiPrefab.GetComponent<StateController>();
-
-                if(nightGlobalVolume.profile.TryGet<ColorAdjustments>(out var colorAdj))
-                {
-                    colorAdj.active = true;
-                }
+                UITransition.inst.DirectorTransitionIn();
             }
         }
 
@@ -53,6 +48,17 @@ public class AiDirectorController : MonoBehaviour
         {
             yield return new WaitForSeconds(3f);
             StartCoroutine(CreateDirectorAI());
+        }
+    }
+
+    public void CreateDirector()
+    {
+        var aiPrefab = Instantiate(directorPrefab,spawnPosition.position,Quaternion.identity);
+        directorController = aiPrefab.GetComponent<StateController>();
+
+        if(nightGlobalVolume.profile.TryGet<ColorAdjustments>(out var colorAdj))
+        {
+            colorAdj.active = true;
         }
     }
 
@@ -70,6 +76,14 @@ public class AiDirectorController : MonoBehaviour
 
            StartCoroutine(CreateDirectorAI());
         }
+    }
+
+    public void DirectorTransition()
+    {
+        if (directorController == null)
+            CreateDirector();
+        else
+            DestroyDirectorAI();
     }
 
     public void DestroyWhenEnterDoor()

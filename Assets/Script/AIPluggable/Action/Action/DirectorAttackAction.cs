@@ -8,8 +8,6 @@ namespace PluggableAI
     [CreateAssetMenu(menuName = "PluggableAI/Action/DirectorAttackAction")]
     public class DirectorAttackAction : Action
     {
-        public LayerMask playerLayer;
-        
         public override void Act(StateController controller)
         {
             Attack(controller);
