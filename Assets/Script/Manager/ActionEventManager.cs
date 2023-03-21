@@ -73,6 +73,7 @@ public class ActionEventManager : MonoBehaviour
         //จะปิดไรเพิ่มก็ เพิ่มcodeตรงนี้
     }
 #endregion
+
     public void UpdateSpawnPosition(Transform newSpawnPosition)
     {
         spawnPosition = newSpawnPosition;

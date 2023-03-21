@@ -112,6 +112,15 @@ public class DoorSystem : MonoBehaviour
         triggerDoorEvents.Invoke();
     }
 
+    public void LockDoor()
+    {
+        isLockedDoor = true;
+    }
+    public void UnlockDoor()
+    {
+        isLockedDoor = false;
+    }
+
 
     //Make Callback function
 }

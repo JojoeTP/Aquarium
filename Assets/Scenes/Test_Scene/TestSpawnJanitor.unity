@@ -1504,19 +1504,7 @@ MonoBehaviour:
   startWithDialogueId: Ch_Nowalk_01
   triggerEvents:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1619314585}
-        m_TargetAssemblyTypeName: ActionEventManager, Assembly-CSharp
-        m_MethodName: Test
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   NPCList: []
 --- !u!61 &49739297
 BoxCollider2D:
@@ -1863,7 +1851,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 59329634}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -62.88, y: -0.22000027, z: -10}
+  m_LocalPosition: {x: -25.72, y: 0.069999695, z: -10.537596}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3756,7 +3744,7 @@ Transform:
   - {fileID: 464255395}
   - {fileID: 222871774}
   m_Father: {fileID: 2146067283}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &162748267
 PrefabInstance:
@@ -4120,7 +4108,7 @@ Transform:
   - {fileID: 250431453}
   - {fileID: 1701350789}
   m_Father: {fileID: 572766039}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &178806790
 MonoBehaviour:
@@ -4142,7 +4130,7 @@ MonoBehaviour:
   - {fileID: 1019542263}
   - {fileID: 1476032355}
   nightGlobalVolume: {fileID: 1855359336}
-  spawnAI: 1
+  spawnAI: 0
 --- !u!61 &178806791
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6103,9 +6091,21 @@ MonoBehaviour:
   triggerEvents:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 253976192}
+        m_TargetAssemblyTypeName: TalkWithNPC, Assembly-CSharp
+        m_MethodName: ChangeDialogueId
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Ch0_C05_07
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1619314585}
         m_TargetAssemblyTypeName: ActionEventManager, Assembly-CSharp
-        m_MethodName: Test
+        m_MethodName: UnLockDoor_Ch0_C03_01
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6732,7 +6732,7 @@ Transform:
   - {fileID: 1340679215}
   - {fileID: 1454243564}
   m_Father: {fileID: 2146067283}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &298549205
 GameObject:
@@ -6885,19 +6885,7 @@ MonoBehaviour:
   startWithDialogueId: Ch2_D02_01
   triggerEvents:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1619314585}
-        m_TargetAssemblyTypeName: ActionEventManager, Assembly-CSharp
-        m_MethodName: Test
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   NPCList: []
 --- !u!61 &298884940
 BoxCollider2D:
@@ -7051,7 +7039,7 @@ Transform:
   - {fileID: 1825368142}
   - {fileID: 811230434}
   m_Father: {fileID: 2146067283}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &312485289
 PrefabInstance:
@@ -8386,22 +8374,10 @@ MonoBehaviour:
   isCutScene: 0
   isRunDialogueWhenOverlap: 0
   haveDialogueBg: 0
-  startWithDialogueId: Ch1_D01_01
+  startWithDialogueId: Ch1_door1_01
   triggerEvents:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1619314585}
-        m_TargetAssemblyTypeName: ActionEventManager, Assembly-CSharp
-        m_MethodName: Test
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   NPCList: []
 --- !u!61 &392970617
 BoxCollider2D:
@@ -8576,7 +8552,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 396942255}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -62.88, y: -0.22000027, z: -10}
+  m_LocalPosition: {x: -25.72, y: 0.069999695, z: -10.537596}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -8637,9 +8613,9 @@ MonoBehaviour:
   triggerEvents:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1619314585}
-        m_TargetAssemblyTypeName: ActionEventManager, Assembly-CSharp
-        m_MethodName: Test
+      - m_Target: {fileID: 404632291}
+        m_TargetAssemblyTypeName: TalkWithNPC, Assembly-CSharp
+        m_MethodName: SetActiveFalse
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8756,7 +8732,7 @@ MonoBehaviour:
   triggerDoorEvents:
     m_PersistentCalls:
       m_Calls: []
-  isLockedDoor: 0
+  isLockedDoor: 1
   triggerConditionEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -9259,7 +9235,7 @@ Transform:
   - {fileID: 546429830}
   - {fileID: 95966023}
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &440594463
 GameObject:
@@ -11818,6 +11794,11 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.8186649, y: 6.086808}
   m_EdgeRadius: 0
+--- !u!1 &551151315 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7972374739529186262, guid: b6056be4643cb6c4cb48e0bfbe54b913, type: 3}
+  m_PrefabInstance: {fileID: 5148407883494347136}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &561693524
 GameObject:
   m_ObjectHideFlags: 0
@@ -12110,12 +12091,11 @@ Transform:
   - {fileID: 715501410}
   - {fileID: 1619314584}
   - {fileID: 2773879600212454493}
-  - {fileID: 6907625330247659823}
   - {fileID: 586840491}
   - {fileID: 178806789}
   - {fileID: 823411052}
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &573731139
 GameObject:
@@ -12675,7 +12655,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4863802250013646801, guid: de6bd88b4a1f3b24a8a9aaedb336388c, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4863802250013646801, guid: de6bd88b4a1f3b24a8a9aaedb336388c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -15208,7 +15188,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   connectDoor: {fileID: 1545796407}
-  conditionItem: {fileID: 0}
+  conditionItem: {fileID: 11400000, guid: 9ccc0705f275d0240bf9de4bbefc11a4, type: 2}
   isSpacialDoor: 0
   notForEnemy: 0
   triggerDoorEvents:
@@ -15661,6 +15641,10 @@ PrefabInstance:
       propertyPath: doorTransition
       value: 
       objectReference: {fileID: 1231206785}
+    - target: {fileID: 8370923413638022042, guid: 9f28763c23a64034d8eef2b450623ade, type: 3}
+      propertyPath: transitionScript
+      value: 
+      objectReference: {fileID: 972643828}
     - target: {fileID: 8370923413638022042, guid: 9f28763c23a64034d8eef2b450623ade, type: 3}
       propertyPath: overlayTransition
       value: 
@@ -17178,7 +17162,8 @@ GameObject:
   - component: {fileID: 782536331}
   - component: {fileID: 782536330}
   m_Layer: 9
-  m_Name: Ch1_D03_01
+  m_Name: "Ch1_D03_01 (\u0E2D\u0E2D\u0E01\u0E21\u0E32\u0E04\u0E48\u0E2D\u0E22\u0E40\u0E25\u0E48\u0E19
+    Dialogue)"
   m_TagString: HidingPlace
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17220,9 +17205,9 @@ MonoBehaviour:
   triggerEvents:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1619314585}
-        m_TargetAssemblyTypeName: ActionEventManager, Assembly-CSharp
-        m_MethodName: Test
+      - m_Target: {fileID: 782536330}
+        m_TargetAssemblyTypeName: TalkWithNPC, Assembly-CSharp
+        m_MethodName: SetActiveFalse
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -17936,19 +17921,7 @@ MonoBehaviour:
   startWithDialogueId: Ch3_D01_01
   triggerEvents:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1619314585}
-        m_TargetAssemblyTypeName: ActionEventManager, Assembly-CSharp
-        m_MethodName: Test
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   NPCList: []
 --- !u!61 &811230436
 BoxCollider2D:
@@ -18201,7 +18174,7 @@ MonoBehaviour:
   triggerDoorEvents:
     m_PersistentCalls:
       m_Calls: []
-  isLockedDoor: 0
+  isLockedDoor: 1
   triggerConditionEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -18347,7 +18320,7 @@ Transform:
   - {fileID: 1266944554}
   - {fileID: 447238322}
   m_Father: {fileID: 572766039}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &823411053
 MonoBehaviour:
@@ -18364,7 +18337,7 @@ MonoBehaviour:
   directorPrefab: {fileID: 6450180032453249195, guid: e3f51b7d4d22a764ebe29e93d1c586a7, type: 3}
   respawnPosition: {fileID: 447238322}
   nightGlobalVolume: {fileID: 1855359336}
-  spawnAI: 1
+  spawnAI: 0
   isPlayerMove: 0
 --- !u!1 &827393822
 GameObject:
@@ -19918,23 +19891,35 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1619314585}
         m_TargetAssemblyTypeName: ActionEventManager, Assembly-CSharp
+        m_MethodName: UnLockDoor_Ch1_D01_2_01
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1619314585}
+        m_TargetAssemblyTypeName: ActionEventManager, Assembly-CSharp
         m_MethodName: SpawnSkeleton
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 1654569712}
+          m_ObjectArgument: {fileID: 1403757622}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1619314586}
-        m_TargetAssemblyTypeName: ActionEventManager, Assembly-CSharp
-        m_MethodName: 
+      - m_Target: {fileID: 1394825626}
+        m_TargetAssemblyTypeName: DoorSystem, Assembly-CSharp
+        m_MethodName: LockDoor
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -22068,6 +22053,38 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 5.8883033, y: 5.6403522}
   m_EdgeRadius: 0
+--- !u!1 &953765841
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 953765842}
+  m_Layer: 0
+  m_Name: EventActionContainer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &953765842
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 953765841}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1021774399}
+  m_Father: {fileID: 0}
+  m_RootOrder: 20
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &967039723
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22226,6 +22243,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &972643828 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2347664268754119562, guid: 2916f11d05ed43143896bd1038986891, type: 3}
+  m_PrefabInstance: {fileID: 1231206783}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &976091467
 GameObject:
   m_ObjectHideFlags: 0
@@ -23591,6 +23613,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 250431453}
   m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1021774398
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1021774399}
+  m_Layer: 0
+  m_Name: Ch0_C07_01 _WarpPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 6519382022992737161, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1021774399
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1021774398}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 123.95, y: -24.919998, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 953765842}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1023943168
 GameObject:
@@ -26344,7 +26397,7 @@ RectTransform:
   m_Children:
   - {fileID: 599663261}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -26623,22 +26676,10 @@ MonoBehaviour:
   isCutScene: 0
   isRunDialogueWhenOverlap: 0
   haveDialogueBg: 0
-  startWithDialogueId: Ch1_D01_01
+  startWithDialogueId: Ch1_door1_01
   triggerEvents:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1619314585}
-        m_TargetAssemblyTypeName: ActionEventManager, Assembly-CSharp
-        m_MethodName: Test
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   NPCList: []
 --- !u!61 &1162392905
 BoxCollider2D:
@@ -27100,6 +27141,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1178796766 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7972374739529186262, guid: b6056be4643cb6c4cb48e0bfbe54b913, type: 3}
+  m_PrefabInstance: {fileID: 584577038}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1184263630
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27186,6 +27232,10 @@ PrefabInstance:
     - target: {fileID: 5299014386308253458, guid: b7260303ed58712428593c5c759fb8a2, type: 3}
       propertyPath: m_Name
       value: bench_blood (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5299014386308253458, guid: b7260303ed58712428593c5c759fb8a2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b7260303ed58712428593c5c759fb8a2, type: 3}
@@ -27887,9 +27937,9 @@ MonoBehaviour:
   triggerEvents:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1619314585}
-        m_TargetAssemblyTypeName: ActionEventManager, Assembly-CSharp
-        m_MethodName: Test
+      - m_Target: {fileID: 1216950126}
+        m_TargetAssemblyTypeName: TalkWithNPC, Assembly-CSharp
+        m_MethodName: SetActiveFalse
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -28212,7 +28262,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2347664267870117880, guid: 2916f11d05ed43143896bd1038986891, type: 3}
       propertyPath: m_RootOrder
-      value: 14
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 2347664267870117880, guid: 2916f11d05ed43143896bd1038986891, type: 3}
       propertyPath: m_AnchorMax.x
@@ -28298,7 +28348,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4519214535877325464, guid: 2916f11d05ed43143896bd1038986891, type: 3}
   m_PrefabInstance: {fileID: 1231206783}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 972643828}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5ca46c86faa047c40b8fd3fce98a4780, type: 3}
@@ -29018,9 +29068,9 @@ MonoBehaviour:
   triggerEvents:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1619314585}
-        m_TargetAssemblyTypeName: ActionEventManager, Assembly-CSharp
-        m_MethodName: Test
+      - m_Target: {fileID: 1267919116}
+        m_TargetAssemblyTypeName: TalkWithNPC, Assembly-CSharp
+        m_MethodName: SetActiveFalse
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -30295,12 +30345,12 @@ GameObject:
   - component: {fileID: 1340679217}
   - component: {fileID: 1340679216}
   m_Layer: 0
-  m_Name: Ch4_D07_01
+  m_Name: Ch4_D07_01 (Show_After_getitem_Book)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1340679215
 Transform:
   m_ObjectHideFlags: 0
@@ -32102,6 +32152,37 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 5.8883033, y: 5.6403522}
   m_EdgeRadius: 0
+--- !u!1 &1403757621
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1403757622}
+  m_Layer: 0
+  m_Name: SpawnSkeletonPosition
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1403757622
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1403757621}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -63.88, y: -4.82, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 33
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1403810687
 GameObject:
   m_ObjectHideFlags: 0
@@ -32544,7 +32625,6 @@ GameObject:
   - component: {fileID: 1413032865}
   - component: {fileID: 1413032867}
   - component: {fileID: 1413032866}
-  - component: {fileID: 1413032868}
   - component: {fileID: 1413032869}
   m_Layer: 0
   m_Name: Ch0_C10_01
@@ -32588,19 +32668,7 @@ MonoBehaviour:
   startWithDialogueId: Ch0_C10_01
   triggerEvents:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1619314585}
-        m_TargetAssemblyTypeName: ActionEventManager, Assembly-CSharp
-        m_MethodName: Test
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   NPCList: []
 --- !u!61 &1413032867
 BoxCollider2D:
@@ -32628,19 +32696,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 6.6314697, y: 6.9238358}
   m_EdgeRadius: 0
---- !u!114 &1413032868
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1413032864}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 69facd572376b2741bc7dde45848d83c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  keyImage: {fileID: 0}
 --- !u!114 &1413032869
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33043,9 +33098,9 @@ MonoBehaviour:
   triggerEvents:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1619314585}
-        m_TargetAssemblyTypeName: ActionEventManager, Assembly-CSharp
-        m_MethodName: Test
+      - m_Target: {fileID: 1433535035}
+        m_TargetAssemblyTypeName: TalkWithNPC, Assembly-CSharp
+        m_MethodName: SetActiveFalse
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -34045,19 +34100,7 @@ MonoBehaviour:
   startWithDialogueId: Ch3_D01_01
   triggerEvents:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1619314585}
-        m_TargetAssemblyTypeName: ActionEventManager, Assembly-CSharp
-        m_MethodName: Test
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   NPCList: []
 --- !u!61 &1506671318
 BoxCollider2D:
@@ -34411,19 +34454,7 @@ MonoBehaviour:
   startWithDialogueId: Ch3_D01_01
   triggerEvents:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1619314585}
-        m_TargetAssemblyTypeName: ActionEventManager, Assembly-CSharp
-        m_MethodName: Test
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   NPCList: []
 --- !u!61 &1524209054
 BoxCollider2D:
@@ -35737,19 +35768,7 @@ MonoBehaviour:
   startWithDialogueId: Ch0_C09_01
   triggerEvents:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1619314585}
-        m_TargetAssemblyTypeName: ActionEventManager, Assembly-CSharp
-        m_MethodName: Test
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   NPCList: []
 --- !u!61 &1583558500
 BoxCollider2D:
@@ -36367,17 +36386,89 @@ PrefabInstance:
       value: ActionEventManager
       objectReference: {fileID: 0}
     - target: {fileID: 4966732993388418438, guid: 1b3dcc0b488f4414c991160dad5fe269, type: 3}
-      propertyPath: labyrinthMap
+      propertyPath: Ch1_D11_01
       value: 
-      objectReference: {fileID: 4695122923223474138}
+      objectReference: {fileID: 1216950126}
     - target: {fileID: 4966732993388418438, guid: 1b3dcc0b488f4414c991160dad5fe269, type: 3}
-      propertyPath: dark_LabyrinthSprite
+      propertyPath: Wall_Aquarium
       value: 
-      objectReference: {fileID: 21300000, guid: 30bb2e87bee3e6149b43ef11e2f45a74, type: 3}
+      objectReference: {fileID: 2110251189}
+    - target: {fileID: 4966732993388418438, guid: 1b3dcc0b488f4414c991160dad5fe269, type: 3}
+      propertyPath: Wall_Cafeteria
+      value: 
+      objectReference: {fileID: 551151315}
+    - target: {fileID: 4966732993388418438, guid: 1b3dcc0b488f4414c991160dad5fe269, type: 3}
+      propertyPath: Wall_Labyrinth
+      value: 
+      objectReference: {fileID: 1178796766}
+    - target: {fileID: 4966732993388418438, guid: 1b3dcc0b488f4414c991160dad5fe269, type: 3}
+      propertyPath: skeletonPrefab
+      value: 
+      objectReference: {fileID: 6450180032453249195, guid: 9d8123211b7c15e459aa04a90c74a12f, type: 3}
     - target: {fileID: 4966732993388418438, guid: 1b3dcc0b488f4414c991160dad5fe269, type: 3}
       propertyPath: labyrinthENDSpriteRenderer
       value: 
       objectReference: {fileID: 4695122923223474138}
+    - target: {fileID: 4966732993388418438, guid: 1b3dcc0b488f4414c991160dad5fe269, type: 3}
+      propertyPath: labyrinthENDHideDialogue.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4966732993388418438, guid: 1b3dcc0b488f4414c991160dad5fe269, type: 3}
+      propertyPath: labyrinthENDShowDialogue.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4966732993388418438, guid: 1b3dcc0b488f4414c991160dad5fe269, type: 3}
+      propertyPath: labyrinthENDHideDialogue.Array.data[0]
+      value: 
+      objectReference: {fileID: 298884939}
+    - target: {fileID: 4966732993388418438, guid: 1b3dcc0b488f4414c991160dad5fe269, type: 3}
+      propertyPath: labyrinthENDShowDialogue.Array.data[0]
+      value: 
+      objectReference: {fileID: 464255396}
+    - target: {fileID: 4966732993388418438, guid: 1b3dcc0b488f4414c991160dad5fe269, type: 3}
+      propertyPath: labyrinthENDShowDialogue.Array.data[1]
+      value: 
+      objectReference: {fileID: 222871776}
+    - target: {fileID: 4966732993388418438, guid: 1b3dcc0b488f4414c991160dad5fe269, type: 3}
+      propertyPath: Ch1_D01_2_01_Config.lockDoor.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4966732993388418438, guid: 1b3dcc0b488f4414c991160dad5fe269, type: 3}
+      propertyPath: Ch0_C03_01_Config.lockDoor.Array.data[0]
+      value: 
+      objectReference: {fileID: 1939489497}
+    - target: {fileID: 4966732993388418438, guid: 1b3dcc0b488f4414c991160dad5fe269, type: 3}
+      propertyPath: Ch1_D01_2_01_Config.lockDoor.Array.data[0]
+      value: 
+      objectReference: {fileID: 819383246}
+    - target: {fileID: 4966732993388418438, guid: 1b3dcc0b488f4414c991160dad5fe269, type: 3}
+      propertyPath: Ch1_D01_2_01_Config.lockDoor.Array.data[1]
+      value: 
+      objectReference: {fileID: 406672624}
+    - target: {fileID: 4966732993388418438, guid: 1b3dcc0b488f4414c991160dad5fe269, type: 3}
+      propertyPath: Ch1_D01_2_01_Config.lockDoor.Array.data[2]
+      value: 
+      objectReference: {fileID: 1900784741}
+    - target: {fileID: 4966732993388418438, guid: 1b3dcc0b488f4414c991160dad5fe269, type: 3}
+      propertyPath: Ch1_D01_2_01_Config.lockDoorDialogue.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4966732993388418438, guid: 1b3dcc0b488f4414c991160dad5fe269, type: 3}
+      propertyPath: Ch0_C03_01_Config.lockDoorDialogue.Array.data[0]
+      value: 
+      objectReference: {fileID: 49739296}
+    - target: {fileID: 4966732993388418438, guid: 1b3dcc0b488f4414c991160dad5fe269, type: 3}
+      propertyPath: Ch1_D01_2_01_Config.lockDoorDialogue.Array.data[0]
+      value: 
+      objectReference: {fileID: 392970616}
+    - target: {fileID: 4966732993388418438, guid: 1b3dcc0b488f4414c991160dad5fe269, type: 3}
+      propertyPath: Ch1_D01_2_01_Config.lockDoorDialogue.Array.data[1]
+      value: 
+      objectReference: {fileID: 2006100958}
+    - target: {fileID: 4966732993388418438, guid: 1b3dcc0b488f4414c991160dad5fe269, type: 3}
+      propertyPath: Ch1_D01_2_01_Config.lockDoorDialogue.Array.data[2]
+      value: 
+      objectReference: {fileID: 1162392904}
     - target: {fileID: 4966732993388418439, guid: 1b3dcc0b488f4414c991160dad5fe269, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -36434,17 +36525,12 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4966732993388418438, guid: 1b3dcc0b488f4414c991160dad5fe269, type: 3}
   m_PrefabInstance: {fileID: 1619314583}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1619314586}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 589d5b78e0c90e74988a93bb8fdeb838, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1619314586 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4966732993388418432, guid: 1b3dcc0b488f4414c991160dad5fe269, type: 3}
-  m_PrefabInstance: {fileID: 1619314583}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1627760039
 GameObject:
   m_ObjectHideFlags: 0
@@ -36970,37 +37056,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &1654569711
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1654569712}
-  m_Layer: 0
-  m_Name: SkeletonSpawnPosition
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1654569712
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1654569711}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -68.68, y: -4.24, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2146067283}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1662970675
 GameObject:
   m_ObjectHideFlags: 0
@@ -37030,7 +37085,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1670765974
 GameObject:
@@ -37511,7 +37566,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1712265709
 PrefabInstance:
@@ -38098,19 +38153,7 @@ MonoBehaviour:
   startWithDialogueId: Ch3_D02_01
   triggerEvents:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1619314585}
-        m_TargetAssemblyTypeName: ActionEventManager, Assembly-CSharp
-        m_MethodName: Test
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   NPCList: []
 --- !u!61 &1735966506
 BoxCollider2D:
@@ -39811,7 +39854,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1796494296
 GameObject:
@@ -40516,19 +40559,7 @@ MonoBehaviour:
   startWithDialogueId: Ch3_D04_01
   triggerEvents:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1619314585}
-        m_TargetAssemblyTypeName: ActionEventManager, Assembly-CSharp
-        m_MethodName: Test
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   NPCList: []
 --- !u!61 &1825368144
 BoxCollider2D:
@@ -40840,19 +40871,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1829112646365129883, guid: fd10c98f2285a10469886c1df78c26e8, type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1829112646365129883, guid: fd10c98f2285a10469886c1df78c26e8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -62.88
+      value: -25.72
       objectReference: {fileID: 0}
     - target: {fileID: 1829112646365129883, guid: fd10c98f2285a10469886c1df78c26e8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.38
+      value: -4.09
       objectReference: {fileID: 0}
     - target: {fileID: 1829112646365129883, guid: fd10c98f2285a10469886c1df78c26e8, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.5375962
       objectReference: {fileID: 0}
     - target: {fileID: 1829112646365129883, guid: fd10c98f2285a10469886c1df78c26e8, type: 3}
       propertyPath: m_LocalRotation.w
@@ -41496,7 +41527,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &1855359338
 BoxCollider:
@@ -42608,7 +42639,7 @@ MonoBehaviour:
   triggerDoorEvents:
     m_PersistentCalls:
       m_Calls: []
-  isLockedDoor: 0
+  isLockedDoor: 1
   triggerConditionEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -42997,7 +43028,7 @@ Transform:
   - {fileID: 240460556}
   - {fileID: 1126533219}
   m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1920884306
 PrefabInstance:
@@ -43224,7 +43255,7 @@ MonoBehaviour:
   triggerDoorEvents:
     m_PersistentCalls:
       m_Calls: []
-  isLockedDoor: 0
+  isLockedDoor: 1
   triggerConditionEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -43840,7 +43871,7 @@ MonoBehaviour:
   connectDoor: {fileID: 373165557}
   conditionItem: {fileID: 0}
   isSpacialDoor: 0
-  notForEnemy: 0
+  notForEnemy: 1
   triggerDoorEvents:
     m_PersistentCalls:
       m_Calls: []
@@ -44367,22 +44398,10 @@ MonoBehaviour:
   isCutScene: 0
   isRunDialogueWhenOverlap: 0
   haveDialogueBg: 0
-  startWithDialogueId: Ch1_D01_01
+  startWithDialogueId: Ch1_door1_01
   triggerEvents:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1619314585}
-        m_TargetAssemblyTypeName: ActionEventManager, Assembly-CSharp
-        m_MethodName: Test
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   NPCList: []
 --- !u!61 &2006100959
 BoxCollider2D:
@@ -44557,7 +44576,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1231206787, guid: 2916f11d05ed43143896bd1038986891, type: 3}
   m_PrefabInstance: {fileID: 1231206783}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 972643828}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f0699a13f1604f543af43f3e6d61fa72, type: 3}
@@ -44568,7 +44587,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7707990979316523223, guid: 2916f11d05ed43143896bd1038986891, type: 3}
   m_PrefabInstance: {fileID: 1231206783}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 972643828}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c728793024055ee4fab86f1c1c05374e, type: 3}
@@ -45197,11 +45216,11 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1619314585}
         m_TargetAssemblyTypeName: ActionEventManager, Assembly-CSharp
-        m_MethodName: Test
-        m_Mode: 1
+        m_MethodName: WarpToPosition
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 1021774399}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -45297,7 +45316,7 @@ MonoBehaviour:
   connectDoor: {fileID: 878667437}
   conditionItem: {fileID: 11400000, guid: 542bc647a6c7ba94580a44987f8685e5, type: 2}
   isSpacialDoor: 0
-  notForEnemy: 1
+  notForEnemy: 0
   triggerDoorEvents:
     m_PersistentCalls:
       m_Calls: []
@@ -46279,6 +46298,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &2110251189 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7972374739529186262, guid: b6056be4643cb6c4cb48e0bfbe54b913, type: 3}
+  m_PrefabInstance: {fileID: 1341026166}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2118471160
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -47796,7 +47820,6 @@ Transform:
   m_Children:
   - {fileID: 744111349}
   - {fileID: 2093179448}
-  - {fileID: 1654569712}
   - {fileID: 158624549}
   - {fileID: 309875256}
   - {fileID: 297376245}
@@ -48330,67 +48353,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d4f8c402ddb9d64e9d2d2dd67936501, type: 3}
---- !u!1001 &4352066859430316430
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4261554499911693211, guid: 1c78d18dba1098a46a6b561a0587f2a6, type: 3}
-      propertyPath: m_Name
-      value: AI_Skeleton
-      objectReference: {fileID: 0}
-    - target: {fileID: 4261554499911693211, guid: 1c78d18dba1098a46a6b561a0587f2a6, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6669698822064037087, guid: 1c78d18dba1098a46a6b561a0587f2a6, type: 3}
-      propertyPath: m_RootOrder
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 6669698822064037087, guid: 1c78d18dba1098a46a6b561a0587f2a6, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 9.08
-      objectReference: {fileID: 0}
-    - target: {fileID: 6669698822064037087, guid: 1c78d18dba1098a46a6b561a0587f2a6, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -4.19
-      objectReference: {fileID: 0}
-    - target: {fileID: 6669698822064037087, guid: 1c78d18dba1098a46a6b561a0587f2a6, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6669698822064037087, guid: 1c78d18dba1098a46a6b561a0587f2a6, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6669698822064037087, guid: 1c78d18dba1098a46a6b561a0587f2a6, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6669698822064037087, guid: 1c78d18dba1098a46a6b561a0587f2a6, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6669698822064037087, guid: 1c78d18dba1098a46a6b561a0587f2a6, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6669698822064037087, guid: 1c78d18dba1098a46a6b561a0587f2a6, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6669698822064037087, guid: 1c78d18dba1098a46a6b561a0587f2a6, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6669698822064037087, guid: 1c78d18dba1098a46a6b561a0587f2a6, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 1c78d18dba1098a46a6b561a0587f2a6, type: 3}
 --- !u!212 &4695122922252820852
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -50526,72 +50488,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d2fc8e7d6cd8b4c4694f7fe474ab5dc4, type: 3}
---- !u!1001 &6907625330247659822
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 572766039}
-    m_Modifications:
-    - target: {fileID: 1565275359646203610, guid: ff6b9fd5aa9386d49933aef0e73412d4, type: 3}
-      propertyPath: m_RootOrder
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 1565275359646203610, guid: ff6b9fd5aa9386d49933aef0e73412d4, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1565275359646203610, guid: ff6b9fd5aa9386d49933aef0e73412d4, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1565275359646203610, guid: ff6b9fd5aa9386d49933aef0e73412d4, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1565275359646203610, guid: ff6b9fd5aa9386d49933aef0e73412d4, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1565275359646203610, guid: ff6b9fd5aa9386d49933aef0e73412d4, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1565275359646203610, guid: ff6b9fd5aa9386d49933aef0e73412d4, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1565275359646203610, guid: ff6b9fd5aa9386d49933aef0e73412d4, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1565275359646203610, guid: ff6b9fd5aa9386d49933aef0e73412d4, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1565275359646203610, guid: ff6b9fd5aa9386d49933aef0e73412d4, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1565275359646203610, guid: ff6b9fd5aa9386d49933aef0e73412d4, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5663252589501328157, guid: ff6b9fd5aa9386d49933aef0e73412d4, type: 3}
-      propertyPath: MazeMaterial
-      value: 
-      objectReference: {fileID: 2100000, guid: d4021893765453b41a958fd15264900f, type: 2}
-    - target: {fileID: 5772695068636171896, guid: ff6b9fd5aa9386d49933aef0e73412d4, type: 3}
-      propertyPath: m_Name
-      value: ShaderManager
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: ff6b9fd5aa9386d49933aef0e73412d4, type: 3}
---- !u!4 &6907625330247659823 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1565275359646203610, guid: ff6b9fd5aa9386d49933aef0e73412d4, type: 3}
-  m_PrefabInstance: {fileID: 6907625330247659822}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &9143542780859832211
 PrefabInstance:
   m_ObjectHideFlags: 0
