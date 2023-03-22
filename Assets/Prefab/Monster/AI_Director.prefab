@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6450180032453249197}
   - component: {fileID: 6450180032453249192}
   m_Layer: 7
-  m_Name: Director
+  m_Name: AI_Director
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

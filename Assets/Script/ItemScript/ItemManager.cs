@@ -111,6 +111,7 @@ public class ItemManager : MonoBehaviour
                     {
                         DialogueManager.inst.currentDialogue = item.itemObject.itemData.dialogueItemId;
                         DialogueManager.inst.StartDialogue();
+                        ActionEventManager.inst.UnLockDoor_Ch1_D04_01();
                     }
                 );
                 break;
@@ -119,6 +120,7 @@ public class ItemManager : MonoBehaviour
                     {
                         DialogueManager.inst.currentDialogue = item.itemObject.itemData.dialogueItemId;
                         DialogueManager.inst.StartDialogue();
+                        ActionEventManager.inst.ChangeDialogueCh1_D06_01();
                     }
                 );
                 break;
