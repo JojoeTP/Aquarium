@@ -5,14 +5,14 @@ using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
 
-public class AiDirectorController : MonoBehaviour
+public class AiJunitorController : MonoBehaviour
 {
-    public static AiDirectorController inst;
-    [SerializeField] GameObject directorPrefab;
+    public static AiJunitorController inst;
+    [SerializeField] GameObject junitorPrefab;
     [SerializeField] Transform respawnPosition;
     Transform spawnPosition;
     [HideInInspector]
-    public StateController directorController;
+    public StateController junitorController;
 
     [SerializeField] Volume nightGlobalVolume;
     
@@ -28,33 +28,34 @@ public class AiDirectorController : MonoBehaviour
     private void Start() {
         InputSystemManager.Inst.onPressMove += (b) => isPlayerMove = b;
         
-        StartCoroutine(CreateDirectorAI());
+        StartCoroutine(CreateJunitorAI());
     }
 
-    public IEnumerator CreateDirectorAI()
+    public IEnumerator CreateJunitorAI()
     {
         yield return new WaitUntil(() => isPlayerMove);
 
-        if(spawnAI && spawnPosition != null && directorController == null)
+        if(spawnAI && spawnPosition != null && junitorController == null)
         {
             var rand = Random.Range(0,100);
             if(rand >= 0)
             {
-                UITransition.inst.DirectorTransitionIn();
+                // UITransition.inst.JunitorTransitionIn();
+                CreateJunitor();
             }
         }
 
-        if(directorController == null)
+        if(junitorController == null)
         {
             yield return new WaitForSeconds(3f);
-            StartCoroutine(CreateDirectorAI());
+            StartCoroutine(CreateJunitorAI());
         }
     }
 
-    public void CreateDirector()
+    public void CreateJunitor()
     {
-        var aiPrefab = Instantiate(directorPrefab,spawnPosition.position,Quaternion.identity);
-        directorController = aiPrefab.GetComponent<StateController>();
+        var aiPrefab = Instantiate(junitorPrefab,spawnPosition.position,Quaternion.identity);
+        junitorController = aiPrefab.GetComponent<StateController>();
 
         if(nightGlobalVolume.profile.TryGet<ColorAdjustments>(out var colorAdj))
         {
@@ -62,33 +63,33 @@ public class AiDirectorController : MonoBehaviour
         }
     }
 
-    public void DestroyDirectorAI()
+    public void DestroyJunitorAI()
     {
-        if (directorController != null)
+        if (junitorController != null)
         {
-            Destroy(directorController.gameObject);
-            directorController = null;
+            Destroy(junitorController.gameObject);
+            junitorController = null;
             
             if(nightGlobalVolume.profile.TryGet<ColorAdjustments>(out var colorAdj))
            {
                 colorAdj.active = false;
            }
 
-           StartCoroutine(CreateDirectorAI());
+           StartCoroutine(CreateJunitorAI());
         }
     }
 
-    public void DirectorTransition()
+    public void JunitorTransition()
     {
-        if (directorController == null)
-            CreateDirector();
+        if (junitorController == null)
+            CreateJunitor();
         else
-            DestroyDirectorAI();
+            DestroyJunitorAI();
     }
 
     public void DestroyWhenEnterDoor()
     {
-        DestroyDirectorAI();
+        DestroyJunitorAI();
     }
 
     public void OnAttackPlayer()
@@ -98,10 +99,15 @@ public class AiDirectorController : MonoBehaviour
 
     public void RespawnPlayer()
     {
-        if(directorController == null)
+        if(junitorController == null)
             return;
 
-        DestroyDirectorAI();
+        DestroyJunitorAI();
         PlayerManager.inst.transform.position = respawnPosition.position;
+    }
+
+    public void SetActiveAI(bool isActive)
+    {
+        junitorController.enabled = isActive;
     }
 }

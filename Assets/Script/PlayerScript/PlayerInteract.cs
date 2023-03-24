@@ -197,7 +197,7 @@ public class PlayerInteract : MonoBehaviour
         if(PlayerManager.inst.playerState == PlayerManager.PLAYERSTATE.NONE)
         {
             PlayerManager.inst.playerSprite.SetActive(false);
-            GetComponent<Collider2D>().enabled = false;
+            // GetComponent<Collider2D>().enabled = false;
             PlayerManager.inst.playerState = PlayerManager.PLAYERSTATE.HIDING;
             hidingSpot.OnHidingEvent();
         }

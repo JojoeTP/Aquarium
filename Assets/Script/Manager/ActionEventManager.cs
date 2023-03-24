@@ -48,8 +48,6 @@ public class ActionEventManager : MonoBehaviour
     [SerializeField] ItemScriptableObject VIPRoom;
 
     [HideInInspector]
-    public StateController skeleton; //ภาโรง
-    [HideInInspector]
     public StateController sister;
     
 
@@ -75,7 +73,7 @@ public class ActionEventManager : MonoBehaviour
         SetActiveFalse_Wall_Labyrinth();
 
         labyrinthENDSpriteRenderer.sprite = dark_LabyrinthSprite;
-        SoundManager.Inst.MuteBGM(); //ปิด BGM
+        SoundManager.Inst.MuteBGM();
         //จะปิดไรเพิ่มก็ เพิ่มcodeตรงนี้
     }
 #endregion
@@ -91,13 +89,14 @@ public class ActionEventManager : MonoBehaviour
 
     public void SpawnSkeleton(Transform newSpawnPosition)
     {
-        UpdateSpawnPosition(newSpawnPosition);
-        skeleton = SpawnEnemy(skeletonPrefab);
+        AiJunitorController.inst.SpawnPosition = newSpawnPosition;
+        AiJunitorController.inst.CreateJunitor();
+        AiJunitorController.inst.spawnAI = true;
     }
 
     public void EnableAISkeleton(bool value)
     {
-        skeleton.enabled = value;
+        AiJunitorController.inst.SetActiveAI(value);
     }
 
     public void SpawnSister(bool isSpawn , float delayBeforeSpawn)
@@ -148,7 +147,6 @@ public class ActionEventManager : MonoBehaviour
     public void ContinuePlayBGM()
     {
         SoundManager.Inst.ContinuePlayBGM();
-        //เพิ่มตรงนี้ให้เล่นต่อ
     }
 
     void UnlockDoor(LockDoorConfig lockDoorConfig)
