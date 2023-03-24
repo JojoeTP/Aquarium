@@ -954,6 +954,22 @@ PrefabInstance:
       propertyPath: loadingUI
       value: 
       objectReference: {fileID: 1189675230}
+    - target: {fileID: 4975748374617660759, guid: 75d12d3ca6cc58a489ed2ac5fc9aa1e0, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4975748374617660759, guid: 75d12d3ca6cc58a489ed2ac5fc9aa1e0, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4975748374617660759, guid: 75d12d3ca6cc58a489ed2ac5fc9aa1e0, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4975748374617660759, guid: 75d12d3ca6cc58a489ed2ac5fc9aa1e0, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6419139238054755017, guid: 75d12d3ca6cc58a489ed2ac5fc9aa1e0, type: 3}
       propertyPath: m_Name
       value: MainMenuController
@@ -1040,6 +1056,30 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6419139238054755021, guid: 75d12d3ca6cc58a489ed2ac5fc9aa1e0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6419139238259718251, guid: 75d12d3ca6cc58a489ed2ac5fc9aa1e0, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6419139238259718251, guid: 75d12d3ca6cc58a489ed2ac5fc9aa1e0, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6419139240018098257, guid: 75d12d3ca6cc58a489ed2ac5fc9aa1e0, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6419139240018098257, guid: 75d12d3ca6cc58a489ed2ac5fc9aa1e0, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6463459234672658753, guid: 75d12d3ca6cc58a489ed2ac5fc9aa1e0, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6463459234672658753, guid: 75d12d3ca6cc58a489ed2ac5fc9aa1e0, type: 3}
+      propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
