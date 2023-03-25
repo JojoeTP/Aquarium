@@ -38,10 +38,17 @@ public class PlayerInteract : MonoBehaviour
     {
         foreach(var n in Physics2D.OverlapCapsuleAll(transform.position+InteractOffset,InteractSize,CapsuleDirection2D.Vertical,0))
         {
+            if(TalkWithNPC(n.transform))
+            {
+                n.GetComponent<TalkWithNPC>().SetDialogueID();
+                StartDialogue(n.GetComponent<TalkWithNPC>());
+                return;
+            }
             if(CanHiding(n.transform))
             {
                 ToggleHiding(n.GetComponent<HidingSpot>());
                 n.GetComponent<HidingSpot>().ChangeSprite();
+                return;
             }
 
             if(CanEnterDoor(n.transform))
@@ -49,22 +56,20 @@ public class PlayerInteract : MonoBehaviour
                 enteringDoor = n.GetComponent<DoorSystem>();
                 if(!enteringDoor.isLockedDoor)
                     EnterDoor();
+                return;
             }
 
-            if(TalkWithNPC(n.transform))
-            {
-                n.GetComponent<TalkWithNPC>().SetDialogueID();
-                StartDialogue(n.GetComponent<TalkWithNPC>());
-            }
                 
             if(CanGetItem(n.transform))
             {
                 GetItem(n.GetComponent<Item>());
+                return;
             }
 
             if (CanEnterLift(n.transform))
             {
                 ShowSelectionFloor(n.GetComponent<Lift>());
+                return;
             }
         }
     }
