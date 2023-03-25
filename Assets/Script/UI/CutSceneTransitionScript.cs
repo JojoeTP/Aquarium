@@ -5,7 +5,13 @@ using UnityEngine;
 public class CutSceneTransitionScript : MonoBehaviour
 {
     Animator animator;
+    TalkWithNPC talkWithNPC;
+    public static CutSceneTransitionScript inst;
 
+    private void Awake()
+    {
+        inst = this;
+    }
     private void Start()
     {
         animator = GetComponent<Animator>();
@@ -18,8 +24,19 @@ public class CutSceneTransitionScript : MonoBehaviour
 
     public void CutSceneTransitionOut()
     {
-        //animator.SetTrigger("CutSceneTransitionOut");
-        PlayerManager.inst.PlayerInteract.Interacting();
+        animator.SetTrigger("CutSceneTransitionOut");
+        if (talkWithNPC == null && getData == true)
+        {
+            PlayerManager.inst.PlayerInteract.StartDialogue(talkWithNPC);
+            getData = false;
+        }
+        //PlayerManager.inst.PlayerInteract.Interacting();
+    }
+    bool getData;
+    public void GetTalkWithNPC(TalkWithNPC talkWithNPCData , bool getBool)
+    {
+        talkWithNPC = talkWithNPCData;
+        getData = getBool;
     }
 
     public void CloseContinueButtonInteract()
@@ -31,4 +48,5 @@ public class CutSceneTransitionScript : MonoBehaviour
     {
         DialogueManager.inst.dialoguePanel.ContinueButton.interactable = true;
     }
+
 }
