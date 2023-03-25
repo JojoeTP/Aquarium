@@ -51,23 +51,27 @@ public class SceneController : MonoBehaviour
 
             yield return null;
         }
-        
+
         yield return null;
 
         var loadedScene = SceneManager.GetSceneByName(sceneName);
-        
+
         if(loadedScene.isLoaded)
         {
             SceneManager.SetActiveScene(loadedScene);
         }
 
-
         if(loadedSceneBefore.IsValid())
            SceneManager.UnloadSceneAsync(loadedSceneBefore);
 
         loadedSceneBefore = loadedScene;
-
+        
         yield return null;
+
         afterSwitchScene?.Invoke();
+
+        yield return new WaitUntil(() => GameplaySceneLoaded);
+
+        ActionEventManager.inst.SetActiveDialogueCh0_C01_01();
     }
 }

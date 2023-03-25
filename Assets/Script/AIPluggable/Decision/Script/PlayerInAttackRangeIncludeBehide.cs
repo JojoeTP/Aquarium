@@ -17,7 +17,7 @@ namespace PluggableAI
 
         bool IsPlayerInVision(StateController controller)
         {
-            if(controller.IsPlayerInRangeIncludeBehide(controller.attackRange))
+            if(controller.IsPlayerInRangeIncludeBehide(controller.chasingRange))
                 return true;
             else
                 return false;

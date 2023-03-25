@@ -5,14 +5,15 @@ using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
 
-public class AiDirectorController : MonoBehaviour
+public class AiRedHoodController : MonoBehaviour
 {
-    public static AiDirectorController inst;
-    [SerializeField] GameObject directorPrefab;
+    public static AiRedHoodController inst;
+    [SerializeField] GameObject redHoodPrefab;
     [SerializeField] Transform respawnPosition;
     Transform spawnPosition;
+
     [HideInInspector]
-    public StateController directorController;
+    public StateController redHoodController;
 
     [SerializeField] Volume nightGlobalVolume;
     
@@ -28,33 +29,34 @@ public class AiDirectorController : MonoBehaviour
     private void Start() {
         InputSystemManager.Inst.onPressMove += (b) => isPlayerMove = b;
         
-        StartCoroutine(CreateDirectorAI());
+        StartCoroutine(CreateRedHoodAI());
     }
 
-    public IEnumerator CreateDirectorAI()
+    public IEnumerator CreateRedHoodAI()
     {
         yield return new WaitUntil(() => isPlayerMove);
 
-        if(spawnAI && spawnPosition != null && directorController == null)
+        if(spawnAI && spawnPosition != null && redHoodController == null)
         {
             var rand = Random.Range(0,100);
-            if(rand >= 0)
+            if(rand >= 70)
             {
-                UITransition.inst.DirectorTransitionIn();
+                // UITransition.inst.RedHoodTransitionIn();
+                CreateRedHood();
             }
         }
 
-        if(directorController == null)
+        if(redHoodController == null)
         {
             yield return new WaitForSeconds(3f);
-            StartCoroutine(CreateDirectorAI());
+            StartCoroutine(CreateRedHoodAI());
         }
     }
 
-    public void CreateDirector()
+    public void CreateRedHood()
     {
-        var aiPrefab = Instantiate(directorPrefab,spawnPosition.position,Quaternion.identity);
-        directorController = aiPrefab.GetComponent<StateController>();
+        var aiPrefab = Instantiate(redHoodPrefab,spawnPosition.position,Quaternion.identity);
+        redHoodController = aiPrefab.GetComponent<StateController>();
 
         if(nightGlobalVolume.profile.TryGet<ColorAdjustments>(out var colorAdj))
         {
@@ -62,33 +64,33 @@ public class AiDirectorController : MonoBehaviour
         }
     }
 
-    public void DestroyDirectorAI()
+    public void DestroyRedHoodAI()
     {
-        if (directorController != null)
+        if (redHoodController != null)
         {
-            Destroy(directorController.gameObject);
-            directorController = null;
+            Destroy(redHoodController.gameObject);
+            redHoodController = null;
             
             if(nightGlobalVolume.profile.TryGet<ColorAdjustments>(out var colorAdj))
            {
                 colorAdj.active = false;
            }
 
-           StartCoroutine(CreateDirectorAI());
+           StartCoroutine(CreateRedHoodAI());
         }
     }
 
-    public void DirectorTransition()
+    public void RedHoodTransition()
     {
-        if (directorController == null)
-            CreateDirector();
+        if (redHoodController == null)
+            CreateRedHood();
         else
-            DestroyDirectorAI();
+            DestroyRedHoodAI();
     }
 
     public void DestroyWhenEnterDoor()
     {
-        DestroyDirectorAI();
+        DestroyRedHoodAI();
     }
 
     public void OnAttackPlayer()
@@ -98,10 +100,10 @@ public class AiDirectorController : MonoBehaviour
 
     public void RespawnPlayer()
     {
-        if(directorController == null)
+        if(redHoodController == null)
             return;
 
-        DestroyDirectorAI();
+        DestroyRedHoodAI();
         PlayerManager.inst.transform.position = respawnPosition.position;
     }
 }

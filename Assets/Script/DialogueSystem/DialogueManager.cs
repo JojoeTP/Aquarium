@@ -36,7 +36,7 @@ public class DialogueManager : MonoBehaviour
     Canvas dialogueCanvas;
     public UIDialoguePanel dialoguePanel;
 
-    void LoadCharacterSprites()
+    public void LoadCharacterSprites()
     {
         //loadSprite = (Sprite[])Resources.LoadAll("CutScene");
         characterSprites = Resources.LoadAll<Sprite>("DialogueSprite").ToList();
@@ -48,7 +48,7 @@ public class DialogueManager : MonoBehaviour
 
     void Start()
     {
-        LoadAllDialogueData();
+        Task<bool> loadingDialogueData = LoadAllDialogueData();
         LoadCharacterSprites();
     }
 
@@ -69,12 +69,14 @@ public class DialogueManager : MonoBehaviour
         dialogueCanvas = dialoguePanel.GetComponent<Canvas>();
     }
 
-    async void LoadAllDialogueData()
+    public async Task<bool> LoadAllDialogueData()
     {
         for (int i = 0; i < dialoguePaths.Length; i++)
         {
             await LoadDialogueData(i);
         }
+
+        return true;
     }
 
     public async Task LoadDialogueData(int index)
@@ -106,7 +108,6 @@ public class DialogueManager : MonoBehaviour
                 DialogueInfo newDialogue = new DialogueInfo(data_values[0], data_values[1], data_values[2], data_values[3], data_values[4], data_values[5], data_values[6], data_values[7], data_values[8]);
                 openWith.Add(data_values[0], newDialogue);
                 await Task.Yield();
-                //print(data_values[0]);
             }
         }
         
@@ -208,7 +209,7 @@ public class DialogueManager : MonoBehaviour
     }
     void CheckDialogueType(string checkChoiceId , bool checkTransition)
     {
-        if (type != beforeCurrentType && checkTransition)
+        if (type != beforeCurrentType && checkTransition == true)
         {
             UITransition.inst.CutSceneTransitionIn();
             if (type == Type.Dialogue)
