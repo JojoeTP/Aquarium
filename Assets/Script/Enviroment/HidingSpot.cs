@@ -5,6 +5,7 @@ using UnityEngine.Events;
 
 public class HidingSpot : MonoBehaviour
 {
+    public UnityEvent EntertriggerEvents;
     public UnityEvent triggerEvents;
 
     [SerializeField] SpriteRenderer HidingSpotObject;
@@ -12,6 +13,11 @@ public class HidingSpot : MonoBehaviour
 
     Sprite beforeSprite;
     bool isHiding;
+    public void OnEnterHidingEvent()
+    {
+        EntertriggerEvents.Invoke();
+    }
+
     public void OnHidingEvent()
     {
         triggerEvents.Invoke();

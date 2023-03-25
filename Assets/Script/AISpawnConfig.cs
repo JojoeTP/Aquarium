@@ -22,10 +22,10 @@ public class AISpawnConfig : MonoBehaviour
             switch(spawnConfigType)
             {
                 case SpawnConfigType.Junitor:
-                    AiJunitorController.inst.spawnAI = false;
+                    // AiJunitorController.inst.spawnAI = false;
                     break;
                 case SpawnConfigType.RedHood:
-                    AiRedHoodController.inst.spawnAI = false;
+                    // AiRedHoodController.inst.spawnAI = false;
                     break;
                 case SpawnConfigType.Director:
                     AiDirectorController.inst.spawnAI = false;
@@ -41,11 +41,11 @@ public class AISpawnConfig : MonoBehaviour
             switch(spawnConfigType)
             {
                 case SpawnConfigType.Junitor:
-                    AiJunitorController.inst.spawnAI = true;
+                    // AiJunitorController.inst.spawnAI = true;
                     AiJunitorController.inst.SpawnPosition = spawnPosition;
                     break;
                 case SpawnConfigType.RedHood:
-                    AiRedHoodController.inst.spawnAI = true;
+                    // AiRedHoodController.inst.spawnAI = true;
                     AiRedHoodController.inst.SpawnPosition = spawnPosition;
                     break;
                 case SpawnConfigType.Director:

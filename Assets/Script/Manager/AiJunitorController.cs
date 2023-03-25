@@ -19,6 +19,7 @@ public class AiJunitorController : MonoBehaviour
     public bool spawnAI = false;
     public bool isPlayerMove = false;
 
+    public bool CannotExitHiding = false;
     public Transform SpawnPosition {set {spawnPosition = value;}}
 
     private void Awake() {
@@ -68,6 +69,7 @@ public class AiJunitorController : MonoBehaviour
         if (junitorController != null)
         {
             Destroy(junitorController.gameObject);
+            CannotExitHiding = false;
             junitorController = null;
             
             if(nightGlobalVolume.profile.TryGet<ColorAdjustments>(out var colorAdj))
@@ -108,6 +110,7 @@ public class AiJunitorController : MonoBehaviour
 
     public void SetActiveAI(bool isActive)
     {
-        junitorController.enabled = isActive;
+        if(junitorController != null)
+            junitorController.enabled = isActive;
     }
 }

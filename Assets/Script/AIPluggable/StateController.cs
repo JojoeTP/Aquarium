@@ -103,27 +103,35 @@ public class StateController : MonoBehaviour
 
     public bool IsPlayerInRange(float range)
     {
-        if(PlayerManager.inst.playerState != PlayerManager.PLAYERSTATE.HIDING)
-            if(Physics2D.Raycast(transform.position,moveDirection,range,playerLayer))
+        
+        if(Physics2D.Raycast(transform.position,moveDirection,range,playerLayer))
+        {
+            if(PlayerManager.inst.playerState != PlayerManager.PLAYERSTATE.HIDING)
                 return true;
+            else
+                return false;
+        }
 
         return false;
     }
 
     public bool IsPlayerInRangeCircle(float range)
     {
+        if(Physics2D.OverlapCircle(transform.position,range,playerLayer))
+        {
         if(PlayerManager.inst.playerState != PlayerManager.PLAYERSTATE.HIDING)
-            if(Physics2D.OverlapCircle(transform.position,range,playerLayer))
-                return true;
+            return true;
+        else
+            return false;
+        }
 
         return false;
     }
 
     public bool IsPlayerInRangeIncludeBehide(float range)
     {
-        if(PlayerManager.inst.playerState != PlayerManager.PLAYERSTATE.HIDING)
-            if(Physics2D.OverlapCircle(transform.position,range,playerLayer))
-                return true;
+        if(Physics2D.OverlapCircle(transform.position,range,playerLayer))
+            return true;
 
         return false;
     }

@@ -94,6 +94,12 @@ public class ActionEventManager : MonoBehaviour
         AiJunitorController.inst.spawnAI = true;
     }
 
+    public void CannotExitHidingSpot()
+    {
+        AiJunitorController.inst.CannotExitHiding = true;
+        //remove it when exit hiding
+    }
+
     public void EnableAISkeleton(bool value)
     {
         AiJunitorController.inst.SetActiveAI(value);

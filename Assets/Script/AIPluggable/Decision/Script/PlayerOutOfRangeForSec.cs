@@ -7,7 +7,7 @@ namespace PluggableAI
     [CreateAssetMenu(menuName = "PluggableAI/Decesion/PlayerOutOfRangeForSec")]
     public class PlayerOutOfRangeForSec : Decision
     {
-        public LayerMask playerLayer;
+        [SerializeField] float time = 10f;
 
         public override bool Decide(StateController controller)
         {
@@ -17,10 +17,20 @@ namespace PluggableAI
 
         bool IsPlayerOutOfRange(StateController controller)
         {
-            if(controller.IsPlayerInRange(controller.disappearRange))
-                return false;
+            if(controller.IsPlayerInRangeIncludeBehide(controller.disappearRange))
+            {
+                controller.ElapsedTimeBeforeDie += Time.deltaTime;
+
+                if(controller.ElapsedTimeBeforeDie >= time)
+                    return true;
+            }
             else
-                return true;
+            {
+                controller.ElapsedTimeBeforeDie = 0;
+                return false;
+            }
+
+            return false;
         }
     }
 }

@@ -12,6 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7258c554d1774de468fd0af7ab99528c, type: 3}
   m_Name: PlayerOutOfRange
   m_EditorClassIdentifier: 
-  playerLayer:
-    serializedVersion: 2
-    m_Bits: 64
+  time: 5
