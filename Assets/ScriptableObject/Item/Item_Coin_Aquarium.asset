@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: ITEM_Coin_Aquarium
   m_EditorClassIdentifier: 
   itemData:
-    ItemID: ITEM_Coin_Aquarium
+    ItemID: Item_Coin_Aquarium
     ItemName: Coin Aquarium
     ItemDescription: Map
     ItemSprite: {fileID: 21300000, guid: efa0551ec0051364080d8ab8fc89c5c2, type: 3}
     ItemPosition: {x: 162.48, y: -216.64, z: 0}
     ItemScale: {x: 1.139489, y: 1.139489, z: 1.139489}
     ItemType: 512
-    dialogueItemId: Item4_01
+    dialogueItemId: Ch4_D05_01

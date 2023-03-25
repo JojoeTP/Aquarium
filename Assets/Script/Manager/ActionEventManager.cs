@@ -36,10 +36,16 @@ public class ActionEventManager : MonoBehaviour
 
     [Header("Dialogue & Cutescene")]
     [SerializeField] TalkWithNPC Ch1_D11_01; 
+    [SerializeField] TalkWithNPC Ch1_D03_01; 
+    [SerializeField] TalkWithNPC Ch1_D06_01; 
 
     [Header("LockDoor")]
     [SerializeField] LockDoorConfig Ch0_C03_01_Config;
     [SerializeField] LockDoorConfig Ch1_D01_2_01_Config;
+    [SerializeField] LockDoorConfig Ch1_D04_01_Config;
+
+    [Header("Item")]
+    [SerializeField] ItemScriptableObject VIPRoom;
 
     [HideInInspector]
     public StateController skeleton; //ภาโรง
@@ -87,6 +93,11 @@ public class ActionEventManager : MonoBehaviour
     {
         UpdateSpawnPosition(newSpawnPosition);
         skeleton = SpawnEnemy(skeletonPrefab);
+    }
+
+    public void EnableAISkeleton(bool value)
+    {
+        skeleton.enabled = value;
     }
 
     public void SpawnSister(bool isSpawn , float delayBeforeSpawn)
@@ -164,6 +175,11 @@ public class ActionEventManager : MonoBehaviour
         UnlockDoor(Ch1_D01_2_01_Config);
     }
 
+    public void UnLockDoor_Ch1_D04_01()
+    {
+        UnlockDoor(Ch1_D04_01_Config);
+    }
+
     public void WarpToPosition(Transform transform)
     {
         PlayerManager.inst.transform.position = transform.position;
@@ -193,6 +209,19 @@ public class ActionEventManager : MonoBehaviour
     {
         Wall_Aquarium.SetActive(false);
     }
+
+    public void SetActiveDialogueCh1_D03_01()
+    {
+        SetActiveDialogue(Ch1_D03_01);
+    }
+
+    public void ChangeDialogueCh1_D06_01()
+    {
+        Ch1_D06_01.ChangeDialogueId("Ch1_D08_01");
+        Ch1_D06_01.triggerEvents.AddListener(() => PlayerManager.inst.PlayerInventory.AddItem(VIPRoom));
+        Ch1_D06_01.triggerEvents.AddListener(Ch1_D06_01.SetActiveFalse);
+    }
+
 }
 
 [Serializable]

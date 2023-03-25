@@ -178,7 +178,10 @@ public class DialogueManager : MonoBehaviour
         type = (Type)Enum.Parse(typeof(Type), openWith[currentDialogue].type);
         dialogueCanvas.enabled = true;
         CheckIfHaveChoice(currentDialogue);
-        CheckIfHaveDialogueBg(currentNPC);
+        
+        if(currentNPC != null)
+            CheckIfHaveDialogueBg(currentNPC);
+            
         CheckDialogueType(currentDialogue , false);
 
         dialoguePanel.NameText.text = openWith[currentDialogue].character;
@@ -310,10 +313,8 @@ public class DialogueManager : MonoBehaviour
             print("save");
             SaveGameSystemManager.inst.SaveGame();
         }
-        print(currentNPC);
         if (currentNPC != null)
         {
-            print(currentNPC.triggerEvents);
             currentNPC.triggerEvents.Invoke();
             currentNPC = null;
         }
