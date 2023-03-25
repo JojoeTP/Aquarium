@@ -36,7 +36,7 @@ public class DialogueManager : MonoBehaviour
     Canvas dialogueCanvas;
     public UIDialoguePanel dialoguePanel;
 
-    void LoadCharacterSprites()
+    public void LoadCharacterSprites()
     {
         //loadSprite = (Sprite[])Resources.LoadAll("CutScene");
         characterSprites = Resources.LoadAll<Sprite>("DialogueSprite").ToList();
@@ -48,7 +48,7 @@ public class DialogueManager : MonoBehaviour
 
     void Start()
     {
-        LoadAllDialogueData();
+        Task<bool> loadingDialogueData = LoadAllDialogueData();
         LoadCharacterSprites();
     }
 
@@ -69,12 +69,14 @@ public class DialogueManager : MonoBehaviour
         dialogueCanvas = dialoguePanel.GetComponent<Canvas>();
     }
 
-    async void LoadAllDialogueData()
+    public async Task<bool> LoadAllDialogueData()
     {
         for (int i = 0; i < dialoguePaths.Length; i++)
         {
             await LoadDialogueData(i);
         }
+
+        return true;
     }
 
     public async Task LoadDialogueData(int index)

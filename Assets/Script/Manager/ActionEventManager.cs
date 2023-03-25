@@ -35,6 +35,7 @@ public class ActionEventManager : MonoBehaviour
     [SerializeField] GameObject Wall_Aquarium;
 
     [Header("Dialogue & Cutescene")]
+    [SerializeField] TalkWithNPC Ch0_C01_01;
     [SerializeField] TalkWithNPC Ch1_D11_01; 
     [SerializeField] TalkWithNPC Ch1_D03_01; 
     [SerializeField] TalkWithNPC Ch1_D06_01; 
@@ -217,6 +218,11 @@ public class ActionEventManager : MonoBehaviour
     public void SetActiveDialogueCh1_D03_01()
     {
         SetActiveDialogue(Ch1_D03_01);
+    }
+
+    public void SetActiveDialogueCh0_C01_01()
+    {
+        SetActiveDialogue(Ch0_C01_01);
     }
 
     public void ChangeDialogueCh1_D06_01()
