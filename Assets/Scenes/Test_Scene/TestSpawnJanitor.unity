@@ -3483,6 +3483,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8298af27a66e044fafa9e357c7cf128, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawnConfigType: 0
   spawnPosition: {fileID: 148774465}
 --- !u!1 &150926754
 GameObject:
@@ -4108,7 +4109,7 @@ Transform:
   - {fileID: 250431453}
   - {fileID: 1701350789}
   m_Father: {fileID: 572766039}
-  m_RootOrder: 5
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &178806790
 MonoBehaviour:
@@ -5418,6 +5419,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21c594a57847f9a4a8b71d9cd567156e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  EntertriggerEvents:
+    m_PersistentCalls:
+      m_Calls: []
   triggerEvents:
     m_PersistentCalls:
       m_Calls: []
@@ -9801,6 +9805,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21c594a57847f9a4a8b71d9cd567156e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  EntertriggerEvents:
+    m_PersistentCalls:
+      m_Calls: []
   triggerEvents:
     m_PersistentCalls:
       m_Calls: []
@@ -10373,6 +10380,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21c594a57847f9a4a8b71d9cd567156e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  EntertriggerEvents:
+    m_PersistentCalls:
+      m_Calls: []
   triggerEvents:
     m_PersistentCalls:
       m_Calls: []
@@ -11099,6 +11109,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21c594a57847f9a4a8b71d9cd567156e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  EntertriggerEvents:
+    m_PersistentCalls:
+      m_Calls: []
   triggerEvents:
     m_PersistentCalls:
       m_Calls: []
@@ -11763,6 +11776,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21c594a57847f9a4a8b71d9cd567156e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  EntertriggerEvents:
+    m_PersistentCalls:
+      m_Calls: []
   triggerEvents:
     m_PersistentCalls:
       m_Calls: []
@@ -12090,9 +12106,8 @@ Transform:
   - {fileID: 2118471161}
   - {fileID: 715501410}
   - {fileID: 1619314584}
-  - {fileID: 2773879600212454493}
-  - {fileID: 586840491}
   - {fileID: 178806789}
+  - {fileID: 586840491}
   - {fileID: 823411052}
   m_Father: {fileID: 0}
   m_RootOrder: 17
@@ -14950,6 +14965,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8298af27a66e044fafa9e357c7cf128, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawnConfigType: 0
   spawnPosition: {fileID: 690645003}
 --- !u!1 &691429591
 GameObject:
@@ -17243,6 +17259,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21c594a57847f9a4a8b71d9cd567156e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  EntertriggerEvents:
+    m_PersistentCalls:
+      m_Calls: []
   triggerEvents:
     m_PersistentCalls:
       m_Calls: []
@@ -18320,7 +18339,7 @@ Transform:
   - {fileID: 1266944554}
   - {fileID: 447238322}
   m_Father: {fileID: 572766039}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &823411053
 MonoBehaviour:
@@ -18336,6 +18355,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   directorPrefab: {fileID: 6450180032453249195, guid: e3f51b7d4d22a764ebe29e93d1c586a7, type: 3}
   respawnPosition: {fileID: 447238322}
+  directorController: {fileID: 0}
   nightGlobalVolume: {fileID: 1855359336}
   spawnAI: 0
   isPlayerMove: 0
@@ -18399,6 +18419,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21c594a57847f9a4a8b71d9cd567156e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  EntertriggerEvents:
+    m_PersistentCalls:
+      m_Calls: []
   triggerEvents:
     m_PersistentCalls:
       m_Calls: []
@@ -19052,6 +19075,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21c594a57847f9a4a8b71d9cd567156e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  EntertriggerEvents:
+    m_PersistentCalls:
+      m_Calls: []
   triggerEvents:
     m_PersistentCalls:
       m_Calls: []
@@ -19564,6 +19590,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8298af27a66e044fafa9e357c7cf128, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawnConfigType: 0
   spawnPosition: {fileID: 869281294}
 --- !u!1 &870625792
 GameObject:
@@ -20204,6 +20231,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8298af27a66e044fafa9e357c7cf128, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawnConfigType: 0
   spawnPosition: {fileID: 880978660}
 --- !u!1 &884145183
 GameObject:
@@ -21531,6 +21559,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21c594a57847f9a4a8b71d9cd567156e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  EntertriggerEvents:
+    m_PersistentCalls:
+      m_Calls: []
   triggerEvents:
     m_PersistentCalls:
       m_Calls: []
@@ -22321,6 +22352,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21c594a57847f9a4a8b71d9cd567156e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  EntertriggerEvents:
+    m_PersistentCalls:
+      m_Calls: []
   triggerEvents:
     m_PersistentCalls:
       m_Calls: []
@@ -23414,6 +23448,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8298af27a66e044fafa9e357c7cf128, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawnConfigType: 0
   spawnPosition: {fileID: 1014831792}
 --- !u!1 &1016667898
 GameObject:
@@ -26596,6 +26631,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21c594a57847f9a4a8b71d9cd567156e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  EntertriggerEvents:
+    m_PersistentCalls:
+      m_Calls: []
   triggerEvents:
     m_PersistentCalls:
       m_Calls: []
@@ -28596,6 +28634,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8298af27a66e044fafa9e357c7cf128, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawnConfigType: 0
   spawnPosition: {fileID: 1235979558}
 --- !u!1 &1237714074
 GameObject:
@@ -30645,6 +30684,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21c594a57847f9a4a8b71d9cd567156e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  EntertriggerEvents:
+    m_PersistentCalls:
+      m_Calls: []
   triggerEvents:
     m_PersistentCalls:
       m_Calls: []
@@ -30747,6 +30789,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8298af27a66e044fafa9e357c7cf128, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawnConfigType: 0
   spawnPosition: {fileID: 1353445693}
 --- !u!1 &1356672275
 GameObject:
@@ -31614,6 +31657,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21c594a57847f9a4a8b71d9cd567156e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  EntertriggerEvents:
+    m_PersistentCalls:
+      m_Calls: []
   triggerEvents:
     m_PersistentCalls:
       m_Calls: []
@@ -35062,6 +35108,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21c594a57847f9a4a8b71d9cd567156e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  EntertriggerEvents:
+    m_PersistentCalls:
+      m_Calls: []
   triggerEvents:
     m_PersistentCalls:
       m_Calls: []
@@ -35856,6 +35905,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21c594a57847f9a4a8b71d9cd567156e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  EntertriggerEvents:
+    m_PersistentCalls:
+      m_Calls: []
   triggerEvents:
     m_PersistentCalls:
       m_Calls: []
@@ -37147,6 +37199,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21c594a57847f9a4a8b71d9cd567156e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  EntertriggerEvents:
+    m_PersistentCalls:
+      m_Calls: []
   triggerEvents:
     m_PersistentCalls:
       m_Calls: []
@@ -42209,6 +42264,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21c594a57847f9a4a8b71d9cd567156e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  EntertriggerEvents:
+    m_PersistentCalls:
+      m_Calls: []
   triggerEvents:
     m_PersistentCalls:
       m_Calls: []
@@ -44260,6 +44318,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21c594a57847f9a4a8b71d9cd567156e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  EntertriggerEvents:
+    m_PersistentCalls:
+      m_Calls: []
   triggerEvents:
     m_PersistentCalls:
       m_Calls: []
@@ -45033,6 +45094,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21c594a57847f9a4a8b71d9cd567156e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  EntertriggerEvents:
+    m_PersistentCalls:
+      m_Calls: []
   triggerEvents:
     m_PersistentCalls:
       m_Calls: []
@@ -45507,6 +45571,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21c594a57847f9a4a8b71d9cd567156e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  EntertriggerEvents:
+    m_PersistentCalls:
+      m_Calls: []
   triggerEvents:
     m_PersistentCalls:
       m_Calls: []
@@ -46077,6 +46144,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21c594a57847f9a4a8b71d9cd567156e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  EntertriggerEvents:
+    m_PersistentCalls:
+      m_Calls: []
   triggerEvents:
     m_PersistentCalls:
       m_Calls: []
@@ -48160,68 +48230,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0a1032ddd958b544fa64fb55a2f616f4, type: 3}
---- !u!1001 &2773879600212454492
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 572766039}
-    m_Modifications:
-    - target: {fileID: 3638635127206547181, guid: e1fb8775c647e6c4facdd190c6b4d472, type: 3}
-      propertyPath: m_Name
-      value: DialogueManager
-      objectReference: {fileID: 0}
-    - target: {fileID: 6048841169734829090, guid: e1fb8775c647e6c4facdd190c6b4d472, type: 3}
-      propertyPath: m_RootOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 6048841169734829090, guid: e1fb8775c647e6c4facdd190c6b4d472, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6048841169734829090, guid: e1fb8775c647e6c4facdd190c6b4d472, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6048841169734829090, guid: e1fb8775c647e6c4facdd190c6b4d472, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6048841169734829090, guid: e1fb8775c647e6c4facdd190c6b4d472, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6048841169734829090, guid: e1fb8775c647e6c4facdd190c6b4d472, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6048841169734829090, guid: e1fb8775c647e6c4facdd190c6b4d472, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6048841169734829090, guid: e1fb8775c647e6c4facdd190c6b4d472, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6048841169734829090, guid: e1fb8775c647e6c4facdd190c6b4d472, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6048841169734829090, guid: e1fb8775c647e6c4facdd190c6b4d472, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6048841169734829090, guid: e1fb8775c647e6c4facdd190c6b4d472, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: e1fb8775c647e6c4facdd190c6b4d472, type: 3}
---- !u!4 &2773879600212454493 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6048841169734829090, guid: e1fb8775c647e6c4facdd190c6b4d472, type: 3}
-  m_PrefabInstance: {fileID: 2773879600212454492}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3526115153578714326
 PrefabInstance:
   m_ObjectHideFlags: 0
