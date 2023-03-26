@@ -17,6 +17,7 @@ public class AiDirectorController : MonoBehaviour
     [SerializeField] Volume nightGlobalVolume;
     
     public bool spawnAI = false;
+    public bool isPlayerInSpawnCollider = false;
     public bool isPlayerMove = false;
 
     public Transform SpawnPosition {set {spawnPosition = value;}}
@@ -35,10 +36,10 @@ public class AiDirectorController : MonoBehaviour
     {
         yield return new WaitUntil(() => isPlayerMove);
 
-        if(spawnAI && spawnPosition != null && directorController == null)
+        if(spawnAI && isPlayerInSpawnCollider && spawnPosition != null && directorController == null)
         {
             var rand = Random.Range(0,100);
-            if(rand >= 0)
+            if(rand >= 60)
             {
                 UITransition.inst.DirectorTransitionIn();
             }

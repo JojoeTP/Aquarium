@@ -53,11 +53,10 @@ public class DoorEncryption : MonoBehaviour
         doorTrigger.triggerConditionEvent.AddListener( () => 
         {
             doorTrigger.connectDoor = startPostion;
-            StartPuzzle();
         }); 
     }
 
-    void StartPuzzle()
+    public void StartPuzzle()
     {
         ChangeState(PuzzleState.PLAYING);
     }
@@ -76,6 +75,9 @@ public class DoorEncryption : MonoBehaviour
             case PuzzleState.STOP :
                 SettingStartPuzzle();
                 SettingDoor();
+                leftBlood.SetActive(false);
+                upperBlood.SetActive(false);
+                rightBlood.SetActive(false);
                 break;
             case PuzzleState.PLAYING :
                 // currentTime = countTime;
@@ -116,6 +118,9 @@ public class DoorEncryption : MonoBehaviour
 
     void EnterEncryptionDoor(char c)
     {
+        if(currentstate != PuzzleState.PLAYING)
+            return;
+
         if(encryptionCode[currentCodeIndex] == c)
         {
             correctCount++;
@@ -155,24 +160,29 @@ public class DoorEncryption : MonoBehaviour
 
     void OnSelectDoor(DoorSystem door)
     {
-        if(encryptionCode.Length == currentCodeIndex)
+        if(currentstate != PuzzleState.PLAYING)
+            door.connectDoor = startPostion;
+        else
         {
-            OnFinish(door);
-            return;
+            if(encryptionCode.Length == currentCodeIndex)
+            {
+                OnFinish(door);
+                return;
+            }
+
+            if(failCount >= 3)
+            {
+                OnFail(door);
+                return;
+            }
+
+            door.connectDoor = startPostion;
+
+            if(currentCodeIndex > revertIndex)
+                labyrinthBG.sprite = labyrinthSprite[failCount];
+
+            RandomInvertCode();
         }
-
-        if(failCount >= 3)
-        {
-            OnFail(door);
-            return;
-        }
-
-        door.connectDoor = startPostion;
-
-        if(currentCodeIndex > revertIndex)
-            labyrinthBG.sprite = labyrinthSprite[failCount];
-
-        RandomInvertCode();
     }
 
     void OnFinish(DoorSystem door)

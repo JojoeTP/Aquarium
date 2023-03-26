@@ -1478,7 +1478,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 49739294}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -20.539978, y: 0, z: 0}
+  m_LocalPosition: {x: -20.539978, y: 0, z: -0.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9985,6 +9985,110 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.7043304, y: 5.38656}
   m_EdgeRadius: 0
+--- !u!1 &489605944
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 489605945}
+  - component: {fileID: 489605947}
+  - component: {fileID: 489605946}
+  m_Layer: 9
+  m_Name: Ch1_D03_01
+  m_TagString: HidingPlace
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &489605945
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 489605944}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.000017666816, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 782536329}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &489605946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 489605944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96cd48e12b93e2644b317eb0a2a62a23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isSave: 0
+  isCutScene: 0
+  isRunDialogueWhenOverlap: 1
+  haveDialogueBg: 0
+  startWithDialogueId: Ch1_D03_01
+  triggerEvents:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 782536328}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2090182356}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+  NPCList: []
+--- !u!61 &489605947
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 489605944}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.30345917, y: -0.6966889}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 6.2685394, y: 5.38656}
+  m_EdgeRadius: 0
 --- !u!1 &490165029
 GameObject:
   m_ObjectHideFlags: 0
@@ -17852,16 +17956,15 @@ GameObject:
   m_Component:
   - component: {fileID: 782536329}
   - component: {fileID: 782536333}
-  - component: {fileID: 782536332}
-  - component: {fileID: 782536331}
-  - component: {fileID: 782536330}
+  - component: {fileID: 782536335}
+  - component: {fileID: 782536334}
   m_Layer: 9
-  m_Name: Ch1_D03_01
+  m_Name: Ch1_D03_01 Hiding
   m_TagString: HidingPlace
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &782536329
 Transform:
   m_ObjectHideFlags: 0
@@ -17874,76 +17977,11 @@ Transform:
   m_LocalScale: {x: 1.7273954, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 489605945}
   - {fileID: 1604483364}
   m_Father: {fileID: 2093179448}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &782536330
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 782536328}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 96cd48e12b93e2644b317eb0a2a62a23, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isSave: 0
-  isCutScene: 0
-  isRunDialogueWhenOverlap: 1
-  haveDialogueBg: 0
-  startWithDialogueId: Ch1_D03_01
-  triggerEvents:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 782536330}
-        m_TargetAssemblyTypeName: TalkWithNPC, Assembly-CSharp
-        m_MethodName: SetActiveFalse
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  NPCList: []
---- !u!114 &782536331
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 782536328}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 69facd572376b2741bc7dde45848d83c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  keyImage: {fileID: 1604483363}
---- !u!114 &782536332
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 782536328}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 21c594a57847f9a4a8b71d9cd567156e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  EntertriggerEvents:
-    m_PersistentCalls:
-      m_Calls: []
-  triggerEvents:
-    m_PersistentCalls:
-      m_Calls: []
-  HidingSpotObject: {fileID: 0}
-  HidingSprite: {fileID: 0}
 --- !u!61 &782536333
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -17970,6 +18008,63 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 6.2685394, y: 5.38656}
   m_EdgeRadius: 0
+--- !u!114 &782536334
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 782536328}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69facd572376b2741bc7dde45848d83c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  keyImage: {fileID: 1604483363}
+--- !u!114 &782536335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 782536328}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21c594a57847f9a4a8b71d9cd567156e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EntertriggerEvents:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1619314585}
+        m_TargetAssemblyTypeName: ActionEventManager, Assembly-CSharp
+        m_MethodName: WarpSkeletonAfterHiding
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 631254677}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+  triggerEvents:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 489605944}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+  HidingSpotObject: {fileID: 0}
+  HidingSprite: {fileID: 0}
 --- !u!1 &784150885
 GameObject:
   m_ObjectHideFlags: 0
@@ -19035,6 +19130,7 @@ MonoBehaviour:
   directorController: {fileID: 0}
   nightGlobalVolume: {fileID: 1855359336}
   spawnAI: 0
+  isPlayerInSpawnCollider: 0
   isPlayerMove: 0
 --- !u!1 &827393822
 GameObject:
@@ -20621,6 +20717,18 @@ MonoBehaviour:
       - m_Target: {fileID: 876754890}
         m_TargetAssemblyTypeName: TalkWithNPC, Assembly-CSharp
         m_MethodName: SetActiveFalse
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1619314585}
+        m_TargetAssemblyTypeName: ActionEventManager, Assembly-CSharp
+        m_MethodName: CannotExitHidingSpot
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -29894,7 +30002,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1267919114}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -250.1, y: -42.98, z: 0}
+  m_LocalPosition: {x: -186.7, y: -42.98, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -29917,7 +30025,7 @@ MonoBehaviour:
   isCutScene: 1
   isRunDialogueWhenOverlap: 1
   haveDialogueBg: 0
-  startWithDialogueId: Ch2_D02_01
+  startWithDialogueId: Ch2_D03_01
   triggerEvents:
     m_PersistentCalls:
       m_Calls:
@@ -35246,6 +35354,7 @@ MonoBehaviour:
   redHoodController: {fileID: 0}
   nightGlobalVolume: {fileID: 1855359336}
   spawnAI: 0
+  isPlayerInSpawnCollider: 0
   isPlayerMove: 0
 --- !u!1001 &1502960161
 PrefabInstance:
@@ -35921,6 +36030,7 @@ MonoBehaviour:
   junitorController: {fileID: 0}
   nightGlobalVolume: {fileID: 1855359336}
   spawnAI: 0
+  isPlayerInSpawnCollider: 0
   isPlayerMove: 0
   CannotExitHiding: 0
 --- !u!1 &1528423687
@@ -37628,7 +37738,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 782536329}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1604483365
 SpriteRenderer:
@@ -37989,7 +38099,7 @@ PrefabInstance:
     - target: {fileID: 4966732993388418438, guid: 1b3dcc0b488f4414c991160dad5fe269, type: 3}
       propertyPath: Ch1_D03_01
       value: 
-      objectReference: {fileID: 782536330}
+      objectReference: {fileID: 0}
     - target: {fileID: 4966732993388418438, guid: 1b3dcc0b488f4414c991160dad5fe269, type: 3}
       propertyPath: Ch1_D06_01
       value: 
@@ -38017,7 +38127,7 @@ PrefabInstance:
     - target: {fileID: 4966732993388418438, guid: 1b3dcc0b488f4414c991160dad5fe269, type: 3}
       propertyPath: directorPrefab
       value: 
-      objectReference: {fileID: 6450180032453249195, guid: e3f51b7d4d22a764ebe29e93d1c586a7, type: 3}
+      objectReference: {fileID: 6450180032453249195, guid: b011d45d5eb53534486ae2a2fae2216d, type: 3}
     - target: {fileID: 4966732993388418438, guid: 1b3dcc0b488f4414c991160dad5fe269, type: 3}
       propertyPath: skeletonPrefab
       value: 
@@ -46929,7 +47039,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2075832082}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -55.23999, y: 88.7, z: 0}
+  m_LocalPosition: {x: -47.44, y: 88.7, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -46956,6 +47066,18 @@ MonoBehaviour:
   triggerEvents:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1619314585}
+        m_TargetAssemblyTypeName: ActionEventManager, Assembly-CSharp
+        m_MethodName: EnterWell
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1619314585}
         m_TargetAssemblyTypeName: ActionEventManager, Assembly-CSharp
         m_MethodName: WarpToPosition
@@ -47245,7 +47367,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2090182357
 Transform:
   m_ObjectHideFlags: 0
@@ -47289,46 +47411,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EntertriggerEvents:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1619314585}
-        m_TargetAssemblyTypeName: ActionEventManager, Assembly-CSharp
-        m_MethodName: CannotExitHidingSpot
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   triggerEvents:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1619314585}
-        m_TargetAssemblyTypeName: ActionEventManager, Assembly-CSharp
-        m_MethodName: EnableAISkeleton
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 1619314585}
-        m_TargetAssemblyTypeName: ActionEventManager, Assembly-CSharp
-        m_MethodName: SetActiveDialogueCh1_D03_01
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
+      m_Calls: []
   HidingSpotObject: {fileID: 0}
   HidingSprite: {fileID: 0}
 --- !u!61 &2090182360

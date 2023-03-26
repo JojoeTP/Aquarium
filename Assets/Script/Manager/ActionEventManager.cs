@@ -39,6 +39,8 @@ public class ActionEventManager : MonoBehaviour
     [SerializeField] TalkWithNPC Ch1_D11_01; 
     [SerializeField] TalkWithNPC Ch1_D03_01; 
     [SerializeField] TalkWithNPC Ch1_D06_01; 
+    [SerializeField] TalkWithNPC Ch2_D02_01; 
+    
 
     [Header("LockDoor")]
     [SerializeField] LockDoorConfig Ch0_C03_01_Config;
@@ -47,6 +49,9 @@ public class ActionEventManager : MonoBehaviour
 
     [Header("Item")]
     [SerializeField] ItemScriptableObject VIPRoom;
+
+    [Header("Puzzle")]
+    [SerializeField] DoorEncryption doorEncryption;
 
     [HideInInspector]
     public StateController sister;
@@ -83,6 +88,7 @@ public class ActionEventManager : MonoBehaviour
     {
         spawnPosition = newSpawnPosition;
     }
+
     public StateController SpawnEnemy(GameObject enemy)
     {
         return Instantiate(enemy,spawnPosition.transform.position,spawnPosition.transform.rotation).GetComponent<StateController>();
@@ -95,10 +101,22 @@ public class ActionEventManager : MonoBehaviour
         AiJunitorController.inst.spawnAI = true;
     }
 
+    public void WarpSkeletonAfterHiding(Transform pos)
+    {
+        StartCoroutine(WarpSkeleton(pos));
+    }
+    
+    public IEnumerator WarpSkeleton(Transform pos)
+    {
+        yield return new WaitForSeconds(2f);
+
+        AiJunitorController.inst.junitorController.transform.position = pos.position;
+        EnableAISkeleton(true);
+    }
+
     public void CannotExitHidingSpot()
     {
         AiJunitorController.inst.CannotExitHiding = true;
-        //remove it when exit hiding
     }
 
     public void EnableAISkeleton(bool value)
@@ -200,6 +218,11 @@ public class ActionEventManager : MonoBehaviour
         SetActiveDialogue(Ch1_D11_01);
     }
 
+    // public void SetActiveDialogueCh2_D02_01()
+    // {
+    //     SetActiveDialogue(Ch2_D02_01);
+    // }
+
     public void SetActiveFalse_Wall_Cafeteria()
     {
         Wall_Cafeteria.SetActive(false);
@@ -230,6 +253,16 @@ public class ActionEventManager : MonoBehaviour
         Ch1_D06_01.ChangeDialogueId("Ch1_D08_01");
         Ch1_D06_01.triggerEvents.AddListener(() => PlayerManager.inst.PlayerInventory.AddItem(VIPRoom));
         Ch1_D06_01.triggerEvents.AddListener(Ch1_D06_01.SetActiveFalse);
+    }
+
+    public void StartPuzzle()
+    {
+        doorEncryption.StartPuzzle();
+    }
+
+    public void EnterWell()
+    {
+        PlayerPrefs.SetInt("DarkMainMenu",1);
     }
 
 }

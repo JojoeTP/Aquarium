@@ -12,8 +12,11 @@ EditorBuildSettings:
     path: Assets/Scenes/Scene_Core.unity
     guid: 6af1c094b3c6fa14cb928cc1d5d89b5b
   - enabled: 1
-    path: Assets/Scenes/Scene_MainMenu.unity
-    guid: 5cd8bd8dfff2bf0429d961749fb6d94c
+    path: Assets/Scenes/TestMainmenu/Scene_MainMenu.unity
+    guid: 72f44dd45da65db46b1a9fbb7f6c2153
+  - enabled: 1
+    path: Assets/Scenes/TestMainmenu/Scene_MainMenu2.unity
+    guid: e2508fa0b686a5c4c8b4c09d1dccee54
   - enabled: 1
     path: Assets/Scenes/Scene_Aquarium.unity
     guid: 39f6ef5196af7b14983ed89183170998

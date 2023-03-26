@@ -137,6 +137,8 @@ public class ItemManager : MonoBehaviour
             case ITEMTYPE.ITEM4:
                 item.triggerEvents.AddListener( () => 
                     {
+                        // ActionEventManager.inst.SetActiveDialogueCh2_D02_01();
+                        ActionEventManager.inst.StartPuzzle();
                         DialogueManager.inst.currentDialogue = item.itemObject.itemData.dialogueItemId;
                         DialogueManager.inst.StartDialogue();
                     }
