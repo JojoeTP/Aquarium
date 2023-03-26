@@ -18,6 +18,7 @@ public class AiRedHoodController : MonoBehaviour
     [SerializeField] Volume nightGlobalVolume;
     
     public bool spawnAI = false;
+    public bool isPlayerInSpawnCollider = false;
     public bool isPlayerMove = false;
 
     public Transform SpawnPosition {set {spawnPosition = value;}}
@@ -36,10 +37,10 @@ public class AiRedHoodController : MonoBehaviour
     {
         yield return new WaitUntil(() => isPlayerMove);
 
-        if(spawnAI && spawnPosition != null && redHoodController == null)
+        if(spawnAI && isPlayerInSpawnCollider && spawnPosition != null && redHoodController == null)
         {
             var rand = Random.Range(0,100);
-            if(rand >= 70)
+            if(rand >= 75)
             {
                 // UITransition.inst.RedHoodTransitionIn();
                 CreateRedHood();

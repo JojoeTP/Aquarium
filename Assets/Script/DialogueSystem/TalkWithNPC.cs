@@ -64,7 +64,10 @@ public class TalkWithNPC : MonoBehaviour
         this.gameObject.SetActive(false);
     }
 
-   
+   public void DestroyDialogue()
+   {
+    Destroy(this.gameObject);
+   }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -73,7 +76,7 @@ public class TalkWithNPC : MonoBehaviour
            if (other.GetComponent<PlayerManager>() != null)
            {
                 SetDialogueID();
-                CutSceneTransitionScript.inst.GetTalkWithNPC(this,true);
+                CutSceneTransitionScript.inst.GetTalkWithNPC(this, true);
                 UITransition.inst.CutSceneTransitionIn();
                 SetActiveFalse();
            }

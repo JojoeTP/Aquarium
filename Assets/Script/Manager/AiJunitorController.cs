@@ -17,6 +17,7 @@ public class AiJunitorController : MonoBehaviour
     [SerializeField] Volume nightGlobalVolume;
     
     public bool spawnAI = false;
+    public bool isPlayerInSpawnCollider = false;
     public bool isPlayerMove = false;
 
     public bool CannotExitHiding = false;
@@ -36,10 +37,10 @@ public class AiJunitorController : MonoBehaviour
     {
         yield return new WaitUntil(() => isPlayerMove);
 
-        if(spawnAI && spawnPosition != null && junitorController == null)
+        if(spawnAI && isPlayerInSpawnCollider && spawnPosition != null && junitorController == null)
         {
             var rand = Random.Range(0,100);
-            if(rand >= 0)
+            if(rand >= 50)
             {
                 // UITransition.inst.JunitorTransitionIn();
                 CreateJunitor();

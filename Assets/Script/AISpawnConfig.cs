@@ -18,17 +18,16 @@ public class AISpawnConfig : MonoBehaviour
     {
         if(other.GetComponent<PlayerManager>() != null)
         {
-            AiDirectorController.inst.spawnAI = false;
             switch(spawnConfigType)
             {
                 case SpawnConfigType.Junitor:
-                    // AiJunitorController.inst.spawnAI = false;
+                    AiJunitorController.inst.isPlayerInSpawnCollider = false;
                     break;
                 case SpawnConfigType.RedHood:
-                    // AiRedHoodController.inst.spawnAI = false;
+                    AiRedHoodController.inst.isPlayerInSpawnCollider = false;
                     break;
                 case SpawnConfigType.Director:
-                    AiDirectorController.inst.spawnAI = false;
+                    AiDirectorController.inst.isPlayerInSpawnCollider = false;
                     break;
             }
         }
@@ -42,14 +41,15 @@ public class AISpawnConfig : MonoBehaviour
             {
                 case SpawnConfigType.Junitor:
                     // AiJunitorController.inst.spawnAI = true;
+                    AiJunitorController.inst.isPlayerInSpawnCollider = true;
                     AiJunitorController.inst.SpawnPosition = spawnPosition;
                     break;
                 case SpawnConfigType.RedHood:
-                    // AiRedHoodController.inst.spawnAI = true;
+                    AiRedHoodController.inst.isPlayerInSpawnCollider = true;
                     AiRedHoodController.inst.SpawnPosition = spawnPosition;
                     break;
                 case SpawnConfigType.Director:
-                    AiDirectorController.inst.spawnAI = true;
+                    AiDirectorController.inst.isPlayerInSpawnCollider = true;
                     AiDirectorController.inst.SpawnPosition = spawnPosition;
                     break;
             }
