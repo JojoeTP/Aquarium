@@ -260,6 +260,11 @@ public class ActionEventManager : MonoBehaviour
         doorEncryption.StartPuzzle();
     }
 
+    public void EnterWell()
+    {
+        PlayerPrefs.SetInt("DarkMainMenu",1);
+    }
+
 }
 
 [Serializable]

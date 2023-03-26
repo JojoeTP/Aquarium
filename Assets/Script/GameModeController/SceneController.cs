@@ -8,7 +8,8 @@ public class SceneController : MonoBehaviour
 {
     public static SceneController inst;
     public string SCENE_GAMEPLAY { get {return "Scene_Aquarium";} }
-    public string SCENE_MAINMENU { get {return "Scene_MainMenu";} }
+    public string SCENE_MAINMENU { get {return "Scene_MainMenu";} } 
+    public string SCENE_MAINMENU_2 { get {return "Scene_MainMenu2";} } 
     public string SCENE_LOADING { get {return "Scene_Loading";} }
 
     public float loadingProgress {get; private set;}
