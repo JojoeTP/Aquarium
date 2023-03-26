@@ -16,6 +16,8 @@ public class StateController : MonoBehaviour
     [SerializeField] Color visionColor;
     [SerializeField] Vector3 chasingRangeOffset;
     [SerializeField] Color ChaseColor;
+    [SerializeField] Color disappearColor;
+    [SerializeField] Vector3 disappearRangeOffset;
     public Vector3 stateLableOffset;
 
     [Header("STATUS")]
@@ -35,6 +37,8 @@ public class StateController : MonoBehaviour
     public float chasingTime = 0f;
     float elapsedChasingTime;
     float elapsedTimeBeforeDie = 0;
+    [Header("-------")]
+    public float disappearRange = 0f;
     
     [Header("Variable")]
     public Vector3 moveDirection = Vector3.right;
@@ -99,8 +103,14 @@ public class StateController : MonoBehaviour
 
     public bool IsPlayerInRange(float range)
     {
+        
         if(Physics2D.Raycast(transform.position,moveDirection,range,playerLayer))
-            return true;
+        {
+            if(PlayerManager.inst.playerState != PlayerManager.PLAYERSTATE.HIDING)
+                return true;
+            else
+                return false;
+        }
 
         return false;
     }
@@ -108,7 +118,12 @@ public class StateController : MonoBehaviour
     public bool IsPlayerInRangeCircle(float range)
     {
         if(Physics2D.OverlapCircle(transform.position,range,playerLayer))
+        {
+        if(PlayerManager.inst.playerState != PlayerManager.PLAYERSTATE.HIDING)
             return true;
+        else
+            return false;
+        }
 
         return false;
     }
@@ -138,11 +153,14 @@ public class StateController : MonoBehaviour
 
     public bool IsPlayerBehide()
     {
-        if (transform.position.x > PlayerManager.inst.transform.position.x && transform.localScale.x > 0)
-            return true;
-        
-        if (transform.position.x < PlayerManager.inst.transform.position.x && transform.localScale.x < 0)
-            return true;
+        if(PlayerManager.inst.playerState != PlayerManager.PLAYERSTATE.HIDING)
+        {
+            if (transform.position.x > PlayerManager.inst.transform.position.x && transform.localScale.x > 0)
+                return true;
+            
+            if (transform.position.x < PlayerManager.inst.transform.position.x && transform.localScale.x < 0)
+                return true;
+        }
 
         return false;
     }
@@ -160,6 +178,9 @@ public class StateController : MonoBehaviour
 
         Gizmos.color = ChaseColor;
         Gizmos.DrawWireSphere(transform.position + chasingRangeOffset,chasingRange); //VISION RANGE
+
+        Gizmos.color = disappearColor;
+        Gizmos.DrawWireSphere(transform.position + disappearRangeOffset,disappearRange); //disappear RANGE
     }
 
     public void ToggleChasing(bool enabled)

@@ -11,14 +11,14 @@ public class AiDirectorController : MonoBehaviour
     [SerializeField] GameObject directorPrefab;
     [SerializeField] Transform respawnPosition;
     Transform spawnPosition;
-    StateController directorController;
+    [HideInInspector]
+    public StateController directorController;
 
     [SerializeField] Volume nightGlobalVolume;
     
     public bool spawnAI = false;
     public bool isPlayerMove = false;
 
-    Coroutine createDirector;
     public Transform SpawnPosition {set {spawnPosition = value;}}
 
     private void Awake() {
@@ -37,8 +37,8 @@ public class AiDirectorController : MonoBehaviour
 
         if(spawnAI && spawnPosition != null && directorController == null)
         {
-            var rand = Random.Range(0,70);
-            if(rand >= 70)
+            var rand = Random.Range(0,100);
+            if(rand >= 0)
             {
                 UITransition.inst.DirectorTransitionIn();
             }

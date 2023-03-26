@@ -56,4 +56,14 @@ public class UITransition : MonoBehaviour
     {
         directorTransitionScript.AIDirectorTransitionIn();
     }
+
+    public void RedHoodTransitionIn()
+    {
+        // directorTransitionScript.AIDirectorTransitionIn();
+    }
+
+    public void JunitorTransitionIn()
+    {
+        // directorTransitionScript.AIDirectorTransitionIn();
+    }
 }

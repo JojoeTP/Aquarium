@@ -14,7 +14,20 @@ namespace PluggableAI
 
         void Disappear(StateController controller)
         {
-            UITransition.inst.DirectorTransitionIn();
+            if(AiJunitorController.inst.junitorController != null)
+            {
+                AiJunitorController.inst.DestroyJunitorAI();
+                // UITransition.inst.JunitorTransitionIn();
+            }
+
+            if(AiRedHoodController.inst.redHoodController != null)
+            {
+                AiRedHoodController.inst.DestroyRedHoodAI();
+                // UITransition.inst.RedHoodTransitionIn();
+            }
+
+            if(AiDirectorController.inst.directorController != null)
+                UITransition.inst.DirectorTransitionIn();
         }
     }
 }

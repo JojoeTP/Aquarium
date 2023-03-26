@@ -35,6 +35,7 @@ public class ActionEventManager : MonoBehaviour
     [SerializeField] GameObject Wall_Aquarium;
 
     [Header("Dialogue & Cutescene")]
+    [SerializeField] TalkWithNPC Ch0_C01_01;
     [SerializeField] TalkWithNPC Ch1_D11_01; 
     [SerializeField] TalkWithNPC Ch1_D03_01; 
     [SerializeField] TalkWithNPC Ch1_D06_01; 
@@ -47,8 +48,6 @@ public class ActionEventManager : MonoBehaviour
     [Header("Item")]
     [SerializeField] ItemScriptableObject VIPRoom;
 
-    [HideInInspector]
-    public StateController skeleton; //ภาโรง
     [HideInInspector]
     public StateController sister;
     
@@ -75,7 +74,7 @@ public class ActionEventManager : MonoBehaviour
         SetActiveFalse_Wall_Labyrinth();
 
         labyrinthENDSpriteRenderer.sprite = dark_LabyrinthSprite;
-        SoundManager.Inst.MuteBGM(); //ปิด BGM
+        SoundManager.Inst.MuteBGM();
         //จะปิดไรเพิ่มก็ เพิ่มcodeตรงนี้
     }
 #endregion
@@ -91,13 +90,20 @@ public class ActionEventManager : MonoBehaviour
 
     public void SpawnSkeleton(Transform newSpawnPosition)
     {
-        UpdateSpawnPosition(newSpawnPosition);
-        skeleton = SpawnEnemy(skeletonPrefab);
+        AiJunitorController.inst.SpawnPosition = newSpawnPosition;
+        AiJunitorController.inst.CreateJunitor();
+        AiJunitorController.inst.spawnAI = true;
+    }
+
+    public void CannotExitHidingSpot()
+    {
+        AiJunitorController.inst.CannotExitHiding = true;
+        //remove it when exit hiding
     }
 
     public void EnableAISkeleton(bool value)
     {
-        skeleton.enabled = value;
+        AiJunitorController.inst.SetActiveAI(value);
     }
 
     public void SpawnSister(bool isSpawn , float delayBeforeSpawn)
@@ -148,7 +154,6 @@ public class ActionEventManager : MonoBehaviour
     public void ContinuePlayBGM()
     {
         SoundManager.Inst.ContinuePlayBGM();
-        //เพิ่มตรงนี้ให้เล่นต่อ
     }
 
     void UnlockDoor(LockDoorConfig lockDoorConfig)
@@ -213,6 +218,11 @@ public class ActionEventManager : MonoBehaviour
     public void SetActiveDialogueCh1_D03_01()
     {
         SetActiveDialogue(Ch1_D03_01);
+    }
+
+    public void SetActiveDialogueCh0_C01_01()
+    {
+        SetActiveDialogue(Ch0_C01_01);
     }
 
     public void ChangeDialogueCh1_D06_01()
