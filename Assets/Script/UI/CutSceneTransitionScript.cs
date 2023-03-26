@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CutSceneTransitionScript : MonoBehaviour
 {
-    Animator animator;
+    public Animator animator;
     TalkWithNPC talkWithNPC;
     public static CutSceneTransitionScript inst;
 
@@ -24,12 +24,12 @@ public class CutSceneTransitionScript : MonoBehaviour
 
     public void CutSceneTransitionOut()
     {
-        animator.SetTrigger("CutSceneTransitionOut");
         if (talkWithNPC == null && getData == true)
         {
             PlayerManager.inst.PlayerInteract.StartDialogue(talkWithNPC);
             getData = false;
         }
+        animator.SetTrigger("CutSceneTransitionOut");
         //PlayerManager.inst.PlayerInteract.Interacting();
     }
     bool getData;
