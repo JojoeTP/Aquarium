@@ -93,7 +93,8 @@ public class AiMermaidController : MonoBehaviour
     {
         if(other.GetComponent<PlayerManager>() != null)
         {
-            UITransition.inst.MermaidTransitionIn();
+            if(mermaidController != null)
+                UITransition.inst.MermaidTransitionIn();
         }
     }
 
