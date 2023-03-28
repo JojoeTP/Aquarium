@@ -62,18 +62,18 @@ public class PlayerPanel : MonoBehaviour
 
     public void ToggleSetting()
     {
-        if(currentState != PANELSTATE.NONE)
-            OnChangePanel(PANELSTATE.NONE);
-        else if(currentState != PANELSTATE.SETTING)
+        if(currentState != PANELSTATE.SETTING)
             OnChangePanel(PANELSTATE.SETTING);
+        else
+            OnChangePanel(PANELSTATE.NONE);
     }
 
     void ToggleMap()
     {
-        if (currentState != PANELSTATE.NONE)
-            OnChangePanel(PANELSTATE.NONE);
-        else if (currentState != PANELSTATE.MAP)
+        if (currentState != PANELSTATE.MAP)
             OnChangePanel(PANELSTATE.MAP);
+        else
+            OnChangePanel(PANELSTATE.NONE);
     }
 
     public void OnClose()
@@ -110,7 +110,6 @@ public class PlayerPanel : MonoBehaviour
                 break;
             case PANELSTATE.INVENTORY :
                 OnOpenPanel();
-
                 animator.SetTrigger("Bag");
                 inventoryPanel.OnOpenInventory();
 
@@ -139,7 +138,9 @@ public class PlayerPanel : MonoBehaviour
         if(PlayerManager.inst != null)
         {
             if (PlayerManager.inst.playerState != PlayerManager.PLAYERSTATE.OPENPANEL)
+            {
                 animator.SetTrigger("Open");
+            }
         }
     }
 
