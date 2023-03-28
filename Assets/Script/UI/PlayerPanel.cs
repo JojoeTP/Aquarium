@@ -118,12 +118,14 @@ public class PlayerPanel : MonoBehaviour
             case PANELSTATE.SETTING :
                 if (PlayerManager.inst.playerState != PlayerManager.PLAYERSTATE.OPENPANEL)
                     animator.SetTrigger("Open");
+
                 animator.SetTrigger("Setting");
                 PlayerManager.inst.playerState = PlayerManager.PLAYERSTATE.OPENPANEL;
                 break;
             case PANELSTATE.MAP:
                 if (PlayerManager.inst.playerState != PlayerManager.PLAYERSTATE.OPENPANEL)
                     animator.SetTrigger("Open");
+
                 animator.SetTrigger("Map");
                 PlayerManager.inst.playerState = PlayerManager.PLAYERSTATE.OPENPANEL;
                 break;
