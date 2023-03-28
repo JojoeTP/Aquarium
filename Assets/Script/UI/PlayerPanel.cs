@@ -33,7 +33,9 @@ public class PlayerPanel : MonoBehaviour
     {
         SetupInputAction();
         
-        OnChangePanel(PANELSTATE.NONE);
+        currentState = PANELSTATE.NONE;
+        if(PlayerManager.inst != null)
+            PlayerManager.inst.playerState = PlayerManager.PLAYERSTATE.NONE;
     }
 
     void SetupInputAction()
@@ -58,7 +60,7 @@ public class PlayerPanel : MonoBehaviour
             OnChangePanel(PANELSTATE.NONE);
     }
 
-    void ToggleSetting()
+    public void ToggleSetting()
     {
         if(currentState != PANELSTATE.NONE)
             OnChangePanel(PANELSTATE.NONE);
@@ -70,8 +72,8 @@ public class PlayerPanel : MonoBehaviour
     {
         if (currentState != PANELSTATE.NONE)
             OnChangePanel(PANELSTATE.NONE);
-        else if (currentState != PANELSTATE.SETTING)
-            OnChangePanel(PANELSTATE.SETTING);
+        else if (currentState != PANELSTATE.MAP)
+            OnChangePanel(PANELSTATE.MAP);
     }
 
     public void OnClose()
@@ -101,32 +103,52 @@ public class PlayerPanel : MonoBehaviour
         switch(currentState)
         {
             case PANELSTATE.NONE :
-                if (PlayerManager.inst.playerState != PlayerManager.PLAYERSTATE.NONE)
-                    animator.SetTrigger("Exit");
+                OnClosePanel();
 
-                PlayerManager.inst.playerState = PlayerManager.PLAYERSTATE.NONE;
+                if(PlayerManager.inst != null)
+                    PlayerManager.inst.playerState = PlayerManager.PLAYERSTATE.NONE;
                 break;
             case PANELSTATE.INVENTORY :
-                if (PlayerManager.inst.playerState != PlayerManager.PLAYERSTATE.OPENPANEL)
-                    animator.SetTrigger("Open");
+                OnOpenPanel();
 
                 animator.SetTrigger("Bag");
                 inventoryPanel.OnOpenInventory();
-                PlayerManager.inst.playerState = PlayerManager.PLAYERSTATE.OPENPANEL;
 
+                if(PlayerManager.inst != null)
+                    PlayerManager.inst.playerState = PlayerManager.PLAYERSTATE.OPENPANEL;
                 break;
             case PANELSTATE.SETTING :
-                if (PlayerManager.inst.playerState != PlayerManager.PLAYERSTATE.OPENPANEL)
-                    animator.SetTrigger("Open");
+                OnOpenPanel();
                 animator.SetTrigger("Setting");
-                PlayerManager.inst.playerState = PlayerManager.PLAYERSTATE.OPENPANEL;
+
+                if(PlayerManager.inst != null)
+                    PlayerManager.inst.playerState = PlayerManager.PLAYERSTATE.OPENPANEL;
                 break;
             case PANELSTATE.MAP:
-                if (PlayerManager.inst.playerState != PlayerManager.PLAYERSTATE.OPENPANEL)
-                    animator.SetTrigger("Open");
+                OnOpenPanel();
                 animator.SetTrigger("Map");
-                PlayerManager.inst.playerState = PlayerManager.PLAYERSTATE.OPENPANEL;
+
+                if(PlayerManager.inst != null)
+                    PlayerManager.inst.playerState = PlayerManager.PLAYERSTATE.OPENPANEL;
                 break;
+        }
+    }
+
+    void OnOpenPanel()
+    {
+        if(PlayerManager.inst != null)
+        {
+            if (PlayerManager.inst.playerState != PlayerManager.PLAYERSTATE.OPENPANEL)
+                animator.SetTrigger("Open");
+        }
+    }
+
+    void OnClosePanel()
+    {
+        if(PlayerManager.inst != null)
+        {
+            if (PlayerManager.inst.playerState != PlayerManager.PLAYERSTATE.NONE)
+                animator.SetTrigger("Exit");
         }
     }
 }
