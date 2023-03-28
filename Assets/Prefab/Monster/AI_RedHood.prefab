@@ -1848,14 +1848,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7f0069e0b9586445ab39e64db16d1b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactOffset: {x: 0, y: 0, z: 0}
+  interactOffset: {x: 0, y: 2.9, z: 0}
   InteractColor: {r: 0.9519105, g: 0, b: 1, a: 1}
-  AttackOffset: {x: 0, y: 2.38, z: 0}
+  AttackOffset: {x: 0, y: 2.9, z: 0}
   AttackColor: {r: 1, g: 0, b: 0, a: 1}
-  visonOffset: {x: 0, y: 0, z: 0}
-  visionColor: {r: 0, g: 0, b: 0, a: 0}
-  chasingRangeOffset: {x: 0, y: 0, z: 0}
+  visonOffset: {x: 0, y: 2.9, z: 0}
+  visionColor: {r: 0, g: 1, b: 0.011367798, a: 1}
+  chasingRangeOffset: {x: 0, y: 2.9, z: 0}
   ChaseColor: {r: 1, g: 0.57236767, b: 0, a: 1}
+  disappearColor: {r: 0, g: 1, b: 0.9897847, a: 1}
+  disappearRangeOffset: {x: 0, y: 2.9, z: 0}
   stateLableOffset: {x: 0, y: 0, z: 0}
   moveSpeed: 2
   chasingSpeed: 5
@@ -1864,6 +1866,7 @@ MonoBehaviour:
   attackRange: 3
   chasingRange: 15
   chasingTime: 0
+  disappearRange: 0
   moveDirection: {x: -1, y: 0, z: 0}
   currentState: {fileID: 11400000, guid: 0d20a3fbe74b9194a89060d6eacfc9df, type: 2}
   remainState: {fileID: 11400000, guid: 6fbdd43bad4717c4eb7e5b5ad816ffec, type: 2}

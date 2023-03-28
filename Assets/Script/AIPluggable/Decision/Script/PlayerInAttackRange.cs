@@ -17,7 +17,7 @@ namespace PluggableAI
 
         bool IsPlayerInVision(StateController controller)
         {
-            if(controller.IsPlayerInRange(controller.attackRange))
+            if(controller.IsPlayerInRange(controller.attackRange,controller.AttackOffset))
                 return true;
             else
                 return false;

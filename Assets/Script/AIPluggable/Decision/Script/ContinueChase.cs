@@ -24,7 +24,7 @@ namespace PluggableAI
                 return true;
             }
 
-            if(controller.IsPlayerInRange(controller.chasingRange))
+            if(controller.IsPlayerInRange(controller.chasingRange,controller.chasingRangeOffset))
             {
                 ContinueChasing(controller);
                 controller.ResetChasingTime();

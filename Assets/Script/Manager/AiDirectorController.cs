@@ -39,7 +39,7 @@ public class AiDirectorController : MonoBehaviour
         if(spawnAI && isPlayerInSpawnCollider && spawnPosition != null && directorController == null)
         {
             var rand = Random.Range(0,100);
-            if(rand >= 60)
+            if(rand >= 0)
             {
                 UITransition.inst.DirectorTransitionIn();
             }
@@ -61,12 +61,15 @@ public class AiDirectorController : MonoBehaviour
         {
             colorAdj.active = true;
         }
+
+        directorController.animator.SetBool("Event",true);
     }
 
     public void DestroyDirectorAI()
     {
         if (directorController != null)
         {
+            AiDirectorController.inst.directorController.animator.SetBool("Event",false);
             Destroy(directorController.gameObject);
             directorController = null;
             

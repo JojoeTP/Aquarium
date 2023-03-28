@@ -14,7 +14,7 @@ namespace PluggableAI
 
         bool IsPlayerInBackVision(StateController controller)
         {
-            if(controller.IsPlayerInRange(-controller.visionRange))
+            if(controller.IsPlayerInRange(-controller.visionRange,controller.visonOffset))
                 return true;
             else
                 return false;

@@ -8,16 +8,16 @@ public class StateController : MonoBehaviour
 {
     [Header("Debugger")]
     
-    [SerializeField] Vector3 interactOffset;
+    public Vector3 interactOffset;
     [SerializeField] Color InteractColor;
-    [SerializeField] Vector3 AttackOffset;
+    public Vector3 AttackOffset;
     [SerializeField] Color AttackColor;
-    [SerializeField] Vector3 visonOffset;
+    public Vector3 visonOffset;
     [SerializeField] Color visionColor;
-    [SerializeField] Vector3 chasingRangeOffset;
+    public Vector3 chasingRangeOffset;
     [SerializeField] Color ChaseColor;
     [SerializeField] Color disappearColor;
-    [SerializeField] Vector3 disappearRangeOffset;
+    public Vector3 disappearRangeOffset;
     public Vector3 stateLableOffset;
 
     [Header("STATUS")]
@@ -101,10 +101,10 @@ public class StateController : MonoBehaviour
         nextState.InitState();
     }
 
-    public bool IsPlayerInRange(float range)
+    public bool IsPlayerInRange(float range, Vector3 offset)
     {
         
-        if(Physics2D.Raycast(transform.position,moveDirection,range,playerLayer))
+        if(Physics2D.Raycast(transform.position + offset,moveDirection,range,playerLayer))
         {
             if(PlayerManager.inst.playerState != PlayerManager.PLAYERSTATE.HIDING)
                 return true;
@@ -136,9 +136,9 @@ public class StateController : MonoBehaviour
         return false;
     }
 
-    public bool IsWallInRange(float range)
+    public bool IsWallInRange(float range, Vector3 offset)
     {
-        if(Physics2D.Raycast(transform.position,moveDirection,range,wallLayer))
+        if(Physics2D.Raycast(transform.position + offset,moveDirection,range,wallLayer))
             return true;
 
         return false;
@@ -196,13 +196,18 @@ public class StateController : MonoBehaviour
             return;
 
         // animator.SetBool("M_Attack",enabled);
-        animator.SetTrigger("M_Attack_Trigger");
+            animator.SetTrigger("M_Attack_Trigger");
     }
     public void ToggleTimeOut(bool enabled)
     {
         if(animator == null)
             return;
-
-        animator.SetBool("M_Timeout",enabled);
+        
+        foreach(var n in animator.parameters)
+        {
+            if(n.name == "M_Timeout")
+                animator.SetBool("M_Timeout",enabled);
+        }
+        
     }
 }
