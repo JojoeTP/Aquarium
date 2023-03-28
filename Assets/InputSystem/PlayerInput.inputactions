@@ -60,6 +60,15 @@
                     "initialStateCheck": false
                 },
                 {
+                    "name": "ToggleMap",
+                    "type": "Button",
+                    "id": "064a26b9-ef1a-49d3-a38b-b8680e3d8433",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
                     "name": "Light",
                     "type": "Button",
                     "id": "0aae6f12-d39d-4829-8bdd-eb0f20e8af91",
@@ -177,6 +186,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "ToggleSetting",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "9b56ecb6-ade2-4374-9ec6-6b95f9dabf3f",
+                    "path": "<Keyboard>/m",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ToggleMap",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

@@ -9,10 +9,12 @@ public class PlayerPanel : MonoBehaviour
         NONE,
         INVENTORY,
         SETTING,
+        MAP,
     }
-
+    [SerializeField] Animator animator;
     [SerializeField] InventoryPanel inventoryPanel;
     [SerializeField] SettingPanel settingPanel;
+    [SerializeField] MapPanel mapPanel;
 
     PANELSTATE currentState;
     Canvas canvas;
@@ -38,12 +40,14 @@ public class PlayerPanel : MonoBehaviour
     {
         InputSystemManager.Inst.onToggleInventory += ToggleInventory;
         InputSystemManager.Inst.onToggleSetting += ToggleSetting;
+        InputSystemManager.Inst.onToggleMap += ToggleMap;
     }
 
     void OnDestroy() 
     {
         InputSystemManager.Inst.onToggleInventory -= ToggleInventory;
         InputSystemManager.Inst.onToggleSetting -= ToggleSetting;
+        InputSystemManager.Inst.onToggleMap -= ToggleMap;
     }
 
     void ToggleInventory()
@@ -62,6 +66,14 @@ public class PlayerPanel : MonoBehaviour
             OnChangePanel(PANELSTATE.SETTING);
     }
 
+    void ToggleMap()
+    {
+        if (currentState != PANELSTATE.NONE)
+            OnChangePanel(PANELSTATE.NONE);
+        else if (currentState != PANELSTATE.SETTING)
+            OnChangePanel(PANELSTATE.SETTING);
+    }
+
     public void OnClose()
     {
         OnChangePanel(PANELSTATE.NONE);
@@ -77,6 +89,11 @@ public class PlayerPanel : MonoBehaviour
         OnChangePanel(PANELSTATE.SETTING);
     }
 
+    public void OnOpenMap()
+    {
+        OnChangePanel(PANELSTATE.MAP);
+    }
+
     void OnChangePanel(PANELSTATE _panelState)
     {
         currentState = _panelState;
@@ -84,22 +101,30 @@ public class PlayerPanel : MonoBehaviour
         switch(currentState)
         {
             case PANELSTATE.NONE :
-                canvas.enabled = false;
-                inventoryPanel.Canvas.enabled = false;
-                settingPanel.Canvas.enabled = false;
+                if (PlayerManager.inst.playerState != PlayerManager.PLAYERSTATE.NONE)
+                    animator.SetTrigger("Exit");
+
                 PlayerManager.inst.playerState = PlayerManager.PLAYERSTATE.NONE;
                 break;
             case PANELSTATE.INVENTORY :
-                canvas.enabled = true;
-                inventoryPanel.Canvas.enabled = true;
-                settingPanel.Canvas.enabled = false;
+                if (PlayerManager.inst.playerState != PlayerManager.PLAYERSTATE.OPENPANEL)
+                    animator.SetTrigger("Open");
+
+                animator.SetTrigger("Bag");
                 inventoryPanel.OnOpenInventory();
                 PlayerManager.inst.playerState = PlayerManager.PLAYERSTATE.OPENPANEL;
+
                 break;
             case PANELSTATE.SETTING :
-                canvas.enabled = true;
-                inventoryPanel.Canvas.enabled = false;
-                settingPanel.Canvas.enabled = true;
+                if (PlayerManager.inst.playerState != PlayerManager.PLAYERSTATE.OPENPANEL)
+                    animator.SetTrigger("Open");
+                animator.SetTrigger("Setting");
+                PlayerManager.inst.playerState = PlayerManager.PLAYERSTATE.OPENPANEL;
+                break;
+            case PANELSTATE.MAP:
+                if (PlayerManager.inst.playerState != PlayerManager.PLAYERSTATE.OPENPANEL)
+                    animator.SetTrigger("Open");
+                animator.SetTrigger("Map");
                 PlayerManager.inst.playerState = PlayerManager.PLAYERSTATE.OPENPANEL;
                 break;
         }

@@ -22,6 +22,7 @@ public class InputSystemManager : MonoBehaviour
     public UnityAction<InputValue> onSprint;
     public UnityAction onToggleInventory;
     public UnityAction onToggleSetting;
+    public UnityAction onToggleMap;
     public UnityAction<InputValue> onNavigate;
     public UnityAction onClose;
     public UnityAction onLight;
@@ -130,7 +131,12 @@ public class InputSystemManager : MonoBehaviour
 
     void OnToggleSetting()
     {
-            onToggleSetting?.Invoke();
+        onToggleSetting?.Invoke();
+    }
+
+    void OnToggleMap()
+    {
+        onToggleMap?.Invoke();
     }
 
     void OnLight()
