@@ -16,7 +16,7 @@ namespace PluggableAI
 
         bool IsPlayerInFrontVision(StateController controller)
         {
-            if(controller.IsPlayerInRange(controller.visionRange))
+            if(controller.IsPlayerInRange(controller.visionRange,controller.visonOffset))
                 return true;
             else
                 return false;

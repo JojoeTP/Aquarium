@@ -263,6 +263,7 @@ public class ActionEventManager : MonoBehaviour
     public void EnterWell()
     {
         PlayerPrefs.SetInt("DarkMainMenu",1);
+        PlayerManager.inst.playerAnimator.SetBool("Lampitem",true);
     }
 
 }

@@ -15,7 +15,7 @@ namespace PluggableAI
 
         bool IsWallInVision(StateController controller)
         {
-            if(controller.IsWallInRange(controller.attackRange))
+            if(controller.IsWallInRange(controller.attackRange,controller.AttackOffset))
                 return true;
             else
                 return false;
