@@ -14,7 +14,7 @@ namespace PluggableAI
 
         bool IsPlayerPlayerBehide(StateController controller)
         {
-            if(controller.IsPlayerInRange(-controller.visionRange) && PlayerManager.inst.PlayerMovement.IsMove())
+            if(controller.IsPlayerInRange(-controller.visionRange,controller.visonOffset) && AiDirectorController.inst.isPlayerMove)
                 return true;
             else
                 return false;

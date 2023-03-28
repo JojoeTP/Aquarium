@@ -30,7 +30,7 @@ namespace PluggableAI
                     if(door.notForEnemy)
                         return false;
 
-                    if(controller.IsPlayerInRange(controller.chasingRange))
+                    if(controller.IsPlayerInRange(controller.chasingRange,controller.chasingRangeOffset))
                         return false;
 
                     return true;
