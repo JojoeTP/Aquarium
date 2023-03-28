@@ -567,12 +567,20 @@ PrefabInstance:
       value: MainMenuMusic
       objectReference: {fileID: 0}
     - target: {fileID: 6364881888974947744, guid: c340f6ce12ed6e14d91cc8895ea604fa, type: 3}
+      propertyPath: <SFXList>k__BackingField.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6364881888974947744, guid: c340f6ce12ed6e14d91cc8895ea604fa, type: 3}
       propertyPath: <playerMovementSFX>k__BackingField.key
       value: PlayerMovement
       objectReference: {fileID: 0}
     - target: {fileID: 6364881888974947744, guid: c340f6ce12ed6e14d91cc8895ea604fa, type: 3}
       propertyPath: <MainMenuMusic>k__BackingField.sound.Path
       value: event:/Music/MainMenuMusic
+      objectReference: {fileID: 0}
+    - target: {fileID: 6364881888974947744, guid: c340f6ce12ed6e14d91cc8895ea604fa, type: 3}
+      propertyPath: <SFXList>k__BackingField.Array.data[0].key
+      value: test
       objectReference: {fileID: 0}
     - target: {fileID: 6364881888974947744, guid: c340f6ce12ed6e14d91cc8895ea604fa, type: 3}
       propertyPath: <playerMovementSFX>k__BackingField.sound.Path
@@ -595,6 +603,10 @@ PrefabInstance:
       value: 846998473
       objectReference: {fileID: 0}
     - target: {fileID: 6364881888974947744, guid: c340f6ce12ed6e14d91cc8895ea604fa, type: 3}
+      propertyPath: <SFXList>k__BackingField.Array.data[0].sound.Path
+      value: event:/Music/MainMenuMusic
+      objectReference: {fileID: 0}
+    - target: {fileID: 6364881888974947744, guid: c340f6ce12ed6e14d91cc8895ea604fa, type: 3}
       propertyPath: <playerMovementSFX>k__BackingField.sound.Guid.Data1
       value: -132877150
       objectReference: {fileID: 0}
@@ -609,6 +621,22 @@ PrefabInstance:
     - target: {fileID: 6364881888974947744, guid: c340f6ce12ed6e14d91cc8895ea604fa, type: 3}
       propertyPath: <playerMovementSFX>k__BackingField.sound.Guid.Data4
       value: 1234189057
+      objectReference: {fileID: 0}
+    - target: {fileID: 6364881888974947744, guid: c340f6ce12ed6e14d91cc8895ea604fa, type: 3}
+      propertyPath: <SFXList>k__BackingField.Array.data[0].sound.Guid.Data1
+      value: -1786025440
+      objectReference: {fileID: 0}
+    - target: {fileID: 6364881888974947744, guid: c340f6ce12ed6e14d91cc8895ea604fa, type: 3}
+      propertyPath: <SFXList>k__BackingField.Array.data[0].sound.Guid.Data2
+      value: 1249586670
+      objectReference: {fileID: 0}
+    - target: {fileID: 6364881888974947744, guid: c340f6ce12ed6e14d91cc8895ea604fa, type: 3}
+      propertyPath: <SFXList>k__BackingField.Array.data[0].sound.Guid.Data3
+      value: -640150876
+      objectReference: {fileID: 0}
+    - target: {fileID: 6364881888974947744, guid: c340f6ce12ed6e14d91cc8895ea604fa, type: 3}
+      propertyPath: <SFXList>k__BackingField.Array.data[0].sound.Guid.Data4
+      value: 846998473
       objectReference: {fileID: 0}
     - target: {fileID: 7018307969707337321, guid: c340f6ce12ed6e14d91cc8895ea604fa, type: 3}
       propertyPath: m_RootOrder
