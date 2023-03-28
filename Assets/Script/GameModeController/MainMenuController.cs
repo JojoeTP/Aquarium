@@ -24,7 +24,7 @@ public class MainMenuController : MonoBehaviour
     [Header("Panel")]
     [SerializeField] Canvas MainMenuPanel;
     [SerializeField] Canvas StartGamePanel;
-    [SerializeField] Canvas SettingPanel;
+    [SerializeField] PlayerPanel SettingPanel;
 
     [Header("Participate ID")]
     [SerializeField] TMP_InputField inputParticipateID;
