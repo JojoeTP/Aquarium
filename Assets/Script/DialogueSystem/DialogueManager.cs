@@ -7,6 +7,7 @@ using System.IO;
 using System;
 using System.Threading.Tasks;
 using System.Linq;
+using UnityEngine.Events;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -26,6 +27,7 @@ public class DialogueManager : MonoBehaviour
 
     
     bool isChoice = false;
+    bool dialogueHasChoice = false;
 
     //[SerializeField] Sprite[] loadSprite;
     [SerializeField] List<Sprite> characterSprites = new List<Sprite>();
@@ -237,6 +239,10 @@ public class DialogueManager : MonoBehaviour
         {
             //end dialogue or continue
             isChoice = false;
+            
+            if(!dialogueHasChoice)
+                dialogueHasChoice = false;
+
             dialoguePanel.ContinueButton.gameObject.SetActive(true);
             ToggleChoiceButton(false);
             //currentId = openWith[checkChoiceId].choice1;
@@ -245,6 +251,7 @@ public class DialogueManager : MonoBehaviour
         {
             // choice
             isChoice = true;
+            dialogueHasChoice = true;
             dialoguePanel.ContinueButton.gameObject.SetActive(false);
             ToggleChoiceButton(true);
             dialoguePanel.ChoiceButton1Text.text = openWith[checkChoiceId].choice1Text;
@@ -254,6 +261,11 @@ public class DialogueManager : MonoBehaviour
 
     void ToggleChoiceButton(bool enabled)
     {
+        UnityAction active = () => currentNPC.triggerEvents.Invoke();
+        dialoguePanel.ChoiceButton1.onClick.AddListener(active);
+        dialoguePanel.ChoiceButton1.onClick.AddListener(() => dialoguePanel.ChoiceButton1.onClick.RemoveListener(active)); //ไม่แน่ใจว่าจะใช้ได้ไหม
+        
+
         dialoguePanel.ChoiceButton1.gameObject.SetActive(enabled);
         dialoguePanel.ChoiceButton2.gameObject.SetActive(enabled);
     }
@@ -315,11 +327,16 @@ public class DialogueManager : MonoBehaviour
             print("save");
             SaveGameSystemManager.inst.SaveGame();
         }
+
         if (currentNPC != null)
         {
-            currentNPC.triggerEvents.Invoke();
+            if(!dialogueHasChoice)
+                currentNPC.triggerEvents.Invoke();
+            
             currentNPC = null;
         }
+
+        dialogueHasChoice = false;
         currentDialogue = null;
         PlayerManager.inst.playerState = PlayerManager.PLAYERSTATE.NONE;
     }
