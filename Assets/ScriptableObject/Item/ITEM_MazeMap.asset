@@ -17,6 +17,7 @@ MonoBehaviour:
     ItemName: Map
     ItemDescription: Map
     ItemSprite: {fileID: 21300000, guid: 944d6e147004c2240a47611717658c54, type: 3}
+    InventoryItemSprite: {fileID: 21300000, guid: db92df087f5dbba458dcf0338098152a, type: 3}
     ItemPosition: {x: -85.11, y: -46.56, z: 0}
     ItemScale: {x: 0.04266, y: 0.04266, z: 0.04266}
     ItemType: 8

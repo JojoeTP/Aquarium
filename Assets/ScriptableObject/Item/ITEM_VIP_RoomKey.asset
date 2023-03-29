@@ -17,6 +17,7 @@ MonoBehaviour:
     ItemName: VIR Room Key
     ItemDescription: Key to open VIP room in Cafeteria
     ItemSprite: {fileID: 21300000, guid: 41a048ab13b9e5a4c919b3fcaea440e8, type: 3}
+    InventoryItemSprite: {fileID: 21300000, guid: 41a048ab13b9e5a4c919b3fcaea440e8, type: 3}
     ItemPosition: {x: 0, y: 0, z: 0}
     ItemScale: {x: 0, y: 0, z: 0}
     ItemType: 0
