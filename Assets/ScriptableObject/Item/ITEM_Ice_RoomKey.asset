@@ -17,6 +17,7 @@ MonoBehaviour:
     ItemName: Iceroom Key
     ItemDescription: Key to enter Ice room
     ItemSprite: {fileID: 21300000, guid: eb08dc160c589bb48a52c821c32dffe2, type: 3}
+    InventoryItemSprite: {fileID: 21300000, guid: eb08dc160c589bb48a52c821c32dffe2, type: 3}
     ItemPosition: {x: 41.058, y: -19.41, z: 0}
     ItemScale: {x: 0.008451771, y: 0.008451771, z: 0.008451771}
     ItemType: 1

@@ -55,20 +55,41 @@ public class InventoryPanel : MonoBehaviour
             });
 
             var itemImage = clone.Find("Image").GetComponent<Image>();
-            itemImage.sprite = itemData.ItemSprite;
+
+            if(itemData.InventoryItemSprite != null)
+                itemImage.sprite = itemData.InventoryItemSprite;
+            else
+                itemImage.sprite = itemData.ItemSprite;
+            
         }
     }
 
     public void OnOpenInventory()
     {
+        HideItemDetail();
         GenerateItemSlot();
+    }
+
+    void HideItemDetail()
+    {
+        itemDetail_Image.gameObject.SetActive(false);
+        itemDetail_Name.gameObject.SetActive(false);
+        itemDetail_Infomation.gameObject.SetActive(false);
     }
 
     void OnClickItem(ItemData item)
     {
-        itemDetail_Image.sprite = item.ItemSprite;
+        if(item.InventoryItemSprite != null)
+            itemDetail_Image.sprite = item.InventoryItemSprite;
+        else
+            itemDetail_Image.sprite = item.ItemSprite;
+        
         itemDetail_Name.text = item.ItemName;
         itemDetail_Infomation.text = item.ItemDescription;
+
+        itemDetail_Image.gameObject.SetActive(true);
+        itemDetail_Name.gameObject.SetActive(true);
+        itemDetail_Infomation.gameObject.SetActive(true);
     }
 
     void ClearChildren(Transform parent)

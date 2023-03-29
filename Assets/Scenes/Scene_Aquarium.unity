@@ -38105,7 +38105,7 @@ PrefabInstance:
     - target: {fileID: 4966732993388418438, guid: 1b3dcc0b488f4414c991160dad5fe269, type: 3}
       propertyPath: Ch1_D03_01
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 489605946}
     - target: {fileID: 4966732993388418438, guid: 1b3dcc0b488f4414c991160dad5fe269, type: 3}
       propertyPath: Ch1_D06_01
       value: 
@@ -38114,6 +38114,10 @@ PrefabInstance:
       propertyPath: Ch1_D11_01
       value: 
       objectReference: {fileID: 1216950126}
+    - target: {fileID: 4966732993388418438, guid: 1b3dcc0b488f4414c991160dad5fe269, type: 3}
+      propertyPath: Ch2_D02_01
+      value: 
+      objectReference: {fileID: 298884939}
     - target: {fileID: 4966732993388418438, guid: 1b3dcc0b488f4414c991160dad5fe269, type: 3}
       propertyPath: Wall_Aquarium
       value: 
@@ -38134,6 +38138,10 @@ PrefabInstance:
       propertyPath: directorPrefab
       value: 
       objectReference: {fileID: 6450180032453249195, guid: b011d45d5eb53534486ae2a2fae2216d, type: 3}
+    - target: {fileID: 4966732993388418438, guid: 1b3dcc0b488f4414c991160dad5fe269, type: 3}
+      propertyPath: doorEncryption
+      value: 
+      objectReference: {fileID: 2118471162}
     - target: {fileID: 4966732993388418438, guid: 1b3dcc0b488f4414c991160dad5fe269, type: 3}
       propertyPath: skeletonPrefab
       value: 
@@ -48160,6 +48168,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3402447144988968730, guid: 3d5b4812a40a2494d97f6e0c96153612, type: 3}
   m_PrefabInstance: {fileID: 2118471160}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2118471162 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3402447144988968731, guid: 3d5b4812a40a2494d97f6e0c96153612, type: 3}
+  m_PrefabInstance: {fileID: 2118471160}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ad15805ff09f50489742cbbbd6575f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2119176007
 PrefabInstance:
   m_ObjectHideFlags: 0

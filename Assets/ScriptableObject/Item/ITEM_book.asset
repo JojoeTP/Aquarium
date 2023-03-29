@@ -17,6 +17,7 @@ MonoBehaviour:
     ItemName: Book
     ItemDescription: Diary
     ItemSprite: {fileID: 21300000, guid: 5f06cf219296c834e9d800745de7a77b, type: 3}
+    InventoryItemSprite: {fileID: 21300000, guid: aab4739ccd6e21e46b5de64d7d9186d1, type: 3}
     ItemPosition: {x: 174.55, y: -151.06, z: 0}
     ItemScale: {x: 0.04157281, y: 0.04157281, z: 0.04157281}
     ItemType: 256
