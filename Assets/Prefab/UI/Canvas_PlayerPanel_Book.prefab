@@ -1847,6 +1847,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4116733382373640171}
   - component: {fileID: 4116733382373640170}
+  - component: {fileID: 1548603780935770673}
   m_Layer: 5
   m_Name: BGM
   m_TagString: Untagged
@@ -1929,6 +1930,19 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1548603780935770673
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4116733382373640180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71f1924c7e0e6314097a7111959f2f89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volumeType: 2
 --- !u!1 &4116733382412707939
 GameObject:
   m_ObjectHideFlags: 0
@@ -3457,6 +3471,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4116733383191300733}
   - component: {fileID: 4116733383191300732}
+  - component: {fileID: 358928706582477806}
   m_Layer: 5
   m_Name: Sound Effect
   m_TagString: Untagged
@@ -3539,6 +3554,19 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &358928706582477806
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4116733383191300734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71f1924c7e0e6314097a7111959f2f89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volumeType: 1
 --- !u!1 &4116733383213994519
 GameObject:
   m_ObjectHideFlags: 0
