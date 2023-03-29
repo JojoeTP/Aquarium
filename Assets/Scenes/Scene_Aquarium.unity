@@ -4563,7 +4563,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 209489065}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 87, y: -44.55, z: 0}
+  m_LocalPosition: {x: 93.61, y: -44.55, z: 0}
   m_LocalScale: {x: 1.95, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4598,7 +4598,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   connectDoor: {fileID: 123502702}
   conditionItem: {fileID: 0}
-  isSpacialDoor: 0
+  isSpacialDoor: 1
   notForEnemy: 0
   triggerDoorEvents:
     m_PersistentCalls:
@@ -4620,7 +4620,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -3.37, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -8611,7 +8611,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7759006, y: 1}
+    m_SensorSize: {x: 1.7768595, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -17631,7 +17631,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 766520383}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 85.2, y: -21.14, z: 0}
+  m_LocalPosition: {x: 93.48, y: -21.14, z: 0}
   m_LocalScale: {x: 2.25, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -17666,7 +17666,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   connectDoor: {fileID: 1826412847}
   conditionItem: {fileID: 0}
-  isSpacialDoor: 0
+  isSpacialDoor: 1
   notForEnemy: 0
   triggerDoorEvents:
     m_PersistentCalls:
@@ -17688,7 +17688,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -3.45, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -21265,7 +21265,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 890989921}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 8.4, y: 17.09, z: 0}
+  m_LocalPosition: {x: 15.06, y: 17.09, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -21300,7 +21300,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   connectDoor: {fileID: 941436345}
   conditionItem: {fileID: 0}
-  isSpacialDoor: 0
+  isSpacialDoor: 1
   notForEnemy: 0
   triggerDoorEvents:
     m_PersistentCalls:
@@ -21322,7 +21322,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0067830086, y: -0.07462323}
+  m_Offset: {x: -6.39, y: -0.07462323}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -47437,7 +47437,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2095078653}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.6, y: -22.8, z: 0}
+  m_LocalPosition: {x: 14.83, y: -22.8, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -47472,7 +47472,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   connectDoor: {fileID: 1939489495}
   conditionItem: {fileID: 0}
-  isSpacialDoor: 0
+  isSpacialDoor: 1
   notForEnemy: 0
   triggerDoorEvents:
     m_PersistentCalls:
@@ -47494,7 +47494,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0067830086, y: -0.07462323}
+  m_Offset: {x: -6.06, y: -0.07462323}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
