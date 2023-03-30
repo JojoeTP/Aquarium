@@ -40,7 +40,7 @@ public class AiRedHoodController : MonoBehaviour
         if(spawnAI && isPlayerInSpawnCollider && spawnPosition != null && redHoodController == null)
         {
             var rand = Random.Range(0,100);
-            if(rand >= 75)
+            if(rand >= 65)
             {
                 // UITransition.inst.RedHoodTransitionIn();
                 CreateRedHood();

@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 46ae0de02bf1e0945810f84cfdbfb621, type: 3}
-  m_Name: ITEM_Book
+  m_Name: ITEM_book
   m_EditorClassIdentifier: 
   itemData:
     ItemID: ITEM_Book
@@ -21,4 +21,6 @@ MonoBehaviour:
     ItemPosition: {x: 174.55, y: -151.06, z: 0}
     ItemScale: {x: 0.04157281, y: 0.04157281, z: 0.04157281}
     ItemType: 256
-    dialogueItemId: Ch4_D03_01
+    dialogueItemId: 
+    conditionItem: {fileID: 0}
+    cannotPickUpDialogueItemId: 

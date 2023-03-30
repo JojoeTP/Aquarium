@@ -13,12 +13,14 @@ MonoBehaviour:
   m_Name: ITEM_Bear_Kinfe
   m_EditorClassIdentifier: 
   itemData:
-    ItemID: ITEM_Bear_Kinfe
-    ItemName: Kinfe
+    ItemID: ITEM_Bear_Knife
+    ItemName: Knife
     ItemDescription: A coin of mystery
     ItemSprite: {fileID: 21300000, guid: 05feaaf68ee56f046a374d3d98574dda, type: 3}
     InventoryItemSprite: {fileID: 21300000, guid: 2ff0afa39cd2a9f45a06894f66dfbc8e, type: 3}
     ItemPosition: {x: 421.21, y: -146.56, z: 0}
     ItemScale: {x: 0.1385608, y: 0.1385608, z: 0}
     ItemType: 32
-    dialogueItemId: Ch3_D05_01
+    dialogueItemId: 
+    conditionItem: {fileID: 0}
+    cannotPickUpDialogueItemId: 

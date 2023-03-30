@@ -156,37 +156,45 @@ public class ItemManager : MonoBehaviour
             case ITEMTYPE.ITEM6:
                 item.triggerEvents.AddListener( () => 
                     {
-                        ActionEventManager.inst.AlertText(10.0f);
-                        ActionEventManager.inst.SpawnSister(false, 10.0f);
+                        //เก็บเสร็จเปิด dialogue เเล้วค่อย ให้ alert
+                        ActionEventManager.inst.SetActiveDialogueCh3_D05_01();
                     }
                 );
                 break;
             case ITEMTYPE.ITEM7:
                 item.triggerEvents.AddListener( () => 
                     {
-
+                        DialogueManager.inst.currentDialogue = item.itemObject.itemData.dialogueItemId;
+                        DialogueManager.inst.StartDialogue();
+                        ActionEventManager.inst.UnLockDoor_Ch3_D04_01_Config();
                     }
                 );
                 break;
             case ITEMTYPE.ITEM8:
                 item.triggerEvents.AddListener( () => 
                     {
-
+                        ActionEventManager.inst.OnPickUpCircusCoin();
+                        DialogueManager.inst.currentDialogue = item.itemObject.itemData.dialogueItemId;
+                        DialogueManager.inst.StartDialogue();
                     }
                 );
                 break;
             case ITEMTYPE.ITEM9:
                 item.triggerEvents.AddListener( () => 
                     {
-
+                        ActionEventManager.inst.EnableAIMermaid(false);
+                        ActionEventManager.inst.SetActiveDialogueCh4_D03_01();
                     }
                 );
                 break;
             case ITEMTYPE.ITEM10:
                 item.triggerEvents.AddListener( () => 
                     {
-
-                    }
+                        AiDirectorController.inst.spawnAI = true;
+                        ActionEventManager.inst.SetActiveDialogueCh4_D05_01();
+                        ActionEventManager.inst.SetActiveDialogueCh4_D06_01();
+                        ActionEventManager.inst.SetActiveDialogueCh4_D07_01();
+                    }   
                 );
                 break;
         }

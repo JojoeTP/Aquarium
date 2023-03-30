@@ -14,4 +14,6 @@ public class ItemData
     public Vector3 ItemScale;
     public ITEMTYPE ItemType;
     public string dialogueItemId;
+    public ItemScriptableObject conditionItem;
+    public string cannotPickUpDialogueItemId;
 }

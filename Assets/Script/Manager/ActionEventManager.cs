@@ -13,9 +13,16 @@ public class ActionEventManager : MonoBehaviour
     [SerializeField] Sprite dark_LabyrinthSprite;
     [SerializeField] List<TalkWithNPC> labyrinthENDShowDialogue;
     [SerializeField] List<TalkWithNPC> labyrinthENDHideDialogue;
+
+    [Header("Circus Coin")]
+    [SerializeField] List<TalkWithNPC> CircusCoinShowDialogue;
+    [SerializeField] List<TalkWithNPC> CircusCoinHideDialogue;
     
     [HideInInspector]
     public bool isPuzzleDone = false;
+
+    [Header("Aquariam")]
+    [SerializeField] GameObject LockDoorEndGame;
 
     [Header("Enemy")]
     [SerializeField] GameObject skeletonPrefab;
@@ -24,7 +31,6 @@ public class ActionEventManager : MonoBehaviour
     Transform spawnPosition;
 
     [Header("Brother Sister")]
-    [SerializeField] GameObject brotherPrefab;
     [SerializeField] Transform spawnSisterPosition;
     [SerializeField] GameObject sisterPrefab;
     [SerializeField] GameObject alertCanvas;
@@ -32,20 +38,30 @@ public class ActionEventManager : MonoBehaviour
     [Header("Wall")]
     [SerializeField] GameObject Wall_Cafeteria;
     [SerializeField] GameObject Wall_Labyrinth;
-    [SerializeField] GameObject Wall_Aquarium;
+    [SerializeField] GameObject Wall_Circus;
 
     [Header("Dialogue & Cutescene")]
     [SerializeField] TalkWithNPC Ch0_C01_01;
     [SerializeField] TalkWithNPC Ch1_D11_01; 
     [SerializeField] TalkWithNPC Ch1_D03_01; 
     [SerializeField] TalkWithNPC Ch1_D06_01; 
-    [SerializeField] TalkWithNPC Ch2_D02_01; 
-    
+    [SerializeField] TalkWithNPC Ch3_D05_01;
+    [SerializeField] TalkWithNPC Ch4_D03_01;
+    [SerializeField] TalkWithNPC Ch4_D05_01; 
+    [SerializeField] TalkWithNPC Ch4_D06_01;  
+    [SerializeField] TalkWithNPC Ch4_D07_01;  
 
     [Header("LockDoor")]
+    [SerializeField] DoorSystem cafeteriaDoor;
+    [SerializeField] DoorSystem labyrinthDoor;
+    [SerializeField] DoorSystem CircusDoor;
+    [SerializeField] DoorSystem aquariamDoor;
+
+    [Header("UnLockDoor")]
     [SerializeField] LockDoorConfig Ch0_C03_01_Config;
     [SerializeField] LockDoorConfig Ch1_D01_2_01_Config;
     [SerializeField] LockDoorConfig Ch1_D04_01_Config;
+    [SerializeField] LockDoorConfig Ch3_D04_01_Config;
 
     [Header("Item")]
     [SerializeField] ItemScriptableObject VIPRoom;
@@ -76,12 +92,31 @@ public class ActionEventManager : MonoBehaviour
         {
             n.SetActiveFalse();
         }
+
         SetActiveFalse_Wall_Labyrinth();
 
         labyrinthENDSpriteRenderer.sprite = dark_LabyrinthSprite;
         SoundManager.Inst.MuteBGM();
         //จะปิดไรเพิ่มก็ เพิ่มcodeตรงนี้
     }
+
+    public void OnPickUpCircusCoin()
+    {
+        foreach(var n in CircusCoinShowDialogue)
+        {
+            n.gameObject.SetActive(true);
+        }
+
+        foreach(var n in CircusCoinHideDialogue)
+        {
+            n.SetActiveFalse();
+        }
+
+        SetActiveFalse_Wall_Circus();
+
+        AiRedHoodController.inst.spawnAI = false;
+    }
+
 #endregion
 
     public void UpdateSpawnPosition(Transform newSpawnPosition)
@@ -124,6 +159,18 @@ public class ActionEventManager : MonoBehaviour
         AiJunitorController.inst.SetActiveAI(value);
     }
 
+    public void EnableAIMermaid(bool value)
+    {
+        AiMermaidController.inst.SetActiveAI(value);
+    }
+
+    public void SpawnSisterAndAlert()
+    {
+        AiRedHoodController.inst.spawnAI = true;
+        ActionEventManager.inst.AlertText(10.0f);
+        ActionEventManager.inst.SpawnSister(false, 10.0f);
+    }
+
     public void SpawnSister(bool isSpawn , float delayBeforeSpawn)
     {
         if (isSpawn == false)
@@ -132,6 +179,7 @@ public class ActionEventManager : MonoBehaviour
             StartCoroutine(DelaySpawnSister(delayBeforeSpawn));
         }
     }
+
     IEnumerator DelaySpawnSister(float time)
     {
         yield return new WaitForSeconds(time);
@@ -149,6 +197,19 @@ public class ActionEventManager : MonoBehaviour
         yield return new WaitForSeconds(time);
         alertCanvas.SetActive(false);
     }
+
+    public void MermaidTrigger()
+    {
+        AiMermaidController.inst.spawnAI = true;
+        AiMermaidController.inst.CreateMermaidAIAtFirstPosition();
+    }
+
+    public void DisableMermaidSpawn()
+    {
+        AiMermaidController.inst.spawnAI = false;
+        AiMermaidController.inst.DestroyMermaidAI();
+    }
+
     public void CutSceneDoor()
     {
         print("CutSceneDoor");
@@ -188,6 +249,31 @@ public class ActionEventManager : MonoBehaviour
         }
     }
 
+    void LockDoorAfterGetCoin(DoorSystem door)
+    {
+        door.isLockedDoor = true;
+    }
+
+    public void LockCafeteriaDoor()
+    {
+        LockDoorAfterGetCoin(cafeteriaDoor);
+    }
+
+    public void LockLabyrinthDoor()
+    {
+        LockDoorAfterGetCoin(labyrinthDoor);
+    }
+
+    public void LockCircusDoor()
+    {
+        LockDoorAfterGetCoin(CircusDoor);
+    }
+
+    public void LockAquariamDoor()
+    {
+        LockDoorAfterGetCoin(aquariamDoor);
+    }
+
     public void UnLockDoor_Ch0_C03_01()
     {
         UnlockDoor(Ch0_C03_01_Config);
@@ -201,6 +287,11 @@ public class ActionEventManager : MonoBehaviour
     public void UnLockDoor_Ch1_D04_01()
     {
         UnlockDoor(Ch1_D04_01_Config);
+    }
+
+    public void UnLockDoor_Ch3_D04_01_Config()
+    {
+        UnlockDoor(Ch3_D04_01_Config);
     }
 
     public void WarpToPosition(Transform transform)
@@ -233,9 +324,9 @@ public class ActionEventManager : MonoBehaviour
         Wall_Labyrinth.SetActive(false);
     }
 
-    public void SetActiveFalse_Wall_Aquarium()
+    public void SetActiveFalse_Wall_Circus()
     {
-        Wall_Aquarium.SetActive(false);
+        Wall_Circus.SetActive(false);
     }
 
     public void SetActiveDialogueCh1_D03_01()
@@ -246,6 +337,36 @@ public class ActionEventManager : MonoBehaviour
     public void SetActiveDialogueCh0_C01_01()
     {
         SetActiveDialogue(Ch0_C01_01);
+    }
+
+    public void SetActiveDialogueCh3_D05_01()
+    {
+        SetActiveDialogue(Ch3_D05_01);
+    }
+
+    public void SetActiveDialogueCh4_D03_01()
+    {
+        SetActiveDialogue(Ch4_D03_01);
+    }
+
+    public void SetActiveDialogueCh4_D05_01()
+    {
+        SetActiveDialogue(Ch4_D05_01);
+    }
+
+    public void SetActiveDialogueCh4_D06_01()
+    {
+        SetActiveDialogue(Ch4_D06_01);
+    }
+
+    public void SetActiveDialogueCh4_D07_01()
+    {
+        SetActiveDialogue(Ch4_D07_01);
+    }
+
+    public void SetActiveLockDoorDialogueEndGame()
+    {
+        LockDoorEndGame.SetActive(true);
     }
 
     public void ChangeDialogueCh1_D06_01()
@@ -264,6 +385,16 @@ public class ActionEventManager : MonoBehaviour
     {
         PlayerPrefs.SetInt("DarkMainMenu",1);
         PlayerManager.inst.playerAnimator.SetBool("Lampitem",true);
+    }
+
+    public void BackToMainMenu()
+    {
+
+    }
+
+    public void WhiteTransition()
+    {
+        
     }
 
 }

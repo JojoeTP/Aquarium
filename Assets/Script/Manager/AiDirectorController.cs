@@ -39,7 +39,7 @@ public class AiDirectorController : MonoBehaviour
         if(spawnAI && isPlayerInSpawnCollider && spawnPosition != null && directorController == null)
         {
             var rand = Random.Range(0,100);
-            if(rand >= 0)
+            if(rand >= 70)
             {
                 UITransition.inst.DirectorTransitionIn();
             }
