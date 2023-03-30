@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 46ae0de02bf1e0945810f84cfdbfb621, type: 3}
-  m_Name: ITEM_Coin_Aquarium
+  m_Name: Item_Coin_Aquarium
   m_EditorClassIdentifier: 
   itemData:
     ItemID: Item_Coin_Aquarium

@@ -11,5 +11,7 @@ public class PlayerInventory : MonoBehaviour
     public void AddItem(ItemScriptableObject item)
     {
         playerItemDictionary.Add(item.name,item.itemData.ItemID);
+        print("Get Item");
+        
     }
 }

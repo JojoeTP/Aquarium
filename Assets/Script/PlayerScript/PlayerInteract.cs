@@ -135,6 +135,18 @@ public class PlayerInteract : MonoBehaviour
     {
         if(overlap.GetComponent<Item>() != null)
         {
+            if(overlap.GetComponent<Item>().itemObject.itemData.conditionItem != null)
+            {
+                if(!PlayerManager.inst.PlayerInventory.PlayerItemDictionary.ContainsValue(overlap.GetComponent<Item>().itemObject.itemData.conditionItem.itemData.ItemID))
+                {
+                    DialogueManager.inst.currentDialogue = overlap.GetComponent<Item>().itemObject.itemData.cannotPickUpDialogueItemId;
+                    DialogueManager.inst.StartDialogue();
+                    return false;
+                }
+                else
+                    return true;
+            }
+
             return true;
         }
 

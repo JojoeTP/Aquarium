@@ -171,7 +171,7 @@ public class ItemManager : MonoBehaviour
             case ITEMTYPE.ITEM8:
                 item.triggerEvents.AddListener( () => 
                     {
-
+                        ActionEventManager.inst.OnPickUpCircusCoin();
                     }
                 );
                 break;
