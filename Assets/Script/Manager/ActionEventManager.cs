@@ -24,15 +24,8 @@ public class ActionEventManager : MonoBehaviour
     [Header("Aquariam")]
     [SerializeField] GameObject LockDoorEndGame;
 
-    [Header("Enemy")]
-    [SerializeField] GameObject skeletonPrefab;
-    [SerializeField] GameObject mermaidPrefab;
-    [SerializeField] GameObject directorPrefab;
-    Transform spawnPosition;
-
     [Header("Brother Sister")]
     [SerializeField] Transform spawnSisterPosition;
-    [SerializeField] GameObject sisterPrefab;
     [SerializeField] GameObject alertCanvas;
 
     [Header("Wall")]
@@ -68,10 +61,6 @@ public class ActionEventManager : MonoBehaviour
 
     [Header("Puzzle")]
     [SerializeField] DoorEncryption doorEncryption;
-
-    [HideInInspector]
-    public StateController sister;
-    
 
     void Awake() 
     {
@@ -119,16 +108,6 @@ public class ActionEventManager : MonoBehaviour
 
 #endregion
 
-    public void UpdateSpawnPosition(Transform newSpawnPosition)
-    {
-        spawnPosition = newSpawnPosition;
-    }
-
-    public StateController SpawnEnemy(GameObject enemy)
-    {
-        return Instantiate(enemy,spawnPosition.transform.position,spawnPosition.transform.rotation).GetComponent<StateController>();
-    }
-
     public void SpawnSkeleton(Transform newSpawnPosition)
     {
         AiJunitorController.inst.SpawnPosition = newSpawnPosition;
@@ -175,7 +154,6 @@ public class ActionEventManager : MonoBehaviour
     {
         if (isSpawn == false)
         {
-            UpdateSpawnPosition(spawnSisterPosition);
             StartCoroutine(DelaySpawnSister(delayBeforeSpawn));
         }
     }
@@ -183,7 +161,8 @@ public class ActionEventManager : MonoBehaviour
     IEnumerator DelaySpawnSister(float time)
     {
         yield return new WaitForSeconds(time);
-        sister = SpawnEnemy(sisterPrefab);
+        AiRedHoodController.inst.spawnPosition = spawnSisterPosition;
+        AiRedHoodController.inst.CreateRedHood();
     }
 
     public void AlertText(float time)
