@@ -22,3 +22,5 @@ MonoBehaviour:
     ItemScale: {x: 2, y: 2, z: 1.601}
     ItemType: 64
     dialogueItemId: Ch3_D07_01
+    conditionItem: {fileID: 11400000, guid: ce13ddd22919e3d45b54be6e5c279bad, type: 2}
+    cannotPickUpDialogueItemId: Ch3_D03_01_01

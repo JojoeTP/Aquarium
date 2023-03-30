@@ -69,7 +69,7 @@ public class LiftManager : MonoBehaviour
     {
         Canvas_Lift.SetActive(true);
         ShowLiftButton(lift);
-        if (CheckCondition())
+        if (CheckCondition() && lift.leftSide)
         {
             floor5_Button.SetActive(true);
         }

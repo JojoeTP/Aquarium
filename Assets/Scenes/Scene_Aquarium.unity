@@ -658,6 +658,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5003687413167140265, guid: 187f9bf5a1c60da498d1e3898116aba1, type: 3}
   m_PrefabInstance: {fileID: 18480190}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &20444342
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 20444343}
+  m_Layer: 0
+  m_Name: Ch4_D05_01 _WarpPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 6519382022992737161, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &20444343
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 20444342}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 467.54, y: -74.91, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 953765842}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &21171555
 GameObject:
   m_ObjectHideFlags: 0
@@ -2570,7 +2601,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 109635910}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 366.31, y: -97.39, z: 0}
+  m_LocalPosition: {x: 371.96, y: -97.39, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2605,7 +2636,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   connectDoor: {fileID: 412418657}
   conditionItem: {fileID: 0}
-  isSpacialDoor: 1
+  isSpacialDoor: 0
   notForEnemy: 0
   triggerDoorEvents:
     m_PersistentCalls:
@@ -2627,7 +2658,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 6.32, y: -0.07462323}
+  m_Offset: {x: 0, y: -0.07462323}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -4125,7 +4156,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mermaidPrefab: {fileID: 8285637378592795650, guid: 8acc0672ac84c4a419705b9ba736074a, type: 3}
   respawnPosition: {fileID: 1701350789}
-  firstSpawnPosition: {fileID: 793312029}
+  firstSpawnPosition: {fileID: 1364233867}
   spawnPositionList:
   - {fileID: 793312029}
   - {fileID: 1019542263}
@@ -5949,7 +5980,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 248702029}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 373.37, y: -121.39, z: 0}
+  m_LocalPosition: {x: 364.45, y: -121.39, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -6006,7 +6037,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0067830086, y: -0.07462323}
+  m_Offset: {x: 10.4, y: -0.07462323}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -6131,6 +6162,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1364233867}
   - {fileID: 793312029}
   - {fileID: 1019542263}
   - {fileID: 1476032355}
@@ -6827,7 +6859,9 @@ Transform:
   - {fileID: 2137611197}
   - {fileID: 1399735712}
   - {fileID: 1218761543}
+  - {fileID: 365960907}
   - {fileID: 904251028}
+  - {fileID: 1315314135}
   - {fileID: 1247662253}
   - {fileID: 1886472835}
   - {fileID: 1340679215}
@@ -7138,6 +7172,7 @@ Transform:
   - {fileID: 1735966503}
   - {fileID: 1506671316}
   - {fileID: 1825368142}
+  - {fileID: 1162716176}
   - {fileID: 811230434}
   m_Father: {fileID: 2146067283}
   m_RootOrder: 3
@@ -8006,6 +8041,110 @@ BoxCollider2D:
   m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 5.779109, y: 5.6403522}
+  m_EdgeRadius: 0
+--- !u!1 &365960906
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 365960907}
+  - component: {fileID: 365960909}
+  - component: {fileID: 365960908}
+  m_Layer: 0
+  m_Name: Ch4_D03_01
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &365960907
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 365960906}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 38.6, y: -147.52, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 297376245}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &365960908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 365960906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96cd48e12b93e2644b317eb0a2a62a23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isSave: 0
+  isCutScene: 1
+  isRunDialogueWhenOverlap: 1
+  haveDialogueBg: 0
+  startWithDialogueId: Ch4_D03_01
+  triggerEvents:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1619314585}
+        m_TargetAssemblyTypeName: ActionEventManager, Assembly-CSharp
+        m_MethodName: EnableAIMermaid
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1218761542}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  NPCList: []
+--- !u!61 &365960909
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 365960906}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 3.6630511, y: -0.6528969}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 13.264281, y: 6.9238358}
   m_EdgeRadius: 0
 --- !u!1001 &371467647
 PrefabInstance:
@@ -9125,7 +9264,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e662c8d3caabeb468f3a29f7c2d0c66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  connectDoor: {fileID: 412418657}
+  connectDoor: {fileID: 109635911}
   conditionItem: {fileID: 0}
   isSpacialDoor: 0
   notForEnemy: 0
@@ -9825,7 +9964,19 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1619314585}
         m_TargetAssemblyTypeName: ActionEventManager, Assembly-CSharp
-        m_MethodName: Test
+        m_MethodName: LockLabyrinthDoor
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 464255396}
+        m_TargetAssemblyTypeName: TalkWithNPC, Assembly-CSharp
+        m_MethodName: SetActiveFalse
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -13863,6 +14014,7 @@ RectTransform:
   - {fileID: 355171402}
   - {fileID: 2119176008}
   - {fileID: 4269961513675082471}
+  - {fileID: 1401441170}
   m_Father: {fileID: 1156811140}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -15879,6 +16031,98 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &694622380
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 694622381}
+  - component: {fileID: 694622383}
+  - component: {fileID: 694622382}
+  m_Layer: 0
+  m_Name: Ch0_C08_01
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &694622381
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 694622380}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 671.81, y: 47.949997, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 744111349}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &694622382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 694622380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96cd48e12b93e2644b317eb0a2a62a23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isSave: 0
+  isCutScene: 1
+  isRunDialogueWhenOverlap: 1
+  haveDialogueBg: 0
+  startWithDialogueId: Ch0_C08_01
+  triggerEvents:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1619314585}
+        m_TargetAssemblyTypeName: ActionEventManager, Assembly-CSharp
+        m_MethodName: EnterWell
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  NPCList: []
+--- !u!61 &694622383
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 694622380}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.5496826, y: -0.6528969}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 6.6314697, y: 6.9238358}
+  m_EdgeRadius: 0
 --- !u!1 &701082517
 GameObject:
   m_ObjectHideFlags: 0
@@ -17167,6 +17411,7 @@ Transform:
   - {fileID: 253976191}
   - {fileID: 307893183}
   - {fileID: 2075832083}
+  - {fileID: 694622381}
   - {fileID: 1583558498}
   - {fileID: 1413032865}
   m_Father: {fileID: 2146067283}
@@ -18537,7 +18782,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 250431453}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &795696653
 GameObject:
@@ -18877,7 +19122,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 309875256}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &811230435
 MonoBehaviour:
@@ -18899,6 +19144,18 @@ MonoBehaviour:
   triggerEvents:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1619314585}
+        m_TargetAssemblyTypeName: ActionEventManager, Assembly-CSharp
+        m_MethodName: LockCircusDoor
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 811230435}
         m_TargetAssemblyTypeName: TalkWithNPC, Assembly-CSharp
         m_MethodName: SetActiveFalse
@@ -21966,7 +22223,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 297376245}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &904251029
 MonoBehaviour:
@@ -21990,7 +22247,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1619314585}
         m_TargetAssemblyTypeName: ActionEventManager, Assembly-CSharp
-        m_MethodName: Test
+        m_MethodName: DisableMermaidSpawn
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -23187,6 +23444,7 @@ Transform:
   m_Children:
   - {fileID: 1021774399}
   - {fileID: 1163119852}
+  - {fileID: 20444343}
   m_Father: {fileID: 0}
   m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -24281,7 +24539,7 @@ Transform:
   m_GameObject: {fileID: 1002554061}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 246.44, y: -171.52, z: 0}
-  m_LocalScale: {x: 0.5625, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1407828614}
@@ -24348,7 +24606,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 5.8883033, y: 5.6403522}
+  m_Size: {x: 4.0928917, y: 5.6403522}
   m_EdgeRadius: 0
 --- !u!1 &1005046458
 GameObject:
@@ -24827,7 +25085,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 250431453}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1021774398
 GameObject:
@@ -27920,6 +28178,110 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 13.264281, y: 6.9238358}
   m_EdgeRadius: 0
+--- !u!1 &1162716175
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1162716176}
+  - component: {fileID: 1162716178}
+  - component: {fileID: 1162716177}
+  m_Layer: 0
+  m_Name: Ch3_D05_01
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1162716176
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1162716175}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 675.5804, y: -145.77, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 309875256}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1162716177
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1162716175}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96cd48e12b93e2644b317eb0a2a62a23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isSave: 0
+  isCutScene: 0
+  isRunDialogueWhenOverlap: 1
+  haveDialogueBg: 0
+  startWithDialogueId: Ch3_D05_01
+  triggerEvents:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1619314585}
+        m_TargetAssemblyTypeName: ActionEventManager, Assembly-CSharp
+        m_MethodName: SpawnSisterAndAlert
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1162716177}
+        m_TargetAssemblyTypeName: TalkWithNPC, Assembly-CSharp
+        m_MethodName: SetActiveFalse
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  NPCList: []
+--- !u!61 &1162716178
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1162716175}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 3.6630511, y: -0.6528969}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 13.264281, y: 6.9238358}
+  m_EdgeRadius: 0
 --- !u!1 &1163119851
 GameObject:
   m_ObjectHideFlags: 0
@@ -29212,6 +29574,18 @@ MonoBehaviour:
   triggerEvents:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1619314585}
+        m_TargetAssemblyTypeName: ActionEventManager, Assembly-CSharp
+        m_MethodName: LockCafeteriaDoor
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1216950126}
         m_TargetAssemblyTypeName: TalkWithNPC, Assembly-CSharp
         m_MethodName: SetActiveFalse
@@ -30071,7 +30445,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1247662253
 Transform:
   m_ObjectHideFlags: 0
@@ -30085,7 +30459,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 297376245}
-  m_RootOrder: 4
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1247662254
 MonoBehaviour:
@@ -30109,7 +30483,31 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1619314585}
         m_TargetAssemblyTypeName: ActionEventManager, Assembly-CSharp
-        m_MethodName: Test
+        m_MethodName: LockAquariamDoor
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1619314585}
+        m_TargetAssemblyTypeName: ActionEventManager, Assembly-CSharp
+        m_MethodName: SetActiveLockDoorDialogueEndGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1247662254}
+        m_TargetAssemblyTypeName: TalkWithNPC, Assembly-CSharp
+        m_MethodName: SetActiveFalse
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -31111,6 +31509,110 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1315314134
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1315314135}
+  - component: {fileID: 1315314137}
+  - component: {fileID: 1315314136}
+  m_Layer: 0
+  m_Name: Ch4_D05_01
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1315314135
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1315314134}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 21.6, y: -216.83, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 297376245}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1315314136
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1315314134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96cd48e12b93e2644b317eb0a2a62a23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isSave: 0
+  isCutScene: 1
+  isRunDialogueWhenOverlap: 1
+  haveDialogueBg: 0
+  startWithDialogueId: Ch4_D05_01
+  triggerEvents:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1619314585}
+        m_TargetAssemblyTypeName: ActionEventManager, Assembly-CSharp
+        m_MethodName: WarpToPosition
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 20444343}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1315314136}
+        m_TargetAssemblyTypeName: TalkWithNPC, Assembly-CSharp
+        m_MethodName: SetActiveFalse
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  NPCList: []
+--- !u!61 &1315314137
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1315314134}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 13.264281, y: 6.9238358}
+  m_EdgeRadius: 0
 --- !u!1 &1315706079
 GameObject:
   m_ObjectHideFlags: 0
@@ -31721,7 +32223,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 297376245}
-  m_RootOrder: 6
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1340679216
 MonoBehaviour:
@@ -31742,19 +32244,7 @@ MonoBehaviour:
   startWithDialogueId: Ch4_D07_01
   triggerEvents:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1619314585}
-        m_TargetAssemblyTypeName: ActionEventManager, Assembly-CSharp
-        m_MethodName: Test
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   NPCList: []
 --- !u!61 &1340679217
 BoxCollider2D:
@@ -32381,6 +32871,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5003687413167140265, guid: 187f9bf5a1c60da498d1e3898116aba1, type: 3}
   m_PrefabInstance: {fileID: 1363605587}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1364233866
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1364233867}
+  m_Layer: 0
+  m_Name: FirstPosition
+  m_TagString: Untagged
+  m_Icon: {fileID: 6519382022992737161, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1364233867
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1364233866}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 176, y: -138.2, z: -0.925477}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 250431453}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1367500203
 GameObject:
   m_ObjectHideFlags: 0
@@ -32520,8 +33041,20 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1619314585}
         m_TargetAssemblyTypeName: ActionEventManager, Assembly-CSharp
-        m_MethodName: Test
+        m_MethodName: MermaidTrigger
         m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1218761542}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -33492,6 +34025,117 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 13.264281, y: 6.9238358}
   m_EdgeRadius: 0
+--- !u!1001 &1401441169
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 599663261}
+    m_Modifications:
+    - target: {fileID: 5026948471530693472, guid: b280b4ad0fdc92a44a403ab687b0fe4c, type: 3}
+      propertyPath: m_Name
+      value: Canvas_Alert
+      objectReference: {fileID: 0}
+    - target: {fileID: 5026948471530693472, guid: b280b4ad0fdc92a44a403ab687b0fe4c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5026948471530693475, guid: b280b4ad0fdc92a44a403ab687b0fe4c, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5026948471530693475, guid: b280b4ad0fdc92a44a403ab687b0fe4c, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5026948471530693475, guid: b280b4ad0fdc92a44a403ab687b0fe4c, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5026948471530693475, guid: b280b4ad0fdc92a44a403ab687b0fe4c, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5026948471530693475, guid: b280b4ad0fdc92a44a403ab687b0fe4c, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5026948471530693475, guid: b280b4ad0fdc92a44a403ab687b0fe4c, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5026948471530693475, guid: b280b4ad0fdc92a44a403ab687b0fe4c, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5026948471530693475, guid: b280b4ad0fdc92a44a403ab687b0fe4c, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1920
+      objectReference: {fileID: 0}
+    - target: {fileID: 5026948471530693475, guid: b280b4ad0fdc92a44a403ab687b0fe4c, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 1080.2178
+      objectReference: {fileID: 0}
+    - target: {fileID: 5026948471530693475, guid: b280b4ad0fdc92a44a403ab687b0fe4c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5026948471530693475, guid: b280b4ad0fdc92a44a403ab687b0fe4c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5026948471530693475, guid: b280b4ad0fdc92a44a403ab687b0fe4c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5026948471530693475, guid: b280b4ad0fdc92a44a403ab687b0fe4c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5026948471530693475, guid: b280b4ad0fdc92a44a403ab687b0fe4c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5026948471530693475, guid: b280b4ad0fdc92a44a403ab687b0fe4c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5026948471530693475, guid: b280b4ad0fdc92a44a403ab687b0fe4c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5026948471530693475, guid: b280b4ad0fdc92a44a403ab687b0fe4c, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 960
+      objectReference: {fileID: 0}
+    - target: {fileID: 5026948471530693475, guid: b280b4ad0fdc92a44a403ab687b0fe4c, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 539.72766
+      objectReference: {fileID: 0}
+    - target: {fileID: 5026948471530693475, guid: b280b4ad0fdc92a44a403ab687b0fe4c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5026948471530693475, guid: b280b4ad0fdc92a44a403ab687b0fe4c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5026948471530693475, guid: b280b4ad0fdc92a44a403ab687b0fe4c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b280b4ad0fdc92a44a403ab687b0fe4c, type: 3}
+--- !u!224 &1401441170 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 5026948471530693475, guid: b280b4ad0fdc92a44a403ab687b0fe4c, type: 3}
+  m_PrefabInstance: {fileID: 1401441169}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1401441171 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5026948471530693472, guid: b280b4ad0fdc92a44a403ab687b0fe4c, type: 3}
+  m_PrefabInstance: {fileID: 1401441169}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1401686465
 GameObject:
   m_ObjectHideFlags: 0
@@ -33520,7 +34164,7 @@ Transform:
   m_GameObject: {fileID: 1401686465}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 246.44, y: -146.44, z: 0}
-  m_LocalScale: {x: 0.5625, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 616749611}
@@ -33576,7 +34220,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0067830086, y: -0.07462323}
+  m_Offset: {x: 0.20322418, y: -0.07462311}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -33587,7 +34231,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 5.8883033, y: 5.6403522}
+  m_Size: {x: 2.9634552, y: 5.6403522}
   m_EdgeRadius: 0
 --- !u!1 &1403810687
 GameObject:
@@ -34053,7 +34697,7 @@ Transform:
   m_Children:
   - {fileID: 1778157625}
   m_Father: {fileID: 744111349}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1413032866
 MonoBehaviour:
@@ -34821,7 +35465,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5299014386308253456, guid: b7260303ed58712428593c5c759fb8a2, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 5299014386308253456, guid: b7260303ed58712428593c5c759fb8a2, type: 3}
       propertyPath: m_LocalScale.x
@@ -35351,7 +35995,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 250431453}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1480413161
 GameObject:
@@ -36484,7 +37128,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1528423687}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 256.5, y: -97.39, z: 0}
+  m_LocalPosition: {x: 251.01, y: -97.39, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -36519,7 +37163,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   connectDoor: {fileID: 9813974}
   conditionItem: {fileID: 0}
-  isSpacialDoor: 1
+  isSpacialDoor: 0
   notForEnemy: 0
   triggerDoorEvents:
     m_PersistentCalls:
@@ -36541,7 +37185,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -6.41, y: -0.07462323}
+  m_Offset: {x: 0, y: -0.07462323}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -37871,7 +38515,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 744111349}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1583558499
 MonoBehaviour:
@@ -38453,9 +39097,33 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 298884939}
     - target: {fileID: 4966732993388418438, guid: 1b3dcc0b488f4414c991160dad5fe269, type: 3}
+      propertyPath: Ch3_D05_01
+      value: 
+      objectReference: {fileID: 1162716177}
+    - target: {fileID: 4966732993388418438, guid: 1b3dcc0b488f4414c991160dad5fe269, type: 3}
       propertyPath: Ch3_D10_01
       value: 
       objectReference: {fileID: 811230435}
+    - target: {fileID: 4966732993388418438, guid: 1b3dcc0b488f4414c991160dad5fe269, type: 3}
+      propertyPath: Ch4_D03_01
+      value: 
+      objectReference: {fileID: 365960908}
+    - target: {fileID: 4966732993388418438, guid: 1b3dcc0b488f4414c991160dad5fe269, type: 3}
+      propertyPath: Ch4_D05_01
+      value: 
+      objectReference: {fileID: 1315314136}
+    - target: {fileID: 4966732993388418438, guid: 1b3dcc0b488f4414c991160dad5fe269, type: 3}
+      propertyPath: Ch4_D06_01
+      value: 
+      objectReference: {fileID: 1247662254}
+    - target: {fileID: 4966732993388418438, guid: 1b3dcc0b488f4414c991160dad5fe269, type: 3}
+      propertyPath: Ch4_D07_01
+      value: 
+      objectReference: {fileID: 1340679216}
+    - target: {fileID: 4966732993388418438, guid: 1b3dcc0b488f4414c991160dad5fe269, type: 3}
+      propertyPath: CircusDoor
+      value: 
+      objectReference: {fileID: 1211398927}
     - target: {fileID: 4966732993388418438, guid: 1b3dcc0b488f4414c991160dad5fe269, type: 3}
       propertyPath: Wall_Circus
       value: 
@@ -38463,7 +39131,11 @@ PrefabInstance:
     - target: {fileID: 4966732993388418438, guid: 1b3dcc0b488f4414c991160dad5fe269, type: 3}
       propertyPath: alertCanvas
       value: 
-      objectReference: {fileID: 1556040211}
+      objectReference: {fileID: 1401441171}
+    - target: {fileID: 4966732993388418438, guid: 1b3dcc0b488f4414c991160dad5fe269, type: 3}
+      propertyPath: aquariamDoor
+      value: 
+      objectReference: {fileID: 1232218704}
     - target: {fileID: 4966732993388418438, guid: 1b3dcc0b488f4414c991160dad5fe269, type: 3}
       propertyPath: sisterPrefab
       value: 
@@ -38472,6 +39144,14 @@ PrefabInstance:
       propertyPath: Wall_Aquarium
       value: 
       objectReference: {fileID: 2110251189}
+    - target: {fileID: 4966732993388418438, guid: 1b3dcc0b488f4414c991160dad5fe269, type: 3}
+      propertyPath: cafeteriaDoor
+      value: 
+      objectReference: {fileID: 1545796409}
+    - target: {fileID: 4966732993388418438, guid: 1b3dcc0b488f4414c991160dad5fe269, type: 3}
+      propertyPath: labyrinthDoor
+      value: 
+      objectReference: {fileID: 4695122923096823981}
     - target: {fileID: 4966732993388418438, guid: 1b3dcc0b488f4414c991160dad5fe269, type: 3}
       propertyPath: mermaidPrefab
       value: 
@@ -38496,6 +39176,14 @@ PrefabInstance:
       propertyPath: skeletonPrefab
       value: 
       objectReference: {fileID: 4261554499911693211, guid: 1c78d18dba1098a46a6b561a0587f2a6, type: 3}
+    - target: {fileID: 4966732993388418438, guid: 1b3dcc0b488f4414c991160dad5fe269, type: 3}
+      propertyPath: LockDoorEndGame
+      value: 
+      objectReference: {fileID: 1886472834}
+    - target: {fileID: 4966732993388418438, guid: 1b3dcc0b488f4414c991160dad5fe269, type: 3}
+      propertyPath: spawnSisterPosition
+      value: 
+      objectReference: {fileID: 1556040212}
     - target: {fileID: 4966732993388418438, guid: 1b3dcc0b488f4414c991160dad5fe269, type: 3}
       propertyPath: labyrinthENDSpriteRenderer
       value: 
@@ -38725,8 +39413,20 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1619314585}
         m_TargetAssemblyTypeName: ActionEventManager, Assembly-CSharp
-        m_MethodName: Test
+        m_MethodName: MermaidTrigger
         m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1218761542}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -38790,7 +39490,7 @@ Transform:
   m_GameObject: {fileID: 1629784257}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 376.33, y: -146.44, z: 0}
-  m_LocalScale: {x: 0.5625, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1788026359}
@@ -38857,7 +39557,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 5.8883033, y: 5.6403522}
+  m_Size: {x: 3.4987857, y: 5.6403522}
   m_EdgeRadius: 0
 --- !u!1 &1630809943
 GameObject:
@@ -42955,7 +43655,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1825368141}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 375.25, y: -143.93, z: 0}
+  m_LocalPosition: {x: 375.25, y: -143.93, z: -0.1}
   m_LocalScale: {x: 0.6675, y: 1.3125, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -44742,7 +45442,7 @@ Transform:
   - {fileID: 570622643}
   - {fileID: 390407139}
   m_Father: {fileID: 297376245}
-  m_RootOrder: 5
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1889646901
 GameObject:
@@ -47598,7 +48298,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2088915048}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 249.17, y: -121.39, z: 0}
+  m_LocalPosition: {x: 257.21, y: -121.39, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -47655,7 +48355,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0067830086, y: -0.07462323}
+  m_Offset: {x: -7.82, y: -0.07462323}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -49654,19 +50354,7 @@ MonoBehaviour:
   startWithDialogueId: Ch4_D01_01
   triggerEvents:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1619314585}
-        m_TargetAssemblyTypeName: ActionEventManager, Assembly-CSharp
-        m_MethodName: Test
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   NPCList: []
 --- !u!61 &2137611200
 BoxCollider2D:

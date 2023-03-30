@@ -21,6 +21,9 @@ public class ActionEventManager : MonoBehaviour
     [HideInInspector]
     public bool isPuzzleDone = false;
 
+    [Header("Aquariam")]
+    [SerializeField] GameObject LockDoorEndGame;
+
     [Header("Enemy")]
     [SerializeField] GameObject skeletonPrefab;
     [SerializeField] GameObject mermaidPrefab;
@@ -42,8 +45,19 @@ public class ActionEventManager : MonoBehaviour
     [SerializeField] TalkWithNPC Ch1_D11_01; 
     [SerializeField] TalkWithNPC Ch1_D03_01; 
     [SerializeField] TalkWithNPC Ch1_D06_01; 
+    [SerializeField] TalkWithNPC Ch3_D05_01;
+    [SerializeField] TalkWithNPC Ch4_D03_01;
+    [SerializeField] TalkWithNPC Ch4_D05_01; 
+    [SerializeField] TalkWithNPC Ch4_D06_01;  
+    [SerializeField] TalkWithNPC Ch4_D07_01;  
 
     [Header("LockDoor")]
+    [SerializeField] DoorSystem cafeteriaDoor;
+    [SerializeField] DoorSystem labyrinthDoor;
+    [SerializeField] DoorSystem CircusDoor;
+    [SerializeField] DoorSystem aquariamDoor;
+
+    [Header("UnLockDoor")]
     [SerializeField] LockDoorConfig Ch0_C03_01_Config;
     [SerializeField] LockDoorConfig Ch1_D01_2_01_Config;
     [SerializeField] LockDoorConfig Ch1_D04_01_Config;
@@ -86,11 +100,6 @@ public class ActionEventManager : MonoBehaviour
         //จะปิดไรเพิ่มก็ เพิ่มcodeตรงนี้
     }
 
-    public void OnPickUpBearDoll()
-    {
-        
-    }
-
     public void OnPickUpCircusCoin()
     {
         foreach(var n in CircusCoinShowDialogue)
@@ -104,6 +113,8 @@ public class ActionEventManager : MonoBehaviour
         }
 
         SetActiveFalse_Wall_Circus();
+
+        AiRedHoodController.inst.spawnAI = false;
     }
 
 #endregion
@@ -148,6 +159,18 @@ public class ActionEventManager : MonoBehaviour
         AiJunitorController.inst.SetActiveAI(value);
     }
 
+    public void EnableAIMermaid(bool value)
+    {
+        AiMermaidController.inst.SetActiveAI(value);
+    }
+
+    public void SpawnSisterAndAlert()
+    {
+        AiRedHoodController.inst.spawnAI = true;
+        ActionEventManager.inst.AlertText(10.0f);
+        ActionEventManager.inst.SpawnSister(false, 10.0f);
+    }
+
     public void SpawnSister(bool isSpawn , float delayBeforeSpawn)
     {
         if (isSpawn == false)
@@ -156,6 +179,7 @@ public class ActionEventManager : MonoBehaviour
             StartCoroutine(DelaySpawnSister(delayBeforeSpawn));
         }
     }
+
     IEnumerator DelaySpawnSister(float time)
     {
         yield return new WaitForSeconds(time);
@@ -164,15 +188,28 @@ public class ActionEventManager : MonoBehaviour
 
     public void AlertText(float time)
     {
-        // alertCanvas.SetActive(true);
+        alertCanvas.SetActive(true);
         StartCoroutine(DelayCloseAlertText(time));
     }
 
     IEnumerator DelayCloseAlertText(float time)
     {
         yield return new WaitForSeconds(time);
-        // alertCanvas.SetActive(false);
+        alertCanvas.SetActive(false);
     }
+
+    public void MermaidTrigger()
+    {
+        AiMermaidController.inst.spawnAI = true;
+        AiMermaidController.inst.CreateMermaidAIAtFirstPosition();
+    }
+
+    public void DisableMermaidSpawn()
+    {
+        AiMermaidController.inst.spawnAI = false;
+        AiMermaidController.inst.DestroyMermaidAI();
+    }
+
     public void CutSceneDoor()
     {
         print("CutSceneDoor");
@@ -212,6 +249,31 @@ public class ActionEventManager : MonoBehaviour
         }
     }
 
+    void LockDoorAfterGetCoin(DoorSystem door)
+    {
+        door.isLockedDoor = true;
+    }
+
+    public void LockCafeteriaDoor()
+    {
+        LockDoorAfterGetCoin(cafeteriaDoor);
+    }
+
+    public void LockLabyrinthDoor()
+    {
+        LockDoorAfterGetCoin(labyrinthDoor);
+    }
+
+    public void LockCircusDoor()
+    {
+        LockDoorAfterGetCoin(CircusDoor);
+    }
+
+    public void LockAquariamDoor()
+    {
+        LockDoorAfterGetCoin(aquariamDoor);
+    }
+
     public void UnLockDoor_Ch0_C03_01()
     {
         UnlockDoor(Ch0_C03_01_Config);
@@ -231,8 +293,6 @@ public class ActionEventManager : MonoBehaviour
     {
         UnlockDoor(Ch3_D04_01_Config);
     }
-
-    
 
     public void WarpToPosition(Transform transform)
     {
@@ -279,6 +339,36 @@ public class ActionEventManager : MonoBehaviour
         SetActiveDialogue(Ch0_C01_01);
     }
 
+    public void SetActiveDialogueCh3_D05_01()
+    {
+        SetActiveDialogue(Ch3_D05_01);
+    }
+
+    public void SetActiveDialogueCh4_D03_01()
+    {
+        SetActiveDialogue(Ch4_D03_01);
+    }
+
+    public void SetActiveDialogueCh4_D05_01()
+    {
+        SetActiveDialogue(Ch4_D05_01);
+    }
+
+    public void SetActiveDialogueCh4_D06_01()
+    {
+        SetActiveDialogue(Ch4_D06_01);
+    }
+
+    public void SetActiveDialogueCh4_D07_01()
+    {
+        SetActiveDialogue(Ch4_D07_01);
+    }
+
+    public void SetActiveLockDoorDialogueEndGame()
+    {
+        LockDoorEndGame.SetActive(true);
+    }
+
     public void ChangeDialogueCh1_D06_01()
     {
         Ch1_D06_01.ChangeDialogueId("Ch1_D08_01");
@@ -295,6 +385,16 @@ public class ActionEventManager : MonoBehaviour
     {
         PlayerPrefs.SetInt("DarkMainMenu",1);
         PlayerManager.inst.playerAnimator.SetBool("Lampitem",true);
+    }
+
+    public void BackToMainMenu()
+    {
+
+    }
+
+    public void WhiteTransition()
+    {
+        
     }
 
 }

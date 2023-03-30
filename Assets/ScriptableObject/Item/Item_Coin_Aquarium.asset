@@ -21,4 +21,6 @@ MonoBehaviour:
     ItemPosition: {x: 162.48, y: -216.64, z: 0}
     ItemScale: {x: 1.139489, y: 1.139489, z: 1.139489}
     ItemType: 512
-    dialogueItemId: Ch4_D05_01
+    dialogueItemId: 
+    conditionItem: {fileID: 0}
+    cannotPickUpDialogueItemId: 

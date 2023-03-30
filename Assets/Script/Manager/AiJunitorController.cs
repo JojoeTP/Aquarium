@@ -40,7 +40,7 @@ public class AiJunitorController : MonoBehaviour
         if(spawnAI && isPlayerInSpawnCollider && spawnPosition != null && junitorController == null)
         {
             var rand = Random.Range(0,100);
-            if(rand >= 50)
+            if(rand >= 60)
             {
                 // UITransition.inst.JunitorTransitionIn();
                 CreateJunitor();

@@ -23,7 +23,7 @@ public class AiMermaidController : MonoBehaviour
         inst = this;
     }
 
-    void CreateMermaidAIAtFirstPosition()
+    public void CreateMermaidAIAtFirstPosition()
     {
         var aiPrefab = Instantiate(mermaidPrefab,firstSpawnPosition.position,Quaternion.identity);
         mermaidController = aiPrefab.GetComponent<StateController>();
@@ -118,6 +118,12 @@ public class AiMermaidController : MonoBehaviour
             
         DestroyMermaidAI();
         PlayerManager.inst.transform.position = respawnPosition.position;
+    }
+
+    public void SetActiveAI(bool isActive)
+    {
+        if(mermaidController != null)
+            mermaidController.enabled = isActive;
     }
 }
 
