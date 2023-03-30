@@ -48,5 +48,12 @@ public class CutSceneTransitionScript : MonoBehaviour
     {
         DialogueManager.inst.dialoguePanel.ContinueButton.interactable = true;
     }
-
+    public void WhiteTransitionIn()
+    {
+        animator.SetTrigger("WhiteTransitionIn");
+    }
+    public void WhiteTransitionOut()
+    {
+        animator.SetTrigger("WhiteTransitionOut");
+    }
 }
