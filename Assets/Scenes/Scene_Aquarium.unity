@@ -4563,7 +4563,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 209489065}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 87, y: -44.55, z: 0}
+  m_LocalPosition: {x: 93.61, y: -44.55, z: 0}
   m_LocalScale: {x: 1.95, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4598,7 +4598,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   connectDoor: {fileID: 123502702}
   conditionItem: {fileID: 0}
-  isSpacialDoor: 0
+  isSpacialDoor: 1
   notForEnemy: 0
   triggerDoorEvents:
     m_PersistentCalls:
@@ -4620,7 +4620,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -3.37, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -8611,7 +8611,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7759006, y: 1}
+    m_SensorSize: {x: 1.7768595, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -17631,7 +17631,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 766520383}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 85.2, y: -21.14, z: 0}
+  m_LocalPosition: {x: 93.48, y: -21.14, z: 0}
   m_LocalScale: {x: 2.25, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -17666,7 +17666,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   connectDoor: {fileID: 1826412847}
   conditionItem: {fileID: 0}
-  isSpacialDoor: 0
+  isSpacialDoor: 1
   notForEnemy: 0
   triggerDoorEvents:
     m_PersistentCalls:
@@ -17688,7 +17688,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -3.45, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -21265,7 +21265,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 890989921}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 8.4, y: 17.09, z: 0}
+  m_LocalPosition: {x: 15.06, y: 17.09, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -21300,7 +21300,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   connectDoor: {fileID: 941436345}
   conditionItem: {fileID: 0}
-  isSpacialDoor: 0
+  isSpacialDoor: 1
   notForEnemy: 0
   triggerDoorEvents:
     m_PersistentCalls:
@@ -21322,7 +21322,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0067830086, y: -0.07462323}
+  m_Offset: {x: -6.39, y: -0.07462323}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -38105,7 +38105,7 @@ PrefabInstance:
     - target: {fileID: 4966732993388418438, guid: 1b3dcc0b488f4414c991160dad5fe269, type: 3}
       propertyPath: Ch1_D03_01
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 489605946}
     - target: {fileID: 4966732993388418438, guid: 1b3dcc0b488f4414c991160dad5fe269, type: 3}
       propertyPath: Ch1_D06_01
       value: 
@@ -38114,6 +38114,10 @@ PrefabInstance:
       propertyPath: Ch1_D11_01
       value: 
       objectReference: {fileID: 1216950126}
+    - target: {fileID: 4966732993388418438, guid: 1b3dcc0b488f4414c991160dad5fe269, type: 3}
+      propertyPath: Ch2_D02_01
+      value: 
+      objectReference: {fileID: 298884939}
     - target: {fileID: 4966732993388418438, guid: 1b3dcc0b488f4414c991160dad5fe269, type: 3}
       propertyPath: Wall_Aquarium
       value: 
@@ -38134,6 +38138,10 @@ PrefabInstance:
       propertyPath: directorPrefab
       value: 
       objectReference: {fileID: 6450180032453249195, guid: b011d45d5eb53534486ae2a2fae2216d, type: 3}
+    - target: {fileID: 4966732993388418438, guid: 1b3dcc0b488f4414c991160dad5fe269, type: 3}
+      propertyPath: doorEncryption
+      value: 
+      objectReference: {fileID: 2118471162}
     - target: {fileID: 4966732993388418438, guid: 1b3dcc0b488f4414c991160dad5fe269, type: 3}
       propertyPath: skeletonPrefab
       value: 
@@ -47437,7 +47445,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2095078653}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.6, y: -22.8, z: 0}
+  m_LocalPosition: {x: 14.83, y: -22.8, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -47472,7 +47480,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   connectDoor: {fileID: 1939489495}
   conditionItem: {fileID: 0}
-  isSpacialDoor: 0
+  isSpacialDoor: 1
   notForEnemy: 0
   triggerDoorEvents:
     m_PersistentCalls:
@@ -47494,7 +47502,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0067830086, y: -0.07462323}
+  m_Offset: {x: -6.06, y: -0.07462323}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -48160,6 +48168,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3402447144988968730, guid: 3d5b4812a40a2494d97f6e0c96153612, type: 3}
   m_PrefabInstance: {fileID: 2118471160}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2118471162 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3402447144988968731, guid: 3d5b4812a40a2494d97f6e0c96153612, type: 3}
+  m_PrefabInstance: {fileID: 2118471160}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ad15805ff09f50489742cbbbd6575f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2119176007
 PrefabInstance:
   m_ObjectHideFlags: 0
