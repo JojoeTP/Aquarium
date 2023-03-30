@@ -105,9 +105,9 @@ public class DialogueManager : MonoBehaviour
             }
             else
             {
-                //ID,character,charaterImage,dialogueText,choice1,choice2,choice1Text,choice2Text,type
-                Debug.Log("Loading Dialogue " + data_values[0]);
-                DialogueInfo newDialogue = new DialogueInfo(data_values[0], data_values[1], data_values[2], data_values[3], data_values[4], data_values[5], data_values[6], data_values[7], data_values[8]);
+                //ID,character,charaterImage,dialogueText,choice1,choice2,choice1Text,choice2Text,type,sound
+                //Debug.Log("Loading Dialogue " + data_values[0]);
+                DialogueInfo newDialogue = new DialogueInfo(data_values[0], data_values[1], data_values[2], data_values[3], data_values[4], data_values[5], data_values[6], data_values[7], data_values[8], data_values[9]);
                 openWith.Add(data_values[0], newDialogue);
                 await Task.Yield();
             }
@@ -170,6 +170,7 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
+
     public void StartDialogue()
     {
         if(dialoguePanel == null)
@@ -179,6 +180,8 @@ public class DialogueManager : MonoBehaviour
         {
             return;
         }
+
+        PlaySound(openWith[currentDialogue].sound);
         type = (Type)Enum.Parse(typeof(Type), openWith[currentDialogue].type);
         dialogueCanvas.enabled = true;
         CheckIfHaveChoice(currentDialogue);
@@ -199,6 +202,17 @@ public class DialogueManager : MonoBehaviour
         else
         {
             currentId = currentDialogue;
+        }
+    }
+    void PlaySound(string soundId)
+    {
+        if (soundId != "")
+        {
+            SoundManager.Inst.PlayOneShot(FMODEvent.inst.FModEventDictionary[soundId], PlayerManager.inst.transform.position);
+        }
+        else
+        {
+            print("null Sound");
         }
     }
 
@@ -293,6 +307,7 @@ public class DialogueManager : MonoBehaviour
             EndDialogue();
             return;
         }
+        PlaySound(openWith[currentId].sound);
         type = (Type)Enum.Parse(typeof(Type), openWith[currentId].type);
         CheckIfHaveChoice(currentId);
         CheckDialogueType(currentId , true);
