@@ -13,8 +13,9 @@ public class DialogueInfo
     public string choice1Text;
     public string choice2Text;
     public string type;
+    public string sound;
 
-    public DialogueInfo(string Id, string Character, string CharacterImage, string DialogueText, string Choice1, string Choice2, string Choice1Text, string Choice2Text, string Type)
+    public DialogueInfo(string Id, string Character, string CharacterImage, string DialogueText, string Choice1, string Choice2, string Choice1Text, string Choice2Text, string Type, string Sound)
     {
         ID = Id;
         character = Character;
@@ -25,5 +26,6 @@ public class DialogueInfo
         choice1Text = Choice1Text;
         choice2Text = Choice2Text;
         type = Type;
+        sound = Sound;
     }
 }
