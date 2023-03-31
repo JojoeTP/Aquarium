@@ -107,6 +107,7 @@ public class DialogueManager : MonoBehaviour
             {
                 //ID,character,charaterImage,dialogueText,choice1,choice2,choice1Text,choice2Text,type,sound,BGMSound
                 //Debug.Log("Loading Dialogue " + data_values[0]);
+                //Todo : แก้ตรงนี้ type หายในบางครั้ง
                 DialogueInfo newDialogue = new DialogueInfo(data_values[0], data_values[1], data_values[2], data_values[3], data_values[4], data_values[5], data_values[6], data_values[7], data_values[8], data_values[9], data_values[10]);
                 openWith.Add(data_values[0], newDialogue);
                 await Task.Yield();
@@ -321,7 +322,9 @@ public class DialogueManager : MonoBehaviour
         }
         PlaySound(openWith[currentId].sound);
         //PlayBGMSound(openWith[currentId].sound);
-        type = (Type)Enum.Parse(typeof(Type), openWith[currentId].type);
+        if(openWith[currentId].type != "")
+            type = (Type)Enum.Parse(typeof(Type), openWith[currentId].type);
+
         CheckIfHaveChoice(currentId);
         CheckDialogueType(currentId , true);
 
