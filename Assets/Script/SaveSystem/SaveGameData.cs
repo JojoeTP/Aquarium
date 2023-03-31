@@ -14,8 +14,6 @@ public class SaveGameData
 
     public Dictionary<string,string> playerItem = new Dictionary<string, string>();
 
-
-
     public bool isMap1Done;
     public bool isMap2Done;
     public bool isMap3Done;

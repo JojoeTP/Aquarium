@@ -37,6 +37,11 @@ public class SaveGameSystemManager : MonoBehaviour
         newSaveGameData.playerStamina = PlayerManager.inst.PlayerMovement.PlayerStamina;
         newSaveGameData.playerItem = GetPlayerItemInInventoryTypeOfDic();
 
+        newSaveGameData.isMap1Done = ActionEventManager.inst.isMap1Done;
+        newSaveGameData.isMap2Done = ActionEventManager.inst.isMap2Done;
+        newSaveGameData.isMap3Done = ActionEventManager.inst.isMap3Done;
+        newSaveGameData.isMap4Done = ActionEventManager.inst.isMap4Done;
+
         PlayerPrefs.SetInt("IsSaved",1);
         newSaveGameData.SaveJSON();
     }
@@ -73,5 +78,13 @@ public class SaveGameSystemManager : MonoBehaviour
         }
 
         return playerItemDictionary;
+    }
+
+    public void SetIsMapDone()
+    {
+        ActionEventManager.inst.isMap1Done = gameData.isMap1Done;
+        ActionEventManager.inst.isMap2Done = gameData.isMap2Done;
+        ActionEventManager.inst.isMap3Done = gameData.isMap3Done;
+        ActionEventManager.inst.isMap4Done = gameData.isMap4Done;
     }
 }
