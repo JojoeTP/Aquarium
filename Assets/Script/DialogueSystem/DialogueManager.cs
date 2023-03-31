@@ -38,6 +38,7 @@ public class DialogueManager : MonoBehaviour
     Canvas dialogueCanvas;
     public UIDialoguePanel dialoguePanel;
 
+    [SerializeField] float typeDialogueDelay;
     public void LoadCharacterSprites()
     {
         //loadSprite = (Sprite[])Resources.LoadAll("CutScene");
@@ -334,13 +335,15 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
+
     IEnumerator TypeSentence(string sentence)
     {
         dialoguePanel.DialogueText.text = "";
         foreach (char letter in sentence.ToCharArray())
         {
             dialoguePanel.DialogueText.text += letter;
-            yield return null;
+            yield return new WaitForSeconds(typeDialogueDelay);
+            //yield return null;
         }
     }
 
