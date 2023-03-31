@@ -51,6 +51,7 @@ public class ItemPopUpUI : MonoBehaviour
 
     public void OnOpenItemPopUpUI(Item item)
     {
+        GetComponentInChildren<Animation>().Play();
         pickUpItem = item;
         SetItemDetail(item.itemObject.itemData);
         canvas.enabled = true;
@@ -68,7 +69,10 @@ public class ItemPopUpUI : MonoBehaviour
 
     void SetItemDetail(ItemData item)
     {
-        itemImage.sprite = item.ItemSprite;
+        if(item.InventoryItemSprite != null)
+            itemImage.sprite = item.InventoryItemSprite;
+        else
+            itemImage.sprite = item.ItemSprite;
         itemName.text = item.ItemName;
     }
 

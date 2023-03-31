@@ -10,7 +10,8 @@ public class AiRedHoodController : MonoBehaviour
     public static AiRedHoodController inst;
     [SerializeField] GameObject redHoodPrefab;
     [SerializeField] Transform respawnPosition;
-    Transform spawnPosition;
+    [HideInInspector]
+    public Transform spawnPosition;
 
     [HideInInspector]
     public StateController redHoodController;
