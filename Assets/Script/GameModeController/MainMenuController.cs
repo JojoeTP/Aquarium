@@ -158,5 +158,7 @@ public class MainMenuController : MonoBehaviour
         SceneController.inst.GameplaySceneLoaded = true;
 
         ActionEventManager.inst.SetActiveDialogueCh0_C01_01();
+        
+        ActionEventManager.inst.LoadingGame();
     }
 }
