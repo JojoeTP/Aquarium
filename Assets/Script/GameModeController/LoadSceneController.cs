@@ -11,12 +11,16 @@ public class LoadSceneController : MonoBehaviour
     public string SCENE_CORE { get {return "Scene_Core";} }
     public string Scene_INITIALIZE { get {return "Scene_Initialize";} }
 
-#if !UNITY_EDITOR
     void Awake()
     {
+#if !UNITY_EDITOR
         LoadCoreScene();
-    }
 #endif
+
+#if UNITY_EDITOR
+        StartCoroutine(GoToSceneMainMenu());
+#endif
+    }
 
     void LoadCoreScene()
     {

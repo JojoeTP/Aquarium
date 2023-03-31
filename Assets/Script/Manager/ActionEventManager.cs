@@ -373,7 +373,7 @@ public class ActionEventManager : MonoBehaviour
 
     public void WhiteTransition()
     {
-        
+        UITransition.inst.WhiteTransitionIn();
     }
 
 }

@@ -156,5 +156,7 @@ public class MainMenuController : MonoBehaviour
         SoundManager.Inst.StopBGM();
 
         SceneController.inst.GameplaySceneLoaded = true;
+
+        ActionEventManager.inst.SetActiveDialogueCh0_C01_01();
     }
 }

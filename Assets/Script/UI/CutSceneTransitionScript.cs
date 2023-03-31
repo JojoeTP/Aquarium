@@ -52,8 +52,15 @@ public class CutSceneTransitionScript : MonoBehaviour
     {
         animator.SetTrigger("WhiteTransitionIn");
     }
+
+    public string SCENE_MAINMENU { get {return "Scene_MainMenu";} }
+    public string SCENE_MAINMENU_2 { get {return "Scene_MainMenu2";} }
+
     public void WhiteTransitionOut()
     {
-        animator.SetTrigger("WhiteTransitionOut");
+        if(PlayerPrefs.GetInt("DarkMainMenu",0) == 0)
+            SceneController.inst.OnLoadSceneAsync(SCENE_MAINMENU,null,null);
+        else
+            SceneController.inst.OnLoadSceneAsync(SCENE_MAINMENU_2,null,null);
     }
 }
