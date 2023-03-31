@@ -162,6 +162,11 @@ public class MainMenuController : MonoBehaviour
         ActionEventManager.inst.SetActiveDialogueCh0_C01_01();
         
         if(SaveGameSystemManager.inst.isLoad)
+        {
+            SaveGameSystemManager.inst.SetIsMapDone();
             ActionEventManager.inst.LoadingGame();
+
+            PlayerManager.inst.playerState = PlayerManager.PLAYERSTATE.NONE;
+        }
     }
 }

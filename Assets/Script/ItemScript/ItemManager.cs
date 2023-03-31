@@ -130,7 +130,7 @@ public class ItemManager : MonoBehaviour
                         ActionEventManager.inst.SetActiveDialogueCh1_D11_01();
                         ActionEventManager.inst.SetActiveFalse_Wall_Cafeteria();
                         ActionEventManager.inst.LockCafeteriaDoor();
-                        SaveGameSystemManager.inst.gameData.isMap1Done = true;
+                        ActionEventManager.inst.isMap1Done = true;
                         
                         DialogueManager.inst.currentDialogue = item.itemObject.itemData.dialogueItemId;
                         DialogueManager.inst.StartDialogue();
@@ -152,7 +152,7 @@ public class ItemManager : MonoBehaviour
                     {
                         ActionEventManager.inst.OnPickUpLabyrinthCoin();
                         ActionEventManager.inst.LockLabyrinthDoor();
-                        SaveGameSystemManager.inst.gameData.isMap2Done = true;
+                        ActionEventManager.inst.isMap2Done = true;
                         DialogueManager.inst.currentDialogue = item.itemObject.itemData.dialogueItemId;
                         DialogueManager.inst.StartDialogue();
                     }
@@ -180,7 +180,7 @@ public class ItemManager : MonoBehaviour
                     {
                         ActionEventManager.inst.OnPickUpCircusCoin();
                         ActionEventManager.inst.LockCircusDoor();
-                        SaveGameSystemManager.inst.gameData.isMap3Done = true;
+                        ActionEventManager.inst.isMap3Done = true;
                         DialogueManager.inst.currentDialogue = item.itemObject.itemData.dialogueItemId;
                         DialogueManager.inst.StartDialogue();
                     }
@@ -198,7 +198,7 @@ public class ItemManager : MonoBehaviour
                 item.triggerEvents.AddListener( () => 
                     {
                         AiDirectorController.inst.spawnAI = true;
-                        SaveGameSystemManager.inst.gameData.isMap4Done = true;
+                        ActionEventManager.inst.isMap4Done = true;
                         ActionEventManager.inst.LockAquariamDoor();
                         ActionEventManager.inst.SetActiveDialogueCh4_D05_01();
                         ActionEventManager.inst.SetActiveDialogueCh4_D06_01();

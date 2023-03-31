@@ -564,7 +564,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6364881888974947744, guid: c340f6ce12ed6e14d91cc8895ea604fa, type: 3}
       propertyPath: <SFXList>k__BackingField.Array.size
-      value: 28
+      value: 27
       objectReference: {fileID: 0}
     - target: {fileID: 6364881888974947744, guid: c340f6ce12ed6e14d91cc8895ea604fa, type: 3}
       propertyPath: <SFXList>k__BackingField.Array.data[27].key

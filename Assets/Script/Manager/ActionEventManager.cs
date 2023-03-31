@@ -69,6 +69,12 @@ public class ActionEventManager : MonoBehaviour
     [SerializeField] GameObject Dialogue_ch3;
     [SerializeField] GameObject Dialogue_ch4;
 
+    [Header("IsMapDone")]
+    public bool isMap1Done = false;
+    public bool isMap2Done = false;
+    public bool isMap3Done = false;
+    public bool isMap4Done = false;
+
     void Awake() 
     {
         inst = this;
@@ -387,28 +393,28 @@ public class ActionEventManager : MonoBehaviour
     {
         Dialogue_ch0.SetActive(false);
 
-        if(SaveGameSystemManager.inst.gameData.IsMap1Done())
+        if(isMap1Done)
         {
             Wall_Cafeteria.SetActive(false);
             LockCafeteriaDoor();
             Dialogue_ch1.SetActive(false);
         }
 
-        if(SaveGameSystemManager.inst.gameData.IsMap2Done())
+        if(isMap2Done)
         {
             Wall_Labyrinth.SetActive(false);
             LockLabyrinthDoor();
             Dialogue_ch2.SetActive(false);
         }
 
-        if(SaveGameSystemManager.inst.gameData.IsMap3Done())
+        if(isMap3Done)
         {
             Wall_Circus.SetActive(false);
             LockCircusDoor();
             Dialogue_ch3.SetActive(false);
         }
 
-        if(SaveGameSystemManager.inst.gameData.IsMap4Done())
+        if(isMap4Done)
         {
             LockAquariamDoor();
             Dialogue_ch4.SetActive(false);
