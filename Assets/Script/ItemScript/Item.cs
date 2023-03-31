@@ -10,6 +10,7 @@ public class Item : MonoBehaviour
     public ShowInteractKey showInteractKey;
     public Transform interactIconPrefab;
     public Transform effectPrefab;
+    public SpriteRenderer sprite;
 
     public UnityEvent triggerEvents;
 
@@ -22,13 +23,13 @@ public class Item : MonoBehaviour
     {
         this.gameObject.name = itemObject.itemData.ItemName;
         this.transform.position = itemObject.itemData.ItemPosition;
-        this.transform.localScale = itemObject.itemData.ItemScale;
         SetSprite();
     }
 
     public void SetSprite()
     {
-        GetComponent<SpriteRenderer>().sprite = itemObject.itemData.ItemSprite; 
+        sprite.sprite = itemObject.itemData.ItemSprite; 
+        sprite.transform.localScale = itemObject.itemData.ItemScale;
     }
 
     void GenerateInteractIcon()

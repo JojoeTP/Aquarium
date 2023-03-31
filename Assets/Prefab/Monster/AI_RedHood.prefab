@@ -1859,25 +1859,25 @@ MonoBehaviour:
   disappearColor: {r: 0, g: 1, b: 0.9897847, a: 1}
   disappearRangeOffset: {x: 0, y: 2.9, z: 0}
   stateLableOffset: {x: 0, y: 0, z: 0}
-  moveSpeed: 2
-  chasingSpeed: 5
-  visionRange: 10000
-  interactRange: 1
+  moveSpeed: 4
+  chasingSpeed: 7
+  visionRange: 25
+  interactRange: 0.95
   attackRange: 3
-  chasingRange: 15
-  chasingTime: 0
-  disappearRange: 0
+  chasingRange: 30
+  chasingTime: 20
+  disappearRange: 60
   moveDirection: {x: -1, y: 0, z: 0}
-  currentState: {fileID: 11400000, guid: 0d20a3fbe74b9194a89060d6eacfc9df, type: 2}
+  currentState: {fileID: 11400000, guid: 2c323345aef175d49bb16c3bd30b6651, type: 2}
   remainState: {fileID: 11400000, guid: 6fbdd43bad4717c4eb7e5b5ad816ffec, type: 2}
-  animator: {fileID: 0}
+  animator: {fileID: 2318865591025049682}
   playerLayer:
     serializedVersion: 2
     m_Bits: 64
   wallLayer:
     serializedVersion: 2
     m_Bits: 8
-  timeBeforEnterSameDoorAgain: 0
+  timeBeforEnterSameDoorAgain: 5
   enteredDoor: {fileID: 0}
 --- !u!1 &6525736816783904792
 GameObject:

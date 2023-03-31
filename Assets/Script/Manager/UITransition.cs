@@ -66,4 +66,9 @@ public class UITransition : MonoBehaviour
     {
         // directorTransitionScript.AIDirectorTransitionIn();
     }
+    
+    public void WhiteTransitionIn()
+    {
+        cutSceneTransition.WhiteTransitionIn();
+    }
 }

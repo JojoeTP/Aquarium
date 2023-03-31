@@ -567,8 +567,12 @@ PrefabInstance:
       value: MainMenuMusic
       objectReference: {fileID: 0}
     - target: {fileID: 6364881888974947744, guid: c340f6ce12ed6e14d91cc8895ea604fa, type: 3}
+      propertyPath: <BGMList>k__BackingField.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6364881888974947744, guid: c340f6ce12ed6e14d91cc8895ea604fa, type: 3}
       propertyPath: <SFXList>k__BackingField.Array.size
-      value: 1
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6364881888974947744, guid: c340f6ce12ed6e14d91cc8895ea604fa, type: 3}
       propertyPath: <playerMovementSFX>k__BackingField.key
@@ -576,11 +580,59 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6364881888974947744, guid: c340f6ce12ed6e14d91cc8895ea604fa, type: 3}
       propertyPath: <MainMenuMusic>k__BackingField.sound.Path
-      value: event:/Music/MainMenuMusic
+      value: event:/BGM/MainMenuMusic
+      objectReference: {fileID: 0}
+    - target: {fileID: 6364881888974947744, guid: c340f6ce12ed6e14d91cc8895ea604fa, type: 3}
+      propertyPath: <BGMList>k__BackingField.Array.data[0].key
+      value: Forest_Morning
+      objectReference: {fileID: 0}
+    - target: {fileID: 6364881888974947744, guid: c340f6ce12ed6e14d91cc8895ea604fa, type: 3}
+      propertyPath: <BGMList>k__BackingField.Array.data[1].key
+      value: Forest_Night
+      objectReference: {fileID: 0}
+    - target: {fileID: 6364881888974947744, guid: c340f6ce12ed6e14d91cc8895ea604fa, type: 3}
+      propertyPath: <BGMList>k__BackingField.Array.data[2].key
+      value: Map1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6364881888974947744, guid: c340f6ce12ed6e14d91cc8895ea604fa, type: 3}
+      propertyPath: <BGMList>k__BackingField.Array.data[3].key
+      value: Map2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6364881888974947744, guid: c340f6ce12ed6e14d91cc8895ea604fa, type: 3}
+      propertyPath: <BGMList>k__BackingField.Array.data[4].key
+      value: Map3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6364881888974947744, guid: c340f6ce12ed6e14d91cc8895ea604fa, type: 3}
+      propertyPath: <BGMList>k__BackingField.Array.data[5].key
+      value: Map4
       objectReference: {fileID: 0}
     - target: {fileID: 6364881888974947744, guid: c340f6ce12ed6e14d91cc8895ea604fa, type: 3}
       propertyPath: <SFXList>k__BackingField.Array.data[0].key
-      value: test
+      value: fallitem
+      objectReference: {fileID: 0}
+    - target: {fileID: 6364881888974947744, guid: c340f6ce12ed6e14d91cc8895ea604fa, type: 3}
+      propertyPath: <SFXList>k__BackingField.Array.data[1].key
+      value: pullthedoor
+      objectReference: {fileID: 0}
+    - target: {fileID: 6364881888974947744, guid: c340f6ce12ed6e14d91cc8895ea604fa, type: 3}
+      propertyPath: <SFXList>k__BackingField.Array.data[2].key
+      value: threaten
+      objectReference: {fileID: 0}
+    - target: {fileID: 6364881888974947744, guid: c340f6ce12ed6e14d91cc8895ea604fa, type: 3}
+      propertyPath: <SFXList>k__BackingField.Array.data[3].key
+      value: key
+      objectReference: {fileID: 0}
+    - target: {fileID: 6364881888974947744, guid: c340f6ce12ed6e14d91cc8895ea604fa, type: 3}
+      propertyPath: <SFXList>k__BackingField.Array.data[4].key
+      value: run
+      objectReference: {fileID: 0}
+    - target: {fileID: 6364881888974947744, guid: c340f6ce12ed6e14d91cc8895ea604fa, type: 3}
+      propertyPath: <SFXList>k__BackingField.Array.data[5].key
+      value: walk
+      objectReference: {fileID: 0}
+    - target: {fileID: 6364881888974947744, guid: c340f6ce12ed6e14d91cc8895ea604fa, type: 3}
+      propertyPath: <SFXList>k__BackingField.Array.data[6].key
+      value: stab
       objectReference: {fileID: 0}
     - target: {fileID: 6364881888974947744, guid: c340f6ce12ed6e14d91cc8895ea604fa, type: 3}
       propertyPath: <playerMovementSFX>k__BackingField.sound.Path
@@ -603,8 +655,56 @@ PrefabInstance:
       value: 846998473
       objectReference: {fileID: 0}
     - target: {fileID: 6364881888974947744, guid: c340f6ce12ed6e14d91cc8895ea604fa, type: 3}
+      propertyPath: <BGMList>k__BackingField.Array.data[0].sound.Path
+      value: event:/BGM/Forest_Morning
+      objectReference: {fileID: 0}
+    - target: {fileID: 6364881888974947744, guid: c340f6ce12ed6e14d91cc8895ea604fa, type: 3}
+      propertyPath: <BGMList>k__BackingField.Array.data[1].sound.Path
+      value: event:/BGM/Forest_Night
+      objectReference: {fileID: 0}
+    - target: {fileID: 6364881888974947744, guid: c340f6ce12ed6e14d91cc8895ea604fa, type: 3}
+      propertyPath: <BGMList>k__BackingField.Array.data[2].sound.Path
+      value: event:/BGM/Map1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6364881888974947744, guid: c340f6ce12ed6e14d91cc8895ea604fa, type: 3}
+      propertyPath: <BGMList>k__BackingField.Array.data[3].sound.Path
+      value: event:/BGM/Map2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6364881888974947744, guid: c340f6ce12ed6e14d91cc8895ea604fa, type: 3}
+      propertyPath: <BGMList>k__BackingField.Array.data[4].sound.Path
+      value: event:/BGM/Map3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6364881888974947744, guid: c340f6ce12ed6e14d91cc8895ea604fa, type: 3}
+      propertyPath: <BGMList>k__BackingField.Array.data[5].sound.Path
+      value: event:/BGM/Map4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6364881888974947744, guid: c340f6ce12ed6e14d91cc8895ea604fa, type: 3}
       propertyPath: <SFXList>k__BackingField.Array.data[0].sound.Path
-      value: event:/Music/MainMenuMusic
+      value: event:/Dialogue/fallitem
+      objectReference: {fileID: 0}
+    - target: {fileID: 6364881888974947744, guid: c340f6ce12ed6e14d91cc8895ea604fa, type: 3}
+      propertyPath: <SFXList>k__BackingField.Array.data[1].sound.Path
+      value: event:/Dialogue/pullthedoor
+      objectReference: {fileID: 0}
+    - target: {fileID: 6364881888974947744, guid: c340f6ce12ed6e14d91cc8895ea604fa, type: 3}
+      propertyPath: <SFXList>k__BackingField.Array.data[2].sound.Path
+      value: event:/Dialogue/threaten
+      objectReference: {fileID: 0}
+    - target: {fileID: 6364881888974947744, guid: c340f6ce12ed6e14d91cc8895ea604fa, type: 3}
+      propertyPath: <SFXList>k__BackingField.Array.data[3].sound.Path
+      value: event:/Dialogue/key
+      objectReference: {fileID: 0}
+    - target: {fileID: 6364881888974947744, guid: c340f6ce12ed6e14d91cc8895ea604fa, type: 3}
+      propertyPath: <SFXList>k__BackingField.Array.data[4].sound.Path
+      value: event:/Dialogue/run
+      objectReference: {fileID: 0}
+    - target: {fileID: 6364881888974947744, guid: c340f6ce12ed6e14d91cc8895ea604fa, type: 3}
+      propertyPath: <SFXList>k__BackingField.Array.data[5].sound.Path
+      value: event:/Dialogue/walk
+      objectReference: {fileID: 0}
+    - target: {fileID: 6364881888974947744, guid: c340f6ce12ed6e14d91cc8895ea604fa, type: 3}
+      propertyPath: <SFXList>k__BackingField.Array.data[6].sound.Path
+      value: event:/Dialogue/stab
       objectReference: {fileID: 0}
     - target: {fileID: 6364881888974947744, guid: c340f6ce12ed6e14d91cc8895ea604fa, type: 3}
       propertyPath: <playerMovementSFX>k__BackingField.sound.Guid.Data1
@@ -623,20 +723,212 @@ PrefabInstance:
       value: 1234189057
       objectReference: {fileID: 0}
     - target: {fileID: 6364881888974947744, guid: c340f6ce12ed6e14d91cc8895ea604fa, type: 3}
+      propertyPath: <BGMList>k__BackingField.Array.data[0].sound.Guid.Data1
+      value: -1335725334
+      objectReference: {fileID: 0}
+    - target: {fileID: 6364881888974947744, guid: c340f6ce12ed6e14d91cc8895ea604fa, type: 3}
+      propertyPath: <BGMList>k__BackingField.Array.data[0].sound.Guid.Data2
+      value: 1130293227
+      objectReference: {fileID: 0}
+    - target: {fileID: 6364881888974947744, guid: c340f6ce12ed6e14d91cc8895ea604fa, type: 3}
+      propertyPath: <BGMList>k__BackingField.Array.data[0].sound.Guid.Data3
+      value: 810406325
+      objectReference: {fileID: 0}
+    - target: {fileID: 6364881888974947744, guid: c340f6ce12ed6e14d91cc8895ea604fa, type: 3}
+      propertyPath: <BGMList>k__BackingField.Array.data[0].sound.Guid.Data4
+      value: -1897275417
+      objectReference: {fileID: 0}
+    - target: {fileID: 6364881888974947744, guid: c340f6ce12ed6e14d91cc8895ea604fa, type: 3}
+      propertyPath: <BGMList>k__BackingField.Array.data[1].sound.Guid.Data1
+      value: 194752424
+      objectReference: {fileID: 0}
+    - target: {fileID: 6364881888974947744, guid: c340f6ce12ed6e14d91cc8895ea604fa, type: 3}
+      propertyPath: <BGMList>k__BackingField.Array.data[1].sound.Guid.Data2
+      value: 1264528182
+      objectReference: {fileID: 0}
+    - target: {fileID: 6364881888974947744, guid: c340f6ce12ed6e14d91cc8895ea604fa, type: 3}
+      propertyPath: <BGMList>k__BackingField.Array.data[1].sound.Guid.Data3
+      value: -913280880
+      objectReference: {fileID: 0}
+    - target: {fileID: 6364881888974947744, guid: c340f6ce12ed6e14d91cc8895ea604fa, type: 3}
+      propertyPath: <BGMList>k__BackingField.Array.data[1].sound.Guid.Data4
+      value: 557215171
+      objectReference: {fileID: 0}
+    - target: {fileID: 6364881888974947744, guid: c340f6ce12ed6e14d91cc8895ea604fa, type: 3}
+      propertyPath: <BGMList>k__BackingField.Array.data[2].sound.Guid.Data1
+      value: 289440251
+      objectReference: {fileID: 0}
+    - target: {fileID: 6364881888974947744, guid: c340f6ce12ed6e14d91cc8895ea604fa, type: 3}
+      propertyPath: <BGMList>k__BackingField.Array.data[2].sound.Guid.Data2
+      value: 1194216226
+      objectReference: {fileID: 0}
+    - target: {fileID: 6364881888974947744, guid: c340f6ce12ed6e14d91cc8895ea604fa, type: 3}
+      propertyPath: <BGMList>k__BackingField.Array.data[2].sound.Guid.Data3
+      value: 1727138211
+      objectReference: {fileID: 0}
+    - target: {fileID: 6364881888974947744, guid: c340f6ce12ed6e14d91cc8895ea604fa, type: 3}
+      propertyPath: <BGMList>k__BackingField.Array.data[2].sound.Guid.Data4
+      value: -492352526
+      objectReference: {fileID: 0}
+    - target: {fileID: 6364881888974947744, guid: c340f6ce12ed6e14d91cc8895ea604fa, type: 3}
+      propertyPath: <BGMList>k__BackingField.Array.data[3].sound.Guid.Data1
+      value: 791290653
+      objectReference: {fileID: 0}
+    - target: {fileID: 6364881888974947744, guid: c340f6ce12ed6e14d91cc8895ea604fa, type: 3}
+      propertyPath: <BGMList>k__BackingField.Array.data[3].sound.Guid.Data2
+      value: 1233849099
+      objectReference: {fileID: 0}
+    - target: {fileID: 6364881888974947744, guid: c340f6ce12ed6e14d91cc8895ea604fa, type: 3}
+      propertyPath: <BGMList>k__BackingField.Array.data[3].sound.Guid.Data3
+      value: 783632815
+      objectReference: {fileID: 0}
+    - target: {fileID: 6364881888974947744, guid: c340f6ce12ed6e14d91cc8895ea604fa, type: 3}
+      propertyPath: <BGMList>k__BackingField.Array.data[3].sound.Guid.Data4
+      value: -366892784
+      objectReference: {fileID: 0}
+    - target: {fileID: 6364881888974947744, guid: c340f6ce12ed6e14d91cc8895ea604fa, type: 3}
+      propertyPath: <BGMList>k__BackingField.Array.data[4].sound.Guid.Data1
+      value: -1622571628
+      objectReference: {fileID: 0}
+    - target: {fileID: 6364881888974947744, guid: c340f6ce12ed6e14d91cc8895ea604fa, type: 3}
+      propertyPath: <BGMList>k__BackingField.Array.data[4].sound.Guid.Data2
+      value: 1094388763
+      objectReference: {fileID: 0}
+    - target: {fileID: 6364881888974947744, guid: c340f6ce12ed6e14d91cc8895ea604fa, type: 3}
+      propertyPath: <BGMList>k__BackingField.Array.data[4].sound.Guid.Data3
+      value: 7006396
+      objectReference: {fileID: 0}
+    - target: {fileID: 6364881888974947744, guid: c340f6ce12ed6e14d91cc8895ea604fa, type: 3}
+      propertyPath: <BGMList>k__BackingField.Array.data[4].sound.Guid.Data4
+      value: -1429404751
+      objectReference: {fileID: 0}
+    - target: {fileID: 6364881888974947744, guid: c340f6ce12ed6e14d91cc8895ea604fa, type: 3}
+      propertyPath: <BGMList>k__BackingField.Array.data[5].sound.Guid.Data1
+      value: -2141416022
+      objectReference: {fileID: 0}
+    - target: {fileID: 6364881888974947744, guid: c340f6ce12ed6e14d91cc8895ea604fa, type: 3}
+      propertyPath: <BGMList>k__BackingField.Array.data[5].sound.Guid.Data2
+      value: 1175329383
+      objectReference: {fileID: 0}
+    - target: {fileID: 6364881888974947744, guid: c340f6ce12ed6e14d91cc8895ea604fa, type: 3}
+      propertyPath: <BGMList>k__BackingField.Array.data[5].sound.Guid.Data3
+      value: -1270559057
+      objectReference: {fileID: 0}
+    - target: {fileID: 6364881888974947744, guid: c340f6ce12ed6e14d91cc8895ea604fa, type: 3}
+      propertyPath: <BGMList>k__BackingField.Array.data[5].sound.Guid.Data4
+      value: 1708079672
+      objectReference: {fileID: 0}
+    - target: {fileID: 6364881888974947744, guid: c340f6ce12ed6e14d91cc8895ea604fa, type: 3}
       propertyPath: <SFXList>k__BackingField.Array.data[0].sound.Guid.Data1
-      value: -1786025440
+      value: -1047866482
       objectReference: {fileID: 0}
     - target: {fileID: 6364881888974947744, guid: c340f6ce12ed6e14d91cc8895ea604fa, type: 3}
       propertyPath: <SFXList>k__BackingField.Array.data[0].sound.Guid.Data2
-      value: 1249586670
+      value: 1183758834
       objectReference: {fileID: 0}
     - target: {fileID: 6364881888974947744, guid: c340f6ce12ed6e14d91cc8895ea604fa, type: 3}
       propertyPath: <SFXList>k__BackingField.Array.data[0].sound.Guid.Data3
-      value: -640150876
+      value: 308699051
       objectReference: {fileID: 0}
     - target: {fileID: 6364881888974947744, guid: c340f6ce12ed6e14d91cc8895ea604fa, type: 3}
       propertyPath: <SFXList>k__BackingField.Array.data[0].sound.Guid.Data4
-      value: 846998473
+      value: 1259578056
+      objectReference: {fileID: 0}
+    - target: {fileID: 6364881888974947744, guid: c340f6ce12ed6e14d91cc8895ea604fa, type: 3}
+      propertyPath: <SFXList>k__BackingField.Array.data[1].sound.Guid.Data1
+      value: -725825503
+      objectReference: {fileID: 0}
+    - target: {fileID: 6364881888974947744, guid: c340f6ce12ed6e14d91cc8895ea604fa, type: 3}
+      propertyPath: <SFXList>k__BackingField.Array.data[1].sound.Guid.Data2
+      value: 1324106931
+      objectReference: {fileID: 0}
+    - target: {fileID: 6364881888974947744, guid: c340f6ce12ed6e14d91cc8895ea604fa, type: 3}
+      propertyPath: <SFXList>k__BackingField.Array.data[1].sound.Guid.Data3
+      value: 278033029
+      objectReference: {fileID: 0}
+    - target: {fileID: 6364881888974947744, guid: c340f6ce12ed6e14d91cc8895ea604fa, type: 3}
+      propertyPath: <SFXList>k__BackingField.Array.data[1].sound.Guid.Data4
+      value: 721225829
+      objectReference: {fileID: 0}
+    - target: {fileID: 6364881888974947744, guid: c340f6ce12ed6e14d91cc8895ea604fa, type: 3}
+      propertyPath: <SFXList>k__BackingField.Array.data[2].sound.Guid.Data1
+      value: 1964261254
+      objectReference: {fileID: 0}
+    - target: {fileID: 6364881888974947744, guid: c340f6ce12ed6e14d91cc8895ea604fa, type: 3}
+      propertyPath: <SFXList>k__BackingField.Array.data[2].sound.Guid.Data2
+      value: 1082601631
+      objectReference: {fileID: 0}
+    - target: {fileID: 6364881888974947744, guid: c340f6ce12ed6e14d91cc8895ea604fa, type: 3}
+      propertyPath: <SFXList>k__BackingField.Array.data[2].sound.Guid.Data3
+      value: -2067801160
+      objectReference: {fileID: 0}
+    - target: {fileID: 6364881888974947744, guid: c340f6ce12ed6e14d91cc8895ea604fa, type: 3}
+      propertyPath: <SFXList>k__BackingField.Array.data[2].sound.Guid.Data4
+      value: 105831029
+      objectReference: {fileID: 0}
+    - target: {fileID: 6364881888974947744, guid: c340f6ce12ed6e14d91cc8895ea604fa, type: 3}
+      propertyPath: <SFXList>k__BackingField.Array.data[3].sound.Guid.Data1
+      value: -1448227755
+      objectReference: {fileID: 0}
+    - target: {fileID: 6364881888974947744, guid: c340f6ce12ed6e14d91cc8895ea604fa, type: 3}
+      propertyPath: <SFXList>k__BackingField.Array.data[3].sound.Guid.Data2
+      value: 1118113783
+      objectReference: {fileID: 0}
+    - target: {fileID: 6364881888974947744, guid: c340f6ce12ed6e14d91cc8895ea604fa, type: 3}
+      propertyPath: <SFXList>k__BackingField.Array.data[3].sound.Guid.Data3
+      value: 1914037676
+      objectReference: {fileID: 0}
+    - target: {fileID: 6364881888974947744, guid: c340f6ce12ed6e14d91cc8895ea604fa, type: 3}
+      propertyPath: <SFXList>k__BackingField.Array.data[3].sound.Guid.Data4
+      value: -896068522
+      objectReference: {fileID: 0}
+    - target: {fileID: 6364881888974947744, guid: c340f6ce12ed6e14d91cc8895ea604fa, type: 3}
+      propertyPath: <SFXList>k__BackingField.Array.data[4].sound.Guid.Data1
+      value: -2076952485
+      objectReference: {fileID: 0}
+    - target: {fileID: 6364881888974947744, guid: c340f6ce12ed6e14d91cc8895ea604fa, type: 3}
+      propertyPath: <SFXList>k__BackingField.Array.data[4].sound.Guid.Data2
+      value: 1297940409
+      objectReference: {fileID: 0}
+    - target: {fileID: 6364881888974947744, guid: c340f6ce12ed6e14d91cc8895ea604fa, type: 3}
+      propertyPath: <SFXList>k__BackingField.Array.data[4].sound.Guid.Data3
+      value: -1228429680
+      objectReference: {fileID: 0}
+    - target: {fileID: 6364881888974947744, guid: c340f6ce12ed6e14d91cc8895ea604fa, type: 3}
+      propertyPath: <SFXList>k__BackingField.Array.data[4].sound.Guid.Data4
+      value: 1563957407
+      objectReference: {fileID: 0}
+    - target: {fileID: 6364881888974947744, guid: c340f6ce12ed6e14d91cc8895ea604fa, type: 3}
+      propertyPath: <SFXList>k__BackingField.Array.data[5].sound.Guid.Data1
+      value: 1773506868
+      objectReference: {fileID: 0}
+    - target: {fileID: 6364881888974947744, guid: c340f6ce12ed6e14d91cc8895ea604fa, type: 3}
+      propertyPath: <SFXList>k__BackingField.Array.data[5].sound.Guid.Data2
+      value: 1262622917
+      objectReference: {fileID: 0}
+    - target: {fileID: 6364881888974947744, guid: c340f6ce12ed6e14d91cc8895ea604fa, type: 3}
+      propertyPath: <SFXList>k__BackingField.Array.data[5].sound.Guid.Data3
+      value: -1819332209
+      objectReference: {fileID: 0}
+    - target: {fileID: 6364881888974947744, guid: c340f6ce12ed6e14d91cc8895ea604fa, type: 3}
+      propertyPath: <SFXList>k__BackingField.Array.data[5].sound.Guid.Data4
+      value: -254967141
+      objectReference: {fileID: 0}
+    - target: {fileID: 6364881888974947744, guid: c340f6ce12ed6e14d91cc8895ea604fa, type: 3}
+      propertyPath: <SFXList>k__BackingField.Array.data[6].sound.Guid.Data1
+      value: -1898236841
+      objectReference: {fileID: 0}
+    - target: {fileID: 6364881888974947744, guid: c340f6ce12ed6e14d91cc8895ea604fa, type: 3}
+      propertyPath: <SFXList>k__BackingField.Array.data[6].sound.Guid.Data2
+      value: 1138623525
+      objectReference: {fileID: 0}
+    - target: {fileID: 6364881888974947744, guid: c340f6ce12ed6e14d91cc8895ea604fa, type: 3}
+      propertyPath: <SFXList>k__BackingField.Array.data[6].sound.Guid.Data3
+      value: -2012398169
+      objectReference: {fileID: 0}
+    - target: {fileID: 6364881888974947744, guid: c340f6ce12ed6e14d91cc8895ea604fa, type: 3}
+      propertyPath: <SFXList>k__BackingField.Array.data[6].sound.Guid.Data4
+      value: -280510879
       objectReference: {fileID: 0}
     - target: {fileID: 7018307969707337321, guid: c340f6ce12ed6e14d91cc8895ea604fa, type: 3}
       propertyPath: m_RootOrder

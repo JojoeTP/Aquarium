@@ -70,9 +70,5 @@ public class SceneController : MonoBehaviour
         yield return null;
 
         afterSwitchScene?.Invoke();
-
-        yield return new WaitUntil(() => GameplaySceneLoaded);
-
-        ActionEventManager.inst.SetActiveDialogueCh0_C01_01();
     }
 }
