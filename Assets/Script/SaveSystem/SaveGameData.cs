@@ -16,7 +16,10 @@ public class SaveGameData
 
 
 
-    public bool isEncryptionPuzzleDone;
+    public bool isMap1Done;
+    public bool isMap2Done;
+    public bool isMap3Done;
+    public bool isMap4Done;
 
 
     //Item in inventory
@@ -56,10 +59,24 @@ public class SaveGameData
     {
         return playerItem;
     }
-
-    public bool GetEncryptionPuzzle()
+    
+    public bool IsMap1Done()
     {
-        return isEncryptionPuzzleDone;
+        return isMap1Done;
     }
 
+    public bool IsMap2Done()
+    {
+        return isMap2Done;
+    }
+
+    public bool IsMap3Done()
+    {
+        return isMap3Done;
+    }
+
+    public bool IsMap4Done()
+    {
+        return isMap4Done;
+    }
 }
