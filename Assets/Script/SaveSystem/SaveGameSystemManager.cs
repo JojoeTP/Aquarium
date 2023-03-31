@@ -8,7 +8,7 @@ public class SaveGameSystemManager : MonoBehaviour
 
     public SaveGameData gameData;
 
-    public bool isLoad {get; private set;}
+    public bool isLoad;
 
     void Awake() 
     {

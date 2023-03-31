@@ -61,16 +61,302 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <playerMovementSFX>k__BackingField:
-    Guid:
-      Data1: -132877150
-      Data2: 1239890899
-      Data3: -1455111234
-      Data4: 1234189057
-    Path: event:/PlayerMove/SFX_PlayerMove
+    key: PlayerMovement
+    sound:
+      Guid:
+        Data1: -132877150
+        Data2: 1239890899
+        Data3: -1455111234
+        Data4: 1234189057
+      Path: event:/PlayerMove/SFX_PlayerMove
+  <SFXList>k__BackingField:
+  - key: fallitem
+    sound:
+      Guid:
+        Data1: -1047866482
+        Data2: 1183758834
+        Data3: 308699051
+        Data4: 1259578056
+      Path: event:/Dialogue/fallitem
+  - key: pullthedoor
+    sound:
+      Guid:
+        Data1: -725825503
+        Data2: 1324106931
+        Data3: 278033029
+        Data4: 721225829
+      Path: event:/Dialogue/pullthedoor
+  - key: threaten
+    sound:
+      Guid:
+        Data1: 1964261254
+        Data2: 1082601631
+        Data3: -2067801160
+        Data4: 105831029
+      Path: event:/Dialogue/threaten
+  - key: key
+    sound:
+      Guid:
+        Data1: -1448227755
+        Data2: 1118113783
+        Data3: 1914037676
+        Data4: -896068522
+      Path: event:/Dialogue/key
+  - key: run
+    sound:
+      Guid:
+        Data1: -2076952485
+        Data2: 1297940409
+        Data3: -1228429680
+        Data4: 1563957407
+      Path: event:/Dialogue/run
+  - key: walk
+    sound:
+      Guid:
+        Data1: 1773506868
+        Data2: 1262622917
+        Data3: -1819332209
+        Data4: -254967141
+      Path: event:/Dialogue/walk
+  - key: stab
+    sound:
+      Guid:
+        Data1: -1898236841
+        Data2: 1138623525
+        Data3: -2012398169
+        Data4: -280510879
+      Path: event:/Dialogue/stab
+  - key: angrycatmeow
+    sound:
+      Guid:
+        Data1: 617700855
+        Data2: 1171968684
+        Data3: -1563837299
+        Data4: -797018366
+      Path: event:/Dialogue/angrycatmeow
+  - key: bird
+    sound:
+      Guid:
+        Data1: 854309472
+        Data2: 1082554085
+        Data3: -1428280916
+        Data4: 1528207696
+      Path: event:/Dialogue/bird
+  - key: bubble
+    sound:
+      Guid:
+        Data1: 2053138255
+        Data2: 1336260765
+        Data3: 1780980102
+        Data4: -1510994142
+      Path: event:/Dialogue/bubble
+  - key: camera
+    sound:
+      Guid:
+        Data1: -928382785
+        Data2: 1330833034
+        Data3: 843358895
+        Data4: 1501559386
+      Path: event:/Dialogue/camera
+  - key: earthquake
+    sound:
+      Guid:
+        Data1: 1428280406
+        Data2: 1208627100
+        Data3: -1304269907
+        Data4: -593658182
+      Path: event:/Dialogue/earthquake
+  - key: fallwater
+    sound:
+      Guid:
+        Data1: 2126209514
+        Data2: 1299393203
+        Data3: -661526644
+        Data4: -431925705
+      Path: event:/Dialogue/fallwater
+  - key: girllaughter
+    sound:
+      Guid:
+        Data1: 997752944
+        Data2: 1307721940
+        Data3: 1103558331
+        Data4: -72084770
+      Path: event:/Dialogue/girllaughter
+  - key: heartbeat
+    sound:
+      Guid:
+        Data1: 1168984017
+        Data2: 1155646360
+        Data3: 35140787
+        Data4: 1050169768
+      Path: event:/Dialogue/heartbeat
+  - key: heavypush
+    sound:
+      Guid:
+        Data1: 687735545
+        Data2: 1086882065
+        Data3: -1753111167
+        Data4: 2043472647
+      Path: event:/Dialogue/heavypush
+  - key: knife
+    sound:
+      Guid:
+        Data1: 174430833
+        Data2: 1284538277
+        Data3: 70358408
+        Data4: -1016892716
+      Path: event:/Dialogue/knife
+  - key: meow
+    sound:
+      Guid:
+        Data1: -564763072
+        Data2: 1216090187
+        Data3: -434864510
+        Data4: 852635869
+      Path: event:/Dialogue/meow
+  - key: mirror
+    sound:
+      Guid:
+        Data1: 1912858636
+        Data2: 1260155060
+        Data3: 1591519879
+        Data4: -1415747502
+      Path: event:/Dialogue/mirror
+  - key: Monster_spawner
+    sound:
+      Guid:
+        Data1: 1039035877
+        Data2: 1233465144
+        Data3: -777259093
+        Data4: -2118426445
+      Path: event:/Dialogue/monster_spawner
+  - key: Ooze1_1
+    sound:
+      Guid:
+        Data1: -1105675750
+        Data2: 1149839441
+        Data3: -1597699410
+        Data4: 2103487513
+      Path: event:/Dialogue/Ooze1_1
+  - key: Ooze1_2
+    sound:
+      Guid:
+        Data1: -1047499919
+        Data2: 1273858286
+        Data3: -438967408
+        Data4: 229104981
+      Path: event:/Dialogue/Ooze1_2
+  - key: Ooze1_3
+    sound:
+      Guid:
+        Data1: 565053346
+        Data2: 1323000163
+        Data3: -869626689
+        Data4: -860015104
+      Path: event:/Dialogue/Ooze1_3
+  - key: paper
+    sound:
+      Guid:
+        Data1: -1306534210
+        Data2: 1165476494
+        Data3: -784632899
+        Data4: 933929474
+      Path: event:/Dialogue/paper
+  - key: tvbroken
+    sound:
+      Guid:
+        Data1: 1535516884
+        Data2: 1123725724
+        Data3: 1706706820
+        Data4: 1314993954
+      Path: event:/Dialogue/tvbroken
+  - key: Setting
+    sound:
+      Guid:
+        Data1: -1568329630
+        Data2: 1129555138
+        Data3: 1740929435
+        Data4: -1017058717
+      Path: event:/UI/Setting
+  - key: UIButton
+    sound:
+      Guid:
+        Data1: -303842820
+        Data2: 1185065748
+        Data3: -55346283
+        Data4: 1634200431
+      Path: event:/UI/UIButton
   <MainMenuMusic>k__BackingField:
-    Guid:
-      Data1: -1786025440
-      Data2: 1249586670
-      Data3: -640150876
-      Data4: 846998473
-    Path: event:/Music/MainMenuMusic
+    key: MainMenuMusic
+    sound:
+      Guid:
+        Data1: -1786025440
+        Data2: 1249586670
+        Data3: -640150876
+        Data4: 846998473
+      Path: event:/BGM/MainMenuMusic
+  <BGMList>k__BackingField:
+  - key: Forest_Morning
+    sound:
+      Guid:
+        Data1: -1335725334
+        Data2: 1130293227
+        Data3: 810406325
+        Data4: -1897275417
+      Path: event:/BGM/Forest_Morning
+  - key: Forest_Night
+    sound:
+      Guid:
+        Data1: 194752424
+        Data2: 1264528182
+        Data3: -913280880
+        Data4: 557215171
+      Path: event:/BGM/Forest_Night
+  - key: Map1
+    sound:
+      Guid:
+        Data1: 289440251
+        Data2: 1194216226
+        Data3: 1727138211
+        Data4: -492352526
+      Path: event:/BGM/Map1
+  - key: Map2
+    sound:
+      Guid:
+        Data1: 791290653
+        Data2: 1233849099
+        Data3: 783632815
+        Data4: -366892784
+      Path: event:/BGM/Map2
+  - key: Map3
+    sound:
+      Guid:
+        Data1: -1622571628
+        Data2: 1094388763
+        Data3: 7006396
+        Data4: -1429404751
+      Path: event:/BGM/Map3
+  - key: Map4
+    sound:
+      Guid:
+        Data1: -2141416022
+        Data2: 1175329383
+        Data3: -1270559057
+        Data4: 1708079672
+      Path: event:/BGM/Map4
+  - key: Ending
+    sound:
+      Guid:
+        Data1: -1079985967
+        Data2: 1197400635
+        Data3: 1378209428
+        Data4: 2085247077
+      Path: event:/BGM/Ending
+  - key: Rain
+    sound:
+      Guid:
+        Data1: -1345706922
+        Data2: 1317351858
+        Data3: -1725906043
+        Data4: -439178800
+      Path: event:/BGM/Rain
