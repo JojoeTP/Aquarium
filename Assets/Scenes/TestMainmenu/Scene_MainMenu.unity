@@ -383,14 +383,14 @@ MonoBehaviour:
   m_VerticalScrollbarEventHandler: {fileID: 0}
   m_LayoutGroup: {fileID: 0}
   m_ScrollSensitivity: 1
-  m_ContentType: 0
+  m_ContentType: 2
   m_InputType: 0
   m_AsteriskChar: 42
-  m_KeyboardType: 0
+  m_KeyboardType: 4
   m_LineType: 0
   m_HideMobileInput: 0
   m_HideSoftKeyboard: 0
-  m_CharacterValidation: 0
+  m_CharacterValidation: 2
   m_RegexValue: 
   m_GlobalPointSize: 14
   m_CharacterLimit: 0
@@ -7511,6 +7511,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 373.771
       objectReference: {fileID: 0}
+    - target: {fileID: 8420178801386491596, guid: b74ebf5e42c5a10479df289410706700, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9054208735690422118, guid: b74ebf5e42c5a10479df289410706700, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9216958960462256116, guid: b74ebf5e42c5a10479df289410706700, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -14376,7 +14384,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7780749, y: 1}
+    m_SensorSize: {x: 1.7762376, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
