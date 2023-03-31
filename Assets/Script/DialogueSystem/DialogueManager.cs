@@ -107,7 +107,7 @@ public class DialogueManager : MonoBehaviour
             else
             {
                 //ID,character,charaterImage,dialogueText,choice1,choice2,choice1Text,choice2Text,type,sound,BGMSound
-                //Debug.Log("Loading Dialogue " + data_values[0]);
+                Debug.Log("Loading Dialogue " + data_values[0] + "" + data_values[8]);
                 //Todo : แก้ตรงนี้ type หายในบางครั้ง
                 DialogueInfo newDialogue = new DialogueInfo(data_values[0], data_values[1], data_values[2], data_values[3], data_values[4], data_values[5], data_values[6], data_values[7], data_values[8], data_values[9], data_values[10]);
                 openWith.Add(data_values[0], newDialogue);
@@ -293,7 +293,6 @@ public class DialogueManager : MonoBehaviour
         dialoguePanel.ChoiceButton1.onClick.AddListener(active);
         dialoguePanel.ChoiceButton1.onClick.AddListener(() => dialoguePanel.ChoiceButton1.onClick.RemoveListener(active)); //ไม่แน่ใจว่าจะใช้ได้ไหม
         
-
         dialoguePanel.ChoiceButton1.gameObject.SetActive(enabled);
         dialoguePanel.ChoiceButton2.gameObject.SetActive(enabled);
     }
