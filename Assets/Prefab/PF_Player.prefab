@@ -773,7 +773,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d1b279dbba6c354fb293e150aabd516, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerBaseSpeed: 10
+  playerBaseSpeed: 8
   sprintSpeed: 20
   basePlayerStamina: 30
   staminaCost: 0.1
