@@ -25,11 +25,13 @@ public class PlayerManager : MonoBehaviour
     PlayerInteract playerInteract;
     PlayerLight playerLight;
     PlayerInventory playerInventory;
+    PlayerCam playerCam;
 
     public PlayerMovement PlayerMovement {get {return playerMovement;}}
     public PlayerInteract PlayerInteract {get {return playerInteract;}}
     public PlayerLight PlayerLight {get {return playerLight;}}
     public PlayerInventory PlayerInventory {get {return playerInventory;}}
+    public PlayerCam PlayerCam { get { return playerCam; } }
 
     [Header("PlayerAction")]
     public PLAYERSTATE playerState;
@@ -38,7 +40,6 @@ public class PlayerManager : MonoBehaviour
     {
         inst = this;
     }
-
     void Start()
     {
         Init();
@@ -50,6 +51,7 @@ public class PlayerManager : MonoBehaviour
         playerInteract = GetComponent<PlayerInteract>();
         playerLight = GetComponent<PlayerLight>();
         playerInventory = GetComponent<PlayerInventory>();
+        playerCam = GetComponent<PlayerCam>();
     }
 
     void Init()

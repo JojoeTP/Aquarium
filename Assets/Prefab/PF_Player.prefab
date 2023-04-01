@@ -673,6 +673,7 @@ GameObject:
   - component: {fileID: 1829112646365129875}
   - component: {fileID: 1829112646365129878}
   - component: {fileID: 512804883587313077}
+  - component: {fileID: 47379373467382339}
   m_Layer: 6
   m_Name: PF_Player
   m_TagString: Player
@@ -804,6 +805,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 357ae907a2e66fb4ea2b9304b2155a9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &47379373467382339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1829112646365129886}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8672557b536e7f143906a34f0e5983a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cinemachineVirtualCamera: {fileID: 0}
+  amplitude: 2
+  frequency: 4
+  shakeCameraTime: 5
 --- !u!1 &2059807458025293377
 GameObject:
   m_ObjectHideFlags: 0

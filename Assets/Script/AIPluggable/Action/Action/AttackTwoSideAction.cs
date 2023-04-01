@@ -22,6 +22,7 @@ namespace PluggableAI
                 controller.ToggleAttack(true);
                 AiMermaidController.inst.OnAttackPlayer();
                 Debug.Log("Attack");
+                PlayerManager.inst.PlayerCam.ShakeCamera();
             }
         }
     }
