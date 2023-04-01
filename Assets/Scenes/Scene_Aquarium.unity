@@ -7326,7 +7326,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7762963, y: 1}
+    m_SensorSize: {x: 1.7780749, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -16402,11 +16402,11 @@ Transform:
   m_LocalScale: {x: 0.11123525, y: 0.11123525, z: 0.28406516}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 896778645}
   - {fileID: 1562149389}
+  - {fileID: 896778645}
   - {fileID: 967039724}
-  - {fileID: 1136376163}
   - {fileID: 514758674}
+  - {fileID: 1136376163}
   m_Father: {fileID: 910114150}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -16539,7 +16539,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96cd48e12b93e2644b317eb0a2a62a23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isSave: 0
+  isSave: 1
   isCutScene: 0
   isRunDialogueWhenOverlap: 1
   haveDialogueBg: 0
@@ -25896,7 +25896,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96cd48e12b93e2644b317eb0a2a62a23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isSave: 0
+  isSave: 1
   isCutScene: 0
   isRunDialogueWhenOverlap: 1
   haveDialogueBg: 0
@@ -28658,7 +28658,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96cd48e12b93e2644b317eb0a2a62a23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isSave: 1
+  isSave: 0
   isCutScene: 1
   isRunDialogueWhenOverlap: 1
   haveDialogueBg: 0
@@ -30122,7 +30122,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96cd48e12b93e2644b317eb0a2a62a23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isSave: 1
+  isSave: 0
   isCutScene: 0
   isRunDialogueWhenOverlap: 1
   haveDialogueBg: 0
@@ -31273,7 +31273,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96cd48e12b93e2644b317eb0a2a62a23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isSave: 1
+  isSave: 0
   isCutScene: 0
   isRunDialogueWhenOverlap: 1
   haveDialogueBg: 0
@@ -32829,7 +32829,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96cd48e12b93e2644b317eb0a2a62a23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isSave: 1
+  isSave: 0
   isCutScene: 0
   isRunDialogueWhenOverlap: 1
   haveDialogueBg: 0
