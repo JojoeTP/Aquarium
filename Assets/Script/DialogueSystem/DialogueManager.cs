@@ -39,6 +39,9 @@ public class DialogueManager : MonoBehaviour
     public UIDialoguePanel dialoguePanel;
 
     [SerializeField] float typeDialogueDelay;
+
+    Task<bool> loadingDialogueData;
+
     public void LoadCharacterSprites()
     {
         //loadSprite = (Sprite[])Resources.LoadAll("CutScene");
@@ -51,8 +54,13 @@ public class DialogueManager : MonoBehaviour
 
     void Start()
     {
-        Task<bool> loadingDialogueData = LoadAllDialogueData();
+        loadingDialogueData = LoadAllDialogueData();
         LoadCharacterSprites();
+    }
+
+    public bool IsLoadingDialogueData()
+    {
+        return loadingDialogueData.Result;
     }
 
     void Initialize()
