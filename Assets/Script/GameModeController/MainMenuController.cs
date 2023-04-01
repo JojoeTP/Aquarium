@@ -92,6 +92,8 @@ public class MainMenuController : MonoBehaviour
     public void OnApplyParticipateID()
     {
         if(gameStarted) return;
+        if(inputParticipateID.text == null) return;
+        if(inputParticipateID.text == "") return;
 
         gameStarted = true;
         SaveGameSystemManager.inst.StartNewGame();
@@ -158,5 +160,13 @@ public class MainMenuController : MonoBehaviour
         SceneController.inst.GameplaySceneLoaded = true;
 
         ActionEventManager.inst.SetActiveDialogueCh0_C01_01();
+        
+        if(SaveGameSystemManager.inst.isLoad)
+        {
+            SaveGameSystemManager.inst.SetIsMapDone();
+            ActionEventManager.inst.LoadingGame();
+
+            PlayerManager.inst.playerState = PlayerManager.PLAYERSTATE.NONE;
+        }
     }
 }

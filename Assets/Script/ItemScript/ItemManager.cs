@@ -129,6 +129,9 @@ public class ItemManager : MonoBehaviour
                     {
                         ActionEventManager.inst.SetActiveDialogueCh1_D11_01();
                         ActionEventManager.inst.SetActiveFalse_Wall_Cafeteria();
+                        ActionEventManager.inst.LockCafeteriaDoor();
+                        ActionEventManager.inst.isMap1Done = true;
+                        
                         DialogueManager.inst.currentDialogue = item.itemObject.itemData.dialogueItemId;
                         DialogueManager.inst.StartDialogue();
                     }
@@ -148,6 +151,8 @@ public class ItemManager : MonoBehaviour
                 item.triggerEvents.AddListener( () => 
                     {
                         ActionEventManager.inst.OnPickUpLabyrinthCoin();
+                        ActionEventManager.inst.LockLabyrinthDoor();
+                        ActionEventManager.inst.isMap2Done = true;
                         DialogueManager.inst.currentDialogue = item.itemObject.itemData.dialogueItemId;
                         DialogueManager.inst.StartDialogue();
                     }
@@ -174,6 +179,8 @@ public class ItemManager : MonoBehaviour
                 item.triggerEvents.AddListener( () => 
                     {
                         ActionEventManager.inst.OnPickUpCircusCoin();
+                        ActionEventManager.inst.LockCircusDoor();
+                        ActionEventManager.inst.isMap3Done = true;
                         DialogueManager.inst.currentDialogue = item.itemObject.itemData.dialogueItemId;
                         DialogueManager.inst.StartDialogue();
                     }
@@ -191,6 +198,8 @@ public class ItemManager : MonoBehaviour
                 item.triggerEvents.AddListener( () => 
                     {
                         AiDirectorController.inst.spawnAI = true;
+                        ActionEventManager.inst.isMap4Done = true;
+                        ActionEventManager.inst.LockAquariamDoor();
                         ActionEventManager.inst.SetActiveDialogueCh4_D05_01();
                         ActionEventManager.inst.SetActiveDialogueCh4_D06_01();
                         ActionEventManager.inst.SetActiveDialogueCh4_D07_01();
