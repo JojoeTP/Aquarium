@@ -7098,7 +7098,19 @@ MonoBehaviour:
   notForEnemy: 0
   triggerDoorEvents:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1526929995}
+        m_TargetAssemblyTypeName: AiJunitorController, Assembly-CSharp
+        m_MethodName: DestroyJunitorAI
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   isLockedDoor: 0
   triggerConditionEvent:
     m_PersistentCalls:
@@ -7353,6 +7365,37 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 13.264281, y: 6.9238358}
   m_EdgeRadius: 0
+--- !u!1 &391783967
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 391783968}
+  m_Layer: 0
+  m_Name: SpawnRedHoodPosition
+  m_TagString: Untagged
+  m_Icon: {fileID: 6519382022992737161, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &391783968
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 391783967}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 454.82, y: -148.98, z: -0.31247073}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 953765842}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &392970614
 GameObject:
   m_ObjectHideFlags: 0
@@ -7580,7 +7623,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7794592, y: 1}
+    m_SensorSize: {x: 1.7768817, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -14482,7 +14525,19 @@ MonoBehaviour:
   notForEnemy: 0
   triggerDoorEvents:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1526929995}
+        m_TargetAssemblyTypeName: AiJunitorController, Assembly-CSharp
+        m_MethodName: DestroyJunitorAI
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   isLockedDoor: 0
   triggerConditionEvent:
     m_PersistentCalls:
@@ -21267,6 +21322,7 @@ Transform:
   - {fileID: 1021774399}
   - {fileID: 1163119852}
   - {fileID: 20444343}
+  - {fileID: 391783968}
   m_Father: {fileID: 0}
   m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -36173,7 +36229,7 @@ PrefabInstance:
     - target: {fileID: 4966732993388418438, guid: 1b3dcc0b488f4414c991160dad5fe269, type: 3}
       propertyPath: spawnSisterPosition
       value: 
-      objectReference: {fileID: 1556040212}
+      objectReference: {fileID: 391783968}
     - target: {fileID: 4966732993388418438, guid: 1b3dcc0b488f4414c991160dad5fe269, type: 3}
       propertyPath: labyrinthENDSpriteRenderer
       value: 
@@ -41929,7 +41985,19 @@ MonoBehaviour:
   notForEnemy: 0
   triggerDoorEvents:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1526929995}
+        m_TargetAssemblyTypeName: AiJunitorController, Assembly-CSharp
+        m_MethodName: DestroyJunitorAI
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   isLockedDoor: 1
   triggerConditionEvent:
     m_PersistentCalls:
@@ -44396,7 +44464,19 @@ MonoBehaviour:
   notForEnemy: 0
   triggerDoorEvents:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1526929995}
+        m_TargetAssemblyTypeName: AiJunitorController, Assembly-CSharp
+        m_MethodName: DestroyJunitorAI
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   isLockedDoor: 1
   triggerConditionEvent:
     m_PersistentCalls:
