@@ -79,7 +79,7 @@ MonoBehaviour:
   disappearRangeOffset: {x: 0, y: 0, z: 0}
   stateLableOffset: {x: 0, y: 0, z: 0}
   moveSpeed: 2
-  chasingSpeed: 20
+  chasingSpeed: 10
   visionRange: 100
   interactRange: 1
   attackRange: 3
