@@ -157,6 +157,9 @@ public class PlayerInteract : MonoBehaviour
     void GetItem(Item item)
     {
         // PlayerManager.inst.playerInventory.itemList.Add(item.item);
+        if(PlayerManager.inst.playerState == PlayerManager.PLAYERSTATE.GETTINGITEM)
+            return;
+
         PlayerManager.inst.playerState = PlayerManager.PLAYERSTATE.CONVERSATION;
         if (item.itemObject.itemData.dialogueItemId == "")
         {

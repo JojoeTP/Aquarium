@@ -13,7 +13,8 @@ public class PlayerCam : MonoBehaviour
     CinemachineBasicMultiChannelPerlin cameraInfo;
     void Start()
     {
-        cameraInfo = cinemachineVirtualCamera.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>();
+        if(cinemachineVirtualCamera != null)
+            cameraInfo = cinemachineVirtualCamera.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>();
     }
 
     IEnumerator ShakeCameraTime(float time)
