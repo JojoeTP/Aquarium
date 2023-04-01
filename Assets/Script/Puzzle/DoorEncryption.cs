@@ -208,7 +208,6 @@ public class DoorEncryption : MonoBehaviour
 
         //warp to start Pos
         door.connectDoor = doorTrigger.transform;
-        door.PlayerEnterDoor(PlayerManager.inst.transform);
 
         ChangeState(PuzzleState.STOP);
     }
