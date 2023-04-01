@@ -216,7 +216,11 @@ public class PlayerInteract : MonoBehaviour
     {
         if(PlayerManager.inst.playerState == PlayerManager.PLAYERSTATE.NONE)
         {
-            PlayerManager.inst.playerSprite.SetActive(false);
+            foreach(var n in PlayerManager.inst.playerSprite)
+            {
+                n.SetActive(false);
+            }
+
             // GetComponent<Collider2D>().enabled = false;
             PlayerManager.inst.playerState = PlayerManager.PLAYERSTATE.HIDING;
             hidingSpot.OnEnterHidingEvent();
@@ -226,7 +230,10 @@ public class PlayerInteract : MonoBehaviour
             if(AiJunitorController.inst.CannotExitHiding)
                 return;
 
-            PlayerManager.inst.playerSprite.SetActive(true);
+            foreach(var n in PlayerManager.inst.playerSprite)
+            {
+                n.SetActive(true);
+            }
             // GetComponent<Collider2D>().enabled = true;
             PlayerManager.inst.playerState = PlayerManager.PLAYERSTATE.NONE;
             hidingSpot.OnHidingEvent();

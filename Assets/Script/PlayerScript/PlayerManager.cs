@@ -17,7 +17,7 @@ public class PlayerManager : MonoBehaviour
     }
 
     public static PlayerManager inst;
-    public GameObject playerSprite;
+    public List<GameObject> playerSprite = new List<GameObject>();
     public Animator playerAnimator;
 
     [Header("PlayerScript")]
