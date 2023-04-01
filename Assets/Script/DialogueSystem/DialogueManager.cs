@@ -40,7 +40,7 @@ public class DialogueManager : MonoBehaviour
 
     [SerializeField] float typeDialogueDelay;
 
-    Task<bool> loadingDialogueData;
+    bool loadingDialogueData;
 
     public void LoadCharacterSprites()
     {
@@ -54,13 +54,13 @@ public class DialogueManager : MonoBehaviour
 
     void Start()
     {
-        loadingDialogueData = LoadAllDialogueData();
+        StartCoroutine(LoadAllDialogueData());
         LoadCharacterSprites();
     }
 
     public bool IsLoadingDialogueData()
     {
-        return loadingDialogueData.Result;
+        return loadingDialogueData;
     }
 
     void Initialize()
@@ -80,17 +80,18 @@ public class DialogueManager : MonoBehaviour
         dialogueCanvas = dialoguePanel.GetComponent<Canvas>();
     }
 
-    public async Task<bool> LoadAllDialogueData()
+    public IEnumerator LoadAllDialogueData()
     {
         for (int i = 0; i < dialoguePaths.Length; i++)
         {
-            await LoadDialogueData(i);
+            LoadDialogueData(i);
+            yield return null;
         }
-
-        return true;
+        
+        loadingDialogueData = true;
     }
 
-    public async Task LoadDialogueData(int index)
+    public void LoadDialogueData(int index)
     {
         StreamReader stringReader = new StreamReader(Application.streamingAssetsPath + "/DialogueData/" + dialoguePaths[index] + ".csv");
 
@@ -119,7 +120,6 @@ public class DialogueManager : MonoBehaviour
                 //Todo : แก้ตรงนี้ type หายในบางครั้ง
                 DialogueInfo newDialogue = new DialogueInfo(data_values[0], data_values[1], data_values[2], data_values[3], data_values[4], data_values[5], data_values[6], data_values[7], data_values[8], data_values[9], data_values[10]);
                 openWith.Add(data_values[0], newDialogue);
-                await Task.Yield();
             }
         }
         
