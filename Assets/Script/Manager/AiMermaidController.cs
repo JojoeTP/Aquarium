@@ -51,7 +51,7 @@ public class AiMermaidController : MonoBehaviour
         UITransition.inst.MermaidTransitionIn();
     }
 
-    IEnumerator CreateMermaidAI(float time)
+    public IEnumerator CreateMermaidAI(float time)
     {
         yield return new WaitForSeconds(time);
 

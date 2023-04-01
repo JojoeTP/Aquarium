@@ -55,6 +55,13 @@ public class ItemPopUpUI : MonoBehaviour
         pickUpItem = item;
         SetItemDetail(item.itemObject.itemData);
         canvas.enabled = true;
+
+        if(item.itemObject.itemData.ItemType == ITEMTYPE.ITEM9)
+        {
+            AiMermaidController.inst.spawnAI = false;
+            AiMermaidController.inst.DestroyMermaidAI();
+        }
+
         PlayerManager.inst.playerState = PlayerManager.PLAYERSTATE.GETTINGITEM;
     }
     
@@ -64,6 +71,13 @@ public class ItemPopUpUI : MonoBehaviour
 
         pickUpItem.OnPickUpEvent();
         pickUpItem.gameObject.SetActive(false);
+
+        if(pickUpItem.itemObject.itemData.ItemType == ITEMTYPE.ITEM9)
+        {
+            AiMermaidController.inst.spawnAI = true;
+            StartCoroutine(AiMermaidController.inst.CreateMermaidAI(5f));
+        }
+
         PlayerManager.inst.playerState = PlayerManager.PLAYERSTATE.NONE;
     }
 
