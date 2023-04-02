@@ -26,6 +26,7 @@ public class SaveGameSystemManager : MonoBehaviour
     public void StartNewGame()
     {
         isLoad = false;
+        PlayerPrefs.SetInt("IsSaved",0);
         gameData = new SaveGameData();
     }
 
