@@ -10,12 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f0389c2260570c04f84b5b4f3fef7ea6, type: 3}
-  m_Name: SkeletonAI
+  m_Name: RedHoodAttack
   m_EditorClassIdentifier: 
-  oneTimeActions: []
+  oneTimeActions:
+  - {fileID: 11400000, guid: 62a02a7fb58e29a42aa974088e66d409, type: 2}
   LoopActions: []
   transitions:
-  - decision: {fileID: 11400000, guid: 1ad55e07c08a8b64a99e2979d1a281f6, type: 2}
-    trueState: {fileID: 11400000, guid: f20b3b1b184cf7e4389f2449124c1051, type: 2}
-    falseState: {fileID: 11400000, guid: 6fbdd43bad4717c4eb7e5b5ad816ffec, type: 2}
+  - decision: {fileID: 11400000, guid: c8480c166d2bf2e43ad1d8099a2bb1a5, type: 2}
+    trueState: {fileID: 11400000, guid: 5768bf8587198dd43ac09b7b7a17d8b6, type: 2}
+    falseState: {fileID: 11400000, guid: 6fda0361982e8f14ca4467f43242e124, type: 2}
   timeBeforeSwitchState: 2

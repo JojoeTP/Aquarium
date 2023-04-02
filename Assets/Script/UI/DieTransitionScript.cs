@@ -22,6 +22,7 @@ public class DieTransitionScript : MonoBehaviour
         //Move player to respawn point
         AiMermaidController.inst.RespawnPlayer();
         AiDirectorController.inst.RespawnPlayer();
+        AiRedHoodController.inst.RespawnPlayer();
 
         animator.SetTrigger("DieTransitionOut");
     }

@@ -1868,7 +1868,7 @@ MonoBehaviour:
   chasingTime: 20
   disappearRange: 60
   moveDirection: {x: -1, y: 0, z: 0}
-  currentState: {fileID: 11400000, guid: 2c323345aef175d49bb16c3bd30b6651, type: 2}
+  currentState: {fileID: 11400000, guid: 404d8c35b32cedb4b8e2b914963b1809, type: 2}
   remainState: {fileID: 11400000, guid: 6fbdd43bad4717c4eb7e5b5ad816ffec, type: 2}
   animator: {fileID: 2318865591025049682}
   playerLayer:

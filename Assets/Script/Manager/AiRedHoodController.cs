@@ -111,5 +111,7 @@ public class AiRedHoodController : MonoBehaviour
 
         DestroyRedHoodAI();
         PlayerManager.inst.transform.position = respawnPosition.position;
+        ActionEventManager.inst.SpawnSisterAndAlert();
+        
     }
 }
