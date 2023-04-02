@@ -73,7 +73,8 @@ public class MainMenuController : MonoBehaviour
     public void OnClickContinue()
     {
         if(gameStarted) return;
-
+        if(PlayerPrefs.GetInt("IsSaved",0) == 0) return;
+        
         gameStarted = true;
         SaveGameSystemManager.inst.LoadGame();
         ItemManager.Inst.ParticipateId = SaveGameSystemManager.inst.gameData.participateID;
