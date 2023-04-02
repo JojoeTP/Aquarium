@@ -190,9 +190,9 @@ public class DialogueManager : MonoBehaviour
         {
             return;
         }
-
+        SoundManager.Inst.MuteBGM();
         PlaySound(openWith[currentDialogue].sound);
-        //PlayBGMSound(openWith[currentDialogue].BGMSound);
+        PlayBGMSound(openWith[currentDialogue].BGMSound);
         type = (Type)Enum.Parse(typeof(Type), openWith[currentDialogue].type);
         dialogueCanvas.enabled = true;
         CheckIfHaveChoice(currentDialogue);
@@ -219,23 +219,23 @@ public class DialogueManager : MonoBehaviour
     {
         if (soundId != "")
         {
-            SoundManager.Inst.PlayOneShot(FMODEvent.inst.FModEventDictionary[soundId], PlayerManager.inst.transform.position);
-        }
-        else
-        {
-            print("null Sound");
+            // SoundManager.Inst.PlayOneShot(FMODEvent.inst.FModEventDictionary[soundId], PlayerManager.inst.transform.position);
+            SoundManager.Inst.InitializeDialogueSound(FMODEvent.inst.FModEventDictionary[soundId]);
         }
     }
+
+    void StopSound()
+    {
+        SoundManager.Inst.StopDialogue();
+    }
+
     void PlayBGMSound(string BGMSoundId)
     {
         if (BGMSoundId != "")
         {
-            //SoundManager.Inst.InitializeBGM(FMODEvent.inst.FModEventDictionary[BGMSoundId]);
+            SoundManager.Inst.InitializeDialogueBGM(FMODEvent.inst.FModEventDictionary[BGMSoundId]);
         }
-        else
-        {
-            print("null Sound");
-        }
+        
     }
 
     void CheckIfHaveDialogueBg(TalkWithNPC currentNPC)
@@ -319,6 +319,7 @@ public class DialogueManager : MonoBehaviour
 
     public void DisplayNextSentence()
     {
+        StopSound();
         if (currentId == "")
         {
             if (type == Type.CutScene)
@@ -346,7 +347,7 @@ public class DialogueManager : MonoBehaviour
         }
 
         PlaySound(openWith[currentId].sound);
-        //PlayBGMSound(openWith[currentId].sound);
+        PlayBGMSound(openWith[currentId].BGMSound);
         if(openWith[currentId].type != "")
             type = (Type)Enum.Parse(typeof(Type), openWith[currentId].type);
 
@@ -382,7 +383,8 @@ public class DialogueManager : MonoBehaviour
         isChoice = false;
         dialogueCanvas.enabled = false;
         dialoguePanel.ResetCharacterSprite();
-
+        SoundManager.Inst.ContinuePlayBGM();
+        StopSound();
         if (currentNPC != null && currentNPC.isSave == true)
         {
             print("save");

@@ -101,6 +101,12 @@ public class AiRedHoodController : MonoBehaviour
 
     public void OnAttackPlayer()
     {
+        StartCoroutine(AttackPlayer(2f));
+    }
+
+    IEnumerator AttackPlayer(float time)
+    {
+        yield return new WaitForSeconds(time);
         UITransition.inst.DieTransitionIn();
     }
 
@@ -111,5 +117,7 @@ public class AiRedHoodController : MonoBehaviour
 
         DestroyRedHoodAI();
         PlayerManager.inst.transform.position = respawnPosition.position;
+        ActionEventManager.inst.SpawnSisterAndAlert();
+        
     }
 }

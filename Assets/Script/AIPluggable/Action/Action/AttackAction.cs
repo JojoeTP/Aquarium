@@ -20,7 +20,6 @@ namespace PluggableAI
             if(controller.IsPlayerInRange(controller.attackRange,controller.AttackOffset))
             {
                 controller.ToggleAttack(true);
-                Debug.Log("Attack");
                 PlayerManager.inst.PlayerCam.ShakeCamera();
             }
         }

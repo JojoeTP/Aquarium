@@ -42,6 +42,7 @@ public class ActionEventManager : MonoBehaviour
     [SerializeField] TalkWithNPC Ch2_D05_01;
     [SerializeField] TalkWithNPC Ch3_D05_01;
     [SerializeField] TalkWithNPC Ch3_D08_01;
+    [SerializeField] TalkWithNPC Ch3_D09_01;
     [SerializeField] TalkWithNPC Ch4_D03_01;
     [SerializeField] TalkWithNPC Ch4_D05_01; 
     [SerializeField] TalkWithNPC Ch4_D06_01;  
@@ -376,6 +377,12 @@ public class ActionEventManager : MonoBehaviour
         SetActiveDialogue(Ch1_D10_01);
     }
 
+    public void SetActiveDialogueCh3_D09_01()
+    {
+        SetActiveDialogue(Ch3_D09_01);
+    }
+    
+
     public void SetActiveLockDoorDialogueEndGame()
     {
         LockDoorEndGame.SetActive(true);
@@ -398,10 +405,15 @@ public class ActionEventManager : MonoBehaviour
         PlayerPrefs.SetInt("DarkMainMenu",1);
         PlayerManager.inst.playerAnimator.SetBool("Lampitem",true);
     }
+        public string SCENE_MAINMENU { get {return "Scene_MainMenu";} }
+        public string SCENE_MAINMENU_2 { get {return "Scene_MainMenu2";} }
 
     public void BackToMainMenu()
     {
-
+        if(PlayerPrefs.GetInt("DarkMainMenu",0) == 0)
+            SceneController.inst.OnLoadSceneAsync(SCENE_MAINMENU,null,null);
+        else
+            SceneController.inst.OnLoadSceneAsync(SCENE_MAINMENU_2,null,null);
     }
 
     public void WhiteTransition()

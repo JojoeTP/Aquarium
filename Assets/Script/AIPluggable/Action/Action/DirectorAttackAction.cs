@@ -19,7 +19,6 @@ namespace PluggableAI
             {
                 controller.ToggleAttack(true);
                 AiDirectorController.inst.OnAttackPlayer();
-                Debug.Log("Attack");
                 PlayerManager.inst.PlayerCam.ShakeCamera();
             }
         }

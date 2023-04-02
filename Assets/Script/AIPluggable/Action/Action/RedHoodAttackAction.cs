@@ -5,11 +5,9 @@ using UnityEngine;
 
 namespace PluggableAI
 {
-    [CreateAssetMenu(menuName = "PluggableAI/Action/AttackTwoSideAction")]
-    public class AttackTwoSideAction : Action
+    [CreateAssetMenu(menuName = "PluggableAI/Action/RedHoodAttackAction")]
+    public class RedHoodAttackAction : Action
     {
-        public LayerMask playerLayer;
-        
         public override void Act(StateController controller)
         {
             Attack(controller);
@@ -17,10 +15,10 @@ namespace PluggableAI
 
         void Attack(StateController controller)
         {
-            if(controller.IsPlayerInRangeCircle(controller.attackRange))
+            if(controller.IsPlayerInRange(controller.attackRange,controller.AttackOffset))
             {
                 controller.ToggleAttack(true);
-                AiMermaidController.inst.OnAttackPlayer();
+                AiRedHoodController.inst.OnAttackPlayer();
                 PlayerManager.inst.PlayerCam.ShakeCamera();
             }
         }
