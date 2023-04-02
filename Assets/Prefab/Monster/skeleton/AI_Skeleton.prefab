@@ -84,7 +84,7 @@ MonoBehaviour:
   interactRange: 0.95
   attackRange: 3
   chasingRange: 30
-  chasingTime: 20
+  chasingTime: 10
   disappearRange: 60
   moveDirection: {x: -1, y: 0, z: 0}
   currentState: {fileID: 11400000, guid: 2c323345aef175d49bb16c3bd30b6651, type: 2}
