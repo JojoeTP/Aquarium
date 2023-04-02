@@ -222,10 +222,6 @@ public class DialogueManager : MonoBehaviour
             // SoundManager.Inst.PlayOneShot(FMODEvent.inst.FModEventDictionary[soundId], PlayerManager.inst.transform.position);
             SoundManager.Inst.InitializeDialogueSound(FMODEvent.inst.FModEventDictionary[soundId]);
         }
-        else
-        {
-            print("null Sound");
-        }
     }
 
     void StopSound()
@@ -239,15 +235,7 @@ public class DialogueManager : MonoBehaviour
         {
             SoundManager.Inst.InitializeDialogueBGM(FMODEvent.inst.FModEventDictionary[BGMSoundId]);
         }
-        else
-        {
-            print("null Sound");
-        }
-    }
-
-    void StopBGM()
-    {
-        SoundManager.Inst.StopDialogueBGM();
+        
     }
 
     void CheckIfHaveDialogueBg(TalkWithNPC currentNPC)
@@ -359,7 +347,7 @@ public class DialogueManager : MonoBehaviour
         }
 
         PlaySound(openWith[currentId].sound);
-        PlayBGMSound(openWith[currentId].sound);
+        PlayBGMSound(openWith[currentId].BGMSound);
         if(openWith[currentId].type != "")
             type = (Type)Enum.Parse(typeof(Type), openWith[currentId].type);
 
@@ -396,7 +384,6 @@ public class DialogueManager : MonoBehaviour
         dialogueCanvas.enabled = false;
         dialoguePanel.ResetCharacterSprite();
         SoundManager.Inst.ContinuePlayBGM();
-        StopBGM();
         StopSound();
         if (currentNPC != null && currentNPC.isSave == true)
         {

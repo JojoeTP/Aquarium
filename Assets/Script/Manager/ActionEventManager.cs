@@ -405,10 +405,15 @@ public class ActionEventManager : MonoBehaviour
         PlayerPrefs.SetInt("DarkMainMenu",1);
         PlayerManager.inst.playerAnimator.SetBool("Lampitem",true);
     }
+        public string SCENE_MAINMENU { get {return "Scene_MainMenu";} }
+        public string SCENE_MAINMENU_2 { get {return "Scene_MainMenu2";} }
 
     public void BackToMainMenu()
     {
-
+        if(PlayerPrefs.GetInt("DarkMainMenu",0) == 0)
+            SceneController.inst.OnLoadSceneAsync(SCENE_MAINMENU,null,null);
+        else
+            SceneController.inst.OnLoadSceneAsync(SCENE_MAINMENU_2,null,null);
     }
 
     public void WhiteTransition()
