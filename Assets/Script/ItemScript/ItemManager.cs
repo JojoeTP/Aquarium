@@ -127,13 +127,13 @@ public class ItemManager : MonoBehaviour
             case ITEMTYPE.ITEM3:
                 item.triggerEvents.AddListener( () => 
                     {
+                        ActionEventManager.inst.SetActiveDialogueCh1_D10_01();
                         ActionEventManager.inst.SetActiveDialogueCh1_D11_01();
                         ActionEventManager.inst.SetActiveFalse_Wall_Cafeteria();
                         ActionEventManager.inst.LockCafeteriaDoor();
                         ActionEventManager.inst.isMap1Done = true;
                         
-                        DialogueManager.inst.currentDialogue = item.itemObject.itemData.dialogueItemId;
-                        DialogueManager.inst.StartDialogue();
+                        
                     }
                 );
                 break;
@@ -153,8 +153,8 @@ public class ItemManager : MonoBehaviour
                         ActionEventManager.inst.OnPickUpLabyrinthCoin();
                         ActionEventManager.inst.LockLabyrinthDoor();
                         ActionEventManager.inst.isMap2Done = true;
-                        DialogueManager.inst.currentDialogue = item.itemObject.itemData.dialogueItemId;
-                        DialogueManager.inst.StartDialogue();
+                        // DialogueManager.inst.currentDialogue = item.itemObject.itemData.dialogueItemId;
+                        // DialogueManager.inst.StartDialogue();
                     }
                 );
                 break;
@@ -178,11 +178,11 @@ public class ItemManager : MonoBehaviour
             case ITEMTYPE.ITEM8:
                 item.triggerEvents.AddListener( () => 
                     {
+                        ActionEventManager.inst.SetActiveDialogueCh3_D08_01();
                         ActionEventManager.inst.OnPickUpCircusCoin();
                         ActionEventManager.inst.LockCircusDoor();
                         ActionEventManager.inst.isMap3Done = true;
-                        DialogueManager.inst.currentDialogue = item.itemObject.itemData.dialogueItemId;
-                        DialogueManager.inst.StartDialogue();
+                        
                     }
                 );
                 break;

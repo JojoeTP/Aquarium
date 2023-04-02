@@ -328,6 +328,23 @@ public class DialogueManager : MonoBehaviour
             EndDialogue();
             return;
         }
+
+        if(currentId == "End")
+        {
+            if (currentNPC != null)
+            {
+                if(!dialogueHasChoice)
+                    currentNPC.triggerEvents.Invoke();
+                
+                currentNPC = null;
+            }
+
+            dialogueHasChoice = false;
+            currentDialogue = null;
+            PlayerManager.inst.playerState = PlayerManager.PLAYERSTATE.NONE;
+            return;
+        }
+
         PlaySound(openWith[currentId].sound);
         //PlayBGMSound(openWith[currentId].sound);
         if(openWith[currentId].type != "")
@@ -341,7 +358,10 @@ public class DialogueManager : MonoBehaviour
         StartCoroutine(TypeSentence(openWith[currentId].dialogueText));
         if (isChoice == false)
         {
-            currentId = openWith[currentId].choice1;
+            if(currentId == "Ch4_D07_36")
+                currentId = "End";
+            else
+                currentId = openWith[currentId].choice1;
         }
     }
 

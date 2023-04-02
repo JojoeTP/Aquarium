@@ -38,7 +38,10 @@ public class ActionEventManager : MonoBehaviour
     [SerializeField] TalkWithNPC Ch1_D11_01; 
     [SerializeField] TalkWithNPC Ch1_D03_01; 
     [SerializeField] TalkWithNPC Ch1_D06_01; 
+    [SerializeField] TalkWithNPC Ch1_D10_01;
+    [SerializeField] TalkWithNPC Ch2_D05_01;
     [SerializeField] TalkWithNPC Ch3_D05_01;
+    [SerializeField] TalkWithNPC Ch3_D08_01;
     [SerializeField] TalkWithNPC Ch4_D03_01;
     [SerializeField] TalkWithNPC Ch4_D05_01; 
     [SerializeField] TalkWithNPC Ch4_D06_01;  
@@ -99,6 +102,8 @@ public class ActionEventManager : MonoBehaviour
 
         labyrinthENDSpriteRenderer.sprite = dark_LabyrinthSprite;
         SoundManager.Inst.MuteBGM();
+
+        SetActiveDialogueCh2_D05_01();
         //จะปิดไรเพิ่มก็ เพิ่มcodeตรงนี้
     }
 
@@ -354,6 +359,21 @@ public class ActionEventManager : MonoBehaviour
     public void SetActiveDialogueCh4_D07_01()
     {
         SetActiveDialogue(Ch4_D07_01);
+    }
+    
+    public void SetActiveDialogueCh2_D05_01()
+    {
+        SetActiveDialogue(Ch2_D05_01);
+    }
+    
+    public void SetActiveDialogueCh3_D08_01()
+    {
+        SetActiveDialogue(Ch3_D08_01);
+    }
+
+    public void SetActiveDialogueCh1_D10_01()
+    {
+        SetActiveDialogue(Ch1_D10_01);
     }
 
     public void SetActiveLockDoorDialogueEndGame()

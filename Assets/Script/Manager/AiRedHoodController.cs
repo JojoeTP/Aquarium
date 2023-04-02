@@ -22,6 +22,8 @@ public class AiRedHoodController : MonoBehaviour
     public bool isPlayerInSpawnCollider = false;
     public bool isPlayerMove = false;
 
+    public float spawnTime = 0f;
+
     public Transform SpawnPosition {set {spawnPosition = value;}}
 
     private void Awake() {
@@ -38,10 +40,12 @@ public class AiRedHoodController : MonoBehaviour
     {
         yield return new WaitUntil(() => isPlayerMove);
 
+        yield return new WaitForSeconds(spawnTime);
+        
         if(spawnAI && isPlayerInSpawnCollider && spawnPosition != null && redHoodController == null)
         {
             var rand = Random.Range(0,100);
-            if(rand >= 65)
+            if(rand >= 0)
             {
                 // UITransition.inst.RedHoodTransitionIn();
                 CreateRedHood();
@@ -50,7 +54,7 @@ public class AiRedHoodController : MonoBehaviour
 
         if(redHoodController == null)
         {
-            yield return new WaitForSeconds(3f);
+            yield return new WaitForSeconds(spawnTime);
             StartCoroutine(CreateRedHoodAI());
         }
     }
