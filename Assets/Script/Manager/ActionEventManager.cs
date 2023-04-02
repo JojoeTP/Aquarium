@@ -42,6 +42,7 @@ public class ActionEventManager : MonoBehaviour
     [SerializeField] TalkWithNPC Ch2_D05_01;
     [SerializeField] TalkWithNPC Ch3_D05_01;
     [SerializeField] TalkWithNPC Ch3_D08_01;
+    [SerializeField] TalkWithNPC Ch3_D09_01;
     [SerializeField] TalkWithNPC Ch4_D03_01;
     [SerializeField] TalkWithNPC Ch4_D05_01; 
     [SerializeField] TalkWithNPC Ch4_D06_01;  
@@ -375,6 +376,12 @@ public class ActionEventManager : MonoBehaviour
     {
         SetActiveDialogue(Ch1_D10_01);
     }
+
+    public void SetActiveDialogueCh3_D09_01()
+    {
+        SetActiveDialogue(Ch3_D09_01);
+    }
+    
 
     public void SetActiveLockDoorDialogueEndGame()
     {

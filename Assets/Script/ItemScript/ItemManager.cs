@@ -179,6 +179,7 @@ public class ItemManager : MonoBehaviour
                 item.triggerEvents.AddListener( () => 
                     {
                         ActionEventManager.inst.SetActiveDialogueCh3_D08_01();
+                        ActionEventManager.inst.SetActiveDialogueCh3_D09_01();
                         ActionEventManager.inst.OnPickUpCircusCoin();
                         ActionEventManager.inst.LockCircusDoor();
                         ActionEventManager.inst.isMap3Done = true;
