@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerLight : MonoBehaviour
 {
     public GameObject playerLight;
-    bool isLight = false;
+    public bool isLight = false;
 
     void Start()
     {
