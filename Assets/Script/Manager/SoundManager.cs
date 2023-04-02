@@ -25,6 +25,9 @@ public class SoundManager : MonoBehaviour
 
     EventInstance ambienceEventInstance;
     EventInstance BGMEventInstance;
+    EventInstance DialogueEventInstance;
+    EventInstance DialogueBGMEventInstance;
+    
 
     void Awake() 
     {
@@ -106,6 +109,19 @@ public class SoundManager : MonoBehaviour
     /// <summary>
     /// Use to play BGM, It will auto stop a BGM before
     /// </summary>
+    public void InitializeDialogueSound(EventReference eventReference)
+    {
+        DialogueEventInstance = CreateInstance(eventReference);
+        DialogueEventInstance.start();
+    }
+
+    public void InitializeDialogueBGM(EventReference eventReference)
+    {
+        StopDialogueBGM();
+        DialogueBGMEventInstance = CreateInstance(eventReference);
+        DialogueBGMEventInstance.start();
+    }
+
     public void InitializeBGM(EventReference eventReference)
     {
         StopBGM();
@@ -118,6 +134,18 @@ public class SoundManager : MonoBehaviour
     {
         if(BGMEventInstance.isValid())
             BGMEventInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+    }
+
+    public void StopDialogueBGM()
+    {
+        if(DialogueBGMEventInstance.isValid())
+            DialogueBGMEventInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+    }
+    
+    public void StopDialogue()
+    {
+        if(DialogueEventInstance.isValid())
+            DialogueEventInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
     }
 
     public void SetAmbienceParameter(string parameterName,float parameterValue)

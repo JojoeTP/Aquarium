@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e64893270fba892439a13c05cab99772, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  testScene: 0
+  testScene: 1
   isPermutation: 1
   participateID: 1
   winkEffectPrefab: {fileID: 8654583361641874286, guid: fb38231fbd15da14284810f004cbfaa6, type: 3}
@@ -63,3 +63,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 091f4b46645986d49a794eda5a8a3642, type: 2}
   - {fileID: 11400000, guid: 973469cd68afc2c4185c32a9d6d71ed5, type: 2}
   - {fileID: 11400000, guid: 21e34a9c6b411de4ba351ee409c08d82, type: 2}
+  - {fileID: 11400000, guid: f2f17a9da92355d438332979d7847476, type: 2}

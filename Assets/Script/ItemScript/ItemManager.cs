@@ -68,7 +68,7 @@ public class ItemManager : MonoBehaviour
                     CreateItem(n,buttonEffectPrefab);
                     break;
                 case EFFECTTYPE.NONE :
-                    CreateItem(n,buttonEffectPrefab);
+                    // CreateItem(n,buttonEffectPrefab);
                     break;
             }
             
