@@ -109,7 +109,7 @@ public class PlayerPanel : MonoBehaviour
                     PlayerManager.inst.playerState = PlayerManager.PLAYERSTATE.NONE;
                 break;
             case PANELSTATE.INVENTORY :
-                OnOpenPanel();
+                // OnOpenPanel();
                 animator.SetTrigger("Bag");
                 inventoryPanel.OnOpenInventory();
 
@@ -117,14 +117,14 @@ public class PlayerPanel : MonoBehaviour
                     PlayerManager.inst.playerState = PlayerManager.PLAYERSTATE.OPENPANEL;
                 break;
             case PANELSTATE.SETTING :
-                OnOpenPanel();
+                // OnOpenPanel();
                 animator.SetTrigger("Setting");
 
                 if(PlayerManager.inst != null)
                     PlayerManager.inst.playerState = PlayerManager.PLAYERSTATE.OPENPANEL;
                 break;
             case PANELSTATE.MAP:
-                OnOpenPanel();
+                // OnOpenPanel();
                 animator.SetTrigger("Map");
 
                 if(PlayerManager.inst != null)
