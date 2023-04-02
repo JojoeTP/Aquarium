@@ -84,6 +84,10 @@ public class LiftManager : MonoBehaviour
         {
             n.GetComponent<Button>().interactable = true;
         }
+        if (CheckCondition() && lift.leftSide)
+        {
+            floor5_Button.GetComponent<Button>().interactable = true;
+        }
         switch (lift.currentFloor)
         {
             case Lift.CurrentFloor.Floor1:
