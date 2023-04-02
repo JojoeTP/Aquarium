@@ -32,11 +32,17 @@ public class HidingSpot : MonoBehaviour
                 beforeSprite = HidingSpotObject.sprite;
                 HidingSpotObject.sprite = HidingSprite;
                 isHiding = true;
+
+                if(PlayerManager.inst.PlayerLight.isLight)
+                    PlayerManager.inst.PlayerLight.playerLight.SetActive(false);
             }
             else
             {
                 HidingSpotObject.sprite = beforeSprite;
                 isHiding = false;
+
+                if(PlayerManager.inst.PlayerLight.isLight)
+                    PlayerManager.inst.PlayerLight.playerLight.SetActive(true);
             }
         }
     }
