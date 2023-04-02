@@ -386,6 +386,7 @@ public class DialogueManager : MonoBehaviour
         if (currentNPC != null && currentNPC.isSave == true)
         {
             print("save");
+            SaveText.inst.ShowSaveText();
             SaveGameSystemManager.inst.SaveGame();
         }
 

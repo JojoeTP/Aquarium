@@ -121,7 +121,7 @@ public class ActionEventManager : MonoBehaviour
 
         SetActiveFalse_Wall_Circus();
 
-        AiRedHoodController.inst.spawnAI = false;
+        //AiRedHoodController.inst.spawnAI = false;
     }
 
 #endregion
