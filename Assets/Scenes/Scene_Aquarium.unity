@@ -6757,7 +6757,7 @@ MonoBehaviour:
   triggerDoorEvents:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1637511486}
         m_TargetAssemblyTypeName: AiJunitorController, Assembly-CSharp
         m_MethodName: DestroyJunitorAI
         m_Mode: 1
@@ -7281,7 +7281,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7769425, y: 1}
+    m_SensorSize: {x: 1.7780749, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -13885,7 +13885,7 @@ MonoBehaviour:
   triggerDoorEvents:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1637511486}
         m_TargetAssemblyTypeName: AiJunitorController, Assembly-CSharp
         m_MethodName: DestroyJunitorAI
         m_Mode: 1
@@ -22335,7 +22335,19 @@ MonoBehaviour:
   notForEnemy: 0
   triggerDoorEvents:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1889232072}
+        m_TargetAssemblyTypeName: AiRedHoodController, Assembly-CSharp
+        m_MethodName: DestroyRedHoodAI
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   isLockedDoor: 0
   triggerConditionEvent:
     m_PersistentCalls:
@@ -30152,7 +30164,19 @@ MonoBehaviour:
   notForEnemy: 0
   triggerDoorEvents:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1889232072}
+        m_TargetAssemblyTypeName: AiRedHoodController, Assembly-CSharp
+        m_MethodName: DestroyRedHoodAI
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   isLockedDoor: 1
   triggerConditionEvent:
     m_PersistentCalls:
@@ -34905,6 +34929,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3591149886713107505, guid: 24dad48bcee4fe74e93448cebc53132a, type: 3}
   m_PrefabInstance: {fileID: 1637511484}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1637511486 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3591149886713107504, guid: 24dad48bcee4fe74e93448cebc53132a, type: 3}
+  m_PrefabInstance: {fileID: 1637511484}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cdb509ec58b9f734e93adb2e1c02cb3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1642246113
 GameObject:
   m_ObjectHideFlags: 0
@@ -40039,6 +40074,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 867944659882427764, guid: eb3ae2ad17bd00041abe6482b394d02d, type: 3}
   m_PrefabInstance: {fileID: 1889232070}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1889232072 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 867944659882427765, guid: eb3ae2ad17bd00041abe6482b394d02d, type: 3}
+  m_PrefabInstance: {fileID: 1889232070}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc1d5cdece44a224ebf76dfd67ec8b56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1889646901
 GameObject:
   m_ObjectHideFlags: 0
@@ -42778,7 +42824,7 @@ MonoBehaviour:
   triggerDoorEvents:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1637511486}
         m_TargetAssemblyTypeName: AiJunitorController, Assembly-CSharp
         m_MethodName: DestroyJunitorAI
         m_Mode: 1
