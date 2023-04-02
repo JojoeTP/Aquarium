@@ -6832,7 +6832,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   connectDoor: {fileID: 731888526}
-  conditionItem: {fileID: 0}
+  conditionItem: {fileID: 11400000, guid: f2f17a9da92355d438332979d7847476, type: 2}
   isSpacialDoor: 0
   notForEnemy: 0
   triggerDoorEvents:
