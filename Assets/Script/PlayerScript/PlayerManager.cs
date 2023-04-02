@@ -73,6 +73,7 @@ public class PlayerManager : MonoBehaviour
         this.transform.position = SaveGameSystemManager.inst.gameData.GetPlayerPosition();
         playerMovement.PlayerStamina = SaveGameSystemManager.inst.gameData.GetPlayerStamina();
         playerInventory.PlayerItemDictionary = SaveGameSystemManager.inst.gameData.GetPlayerItem();
+        PlayerManager.inst.playerAnimator.SetBool("Lampitem",true);
         
     }
 
