@@ -45,7 +45,7 @@ public class SaveGameSystemManager : MonoBehaviour
         PlayerPrefs.SetInt("IsSaved",1);
         newSaveGameData.SaveJSON();
     }
-    
+
     public void LoadGame()
     {
         isLoad = true;
