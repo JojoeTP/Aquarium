@@ -53,7 +53,7 @@ public class SaveGameSystemManager : MonoBehaviour
 
         gameData = SaveGameData.LoadSaveGameDataJSON();
         RecordTimeManager.Inst.LoadPickUpItemTimeData();
-        PlayerManager.inst.playerAnimator.SetBool("Lampitem",true);
+        
     }
 
     
