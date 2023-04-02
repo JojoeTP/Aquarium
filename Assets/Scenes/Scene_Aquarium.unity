@@ -7912,6 +7912,11 @@ Transform:
   m_Father: {fileID: 1759014136}
   m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &449748136 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3591149888145662190, guid: 24dad48bcee4fe74e93448cebc53132a, type: 3}
+  m_PrefabInstance: {fileID: 1637511484}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &452678177
 GameObject:
   m_ObjectHideFlags: 0
@@ -16162,7 +16167,7 @@ MonoBehaviour:
         m_MethodName: WarpSkeletonAfterHiding
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgument: {fileID: 449748136}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
