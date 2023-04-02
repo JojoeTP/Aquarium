@@ -19,6 +19,7 @@ public class AiJunitorController : MonoBehaviour
     public bool spawnAI = false;
     public bool isPlayerInSpawnCollider = false;
     public bool isPlayerMove = false;
+    public float spawnTime = 0f;
 
     public bool CannotExitHiding = false;
     public Transform SpawnPosition {set {spawnPosition = value;}}
@@ -36,7 +37,9 @@ public class AiJunitorController : MonoBehaviour
     public IEnumerator CreateJunitorAI()
     {
         yield return new WaitUntil(() => isPlayerMove);
-
+        
+        yield return new WaitForSeconds(spawnTime);
+        
         if(spawnAI && isPlayerInSpawnCollider && spawnPosition != null && junitorController == null)
         {
             var rand = Random.Range(0,100);
@@ -49,7 +52,7 @@ public class AiJunitorController : MonoBehaviour
 
         if(junitorController == null)
         {
-            yield return new WaitForSeconds(3f);
+            yield return new WaitForSeconds(spawnTime);
             StartCoroutine(CreateJunitorAI());
         }
     }

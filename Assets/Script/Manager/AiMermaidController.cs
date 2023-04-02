@@ -17,6 +17,7 @@ public class AiMermaidController : MonoBehaviour
     [SerializeField] Volume nightGlobalVolume;
 
     public bool spawnAI = true; //Turn to false when talk with director
+    public float spawnTime = 0f;
 
     void Awake() 
     {
@@ -102,7 +103,7 @@ public class AiMermaidController : MonoBehaviour
     {
         if(other.GetComponent<PlayerManager>() != null)
         {
-            StartCoroutine(CreateMermaidAI(5f));
+            StartCoroutine(CreateMermaidAI(spawnTime));
         }
     }
 

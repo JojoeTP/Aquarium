@@ -19,6 +19,7 @@ public class AiDirectorController : MonoBehaviour
     public bool spawnAI = false;
     public bool isPlayerInSpawnCollider = false;
     public bool isPlayerMove = false;
+    public float spawnTime = 0f;
 
     public Transform SpawnPosition {set {spawnPosition = value;}}
 
@@ -36,10 +37,12 @@ public class AiDirectorController : MonoBehaviour
     {
         yield return new WaitUntil(() => isPlayerMove);
 
+        yield return new WaitForSeconds(spawnTime);
+        
         if(spawnAI && isPlayerInSpawnCollider && spawnPosition != null && directorController == null)
         {
             var rand = Random.Range(0,100);
-            if(rand >= 70)
+            if(rand >= 0)
             {
                 UITransition.inst.DirectorTransitionIn();
             }
@@ -47,7 +50,7 @@ public class AiDirectorController : MonoBehaviour
 
         if(directorController == null)
         {
-            yield return new WaitForSeconds(3f);
+            yield return new WaitForSeconds(spawnTime);
             StartCoroutine(CreateDirectorAI());
         }
     }
