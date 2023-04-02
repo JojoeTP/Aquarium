@@ -62,7 +62,7 @@ public class PlayerPanel : MonoBehaviour
 
     public void ToggleSetting()
     {
-        if(currentState != PANELSTATE.SETTING)
+        if(currentState == PANELSTATE.NONE)
             OnChangePanel(PANELSTATE.SETTING);
         else
             OnChangePanel(PANELSTATE.NONE);
@@ -83,16 +83,19 @@ public class PlayerPanel : MonoBehaviour
 
     public void OnOpenInventory()
     {
-        OnChangePanel(PANELSTATE.INVENTORY);
+        if(currentState != PANELSTATE.INVENTORY)
+            OnChangePanel(PANELSTATE.INVENTORY);
     }
 
     public void OnOpenSetting()
     {
+        if(currentState != PANELSTATE.SETTING)
         OnChangePanel(PANELSTATE.SETTING);
     }
 
     public void OnOpenMap()
     {
+        if(currentState != PANELSTATE.MAP)
         OnChangePanel(PANELSTATE.MAP);
     }
 
