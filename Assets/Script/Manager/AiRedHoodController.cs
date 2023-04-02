@@ -101,6 +101,12 @@ public class AiRedHoodController : MonoBehaviour
 
     public void OnAttackPlayer()
     {
+        StartCoroutine(AttackPlayer(2f));
+    }
+
+    IEnumerator AttackPlayer(float time)
+    {
+        yield return new WaitForSeconds(time);
         UITransition.inst.DieTransitionIn();
     }
 

@@ -19,4 +19,4 @@ MonoBehaviour:
   - decision: {fileID: 11400000, guid: c8480c166d2bf2e43ad1d8099a2bb1a5, type: 2}
     trueState: {fileID: 11400000, guid: 5768bf8587198dd43ac09b7b7a17d8b6, type: 2}
     falseState: {fileID: 11400000, guid: 6fda0361982e8f14ca4467f43242e124, type: 2}
-  timeBeforeSwitchState: 2
+  timeBeforeSwitchState: 10

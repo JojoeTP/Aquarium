@@ -805,6 +805,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerLight: {fileID: 1829112645651699383}
+  isLight: 0
 --- !u!114 &512804883587313077
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -830,9 +831,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cinemachineVirtualCamera: {fileID: 0}
-  amplitude: 2
-  frequency: 4
-  shakeCameraTime: 5
+  amplitude: 3
+  frequency: 6
+  shakeCameraTime: 2
 --- !u!1 &2059807458025293377
 GameObject:
   m_ObjectHideFlags: 0
