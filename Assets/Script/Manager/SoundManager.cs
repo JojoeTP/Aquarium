@@ -147,7 +147,6 @@ public class SoundManager : MonoBehaviour
 
         if(DialogueEventInstance.isValid())
         {
-            print("Stop dialogue");
             DialogueEventInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
         }
     }

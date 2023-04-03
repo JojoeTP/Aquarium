@@ -15,15 +15,21 @@ public class PlayerLight : MonoBehaviour
     public void OnLight(){
         if(!isLight)
         {
-            playerLight.SetActive(true);
+            ToggleLight(true);
             PlayerManager.inst.playerAnimator.SetBool("LampLight",true);
             isLight = true;
         }
         else
         {
-            playerLight.SetActive(false);
+            ToggleLight(false);
             PlayerManager.inst.playerAnimator.SetBool("LampLight",false);
             isLight = false;
         }
+    }
+
+    public void ToggleLight(bool enable)
+    {
+        print("Toggle");
+        playerLight.SetActive(enable);
     }
 }

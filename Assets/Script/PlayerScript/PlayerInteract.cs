@@ -223,6 +223,7 @@ public class PlayerInteract : MonoBehaviour
 
             // GetComponent<Collider2D>().enabled = false;
             PlayerManager.inst.playerState = PlayerManager.PLAYERSTATE.HIDING;
+            PlayerManager.inst.PlayerLight.ToggleLight(false);
             hidingSpot.OnEnterHidingEvent();
         }
         else if(PlayerManager.inst.playerState == PlayerManager.PLAYERSTATE.HIDING)
@@ -236,6 +237,10 @@ public class PlayerInteract : MonoBehaviour
             }
             // GetComponent<Collider2D>().enabled = true;
             PlayerManager.inst.playerState = PlayerManager.PLAYERSTATE.NONE;
+
+            if(PlayerManager.inst.PlayerLight.isLight)
+                    PlayerManager.inst.PlayerLight.ToggleLight(true);
+            
             hidingSpot.OnHidingEvent();
         } 
 

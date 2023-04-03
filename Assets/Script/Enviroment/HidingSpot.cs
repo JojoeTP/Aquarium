@@ -33,8 +33,7 @@ public class HidingSpot : MonoBehaviour
                 HidingSpotObject.sprite = HidingSprite;
                 isHiding = true;
 
-                if(PlayerManager.inst.PlayerLight.isLight)
-                    PlayerManager.inst.PlayerLight.playerLight.SetActive(false);
+                PlayerManager.inst.PlayerLight.ToggleLight(false);
             }
             else
             {
@@ -42,7 +41,7 @@ public class HidingSpot : MonoBehaviour
                 isHiding = false;
 
                 if(PlayerManager.inst.PlayerLight.isLight)
-                    PlayerManager.inst.PlayerLight.playerLight.SetActive(true);
+                    PlayerManager.inst.PlayerLight.ToggleLight(true);
             }
         }
     }
