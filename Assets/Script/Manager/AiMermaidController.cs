@@ -33,6 +33,8 @@ public class AiMermaidController : MonoBehaviour
         {
             colorAdj.active = true;
         }
+
+        SoundManager.Inst.PlayOneShot(FMODEvent.inst.FModEventDictionary["Monster_spawner_sound"],aiPrefab.transform.position);
     }
 
     void CreateMermaidAI()
@@ -44,6 +46,8 @@ public class AiMermaidController : MonoBehaviour
         {
             colorAdj.active = true;
         }
+
+        SoundManager.Inst.PlayOneShot(FMODEvent.inst.FModEventDictionary["Monster_spawner_sound"],aiPrefab.transform.position);
     }
     
 
@@ -66,6 +70,7 @@ public class AiMermaidController : MonoBehaviour
     {
         if (mermaidController != null)
         {
+            SoundManager.Inst.StopMonster();
             Destroy(mermaidController.gameObject);
             mermaidController = null;
             

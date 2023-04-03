@@ -558,34 +558,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: SoundManager
       objectReference: {fileID: 0}
-    - target: {fileID: 6364881888974947744, guid: c340f6ce12ed6e14d91cc8895ea604fa, type: 3}
-      propertyPath: <SFXList>k__BackingField.Array.size
-      value: 27
-      objectReference: {fileID: 0}
-    - target: {fileID: 6364881888974947744, guid: c340f6ce12ed6e14d91cc8895ea604fa, type: 3}
-      propertyPath: <SFXList>k__BackingField.Array.data[27].key
-      value: bell
-      objectReference: {fileID: 0}
-    - target: {fileID: 6364881888974947744, guid: c340f6ce12ed6e14d91cc8895ea604fa, type: 3}
-      propertyPath: <SFXList>k__BackingField.Array.data[27].sound.Path
-      value: event:/UI/UIButton
-      objectReference: {fileID: 0}
-    - target: {fileID: 6364881888974947744, guid: c340f6ce12ed6e14d91cc8895ea604fa, type: 3}
-      propertyPath: <SFXList>k__BackingField.Array.data[27].sound.Guid.Data1
-      value: -303842820
-      objectReference: {fileID: 0}
-    - target: {fileID: 6364881888974947744, guid: c340f6ce12ed6e14d91cc8895ea604fa, type: 3}
-      propertyPath: <SFXList>k__BackingField.Array.data[27].sound.Guid.Data2
-      value: 1185065748
-      objectReference: {fileID: 0}
-    - target: {fileID: 6364881888974947744, guid: c340f6ce12ed6e14d91cc8895ea604fa, type: 3}
-      propertyPath: <SFXList>k__BackingField.Array.data[27].sound.Guid.Data3
-      value: -55346283
-      objectReference: {fileID: 0}
-    - target: {fileID: 6364881888974947744, guid: c340f6ce12ed6e14d91cc8895ea604fa, type: 3}
-      propertyPath: <SFXList>k__BackingField.Array.data[27].sound.Guid.Data4
-      value: 1634200431
-      objectReference: {fileID: 0}
     - target: {fileID: 7018307969707337321, guid: c340f6ce12ed6e14d91cc8895ea604fa, type: 3}
       propertyPath: m_RootOrder
       value: 6

@@ -60,11 +60,14 @@ public class AiDirectorController : MonoBehaviour
         var aiPrefab = Instantiate(directorPrefab,spawnPosition.position,Quaternion.identity);
         directorController = aiPrefab.GetComponent<StateController>();
 
+
+
         if(nightGlobalVolume.profile.TryGet<ColorAdjustments>(out var colorAdj))
         {
             colorAdj.active = true;
         }
 
+        SoundManager.Inst.PlayOneShot(FMODEvent.inst.FModEventDictionary["Monster_spawner_sound"],aiPrefab.transform.position);
         directorController.animator.SetBool("Event",true);
     }
 
@@ -72,7 +75,7 @@ public class AiDirectorController : MonoBehaviour
     {
         if (directorController != null)
         {
-            print(1);
+            SoundManager.Inst.StopMonster();
             Destroy(directorController.gameObject);
             directorController = null;
             

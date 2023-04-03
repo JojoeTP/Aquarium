@@ -29,3 +29,4 @@ MonoBehaviour:
     trueState: {fileID: 11400000, guid: 8359ba10f56d6c5448b371f615386ffb, type: 2}
     falseState: {fileID: 11400000, guid: 6fbdd43bad4717c4eb7e5b5ad816ffec, type: 2}
   timeBeforeSwitchState: 0
+  Soundkey: Monster_walk_sound

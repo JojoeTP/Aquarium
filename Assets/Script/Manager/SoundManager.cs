@@ -27,6 +27,7 @@ public class SoundManager : MonoBehaviour
     EventInstance BGMEventInstance;
     EventInstance DialogueEventInstance;
     EventInstance DialogueBGMEventInstance;
+    EventInstance MonsterEventInstance;
     
 
     void Awake() 
@@ -115,13 +116,6 @@ public class SoundManager : MonoBehaviour
         DialogueEventInstance.start();
     }
 
-    public void InitializeDialogueBGM(EventReference eventReference)
-    {
-        StopDialogueBGM();
-        DialogueBGMEventInstance = CreateInstance(eventReference);
-        DialogueBGMEventInstance.start();
-    }
-
     public void InitializeBGM(EventReference eventReference)
     {
         StopBGM();
@@ -130,16 +124,24 @@ public class SoundManager : MonoBehaviour
         BGMEventInstance.start();
     }
 
+    public void InitializeMonster(EventReference eventReference)
+    {
+        StopMonster();
+
+        MonsterEventInstance = CreateInstance(eventReference);
+        MonsterEventInstance.start();
+    }
+
     public void StopBGM()
     {
         if(BGMEventInstance.isValid())
             BGMEventInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
     }
 
-    public void StopDialogueBGM()
+    public void StopMonster()
     {
-        if(DialogueBGMEventInstance.isValid())
-            DialogueBGMEventInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        if(MonsterEventInstance.isValid())
+            MonsterEventInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
     }
     
     public void StopDialogue()

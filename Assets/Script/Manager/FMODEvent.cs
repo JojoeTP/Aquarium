@@ -11,6 +11,8 @@ public class FMODEvent : MonoBehaviour
     [field : Header("SFX")]
     [field : SerializeField] public FMODEventConfig playerMovementSFX {get; private set;}
     [field : SerializeField] public List<FMODEventConfig> SFXList {get; private set;}
+    [field : SerializeField] public List<FMODEventConfig> MonsterList {get; private set;}
+    
 
     // [field : Header("UI")]
     [field : Header("BGM")]
@@ -31,6 +33,11 @@ public class FMODEvent : MonoBehaviour
         }
 
         foreach(var n in BGMList)
+        {
+            FModEventDictionary.Add(n.key,n.sound);    
+        }
+
+        foreach(var n in MonsterList)
         {
             FModEventDictionary.Add(n.key,n.sound);    
         }

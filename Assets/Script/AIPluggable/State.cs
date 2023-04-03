@@ -12,12 +12,18 @@ namespace PluggableAI
         public List<Action> LoopActions;
         public List<Transition> transitions;
         public float timeBeforeSwitchState;
+        public string Soundkey;
 
         bool isActionDone = false;
 
         public void InitState()
         {
             isActionDone = false;
+            if(Soundkey != "")
+                SoundManager.Inst.InitializeMonster(FMODEvent.inst.FModEventDictionary[Soundkey]);
+            else if(Soundkey == "")
+                SoundManager.Inst.StopMonster();
+
         }
 
         public void FixedUpdateState(StateController controller)

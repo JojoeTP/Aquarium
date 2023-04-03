@@ -68,12 +68,15 @@ public class AiRedHoodController : MonoBehaviour
         {
             colorAdj.active = true;
         }
+
+        SoundManager.Inst.PlayOneShot(FMODEvent.inst.FModEventDictionary["Monster_spawner_sound"],aiPrefab.transform.position);
     }
 
     public void DestroyRedHoodAI()
     {
         if (redHoodController != null)
         {
+            SoundManager.Inst.StopMonster();
             Destroy(redHoodController.gameObject);
             redHoodController = null;
             ActionEventManager.inst.UnLockDoor_Ch3_D06_01_Config();

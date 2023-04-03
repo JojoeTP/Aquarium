@@ -26,3 +26,4 @@ MonoBehaviour:
     trueState: {fileID: 11400000, guid: 458048fe5fa6399448444ece3e4ab96c, type: 2}
     falseState: {fileID: 11400000, guid: 6fbdd43bad4717c4eb7e5b5ad816ffec, type: 2}
   timeBeforeSwitchState: 0
+  Soundkey: Monster_run_sound

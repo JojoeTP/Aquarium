@@ -286,6 +286,71 @@ MonoBehaviour:
         Data3: -55346283
         Data4: 1634200431
       Path: event:/UI/UIButton
+  <MonsterList>k__BackingField:
+  - key: Monster_12_Attack_sound
+    sound:
+      Guid:
+        Data1: -1835373075
+        Data2: 1340100794
+        Data3: 1536695948
+        Data4: 298536378
+      Path: event:/Monster/Monster1_2_Attack
+  - key: Monster_1_trigger_sound
+    sound:
+      Guid:
+        Data1: -772619127
+        Data2: 1097123102
+        Data3: -815019354
+        Data4: 917612407
+      Path: event:/Monster/Monster1_trigger
+  - key: Monster_2_trigger_sound
+    sound:
+      Guid:
+        Data1: -973861226
+        Data2: 1089110740
+        Data3: -1086121544
+        Data4: 453388611
+      Path: event:/Monster/Monster2_trigger
+  - key: Monster_34_Attack_sound
+    sound:
+      Guid:
+        Data1: -2133676793
+        Data2: 1310405349
+        Data3: -2119522406
+        Data4: 575767261
+      Path: event:/Monster/Monster3_4_Attack
+  - key: Monster_4_trigger_sound
+    sound:
+      Guid:
+        Data1: -404968980
+        Data2: 1329935938
+        Data3: -1861663559
+        Data4: -1849678962
+      Path: event:/Monster/Monster4_trigger
+  - key: Monster_run_sound
+    sound:
+      Guid:
+        Data1: 1493095667
+        Data2: 1232959833
+        Data3: 1330870188
+        Data4: 1230544398
+      Path: event:/Monster/Moster_run
+  - key: Monster_spawner_sound
+    sound:
+      Guid:
+        Data1: 1473396197
+        Data2: 1233248905
+        Data3: 1552821136
+        Data4: -1736631848
+      Path: event:/Monster/Moster_spawner
+  - key: Monster_walk_sound
+    sound:
+      Guid:
+        Data1: 752211759
+        Data2: 1290145647
+        Data3: 1135574200
+        Data4: 1075686491
+      Path: event:/Monster/Moster_walk
   <MainMenuMusic>k__BackingField:
     key: MainMenuMusic
     sound:

@@ -66,12 +66,15 @@ public class AiJunitorController : MonoBehaviour
         {
             colorAdj.active = true;
         }
+
+        SoundManager.Inst.PlayOneShot(FMODEvent.inst.FModEventDictionary["Monster_spawner_sound"],aiPrefab.transform.position);
     }
 
     public void DestroyJunitorAI()
     {
         if (junitorController != null)
         {
+            SoundManager.Inst.StopMonster();
             Destroy(junitorController.gameObject);
             CannotExitHiding = false;
             junitorController = null;

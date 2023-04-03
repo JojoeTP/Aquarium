@@ -233,7 +233,7 @@ public class DialogueManager : MonoBehaviour
     {
         if (BGMSoundId != "")
         {
-            SoundManager.Inst.InitializeDialogueBGM(FMODEvent.inst.FModEventDictionary[BGMSoundId]);
+            SoundManager.Inst.InitializeBGM(FMODEvent.inst.FModEventDictionary[BGMSoundId]);
         }
         
     }

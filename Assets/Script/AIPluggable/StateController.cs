@@ -59,6 +59,7 @@ public class StateController : MonoBehaviour
     public float TimeBeforeSwitchState {get {return timeBeforeSwitchState;}}
 
     private void Start() {
+        currentState.InitState();
         timeBeforeSwitchState = currentState.timeBeforeSwitchState;
     }
 
