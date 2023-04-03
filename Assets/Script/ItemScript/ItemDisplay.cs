@@ -11,7 +11,7 @@ public class ItemDisplay : MonoBehaviour
 
     void Start()
     {
-        nameText.text = item.itemData.ItemName;
+        nameText.text = item.itemData.ShowInventoryName;
         descriptionText.text = item.itemData.ItemDescription;
     }
 

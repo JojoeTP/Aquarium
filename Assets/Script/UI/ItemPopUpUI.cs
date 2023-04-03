@@ -87,7 +87,7 @@ public class ItemPopUpUI : MonoBehaviour
             itemImage.sprite = item.InventoryItemSprite;
         else
             itemImage.sprite = item.ItemSprite;
-        itemName.text = item.ItemName;
+        itemName.text = item.ShowInventoryName;
     }
 
     void OnDestroy() 

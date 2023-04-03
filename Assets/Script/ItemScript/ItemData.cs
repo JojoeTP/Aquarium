@@ -7,7 +7,9 @@ public class ItemData
 {
     public string ItemID;
     public string ItemName;
+    public string ShowInventoryName;
     public string ItemDescription;
+    public string AdditionalDescription;
     public Sprite ItemSprite;
     public Sprite InventoryItemSprite;
     public Vector3 ItemPosition;

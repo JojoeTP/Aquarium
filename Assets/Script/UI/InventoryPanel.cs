@@ -13,8 +13,10 @@ public class InventoryPanel : MonoBehaviour
 
     [Header("ItemDetailPanel")]
     [SerializeField] Image itemDetail_Image;
+    [SerializeField] GameObject itemDetail_Panel;
     [SerializeField] TMP_Text itemDetail_Name;
     [SerializeField] TMP_Text itemDetail_Infomation;
+    [SerializeField] TMP_Text itemDetail_AdditionalInfomation;
 
     [Header("ItemSlotPanel")]
     [SerializeField] Transform itemSlotTemplate;
@@ -75,21 +77,29 @@ public class InventoryPanel : MonoBehaviour
         itemDetail_Image.gameObject.SetActive(false);
         itemDetail_Name.gameObject.SetActive(false);
         itemDetail_Infomation.gameObject.SetActive(false);
+        itemDetail_AdditionalInfomation.gameObject.SetActive(false);
+        itemDetail_Panel.SetActive(false);
     }
 
     void OnClickItem(ItemData item)
     {
+        HideItemDetail();
+
         if(item.InventoryItemSprite != null)
             itemDetail_Image.sprite = item.InventoryItemSprite;
         else
             itemDetail_Image.sprite = item.ItemSprite;
         
-        itemDetail_Name.text = item.ItemName;
+        itemDetail_Name.text = item.ShowInventoryName;
         itemDetail_Infomation.text = item.ItemDescription;
+
+        itemDetail_AdditionalInfomation.text = item.AdditionalDescription;
 
         itemDetail_Image.gameObject.SetActive(true);
         itemDetail_Name.gameObject.SetActive(true);
+        itemDetail_Panel.SetActive(true);
         itemDetail_Infomation.gameObject.SetActive(true);
+        itemDetail_AdditionalInfomation.gameObject.SetActive(true);
     }
 
     void ClearChildren(Transform parent)
