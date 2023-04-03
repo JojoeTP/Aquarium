@@ -76,7 +76,7 @@ public class AiRedHoodController : MonoBehaviour
         {
             Destroy(redHoodController.gameObject);
             redHoodController = null;
-            
+            ActionEventManager.inst.UnLockDoor_Ch3_D06_01_Config();
             if(nightGlobalVolume.profile.TryGet<ColorAdjustments>(out var colorAdj))
            {
                 colorAdj.active = false;

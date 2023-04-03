@@ -163,6 +163,7 @@ public class ItemManager : MonoBehaviour
                     {
                         //เก็บเสร็จเปิด dialogue เเล้วค่อย ให้ alert
                         ActionEventManager.inst.SetActiveDialogueCh3_D05_01();
+                        ActionEventManager.inst.LockDoor_Ch3_D06_01_Config();
                     }
                 );
                 break;

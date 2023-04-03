@@ -59,6 +59,8 @@ public class ActionEventManager : MonoBehaviour
     [SerializeField] LockDoorConfig Ch1_D01_2_01_Config;
     [SerializeField] LockDoorConfig Ch1_D04_01_Config;
     [SerializeField] LockDoorConfig Ch3_D04_01_Config;
+    [SerializeField] LockDoorConfig Ch3_D06_01_Config;
+
 
     [Header("Item")]
     [SerializeField] ItemScriptableObject VIPRoom;
@@ -290,6 +292,24 @@ public class ActionEventManager : MonoBehaviour
     public void UnLockDoor_Ch3_D04_01_Config()
     {
         UnlockDoor(Ch3_D04_01_Config);
+    }
+
+    public void UnLockDoor_Ch3_D06_01_Config()
+    {
+        UnlockDoor(Ch3_D06_01_Config);
+    }
+
+    public void LockDoor_Ch3_D06_01_Config()
+    {
+        foreach(var n in Ch3_D06_01_Config.lockDoorDialogue)
+        {
+            n.gameObject.SetActive(true);
+        }
+
+        foreach(var n in Ch3_D06_01_Config.lockDoor)
+        {
+            n.isLockedDoor = true;
+        }
     }
 
     public void WarpToPosition(Transform transform)

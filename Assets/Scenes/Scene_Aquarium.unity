@@ -34386,6 +34386,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4966732993388418438, guid: 1b3dcc0b488f4414c991160dad5fe269, type: 3}
+      propertyPath: Ch3_D06_01_Config.lockDoor.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4966732993388418438, guid: 1b3dcc0b488f4414c991160dad5fe269, type: 3}
       propertyPath: labyrinthENDHideDialogue.Array.data[0]
       value: 
       objectReference: {fileID: 298884939}
@@ -34414,6 +34418,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1401686468}
     - target: {fileID: 4966732993388418438, guid: 1b3dcc0b488f4414c991160dad5fe269, type: 3}
+      propertyPath: Ch3_D06_01_Config.lockDoor.Array.data[0]
+      value: 
+      objectReference: {fileID: 1556040214}
+    - target: {fileID: 4966732993388418438, guid: 1b3dcc0b488f4414c991160dad5fe269, type: 3}
       propertyPath: Ch1_D01_2_01_Config.lockDoor.Array.data[0]
       value: 
       objectReference: {fileID: 819383246}
@@ -34434,6 +34442,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4966732993388418438, guid: 1b3dcc0b488f4414c991160dad5fe269, type: 3}
+      propertyPath: Ch3_D06_01_Config.lockDoorDialogue.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4966732993388418438, guid: 1b3dcc0b488f4414c991160dad5fe269, type: 3}
       propertyPath: Ch1_D01_2_01_Config.lockDoorDialogue.Array.size
       value: 3
       objectReference: {fileID: 0}
@@ -34449,6 +34461,10 @@ PrefabInstance:
       propertyPath: Ch3_D04_01_Config.lockDoorDialogue.Array.data[0]
       value: 
       objectReference: {fileID: 1825368143}
+    - target: {fileID: 4966732993388418438, guid: 1b3dcc0b488f4414c991160dad5fe269, type: 3}
+      propertyPath: Ch3_D06_01_Config.lockDoorDialogue.Array.data[0]
+      value: 
+      objectReference: {fileID: 253326760}
     - target: {fileID: 4966732993388418438, guid: 1b3dcc0b488f4414c991160dad5fe269, type: 3}
       propertyPath: Ch1_D01_2_01_Config.lockDoorDialogue.Array.data[0]
       value: 
