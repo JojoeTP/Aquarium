@@ -100,7 +100,7 @@ public class AiDirectorController : MonoBehaviour
 
     public void OnAttackPlayer()
     {
-        StartCoroutine(AttackPlayer(2f));
+        StartCoroutine(AttackPlayer(1f));
     }
 
     IEnumerator AttackPlayer(float time)
