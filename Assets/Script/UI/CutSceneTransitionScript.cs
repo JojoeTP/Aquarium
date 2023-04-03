@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CutSceneTransitionScript : MonoBehaviour
 {
-    public Animator animator;
+    Animator animator;
     TalkWithNPC talkWithNPC;
     public static CutSceneTransitionScript inst;
 
