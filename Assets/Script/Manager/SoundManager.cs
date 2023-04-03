@@ -28,6 +28,7 @@ public class SoundManager : MonoBehaviour
     EventInstance DialogueEventInstance;
     EventInstance DialogueBGMEventInstance;
     EventInstance MonsterEventInstance;
+    EventInstance UIEventInstance;
     
 
     void Awake() 
@@ -130,6 +131,20 @@ public class SoundManager : MonoBehaviour
 
         MonsterEventInstance = CreateInstance(eventReference);
         MonsterEventInstance.start();
+    }
+
+    public void InitializeUI(EventReference eventReference)
+    {
+        StopUI();
+
+        UIEventInstance = CreateInstance(eventReference);
+        UIEventInstance.start();
+    }
+
+    public void StopUI()
+    {
+        if(UIEventInstance.isValid())
+            UIEventInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
     }
 
     public void StopBGM()

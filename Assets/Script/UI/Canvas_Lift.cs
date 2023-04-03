@@ -8,4 +8,9 @@ public class Canvas_Lift : MonoBehaviour
     {
         this.gameObject.SetActive(false);
     }
+
+    public void PlayButton()
+    {
+        SoundManager.Inst.InitializeUI(FMODEvent.inst.FModEventDictionary["UIButton"]);
+    }
 }

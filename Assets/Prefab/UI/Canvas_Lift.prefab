@@ -364,7 +364,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 5750146364090819965}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8291231896371802493}
+        m_TargetAssemblyTypeName: Canvas_Lift, Assembly-CSharp
+        m_MethodName: PlayButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &5750146364266825831
 GameObject:
   m_ObjectHideFlags: 0
@@ -486,7 +498,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 5750146364266825818}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8291231896371802493}
+        m_TargetAssemblyTypeName: Canvas_Lift, Assembly-CSharp
+        m_MethodName: PlayButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &5750146364307343637
 GameObject:
   m_ObjectHideFlags: 0
@@ -878,7 +902,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 5750146364575542577}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8291231896371802493}
+        m_TargetAssemblyTypeName: Canvas_Lift, Assembly-CSharp
+        m_MethodName: PlayButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &5750146364661670511
 GameObject:
   m_ObjectHideFlags: 0
@@ -1135,7 +1171,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 5750146364807680533}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8291231896371802493}
+        m_TargetAssemblyTypeName: Canvas_Lift, Assembly-CSharp
+        m_MethodName: PlayButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &5750146364961695320
 GameObject:
   m_ObjectHideFlags: 0
@@ -1257,7 +1305,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 5750146364961695323}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8291231896371802493}
+        m_TargetAssemblyTypeName: Canvas_Lift, Assembly-CSharp
+        m_MethodName: PlayButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &5750146365070375295
 GameObject:
   m_ObjectHideFlags: 0
@@ -1514,7 +1574,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 5750146365238117697}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8291231896371802493}
+        m_TargetAssemblyTypeName: Canvas_Lift, Assembly-CSharp
+        m_MethodName: PlayButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &5750146365528716473
 GameObject:
   m_ObjectHideFlags: 0

@@ -113,6 +113,7 @@ public class PlayerPanel : MonoBehaviour
                 break;
             case PANELSTATE.INVENTORY :
                 // OnOpenPanel();
+                PlaySound();
                 animator.SetTrigger("Bag");
                 inventoryPanel.OnOpenInventory();
 
@@ -121,6 +122,7 @@ public class PlayerPanel : MonoBehaviour
                 break;
             case PANELSTATE.SETTING :
                 // OnOpenPanel();
+                PlaySound();
                 animator.SetTrigger("Setting");
 
                 if(PlayerManager.inst != null)
@@ -128,6 +130,7 @@ public class PlayerPanel : MonoBehaviour
                 break;
             case PANELSTATE.MAP:
                 // OnOpenPanel();
+                PlaySound();
                 animator.SetTrigger("Map");
 
                 if(PlayerManager.inst != null)
@@ -140,6 +143,7 @@ public class PlayerPanel : MonoBehaviour
     {
         if(PlayerManager.inst != null)
         {
+
             if (PlayerManager.inst.playerState != PlayerManager.PLAYERSTATE.OPENPANEL)
             {
                 animator.SetTrigger("Open");
@@ -151,8 +155,19 @@ public class PlayerPanel : MonoBehaviour
     {
         if(PlayerManager.inst != null)
         {
+
             if (PlayerManager.inst.playerState != PlayerManager.PLAYERSTATE.NONE)
                 animator.SetTrigger("Exit");
         }
+    }
+
+    void PlaySound()
+    {
+        SoundManager.Inst.InitializeUI(FMODEvent.inst.FModEventDictionary["Setting"]);
+    }
+
+    public void PlayButton()
+    {
+        SoundManager.Inst.InitializeUI(FMODEvent.inst.FModEventDictionary["UIButton"]);
     }
 }
