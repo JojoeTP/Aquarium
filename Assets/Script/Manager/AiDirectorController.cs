@@ -72,7 +72,7 @@ public class AiDirectorController : MonoBehaviour
     {
         if (directorController != null)
         {
-            AiDirectorController.inst.directorController.animator.SetBool("Event",false);
+            print(1);
             Destroy(directorController.gameObject);
             directorController = null;
             

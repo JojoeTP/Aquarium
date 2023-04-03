@@ -7,7 +7,7 @@ namespace PluggableAI
     [CreateAssetMenu(menuName = "PluggableAI/Decesion/PlayerDonotMoveInTime")]
     public class PlayerDonotMoveInTime : Decision
     {
-        float time = 10f;
+        public float time = 10f;
 
         bool isPlayerNotMove;
         public override bool Decide(StateController controller)

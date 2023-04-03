@@ -58,6 +58,10 @@ public class StateController : MonoBehaviour
     public float ElapsedTimeBeforeDie {get {return elapsedTimeBeforeDie;} set {elapsedTimeBeforeDie = value;}}
     public float TimeBeforeSwitchState {get {return timeBeforeSwitchState;}}
 
+    private void Start() {
+        timeBeforeSwitchState = currentState.timeBeforeSwitchState;
+    }
+
     private void Update() 
     {
         
@@ -209,5 +213,17 @@ public class StateController : MonoBehaviour
                 animator.SetBool("M_Timeout",enabled);
         }
         
+    }
+
+    public void OnDirectorDisapper()
+    {
+        AiDirectorController.inst.directorController.animator.SetBool("Event",false);
+        StartCoroutine(DirectorDisapper());
+    }
+
+    IEnumerator DirectorDisapper()
+    {
+        yield return new WaitForSeconds(1f);
+        UITransition.inst.DirectorTransitionIn();
     }
 }

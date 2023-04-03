@@ -13,12 +13,14 @@ public class AIDirectorTransitionScript : MonoBehaviour
 
     public void AIDirectorTransitionIn()
     {
-        animator.SetTrigger("DirectorTransitionIn");
+        animator.SetBool("DirectorTransitionOut",false);
+        animator.SetBool("DirectorTransitionIn",true);
     }
 
     public void AIDirectorTransitionOut()
     {
         AiDirectorController.inst.DirectorTransition();
-        animator.SetTrigger("DirectorTransitionOut");
+        animator.SetBool("DirectorTransitionIn",false);
+        animator.SetBool("DirectorTransitionOut",true);
     }
 }

@@ -16,8 +16,7 @@ namespace PluggableAI
         {
             if(AiJunitorController.inst.junitorController != null)
             {
-                AiJunitorController.inst.DestroyJunitorAI();
-                // UITransition.inst.JunitorTransitionIn();
+                UITransition.inst.JunitorTransitionIn();
             }
 
             if(AiRedHoodController.inst.redHoodController != null)
@@ -27,7 +26,8 @@ namespace PluggableAI
             }
 
             if(AiDirectorController.inst.directorController != null)
-                UITransition.inst.DirectorTransitionIn();
+                controller.OnDirectorDisapper();
+                
         }
     }
 }
