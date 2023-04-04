@@ -57,6 +57,7 @@ public class ActionEventManager : MonoBehaviour
     [Header("UnLockDoor")]
     [SerializeField] LockDoorConfig Ch0_C03_01_Config;
     [SerializeField] LockDoorConfig Ch1_D01_2_01_Config;
+    [SerializeField] LockDoorConfig SkeletonHiding_Config;
     [SerializeField] LockDoorConfig Ch1_D04_01_Config;
     [SerializeField] LockDoorConfig Ch3_D04_01_Config;
     [SerializeField] LockDoorConfig Ch3_D06_01_Config;
@@ -282,6 +283,11 @@ public class ActionEventManager : MonoBehaviour
     public void UnLockDoor_Ch1_D01_2_01()
     {
         UnlockDoor(Ch1_D01_2_01_Config);
+    }
+
+    public void UnLockDoor_SkeletonHiding_Config()
+    {
+        UnlockDoor(SkeletonHiding_Config);
     }
 
     public void UnLockDoor_Ch1_D04_01()
