@@ -43873,6 +43873,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 4695122923896684066}
     - target: {fileID: 3402447144988968731, guid: 3d5b4812a40a2494d97f6e0c96153612, type: 3}
+      propertyPath: conditionItem
+      value: 
+      objectReference: {fileID: 11400000, guid: 6864af4c429bc1a4baf33ce5b9af7b12, type: 2}
+    - target: {fileID: 3402447144988968731, guid: 3d5b4812a40a2494d97f6e0c96153612, type: 3}
       propertyPath: finishPostion
       value: 
       objectReference: {fileID: 4695122923091229206}
@@ -46912,7 +46916,19 @@ MonoBehaviour:
   notForEnemy: 0
   triggerDoorEvents:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2118471162}
+        m_TargetAssemblyTypeName: DoorEncryption, Assembly-CSharp
+        m_MethodName: StartIfHaveItem
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   isLockedDoor: 0
   triggerConditionEvent:
     m_PersistentCalls:
