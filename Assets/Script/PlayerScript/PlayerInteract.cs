@@ -109,11 +109,7 @@ public class PlayerInteract : MonoBehaviour
             return;
         }
 
-        if (DialogueManager.inst.currentNPC == null)
-        {
-            DialogueManager.inst.currentNPC = NPC;
-            DialogueManager.inst.currentDialogue = NPC.startWithDialogueId;
-        }
+        
 
         DialogueManager.inst.StartDialogue();
         PlayerManager.inst.playerState = PlayerManager.PLAYERSTATE.CONVERSATION;
