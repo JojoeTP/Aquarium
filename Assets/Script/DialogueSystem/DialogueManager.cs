@@ -375,19 +375,19 @@ public class DialogueManager : MonoBehaviour
         dialoguePanel.DialogueText.text = "";
 
         char[] count = sentence.ToCharArray();
-        for (int i = 0; i < count.Length; i++)
+        int numCount = 0;
+        for (int i = 0; i < count.Length / 3; i+= 3)
         {
-            typeSentence += count[i];
+            typeSentence = "";
+            for (int j = 0; j < 3; j++)
+            {
+                typeSentence += count[numCount];
+                numCount++;
+            }
+            dialoguePanel.DialogueText.text += typeSentence;
         }
-        dialoguePanel.DialogueText.text += typeSentence;
+        yield return null;
 
-        foreach (char letter in sentence.ToCharArray())
-        {
-            
-            dialoguePanel.DialogueText.text += letter;
-            //yield return new WaitForSeconds(typeDialogueDelay * dialogueSpeedMultiplyer);
-            yield return null;
-        }
         //foreach (char letter in sentence.ToCharArray())
         //{
         //    dialoguePanel.DialogueText.text += letter;
