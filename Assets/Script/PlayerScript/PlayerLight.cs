@@ -13,6 +13,12 @@ public class PlayerLight : MonoBehaviour
     }
 
     public void OnLight(){
+        if(PlayerManager.inst.playerAnimator.GetBool("Lampitem") == false)
+            return;
+
+        if(PlayerManager.inst.playerState != PlayerManager.PLAYERSTATE.NONE)
+            return;
+        
         if(!isLight)
         {
             ToggleLight(true);
