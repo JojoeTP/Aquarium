@@ -58,3 +58,4 @@ MonoBehaviour:
   currentDialogue: 
   dialoguePanel: {fileID: 0}
   typeDialogueDelay: 0.000000005
+  dialogueSpeedMultiplyer: 200
