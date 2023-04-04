@@ -57,6 +57,7 @@ public class ActionEventManager : MonoBehaviour
     [Header("UnLockDoor")]
     [SerializeField] LockDoorConfig Ch0_C03_01_Config;
     [SerializeField] LockDoorConfig Ch1_D01_2_01_Config;
+    [SerializeField] LockDoorConfig SkeletonHiding_Config;
     [SerializeField] LockDoorConfig Ch1_D04_01_Config;
     [SerializeField] LockDoorConfig Ch3_D04_01_Config;
     [SerializeField] LockDoorConfig Ch3_D06_01_Config;
@@ -80,6 +81,9 @@ public class ActionEventManager : MonoBehaviour
     public bool isMap2Done = false;
     public bool isMap3Done = false;
     public bool isMap4Done = false;
+
+    [Header("Daughter")]
+    public List<GameObject> daughterList = new List<GameObject>();
 
     void Awake() 
     {
@@ -284,6 +288,11 @@ public class ActionEventManager : MonoBehaviour
         UnlockDoor(Ch1_D01_2_01_Config);
     }
 
+    public void UnLockDoor_SkeletonHiding_Config()
+    {
+        UnlockDoor(SkeletonHiding_Config);
+    }
+
     public void UnLockDoor_Ch1_D04_01()
     {
         UnlockDoor(Ch1_D04_01_Config);
@@ -470,9 +479,17 @@ public class ActionEventManager : MonoBehaviour
         if(isMap4Done)
         {
             LockAquariamDoor();
+            RemoveDaughter();
             Dialogue_ch4.SetActive(false);
         }
-        
+    }
+
+    public void RemoveDaughter()
+    {
+        foreach(var n in daughterList)
+        {
+            n.SetActive(false);
+        }
     }
 
 }

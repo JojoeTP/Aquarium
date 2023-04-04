@@ -191,6 +191,18 @@ public class SoundManager : MonoBehaviour
 
         BGMEventInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
         BGMEventInstance.release();
+
+        DialogueEventInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+        DialogueEventInstance.release();
+
+        DialogueBGMEventInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+        DialogueBGMEventInstance.release();
+        
+        MonsterEventInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+        MonsterEventInstance.release();
+
+        UIEventInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+        UIEventInstance.release();
     }
 
     void OnDestroy() 
