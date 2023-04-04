@@ -21,7 +21,7 @@ public class AiRedHoodController : MonoBehaviour
     public bool spawnAI = false;
     public bool isPlayerInSpawnCollider = false;
     public bool isPlayerMove = false;
-
+    public bool canPlayerDie = false;
     public float spawnTime = 0f;
 
     public Transform SpawnPosition {set {spawnPosition = value;}}
@@ -76,6 +76,7 @@ public class AiRedHoodController : MonoBehaviour
     {
         if (redHoodController != null)
         {
+            canPlayerDie = false;
             SoundManager.Inst.StopMonster();
             Destroy(redHoodController.gameObject);
             redHoodController = null;
@@ -110,7 +111,9 @@ public class AiRedHoodController : MonoBehaviour
     IEnumerator AttackPlayer(float time)
     {
         yield return new WaitForSeconds(time);
-        UITransition.inst.DieTransitionIn();
+
+        if(canPlayerDie)
+            UITransition.inst.DieTransitionIn();
     }
 
     public void RespawnPlayer()

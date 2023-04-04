@@ -19,7 +19,7 @@ public class PlayerCam : MonoBehaviour
 
     IEnumerator ShakeCameraTime(float time)
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(.25f);
         ShakeStateCamera();
         yield return new WaitForSeconds(time);
         NormalStateCamera();
