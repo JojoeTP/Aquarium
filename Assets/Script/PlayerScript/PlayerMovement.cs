@@ -221,4 +221,12 @@ public class PlayerMovement : MonoBehaviour
     {
         return isMove;
     }
+
+    void OnDestroy() {
+        playerMovement.stop(STOP_MODE.ALLOWFADEOUT);
+
+        InputSystemManager.Inst.onMove -= OnMove;
+        InputSystemManager.Inst.onPressMove -= OnPressMove;
+        InputSystemManager.Inst.onSprint -= OnSprint;
+    }
 }

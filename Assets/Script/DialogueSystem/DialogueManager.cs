@@ -380,7 +380,7 @@ public class DialogueManager : MonoBehaviour
     IEnumerator TypeSentence(string sentence)
     {
         dialoguePanel.DialogueText.text = "";
-
+        typeSentence = "";
         char[] count = sentence.ToCharArray();
         for (int i = 0; i < count.Length; i++)
         {
