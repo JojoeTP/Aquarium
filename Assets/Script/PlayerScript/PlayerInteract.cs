@@ -41,6 +41,8 @@ public class PlayerInteract : MonoBehaviour
             if(TalkWithNPC(n.transform))
             {
                 n.GetComponent<TalkWithNPC>().SetDialogueID();
+                DialogueManager.inst.currentNPC = n.GetComponent<TalkWithNPC>();
+                DialogueManager.inst.currentDialogue = n.GetComponent<TalkWithNPC>().startWithDialogueId;
                 StartDialogue(n.GetComponent<TalkWithNPC>());
                 return;
             }

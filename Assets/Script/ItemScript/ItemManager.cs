@@ -19,6 +19,7 @@ public class ItemManager : MonoBehaviour
     [SerializeField] Item buttonEffectPrefab;
 
     [SerializeField] List<ItemScriptableObject> itemData = new List<ItemScriptableObject>();
+    [SerializeField] List<ItemScriptableObject> itemList = new List<ItemScriptableObject>();
 
     public int ParticipateId {get{ return participateID;} set {participateID = value;}}
 
@@ -79,7 +80,7 @@ public class ItemManager : MonoBehaviour
     {
         Item item = null;
 
-        foreach(var m in itemData)
+        foreach(var m in itemList)
         {
             if(itemEffectSetting.iTEMTYPE.HasFlag(m.itemData.ItemType))
             {
