@@ -292,4 +292,12 @@ public class DoorEncryption : MonoBehaviour
             
         }
     }
+    public ItemScriptableObject conditionItem;
+    public void StartIfHaveItem()
+    {
+        if(PlayerManager.inst.PlayerInventory.PlayerItemDictionary.ContainsValue(conditionItem.itemData.ItemID))
+        {
+            StartPuzzle();
+        }
+    }
 }

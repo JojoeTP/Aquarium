@@ -172,4 +172,9 @@ public class MainMenuController : MonoBehaviour
             PlayerManager.inst.playerState = PlayerManager.PLAYERSTATE.NONE;
         }
     }
+
+    public void PlaySound()
+    {
+        SoundManager.Inst.InitializeUI(FMODEvent.inst.FModEventDictionary["Setting"]);
+    }
 }

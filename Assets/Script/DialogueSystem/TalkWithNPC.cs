@@ -25,7 +25,7 @@ public class TalkWithNPC : MonoBehaviour
         {
             if (n.conditionItem == null)
             {
-                print("null item");
+                Debug.Log("null item");
                 return;
             }
 
@@ -87,6 +87,10 @@ public class TalkWithNPC : MonoBehaviour
             if (other.GetComponent<PlayerManager>() != null)
             {
                 SetDialogueID();
+
+                DialogueManager.inst.currentNPC = this;
+                DialogueManager.inst.currentDialogue = this.startWithDialogueId;
+
                 PlayerManager.inst.PlayerInteract.StartDialogue(this);
                 SetActiveFalse();
             }

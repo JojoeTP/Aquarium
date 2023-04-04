@@ -162,6 +162,7 @@ public class ItemManager : MonoBehaviour
                 item.triggerEvents.AddListener( () => 
                     {
                         //เก็บเสร็จเปิด dialogue เเล้วค่อย ให้ alert
+                        AiRedHoodController.inst.canPlayerDie = true;
                         ActionEventManager.inst.SetActiveDialogueCh3_D05_01();
                         ActionEventManager.inst.LockDoor_Ch3_D06_01_Config();
                     }

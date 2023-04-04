@@ -200,6 +200,7 @@ public class StateController : MonoBehaviour
         if(animator == null)
             return;
 
+        HitRedScreen.inst.OnHit();
         // animator.SetBool("M_Attack",enabled);
             animator.SetTrigger("M_Attack_Trigger");
     }

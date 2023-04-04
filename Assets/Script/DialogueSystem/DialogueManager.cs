@@ -194,6 +194,7 @@ public class DialogueManager : MonoBehaviour
         SoundManager.Inst.MuteBGM();
         PlaySound(openWith[currentDialogue].sound);
         PlayBGMSound(openWith[currentDialogue].BGMSound);
+        
         type = (Type)Enum.Parse(typeof(Type), openWith[currentDialogue].type);
         dialogueCanvas.enabled = true;
         CheckIfHaveChoice(currentDialogue);

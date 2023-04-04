@@ -24,6 +24,18 @@ public class DieTransitionScript : MonoBehaviour
         AiDirectorController.inst.RespawnPlayer();
         AiRedHoodController.inst.RespawnPlayer();
 
+        if(PlayerManager.inst.playerState == PlayerManager.PLAYERSTATE.HIDING)
+        {
+            foreach(var n in PlayerManager.inst.playerSprite)
+            {
+                n.SetActive(true);
+            }
+            PlayerManager.inst.playerState = PlayerManager.PLAYERSTATE.NONE;
+
+            if(PlayerManager.inst.PlayerLight.isLight)
+                    PlayerManager.inst.PlayerLight.ToggleLight(true);
+        } 
+
         animator.SetTrigger("DieTransitionOut");
     }
 }

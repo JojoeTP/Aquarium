@@ -27,6 +27,9 @@ public class CutSceneTransitionScript : MonoBehaviour
         animator.SetTrigger("CutSceneTransitionOut");
         if (talkWithNPC == null && getData == true)
         {
+            DialogueManager.inst.currentNPC = talkWithNPC;
+            DialogueManager.inst.currentDialogue = talkWithNPC.startWithDialogueId;
+
             PlayerManager.inst.PlayerInteract.StartDialogue(talkWithNPC);
             getData = false;
         }

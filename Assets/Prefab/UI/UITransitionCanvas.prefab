@@ -254,6 +254,8 @@ GameObject:
   - component: {fileID: 1231206787}
   - component: {fileID: 2883195723231082950}
   - component: {fileID: 4807704554187790916}
+  - component: {fileID: 3945397317630913720}
+  - component: {fileID: 7302718855655632874}
   m_Layer: 0
   m_Name: OverlayTransition
   m_TagString: Untagged
@@ -364,7 +366,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c728793024055ee4fab86f1c1c05374e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 0}
 --- !u!114 &1231206787
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -399,6 +400,30 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0f4c5c185c561ae41a335834459082cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3945397317630913720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2347664268754119562}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1bd44f546ba85e4cbed044252f8c3b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &7302718855655632874
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2347664268754119562}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 794f8d472a859d342a6e760eca5df7f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &4826840896834874344

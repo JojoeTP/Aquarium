@@ -181,8 +181,6 @@ public class PlayerMovement : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D other) 
     {
-        print("other " + other.gameObject.name);
-    
         if(other.gameObject.CompareTag("Wall"))
         {
             isRunIntoWall = true;

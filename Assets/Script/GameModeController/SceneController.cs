@@ -13,7 +13,7 @@ public class SceneController : MonoBehaviour
     public string SCENE_LOADING { get {return "Scene_Loading";} }
 
     public float loadingProgress {get; private set;}
-    Scene loadedSceneBefore;
+    public Scene loadedSceneBefore;
 
     bool gameplaySceneLoaded = false;
     public bool GameplaySceneLoaded {set {gameplaySceneLoaded = value;} get {return gameplaySceneLoaded;}}
