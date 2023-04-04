@@ -14,6 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   oneTimeActions:
   - {fileID: 11400000, guid: 0ff61e26ee2a4734ab2deecb111ef76f, type: 2}
-  LoopActions: []
+  LoopActions:
+  - {fileID: 11400000, guid: 798650dd1b5ecd14c9b1469b53eeaeb5, type: 2}
   transitions: []
   timeBeforeSwitchState: 0
+  Soundkey: 
