@@ -40,6 +40,9 @@ public class PlayerPanel : MonoBehaviour
 
     void SetupInputAction()
     {
+        if(SceneController.inst.loadedSceneBefore.name != SceneController.inst.SCENE_GAMEPLAY)
+            return;
+
         InputSystemManager.Inst.onToggleInventory += ToggleInventory;
         InputSystemManager.Inst.onToggleSetting += ToggleSetting;
         InputSystemManager.Inst.onToggleMap += ToggleMap;
@@ -47,6 +50,9 @@ public class PlayerPanel : MonoBehaviour
 
     void OnDestroy() 
     {
+        if(SceneController.inst.loadedSceneBefore.name != SceneController.inst.SCENE_GAMEPLAY)
+            return;
+            
         InputSystemManager.Inst.onToggleInventory -= ToggleInventory;
         InputSystemManager.Inst.onToggleSetting -= ToggleSetting;
         InputSystemManager.Inst.onToggleMap -= ToggleMap;
