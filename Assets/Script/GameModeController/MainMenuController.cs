@@ -141,7 +141,7 @@ public class MainMenuController : MonoBehaviour
         // maybe switch to loading scene before switch to scene game
         yield return new WaitUntil(() => DialogueManager.inst.IsLoadingDialogueData());
 
-
+        InputSystemManager.Inst.SetPlayerControl(true);
         SceneController.inst.GameplaySceneLoaded = false;
         AddressablesManager.inst.LoadSpriteAtlas();
         SceneController.inst.OnLoadSceneAsync(SceneController.inst.SCENE_GAMEPLAY,ActionBeforSwitchScene,ActionAfterSwitchScene);

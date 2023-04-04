@@ -31,7 +31,7 @@ public class LoadSceneController : MonoBehaviour
     IEnumerator GoToSceneMainMenu()
     {
         yield return new WaitUntil(() => SceneController.inst != null);
-
+        InputSystemManager.Inst.SetPlayerControl(false);
         if(PlayerPrefs.GetInt("DarkMainMenu",0) == 0)
             SceneController.inst.OnLoadSceneAsync(SCENE_MAINMENU,null,UnloadLoadScene);
         else
