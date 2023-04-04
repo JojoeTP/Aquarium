@@ -38,9 +38,6 @@ public class DialogueManager : MonoBehaviour
     Canvas dialogueCanvas;
     public UIDialoguePanel dialoguePanel;
 
-    [SerializeField] float typeDialogueDelay;
-    [SerializeField] int dialogueSpeedMultiplyer;
-
     string soundKey = "";
 
     bool loadingDialogueData;
@@ -379,24 +376,22 @@ public class DialogueManager : MonoBehaviour
 
 
     string typeSentence;
+    [SerializeField] int typeInOneTime;
     IEnumerator TypeSentence(string sentence)
     {
         dialoguePanel.DialogueText.text = "";
 
         char[] count = sentence.ToCharArray();
-        int numCount = 0;
-        for (int i = 0; i < count.Length / 3; i+= 3)
+        for (int i = 0; i < count.Length; i++)
         {
-            typeSentence = "";
-            for (int j = 0; j < 3; j++)
+            typeSentence += count[i];
+            if (i == count.Length-1 || i % typeInOneTime == 0)
             {
-                typeSentence += count[numCount];
-                numCount++;
+                dialoguePanel.DialogueText.text += typeSentence;
+                typeSentence = "";
             }
-            dialoguePanel.DialogueText.text += typeSentence;
+            yield return null;
         }
-        yield return null;
-
         //foreach (char letter in sentence.ToCharArray())
         //{
         //    dialoguePanel.DialogueText.text += letter;
