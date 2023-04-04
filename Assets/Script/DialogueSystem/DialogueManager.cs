@@ -41,6 +41,8 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] float typeDialogueDelay;
     [SerializeField] int dialogueSpeedMultiplyer;
 
+    string soundKey = "";
+
     bool loadingDialogueData;
 
     public void LoadCharacterSprites()
@@ -218,12 +220,19 @@ public class DialogueManager : MonoBehaviour
         }
     }
     void PlaySound(string soundId)
-    {
-        if (soundId != "")
+    {   
+        if(soundKey == soundId)
+            return;
+        else
         {
-            // SoundManager.Inst.PlayOneShot(FMODEvent.inst.FModEventDictionary[soundId], PlayerManager.inst.transform.position);
-            SoundManager.Inst.InitializeDialogueSound(FMODEvent.inst.FModEventDictionary[soundId]);
+            soundKey = soundId;
+            if (soundKey != "")
+            {
+                // SoundManager.Inst.PlayOneShot(FMODEvent.inst.FModEventDictionary[soundId], PlayerManager.inst.transform.position);
+                SoundManager.Inst.InitializeDialogueSound(FMODEvent.inst.FModEventDictionary[soundKey]);
+            }
         }
+
     }
 
     void StopSound()
