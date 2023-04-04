@@ -61,6 +61,7 @@ public class CutSceneTransitionScript : MonoBehaviour
 
     public void WhiteTransitionOut()
     {
+        InputSystemManager.Inst.SetPlayerControl(false);
         if(PlayerPrefs.GetInt("DarkMainMenu",0) == 0)
             SceneController.inst.OnLoadSceneAsync(SCENE_MAINMENU,null,null);
         else
