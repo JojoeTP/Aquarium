@@ -30,12 +30,12 @@ public enum ITEMTYPE
 
 public enum EFFECTTYPE
 {
-    NONE,
     WINK,
     INVERTCOLOR,
     BUTTON,
     LIGHT,
     FIREFLY,
+    NONE,
 }
 
 
