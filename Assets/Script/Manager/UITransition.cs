@@ -12,6 +12,8 @@ public class UITransition : MonoBehaviour
     DieTransitionScript dieTransitionScript;
     AIMermaidTransitionScript mermaidTransitionScript;
     AIDirectorTransitionScript directorTransitionScript;
+    AIRedHoodTransitionScript redHoodTransitionScript;
+    AIJunitorTransitionScript junitorTransitionScript;
 
     private void Awake() 
     {
@@ -25,6 +27,8 @@ public class UITransition : MonoBehaviour
         dieTransitionScript = transitionScript.GetComponent<DieTransitionScript>(); 
         mermaidTransitionScript = transitionScript.GetComponent<AIMermaidTransitionScript>(); 
         directorTransitionScript = transitionScript.GetComponent<AIDirectorTransitionScript>(); 
+        redHoodTransitionScript = transitionScript.GetComponent<AIRedHoodTransitionScript>(); 
+        junitorTransitionScript = transitionScript.GetComponent<AIJunitorTransitionScript>(); 
     }
 
     public void DoorTransitionIn()
@@ -59,12 +63,12 @@ public class UITransition : MonoBehaviour
 
     public void RedHoodTransitionIn()
     {
-        // directorTransitionScript.AIDirectorTransitionIn();
+        redHoodTransitionScript.AIRedHoodTransitionIn();
     }
 
     public void JunitorTransitionIn()
     {
-        // directorTransitionScript.AIDirectorTransitionIn();
+        junitorTransitionScript.AIJunitorTransitionIn();
     }
     
     public void WhiteTransitionIn()

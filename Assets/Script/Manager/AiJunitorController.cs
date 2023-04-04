@@ -45,8 +45,8 @@ public class AiJunitorController : MonoBehaviour
             var rand = Random.Range(0,100);
             if(rand >= 60)
             {
-                // UITransition.inst.JunitorTransitionIn();
-                CreateJunitor();
+                UITransition.inst.JunitorTransitionIn();
+                // CreateJunitor();
             }
         }
 

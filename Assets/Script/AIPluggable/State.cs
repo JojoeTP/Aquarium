@@ -19,9 +19,14 @@ namespace PluggableAI
         public void InitState()
         {
             isActionDone = false;
-            if(Soundkey != "")
-                SoundManager.Inst.InitializeMonster(FMODEvent.inst.FModEventDictionary[Soundkey]);
-            else if(Soundkey == "")
+            if(Soundkey != null)
+            {
+                if(Soundkey == "")
+                    SoundManager.Inst.StopMonster();
+                else if(Soundkey != "")
+                    SoundManager.Inst.InitializeMonster(FMODEvent.inst.FModEventDictionary[Soundkey]);
+            }
+            else
                 SoundManager.Inst.StopMonster();
 
         }

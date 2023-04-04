@@ -21,8 +21,8 @@ namespace PluggableAI
 
             if(AiRedHoodController.inst.redHoodController != null)
             {
-                AiRedHoodController.inst.DestroyRedHoodAI();
-                // UITransition.inst.RedHoodTransitionIn();
+                // AiRedHoodController.inst.DestroyRedHoodAI();
+                UITransition.inst.RedHoodTransitionIn();
             }
 
             if(AiDirectorController.inst.directorController != null)

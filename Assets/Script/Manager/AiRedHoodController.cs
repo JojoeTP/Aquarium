@@ -47,8 +47,8 @@ public class AiRedHoodController : MonoBehaviour
             var rand = Random.Range(0,100);
             if(rand >= 0)
             {
-                // UITransition.inst.RedHoodTransitionIn();
-                CreateRedHood();
+                UITransition.inst.RedHoodTransitionIn();
+                // CreateRedHood();
             }
         }
 
