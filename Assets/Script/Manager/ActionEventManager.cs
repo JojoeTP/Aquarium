@@ -82,6 +82,9 @@ public class ActionEventManager : MonoBehaviour
     public bool isMap3Done = false;
     public bool isMap4Done = false;
 
+    [Header("Daughter")]
+    public List<GameObject> daughterList = new List<GameObject>();
+
     void Awake() 
     {
         inst = this;
@@ -476,9 +479,17 @@ public class ActionEventManager : MonoBehaviour
         if(isMap4Done)
         {
             LockAquariamDoor();
+            RemoveDaughter();
             Dialogue_ch4.SetActive(false);
         }
-        
+    }
+
+    public void RemoveDaughter()
+    {
+        foreach(var n in daughterList)
+        {
+            n.SetActive(false);
+        }
     }
 
 }
