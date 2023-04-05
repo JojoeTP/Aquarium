@@ -10,24 +10,27 @@ public class Tutorial : MonoBehaviour
     private void Start()
     {
         AddListenerToButton();
+        tutorialImage.gameObject.SetActive(false);
     }
     public void AddListenerToButton()
     {
         closeButton.onClick.RemoveAllListeners();
-        closeButton.onClick.AddListener(() => { CloseTutorialImage(); });
+        closeButton.onClick.AddListener(() => { TutorialTransition.inst.TutorialFadeOut(); });
     }
 
-    public void ShowTutorialImage(Sprite sprite)
+    public void SetTutorialSprite(Sprite sprite)
     {
         tutorialImage.sprite = sprite;
-        PlayerUI.inst.TutorialFadeIn();
+    }
+    public void ShowTutorialImage()
+    {
+        tutorialImage.gameObject.SetActive(true);
         closeButton.interactable = true;
     }
 
-
-    void CloseTutorialImage()
+    public void CloseTutorialImage()
     {
-        PlayerUI.inst.TutorialFadeOut();
+        tutorialImage.gameObject.SetActive(false);
         closeButton.interactable = false;
     }
 }
