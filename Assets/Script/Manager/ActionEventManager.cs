@@ -492,6 +492,11 @@ public class ActionEventManager : MonoBehaviour
         }
     }
 
+    public void ResetMainmenu()
+    {
+        PlayerPrefs.SetInt("DarkMainMenu",0);
+    }
+
 }
 
 [Serializable]
@@ -521,6 +526,11 @@ public class LockDoorConfig
             {
                 Debug.Log("Delete COMPLETE");
                 actionActive.DeleteSavePlayerPrefs();
+            }
+
+            if (GUILayout.Button("Reset MainMenu"))
+            {
+                actionActive.ResetMainmenu();
             }
 
             if (GUILayout.Button("Test Labyrinth END"))
