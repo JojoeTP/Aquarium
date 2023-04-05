@@ -10,6 +10,8 @@ public class TalkWithTutorial : MonoBehaviour
     {
         if(other.GetComponent<PlayerManager>() != null){
             triggerEvents.Invoke();
+            TutorialTransition.inst.TutorialFadeIn();
+            gameObject.SetActive(false);
         }
     }
 }

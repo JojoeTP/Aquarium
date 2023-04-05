@@ -2,14 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerUI : MonoBehaviour
+public class TutorialTransition : MonoBehaviour
 {
-    public static PlayerUI inst;
+    public static TutorialTransition inst;
     public Animator animator;
     public Tutorial tutorial;
     private void Awake()
     {
         inst = this;
+    }
+    private void Start()
+    {
+        animator = GetComponent<Animator>();
     }
 
     public void TutorialFadeIn()
@@ -20,5 +24,14 @@ public class PlayerUI : MonoBehaviour
     public void TutorialFadeOut()
     {
         animator.SetTrigger("TutorialFadeOut");
+    }
+    public void OpenTutorial()
+    {
+        tutorial.ShowTutorialImage();
+    }
+
+    public void CloseTutorial()
+    {
+        tutorial.CloseTutorialImage();
     }
 }

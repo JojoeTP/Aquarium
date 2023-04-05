@@ -264,7 +264,6 @@ GameObject:
   - component: {fileID: 1647559988024180354}
   - component: {fileID: 16448233440096644}
   - component: {fileID: 414690739948399772}
-  - component: {fileID: 6263146275248049039}
   m_Layer: 5
   m_Name: Canvas_PlayerUI
   m_TagString: Untagged
@@ -281,7 +280,7 @@ RectTransform:
   m_GameObject: {fileID: 908194463218704434}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4676690576103827877}
@@ -354,20 +353,6 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &6263146275248049039
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 908194463218704434}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: de111cab37098af4a85e38513bc8a620, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animator: {fileID: 3916857059904786719}
-  tutorial: {fileID: 8907708347738829339}
 --- !u!1 &1391417337610943972
 GameObject:
   m_ObjectHideFlags: 0
@@ -778,7 +763,7 @@ GameObject:
   - component: {fileID: 6653179156915245094}
   - component: {fileID: 7712009363039214137}
   m_Layer: 5
-  m_Name: Stamina
+  m_Name: StaminaUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -998,6 +983,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4676690576103827877}
   - component: {fileID: 3916857059904786719}
+  - component: {fileID: 6418237203720684722}
   m_Layer: 5
   m_Name: Anim
   m_TagString: Untagged
@@ -1051,6 +1037,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &6418237203720684722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5691255909141658749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de111cab37098af4a85e38513bc8a620, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 3916857059904786719}
+  tutorial: {fileID: 8907708347738829339}
 --- !u!1 &6221679451043389405
 GameObject:
   m_ObjectHideFlags: 0
