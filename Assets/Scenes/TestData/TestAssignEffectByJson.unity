@@ -179,7 +179,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -258209793
-  m_SortingLayer: -4
+  m_SortingLayer: -5
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 155952989213b804aaea3d0ed2959c39, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -756,9 +756,12 @@ MonoBehaviour:
   connectDoor: {fileID: 819383244}
   conditionItem: {fileID: 0}
   isSpacialDoor: 0
-  isPlayerUseItBefore: 0
-  canEnemyEnter: 0
-  triggerEvent:
+  notForEnemy: 0
+  triggerDoorEvents:
+    m_PersistentCalls:
+      m_Calls: []
+  isLockedDoor: 0
+  triggerConditionEvent:
     m_PersistentCalls:
       m_Calls: []
 --- !u!61 &356976905
@@ -850,9 +853,12 @@ MonoBehaviour:
   connectDoor: {fileID: 1968587174}
   conditionItem: {fileID: 0}
   isSpacialDoor: 0
-  isPlayerUseItBefore: 0
-  canEnemyEnter: 0
-  triggerEvent:
+  notForEnemy: 0
+  triggerDoorEvents:
+    m_PersistentCalls:
+      m_Calls: []
+  isLockedDoor: 0
+  triggerConditionEvent:
     m_PersistentCalls:
       m_Calls: []
 --- !u!61 &373165560
@@ -1011,7 +1017,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7769029, y: 1}
+    m_SensorSize: {x: 1.7772278, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -1112,9 +1118,12 @@ MonoBehaviour:
   connectDoor: {fileID: 748000676}
   conditionItem: {fileID: 0}
   isSpacialDoor: 0
-  isPlayerUseItBefore: 0
-  canEnemyEnter: 0
-  triggerEvent:
+  notForEnemy: 0
+  triggerDoorEvents:
+    m_PersistentCalls:
+      m_Calls: []
+  isLockedDoor: 0
+  triggerConditionEvent:
     m_PersistentCalls:
       m_Calls: []
 --- !u!114 &406672625
@@ -1162,28 +1171,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7f0069e0b9586445ab39e64db16d1b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InteractOffset: {x: 0, y: 0, z: 0}
+  interactOffset: {x: 0, y: 0, z: 0}
   InteractColor: {r: 0.9519105, g: 0, b: 1, a: 1}
   AttackOffset: {x: 0, y: 0.28, z: 0}
   AttackColor: {r: 1, g: 0, b: 0, a: 1}
-  VisonOffset: {x: 0, y: 1.1, z: 0}
-  VisionColor: {r: 0, g: 1, b: 0.06818819, a: 1}
-  ChasingRangeOffset: {x: 0, y: 0.15, z: 0}
+  visonOffset: {x: 0, y: 0, z: 0}
+  visionColor: {r: 0, g: 0, b: 0, a: 0}
+  chasingRangeOffset: {x: 0, y: 0, z: 0}
   ChaseColor: {r: 1, g: 0.57236767, b: 0, a: 1}
-  StateLableOffset: {x: 0, y: 3, z: 0}
+  disappearColor: {r: 0, g: 0, b: 0, a: 0}
+  disappearRangeOffset: {x: 0, y: 0, z: 0}
+  stateLableOffset: {x: 0, y: 0, z: 0}
   moveSpeed: 5
   chasingSpeed: 10
-  frontVisionRange: 10
-  backVisionRange: 2
+  visionRange: 10
   interactRange: 1
   attackRange: 3
   chasingRange: 15
   chasingTime: 0
+  disappearRange: 0
   moveDirection: {x: 1, y: 0, z: 0}
   currentState: {fileID: 11400000, guid: 2c323345aef175d49bb16c3bd30b6651, type: 2}
   remainState: {fileID: 11400000, guid: 6fbdd43bad4717c4eb7e5b5ad816ffec, type: 2}
-  waitingTime: 0
   animator: {fileID: 0}
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  wallLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  timeBeforEnterSameDoorAgain: 0
+  enteredDoor: {fileID: 0}
 --- !u!70 &457027324
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -1582,7 +1600,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -258209793
-  m_SortingLayer: -4
+  m_SortingLayer: -5
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 455550cf333ec6a46969b2f2a48ddca4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1795,9 +1813,12 @@ MonoBehaviour:
   connectDoor: {fileID: 589150412}
   conditionItem: {fileID: 0}
   isSpacialDoor: 0
-  isPlayerUseItBefore: 0
-  canEnemyEnter: 0
-  triggerEvent:
+  notForEnemy: 0
+  triggerDoorEvents:
+    m_PersistentCalls:
+      m_Calls: []
+  isLockedDoor: 0
+  triggerConditionEvent:
     m_PersistentCalls:
       m_Calls: []
 --- !u!61 &573731143
@@ -1934,9 +1955,12 @@ MonoBehaviour:
   connectDoor: {fileID: 1900784743}
   conditionItem: {fileID: 0}
   isSpacialDoor: 0
-  isPlayerUseItBefore: 0
-  canEnemyEnter: 0
-  triggerEvent:
+  notForEnemy: 0
+  triggerDoorEvents:
+    m_PersistentCalls:
+      m_Calls: []
+  isLockedDoor: 0
+  triggerConditionEvent:
     m_PersistentCalls:
       m_Calls: []
 --- !u!61 &585858922
@@ -2028,9 +2052,12 @@ MonoBehaviour:
   connectDoor: {fileID: 573731140}
   conditionItem: {fileID: 0}
   isSpacialDoor: 0
-  isPlayerUseItBefore: 0
-  canEnemyEnter: 0
-  triggerEvent:
+  notForEnemy: 0
+  triggerDoorEvents:
+    m_PersistentCalls:
+      m_Calls: []
+  isLockedDoor: 0
+  triggerConditionEvent:
     m_PersistentCalls:
       m_Calls: []
 --- !u!61 &589150415
@@ -2143,6 +2170,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7509132687606970729, guid: 0e39e3d1328de4c468b663948483721b, type: 3}
       propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7509132687606970729, guid: 0e39e3d1328de4c468b663948483721b, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7509132687606970729, guid: 0e39e3d1328de4c468b663948483721b, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7509132687606970729, guid: 0e39e3d1328de4c468b663948483721b, type: 3}
+      propertyPath: m_LocalScale.z
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7509132687606970729, guid: 0e39e3d1328de4c468b663948483721b, type: 3}
@@ -2701,9 +2740,12 @@ MonoBehaviour:
   connectDoor: {fileID: 406672623}
   conditionItem: {fileID: 0}
   isSpacialDoor: 0
-  isPlayerUseItBefore: 0
-  canEnemyEnter: 0
-  triggerEvent:
+  notForEnemy: 0
+  triggerDoorEvents:
+    m_PersistentCalls:
+      m_Calls: []
+  isLockedDoor: 0
+  triggerConditionEvent:
     m_PersistentCalls:
       m_Calls: []
 --- !u!61 &748000679
@@ -2956,9 +2998,12 @@ MonoBehaviour:
   connectDoor: {fileID: 356976902}
   conditionItem: {fileID: 0}
   isSpacialDoor: 0
-  isPlayerUseItBefore: 0
-  canEnemyEnter: 0
-  triggerEvent:
+  notForEnemy: 0
+  triggerDoorEvents:
+    m_PersistentCalls:
+      m_Calls: []
+  isLockedDoor: 0
+  triggerConditionEvent:
     m_PersistentCalls:
       m_Calls: []
 --- !u!61 &819383247
@@ -3081,9 +3126,12 @@ MonoBehaviour:
   connectDoor: {fileID: 2084036401}
   conditionItem: {fileID: 11400000, guid: 542bc647a6c7ba94580a44987f8685e5, type: 2}
   isSpacialDoor: 0
-  isPlayerUseItBefore: 0
-  canEnemyEnter: 0
-  triggerEvent:
+  notForEnemy: 0
+  triggerDoorEvents:
+    m_PersistentCalls:
+      m_Calls: []
+  isLockedDoor: 0
+  triggerConditionEvent:
     m_PersistentCalls:
       m_Calls: []
 --- !u!61 &878667440
@@ -3252,7 +3300,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -258209793
-  m_SortingLayer: -4
+  m_SortingLayer: -5
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 263f468b87d308448b4eb53cab058a38, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -3431,9 +3479,12 @@ MonoBehaviour:
   connectDoor: {fileID: 1394825624}
   conditionItem: {fileID: 0}
   isSpacialDoor: 0
-  isPlayerUseItBefore: 0
-  canEnemyEnter: 0
-  triggerEvent:
+  notForEnemy: 0
+  triggerDoorEvents:
+    m_PersistentCalls:
+      m_Calls: []
+  isLockedDoor: 0
+  triggerConditionEvent:
     m_PersistentCalls:
       m_Calls: []
 --- !u!61 &926776524
@@ -3605,6 +3656,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21c594a57847f9a4a8b71d9cd567156e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  EntertriggerEvents:
+    m_PersistentCalls:
+      m_Calls: []
+  triggerEvents:
+    m_PersistentCalls:
+      m_Calls: []
+  HidingSpotObject: {fileID: 0}
+  HidingSprite: {fileID: 0}
 --- !u!114 &976091473
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4238,7 +4297,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -258209793
-  m_SortingLayer: -4
+  m_SortingLayer: -5
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 7154e14e910c2344297b161e0ab4aad1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -4325,7 +4384,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -258209793
-  m_SortingLayer: -4
+  m_SortingLayer: -5
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 65e994531db7e984aa35067acb1bd65b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -4856,7 +4915,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -258209793
-  m_SortingLayer: -4
+  m_SortingLayer: -5
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 402dd7505f7c7de42ae5b60bbbd3d304, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -5034,9 +5093,12 @@ MonoBehaviour:
   connectDoor: {fileID: 926776521}
   conditionItem: {fileID: 0}
   isSpacialDoor: 0
-  isPlayerUseItBefore: 0
-  canEnemyEnter: 0
-  triggerEvent:
+  notForEnemy: 0
+  triggerDoorEvents:
+    m_PersistentCalls:
+      m_Calls: []
+  isLockedDoor: 0
+  triggerConditionEvent:
     m_PersistentCalls:
       m_Calls: []
 --- !u!61 &1394825627
@@ -5643,41 +5705,39 @@ MonoBehaviour:
     - effectTYPE: 4
       iTEMTYPE: 3
   - ItemEffectSettingList:
-    - effectTYPE: 4
-      iTEMTYPE: 384
-    - effectTYPE: 3
-      iTEMTYPE: 513
-    - effectTYPE: 2
-      iTEMTYPE: 6
-    - effectTYPE: 1
-      iTEMTYPE: 24
     - effectTYPE: 0
       iTEMTYPE: 96
+    - effectTYPE: 1
+      iTEMTYPE: 24
+    - effectTYPE: 2
+      iTEMTYPE: 6
+    - effectTYPE: 3
+      iTEMTYPE: 513
+    - effectTYPE: 4
+      iTEMTYPE: 384
   - ItemEffectSettingList:
+    - effectTYPE: 0
+      iTEMTYPE: 12
+    - effectTYPE: 1
+      iTEMTYPE: 3
     - effectTYPE: 2
       iTEMTYPE: 768
     - effectTYPE: 3
       iTEMTYPE: 192
     - effectTYPE: 4
       iTEMTYPE: 48
-    - effectTYPE: 0
-      iTEMTYPE: 12
-    - effectTYPE: 1
-      iTEMTYPE: 3
   - ItemEffectSettingList:
-    - effectTYPE: 1
-      iTEMTYPE: 384
     - effectTYPE: 0
       iTEMTYPE: 513
-    - effectTYPE: 4
-      iTEMTYPE: 6
-    - effectTYPE: 3
-      iTEMTYPE: 24
+    - effectTYPE: 1
+      iTEMTYPE: 384
     - effectTYPE: 2
       iTEMTYPE: 96
-  - ItemEffectSettingList:
+    - effectTYPE: 3
+      iTEMTYPE: 24
     - effectTYPE: 4
-      iTEMTYPE: 768
+      iTEMTYPE: 6
+  - ItemEffectSettingList:
     - effectTYPE: 0
       iTEMTYPE: 192
     - effectTYPE: 1
@@ -5686,18 +5746,22 @@ MonoBehaviour:
       iTEMTYPE: 12
     - effectTYPE: 3
       iTEMTYPE: 3
+    - effectTYPE: 4
+      iTEMTYPE: 768
   - ItemEffectSettingList:
-    - effectTYPE: 3
-      iTEMTYPE: 384
-    - effectTYPE: 2
-      iTEMTYPE: 513
-    - effectTYPE: 1
-      iTEMTYPE: 6
     - effectTYPE: 0
       iTEMTYPE: 24
+    - effectTYPE: 1
+      iTEMTYPE: 6
+    - effectTYPE: 2
+      iTEMTYPE: 513
+    - effectTYPE: 3
+      iTEMTYPE: 384
     - effectTYPE: 4
       iTEMTYPE: 96
   - ItemEffectSettingList:
+    - effectTYPE: 0
+      iTEMTYPE: 3
     - effectTYPE: 1
       iTEMTYPE: 768
     - effectTYPE: 2
@@ -5706,41 +5770,39 @@ MonoBehaviour:
       iTEMTYPE: 48
     - effectTYPE: 4
       iTEMTYPE: 12
-    - effectTYPE: 0
-      iTEMTYPE: 3
   - ItemEffectSettingList:
     - effectTYPE: 0
       iTEMTYPE: 384
-    - effectTYPE: 4
-      iTEMTYPE: 513
-    - effectTYPE: 3
-      iTEMTYPE: 6
-    - effectTYPE: 2
-      iTEMTYPE: 24
     - effectTYPE: 1
       iTEMTYPE: 96
-  - ItemEffectSettingList:
+    - effectTYPE: 2
+      iTEMTYPE: 24
     - effectTYPE: 3
-      iTEMTYPE: 768
+      iTEMTYPE: 6
     - effectTYPE: 4
-      iTEMTYPE: 192
+      iTEMTYPE: 513
+  - ItemEffectSettingList:
     - effectTYPE: 0
       iTEMTYPE: 48
     - effectTYPE: 1
       iTEMTYPE: 12
     - effectTYPE: 2
       iTEMTYPE: 3
+    - effectTYPE: 3
+      iTEMTYPE: 768
+    - effectTYPE: 4
+      iTEMTYPE: 192
   - ItemEffectSettingList:
-    - effectTYPE: 2
-      iTEMTYPE: 384
-    - effectTYPE: 1
-      iTEMTYPE: 513
     - effectTYPE: 0
       iTEMTYPE: 6
-    - effectTYPE: 4
-      iTEMTYPE: 24
+    - effectTYPE: 1
+      iTEMTYPE: 513
+    - effectTYPE: 2
+      iTEMTYPE: 384
     - effectTYPE: 3
       iTEMTYPE: 96
+    - effectTYPE: 4
+      iTEMTYPE: 24
   - ItemEffectSettingList:
     - effectTYPE: 0
       iTEMTYPE: 9
@@ -5764,28 +5826,30 @@ MonoBehaviour:
     - effectTYPE: 4
       iTEMTYPE: 288
   - ItemEffectSettingList:
-    - effectTYPE: 3
-      iTEMTYPE: 9
-    - effectTYPE: 4
-      iTEMTYPE: 36
     - effectTYPE: 0
       iTEMTYPE: 144
     - effectTYPE: 1
       iTEMTYPE: 576
     - effectTYPE: 2
       iTEMTYPE: 258
-  - ItemEffectSettingList:
     - effectTYPE: 3
-      iTEMTYPE: 129
+      iTEMTYPE: 9
     - effectTYPE: 4
-      iTEMTYPE: 516
+      iTEMTYPE: 36
+  - ItemEffectSettingList:
     - effectTYPE: 0
       iTEMTYPE: 18
     - effectTYPE: 1
       iTEMTYPE: 72
     - effectTYPE: 2
       iTEMTYPE: 288
+    - effectTYPE: 3
+      iTEMTYPE: 129
+    - effectTYPE: 4
+      iTEMTYPE: 516
   - ItemEffectSettingList:
+    - effectTYPE: 0
+      iTEMTYPE: 258
     - effectTYPE: 1
       iTEMTYPE: 9
     - effectTYPE: 2
@@ -5794,9 +5858,9 @@ MonoBehaviour:
       iTEMTYPE: 144
     - effectTYPE: 4
       iTEMTYPE: 576
-    - effectTYPE: 0
-      iTEMTYPE: 258
   - ItemEffectSettingList:
+    - effectTYPE: 0
+      iTEMTYPE: 288
     - effectTYPE: 1
       iTEMTYPE: 129
     - effectTYPE: 2
@@ -5805,11 +5869,7 @@ MonoBehaviour:
       iTEMTYPE: 18
     - effectTYPE: 4
       iTEMTYPE: 72
-    - effectTYPE: 0
-      iTEMTYPE: 288
   - ItemEffectSettingList:
-    - effectTYPE: 4
-      iTEMTYPE: 9
     - effectTYPE: 0
       iTEMTYPE: 36
     - effectTYPE: 1
@@ -5818,9 +5878,9 @@ MonoBehaviour:
       iTEMTYPE: 576
     - effectTYPE: 3
       iTEMTYPE: 258
-  - ItemEffectSettingList:
     - effectTYPE: 4
-      iTEMTYPE: 129
+      iTEMTYPE: 9
+  - ItemEffectSettingList:
     - effectTYPE: 0
       iTEMTYPE: 516
     - effectTYPE: 1
@@ -5829,28 +5889,30 @@ MonoBehaviour:
       iTEMTYPE: 72
     - effectTYPE: 3
       iTEMTYPE: 288
+    - effectTYPE: 4
+      iTEMTYPE: 129
   - ItemEffectSettingList:
+    - effectTYPE: 0
+      iTEMTYPE: 576
+    - effectTYPE: 1
+      iTEMTYPE: 258
     - effectTYPE: 2
       iTEMTYPE: 9
     - effectTYPE: 3
       iTEMTYPE: 36
     - effectTYPE: 4
       iTEMTYPE: 144
-    - effectTYPE: 0
-      iTEMTYPE: 576
-    - effectTYPE: 1
-      iTEMTYPE: 258
   - ItemEffectSettingList:
+    - effectTYPE: 0
+      iTEMTYPE: 72
+    - effectTYPE: 1
+      iTEMTYPE: 288
     - effectTYPE: 2
       iTEMTYPE: 129
     - effectTYPE: 3
       iTEMTYPE: 516
     - effectTYPE: 4
       iTEMTYPE: 18
-    - effectTYPE: 0
-      iTEMTYPE: 72
-    - effectTYPE: 1
-      iTEMTYPE: 288
   index: 0
   testLoadItem:
     ItemEffectSettingList:
@@ -6355,7 +6417,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -258209793
-  m_SortingLayer: -4
+  m_SortingLayer: -5
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 7a020950698476c499bbec71a797ea12, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -6533,7 +6595,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -258209793
-  m_SortingLayer: -4
+  m_SortingLayer: -5
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 220be348fcda4804bbb73a804a0bd2c9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -6582,7 +6644,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 39.0336, y: 11.797753}
+    oldSize: {x: 39.01966, y: 11.798304}
     newSize: {x: 67.87022, y: 11.797753}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -6970,9 +7032,12 @@ MonoBehaviour:
   connectDoor: {fileID: 585858919}
   conditionItem: {fileID: 0}
   isSpacialDoor: 0
-  isPlayerUseItBefore: 0
-  canEnemyEnter: 0
-  triggerEvent:
+  notForEnemy: 0
+  triggerDoorEvents:
+    m_PersistentCalls:
+      m_Calls: []
+  isLockedDoor: 0
+  triggerConditionEvent:
     m_PersistentCalls:
       m_Calls: []
 --- !u!61 &1900784742
@@ -7096,7 +7161,7 @@ SpriteRenderer:
   m_Size: {x: 40.96, y: 40.96}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1956118357
@@ -7177,9 +7242,12 @@ MonoBehaviour:
   connectDoor: {fileID: 373165557}
   conditionItem: {fileID: 0}
   isSpacialDoor: 0
-  isPlayerUseItBefore: 0
-  canEnemyEnter: 0
-  triggerEvent:
+  notForEnemy: 0
+  triggerDoorEvents:
+    m_PersistentCalls:
+      m_Calls: []
+  isLockedDoor: 0
+  triggerConditionEvent:
     m_PersistentCalls:
       m_Calls: []
 --- !u!61 &1968587177
@@ -7548,9 +7616,12 @@ MonoBehaviour:
   connectDoor: {fileID: 878667437}
   conditionItem: {fileID: 11400000, guid: 542bc647a6c7ba94580a44987f8685e5, type: 2}
   isSpacialDoor: 0
-  isPlayerUseItBefore: 0
-  canEnemyEnter: 0
-  triggerEvent:
+  notForEnemy: 0
+  triggerDoorEvents:
+    m_PersistentCalls:
+      m_Calls: []
+  isLockedDoor: 0
+  triggerConditionEvent:
     m_PersistentCalls:
       m_Calls: []
 --- !u!61 &2084036404
