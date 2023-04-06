@@ -11,6 +11,7 @@ public class TalkWithTutorial : MonoBehaviour
         if(other.GetComponent<PlayerManager>() != null){
             triggerEvents.Invoke();
             TutorialTransition.inst.TutorialFadeIn();
+            PlayerManager.inst.playerState = PlayerManager.PLAYERSTATE.CONVERSATION;
             gameObject.SetActive(false);
         }
     }

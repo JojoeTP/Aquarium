@@ -19,7 +19,6 @@ public class TutorialTransition : MonoBehaviour
     public void TutorialFadeIn()
     {
         animator.SetTrigger("TutorialFadeIn");
-        PlayerManager.inst.playerState = PlayerManager.PLAYERSTATE.CONVERSATION;
     }
 
     public void TutorialFadeOut()
