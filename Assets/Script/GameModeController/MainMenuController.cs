@@ -115,7 +115,7 @@ public class MainMenuController : MonoBehaviour
     {
         string appDataPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
         appDataPath = appDataPath.Replace(@"\Roaming","");
-        string subFolderPath = @"\LocalLow\TechThesis\Liberate\PickUpItemTimeData\";
+        string subFolderPath = @"\LocalLow\TechThesis\Liberate\Liberate\PickUpItemTimeData\";
         string folderPath = appDataPath + subFolderPath;
         Process.Start(folderPath);
     }
