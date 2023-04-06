@@ -32,6 +32,8 @@ public class MainMenuController : MonoBehaviour
     [Header("Button")]
     [SerializeField] Button continueButton;
 
+    public bool isNight;
+
     Animator animator;
 
     public bool gameStarted = false;
@@ -41,7 +43,10 @@ public class MainMenuController : MonoBehaviour
         animator = GetComponent<Animator>();
         ChangeState(MenuState.MainMenu); 
 
-        SoundManager.Inst.InitializeBGM(FMODEvent.inst.MainMenuMusic.sound); 
+        if(isNight)
+            SoundManager.Inst.InitializeBGM(FMODEvent.inst.MainMenuMusic.sound); 
+        else
+            SoundManager.Inst.InitializeBGM(FMODEvent.inst.FModEventDictionary["MainTitle1"]); 
     }
 
     void ChangeState(MenuState state)

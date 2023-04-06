@@ -16349,6 +16349,7 @@ MonoBehaviour:
   SettingPanel: {fileID: 1882323005}
   inputParticipateID: {fileID: 786806226}
   continueButton: {fileID: 2127012632}
+  isNight: 1
   gameStarted: 0
 --- !u!222 &7254375743286475054
 CanvasRenderer:

@@ -614,6 +614,34 @@ PrefabInstance:
       propertyPath: m_Name
       value: SoundManager
       objectReference: {fileID: 0}
+    - target: {fileID: 6364881888974947744, guid: c340f6ce12ed6e14d91cc8895ea604fa, type: 3}
+      propertyPath: <BGMList>k__BackingField.Array.size
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6364881888974947744, guid: c340f6ce12ed6e14d91cc8895ea604fa, type: 3}
+      propertyPath: <BGMList>k__BackingField.Array.data[8].key
+      value: MainTitle1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6364881888974947744, guid: c340f6ce12ed6e14d91cc8895ea604fa, type: 3}
+      propertyPath: <BGMList>k__BackingField.Array.data[8].sound.Path
+      value: event:/BGM/Maintitle_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6364881888974947744, guid: c340f6ce12ed6e14d91cc8895ea604fa, type: 3}
+      propertyPath: <BGMList>k__BackingField.Array.data[8].sound.Guid.Data1
+      value: 1220852167
+      objectReference: {fileID: 0}
+    - target: {fileID: 6364881888974947744, guid: c340f6ce12ed6e14d91cc8895ea604fa, type: 3}
+      propertyPath: <BGMList>k__BackingField.Array.data[8].sound.Guid.Data2
+      value: 1295037383
+      objectReference: {fileID: 0}
+    - target: {fileID: 6364881888974947744, guid: c340f6ce12ed6e14d91cc8895ea604fa, type: 3}
+      propertyPath: <BGMList>k__BackingField.Array.data[8].sound.Guid.Data3
+      value: -1323246413
+      objectReference: {fileID: 0}
+    - target: {fileID: 6364881888974947744, guid: c340f6ce12ed6e14d91cc8895ea604fa, type: 3}
+      propertyPath: <BGMList>k__BackingField.Array.data[8].sound.Guid.Data4
+      value: 828562086
+      objectReference: {fileID: 0}
     - target: {fileID: 7018307969707337321, guid: c340f6ce12ed6e14d91cc8895ea604fa, type: 3}
       propertyPath: m_RootOrder
       value: 6
