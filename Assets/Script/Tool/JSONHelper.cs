@@ -124,7 +124,7 @@ public class JSONHelper
         string filePath;
         if (Application.platform == RuntimePlatform.WindowsPlayer || Application.platform == RuntimePlatform.WSAPlayerX86 || Application.platform == RuntimePlatform.OSXPlayer)
         {
-            filePath = Application.persistentDataPath + "/Aquarium/" + fileName;
+            filePath = Application.persistentDataPath + "/Liberate/" + fileName;
             if (File.Exists(filePath))
             {
 
@@ -140,7 +140,7 @@ public class JSONHelper
         }
         else if (Application.platform == RuntimePlatform.OSXEditor || Application.platform == RuntimePlatform.WindowsEditor)
         {
-            filePath = Application.dataPath + "/../../Documents/Aquarium/" + fileName;
+            filePath = Application.dataPath + "/../../Documents/Liberate/" + fileName;
             if (File.Exists(filePath)) 
             {
 
@@ -176,7 +176,7 @@ public class JSONHelper
         if (Application.platform == RuntimePlatform.WindowsPlayer || Application.platform == RuntimePlatform.WSAPlayerX86 || Application.platform == RuntimePlatform.OSXPlayer)
         {
             StreamWriter writer;
-            FileInfo t = new FileInfo(Application.persistentDataPath + "/Aquarium/" + fileName);
+            FileInfo t = new FileInfo(Application.persistentDataPath + "/Liberate/" + fileName);
             if (!t.Exists)
             {
                 t.Directory.Create();
@@ -189,7 +189,7 @@ public class JSONHelper
             writer.Close();
         }else if (Application.isEditor){
             StreamWriter writer;
-            FileInfo t = new FileInfo(Application.dataPath + "/../../Documents/Aquarium/" + fileName);
+            FileInfo t = new FileInfo(Application.dataPath + "/../../Documents/Liberate/" + fileName);
             if(!t.Exists) {
                 t.Directory.Create();
             } else {
@@ -226,7 +226,7 @@ public class JSONHelper
     {
         if (Application.platform == RuntimePlatform.WindowsPlayer || Application.platform == RuntimePlatform.WSAPlayerX86 || Application.platform == RuntimePlatform.OSXPlayer)
         {
-            FileInfo t = new FileInfo(Application.persistentDataPath + "/Aquarium/" + fileName);
+            FileInfo t = new FileInfo(Application.persistentDataPath + "/Liberate/" + fileName);
             if (t.Exists)
             {
                 t.Delete();
@@ -234,7 +234,7 @@ public class JSONHelper
         }
         else if (Application.isEditor)
         {
-            FileInfo t = new FileInfo(Application.dataPath + "/../../Documents/Aquarium/" + fileName);
+            FileInfo t = new FileInfo(Application.dataPath + "/../../Documents/Liberate/" + fileName);
             if (t.Exists)
             {
                 t.Delete();

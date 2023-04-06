@@ -48,10 +48,10 @@ public class RecordTimeManager : MonoBehaviour
     public void OpenDataFolder()
     {
 #if UNITY_EDITOR
-        var filePath = Application.dataPath + "/../../Documents/Aquarium/PickUpItemTimeData/PickUpItemTime.json";
+        var filePath = Application.dataPath + "/../../Documents/Liberate/PickUpItemTimeData/PickUpItemTime.json";
         EditorUtility.RevealInFinder(filePath);
 #else
-        Application.OpenURL(Application.persistentDataPath + "/Aquarium/PickUpItemTimeData/");
+        Application.OpenURL(Application.persistentDataPath + "/Liberate/PickUpItemTimeData/");
 #endif
     }
 }
