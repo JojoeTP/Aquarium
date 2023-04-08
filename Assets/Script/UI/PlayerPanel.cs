@@ -54,6 +54,9 @@ public class PlayerPanel : MonoBehaviour
 
     void ToggleInventory()
     {
+        if(PlayerManager.inst.playerState != PlayerManager.PLAYERSTATE.NONE)
+            return;
+
         if(currentState != PANELSTATE.INVENTORY)
             OnChangePanel(PANELSTATE.INVENTORY);
         else
@@ -62,6 +65,9 @@ public class PlayerPanel : MonoBehaviour
 
     public void ToggleSetting()
     {
+        if(PlayerManager.inst.playerState != PlayerManager.PLAYERSTATE.NONE)
+            return;
+
         if(currentState == PANELSTATE.NONE)
             OnChangePanel(PANELSTATE.SETTING);
         else
@@ -70,6 +76,9 @@ public class PlayerPanel : MonoBehaviour
 
     void ToggleMap()
     {
+        if(PlayerManager.inst.playerState != PlayerManager.PLAYERSTATE.NONE)
+            return;
+            
         if (currentState != PANELSTATE.MAP)
             OnChangePanel(PANELSTATE.MAP);
         else
