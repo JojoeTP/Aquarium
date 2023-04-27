@@ -674,6 +674,7 @@ GameObject:
   - component: {fileID: 1829112646365129878}
   - component: {fileID: 512804883587313077}
   - component: {fileID: 47379373467382339}
+  - component: {fileID: 6905104216232168553}
   m_Layer: 6
   m_Name: PF_Player
   m_TagString: Player
@@ -834,6 +835,33 @@ MonoBehaviour:
   amplitude: 3
   frequency: 6
   shakeCameraTime: 2
+--- !u!114 &6905104216232168553
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1829112646365129886}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3411f638dfd2052458f3e7030e356f51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  items: []
+  itemScriptableObjects:
+  - {fileID: 11400000, guid: 542bc647a6c7ba94580a44987f8685e5, type: 2}
+  - {fileID: 11400000, guid: 9f5ec376caaf5b84bbb64d8c6d29560f, type: 2}
+  - {fileID: 11400000, guid: 9ccc0705f275d0240bf9de4bbefc11a4, type: 2}
+  - {fileID: 11400000, guid: 6864af4c429bc1a4baf33ce5b9af7b12, type: 2}
+  - {fileID: 11400000, guid: 13b6018e5c7898a44ba470e1eeb9715f, type: 2}
+  - {fileID: 11400000, guid: ce13ddd22919e3d45b54be6e5c279bad, type: 2}
+  - {fileID: 11400000, guid: c0943e0476c9f844ea6e2568c1aeb821, type: 2}
+  - {fileID: 11400000, guid: 091f4b46645986d49a794eda5a8a3642, type: 2}
+  - {fileID: 11400000, guid: 973469cd68afc2c4185c32a9d6d71ed5, type: 2}
+  - {fileID: 11400000, guid: 21e34a9c6b411de4ba351ee409c08d82, type: 2}
+  - {fileID: 11400000, guid: f2f17a9da92355d438332979d7847476, type: 2}
+  sortItems: []
+  spawnItems: []
 --- !u!1 &2059807458025293377
 GameObject:
   m_ObjectHideFlags: 0

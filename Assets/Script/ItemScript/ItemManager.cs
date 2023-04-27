@@ -74,6 +74,8 @@ public class ItemManager : MonoBehaviour
             }
             
         }
+        //Cheat
+        PlayerCheatItem.inst.SortItems();
     }
 
     void CreateItem(ItemEffectSetting itemEffectSetting ,Item itemPrefab)
@@ -93,6 +95,8 @@ public class ItemManager : MonoBehaviour
                     {
                         SetItemAction(item);
                     }
+                    //Cheat
+                    PlayerCheatItem.inst.items.Add(item);
                 }
             }
         }
@@ -113,6 +117,8 @@ public class ItemManager : MonoBehaviour
                         DialogueManager.inst.currentDialogue = item.itemObject.itemData.dialogueItemId;
                         DialogueManager.inst.StartDialogue();
                         ActionEventManager.inst.UnLockDoor_Ch1_D04_01();
+
+                        PlayerCheatItem.inst.RemoveItems();
                     }
                 );
                 break;
@@ -122,6 +128,8 @@ public class ItemManager : MonoBehaviour
                         DialogueManager.inst.currentDialogue = item.itemObject.itemData.dialogueItemId;
                         DialogueManager.inst.StartDialogue();
                         ActionEventManager.inst.ChangeDialogueCh1_D06_01();
+
+                        PlayerCheatItem.inst.RemoveItems();
                     }
                 );
                 break;
@@ -133,8 +141,8 @@ public class ItemManager : MonoBehaviour
                         ActionEventManager.inst.SetActiveFalse_Wall_Cafeteria();
                         ActionEventManager.inst.LockCafeteriaDoor();
                         ActionEventManager.inst.isMap1Done = true;
-                        
-                        
+
+                        PlayerCheatItem.inst.RemoveItems();
                     }
                 );
                 break;
@@ -145,6 +153,8 @@ public class ItemManager : MonoBehaviour
                         ActionEventManager.inst.StartPuzzle();
                         DialogueManager.inst.currentDialogue = item.itemObject.itemData.dialogueItemId;
                         DialogueManager.inst.StartDialogue();
+
+                        PlayerCheatItem.inst.RemoveItems();
                     }
                 );
                 break;
@@ -156,6 +166,8 @@ public class ItemManager : MonoBehaviour
                         ActionEventManager.inst.isMap2Done = true;
                         // DialogueManager.inst.currentDialogue = item.itemObject.itemData.dialogueItemId;
                         // DialogueManager.inst.StartDialogue();
+
+                        PlayerCheatItem.inst.RemoveItems();
                     }
                 );
                 break;
@@ -166,6 +178,8 @@ public class ItemManager : MonoBehaviour
                         AiRedHoodController.inst.canPlayerDie = true;
                         ActionEventManager.inst.SetActiveDialogueCh3_D05_01();
                         ActionEventManager.inst.LockDoor_Ch3_D06_01_Config();
+
+                        PlayerCheatItem.inst.AddSpawnItem(6);
                     }
                 );
                 break;
@@ -175,6 +189,8 @@ public class ItemManager : MonoBehaviour
                         DialogueManager.inst.currentDialogue = item.itemObject.itemData.dialogueItemId;
                         DialogueManager.inst.StartDialogue();
                         ActionEventManager.inst.UnLockDoor_Ch3_D04_01_Config();
+
+                        PlayerCheatItem.inst.AddSpawnItem(7);
                     }
                 );
                 break;
@@ -186,7 +202,8 @@ public class ItemManager : MonoBehaviour
                         ActionEventManager.inst.OnPickUpCircusCoin();
                         ActionEventManager.inst.LockCircusDoor();
                         ActionEventManager.inst.isMap3Done = true;
-                        
+
+                        PlayerCheatItem.inst.RemoveItems();
                     }
                 );
                 break;
@@ -195,6 +212,8 @@ public class ItemManager : MonoBehaviour
                     {
                         ActionEventManager.inst.EnableAIMermaid(false);
                         ActionEventManager.inst.SetActiveDialogueCh4_D03_01();
+
+                        PlayerCheatItem.inst.RemoveItems();
                     }
                 );
                 break;
@@ -207,6 +226,8 @@ public class ItemManager : MonoBehaviour
                         ActionEventManager.inst.SetActiveDialogueCh4_D05_01();
                         ActionEventManager.inst.SetActiveDialogueCh4_D06_01();
                         ActionEventManager.inst.SetActiveDialogueCh4_D07_01();
+
+                        PlayerCheatItem.inst.RemoveItems();
                     }   
                 );
                 break;

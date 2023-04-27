@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 enum PuzzleState
 {
@@ -41,6 +42,9 @@ public class DoorEncryption : MonoBehaviour
     [SerializeField] DoorSystem leftDoor;
     [SerializeField] DoorSystem upDoor;
     [SerializeField] DoorSystem rightDoor;
+
+    [Header("Cheat")]
+    [SerializeField] UnityEvent cheatTriggerEvents;
     
     void Start()
     {
@@ -195,6 +199,8 @@ public class DoorEncryption : MonoBehaviour
         }); 
 
         ChangeState(PuzzleState.FINSIH);
+
+        cheatTriggerEvents?.Invoke();
     }
 
     void OnFinishEvent()

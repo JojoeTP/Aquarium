@@ -26,6 +26,8 @@ public class InputSystemManager : MonoBehaviour
     public UnityAction<InputValue> onNavigate;
     public UnityAction onClose;
     public UnityAction onLight;
+    public UnityAction onCheatItem;
+    public UnityAction onPlayerStateNone;
     
 
     //InputActionMap
@@ -143,7 +145,16 @@ public class InputSystemManager : MonoBehaviour
     {
         onLight?.Invoke();
     }
-    
-    
+
+    void OnCheatItem()
+    {
+        onCheatItem?.Invoke();
+    }
+    void OnPlayerStateNone()
+    {
+        onPlayerStateNone?.Invoke();
+    }
+
+
     #endregion
 }

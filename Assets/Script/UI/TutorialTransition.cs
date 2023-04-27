@@ -23,8 +23,8 @@ public class TutorialTransition : MonoBehaviour
 
     public void TutorialFadeOut()
     {
-        animator.SetTrigger("TutorialFadeOut");
         PlayerManager.inst.playerState = PlayerManager.PLAYERSTATE.NONE;
+        animator.SetTrigger("TutorialFadeOut");
     }
     public void OpenTutorial()
     {

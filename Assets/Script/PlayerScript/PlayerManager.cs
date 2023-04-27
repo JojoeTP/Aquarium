@@ -63,6 +63,13 @@ public class PlayerManager : MonoBehaviour
         LoadPlayerData();
         //Set position
         //Set Item in inventory
+
+        InputSystemManager.Inst.onPlayerStateNone += SetPlayerToNoneState;
+    }
+
+    private void OnDestroy()
+    {
+        InputSystemManager.Inst.onPlayerStateNone -= SetPlayerToNoneState;
     }
 
     void LoadPlayerData()
@@ -75,6 +82,11 @@ public class PlayerManager : MonoBehaviour
         playerInventory.PlayerItemDictionary = SaveGameSystemManager.inst.gameData.GetPlayerItem();
         PlayerManager.inst.playerAnimator.SetBool("Lampitem",true);
         
+    }
+
+    void SetPlayerToNoneState()
+    {
+        playerState = PLAYERSTATE.NONE;
     }
 
     void SetUpPlayer()

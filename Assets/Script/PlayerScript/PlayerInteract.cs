@@ -60,7 +60,6 @@ public class PlayerInteract : MonoBehaviour
                     EnterDoor();
                 return;
             }
-
                 
             if(CanGetItem(n.transform))
             {
@@ -110,8 +109,6 @@ public class PlayerInteract : MonoBehaviour
         {
             return;
         }
-
-        
 
         DialogueManager.inst.StartDialogue();
         PlayerManager.inst.playerState = PlayerManager.PLAYERSTATE.CONVERSATION;
