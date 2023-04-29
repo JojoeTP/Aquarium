@@ -7713,7 +7713,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.778646, y: 1}
+    m_SensorSize: {x: 1.7788779, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -42048,6 +42048,22 @@ PrefabInstance:
       propertyPath: cinemachineVirtualCamera
       value: 
       objectReference: {fileID: 396942256}
+    - target: {fileID: 1829112645651699382, guid: fd10c98f2285a10469886c1df78c26e8, type: 3}
+      propertyPath: m_Intensity
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1829112645651699382, guid: fd10c98f2285a10469886c1df78c26e8, type: 3}
+      propertyPath: m_FalloffIntensity
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1829112645651699382, guid: fd10c98f2285a10469886c1df78c26e8, type: 3}
+      propertyPath: m_PointLightInnerRadius
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1829112645651699382, guid: fd10c98f2285a10469886c1df78c26e8, type: 3}
+      propertyPath: m_PointLightOuterRadius
+      value: 8.5
+      objectReference: {fileID: 0}
     - target: {fileID: 1829112645651699383, guid: fd10c98f2285a10469886c1df78c26e8, type: 3}
       propertyPath: m_IsActive
       value: 0
