@@ -6229,6 +6229,9 @@ GameObject:
   - component: {fileID: 313195248}
   - component: {fileID: 313195247}
   - component: {fileID: 313195246}
+  - component: {fileID: 313195249}
+  - component: {fileID: 313195250}
+  - component: {fileID: 313195251}
   m_Layer: 0
   m_Name: Night Global Volume Flashlight
   m_TagString: Untagged
@@ -6247,8 +6250,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1000, y: 750, z: 1}
-  m_Center: {x: 175, y: 0, z: 0}
+  m_Size: {x: 96.749146, y: 43.11631, z: 1}
+  m_Center: {x: 132.55746, y: -31.823818, z: 0}
 --- !u!114 &313195247
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6281,6 +6284,45 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &313195249
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 313195245}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 667.5061, y: 18.804504, z: 1}
+  m_Center: {x: 213.98053, y: -68.639786, z: 0}
+--- !u!65 &313195250
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 313195245}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 146.41501, y: 14.5394745, z: 1}
+  m_Center: {x: 168.19994, y: -194.11035, z: 0}
+--- !u!65 &313195251
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 313195245}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 123.62894, y: 14.932343, z: 1}
+  m_Center: {x: 165.05702, y: -94.519394, z: 0}
 --- !u!1 &332633075
 GameObject:
   m_ObjectHideFlags: 0
@@ -7713,7 +7755,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.778646, y: 1}
+    m_SensorSize: {x: 1.7843752, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
