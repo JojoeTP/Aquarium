@@ -123,6 +123,37 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &3756544
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3756545}
+  m_Layer: 0
+  m_Name: CheatPosition_10_Coin3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3756545
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3756544}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 158.3, y: -220.7, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 273182492}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6077279
 GameObject:
   m_ObjectHideFlags: 0
@@ -2494,6 +2525,37 @@ Animation:
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 0
+--- !u!1 &116749743
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 116749744}
+  m_Layer: 0
+  m_Name: CheatPosition_6_Coin2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &116749744
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 116749743}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 14.7, y: -46.9, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 273182492}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &123502701
 GameObject:
   m_ObjectHideFlags: 0
@@ -3061,64 +3123,6 @@ Transform:
   m_Father: {fileID: 928170590}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &177097387
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 177097388}
-  - component: {fileID: 177097389}
-  m_Layer: 0
-  m_Name: SpawnCoinLadyBirth
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &177097388
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 177097387}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -15.26, y: -45.44, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 273182492}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &177097389
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 177097387}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 5.59, y: 1}
-  m_EdgeRadius: 0
 --- !u!1 &187927411
 GameObject:
   m_ObjectHideFlags: 0
@@ -5466,9 +5470,18 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 177097388}
+  - {fileID: 1417260395}
+  - {fileID: 807770383}
+  - {fileID: 1294812517}
+  - {fileID: 873658358}
+  - {fileID: 1695390121}
+  - {fileID: 116749744}
+  - {fileID: 795768600}
+  - {fileID: 1296300024}
+  - {fileID: 1221734832}
+  - {fileID: 3756545}
   m_Father: {fileID: 0}
-  m_RootOrder: 39
+  m_RootOrder: 27
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &285389524
 GameObject:
@@ -7201,18 +7214,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1835688418}
-        m_TargetAssemblyTypeName: PlayerCheatItem, Assembly-CSharp
-        m_MethodName: AddSpawnItem
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 2
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
   isLockedDoor: 0
   triggerConditionEvent:
     m_PersistentCalls:
@@ -7713,7 +7714,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.778646, y: 1}
+    m_SensorSize: {x: 1.7776315, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -16839,7 +16840,7 @@ Transform:
   - {fileID: 388043738}
   - {fileID: 333462995}
   m_Father: {fileID: 0}
-  m_RootOrder: 32
+  m_RootOrder: 33
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &757339229
 GameObject:
@@ -17631,6 +17632,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 1835688418}
+        m_TargetAssemblyTypeName: PlayerCheatItem, Assembly-CSharp
+        m_MethodName: CanWarpToItem
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
   triggerEvents:
     m_PersistentCalls:
       m_Calls:
@@ -18010,6 +18023,37 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 104.15994, y: 20.07962}
   m_EdgeRadius: 0
+--- !u!1 &795768599
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 795768600}
+  m_Layer: 0
+  m_Name: CheatPosition_7_Knife
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &795768600
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 795768599}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 421.7, y: -149.4, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 273182492}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &801011487
 GameObject:
   m_ObjectHideFlags: 0
@@ -18130,6 +18174,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &807770382
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 807770383}
+  m_Layer: 0
+  m_Name: CheatPosition_2_Fish
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &807770383
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 807770382}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -261.68, y: -4.24, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 273182492}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &811230433
 GameObject:
   m_ObjectHideFlags: 0
@@ -19747,7 +19822,38 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 27
+  m_RootOrder: 28
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &873658357
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 873658358}
+  m_Layer: 0
+  m_Name: CheatPosition_4_Coin1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &873658358
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 873658357}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -2, y: 35.94, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 273182492}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &873776505
 GameObject:
@@ -25409,7 +25515,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 33
+  m_RootOrder: 34
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1094559474
 GameObject:
@@ -27274,7 +27380,7 @@ Transform:
   - {fileID: 683863507}
   - {fileID: 1798840574}
   m_Father: {fileID: 0}
-  m_RootOrder: 29
+  m_RootOrder: 30
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1172918913
 GameObject:
@@ -28360,6 +28466,37 @@ Transform:
   m_Father: {fileID: 297376245}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1221734831
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1221734832}
+  m_Layer: 0
+  m_Name: CheatPosition_9_Diary
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1221734832
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1221734831}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 171, y: -151.56, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 273182492}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1224394185
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28733,19 +28870,7 @@ MonoBehaviour:
   notForEnemy: 0
   triggerDoorEvents:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1835688418}
-        m_TargetAssemblyTypeName: PlayerCheatItem, Assembly-CSharp
-        m_MethodName: AddSpawnItem
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 8
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   isLockedDoor: 0
   triggerConditionEvent:
     m_PersistentCalls:
@@ -29920,6 +30045,68 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1294812516
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1294812517}
+  m_Layer: 0
+  m_Name: CheatPosition_3_Rat
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1294812517
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1294812516}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -185.96, y: -4.24, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 273182492}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1296300023
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1296300024}
+  m_Layer: 0
+  m_Name: CheatPosition_8_Bear
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1296300024
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1296300023}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 306.54, y: -124, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 273182492}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1301168993
 GameObject:
   m_ObjectHideFlags: 0
@@ -31482,7 +31669,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 38
+  m_RootOrder: 39
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1380911162
 GameObject:
@@ -31617,7 +31804,7 @@ Transform:
   - {fileID: 1507199186}
   - {fileID: 88965668}
   m_Father: {fileID: 0}
-  m_RootOrder: 35
+  m_RootOrder: 36
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1386832139
 MonoBehaviour:
@@ -33243,6 +33430,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1417260394
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1417260395}
+  m_Layer: 0
+  m_Name: CheatPosition_1_Key
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1417260395
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1417260394}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 40.19, y: -24.39, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 273182492}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1422380767
 GameObject:
   m_ObjectHideFlags: 0
@@ -34008,7 +34226,7 @@ Transform:
   m_Children:
   - {fileID: 976091471}
   m_Father: {fileID: 0}
-  m_RootOrder: 31
+  m_RootOrder: 32
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1474153145
 GameObject:
@@ -37723,18 +37941,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1835688418}
-        m_TargetAssemblyTypeName: PlayerCheatItem, Assembly-CSharp
-        m_MethodName: AddSpawnItem
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
   NPCList: []
 --- !u!61 &1642246116
 BoxCollider2D:
@@ -38148,6 +38354,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1350365978}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1695390120
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1695390121}
+  m_Layer: 0
+  m_Name: CheatPosition_5_Map
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1695390121
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1695390120}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -80, y: -46.9, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 273182492}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1698219781
 GameObject:
@@ -42124,6 +42361,50 @@ PrefabInstance:
       propertyPath: m_LocalScale.x
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6905104216232168553, guid: fd10c98f2285a10469886c1df78c26e8, type: 3}
+      propertyPath: warpPosition.Array.size
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6905104216232168553, guid: fd10c98f2285a10469886c1df78c26e8, type: 3}
+      propertyPath: warpPosition.Array.data[0]
+      value: 
+      objectReference: {fileID: 1417260395}
+    - target: {fileID: 6905104216232168553, guid: fd10c98f2285a10469886c1df78c26e8, type: 3}
+      propertyPath: warpPosition.Array.data[1]
+      value: 
+      objectReference: {fileID: 807770383}
+    - target: {fileID: 6905104216232168553, guid: fd10c98f2285a10469886c1df78c26e8, type: 3}
+      propertyPath: warpPosition.Array.data[2]
+      value: 
+      objectReference: {fileID: 1294812517}
+    - target: {fileID: 6905104216232168553, guid: fd10c98f2285a10469886c1df78c26e8, type: 3}
+      propertyPath: warpPosition.Array.data[3]
+      value: 
+      objectReference: {fileID: 873658358}
+    - target: {fileID: 6905104216232168553, guid: fd10c98f2285a10469886c1df78c26e8, type: 3}
+      propertyPath: warpPosition.Array.data[4]
+      value: 
+      objectReference: {fileID: 1695390121}
+    - target: {fileID: 6905104216232168553, guid: fd10c98f2285a10469886c1df78c26e8, type: 3}
+      propertyPath: warpPosition.Array.data[5]
+      value: 
+      objectReference: {fileID: 116749744}
+    - target: {fileID: 6905104216232168553, guid: fd10c98f2285a10469886c1df78c26e8, type: 3}
+      propertyPath: warpPosition.Array.data[6]
+      value: 
+      objectReference: {fileID: 795768600}
+    - target: {fileID: 6905104216232168553, guid: fd10c98f2285a10469886c1df78c26e8, type: 3}
+      propertyPath: warpPosition.Array.data[7]
+      value: 
+      objectReference: {fileID: 1296300024}
+    - target: {fileID: 6905104216232168553, guid: fd10c98f2285a10469886c1df78c26e8, type: 3}
+      propertyPath: warpPosition.Array.data[8]
+      value: 
+      objectReference: {fileID: 1221734832}
+    - target: {fileID: 6905104216232168553, guid: fd10c98f2285a10469886c1df78c26e8, type: 3}
+      propertyPath: warpPosition.Array.data[9]
+      value: 
+      objectReference: {fileID: 3756545}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fd10c98f2285a10469886c1df78c26e8, type: 3}
 --- !u!4 &1835688417 stripped
@@ -42990,19 +43271,7 @@ MonoBehaviour:
   notForEnemy: 0
   triggerDoorEvents:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1835688418}
-        m_TargetAssemblyTypeName: PlayerCheatItem, Assembly-CSharp
-        m_MethodName: AddSpawnItem
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 5
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   isLockedDoor: 0
   triggerConditionEvent:
     m_PersistentCalls:
@@ -46372,18 +46641,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1835688418}
-        m_TargetAssemblyTypeName: PlayerCheatItem, Assembly-CSharp
-        m_MethodName: AddSpawnItem
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
   isLockedDoor: 1
   triggerConditionEvent:
     m_PersistentCalls:
@@ -47374,7 +47631,7 @@ PrefabInstance:
       objectReference: {fileID: 4695122923091229206}
     - target: {fileID: 3402447144988968731, guid: 3d5b4812a40a2494d97f6e0c96153612, type: 3}
       propertyPath: cheatTriggerEvents.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3402447144988968731, guid: 3d5b4812a40a2494d97f6e0c96153612, type: 3}
       propertyPath: cheatTriggerEvents.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -47771,7 +48028,7 @@ Transform:
   - {fileID: 1845424197}
   - {fileID: 1356672276}
   m_Father: {fileID: 0}
-  m_RootOrder: 30
+  m_RootOrder: 31
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2131950407
 GameObject:
@@ -48459,7 +48716,7 @@ Transform:
   - {fileID: 1886472835}
   - {fileID: 1340679215}
   m_Father: {fileID: 0}
-  m_RootOrder: 28
+  m_RootOrder: 29
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2147075143
 GameObject:
@@ -48728,7 +48985,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 183651816898977588, guid: 0a1032ddd958b544fa64fb55a2f616f4, type: 3}
       propertyPath: m_RootOrder
-      value: 37
+      value: 38
       objectReference: {fileID: 0}
     - target: {fileID: 183651816898977588, guid: 0a1032ddd958b544fa64fb55a2f616f4, type: 3}
       propertyPath: m_LocalScale.x
@@ -50458,18 +50715,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1835688418}
-        m_TargetAssemblyTypeName: PlayerCheatItem, Assembly-CSharp
-        m_MethodName: AddSpawnItem
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 3
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
   isLockedDoor: 0
   triggerConditionEvent:
     m_PersistentCalls:
@@ -51503,7 +51748,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1078445036169580749, guid: d2fc8e7d6cd8b4c4694f7fe474ab5dc4, type: 3}
       propertyPath: m_RootOrder
-      value: 36
+      value: 37
       objectReference: {fileID: 0}
     - target: {fileID: 1078445036169580749, guid: d2fc8e7d6cd8b4c4694f7fe474ab5dc4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -51578,7 +51823,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9143542779762011173, guid: e069ec9dde3d1ea4895303c6357a7c36, type: 3}
       propertyPath: m_RootOrder
-      value: 34
+      value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 9143542779762011173, guid: e069ec9dde3d1ea4895303c6357a7c36, type: 3}
       propertyPath: m_LocalScale.x

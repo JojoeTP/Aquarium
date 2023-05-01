@@ -5,10 +5,8 @@ using UnityEngine;
 public class PlayerCheatItem : MonoBehaviour
 {
     public static PlayerCheatItem inst;
-    [HideInInspector] public List<Item> items;
-    [SerializeField] List<ItemScriptableObject> itemScriptableObjects;
-    [SerializeField] List<Item> sortItems;
-    [SerializeField] List<Item> spawnItems;
+    public List<Transform> warpPosition;
+    [SerializeField] bool canWarpToItem;
 
    void Awake()
    {
@@ -17,54 +15,31 @@ public class PlayerCheatItem : MonoBehaviour
 
     private void Start()
     {
-        InputSystemManager.Inst.onCheatItem += OnSpawnItem;
+        InputSystemManager.Inst.onCheatItem += WarpPlayer;
     }
 
     private void OnDestroy()
     {
-        InputSystemManager.Inst.onCheatItem -= OnSpawnItem;
+        InputSystemManager.Inst.onCheatItem -= WarpPlayer;
     }
 
-    void OnSpawnItem()
+    void WarpPlayer()
     {
-        if (spawnItems.Count > 0)
-        {
-            if (!PlayerManager.inst.PlayerInventory.PlayerItemDictionary.ContainsValue(spawnItems[0].itemObject.itemData.ItemID))
-            {
-                PlayerManager.inst.PlayerInventory.AddItem(spawnItems[0].itemObject);
-                ItemPopUpUI.inst.OnOpenItemPopUpUI(spawnItems[0]);
-                spawnItems.Remove(spawnItems[0]);
-            }
-        }
-        else
-        {
-            print("No Item to spawn");
-        }
-    }
-
-    public void AddSpawnItem(int index)
-    {
-        if (PlayerManager.inst.PlayerInventory.PlayerItemDictionary.ContainsValue(sortItems[index].itemObject.itemData.ItemID))
+        if (warpPosition.Count == 0 || canWarpToItem == false || PlayerManager.inst.playerState != PlayerManager.PLAYERSTATE.NONE)
         {
             return;
         }
-        RemoveItems();
-        spawnItems.Add(sortItems[index]);
+        transform.position = warpPosition[0].transform.position;
     }
 
-    public void RemoveItems()
+    public void RemoveFirstWarpPositionIndex()
     {
-        spawnItems.Clear();
+        warpPosition.RemoveAt(0);
     }
-    public void SortItems()
+
+    public void CanWarpToItem()
     {
-        for (int i = 0; i < itemScriptableObjects.Count; i++) 
-        {
-            for (int j = 0; j < items.Count; j++)
-            {
-                if (items[j].itemObject.name == itemScriptableObjects[i].name)
-                    sortItems.Add(items[j]);
-            }
-        }
+        canWarpToItem = true;
     }
+
 }

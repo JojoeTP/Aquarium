@@ -21,6 +21,11 @@ public class PlayerInteract : MonoBehaviour
         InputSystemManager.Inst.onInteract += OnInteract;    
     }
 
+    private void OnDestroy()
+    {
+        InputSystemManager.Inst.onInteract -= OnInteract;
+    }
+
     public void Interacting()
     {
         IsObjectOverlapPlayer();

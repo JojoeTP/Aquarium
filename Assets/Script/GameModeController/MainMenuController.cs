@@ -86,6 +86,7 @@ public class MainMenuController : MonoBehaviour
 
         loadingUI.EnableCavnas(true);
 
+        ItemManager.Inst.isContinue = true;
         StartCoroutine(TransitionToGamePlay());    
     }
 

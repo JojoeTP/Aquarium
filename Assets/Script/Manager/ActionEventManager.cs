@@ -422,6 +422,8 @@ public class ActionEventManager : MonoBehaviour
         Ch1_D06_01.ChangeDialogueId("Ch1_D08_01");
         Ch1_D06_01.triggerEvents.AddListener(() => PlayerManager.inst.PlayerInventory.AddItem(VIPRoom));
         Ch1_D06_01.triggerEvents.AddListener(Ch1_D06_01.SetActiveFalse);
+        Ch1_D06_01.triggerEvents.AddListener(() => PlayerCheatItem.inst.RemoveFirstWarpPositionIndex()); 
+
     }
 
     public void StartPuzzle()

@@ -12,6 +12,11 @@ public class PlayerLight : MonoBehaviour
         InputSystemManager.Inst.onLight += OnLight;
     }
 
+    private void OnDestroy()
+    {
+        InputSystemManager.Inst.onLight -= OnLight;
+    }
+
     public void OnLight(){
         if(PlayerManager.inst.playerAnimator.GetBool("Lampitem") == false)
             return;
