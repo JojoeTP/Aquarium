@@ -29,6 +29,12 @@ public class PlayerCheatItem : MonoBehaviour
         {
             return;
         }
+
+        if (AiRedHoodController.inst.spawnAI == true || AiMermaidController.inst.spawnAI == true)
+        {
+            AiMermaidController.inst.DestroyMermaidAI();
+            ActionEventManager.inst.StopSpawnSister();
+        }
         transform.position = warpPosition[0].transform.position;
     }
 

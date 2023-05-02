@@ -130,4 +130,5 @@ public class AiRedHoodController : MonoBehaviour
         ActionEventManager.inst.LockDoor_Ch3_D06_01_Config();
         
     }
+
 }

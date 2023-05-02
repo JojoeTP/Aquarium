@@ -101,6 +101,8 @@ public class MainMenuController : MonoBehaviour
         if(gameStarted) return;
         if(inputParticipateID.text == null) return;
         if(inputParticipateID.text == "") return;
+        if (int.Parse(inputParticipateID.text) < 0 || int.Parse(inputParticipateID.text) > 29)
+            inputParticipateID.text = "0";
 
         gameStarted = true;
         SaveGameSystemManager.inst.StartNewGame();

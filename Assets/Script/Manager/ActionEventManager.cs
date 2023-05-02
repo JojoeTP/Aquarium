@@ -174,12 +174,17 @@ public class ActionEventManager : MonoBehaviour
         ActionEventManager.inst.AlertText(10.0f);
         ActionEventManager.inst.SpawnSister(false, 10.0f);
     }
-
+    public Coroutine spawnSister;
+    public void StopSpawnSister()
+    {
+        StopCoroutine(spawnSister);
+        AiRedHoodController.inst.DestroyRedHoodAI();
+    }
     public void SpawnSister(bool isSpawn , float delayBeforeSpawn)
     {
         if (isSpawn == false)
         {
-            StartCoroutine(DelaySpawnSister(delayBeforeSpawn));
+            spawnSister = StartCoroutine(DelaySpawnSister(delayBeforeSpawn));
         }
     }
 

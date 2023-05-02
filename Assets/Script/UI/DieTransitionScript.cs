@@ -20,8 +20,8 @@ public class DieTransitionScript : MonoBehaviour
     {
         //destroy ai
         //Move player to respawn point
-        AiMermaidController.inst.RespawnPlayer();
         AiDirectorController.inst.RespawnPlayer();
+        AiMermaidController.inst.RespawnPlayer();
         AiRedHoodController.inst.RespawnPlayer();
 
         if(PlayerManager.inst.playerState == PlayerManager.PLAYERSTATE.HIDING)
