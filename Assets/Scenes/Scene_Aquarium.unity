@@ -133,7 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3756545}
   m_Layer: 0
-  m_Name: CheatPosition_10_Coin3
+  m_Name: CheatPosition_11_Coin4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -152,7 +152,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 273182492}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6077279
 GameObject:
@@ -5478,6 +5478,7 @@ Transform:
   - {fileID: 116749744}
   - {fileID: 795768600}
   - {fileID: 1296300024}
+  - {fileID: 482292763}
   - {fileID: 1221734832}
   - {fileID: 3756545}
   m_Father: {fileID: 0}
@@ -9206,6 +9207,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &482292762
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 482292763}
+  m_Layer: 0
+  m_Name: CheatPosition_9_Coin3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &482292763
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 482292762}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 306.54, y: -174.22, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 273182492}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &489605944
 GameObject:
   m_ObjectHideFlags: 0
@@ -28476,7 +28508,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1221734832}
   m_Layer: 0
-  m_Name: CheatPosition_9_Diary
+  m_Name: CheatPosition_10_Diary
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28495,7 +28527,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 273182492}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1224394185
 PrefabInstance:
@@ -42363,7 +42395,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6905104216232168553, guid: fd10c98f2285a10469886c1df78c26e8, type: 3}
       propertyPath: warpPosition.Array.size
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 6905104216232168553, guid: fd10c98f2285a10469886c1df78c26e8, type: 3}
       propertyPath: warpPosition.Array.data[0]
@@ -42400,9 +42432,13 @@ PrefabInstance:
     - target: {fileID: 6905104216232168553, guid: fd10c98f2285a10469886c1df78c26e8, type: 3}
       propertyPath: warpPosition.Array.data[8]
       value: 
-      objectReference: {fileID: 1221734832}
+      objectReference: {fileID: 482292763}
     - target: {fileID: 6905104216232168553, guid: fd10c98f2285a10469886c1df78c26e8, type: 3}
       propertyPath: warpPosition.Array.data[9]
+      value: 
+      objectReference: {fileID: 1221734832}
+    - target: {fileID: 6905104216232168553, guid: fd10c98f2285a10469886c1df78c26e8, type: 3}
+      propertyPath: warpPosition.Array.data[10]
       value: 
       objectReference: {fileID: 3756545}
     m_RemovedComponents: []

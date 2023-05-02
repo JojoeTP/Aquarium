@@ -75,7 +75,7 @@ public class ItemManager : MonoBehaviour
             }
         }
 
-        if (PlayerCheatItem.inst.warpPosition.Count <= 7)
+        if (PlayerCheatItem.inst.warpPosition.Count <= 8)
         {
             PlayerCheatItem.inst.RemoveFirstWarpPositionIndex();
         }
