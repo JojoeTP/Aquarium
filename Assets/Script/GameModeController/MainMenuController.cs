@@ -92,8 +92,23 @@ public class MainMenuController : MonoBehaviour
 
     public void OnClickNewGame()
     {
-        animator.SetTrigger("OpenStartGame");
-        ChangeState(MenuState.StartGame);
+        // animator.SetTrigger("OpenStartGame");
+        // ChangeState(MenuState.StartGame);
+        
+
+        if(gameStarted) return;
+        // if(inputParticipateID.text == null) return;
+        // if(inputParticipateID.text == "") return;
+        // if (int.Parse(inputParticipateID.text) < 0 || int.Parse(inputParticipateID.text) > 29)
+        //     inputParticipateID.text = "0";
+
+        gameStarted = true;
+        SaveGameSystemManager.inst.StartNewGame();
+        ItemManager.Inst.ParticipateId = 0;
+
+        loadingUI.EnableCavnas(true);
+
+        StartCoroutine(TransitionToGamePlay());  
     }
 
     public void OnApplyParticipateID()
